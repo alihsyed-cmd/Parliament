@@ -3,6 +3,7 @@ import requests
 import xml.etree.ElementTree as ET
 import pandas as pd
 import time
+import re
 
 # ── File paths ───────────────────────────────────────────────────────
 FEDERAL_SHP   = "/Users/alisyed/Desktop/Parliament/data/federal/FED_CA_2025_EN.shp"
@@ -92,13 +93,18 @@ for _, row in tor_df.iterrows():
 
 print("Representative data loaded successfully.\n")
 
+# ── Input validation ─────────────────────────────────────────────────
+def validate_postal_code(code):
+    pattern = r'^[A-Z]\d[A-Z]\d[A-Z]\d$'
+    return bool(re.match(pattern, code.replace(" ", "").upper()))
+
 # ── Geocode postal code ──────────────────────────────────────────────
 def geocode(postal_code):
     clean = postal_code.replace(" ", "").upper()
     url = f"https://geocoder.ca/?postal={clean}&json=1"
     headers = {"User-Agent": "ParliamentApp/1.0"}
     try:
-        time.sleep(0.5)
+        time.sleep(1.5)
         response = requests.get(url, headers=headers, timeout=10)
         data = response.json()
         if "error" in data:
@@ -113,9 +119,9 @@ def geocode(postal_code):
 def find_district(lat, lon, boundaries, name_field):
     from shapely.geometry import Point
     point = Point(lon, lat)
-    for _, row in boundaries.iterrows():
-        if row.geometry and row.geometry.contains(point):
-            return row[name_field]
+    indices = boundaries.sindex.query(point, predicate="within")
+    if len(indices) > 0:
+        return boundaries.iloc[indices[0]][name_field]
     return None
 
 # ── Display helpers ──────────────────────────────────────────────────
@@ -130,6 +136,9 @@ def print_field(label, value):
 
 # ── Main lookup ──────────────────────────────────────────────────────
 def lookup(postal_code):
+    if not validate_postal_code(postal_code):
+        print("Invalid postal code format. Expected format: A1A1A1 or A1A 1A1")
+        return
     print(f"\nLooking up: {postal_code}")
     lat, lon = geocode(postal_code)
     if lat is None:
