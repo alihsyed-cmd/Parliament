@@ -4,11 +4,15 @@ import requests as req
 import xml.etree.ElementTree as ET
 import pandas as pd
 import os
-import re
+import time
 from dotenv import load_dotenv
 
 load_dotenv('/Users/alisyed/Desktop/Parliament/.env')
+GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
+app = Flask(__name__)
+
+# ── File paths ───────────────────────────────────────────────────────
 GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 FEDERAL_SHP    = os.getenv("FEDERAL_SHP")
 ONTARIO_SHP    = os.getenv("ONTARIO_SHP")
@@ -16,8 +20,6 @@ TORONTO_JSON   = os.getenv("TORONTO_JSON")
 FEDERAL_XML    = os.getenv("FEDERAL_XML")
 ONTARIO_CSV    = os.getenv("ONTARIO_CSV")
 TORONTO_CSV    = os.getenv("TORONTO_CSV")
-
-app = Flask(__name__)
 
 # ── Load boundary files ──────────────────────────────────────────────
 print("Loading boundary files...")
@@ -29,7 +31,6 @@ print("Boundary files loaded.")
 # ── Load representative data ─────────────────────────────────────────
 print("Loading representative data...")
 
-# Federal
 fed_tree = ET.parse(FEDERAL_XML)
 fed_members = {}
 for mp in fed_tree.getroot():
@@ -49,7 +50,6 @@ for mp in fed_tree.getroot():
         "photo_url":     f"https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/{person_id}_Original.jpg"
     }
 
-# Ontario
 ont_df = pd.read_csv(ONTARIO_CSV)
 ont_df.columns = ont_df.columns.str.strip().str.replace('"', '')
 ont_members = {}
@@ -68,16 +68,14 @@ for _, row in ont_df.iterrows():
         "phone":         str(row.get("Telephone", "")).strip(),
     }
 
-# Toronto
 tor_df = pd.read_csv(TORONTO_CSV)
 tor_members = {}
 for _, row in tor_df.iterrows():
-    district_id = row.get("District ID")
-    if pd.isna(district_id):
+    district = str(row.get("District name", "")).strip()
+    if not district or district == "nan":
         continue
-    ward_num = int(district_id)
-    tor_members[ward_num] = {
-        "name":      f"{str(row.get('First name', '')).strip()} {str(row.get('Last name', '')).strip()}".strip(),
+    tor_members[district] = {
+        "name":      f"{str(row.get('First name','')).strip()} {str(row.get('Last name','')).strip()}".strip(),
         "role":      str(row.get("Primary role", "")).strip(),
         "email":     str(row.get("Email", "")).strip(),
         "phone":     str(row.get("Phone", "")).strip(),
@@ -88,10 +86,6 @@ for _, row in tor_df.iterrows():
 print("All data loaded. API ready.\n")
 
 # ── Helpers ──────────────────────────────────────────────────────────
-def validate_postal_code(code):
-    pattern = r'^[A-Z]\d[A-Z]\d[A-Z]\d$'
-    return bool(re.match(pattern, code.replace(" ", "").upper()))
-
 def geocode(postal_code):
     clean = postal_code.replace(" ", "").upper()
     url = "https://maps.googleapis.com/maps/api/geocode/json"
@@ -113,9 +107,9 @@ def geocode(postal_code):
 def find_district(lat, lon, boundaries, name_field):
     from shapely.geometry import Point
     point = Point(lon, lat)
-    indices = boundaries.sindex.query(point, predicate="within")
-    if len(indices) > 0:
-        return boundaries.iloc[indices[0]][name_field]
+    for _, row in boundaries.iterrows():
+        if row.geometry and row.geometry.contains(point):
+            return row[name_field]
     return None
 
 def clean(value):
@@ -123,20 +117,12 @@ def clean(value):
         return None
     return str(value).strip()
 
-# ── Routes ───────────────────────────────────────────────────────────
-@app.route("/health", methods=["GET"])
-def health():
-    return jsonify({"status": "ok", "message": "Parliament API is running"})
-
+# ── API endpoint ─────────────────────────────────────────────────────
 @app.route("/lookup", methods=["GET"])
 def lookup():
     postal_code = request.args.get("postal_code", "").strip().upper()
-
     if not postal_code:
         return jsonify({"error": "postal_code parameter is required"}), 400
-
-    if not validate_postal_code(postal_code):
-        return jsonify({"error": "Invalid postal code format. Expected format: A1A1A1 or A1A 1A1"}), 400
 
     lat, lon = geocode(postal_code)
     if lat is None:
@@ -151,11 +137,13 @@ def lookup():
     ont_data   = ont_members.get(ont_riding, {})
 
     # Municipal
-    tor_ward = find_district(lat, lon, toronto, "WARD_NUMBER")
-    tor_data = {}
-    if tor_ward is not None:
-        ward_num = int(float(tor_ward))
-        tor_data = tor_members.get(ward_num, {})
+    tor_ward  = find_district(lat, lon, toronto, "AREA_NAME")
+    tor_data  = {}
+    if tor_ward:
+        for district, data in tor_members.items():
+            if tor_ward.lower() in district.lower() or district.lower() in tor_ward.lower():
+                tor_data = data
+                break
 
     result = {
         "postal_code": postal_code,
@@ -177,7 +165,7 @@ def lookup():
             "phone":         clean(ont_data.get("phone")),
         },
         "municipal": {
-            "ward":          clean(str(tor_ward)) if tor_ward is not None else None,
+            "ward":          clean(tor_ward),
             "councillor":    clean(tor_data.get("name")),
             "role":          clean(tor_data.get("role")),
             "email":         clean(tor_data.get("email")),
@@ -189,8 +177,10 @@ def lookup():
 
     return jsonify(result)
 
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "ok", "message": "Parliament API is running"})
+
 # ── Run ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-
-    
