@@ -4,6 +4,11 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 import time
 import re
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
 # ── File paths ───────────────────────────────────────────────────────
 FEDERAL_SHP   = "/Users/alisyed/Desktop/Parliament/data/federal/FED_CA_2025_EN.shp"
@@ -98,19 +103,23 @@ def validate_postal_code(code):
     pattern = r'^[A-Z]\d[A-Z]\d[A-Z]\d$'
     return bool(re.match(pattern, code.replace(" ", "").upper()))
 
-# ── Geocode postal code ──────────────────────────────────────────────
+
 def geocode(postal_code):
     clean = postal_code.replace(" ", "").upper()
-    url = f"https://geocoder.ca/?postal={clean}&json=1"
-    headers = {"User-Agent": "ParliamentApp/1.0"}
+    url = "https://maps.googleapis.com/maps/api/geocode/json"
+    params = {
+        "address":    clean + ", Canada",
+        "components": "country:CA",
+        "key":        GOOGLE_API_KEY
+    }
     try:
-        time.sleep(1.5)
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, params=params, timeout=10)
         data = response.json()
-        if "error" in data:
-            print(f"Geocoder error: {data['error']}")
-            return None, None
-        return float(data["latt"]), float(data["longt"])
+        if data["status"] == "OK":
+            location = data["results"][0]["geometry"]["location"]
+            return location["lat"], location["lng"]
+        print(f"Google geocoding error: {data['status']}")
+        return None, None
     except Exception as e:
         print(f"Geocoding failed: {e}")
         return None, None
@@ -198,5 +207,12 @@ def lookup(postal_code):
 
 # ── Run ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    postal_code = input("Enter a Canadian postal code: ")
-    lookup(postal_code.strip().upper())
+    while True:
+        try:
+            postal_code = input("Enter a Canadian postal code (or 'q' to quit): ")
+        except (EOFError, KeyboardInterrupt):
+            print()
+            break
+        if postal_code.strip().lower() in ("q", "quit", "exit"):
+            break
+        lookup(postal_code.strip().upper())
