@@ -10,15 +10,12 @@ from dotenv import load_dotenv
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
-# ── File paths ───────────────────────────────────────────────────────
-FEDERAL_SHP   = "/Users/alisyed/Desktop/Parliament/data/federal/FED_CA_2025_EN.shp"
-ONTARIO_SHP   = "/Users/alisyed/Desktop/Parliament/data/provincial/ontario/ELECTORAL_DISTRICT.shp"
-TORONTO_JSON  = "/Users/alisyed/Desktop/Parliament/data/municipal/toronto/Ward and Elected Councillor - 4326.geojson"
-
-FEDERAL_XML   = "/Users/alisyed/Desktop/Parliament/data/federal/Members' information.xml"
-ONTARIO_CSV   = "/Users/alisyed/Desktop/Parliament/data/provincial/ontario/Contacts of all Ontario members.csv"
-TORONTO_CSV   = "/Users/alisyed/Desktop/Parliament/data/municipal/toronto/Elected Officials' Contact Information.csv"
-
+FEDERAL_SHP  = os.environ.get("FEDERAL_SHP")
+ONTARIO_SHP  = os.environ.get("ONTARIO_SHP")
+TORONTO_JSON = os.environ.get("TORONTO_JSON")
+FEDERAL_XML  = os.environ.get("FEDERAL_XML")
+ONTARIO_CSV  = os.environ.get("ONTARIO_CSV")
+TORONTO_CSV  = os.environ.get("TORONTO_CSV")
 # ── Load boundary files ──────────────────────────────────────────────
 print("Loading boundary files...")
 federal  = gpd.read_file(FEDERAL_SHP).to_crs(epsg=4326)
@@ -77,9 +74,10 @@ for _, row in ont_df.iterrows():
 tor_df = pd.read_csv(TORONTO_CSV)
 tor_members = {}
 for _, row in tor_df.iterrows():
-    district = str(row.get("District name", "")).strip()
-    if not district or district == "nan":
-        continue
+    district_id = row.get("District ID")
+    if pd.isna(district_id):
+        continue  # skip Mayor and any rows without a ward number
+    ward_num = int(district_id)
     first     = str(row.get("First name", "")).strip()
     last      = str(row.get("Last name", "")).strip()
     role      = str(row.get("Primary role", "")).strip()
@@ -87,7 +85,7 @@ for _, row in tor_df.iterrows():
     phone     = str(row.get("Phone", "")).strip()
     photo_url = str(row.get("Photo URL", "")).strip()
     website   = str(row.get("Website", "")).strip()
-    tor_members[district] = {
+    tor_members[ward_num] = {
         "name":      f"{first} {last}".strip(),
         "role":      role,
         "email":     email if email != "nan" else "Not available",
@@ -175,29 +173,25 @@ def lookup(postal_code):
         mpp = ont_members[ont_riding]
         print_field("MPP:", mpp["name"])
         print_field("Party:", mpp["party"])
-        print_field("Next election:", "On or before June 2026")
+        print_field("Next election:", "On or before April 11, 2030")
         print_field("Email:", mpp["email"])
         print_field("Phone:", mpp["phone"])
     else:
         print("  No MPP data found for this riding.")
 
     # ── Municipal ────────────────────────────────────────────────────
-    tor_ward = find_district(lat, lon, toronto, "AREA_NAME")
+    tor_ward = find_district(lat, lon, toronto, "WARD_NUMBER")
     print_section(f"MUNICIPAL (Toronto) — {tor_ward or 'Outside Toronto'}")
     if tor_ward:
-        # Match ward name to Toronto CSV district name
-        match = None
-        for district, data in tor_members.items():
-            if tor_ward.lower() in district.lower() or district.lower() in tor_ward.lower():
-                match = data
-                break
-        if match:
-            print_field("Councillor:", match["name"])
-            print_field("Role:", match["role"])
-            print_field("Email:", match["email"])
-            print_field("Phone:", match["phone"])
-            print_field("Website:", match["website"])
-            print_field("Photo:", match["photo_url"])
+        ward_num = int(float(tor_ward))
+        councillor = tor_members.get(ward_num)
+        if councillor:
+            print_field("Councillor:", councillor["name"])
+            print_field("Role:",       councillor["role"])
+            print_field("Email:",      councillor["email"])
+            print_field("Phone:",      councillor["phone"])
+            print_field("Website:",    councillor["website"])
+            print_field("Photo:",      councillor["photo_url"])
         else:
             print("  Ward found but no councillor data matched.")
     else:
