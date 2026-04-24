@@ -1,0 +1,32 @@
+{
+    "coordinates": {
+        "lat": 43.766062,
+        "lon": -79.4992999
+    },
+    "federal": {
+        "elected": "2025-04-28",
+        "mp": "Hon. Judy A. Sgro",
+        "next_election": "On or before October 2029",
+        "party": "Liberal",
+        "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/1787_Original.jpg",
+        "riding": "Humber River\u2014Black Creek"
+    },
+    "municipal": {
+        "councillor": "Anthony Perruzza",
+        "email": "councillor_perruzza@toronto.ca",
+        "phone": "416-338-5335",
+        "photo_url": "https://www.toronto.ca/wp-content/uploads/2022/11/9937-Cllr-Perruzza-web.jpg",
+        "role": "Councillor",
+        "ward": "Humber River-Black Creek",
+        "website": "https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-7/"
+    },
+    "postal_code": "M3J3R2",
+    "provincial": {
+        "email": "trakocevic-qp@ndp.on.ca",
+        "mpp": "Tom Rakocevic",
+        "next_election": "On or before April 11, 2030",
+        "party": "New Democratic Party of Ontario",
+        "phone": "416-743-7272",
+        "riding": "Humber River\u2014Black Creek"
+    }
+}

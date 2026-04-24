@@ -1,0 +1,32 @@
+{
+    "coordinates": {
+        "lat": 49.2762187,
+        "lon": -123.109763
+    },
+    "federal": {
+        "elected": "2025-04-28",
+        "mp": "Hon. Hedy Fry",
+        "next_election": "On or before October 2029",
+        "party": "Liberal",
+        "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/1589_Original.jpg",
+        "riding": "Vancouver Centre"
+    },
+    "municipal": {
+        "councillor": null,
+        "email": null,
+        "phone": null,
+        "photo_url": null,
+        "role": null,
+        "ward": null,
+        "website": null
+    },
+    "postal_code": "V6B4Y8",
+    "provincial": {
+        "email": null,
+        "mpp": null,
+        "next_election": null,
+        "party": null,
+        "phone": null,
+        "riding": null
+    }
+}
