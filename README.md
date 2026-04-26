@@ -43,6 +43,25 @@ curl "http://127.0.0.1:5000/lookup?postal_code=M3J3R2"
 curl "http://127.0.0.1:5000/health"
 ```
 
+## Database
+
+Parliament uses **Supabase (PostgreSQL with PostGIS)** for representative and boundary data. The four-table schema (`jurisdictions`, `districts`, `representatives`, `representations`) supports many-to-many representation, time-bounded historical tracking via start/end dates, and i18n-ready jsonb language maps for translatable fields.
+
+To set up the database:
+
+1. Create a Supabase project and enable the PostGIS extension via Database → Extensions in the dashboard.
+2. Add `SUPABASE_DB_URL` to `.env` with the session pooler connection string.
+3. Apply the schema:
+```bash
+   python3 -c "import psycopg2, os; from dotenv import load_dotenv; load_dotenv('.env'); psycopg2.connect(os.getenv('SUPABASE_DB_URL')).cursor().execute(open('migrations/001_initial_schema.sql').read())"
+```
+4. Migrate source data into Supabase:
+```bash
+   python3 scripts/migrate_to_supabase.py
+```
+
+Adapters then query Supabase directly using parameterized PostGIS spatial queries.
+
 ## Testing
 
 The project uses fixture-based regression tests. Run them with:

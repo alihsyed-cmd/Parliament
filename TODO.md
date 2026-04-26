@@ -8,21 +8,7 @@ Captures known issues, enhancements, and follow-ups that aren't blocking current
 **Reported:** 2026-04-26 (Milestone 2.2)
 **Context:** Toronto's official council site primarily references wards by name (e.g., "Humber River–Black Creek") rather than number. Currently the API returns ward as `"7"`. Should display as `"Ward 7 Humber River-Black Creek"` or similar.
 **Why deferred:** Display formatting is frontend concern (Phase 3). Backend correctly returns the canonical ward number; the frontend should compose the human-readable label.
-**Action:** When building the React components in Phase 3, format Toronto's `ward` field as `"Ward {number} {name}"` using the GeoJSON's `AREA_NAME` field. May need to expose ward name in the API response.
-
-## Data Quality
-
-### [Phase 2.3+] Investigate 3 missing federal MPs
-**Reported:** 2026-04-25 (Milestone 2.1)
-**Context:** Federal adapter loads 352 boundaries but only 340 reps. Canada has 343 ridings. The 3 missing are likely vacant seats awaiting by-elections, or name-mismatch edge cases between shapefile and XML.
-**Action:** During Supabase migration, add validation that flags ridings with no representative.
-
-## Ecosystem / Maintenance
-
-### [Background] pyogrio DeprecationWarning about shapely.geos
-**Reported:** 2026-04-26 (Milestone 2.2)
-**Context:** `pyogrio` imports the deprecated `shapely.geos` module. Pure ecosystem issue, not our code.
-**Action:** No action needed. Will resolve when pyogrio releases a version compatible with Shapely 2.0's namespace changes. Re-check periodically when updating dependencies.
+**Action:** When building the React components in Phase 3, format Toronto's `ward` field as `"Ward {number} {name}"` using available data. May need to expose ward name in the API response.
 
 ## Data Quality
 
@@ -32,3 +18,30 @@ Captures known issues, enhancements, and follow-ups that aren't blocking current
 **Pattern:** Name-based joins are fragile to typography. Long-term fix should be either (a) Unicode normalization (NFKC) on both sides before join, (b) switch federal join to use riding numerical codes if available in both data sources, or (c) fuzzy match for federal as fallback.
 **Action:** Address during API-first ingestion (2.6) when we revisit data sources, or during expansion (2.7) when adding cities forces a normalization layer.
 **Workaround:** None needed for v1 — the affected ridings still appear in the database, lookups for those postal codes return the district but no representative.
+
+### [Phase 2.3+] Investigate 3 missing federal MPs
+**Reported:** 2026-04-25 (Milestone 2.1)
+**Context:** Federal adapter loads 343 ridings but only 340 reps after migration. Canada has 343 ridings. The 3 missing are likely vacant seats awaiting by-elections, or name-mismatch edge cases between shapefile and XML (some overlap with the Unicode issue above).
+**Action:** Likely resolved by the Unicode normalization fix in 2.6/2.7. If gap remains after that, investigate vacant seat data.
+
+## Architecture / Technical Debt
+
+### [Phase 2.6] Remove legacy_loader.py once API-first ingestion lands
+**Reported:** 2026-04-26 (Milestone 2.3)
+**Context:** `scripts/legacy_loader.py` exists solely to support the one-time migration script. It duplicates the file-loading logic that used to live in WardBasedAdapter. It is not used at runtime.
+**Action:** When milestone 2.6 introduces API-first ingestion (CKAN, OpenDataSoft, etc.), the new ingestion pipeline replaces both the legacy loader and the migration script. Delete both at that point.
+
+## Ecosystem / Maintenance
+
+### [Background] pyogrio DeprecationWarning about shapely.geos
+**Reported:** 2026-04-26 (Milestone 2.2)
+**Context:** `pyogrio` imports the deprecated `shapely.geos` module. Pure ecosystem issue, not our code.
+**Action:** No action needed. Will resolve when pyogrio releases a version compatible with Shapely 2.0's namespace changes. Re-check periodically when updating dependencies.
+
+## Lessons Learned
+
+### Multi-polygon districts must be unioned, not deduplicated
+**Discovered:** 2026-04-26 (Milestone 2.3)
+**Context:** During migration to PostGIS, the Halifax federal riding's mainland portion was silently discarded because it shared a name with the Sable Island portion. The original migration treated multi-polygon districts as duplicates and kept only the first. Halifax users got 0 federal reps because the only Halifax polygon in the database was on Sable Island, 290 km offshore.
+**Resolution:** Migration script now uses `shapely.ops.unary_union` to merge multiple polygons per district into a single MultiPolygon.
+**Application:** This pattern applies broadly. Many Canadian ridings span multiple polygons (Vancouver Island, Newfoundland, coastal Quebec, the Toronto Islands). Any future ingestion logic that touches geometry must preserve all polygons per district, not deduplicate by name.
