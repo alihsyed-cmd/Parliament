@@ -1,278 +1,179 @@
 """
-WardBasedAdapter — for jurisdictions where each representative has a
-geographic district (ward, riding, constituency).
+WardBasedAdapter — queries Supabase for ward/riding-based jurisdictions.
 
-Handles any jurisdiction where:
-  - Each point maps to exactly one district
-  - Each district has exactly one representative
-  - Join between boundary and rep data is by district name OR district ID
+After milestone 2.3, this adapter no longer reads source files at runtime.
+Source data is migrated to Supabase via scripts/migrate_to_supabase.py;
+this adapter executes spatial queries against the database to answer lookups.
 
-Used by: Canada federal, Ontario, Toronto, and all future ward-based cities
-(Ottawa, Calgary, Edmonton, Mississauga, Brampton, Hamilton, Winnipeg, etc.)
+Used by: Canada federal, Ontario, Toronto, and all future ward-based cities.
 """
 
-import os
-import xml.etree.ElementTree as ET
 from typing import Any, Dict, List, Optional
 
-import geopandas as gpd
-import pandas as pd
-from shapely.geometry import Point
-
+import db
 from .base import JurisdictionAdapter
 
 
+# Single SQL query reused across all ward-based jurisdictions.
+# Returns one row per representative whose district contains the given point,
+# scoped to the adapter's jurisdiction.
+LOOKUP_SQL = """
+    SELECT
+        r.name->>'en'           AS name,
+        r.party->>'en'          AS party,
+        r.email                 AS email,
+        r.phone                 AS phone,
+        r.photo_url             AS photo_url,
+        r.website_url->>'en'    AS website_url,
+        r.external_ids          AS external_ids,
+        rep.role->>'en'         AS role,
+        rep.start_date          AS start_date,
+        d.name->>'en'           AS district_name,
+        d.external_id           AS district_external_id
+    FROM districts d
+    JOIN representations rep
+        ON rep.district_id = d.id
+       AND rep.end_date IS NULL
+    JOIN representatives r
+        ON r.id = rep.representative_id
+    WHERE d.jurisdiction_id = %s
+      AND ST_Contains(d.boundary, ST_SetSRID(ST_MakePoint(%s, %s), 4326));
+"""
+
+
 class WardBasedAdapter(JurisdictionAdapter):
-    """
-    Adapter for single-representative-per-district jurisdictions.
-    """
+    """Adapter for single-representative-per-district jurisdictions."""
 
     def __init__(self, config: Dict[str, Any]):
         super().__init__(config)
-        self.boundaries: Optional[gpd.GeoDataFrame] = None
-        self.representatives: Dict[Any, Dict[str, Any]] = {}
-        self.join_mode: Optional[str] = None  # "name" or "id"
+        self.slug: str = config.get("slug") or self._slug_from_name(config["name"])
+        self.jurisdiction_id: Optional[str] = None
 
-    # ── Data loading ─────────────────────────────────────────────────
+    @staticmethod
+    def _slug_from_name(name: str) -> str:
+        """Derive a slug from a display name. Used as fallback when config has no slug."""
+        return name.lower().replace(" ", "_")
+
+    # ── Loading ──────────────────────────────────────────────────────
     def load_data(self) -> None:
-        """Load boundary file and representative data per config."""
-        self._load_boundaries()
-        self._load_representatives()
-        self._loaded = True
+        """Resolve this jurisdiction's UUID from its slug.
 
-    def _load_boundaries(self) -> None:
-        """Read boundary file and build spatial index."""
-        boundary_config = self.config["boundary"]
-        path_env_var = boundary_config["file"]
-        path = os.getenv(path_env_var)
-        if not path:
-            raise ValueError(
-                f"{self.name}: boundary file env var '{path_env_var}' not set"
-            )
-
-        self.boundaries = gpd.read_file(path).to_crs(epsg=4326)
-
-        # Determine join mode from config
-        if "district_id_field" in boundary_config:
-            self.join_mode = "id"
-            self.district_field = boundary_config["district_id_field"]
-        elif "district_name_field" in boundary_config:
-            self.join_mode = "name"
-            self.district_field = boundary_config["district_name_field"]
-        else:
-            raise ValueError(
-                f"{self.name}: config must specify either "
-                f"'district_name_field' or 'district_id_field'"
-            )
-
-    def _load_representatives(self) -> None:
-        """Read rep data (CSV or XML) into a dict keyed by join_field."""
-        reps_config = self.config["representatives"]
-        path_env_var = reps_config["file"]
-        path = os.getenv(path_env_var)
-        if not path:
-            raise ValueError(
-                f"{self.name}: reps file env var '{path_env_var}' not set"
-            )
-
-        fmt = reps_config["format"]
-        if fmt == "csv":
-            self._load_csv(path, reps_config)
-        elif fmt == "xml":
-            self._load_xml(path, reps_config)
-        else:
-            raise ValueError(f"{self.name}: unsupported format '{fmt}'")
-
-    def _load_csv(self, path: str, reps_config: Dict[str, Any]) -> None:
-        """Load representatives from a CSV file."""
-        df = pd.read_csv(path)
-        df.columns = df.columns.str.strip().str.replace('"', '')
-
-        join_field = reps_config["join_field"]
-        field_mapping = reps_config["field_mapping"]
-
-        for _, row in df.iterrows():
-            key = self._normalize_join_key(row.get(join_field))
-            if key is None or key in self.representatives:
-                continue
-            self.representatives[key] = self._extract_fields(row, field_mapping)
-
-    def _load_xml(self, path: str, reps_config: Dict[str, Any]) -> None:
-        """Load representatives from an XML file."""
-        tree = ET.parse(path)
-        join_field = reps_config["join_field"]
-        field_mapping = reps_config["field_mapping"]
-        photo_template = reps_config.get("photo_url_template")
-
-        for record in tree.getroot():
-            key = self._normalize_join_key(record.findtext(join_field, "").strip())
-            if key is None or key in self.representatives:
-                continue
-
-            extracted = {
-                canonical: (record.findtext(source_tag, "") or "").strip()
-                for canonical, source_tag in field_mapping.items()
-            }
-
-            # Federal-specific: trim elected date to YYYY-MM-DD
-            if "elected" in extracted:
-                extracted["elected"] = extracted["elected"][:10]
-
-            # Build photo URL from template if configured
-            if photo_template and "person_id" in extracted:
-                extracted["photo_url"] = photo_template.format(
-                    person_id=extracted["person_id"]
-                )
-
-            self.representatives[key] = extracted
-
-    def _extract_fields(
-        self, row: pd.Series, field_mapping: Dict[str, str]
-    ) -> Dict[str, Any]:
-        """Extract canonical fields from a CSV row per field_mapping."""
-        extracted = {}
-        for canonical, source_col in field_mapping.items():
-            value = str(row.get(source_col, "")).strip()
-            if value in ("nan", "None", ""):
-                value = ""
-            extracted[canonical] = value
-        return extracted
-
-    def _normalize_join_key(self, value: Any) -> Optional[Any]:
-        """Normalize join key based on join_mode.
-
-        For 'id' mode: cast to int (Toronto's WARD_NUMBER is 1.0, 2.0, ... as floats).
-        For 'name' mode: strip whitespace, return None if empty or 'nan'.
+        With Supabase storage, 'loading' is just looking up our jurisdiction's
+        identifier so subsequent lookups can scope queries correctly.
         """
-        if value is None:
-            return None
+        # The slug used to identify this jurisdiction in Supabase comes from
+        # the config filename. The registry passes that in via the adapter
+        # type lookup; if it's not in the config, we derive it from the name.
+        configured_slug = self.config.get("slug")
+        if configured_slug:
+            self.slug = configured_slug
 
-        if self.join_mode == "id":
-            try:
-                if pd.isna(value):
-                    return None
-                return int(float(value))
-            except (ValueError, TypeError):
-                return None
-
-        # name mode
-        s = str(value).strip()
-        if not s or s.lower() == "nan":
-            return None
-        return s
+        row = db.query_one(
+            "SELECT id FROM jurisdictions WHERE slug = %s;",
+            (self.slug,),
+        )
+        if row is None:
+            raise ValueError(
+                f"{self.name}: no jurisdiction row found in Supabase for slug "
+                f"'{self.slug}'. Has migrate_to_supabase.py been run?"
+            )
+        self.jurisdiction_id = row[0]
+        self._loaded = True
 
     # ── Lookup ───────────────────────────────────────────────────────
     def get_representatives(self, lat: float, lon: float) -> List[Dict[str, Any]]:
-        """Return representatives for a given point."""
+        """Return representatives whose district contains the given point."""
         if not self._loaded:
             raise RuntimeError(f"{self.name}: load_data() must be called first")
 
-        point = Point(lon, lat)
+        rows = db.query(LOOKUP_SQL, (self.jurisdiction_id, lon, lat))
+        return [self._row_to_dict(row) for row in rows]
 
-        # Two-stage spatial lookup:
-        # 1. sindex.intersection() narrows to candidate polygons via bbox overlap
-        # 2. exact .contains() filter selects polygons that actually contain the point
-        # This pattern is more reliable across GeoPandas versions than sindex.query()
-        candidate_idx = list(self.boundaries.sindex.intersection(point.bounds))
-        if not candidate_idx:
-            return []
-        candidates = self.boundaries.iloc[candidate_idx]
-        matches = candidates[candidates.geometry.contains(point)]
+    def _row_to_dict(self, row: tuple) -> Dict[str, Any]:
+        """Convert a query result row into the adapter's output dict shape."""
+        (name, party, email, phone, photo_url, website_url,
+         external_ids, role, start_date, district_name, district_external_id) = row
 
-        if matches.empty:
-            return []
+        district_label = self.config.get("output_district_label", "district")
 
-        # Take the first match (in ward-based jurisdictions, a point should
-        # only ever be in one district; if somehow in multiple, first wins)
-        district_value = matches.iloc[0][self.district_field]
-        key = self._normalize_join_key(district_value)
+        # Prefer the human-readable district name; fall back to external ID.
+        # Stringify both — Toronto wards are stored as floats ("7.0") in the
+        # source data and need to render as integers ("7").
+        district_value = (
+            self._stringify_district(district_name)
+            or self._stringify_district(district_external_id)
+        )
 
-        rep = self.representatives.get(key)
-        if rep is None:
-            # Point is inside the jurisdiction but we have no rep data for
-            # this district. Return empty rather than crash — surface the
-            # district name so the caller can display "district known, rep unknown".
-            return []
+        output: Dict[str, Any] = {"name": name}
 
-        # Enrich the rep dict with district info and output labels
-        enriched = self._format_output(rep, district_value)
-        return [enriched]
+        if party:
+            output["party"] = party
+        if email:
+            output["email"] = email
+        if phone:
+            output["phone"] = phone
+        if photo_url:
+            output["photo_url"] = photo_url
+        if website_url:
+            output["website"] = website_url
+        if start_date:
+            output["elected"] = start_date.isoformat()
+        if role:
+            output["role"] = role
 
-    def _format_output(
-        self, rep: Dict[str, Any], district_value: Any
-    ) -> Dict[str, Any]:
-        """Build the final output dict combining rep data + static fields + district info."""
-        # Start with the canonical name fields combined
-        output: Dict[str, Any] = {}
-        name = self._build_full_name(rep)
-        if name:
-            output["name"] = name
-
-        # Copy rep fields, skipping name components (already merged into name)
-        # and skipping empty/None values
-        skip = {"first_name", "last_name", "honorific", "person_id"}
-        for key, value in rep.items():
-            if key in skip:
-                continue
-            if value is None or value == "":
-                continue
-            output[key] = value
-
-        # Merge static fields (next_election, etc.)
+        # Static fields from config (e.g., next_election dates)
         for key, value in self.config.get("static_fields", {}).items():
-            if value is not None and value != "":
+            if value:
                 output[key] = value
 
-        # Attach district identifier using the configured label
-        district_label = self.config.get("output_district_label", "district")
-        output[district_label] = self._stringify_district(district_value)
-
-        # Add role label
-        role_label = self.config.get("output_role_label")
-        if role_label:
-            output["role"] = role_label.upper() if len(role_label) <= 3 else role_label.capitalize()
-
+        output[district_label] = district_value
         return output
 
-    def _stringify_district(self, value: Any) -> str:
-        """Convert district value to a clean string. Floats like 7.0 become '7'."""
-        if isinstance(value, float) and value.is_integer():
-            return str(int(value))
-        return str(value)
-
-    def _build_full_name(self, rep: Dict[str, Any]) -> Optional[str]:
-        """Assemble honorific + first + last into a single name string."""
-        hon = rep.get("honorific", "").strip()
-        first = rep.get("first_name", "").strip()
-        last = rep.get("last_name", "").strip()
-
-        if not (first or last):
-            return None
-
-        parts = []
-        if hon and hon.lower() != "nan":
-            parts.append(hon)
-        if first:
-            parts.append(first)
-        if last:
-            parts.append(last)
-        return " ".join(parts)
+    @staticmethod
+    def _stringify_district(value: Any) -> str:
+        """Convert a district identifier to a clean string."""
+        if value is None:
+            return ""
+        s = str(value)
+        # Floats stored as strings (e.g., "7.0") become integers
+        try:
+            f = float(s)
+            if f.is_integer():
+                return str(int(f))
+        except (ValueError, TypeError):
+            pass
+        return s
 
     # ── Validation ───────────────────────────────────────────────────
     def validate(self) -> bool:
-        """Verify loaded data is sane and configuration matches actual data."""
-        assert self.boundaries is not None, f"{self.name}: boundaries not loaded"
-        assert len(self.boundaries) > 0, f"{self.name}: no boundary records"
-        assert len(self.representatives) > 0, f"{self.name}: no representative records"
+        """Verify the adapter is properly bound to a Supabase jurisdiction."""
+        assert self.jurisdiction_id is not None, (
+            f"{self.name}: jurisdiction_id not set. load_data() must run first."
+        )
 
-        # Verify the configured district field actually exists in the boundary data.
-        # Without this check, a typo in district_name_field/district_id_field would
-        # silently load and only fail later during get_representatives().
-        if self.district_field not in self.boundaries.columns:
-            raise ValueError(
-                f"{self.name}: configured district field '{self.district_field}' "
-                f"not found in boundary data. Available columns: "
-                f"{list(self.boundaries.columns)}"
-            )
+        # Confirm at least one district exists for this jurisdiction
+        row = db.query_one(
+            "SELECT COUNT(*) FROM districts WHERE jurisdiction_id = %s;",
+            (self.jurisdiction_id,),
+        )
+        district_count = row[0]
+        assert district_count > 0, (
+            f"{self.name}: no districts found in Supabase for jurisdiction "
+            f"'{self.slug}'. Has migrate_to_supabase.py been run?"
+        )
+
+        # Confirm at least one active representation exists
+        row = db.query_one(
+            """
+            SELECT COUNT(*) FROM representations rep
+            JOIN districts d ON d.id = rep.district_id
+            WHERE d.jurisdiction_id = %s AND rep.end_date IS NULL;
+            """,
+            (self.jurisdiction_id,),
+        )
+        rep_count = row[0]
+        assert rep_count > 0, (
+            f"{self.name}: no active representations for jurisdiction '{self.slug}'."
+        )
 
         return True

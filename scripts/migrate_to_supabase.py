@@ -16,6 +16,8 @@ import os
 import sys
 from pathlib import Path
 
+from typing import Any, Dict, List
+
 import psycopg2
 from dotenv import load_dotenv
 from psycopg2.extras import Json
@@ -27,7 +29,7 @@ PROJECT_ROOT = Path(__file__).parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 
-from registry import JurisdictionRegistry
+from legacy_loader import LegacySourceLoader
 
 
 def make_jsonb(value, lang="en"):
@@ -37,14 +39,19 @@ def make_jsonb(value, lang="en"):
     return Json({lang: str(value), "fr": str(value)})  # Same value in both for now
 
 
-def migrate_jurisdiction(cur, adapter, slug):
+def migrate_jurisdiction(cur, config, slug):
     """Migrate a single jurisdiction's data into Supabase."""
-    print(f"\n=== Migrating {adapter.name} ({slug}) ===")
+    name = config["name"]
+    level = config["level"]
+    print(f"\n=== Migrating {name} ({slug}) ===")
+
+    loader = LegacySourceLoader(config)
+    loader.load()
 
     # Determine country/province from slug (ca_federal, ca_on, ca_on_toronto)
     parts = slug.split("_")
     country_code = parts[0].upper()
-    province_code = parts[1].upper() if len(parts) > 1 and adapter.level != "federal" else None
+    province_code = parts[1].upper() if len(parts) > 1 and level != "federal" else None
 
     # ── Step 1: Delete existing rows for this jurisdiction (idempotency) ──
     cur.execute("DELETE FROM jurisdictions WHERE slug = %s;", (slug,))
@@ -59,31 +66,42 @@ def migrate_jurisdiction(cur, adapter, slug):
         VALUES (%s, %s, %s, %s, %s)
         RETURNING id;
         """,
-        (slug, make_jsonb(adapter.name), adapter.level, country_code, province_code),
+        (slug, make_jsonb(name), level, country_code, province_code),
     )
     jurisdiction_id = cur.fetchone()[0]
     print(f"  Inserted jurisdiction: {jurisdiction_id}")
 
     # ── Step 3: Insert districts with PostGIS geometry ──
-    boundary_field = adapter.district_field
-    district_id_map = {}  # Maps join_key (riding name or ward number) -> district UUID
+    # Some districts are represented by multiple polygons (e.g., a riding that
+    # includes both a mainland section and an offshore island). We group all
+    # polygons by join_key and union them into a single MultiPolygon per district.
+    from shapely.ops import unary_union
 
-    rows_inserted = 0
-    for _, row in adapter.boundaries.iterrows():
+    boundary_field = loader.district_field
+    district_id_map = {}
+
+    # Group geometries by join_key
+    grouped: Dict[Any, List[Any]] = {}
+    grouped_names: Dict[Any, str] = {}
+    for _, row in loader.boundaries.iterrows():
         district_value = row[boundary_field]
-        if district_value is None:
+        if district_value is None or row.geometry is None:
             continue
 
-        join_key = adapter._normalize_join_key(district_value)
+        join_key = loader._normalize_join_key(district_value)
         if join_key is None:
             continue
 
-        # Skip duplicates (some shapefiles have multiple polygons per district)
-        if join_key in district_id_map:
-            continue
+        grouped.setdefault(join_key, []).append(row.geometry)
+        grouped_names.setdefault(join_key, str(district_value))
 
-        # Convert shapely geometry to WKT for PostGIS
-        geom_wkt = row.geometry.wkt
+    rows_inserted = 0
+    for join_key, geoms in grouped.items():
+        # Merge multi-polygon districts into a single (Multi)Polygon
+        if len(geoms) == 1:
+            merged = geoms[0]
+        else:
+            merged = unary_union(geoms)
 
         cur.execute(
             """
@@ -94,8 +112,8 @@ def migrate_jurisdiction(cur, adapter, slug):
             (
                 jurisdiction_id,
                 str(join_key),
-                make_jsonb(str(district_value)),
-                geom_wkt,
+                make_jsonb(grouped_names[join_key]),
+                merged.wkt,
             ),
         )
         district_id_map[join_key] = cur.fetchone()[0]
@@ -104,15 +122,15 @@ def migrate_jurisdiction(cur, adapter, slug):
     print(f"  Inserted {rows_inserted} districts")
 
     # ── Step 4: Insert representatives + representations ──
-    role_label = adapter.config.get("output_role_label", "representative")
+    role_label = config.get("output_role_label", "representative")
     role_label_formatted = role_label.upper() if len(role_label) <= 3 else role_label.capitalize()
 
     reps_inserted = 0
     representations_inserted = 0
 
-    for join_key, rep_data in adapter.representatives.items():
+    for join_key, rep_data in loader.representatives.items():
         # Build the full name from honorific + first + last
-        full_name = adapter._build_full_name(rep_data) or ""
+        full_name = LegacySourceLoader.build_full_name(rep_data) or ""
         if not full_name:
             continue
 
@@ -183,34 +201,20 @@ def main():
         print("ERROR: SUPABASE_DB_URL not set in .env")
         sys.exit(1)
 
-    print("Loading registry...")
-    registry = JurisdictionRegistry()
-    print(f"Loaded {len(registry.adapters)} adapters\n")
-
     print("Connecting to Supabase...")
     conn = psycopg2.connect(db_url)
-    conn.autocommit = False  # Wrap migration in a transaction
+    conn.autocommit = False
     cur = conn.cursor()
 
     try:
-        # Map adapter to its slug (we need to find the config that was used)
         config_dir = Path(os.getenv("JURISDICTIONS_CONFIG_DIR"))
-        adapter_slugs = {}
+        results = []
         for config_file in sorted(config_dir.glob("*.json")):
             with open(config_file) as f:
                 config = json.load(f)
-            slug = config_file.stem  # filename without .json
-            adapter_slugs[config["name"]] = slug
-
-        # Migrate each adapter
-        results = []
-        for adapter in registry.adapters:
-            slug = adapter_slugs.get(adapter.name)
-            if not slug:
-                print(f"WARNING: No slug found for {adapter.name}, skipping")
-                continue
-            result = migrate_jurisdiction(cur, adapter, slug)
-            results.append((adapter.name, result))
+            slug = config_file.stem
+            result = migrate_jurisdiction(cur, config, slug)
+            results.append((config["name"], result))
 
         conn.commit()
         print("\n" + "=" * 60)

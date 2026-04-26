@@ -68,6 +68,10 @@ class JurisdictionRegistry:
         with open(config_file) as f:
             config = json.load(f)
 
+        # Inject the slug derived from the config filename. The slug is what
+        # links a config to its row in the Supabase jurisdictions table.
+        config["slug"] = config_file.stem
+
         adapter_type = config.get("adapter_type")
         if adapter_type not in ADAPTER_TYPES:
             raise ValueError(
