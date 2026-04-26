@@ -260,8 +260,19 @@ class WardBasedAdapter(JurisdictionAdapter):
 
     # ── Validation ───────────────────────────────────────────────────
     def validate(self) -> bool:
-        """Verify loaded data is sane."""
+        """Verify loaded data is sane and configuration matches actual data."""
         assert self.boundaries is not None, f"{self.name}: boundaries not loaded"
         assert len(self.boundaries) > 0, f"{self.name}: no boundary records"
         assert len(self.representatives) > 0, f"{self.name}: no representative records"
+
+        # Verify the configured district field actually exists in the boundary data.
+        # Without this check, a typo in district_name_field/district_id_field would
+        # silently load and only fail later during get_representatives().
+        if self.district_field not in self.boundaries.columns:
+            raise ValueError(
+                f"{self.name}: configured district field '{self.district_field}' "
+                f"not found in boundary data. Available columns: "
+                f"{list(self.boundaries.columns)}"
+            )
+
         return True

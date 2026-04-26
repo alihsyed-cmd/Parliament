@@ -86,6 +86,10 @@ class JurisdictionRegistry:
         """
         Query every registered adapter for the given point.
 
+        If a single adapter raises an exception, log it and continue with the
+        remaining adapters. This ensures one broken jurisdiction doesn't break
+        lookups for the rest.
+
         Returns:
             A dict keyed by level ('federal', 'provincial', 'municipal') containing
             a list of representatives at that level. Lists may be empty if no
@@ -98,9 +102,15 @@ class JurisdictionRegistry:
         }
 
         for adapter in self.adapters:
-            reps = adapter.get_representatives(lat, lon)
-            if reps:
-                results[adapter.level].extend(reps)
+            try:
+                reps = adapter.get_representatives(lat, lon)
+                if reps:
+                    results[adapter.level].extend(reps)
+            except Exception as e:
+                # One bad adapter must not break lookups for the rest.
+                # Log and continue. Tests for the broken jurisdiction will
+                # fail; tests for other jurisdictions will still pass.
+                print(f"WARNING: {adapter.name} adapter failed: {e}")
 
         return results
 
