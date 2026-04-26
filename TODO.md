@@ -23,3 +23,12 @@ Captures known issues, enhancements, and follow-ups that aren't blocking current
 **Reported:** 2026-04-26 (Milestone 2.2)
 **Context:** `pyogrio` imports the deprecated `shapely.geos` module. Pure ecosystem issue, not our code.
 **Action:** No action needed. Will resolve when pyogrio releases a version compatible with Shapely 2.0's namespace changes. Re-check periodically when updating dependencies.
+
+## Data Quality
+
+### [Phase 2.6 or 2.7] Federal name-join Unicode mismatch (7 ridings affected)
+**Reported:** 2026-04-26 (Milestone 2.3)
+**Context:** 2 federal reps (Luc Berthold, Bienvenu-Olivier Ntumba) and 5 federal districts (Mégantic—L'Érable—Lotbinière, Mont-Saint-Bruno—L'Acadie, Terrebonne, University—Rosedale, Scarborough Southwest) failed to link during Supabase migration. The boundary shapefile and the ourcommons.ca XML use different Unicode characters for apostrophes (U+0027 vs U+2019) and dashes (- vs —), causing string-based joins to fail silently.
+**Pattern:** Name-based joins are fragile to typography. Long-term fix should be either (a) Unicode normalization (NFKC) on both sides before join, (b) switch federal join to use riding numerical codes if available in both data sources, or (c) fuzzy match for federal as fallback.
+**Action:** Address during API-first ingestion (2.6) when we revisit data sources, or during expansion (2.7) when adding cities forces a normalization layer.
+**Workaround:** None needed for v1 — the affected ridings still appear in the database, lookups for those postal codes return the district but no representative.
