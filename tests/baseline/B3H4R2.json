@@ -3,30 +3,20 @@
         "lat": 44.6370436,
         "lon": -63.5956263
     },
-    "federal": {
-        "elected": "2025-04-28",
-        "mp": "Shannon Miedema",
-        "next_election": "On or before October 2029",
-        "party": "Liberal",
-        "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/122428_Original.jpg",
-        "riding": "Halifax"
-    },
-    "municipal": {
-        "councillor": null,
-        "email": null,
-        "phone": null,
-        "photo_url": null,
-        "role": null,
-        "ward": null,
-        "website": null
-    },
     "postal_code": "B3H4R2",
-    "provincial": {
-        "email": null,
-        "mpp": null,
-        "next_election": null,
-        "party": null,
-        "phone": null,
-        "riding": null
+    "results": {
+        "federal": [
+            {
+                "elected": "2025-04-28",
+                "name": "Shannon Miedema",
+                "next_election": "On or before October 2029",
+                "party": "Liberal",
+                "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/122428_Original.jpg",
+                "riding": "Halifax",
+                "role": "MP"
+            }
+        ],
+        "municipal": [],
+        "provincial": []
     }
 }

@@ -3,30 +3,30 @@
         "lat": 46.46771100000001,
         "lon": -80.99695559999999
     },
-    "federal": {
-        "elected": "2025-04-28",
-        "mp": "Viviane Lapointe",
-        "next_election": "On or before October 2029",
-        "party": "Liberal",
-        "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/110663_Original.jpg",
-        "riding": "Sudbury"
-    },
-    "municipal": {
-        "councillor": null,
-        "email": null,
-        "phone": null,
-        "photo_url": null,
-        "role": null,
-        "ward": null,
-        "website": null
-    },
     "postal_code": "P3E5J1",
-    "provincial": {
-        "email": "jwest-qp@ndp.on.ca",
-        "mpp": "Jamie West",
-        "next_election": "On or before April 11, 2030",
-        "party": "New Democratic Party of Ontario",
-        "phone": "705-675-1914",
-        "riding": "Sudbury"
+    "results": {
+        "federal": [
+            {
+                "elected": "2025-04-28",
+                "name": "Viviane Lapointe",
+                "next_election": "On or before October 2029",
+                "party": "Liberal",
+                "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/110663_Original.jpg",
+                "riding": "Sudbury",
+                "role": "MP"
+            }
+        ],
+        "municipal": [],
+        "provincial": [
+            {
+                "email": "jwest-qp@ndp.on.ca",
+                "name": "Jamie West",
+                "next_election": "On or before April 11, 2030",
+                "party": "New Democratic Party of Ontario",
+                "phone": "705-675-1914",
+                "riding": "Sudbury",
+                "role": "MPP"
+            }
+        ]
     }
 }

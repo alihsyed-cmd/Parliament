@@ -3,30 +3,30 @@
         "lat": 45.4213116,
         "lon": -75.70891619999999
     },
-    "federal": {
-        "elected": "2025-04-28",
-        "mp": "Yasir Naqvi",
-        "next_election": "On or before October 2029",
-        "party": "Liberal",
-        "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/110572_Original.jpg",
-        "riding": "Ottawa Centre"
-    },
-    "municipal": {
-        "councillor": null,
-        "email": null,
-        "phone": null,
-        "photo_url": null,
-        "role": null,
-        "ward": null,
-        "website": null
-    },
     "postal_code": "K1A0A6",
-    "provincial": {
-        "email": "cmckenney-co@ndp.on.ca",
-        "mpp": "Catherine McKenney",
-        "next_election": "On or before April 11, 2030",
-        "party": "New Democratic Party of Ontario",
-        "phone": "613-722-6414",
-        "riding": "Ottawa Centre"
+    "results": {
+        "federal": [
+            {
+                "elected": "2025-04-28",
+                "name": "Yasir Naqvi",
+                "next_election": "On or before October 2029",
+                "party": "Liberal",
+                "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/110572_Original.jpg",
+                "riding": "Ottawa Centre",
+                "role": "MP"
+            }
+        ],
+        "municipal": [],
+        "provincial": [
+            {
+                "email": "cmckenney-co@ndp.on.ca",
+                "name": "Catherine McKenney",
+                "next_election": "On or before April 11, 2030",
+                "party": "New Democratic Party of Ontario",
+                "phone": "613-722-6414",
+                "riding": "Ottawa Centre",
+                "role": "MPP"
+            }
+        ]
     }
 }
