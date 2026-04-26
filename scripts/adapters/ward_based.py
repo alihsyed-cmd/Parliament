@@ -202,21 +202,43 @@ class WardBasedAdapter(JurisdictionAdapter):
         self, rep: Dict[str, Any], district_value: Any
     ) -> Dict[str, Any]:
         """Build the final output dict combining rep data + static fields + district info."""
-        output = dict(rep)  # copy so we don't mutate the stored dict
-
-        # Build full name from honorific + first + last if present
+        # Start with the canonical name fields combined
+        output: Dict[str, Any] = {}
         name = self._build_full_name(rep)
         if name:
             output["name"] = name
 
+        # Copy rep fields, skipping name components (already merged into name)
+        # and skipping empty/None values
+        skip = {"first_name", "last_name", "honorific", "person_id"}
+        for key, value in rep.items():
+            if key in skip:
+                continue
+            if value is None or value == "":
+                continue
+            output[key] = value
+
         # Merge static fields (next_election, etc.)
-        output.update(self.config.get("static_fields", {}))
+        for key, value in self.config.get("static_fields", {}).items():
+            if value is not None and value != "":
+                output[key] = value
 
         # Attach district identifier using the configured label
         district_label = self.config.get("output_district_label", "district")
-        output[district_label] = str(district_value)
+        output[district_label] = self._stringify_district(district_value)
+
+        # Add role label
+        role_label = self.config.get("output_role_label")
+        if role_label:
+            output["role"] = role_label.upper() if len(role_label) <= 3 else role_label.capitalize()
 
         return output
+
+    def _stringify_district(self, value: Any) -> str:
+        """Convert district value to a clean string. Floats like 7.0 become '7'."""
+        if isinstance(value, float) and value.is_integer():
+            return str(int(value))
+        return str(value)
 
     def _build_full_name(self, rep: Dict[str, Any]) -> Optional[str]:
         """Assemble honorific + first + last into a single name string."""
