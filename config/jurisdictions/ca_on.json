@@ -1,0 +1,27 @@
+{
+  "name": "Ontario",
+  "level": "provincial",
+  "adapter_type": "ward_based",
+  "boundary": {
+    "file": "ONTARIO_SHP",
+    "district_name_field": "ENGLISH_NA"
+  },
+  "representatives": {
+    "file": "ONTARIO_CSV",
+    "format": "csv",
+    "join_field": "Riding name",
+    "field_mapping": {
+      "first_name": "First name",
+      "last_name": "Last name",
+      "honorific": "Honorific",
+      "party": "Party",
+      "email": "Email",
+      "phone": "Telephone"
+    }
+  },
+  "static_fields": {
+    "next_election": "On or before April 11, 2030"
+  },
+  "output_role_label": "mpp",
+  "output_district_label": "riding"
+}

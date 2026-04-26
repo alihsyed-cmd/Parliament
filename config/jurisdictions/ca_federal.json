@@ -1,0 +1,29 @@
+{
+  "name": "Canada",
+  "level": "federal",
+  "adapter_type": "ward_based",
+  "boundary": {
+    "file": "FEDERAL_SHP",
+    "district_name_field": "ED_NAMEE"
+  },
+  "representatives": {
+    "file": "FEDERAL_XML",
+    "format": "xml",
+    "record_tag": "*",
+    "join_field": "ConstituencyName",
+    "field_mapping": {
+      "first_name": "PersonOfficialFirstName",
+      "last_name": "PersonOfficialLastName",
+      "honorific": "PersonShortHonorific",
+      "party": "CaucusShortName",
+      "elected": "FromDateTime",
+      "person_id": "PersonId"
+    },
+    "photo_url_template": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/{person_id}_Original.jpg"
+  },
+  "static_fields": {
+    "next_election": "On or before October 2029"
+  },
+  "output_role_label": "mp",
+  "output_district_label": "riding"
+}

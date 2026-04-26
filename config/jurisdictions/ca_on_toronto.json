@@ -1,0 +1,25 @@
+{
+  "name": "Toronto",
+  "level": "municipal",
+  "adapter_type": "ward_based",
+  "boundary": {
+    "file": "TORONTO_JSON",
+    "district_id_field": "WARD_NUMBER"
+  },
+  "representatives": {
+    "file": "TORONTO_CSV",
+    "format": "csv",
+    "join_field": "District ID",
+    "field_mapping": {
+      "first_name": "First name",
+      "last_name": "Last name",
+      "role": "Primary role",
+      "email": "Email",
+      "phone": "Phone",
+      "photo_url": "Photo URL",
+      "website": "Website"
+    }
+  },
+  "output_role_label": "councillor",
+  "output_district_label": "ward"
+}
