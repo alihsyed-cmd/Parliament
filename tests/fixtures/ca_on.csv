@@ -1,0 +1,8 @@
+postal_code,lat,lon,level,expected_name_contains,expected_role,expected_district,source_url,verified_date,notes
+M3J3R2,43.766062,-79.4992999,provincial,Rakocevic,MPP,Humber River,https://www.ola.org/en/members,2026-04-26,Toronto urban
+K1A0A6,45.4213116,-75.70891619999999,provincial,McKenney,MPP,Ottawa Centre,https://www.ola.org/en/members,2026-04-26,Federal capital
+P3E5J1,46.46771100000001,-80.99695559999999,provincial,West,MPP,Sudbury,https://www.ola.org/en/members,2026-04-26,Northern Ontario
+L8P4S8,43.2573736,-79.8725587,provincial,Lennox,MPP,Hamilton Centre,https://www.ola.org/en/members,2026-04-26,Industrial Ontario
+N2L3G1,43.4702557,-80.54176149999999,provincial,Fife,MPP,Waterloo,https://www.ola.org/en/members,2026-04-26,Tech corridor
+L5B1M2,43.5961221,-79.6400348,provincial,Kusendova-Bashta,MPP,Mississauga Centre,https://www.ola.org/en/members,2026-04-26,Largest GTA satellite
+K7L3N6,44.2259615,-76.4937911,provincial,Hsu,MPP,Kingston,https://www.ola.org/en/members,2026-04-26,Eastern Ontario university town

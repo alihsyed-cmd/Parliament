@@ -1,0 +1,6 @@
+postal_code,lat,lon,level,expected_name_contains,expected_role,expected_district,source_url,verified_date,notes
+M3J3R2,43.766062,-79.4992999,municipal,Perruzza,Councillor,7,https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-7/,2026-04-26,Ward 7 Humber River-Black Creek (North York)
+M5H2N2,43.6529336,-79.3843091,municipal,Malik,Councillor,10,https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-10/,2026-04-26,Ward 10 Spadina-Fort York (City Hall area)
+M4E1G7,43.6716793,-79.2913581,municipal,Bradford,Councillor,19,https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-19/,2026-04-26,Ward 19 Beaches-East York
+M6S1V6,43.6535339,-79.4824287,municipal,Perks,Councillor,4,https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-4/,2026-04-26,Ward 4 Parkdale-High Park (Bloor West Village)
+M1B5K7,43.8242661,-79.1865957,municipal,Shan,Councillor,25,https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-25/,2026-04-26,Ward 25 Scarborough-Rouge Park

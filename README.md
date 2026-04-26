@@ -43,6 +43,16 @@ curl "http://127.0.0.1:5000/lookup?postal_code=M3J3R2"
 curl "http://127.0.0.1:5000/health"
 ```
 
+## Testing
+
+The project uses fixture-based regression tests. Run them with:
+
+```bash
+pytest tests/ -v
+```
+
+See `tests/README.md` for details on the fixture format and how to add new test cases.
+
 ## Environment
 
 Requires a `.env` file with:

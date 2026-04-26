@@ -1,0 +1,8 @@
+postal_code,lat,lon,level,expected_name_contains,expected_role,expected_district,source_url,verified_date,notes
+M3J3R2,43.766062,-79.4992999,federal,Sgro,MP,Humber River,https://www.ourcommons.ca/Members/en/search?searchText=M3J3R2,2026-04-26,Toronto urban
+K1A0A6,45.4213116,-75.70891619999999,federal,Naqvi,MP,Ottawa Centre,https://www.ourcommons.ca/Members/en/search?searchText=K1A0A6,2026-04-26,Federal capital
+H3A1A1,45.5075339,-73.5836848,federal,Miller,MP,Ville-Marie,https://www.ourcommons.ca/Members/en/search?searchText=H3A1A1,2026-04-26,Montreal — French riding name with UTF-8 chars (Île-des-Soeurs)
+V6B4Y8,49.2762187,-123.109763,federal,Fry,MP,Vancouver Centre,https://www.ourcommons.ca/Members/en/search?searchText=V6B4Y8,2026-04-26,Vancouver
+T2P1J9,51.04447769999999,-114.0630378,federal,McLean,MP,Calgary Centre,https://www.ourcommons.ca/Members/en/search?searchText=T2P1J9,2026-04-26,Calgary
+B3H4R2,44.6370436,-63.5956263,federal,Miedema,MP,Halifax,https://www.ourcommons.ca/Members/en/search?searchText=B3H4R2,2026-04-26,Atlantic Canada
+X1A2P9,62.42701479999999,-114.4106256,federal,Alty,MP,Northwest Territories,https://www.ourcommons.ca/Members/en/search?searchText=X1A2P9,2026-04-26,Territorial — single-riding territory
