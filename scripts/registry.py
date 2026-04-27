@@ -103,9 +103,9 @@ class JurisdictionRegistry:
                 (empty list if no covering jurisdiction)
         """
         results: Dict[str, Dict[str, Any]] = {
-            "federal": {"governance": None, "representatives": []},
-            "provincial": {"governance": None, "representatives": []},
-            "municipal": {"governance": None, "representatives": []},
+            "federal": {"governance": None, "representatives": [], "leadership": []},
+            "provincial": {"governance": None, "representatives": [], "leadership": []},
+            "municipal": {"governance": None, "representatives": [], "leadership": []},
         }
 
         for adapter in self.adapters:
@@ -114,12 +114,17 @@ class JurisdictionRegistry:
                 if reps:
                     results[adapter.level]["representatives"].extend(reps)
                     # Attach governance for any level where the point matched
-                    # a jurisdiction. If the point falls outside all jurisdictions
-                    # at a level, governance stays None.
+                    # a jurisdiction.
                     if results[adapter.level]["governance"] is None:
                         results[adapter.level]["governance"] = adapter.governance
+
+                    # Also fetch leadership (PM, Premier, Mayor, cabinet) for
+                    # jurisdictions where the point matched. Leadership is
+                    # jurisdiction-wide, not point-dependent.
+                    leadership = adapter.get_leadership()
+                    if leadership:
+                        results[adapter.level]["leadership"].extend(leadership)
             except Exception as e:
-                # One bad adapter must not break lookups for the rest.
                 print(f"WARNING: {adapter.name} adapter failed: {e}")
 
         return results

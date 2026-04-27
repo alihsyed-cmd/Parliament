@@ -14,10 +14,9 @@ import db
 from .base import JurisdictionAdapter
 
 
-# Single SQL query reused across all ward-based jurisdictions.
-# Returns one row per representative whose district contains the given point,
-# scoped to the adapter's jurisdiction.
-LOOKUP_SQL = """
+# District-based lookup: representatives whose district contains the point.
+# Used for MPs, MPPs, Councillors — anyone who represents a specific area.
+DISTRICT_LOOKUP_SQL = """
     SELECT
         r.name->>'en'           AS name,
         r.party->>'en'          AS party,
@@ -34,10 +33,32 @@ LOOKUP_SQL = """
     JOIN representations rep
         ON rep.district_id = d.id
        AND rep.end_date IS NULL
+       AND rep.scope = 'district'
     JOIN representatives r
         ON r.id = rep.representative_id
     WHERE d.jurisdiction_id = %s
       AND ST_Contains(d.boundary, ST_SetSRID(ST_MakePoint(%s, %s), 4326));
+"""
+
+# Role-based lookup: representatives who hold a leadership role for the
+# whole jurisdiction. PM, Premier, Mayor, cabinet ministers.
+LEADERSHIP_LOOKUP_SQL = """
+    SELECT
+        r.name->>'en'           AS name,
+        r.party->>'en'          AS party,
+        r.email                 AS email,
+        r.phone                 AS phone,
+        r.photo_url             AS photo_url,
+        r.website_url->>'en'    AS website_url,
+        r.external_ids          AS external_ids,
+        rep.role->>'en'         AS role,
+        rep.start_date          AS start_date
+    FROM representations rep
+    JOIN representatives r ON r.id = rep.representative_id
+    WHERE rep.jurisdiction_id = %s
+      AND rep.scope = 'role'
+      AND rep.end_date IS NULL
+    ORDER BY rep.start_date ASC NULLS LAST;
 """
 
 
@@ -83,12 +104,46 @@ class WardBasedAdapter(JurisdictionAdapter):
 
     # ── Lookup ───────────────────────────────────────────────────────
     def get_representatives(self, lat: float, lon: float) -> List[Dict[str, Any]]:
-        """Return representatives whose district contains the given point."""
+        """Return district-based representatives whose district contains the point."""
         if not self._loaded:
             raise RuntimeError(f"{self.name}: load_data() must be called first")
 
-        rows = db.query(LOOKUP_SQL, (self.jurisdiction_id, lon, lat))
+        rows = db.query(DISTRICT_LOOKUP_SQL, (self.jurisdiction_id, lon, lat))
         return [self._row_to_dict(row) for row in rows]
+
+    def get_leadership(self) -> List[Dict[str, Any]]:
+        """Return role-based representatives (PM, Premier, Mayor, cabinet) for this jurisdiction.
+
+        Unlike get_representatives, this is not point-dependent — every user in
+        a jurisdiction sees the same leadership.
+        """
+        if not self._loaded:
+            raise RuntimeError(f"{self.name}: load_data() must be called first")
+
+        rows = db.query(LEADERSHIP_LOOKUP_SQL, (self.jurisdiction_id,))
+        return [self._row_to_dict_leadership(row) for row in rows]
+
+    def _row_to_dict_leadership(self, row: tuple) -> Dict[str, Any]:
+        """Convert a leadership query row into output dict shape (no district info)."""
+        (name, party, email, phone, photo_url, website_url,
+         external_ids, role, start_date) = row
+
+        output: Dict[str, Any] = {"name": name}
+        if party:
+            output["party"] = party
+        if email:
+            output["email"] = email
+        if phone:
+            output["phone"] = phone
+        if photo_url:
+            output["photo_url"] = photo_url
+        if website_url:
+            output["website"] = website_url
+        if start_date:
+            output["start_date"] = start_date.isoformat()
+        if role:
+            output["role"] = role
+        return output
 
     def _row_to_dict(self, row: tuple) -> Dict[str, Any]:
         """Convert a query result row into the adapter's output dict shape."""
