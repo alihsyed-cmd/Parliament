@@ -45,3 +45,16 @@ Captures known issues, enhancements, and follow-ups that aren't blocking current
 **Context:** During migration to PostGIS, the Halifax federal riding's mainland portion was silently discarded because it shared a name with the Sable Island portion. The original migration treated multi-polygon districts as duplicates and kept only the first. Halifax users got 0 federal reps because the only Halifax polygon in the database was on Sable Island, 290 km offshore.
 **Resolution:** Migration script now uses `shapely.ops.unary_union` to merge multiple polygons per district into a single MultiPolygon.
 **Application:** This pattern applies broadly. Many Canadian ridings span multiple polygons (Vancouver Island, Newfoundland, coastal Quebec, the Toronto Islands). Any future ingestion logic that touches geometry must preserve all polygons per district, not deduplicate by name.
+
+## Display & Output Format
+
+### [Phase 3] Sort leadership in canonical order, not alphabetically
+**Reported:** 2026-04-27 (Milestone 2.4.5)
+**Context:** Currently leadership arrays are sorted by `start_date ASC NULLS LAST`. For display purposes, users expect Premier first, Deputy Premier second, then ministers in order of precedence. The federal cabinet CSV has a `Precedence` column we could use; the Ontario CSV doesn't, so a manual sort or a small mapping table would be needed.
+**Why deferred:** Display ordering is frontend concern. Backend correctly returns all data; the frontend should sort by role hierarchy if desired.
+**Action:** When rendering leadership in Phase 3, apply a sort: Premier/PM/Mayor first, then Deputy/Vice-, then alphabetical by role.
+
+### [Future] Federal cabinet "Title" field contains compound roles
+**Reported:** 2026-04-27 (Milestone 2.4.5)
+**Context:** Some federal cabinet members hold multiple roles in a single CSV row, concatenated with " and " (e.g., Joël Lightbound: "Minister of Government Transformation, Public Works and Procurement and Quebec Lieutenant"). The current loader treats this as one role title.
+**Action:** When backend supports multi-role display per minister, parse compound titles into separate role rows. Low priority for v1.

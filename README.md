@@ -64,6 +64,8 @@ Adapters then query Supabase directly using parameterized PostGIS spatial querie
 
 Each jurisdiction also declares **governance metadata** (in `jurisdictions.governance`) describing how it's governed: partisan vs non-partisan, role labels, district terminology, election cycle, and special flags like `has_mayor`. The API surfaces this metadata per level so the frontend renders different jurisdictions correctly without conditionals.
 
+The API also returns **leadership data** alongside district-based representatives — the Prime Minister and federal cabinet at the federal level, the Premier and provincial cabinet at the provincial level, and the Mayor at the municipal level. Leadership is jurisdiction-wide rather than point-dependent: every Canadian sees the same federal cabinet regardless of postal code.
+
 ## Testing
 
 The project uses fixture-based regression tests. Run them with:
