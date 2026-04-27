@@ -86,7 +86,7 @@ class JurisdictionRegistry:
         self.adapters.append(adapter)
         print(f"  Loaded: {adapter}")
 
-    def lookup_all(self, lat: float, lon: float) -> Dict[str, List[Dict[str, Any]]]:
+    def lookup_all(self, lat: float, lon: float) -> Dict[str, Dict[str, Any]]:
         """
         Query every registered adapter for the given point.
 
@@ -95,25 +95,31 @@ class JurisdictionRegistry:
         lookups for the rest.
 
         Returns:
-            A dict keyed by level ('federal', 'provincial', 'municipal') containing
-            a list of representatives at that level. Lists may be empty if no
-            jurisdiction at that level covers the point.
+            A dict keyed by level ('federal', 'provincial', 'municipal'). Each
+            level maps to a dict containing:
+              - 'governance': metadata describing how the jurisdiction is governed
+                (or None if no covering jurisdiction at this level)
+              - 'representatives': a list of representatives at this point
+                (empty list if no covering jurisdiction)
         """
-        results: Dict[str, List[Dict[str, Any]]] = {
-            "federal": [],
-            "provincial": [],
-            "municipal": [],
+        results: Dict[str, Dict[str, Any]] = {
+            "federal": {"governance": None, "representatives": []},
+            "provincial": {"governance": None, "representatives": []},
+            "municipal": {"governance": None, "representatives": []},
         }
 
         for adapter in self.adapters:
             try:
                 reps = adapter.get_representatives(lat, lon)
                 if reps:
-                    results[adapter.level].extend(reps)
+                    results[adapter.level]["representatives"].extend(reps)
+                    # Attach governance for any level where the point matched
+                    # a jurisdiction. If the point falls outside all jurisdictions
+                    # at a level, governance stays None.
+                    if results[adapter.level]["governance"] is None:
+                        results[adapter.level]["governance"] = adapter.governance
             except Exception as e:
                 # One bad adapter must not break lookups for the rest.
-                # Log and continue. Tests for the broken jurisdiction will
-                # fail; tests for other jurisdictions will still pass.
                 print(f"WARNING: {adapter.name} adapter failed: {e}")
 
         return results

@@ -69,7 +69,7 @@ class WardBasedAdapter(JurisdictionAdapter):
             self.slug = configured_slug
 
         row = db.query_one(
-            "SELECT id FROM jurisdictions WHERE slug = %s;",
+            "SELECT id, governance FROM jurisdictions WHERE slug = %s;",
             (self.slug,),
         )
         if row is None:
@@ -78,6 +78,7 @@ class WardBasedAdapter(JurisdictionAdapter):
                 f"'{self.slug}'. Has migrate_to_supabase.py been run?"
             )
         self.jurisdiction_id = row[0]
+        self.governance = row[1]  # jsonb column comes back as a Python dict
         self._loaded = True
 
     # ── Lookup ───────────────────────────────────────────────────────
