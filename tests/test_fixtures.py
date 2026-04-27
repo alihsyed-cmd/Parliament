@@ -60,7 +60,8 @@ def test_fixture(fixture, registry):
 
     # Run the lookup
     results = registry.lookup_all(lat, lon)
-    reps_at_level = results.get(level, [])
+    level_data = results.get(level, {})
+    reps_at_level = level_data.get("representatives", []) if isinstance(level_data, dict) else level_data
 
     # Build a helpful failure message
     actual_summary = "\n".join(
