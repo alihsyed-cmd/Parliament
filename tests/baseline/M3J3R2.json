@@ -5,38 +5,106 @@
     },
     "postal_code": "M3J3R2",
     "results": {
-        "federal": [
-            {
-                "elected": "2025-04-28",
-                "name": "Hon. Judy A. Sgro",
-                "next_election": "On or before October 2029",
-                "party": "Liberal",
-                "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/1787_Original.jpg",
-                "riding": "Humber River\u2014Black Creek",
-                "role": "MP"
-            }
-        ],
-        "municipal": [
-            {
-                "email": "councillor_perruzza@toronto.ca",
-                "name": "Anthony Perruzza",
-                "phone": "416-338-5335",
-                "photo_url": "https://www.toronto.ca/wp-content/uploads/2022/11/9937-Cllr-Perruzza-web.jpg",
-                "role": "Councillor",
-                "ward": "7",
-                "website": "https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-7/"
-            }
-        ],
-        "provincial": [
-            {
-                "email": "trakocevic-qp@ndp.on.ca",
-                "name": "Tom Rakocevic",
-                "next_election": "On or before April 11, 2030",
-                "party": "New Democratic Party of Ontario",
-                "phone": "416-743-7272",
-                "riding": "Humber River\u2014Black Creek",
-                "role": "MPP"
-            }
-        ]
+        "federal": {
+            "governance": {
+                "district_term": {
+                    "en": "Riding",
+                    "fr": "Circonscription"
+                },
+                "election_cycle_years": 4,
+                "max_term_years": 5,
+                "partisan": true,
+                "rep_count_expected": 1,
+                "rep_role_labels": {
+                    "en": {
+                        "plural": "MPs",
+                        "singular": "MP"
+                    },
+                    "fr": {
+                        "plural": "d\u00e9put\u00e9s",
+                        "singular": "d\u00e9put\u00e9"
+                    }
+                },
+                "type": "ward_based"
+            },
+            "representatives": [
+                {
+                    "elected": "2025-04-28",
+                    "name": "Hon. Judy A. Sgro",
+                    "next_election": "On or before October 2029",
+                    "party": "Liberal",
+                    "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/1787_Original.jpg",
+                    "riding": "Humber River\u2014Black Creek",
+                    "role": "MP"
+                }
+            ]
+        },
+        "municipal": {
+            "governance": {
+                "district_term": {
+                    "en": "Ward",
+                    "fr": "Quartier"
+                },
+                "election_cycle_years": 4,
+                "has_mayor": true,
+                "partisan": false,
+                "rep_count_expected": 1,
+                "rep_role_labels": {
+                    "en": {
+                        "plural": "Councillors",
+                        "singular": "Councillor"
+                    },
+                    "fr": {
+                        "plural": "Conseillers",
+                        "singular": "Conseiller"
+                    }
+                },
+                "type": "ward_based"
+            },
+            "representatives": [
+                {
+                    "email": "councillor_perruzza@toronto.ca",
+                    "name": "Anthony Perruzza",
+                    "phone": "416-338-5335",
+                    "photo_url": "https://www.toronto.ca/wp-content/uploads/2022/11/9937-Cllr-Perruzza-web.jpg",
+                    "role": "Councillor",
+                    "ward": "7",
+                    "website": "https://www.toronto.ca/city-government/council/members-of-council/councillor-ward-7/"
+                }
+            ]
+        },
+        "provincial": {
+            "governance": {
+                "district_term": {
+                    "en": "Riding",
+                    "fr": "Circonscription"
+                },
+                "election_cycle_years": 4,
+                "partisan": true,
+                "rep_count_expected": 1,
+                "rep_role_labels": {
+                    "en": {
+                        "plural": "MPPs",
+                        "singular": "MPP"
+                    },
+                    "fr": {
+                        "plural": "d\u00e9put\u00e9s provinciaux",
+                        "singular": "d\u00e9put\u00e9 provincial"
+                    }
+                },
+                "type": "ward_based"
+            },
+            "representatives": [
+                {
+                    "email": "trakocevic-qp@ndp.on.ca",
+                    "name": "Tom Rakocevic",
+                    "next_election": "On or before April 11, 2030",
+                    "party": "New Democratic Party of Ontario",
+                    "phone": "416-743-7272",
+                    "riding": "Humber River\u2014Black Creek",
+                    "role": "MPP"
+                }
+            ]
+        }
     }
 }

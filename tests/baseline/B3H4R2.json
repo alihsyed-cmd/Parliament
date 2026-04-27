@@ -5,18 +5,47 @@
     },
     "postal_code": "B3H4R2",
     "results": {
-        "federal": [
-            {
-                "elected": "2025-04-28",
-                "name": "Shannon Miedema",
-                "next_election": "On or before October 2029",
-                "party": "Liberal",
-                "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/122428_Original.jpg",
-                "riding": "Halifax",
-                "role": "MP"
-            }
-        ],
-        "municipal": [],
-        "provincial": []
+        "federal": {
+            "governance": {
+                "district_term": {
+                    "en": "Riding",
+                    "fr": "Circonscription"
+                },
+                "election_cycle_years": 4,
+                "max_term_years": 5,
+                "partisan": true,
+                "rep_count_expected": 1,
+                "rep_role_labels": {
+                    "en": {
+                        "plural": "MPs",
+                        "singular": "MP"
+                    },
+                    "fr": {
+                        "plural": "d\u00e9put\u00e9s",
+                        "singular": "d\u00e9put\u00e9"
+                    }
+                },
+                "type": "ward_based"
+            },
+            "representatives": [
+                {
+                    "elected": "2025-04-28",
+                    "name": "Shannon Miedema",
+                    "next_election": "On or before October 2029",
+                    "party": "Liberal",
+                    "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/122428_Original.jpg",
+                    "riding": "Halifax",
+                    "role": "MP"
+                }
+            ]
+        },
+        "municipal": {
+            "governance": null,
+            "representatives": []
+        },
+        "provincial": {
+            "governance": null,
+            "representatives": []
+        }
     }
 }

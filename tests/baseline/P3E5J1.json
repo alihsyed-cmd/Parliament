@@ -5,28 +5,76 @@
     },
     "postal_code": "P3E5J1",
     "results": {
-        "federal": [
-            {
-                "elected": "2025-04-28",
-                "name": "Viviane Lapointe",
-                "next_election": "On or before October 2029",
-                "party": "Liberal",
-                "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/110663_Original.jpg",
-                "riding": "Sudbury",
-                "role": "MP"
-            }
-        ],
-        "municipal": [],
-        "provincial": [
-            {
-                "email": "jwest-qp@ndp.on.ca",
-                "name": "Jamie West",
-                "next_election": "On or before April 11, 2030",
-                "party": "New Democratic Party of Ontario",
-                "phone": "705-675-1914",
-                "riding": "Sudbury",
-                "role": "MPP"
-            }
-        ]
+        "federal": {
+            "governance": {
+                "district_term": {
+                    "en": "Riding",
+                    "fr": "Circonscription"
+                },
+                "election_cycle_years": 4,
+                "max_term_years": 5,
+                "partisan": true,
+                "rep_count_expected": 1,
+                "rep_role_labels": {
+                    "en": {
+                        "plural": "MPs",
+                        "singular": "MP"
+                    },
+                    "fr": {
+                        "plural": "d\u00e9put\u00e9s",
+                        "singular": "d\u00e9put\u00e9"
+                    }
+                },
+                "type": "ward_based"
+            },
+            "representatives": [
+                {
+                    "elected": "2025-04-28",
+                    "name": "Viviane Lapointe",
+                    "next_election": "On or before October 2029",
+                    "party": "Liberal",
+                    "photo_url": "https://www.ourcommons.ca/Content/Parliamentarians/Images/OfficialMPPhotos/45/110663_Original.jpg",
+                    "riding": "Sudbury",
+                    "role": "MP"
+                }
+            ]
+        },
+        "municipal": {
+            "governance": null,
+            "representatives": []
+        },
+        "provincial": {
+            "governance": {
+                "district_term": {
+                    "en": "Riding",
+                    "fr": "Circonscription"
+                },
+                "election_cycle_years": 4,
+                "partisan": true,
+                "rep_count_expected": 1,
+                "rep_role_labels": {
+                    "en": {
+                        "plural": "MPPs",
+                        "singular": "MPP"
+                    },
+                    "fr": {
+                        "plural": "d\u00e9put\u00e9s provinciaux",
+                        "singular": "d\u00e9put\u00e9 provincial"
+                    }
+                },
+                "type": "ward_based"
+            },
+            "representatives": [
+                {
+                    "email": "jwest-qp@ndp.on.ca",
+                    "name": "Jamie West",
+                    "next_election": "On or before April 11, 2030",
+                    "party": "New Democratic Party of Ontario",
+                    "phone": "705-675-1914",
+                    "riding": "Sudbury",
+                    "role": "MPP"
+                }
+            ]
+        }
     }
 }

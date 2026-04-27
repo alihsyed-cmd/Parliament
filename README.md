@@ -62,6 +62,8 @@ To set up the database:
 
 Adapters then query Supabase directly using parameterized PostGIS spatial queries.
 
+Each jurisdiction also declares **governance metadata** (in `jurisdictions.governance`) describing how it's governed: partisan vs non-partisan, role labels, district terminology, election cycle, and special flags like `has_mayor`. The API surfaces this metadata per level so the frontend renders different jurisdictions correctly without conditionals.
+
 ## Testing
 
 The project uses fixture-based regression tests. Run them with:
