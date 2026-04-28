@@ -30,6 +30,7 @@ load_dotenv(PROJECT_ROOT / ".env")
 sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 
 from legacy_loader import LegacySourceLoader
+from translations import role_to_jsonb_dict
 
 
 def make_jsonb(value, lang="en"):
@@ -172,13 +173,14 @@ def migrate_jurisdiction(cur, config, slug):
         cur.execute(
             """
             INSERT INTO representations
-                (representative_id, district_id, role, start_date)
-            VALUES (%s, %s, %s, %s);
+                (representative_id, district_id, jurisdiction_id, role, start_date, scope)
+            VALUES (%s, %s, %s, %s, %s, 'district');
             """,
             (
                 rep_id,
                 district_id,
-                make_jsonb(role_label_formatted),
+                jurisdiction_id,
+                Json(role_to_jsonb_dict(role_label_formatted)),
                 start_date,
             ),
         )
@@ -215,6 +217,14 @@ def main():
             slug = config_file.stem
             result = migrate_jurisdiction(cur, config, slug)
             results.append((config["name"], result))
+
+        # Apply governance metadata from migrations/002 to populate the
+        # governance jsonb column on every jurisdiction. Idempotent SQL.
+        governance_path = PROJECT_ROOT / "migrations" / "002_governance_metadata.sql"
+        if governance_path.exists():
+            print("\nApplying governance metadata...")
+            with open(governance_path) as f:
+                cur.execute(f.read())
 
         conn.commit()
         print("\n" + "=" * 60)

@@ -21,6 +21,10 @@ import psycopg2
 from dotenv import load_dotenv
 from psycopg2.extras import Json
 
+import sys
+sys.path.insert(0, str(Path(__file__).parent))
+from translations import role_to_jsonb_dict
+
 PROJECT_ROOT = Path(__file__).parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
@@ -116,7 +120,7 @@ def main():
                     (representative_id, district_id, jurisdiction_id, role, scope)
                 VALUES (%s, NULL, %s, %s, 'role');
                 """,
-                (rep_id, toronto_id, make_jsonb(role)),
+                (rep_id, toronto_id, Json(role_to_jsonb_dict(role))),
             )
 
             print(f"Inserted: {full_name} ({role})")

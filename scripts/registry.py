@@ -86,9 +86,18 @@ class JurisdictionRegistry:
         self.adapters.append(adapter)
         print(f"  Loaded: {adapter}")
 
-    def lookup_all(self, lat: float, lon: float) -> Dict[str, Dict[str, Any]]:
+    def lookup_all(
+        self, lat: float, lon: float, lang: str = "en"
+    ) -> Dict[str, Dict[str, Any]]:
         """
         Query every registered adapter for the given point.
+
+        Args:
+            lat: Latitude in WGS84.
+            lon: Longitude in WGS84.
+            lang: ISO 639-1 language code ('en' or 'fr'). Translatable fields
+                  in the response use this language, falling back to English
+                  if the requested language has no value.
 
         If a single adapter raises an exception, log it and continue with the
         remaining adapters. This ensures one broken jurisdiction doesn't break
@@ -99,8 +108,9 @@ class JurisdictionRegistry:
             level maps to a dict containing:
               - 'governance': metadata describing how the jurisdiction is governed
                 (or None if no covering jurisdiction at this level)
-              - 'representatives': a list of representatives at this point
-                (empty list if no covering jurisdiction)
+              - 'representatives': district-based reps at this point
+              - 'leadership': role-based reps (PM, Premier, Mayor, cabinet) for
+                jurisdictions where the point matched
         """
         results: Dict[str, Dict[str, Any]] = {
             "federal": {"governance": None, "representatives": [], "leadership": []},
@@ -110,18 +120,13 @@ class JurisdictionRegistry:
 
         for adapter in self.adapters:
             try:
-                reps = adapter.get_representatives(lat, lon)
+                reps = adapter.get_representatives(lat, lon, lang=lang)
                 if reps:
                     results[adapter.level]["representatives"].extend(reps)
-                    # Attach governance for any level where the point matched
-                    # a jurisdiction.
                     if results[adapter.level]["governance"] is None:
                         results[adapter.level]["governance"] = adapter.governance
 
-                    # Also fetch leadership (PM, Premier, Mayor, cabinet) for
-                    # jurisdictions where the point matched. Leadership is
-                    # jurisdiction-wide, not point-dependent.
-                    leadership = adapter.get_leadership()
+                    leadership = adapter.get_leadership(lang=lang)
                     if leadership:
                         results[adapter.level]["leadership"].extend(leadership)
             except Exception as e:

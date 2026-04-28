@@ -68,15 +68,22 @@ def lookup():
     if not validate_postal_code(raw):
         return jsonify({"error": "Invalid postal code format. Expected: A1A1A1"}), 400
 
+    # Language selection. Accepts 'en' or 'fr'; defaults to 'en'.
+    # Unknown languages are silently coerced to 'en' rather than rejected.
+    lang = request.args.get("lang", "en").strip().lower()
+    if lang not in ("en", "fr"):
+        lang = "en"
+
     lat, lon = geocode(raw)
     if lat is None:
         return jsonify({"error": "Could not geocode postal code"}), 404
 
-    results = registry.lookup_all(lat, lon)
+    results = registry.lookup_all(lat, lon, lang=lang)
 
     return jsonify({
         "postal_code": raw,
         "coordinates": {"lat": lat, "lon": lon},
+        "language": lang,
         "results": results,
     })
 

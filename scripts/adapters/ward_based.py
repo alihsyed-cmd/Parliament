@@ -16,19 +16,23 @@ from .base import JurisdictionAdapter
 
 # District-based lookup: representatives whose district contains the point.
 # Used for MPs, MPPs, Councillors — anyone who represents a specific area.
+#
+# Language selection uses COALESCE: try the requested language first, fall
+# back to English if the requested language field is empty.
+# %s parameters in order: lang, lang, lang, lang, lang, jurisdiction_id, lon, lat
 DISTRICT_LOOKUP_SQL = """
     SELECT
-        r.name->>'en'           AS name,
-        r.party->>'en'          AS party,
-        r.email                 AS email,
-        r.phone                 AS phone,
-        r.photo_url             AS photo_url,
-        r.website_url->>'en'    AS website_url,
-        r.external_ids          AS external_ids,
-        rep.role->>'en'         AS role,
-        rep.start_date          AS start_date,
-        d.name->>'en'           AS district_name,
-        d.external_id           AS district_external_id
+        COALESCE(r.name->>%s, r.name->>'en')              AS name,
+        COALESCE(r.party->>%s, r.party->>'en')            AS party,
+        r.email                                            AS email,
+        r.phone                                            AS phone,
+        r.photo_url                                        AS photo_url,
+        COALESCE(r.website_url->>%s, r.website_url->>'en') AS website_url,
+        r.external_ids                                     AS external_ids,
+        COALESCE(rep.role->>%s, rep.role->>'en')           AS role,
+        rep.start_date                                     AS start_date,
+        COALESCE(d.name->>%s, d.name->>'en')               AS district_name,
+        d.external_id                                      AS district_external_id
     FROM districts d
     JOIN representations rep
         ON rep.district_id = d.id
@@ -42,17 +46,18 @@ DISTRICT_LOOKUP_SQL = """
 
 # Role-based lookup: representatives who hold a leadership role for the
 # whole jurisdiction. PM, Premier, Mayor, cabinet ministers.
+# %s parameters in order: lang, lang, lang, lang, jurisdiction_id
 LEADERSHIP_LOOKUP_SQL = """
     SELECT
-        r.name->>'en'           AS name,
-        r.party->>'en'          AS party,
-        r.email                 AS email,
-        r.phone                 AS phone,
-        r.photo_url             AS photo_url,
-        r.website_url->>'en'    AS website_url,
-        r.external_ids          AS external_ids,
-        rep.role->>'en'         AS role,
-        rep.start_date          AS start_date
+        COALESCE(r.name->>%s, r.name->>'en')              AS name,
+        COALESCE(r.party->>%s, r.party->>'en')            AS party,
+        r.email                                            AS email,
+        r.phone                                            AS phone,
+        r.photo_url                                        AS photo_url,
+        COALESCE(r.website_url->>%s, r.website_url->>'en') AS website_url,
+        r.external_ids                                     AS external_ids,
+        COALESCE(rep.role->>%s, rep.role->>'en')           AS role,
+        rep.start_date                                     AS start_date
     FROM representations rep
     JOIN representatives r ON r.id = rep.representative_id
     WHERE rep.jurisdiction_id = %s
@@ -103,24 +108,40 @@ class WardBasedAdapter(JurisdictionAdapter):
         self._loaded = True
 
     # ── Lookup ───────────────────────────────────────────────────────
-    def get_representatives(self, lat: float, lon: float) -> List[Dict[str, Any]]:
-        """Return district-based representatives whose district contains the point."""
-        if not self._loaded:
-            raise RuntimeError(f"{self.name}: load_data() must be called first")
+    def get_representatives(
+        self, lat: float, lon: float, lang: str = "en"
+    ) -> List[Dict[str, Any]]:
+        """Return district-based representatives whose district contains the point.
 
-        rows = db.query(DISTRICT_LOOKUP_SQL, (self.jurisdiction_id, lon, lat))
-        return [self._row_to_dict(row) for row in rows]
-
-    def get_leadership(self) -> List[Dict[str, Any]]:
-        """Return role-based representatives (PM, Premier, Mayor, cabinet) for this jurisdiction.
-
-        Unlike get_representatives, this is not point-dependent — every user in
-        a jurisdiction sees the same leadership.
+        Args:
+            lat: Latitude in WGS84.
+            lon: Longitude in WGS84.
+            lang: ISO 639-1 language code ('en' or 'fr'). Falls back to 'en'
+                  if the requested language has no value for a given field.
         """
         if not self._loaded:
             raise RuntimeError(f"{self.name}: load_data() must be called first")
 
-        rows = db.query(LEADERSHIP_LOOKUP_SQL, (self.jurisdiction_id,))
+        # Pass lang 5 times for the 5 COALESCE expressions in DISTRICT_LOOKUP_SQL
+        params = (lang, lang, lang, lang, lang, self.jurisdiction_id, lon, lat)
+        rows = db.query(DISTRICT_LOOKUP_SQL, params)
+        return [self._row_to_dict(row) for row in rows]
+
+    def get_leadership(self, lang: str = "en") -> List[Dict[str, Any]]:
+        """Return role-based representatives for this jurisdiction.
+
+        Unlike get_representatives, this is not point-dependent — every user in
+        a jurisdiction sees the same leadership.
+
+        Args:
+            lang: ISO 639-1 language code ('en' or 'fr').
+        """
+        if not self._loaded:
+            raise RuntimeError(f"{self.name}: load_data() must be called first")
+
+        # Pass lang 4 times for the 4 COALESCE expressions in LEADERSHIP_LOOKUP_SQL
+        params = (lang, lang, lang, lang, self.jurisdiction_id)
+        rows = db.query(LEADERSHIP_LOOKUP_SQL, params)
         return [self._row_to_dict_leadership(row) for row in rows]
 
     def _row_to_dict_leadership(self, row: tuple) -> Dict[str, Any]:
