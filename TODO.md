@@ -6,7 +6,6 @@ Captures known issues, enhancements, and follow-ups that aren't blocking current
 
 Currently in progress. See dedicated entries below for details.
 
-- Geocoding cache (Performance & Cost)
 - CORS lockdown to specific Vercel origins (Security)
 - .DS_Store cleanup (Repo hygiene)
 
@@ -45,7 +44,7 @@ Currently in progress. See dedicated entries below for details.
 **Reported:** 2026-04-28 (Phase 3 kickoff)
 **Context:** Every /lookup call currently hits Google's Geocoding API, even for postal codes already seen. Postal codes are immutable, so cached results stay valid indefinitely. Without a cache, cost scales linearly with request volume and the API is exposed to scraping (~850k Canadian postal codes × $5/1000 = ~$4,250 to enumerate the entire space).
 **Action:** Add geocode_cache table to Supabase (postal_code PK, lat, lon, retrieved_at). Modify api.py geocode() to check cache first, call Google on miss, store result. Log cache hit/miss for observability.
-**Status:** In progress (Task 4).
+**Status:** Complete (Task 4, deployed 2026-04-28). Verified MISS → HIT pattern with H3A0G4 fresh postal code on staging.
 
 ### [Phase 3 launch prep] Upgrade Render to Starter plan ($7/month)
 **Reported:** 2026-04-28
@@ -63,6 +62,11 @@ Currently in progress. See dedicated entries below for details.
 **Reported:** 2026-04-26 (Milestone 2.3)
 **Context:** `scripts/legacy_loader.py` exists solely to support the one-time migration script. It duplicates the file-loading logic that used to live in WardBasedAdapter. It is not used at runtime.
 **Action:** When milestone 2.6 introduces API-first ingestion (CKAN, OpenDataSoft, etc.), the new ingestion pipeline replaces both the legacy loader and the migration script. Delete both at that point.
+
+### [Phase 3 launch prep] Replace single shared psycopg2 connection with connection pool
+**Reported:** 2026-04-28 (Task 4)
+**Context:** scripts/db.py uses one shared `_connection` object. Safe under WEB_CONCURRENCY=1 (Render's current default for free/Starter tier on a 1-CPU instance) but unsafe under concurrent requests — two requests sharing one cursor can corrupt each other's state. A working ThreadedConnectionPool implementation exists locally in `git stash` under "task-4-fix-with-pool-refactor"; was deferred to keep Task 4 (geocoding cache) scoped.
+**Action:** Revisit as its own task before increasing Render worker count or before launch. Either apply the stash on a fresh branch, or rewrite the pool module from scratch with intentional concurrency testing.
 
 ## Ecosystem / Maintenance
 
