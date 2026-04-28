@@ -144,10 +144,6 @@ def lookup():
     })
 
 
-@app.route("/sentry-test")
-def sentry_test():
-    raise Exception("Sentry test error - safe to ignore")
-
 @app.route("/health", methods=["GET"])
 def health():
     return jsonify({
