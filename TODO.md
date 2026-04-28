@@ -102,3 +102,10 @@ Currently in progress. See dedicated entries below for details.
 **Reported:** 2026-04-27 (Milestone 2.4.5)
 **Context:** Some federal cabinet members hold multiple roles in a single CSV row, concatenated with " and " (e.g., Joël Lightbound: "Minister of Government Transformation, Public Works and Procurement and Quebec Lieutenant"). The current loader treats this as one role title.
 **Action:** When backend supports multi-role display per minister, parse compound titles into separate role rows. Low priority for v1.
+
+
+### [Phase 3 — when frontend has real code] Wire Sentry into Next.js
+**Reported:** 2026-04-28 (Task 5)
+**Context:** Backend Sentry is live and verified end-to-end. Frontend Sentry was deferred because the current Next.js scaffold is empty — wiring it now would mean maintaining a dependency for no signal. Sentry account already exists; second project (`parliament-frontend`) is created with a DSN ready to use.
+**Action:** Add `@sentry/nextjs` package, run `npx @sentry/wizard@latest -i nextjs`, set `SENTRY_DSN` env var on Vercel for production and preview environments. Verify with a deliberate test error like we did for Flask.
+**Trigger:** Add this when starting Task 7 (lookup UI) — once real components exist that could throw real errors.
