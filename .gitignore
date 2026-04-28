@@ -20,3 +20,7 @@ venv/
 # OS
 Thumbs.db
 Parliament_Roadmap_v3.docx
+
+# Frontend
+frontend/.next/
+frontend/node_modules/
