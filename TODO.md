@@ -109,3 +109,9 @@ Currently in progress. See dedicated entries below for details.
 **Context:** Backend Sentry is live and verified end-to-end. Frontend Sentry was deferred because the current Next.js scaffold is empty — wiring it now would mean maintaining a dependency for no signal. Sentry account already exists; second project (`parliament-frontend`) is created with a DSN ready to use.
 **Action:** Add `@sentry/nextjs` package, run `npx @sentry/wizard@latest -i nextjs`, set `SENTRY_DSN` env var on Vercel for production and preview environments. Verify with a deliberate test error like we did for Flask.
 **Trigger:** Add this when starting Task 7 (lookup UI) — once real components exist that could throw real errors.
+
+
+### [Phase 3 — when needed] Add narrow RLS policies if frontend ever queries Supabase directly
+**Reported:** 2026-04-28 (Task 6)
+**Context:** RLS is enabled on all five public tables (jurisdictions, districts, representatives, representations, geocode_cache) with zero policies, meaning the anon role has no access. Flask uses SUPABASE_DB_URL (direct Postgres) which bypasses RLS, so the API works normally.
+**Trigger:** If we later decide to let the frontend query Supabase directly (e.g., for read-only public data not routed through Flask), add narrowly-scoped SELECT policies for the anon role on the specific tables and columns needed.
