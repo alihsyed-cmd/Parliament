@@ -63,3 +63,11 @@ def close_connection() -> None:
     if _connection is not None and not _connection.closed:
         _connection.close()
     _connection = None
+
+
+def execute(sql: str, params: tuple = ()) -> int:
+    """Run a non-SELECT statement (INSERT/UPDATE/DELETE). Returns rowcount."""
+    conn = get_connection()
+    with conn.cursor() as cur:
+        cur.execute(sql, params)
+        return cur.rowcount

@@ -86,7 +86,7 @@ def geocode(postal_code: str):
             lat, lon = loc["lat"], loc["lng"]
             # Write to cache (idempotent; on conflict do nothing)
             try:
-                db.query(
+                db.execute(
                     "INSERT INTO geocode_cache (postal_code, latitude, longitude) VALUES (%s, %s, %s) ON CONFLICT (postal_code) DO NOTHING;",
                     (postal_code, lat, lon),
                 )
