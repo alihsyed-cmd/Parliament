@@ -16,6 +16,7 @@ import os
 import re
 
 import requests as req
+import db
 from flask import Flask, jsonify, request
 from dotenv import load_dotenv
 from flask_cors import CORS
@@ -60,6 +61,17 @@ def validate_postal_code(postal_code: str) -> bool:
 
 def geocode(postal_code: str):
     """Convert a postal code to (lat, lon) via Google Maps Geocoding API."""
+    # Try cache first
+    cache_row = db.query_one(
+        "SELECT latitude, longitude FROM geocode_cache WHERE postal_code = %s;",
+        (postal_code,),
+    )
+    if cache_row:
+        logger.info("Geocode cache HIT for postal_code=%s", postal_code)
+        return cache_row[0], cache_row[1]
+
+    logger.info("Geocode cache MISS for postal_code=%s, calling Google", postal_code)
+
     url = "https://maps.googleapis.com/maps/api/geocode/json"
     params = {
         "address": postal_code + ", Canada",
@@ -71,7 +83,16 @@ def geocode(postal_code: str):
         data = response.json()
         if data["status"] == "OK":
             loc = data["results"][0]["geometry"]["location"]
-            return loc["lat"], loc["lng"]
+            lat, lon = loc["lat"], loc["lng"]
+            # Write to cache (idempotent; on conflict do nothing)
+            try:
+                db.query(
+                    "INSERT INTO geocode_cache (postal_code, latitude, longitude) VALUES (%s, %s, %s) ON CONFLICT (postal_code) DO NOTHING;",
+                    (postal_code, lat, lon),
+                )
+            except Exception as e:
+                logger.exception("Failed to write geocode cache for postal_code=%s", postal_code)
+            return lat, lon
         return None, None
     except Exception:
         logger.exception("Geocoding failed for postal_code=%s", postal_code)
