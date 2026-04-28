@@ -29,6 +29,22 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
+import sentry_sdk
+from sentry_sdk.integrations.flask import FlaskIntegration
+
+SENTRY_DSN = os.getenv("SENTRY_DSN")
+if SENTRY_DSN:
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        integrations=[FlaskIntegration()],
+        traces_sample_rate=0.0,
+        send_default_pii=False,
+        environment=os.getenv("SENTRY_ENVIRONMENT", "staging"),
+    )
+    logger.info("Sentry initialized for environment=%s", os.getenv("SENTRY_ENVIRONMENT", "staging"))
+else:
+    logger.info("SENTRY_DSN not set; Sentry disabled")
+
 GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 if not GOOGLE_API_KEY:
     logger.critical("GOOGLE_MAPS_API_KEY is not set")
@@ -127,6 +143,10 @@ def lookup():
         "results": results,
     })
 
+
+@app.route("/sentry-test")
+def sentry_test():
+    raise Exception("Sentry test error - safe to ignore")
 
 @app.route("/health", methods=["GET"])
 def health():
