@@ -2,6 +2,14 @@
 
 Captures known issues, enhancements, and follow-ups that aren't blocking current work but should be addressed at the right time.
 
+## Active — Phase 3
+
+Currently in progress. See dedicated entries below for details.
+
+- Geocoding cache (Performance & Cost)
+- CORS lockdown to specific Vercel origins (Security)
+- .DS_Store cleanup (Repo hygiene)
+
 ## Display & Output Format
 
 ### [Phase 3] Toronto ward display: append ward name to ward number
@@ -24,6 +32,31 @@ Captures known issues, enhancements, and follow-ups that aren't blocking current
 **Context:** Federal adapter loads 343 ridings but only 340 reps after migration. Canada has 343 ridings. The 3 missing are likely vacant seats awaiting by-elections, or name-mismatch edge cases between shapefile and XML (some overlap with the Unicode issue above).
 **Action:** Likely resolved by the Unicode normalization fix in 2.6/2.7. If gap remains after that, investigate vacant seat data.
 
+## Security
+
+### [Phase 3] Lock down CORS allowed origins
+**Reported:** 2026-04-28
+**Context:** ALLOWED_ORIGINS on Render is currently set to "*" because frontend URL is in flux during Vercel preview deploys. Acceptable for staging, but production must restrict to specific domains.
+**Action:** When wiring frontend to call API, set ALLOWED_ORIGINS to the production Vercel domain plus any preview URL pattern needed (e.g., regex-based handling, or use Vercel's deployment URL conventions). Update before soft launch.
+
+## Performance & Cost
+
+### [Phase 3] Geocoding cache for postal codes
+**Reported:** 2026-04-28 (Phase 3 kickoff)
+**Context:** Every /lookup call currently hits Google's Geocoding API, even for postal codes already seen. Postal codes are immutable, so cached results stay valid indefinitely. Without a cache, cost scales linearly with request volume and the API is exposed to scraping (~850k Canadian postal codes × $5/1000 = ~$4,250 to enumerate the entire space).
+**Action:** Add geocode_cache table to Supabase (postal_code PK, lat, lon, retrieved_at). Modify api.py geocode() to check cache first, call Google on miss, store result. Log cache hit/miss for observability.
+**Status:** In progress (Task 4).
+
+### [Phase 3 launch prep] Upgrade Render to Starter plan ($7/month)
+**Reported:** 2026-04-28
+**Context:** Free tier sleeps after 15 min idle, causing 10-15s cold starts on first request. Acceptable for development, unacceptable for real users.
+**Action:** Upgrade before soft launch.
+
+### [Future / Optional] Render Static Outbound IPs ($5/month)
+**Reported:** 2026-04-28
+**Context:** Would let us re-enable IP allowlisting on the Google Maps API key for defense in depth. Currently key is restricted by API (Geocoding only) and quota only.
+**Action:** Evaluate if we ever want belt-and-suspenders cost protection beyond what API restriction + quota + cache provides.
+
 ## Architecture / Technical Debt
 
 ### [Phase 2.6] Remove legacy_loader.py once API-first ingestion lands
@@ -37,6 +70,13 @@ Captures known issues, enhancements, and follow-ups that aren't blocking current
 **Reported:** 2026-04-26 (Milestone 2.2)
 **Context:** `pyogrio` imports the deprecated `shapely.geos` module. Pure ecosystem issue, not our code.
 **Action:** No action needed. Will resolve when pyogrio releases a version compatible with Shapely 2.0's namespace changes. Re-check periodically when updating dependencies.
+
+## Repo hygiene
+
+### [Phase 3] Remove tracked .DS_Store from data/municipal/
+**Reported:** 2026-04-28
+**Context:** data/municipal/.DS_Store was committed before .gitignore excluded it. Should be removed from version control and verified absent from all data/ subdirectories.
+**Action:** `git rm --cached data/municipal/.DS_Store && git commit -m "chore: untrack .DS_Store"`. Audit other directories for similar leftovers.
 
 ## Lessons Learned
 
