@@ -11,27 +11,45 @@ new jurisdiction, write a config file in config/jurisdictions/ — no changes
 to this file are needed.
 """
 
+import logging
 import os
 import re
 
 import requests as req
 from flask import Flask, jsonify, request
 from dotenv import load_dotenv
+from flask_cors import CORS
 
-# Load environment before importing modules that depend on it
-load_dotenv('/Users/alisyed/Desktop/Parliament/.env')
+logging.basicConfig(
+    level=os.getenv("LOG_LEVEL", "INFO"),
+    format='%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+load_dotenv()
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+if not GOOGLE_API_KEY:
+    logger.critical("GOOGLE_MAPS_API_KEY is not set")
+    raise RuntimeError("GOOGLE_MAPS_API_KEY is required")
 
 from registry import JurisdictionRegistry
 
 app = Flask(__name__)
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+allowed_origins = [
+    o.strip()
+    for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:5173").split(",")
+]
+CORS(app, origins=allowed_origins, methods=["GET"], allow_headers=["Content-Type"])
+logger.info("CORS origins: %s", allowed_origins)
+
 POSTAL_CODE_REGEX = re.compile(r'^[A-Z]\d[A-Z]\d[A-Z]\d$')
 
 # Initialize the registry once at startup. Every Flask request uses this instance.
-print("Initializing jurisdiction registry...")
+logger.info("Initializing jurisdiction registry...")
 registry = JurisdictionRegistry()
-print(f"Registry ready: {registry}\n")
+logger.info("Registry ready: %s", registry)
 
 
 # ── Helpers ──────────────────────────────────────────────────────────
@@ -56,6 +74,7 @@ def geocode(postal_code: str):
             return loc["lat"], loc["lng"]
         return None, None
     except Exception:
+        logger.exception("Geocoding failed for postal_code=%s", postal_code)
         return None, None
 
 
@@ -99,4 +118,8 @@ def health():
 
 # ── Run ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(
+        debug=os.getenv("FLASK_DEBUG", "false").lower() == "true",
+        port=int(os.getenv("PORT", "5000")),
+        host="0.0.0.0",
+    )
