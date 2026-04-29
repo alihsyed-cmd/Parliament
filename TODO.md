@@ -115,3 +115,10 @@ Currently in progress. See dedicated entries below for details.
 **Reported:** 2026-04-28 (Task 6)
 **Context:** RLS is enabled on all five public tables (jurisdictions, districts, representatives, representations, geocode_cache) with zero policies, meaning the anon role has no access. Flask uses SUPABASE_DB_URL (direct Postgres) which bypasses RLS, so the API works normally.
 **Trigger:** If we later decide to let the frontend query Supabase directly (e.g., for read-only public data not routed through Flask), add narrowly-scoped SELECT policies for the anon role on the specific tables and columns needed.
+
+
+### [Phase 3] Reject vague Google geocoding results
+**Reported:** 2026-04-29 (discovered during frontend testing)
+**Context:** Google Maps Geocoding API returns Canada's geographic centroid (~56.13, -106.35, near La Ronge, Saskatchewan) when it can't resolve a postal code. Currently scripts/api.py geocode() accepts any "OK" status response without checking precision, so a typo'd postal code resolves to the middle of nowhere and the spatial lookup silently returns empty results. User sees a coverage-gap-style empty response with no indication that the postal code was invalid.
+**Action:** In scripts/api.py geocode(), check `data["results"][0]["geometry"]["location_type"]`. Treat "APPROXIMATE" as a failed geocode (return None, None). "GEOMETRIC_CENTER" is the expected precision for postal codes. May also want to verify the result's `address_components` includes the queried postal code as a postal_code component, to catch cases where Google maps a typo'd code to a different valid one.
+**Trigger:** Before Phase 3 launch. Currently masking real validation failures behind coverage-gap UI.
