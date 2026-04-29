@@ -129,3 +129,9 @@ Currently in progress. See dedicated entries below for details.
 **Context:** Currently representative details surface in modals on the lookup results page. For shareability, SEO, and civic-tech values around discoverability, individual representatives should have their own URLs (e.g., parliament.app/representative/ca/mark-carney). Search engines indexing per-rep pages would be powerful — "who is my MP" type queries should land on Parliament.
 **Action:** (1) Backend: add /representative/:jurisdiction_id/:rep_id endpoint. (2) Frontend: add /representative/[jurisdiction]/[id] route. (3) Decide URL slug strategy (id vs name-based slug). (4) Open Graph / Twitter Card metadata so shared links preview well.
 **Trigger:** After Phase 3 lookup UI is shipped and validated. Modal-based detail view is acceptable for v1.
+
+
+### [Phase 3] Photo URL fallback when image fails to load
+**Reported:** 2026-04-29 (Task 7 testing — Fraser Tolmie federal MP photo)
+**Context:** Some federal MP photo URLs from ourcommons.ca return 404 or are broken. Currently the broken-image icon displays. Should fall back to the same gray placeholder used when photo_url is null.
+**Action:** In RepresentativeCard and RepresentativeModal, add onError handler to swap to the placeholder. Could also be addressed at ingestion time (validate photo URLs and store null on 404), but frontend handling is simpler and handles future breakage too.
