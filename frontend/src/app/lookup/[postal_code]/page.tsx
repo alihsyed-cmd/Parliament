@@ -2,16 +2,16 @@
  * Lookup results page.
  *
  * Server Component — fetches data on the server before sending HTML to
- * the browser. This means search engines see real content (good for SEO),
- * users on slow connections see content immediately, and the API URL
- * is called server-to-server (faster, no preflight CORS overhead).
- *
- * Steps 5–7 will replace the current pre/JSON dump with real components.
+ * the browser. This means search engines see real content, users on slow
+ * connections see content immediately, and the API URL is called
+ * server-to-server (faster, no CORS overhead).
  */
 
 import { lookupPostalCode, ApiError } from "@/lib/api";
 import type { LookupResponse } from "@/lib/types";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { LevelSection } from "@/components/LevelSection";
 
 const POSTAL_CODE_REGEX = /^[A-Z]\d[A-Z]\d[A-Z]\d$/;
 
@@ -22,8 +22,6 @@ type PageProps = {
 export default async function LookupPage({ params }: PageProps) {
   const { postal_code } = await params;
 
-  // Defense-in-depth: the home page validates, but anyone can hit this
-  // URL directly. Reject malformed input before calling the API.
   if (!POSTAL_CODE_REGEX.test(postal_code)) {
     notFound();
   }
@@ -33,34 +31,38 @@ export default async function LookupPage({ params }: PageProps) {
     data = await lookupPostalCode(postal_code);
   } catch (err) {
     if (err instanceof ApiError && err.status === 404) {
-      // Geocoding failure or coverage gap. For now, render a minimal
-      // message; Step 8 builds proper empty / error states.
       return (
-        <main className="min-h-screen p-8">
+        <main className="min-h-screen p-8 max-w-3xl mx-auto">
           <h1 className="text-2xl font-semibold mb-4">No results</h1>
           <p>We couldn&rsquo;t find representatives for postal code {postal_code}.</p>
-          <a href="/" className="text-blue-600 underline mt-4 inline-block">
+          <Link href="/" className="text-blue-600 underline mt-4 inline-block">
             Try another postal code
-          </a>
+          </Link>
         </main>
       );
     }
-    // Anything else — network error, 500, etc. — re-throw so Next.js shows
-    // its error boundary. We'll add a custom error page in Step 8.
     throw err;
   }
 
+  // Format postal code for display: "M3J3R2" -> "M3J 3R2"
+  const displayPostalCode = `${data.postal_code.slice(0, 3)} ${data.postal_code.slice(3)}`;
+
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-2xl font-semibold mb-4">
-        Results for {data.postal_code}
-      </h1>
-      <a href="/" className="text-blue-600 underline mb-6 inline-block">
-        ← New search
-      </a>
-      <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-auto text-sm font-mono">
-        {JSON.stringify(data, null, 2)}
-      </pre>
+    <main className="min-h-screen p-8 max-w-3xl mx-auto">
+      <header className="mb-8">
+        <h1 className="text-2xl font-semibold mb-2">
+          Results for {displayPostalCode}
+        </h1>
+        <Link href="/" className="text-blue-600 underline text-sm">
+          &larr; New search
+        </Link>
+      </header>
+
+      <div className="space-y-12">
+        <LevelSection level="municipal" data={data.results.municipal} />
+        <LevelSection level="provincial" data={data.results.provincial} />
+        <LevelSection level="federal" data={data.results.federal} />
+      </div>
     </main>
   );
 }
