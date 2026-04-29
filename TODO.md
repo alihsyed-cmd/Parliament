@@ -122,3 +122,10 @@ Currently in progress. See dedicated entries below for details.
 **Context:** Google Maps Geocoding API returns Canada's geographic centroid (~56.13, -106.35, near La Ronge, Saskatchewan) when it can't resolve a postal code. Currently scripts/api.py geocode() accepts any "OK" status response without checking precision, so a typo'd postal code resolves to the middle of nowhere and the spatial lookup silently returns empty results. User sees a coverage-gap-style empty response with no indication that the postal code was invalid.
 **Action:** In scripts/api.py geocode(), check `data["results"][0]["geometry"]["location_type"]`. Treat "APPROXIMATE" as a failed geocode (return None, None). "GEOMETRIC_CENTER" is the expected precision for postal codes. May also want to verify the result's `address_components` includes the queried postal code as a postal_code component, to catch cases where Google maps a typo'd code to a different valid one.
 **Trigger:** Before Phase 3 launch. Currently masking real validation failures behind coverage-gap UI.
+
+
+### [Phase 3.5] Dedicated representative pages
+**Reported:** 2026-04-29 (Task 7 design)
+**Context:** Currently representative details surface in modals on the lookup results page. For shareability, SEO, and civic-tech values around discoverability, individual representatives should have their own URLs (e.g., parliament.app/representative/ca/mark-carney). Search engines indexing per-rep pages would be powerful — "who is my MP" type queries should land on Parliament.
+**Action:** (1) Backend: add /representative/:jurisdiction_id/:rep_id endpoint. (2) Frontend: add /representative/[jurisdiction]/[id] route. (3) Decide URL slug strategy (id vs name-based slug). (4) Open Graph / Twitter Card metadata so shared links preview well.
+**Trigger:** After Phase 3 lookup UI is shipped and validated. Modal-based detail view is acceptable for v1.
