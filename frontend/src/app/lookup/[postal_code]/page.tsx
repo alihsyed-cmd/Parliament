@@ -35,7 +35,7 @@ export default async function LookupPage({ params }: PageProps) {
         <main className="min-h-screen p-8 max-w-3xl mx-auto">
           <h1 className="text-2xl font-semibold mb-4">No results</h1>
           <p>We couldn&rsquo;t find representatives for postal code {postal_code}.</p>
-          <Link href="/" className="text-blue-600 underline mt-4 inline-block">
+          <Link href="/" className="text-primary underline mt-4 inline-block">
             Try another postal code
           </Link>
         </main>
@@ -49,11 +49,14 @@ export default async function LookupPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen p-8 max-w-3xl mx-auto">
-      <header className="mb-8">
-        <h1 className="text-2xl font-semibold mb-2">
-          Results for {displayPostalCode}
-        </h1>
-        <Link href="/" className="text-blue-600 underline text-sm">
+      <header className="mb-12 pb-6 border-b border-border">
+        <Link href="/" className="inline-block mb-6">
+        <span className="text-2xl font-semibold tracking-tight">Parliament</span>
+        </Link>
+          <h1 className="text-3xl font-semibold tracking-tight mb-2">
+            Results for {displayPostalCode}
+          </h1>
+        <Link href="/" className="text-primary underline text-sm">
           &larr; New search
         </Link>
       </header>

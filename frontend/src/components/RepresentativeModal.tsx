@@ -64,7 +64,7 @@ export function RepresentativeModal({ member, onClose }: RepresentativeModalProp
                 <div>
                   <dt className="font-medium inline">Email: </dt>
                   <dd className="inline">
-                    <a href={`mailto:${member.email}`} className="text-blue-600 underline">
+                    <a href={`mailto:${member.email}`} className="text-primary underline">
                       {member.email}
                     </a>
                   </dd>
@@ -74,7 +74,7 @@ export function RepresentativeModal({ member, onClose }: RepresentativeModalProp
                 <div>
                   <dt className="font-medium inline">Phone: </dt>
                   <dd className="inline">
-                    <a href={`tel:${member.phone}`} className="text-blue-600 underline">
+                    <a href={`tel:${member.phone}`} className="text-primary underline">
                       {member.phone}
                     </a>
                   </dd>
@@ -88,7 +88,7 @@ export function RepresentativeModal({ member, onClose }: RepresentativeModalProp
                       href={member.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 underline"
+                      className="text-primary underline"
                     >
                       Official page
                     </a>

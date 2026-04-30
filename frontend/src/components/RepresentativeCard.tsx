@@ -85,7 +85,7 @@ export function RepresentativeCard({ representative, showParty }: Representative
               <div>
                 <dt className="font-medium inline">Email: </dt>
                 <dd className="inline">
-                  <a href={`mailto:${representative.email}`} className="text-blue-600 underline">
+                  <a href={`mailto:${representative.email}`} className="text-primary underline">
                     {representative.email}
                   </a>
                 </dd>
@@ -95,7 +95,7 @@ export function RepresentativeCard({ representative, showParty }: Representative
               <div>
                 <dt className="font-medium inline">Phone: </dt>
                 <dd className="inline">
-                  <a href={`tel:${representative.phone}`} className="text-blue-600 underline">
+                  <a href={`tel:${representative.phone}`} className="text-primary underline">
                     {representative.phone}
                   </a>
                 </dd>
@@ -109,7 +109,7 @@ export function RepresentativeCard({ representative, showParty }: Representative
                     href={representative.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 underline"
+                    className="text-primary underline"
                   >
                     Official page
                   </a>

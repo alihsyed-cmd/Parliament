@@ -128,3 +128,89 @@
     @apply font-sans;
   }
 }
+
+/* ─── Parliament brand palette ──────────────────────────────────────────
+ * Calm / civic / consensus-oriented.
+ * Warm parchment background, charcoal text, muted sage as the only accent.
+ * Avoids party colors (red/blue/orange/green-bright) by design.
+ */
+:root {
+  /* Page surface */
+  --background: oklch(0.97 0.008 80);          /* warm parchment ~#FAF7F2 */
+  --foreground: oklch(0.25 0.015 250);         /* charcoal ~#1F2937 */
+
+  /* Cards: subtle lift from background */
+  --card: oklch(0.99 0.005 80);                /* near-white warm */
+  --card-foreground: oklch(0.25 0.015 250);
+
+  /* Popovers, modals */
+  --popover: oklch(0.99 0.005 80);
+  --popover-foreground: oklch(0.25 0.015 250);
+
+  /* Primary: sage — used for buttons, active focus, links */
+  --primary: oklch(0.55 0.04 155);             /* muted sage ~#5C7A6F */
+  --primary-foreground: oklch(0.99 0.005 80);  /* parchment text on sage */
+
+  /* Secondary: very subtle warm gray, used for outline buttons */
+  --secondary: oklch(0.93 0.008 80);
+  --secondary-foreground: oklch(0.30 0.015 250);
+
+  /* Muted: backgrounds of subtle blocks */
+  --muted: oklch(0.93 0.008 80);
+  --muted-foreground: oklch(0.50 0.015 250);
+
+  /* Accent: same as secondary in our restrained palette */
+  --accent: oklch(0.93 0.008 80);
+  --accent-foreground: oklch(0.30 0.015 250);
+
+  /* Destructive: muted brick rather than alarm red */
+  --destructive: oklch(0.55 0.15 25);
+
+  /* Borders and inputs: warm gray a notch darker than muted */
+  --border: oklch(0.88 0.01 80);
+  --input: oklch(0.88 0.01 80);
+
+  /* Focus ring: sage matches primary */
+  --ring: oklch(0.55 0.04 155);
+
+  /* Slightly larger corner radius for a friendlier feel */
+  --radius: 0.5rem;
+}
+
+/* Dark mode kept theme-consistent: deep neutral with sage accent */
+.dark {
+  --background: oklch(0.20 0.012 250);
+  --foreground: oklch(0.95 0.005 80);
+  --card: oklch(0.24 0.012 250);
+  --card-foreground: oklch(0.95 0.005 80);
+  --popover: oklch(0.24 0.012 250);
+  --popover-foreground: oklch(0.95 0.005 80);
+  --primary: oklch(0.65 0.05 155);             /* lighter sage for contrast on dark */
+  --primary-foreground: oklch(0.20 0.012 250);
+  --secondary: oklch(0.28 0.012 250);
+  --secondary-foreground: oklch(0.95 0.005 80);
+  --muted: oklch(0.28 0.012 250);
+  --muted-foreground: oklch(0.70 0.008 80);
+  --accent: oklch(0.28 0.012 250);
+  --accent-foreground: oklch(0.95 0.005 80);
+  --destructive: oklch(0.62 0.16 25);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.65 0.05 155);
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────
+ * Source Serif 4 for headings (gravitas, civic).
+ * Inter for body (legibility, modern).
+ * Both loaded via next/font in layout.tsx.
+ */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+    letter-spacing: -0.01em;
+  }
+
+  body {
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  }
+}

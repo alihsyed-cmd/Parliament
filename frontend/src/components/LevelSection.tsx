@@ -1,47 +1,66 @@
 "use client";
 
 /**
- * One section of the lookup results page (municipal, provincial, or federal).
+ * One section of the lookup results page (municipal, provincial, federal).
  *
  * Composes:
- *   - Section heading
- *   - User's representative (RepresentativeCard) — if present
- *   - Cabinet (federal/provincial) or single mayor card (municipal)
+ *   - Section heading: "Your <role>" derived from API governance data
+ *   - User's representative card (RepresentativeCard) — primary
+ *   - Executive leader card (ExecutiveCard) — Mayor/Premier/PM, secondary
+ *   - Cabinet (federal/provincial only)
  *   - Coverage gap message — if no data
  *
- * Receives a level identifier and the LevelResult from the API.
- * Owns the modal state for cabinet member detail views, since the modal
- * scope is per-section (clicking a federal minister and a provincial
- * minister are independent interactions).
+ * The user's rep + executive leader sit side by side on desktop, stacked
+ * on mobile. The user's rep comes first in the DOM (so it appears first
+ * on mobile and is read first by screen readers).
  */
 
 import { useState } from "react";
-import type { LevelResult, LeadershipMember } from "@/lib/types";
+import type { LevelResult, LeadershipMember, Language } from "@/lib/types";
 import { RepresentativeCard } from "./RepresentativeCard";
+import { ExecutiveCard } from "./ExecutiveCard";
 import { Cabinet } from "./Cabinet";
 import { CoverageGap } from "./CoverageGap";
 import { RepresentativeModal } from "./RepresentativeModal";
 
-const LEVEL_HEADING: Record<LevelSectionProps["level"], string> = {
+const HEAD_OF_GOVERNMENT_ROLES = new Set([
+  "Prime Minister",
+  "Premier ministre",
+  "Premier",
+  "Mayor",
+]);
+
+type LevelSectionProps = {
+  level: "municipal" | "provincial" | "federal";
+  data: LevelResult | undefined;
+  lang?: Language;
+};
+
+function buildHeading(
+  role: { en: { singular: string }; fr?: { singular: string } } | undefined,
+  lang: Language,
+  fallback: string
+): string {
+  if (!role) return fallback;
+  const label = role[lang]?.singular ?? role.en.singular;
+  return lang === "fr" ? `Votre ${label}` : `Your ${label}`;
+}
+
+const FALLBACK_HEADING: Record<LevelSectionProps["level"], string> = {
   municipal: "Municipal",
   provincial: "Provincial",
   federal: "Federal",
 };
 
-type LevelSectionProps = {
-  level: "municipal" | "provincial" | "federal";
-  data: LevelResult | undefined;
-};
-
-export function LevelSection({ level, data }: LevelSectionProps) {
+export function LevelSection({ level, data, lang = "en" }: LevelSectionProps) {
   const [selectedMember, setSelectedMember] = useState<LeadershipMember | null>(null);
 
-  // No data for this level — show coverage gap
+  // No data → coverage gap
   if (!data || !data.governance) {
     return (
       <section aria-labelledby={`${level}-heading`}>
-        <h2 id={`${level}-heading`} className="text-xl font-semibold mb-4">
-          {LEVEL_HEADING[level]}
+        <h2 id={`${level}-heading`} className="text-2xl font-semibold mb-6">
+          {FALLBACK_HEADING[level]}
         </h2>
         <CoverageGap level={level} />
       </section>
@@ -50,39 +69,42 @@ export function LevelSection({ level, data }: LevelSectionProps) {
 
   const userRep = data.representatives[0];
   const showParty = data.governance.partisan;
+  const heading = buildHeading(
+    data.governance.rep_role_labels,
+    lang,
+    FALLBACK_HEADING[level]
+  );
 
-  // Municipal: single mayor (if present), no cabinet concept
-  // Federal/Provincial: cabinet of multiple members
-  const isMunicipal = level === "municipal";
-  const mayor = isMunicipal ? data.leadership[0] : null;
+  // Find the head-of-government leader (Mayor/Premier/PM) for this level
+  const executive = data.leadership.find((m) =>
+    HEAD_OF_GOVERNMENT_ROLES.has(m.role)
+  );
+
+  // Cabinet excludes the executive (they get their own card)
+  const cabinetMembers = data.leadership.filter(
+    (m) => !HEAD_OF_GOVERNMENT_ROLES.has(m.role)
+  );
 
   return (
     <section aria-labelledby={`${level}-heading`}>
-      <h2 id={`${level}-heading`} className="text-xl font-semibold mb-4">
-        {LEVEL_HEADING[level]}
+      <h2 id={`${level}-heading`} className="text-2xl font-semibold mb-6">
+        {heading}
       </h2>
 
-      {userRep && (
-        <RepresentativeCard
-          representative={userRep}
-          showParty={showParty}
-        />
-      )}
-
-      {mayor && (
-        <div className="mt-6">
-          <h3 className="text-lg font-medium mb-3">Mayor</h3>
+      <div className="grid gap-6 md:grid-cols-2 items-start">
+        {userRep && (
           <RepresentativeCard
-            representative={mayor}
-            showParty={false}
+            representative={userRep}
+            showParty={showParty}
           />
-        </div>
-      )}
+        )}
+        {executive && <ExecutiveCard leader={executive} />}
+      </div>
 
-      {!isMunicipal && data.leadership.length > 0 && (
+      {level !== "municipal" && cabinetMembers.length > 0 && (
         <Cabinet
           level={level as "provincial" | "federal"}
-          members={data.leadership}
+          members={cabinetMembers}
           onMemberClick={setSelectedMember}
         />
       )}
