@@ -55,6 +55,30 @@ def migrate_jurisdiction(cur, config, slug):
     province_code = parts[1].upper() if len(parts) > 1 and level != "federal" else None
 
     # ── Step 1: Delete existing rows for this jurisdiction (idempotency) ──
+    # Delete representatives whose ONLY existing representations belong to this
+    # jurisdiction. Otherwise they would be orphaned when the jurisdiction's
+    # representations cascade-delete. Reps with representations in multiple
+    # jurisdictions are preserved.
+    cur.execute(
+        """
+        DELETE FROM representatives r
+        WHERE EXISTS (
+            SELECT 1 FROM representations rep
+            JOIN jurisdictions j ON j.id = rep.jurisdiction_id
+            WHERE rep.representative_id = r.id AND j.slug = %s
+        )
+        AND NOT EXISTS (
+            SELECT 1 FROM representations rep
+            JOIN jurisdictions j ON j.id = rep.jurisdiction_id
+            WHERE rep.representative_id = r.id AND j.slug != %s
+        );
+        """,
+        (slug, slug),
+    )
+    reps_deleted = cur.rowcount
+    if reps_deleted:
+        print(f"  Cleared {reps_deleted} representatives belonging only to this jurisdiction")
+
     cur.execute("DELETE FROM jurisdictions WHERE slug = %s;", (slug,))
     deleted = cur.rowcount
     if deleted:
@@ -140,6 +164,15 @@ def migrate_jurisdiction(cur, config, slug):
         if "person_id" in rep_data and rep_data["person_id"]:
             external_ids["parl_gc_ca"] = rep_data["person_id"]
 
+        # Check district match BEFORE inserting the representative.
+        # Otherwise we create orphan rows (rep exists but no representation
+        # links them to anything). See TODO.md "Federal name-join Unicode
+        # mismatch" for the underlying root cause.
+        district_id = district_id_map.get(join_key)
+        if district_id is None:
+            print(f"    SKIP rep {full_name!r}: no matching district for join_key={join_key!r}")
+            continue
+
         # Insert the representative
         cur.execute(
             """
@@ -160,12 +193,6 @@ def migrate_jurisdiction(cur, config, slug):
         )
         rep_id = cur.fetchone()[0]
         reps_inserted += 1
-
-        # Insert the representation linking rep to district
-        district_id = district_id_map.get(join_key)
-        if district_id is None:
-            # Rep exists but no matching district — skip the representation
-            continue
 
         # Parse elected date if present (federal data has it)
         start_date = rep_data.get("elected") or None
