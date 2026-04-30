@@ -49,13 +49,10 @@ export default async function LookupPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen p-8 max-w-3xl mx-auto">
-      <header className="mb-12 pb-6 border-b border-border">
-        <Link href="/" className="inline-block mb-6">
-        <span className="text-2xl font-semibold tracking-tight">Parliament</span>
-        </Link>
-          <h1 className="text-3xl font-semibold tracking-tight mb-2">
-            Results for {displayPostalCode}
-          </h1>
+      <header className="mb-12">
+        <h1 className="text-3xl font-semibold tracking-tight mb-2">
+          Results for {displayPostalCode}
+        </h1>
         <Link href="/" className="text-primary underline text-sm">
           &larr; New search
         </Link>

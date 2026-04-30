@@ -39,8 +39,10 @@ export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center p-8">
       <div className="w-full max-w-md">
-        <h1 className="text-3xl font-semibold mb-2">Parliament</h1>
-        <p className="text-base mb-8 text-gray-600">
+        <h1 className="text-5xl font-semibold tracking-tight mb-4">
+          Meet your leaders.
+        </h1>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           See your elected representatives at every level of government.
         </p>
 
@@ -68,7 +70,7 @@ export default function Home() {
           )}
           <button
             type="submit"
-            className="w-full px-4 py-3 bg-gray-900 text-white rounded-md font-medium"
+            className="w-full px-4 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:opacity-90 transition-opacity"
           >
             Find my representatives
           </button>

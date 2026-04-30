@@ -64,3 +64,76 @@ export async function lookupPostalCode(
 
   return (await response.json()) as LookupResponse;
 }
+
+
+/* ─── Browse-flow client functions ──────────────────────────────────── */
+
+import type {
+  JurisdictionsIndexResponse,
+  JurisdictionDetailResponse,
+  RepresentativeDetailResponse,
+} from "./types";
+
+/**
+ * List all registered jurisdictions, grouped by level on the consumer side.
+ */
+export async function listJurisdictions(
+  lang: Language = "en"
+): Promise<JurisdictionsIndexResponse> {
+  const url = `${API_URL}/jurisdictions?lang=${lang}`;
+  const response = await fetch(url, {
+    headers: { "Content-Type": "application/json" },
+    next: { revalidate: 3600 },
+  });
+  if (!response.ok) {
+    throw new ApiError(`Failed to list jurisdictions: ${response.status}`, response.status);
+  }
+  return (await response.json()) as JurisdictionsIndexResponse;
+}
+
+/**
+ * Full roster for one jurisdiction.
+ */
+export async function getJurisdiction(
+  slug: string,
+  lang: Language = "en"
+): Promise<JurisdictionDetailResponse> {
+  const url = `${API_URL}/jurisdiction/${encodeURIComponent(slug)}?lang=${lang}`;
+  const response = await fetch(url, {
+    headers: { "Content-Type": "application/json" },
+    next: { revalidate: 3600 },
+  });
+  if (!response.ok) {
+    let message = `Jurisdiction not found: ${slug}`;
+    try {
+      const body = (await response.json()) as { error?: string };
+      if (body.error) message = body.error;
+    } catch {}
+    throw new ApiError(message, response.status);
+  }
+  return (await response.json()) as JurisdictionDetailResponse;
+}
+
+/**
+ * Full details for one representative within a jurisdiction.
+ */
+export async function getRepresentative(
+  jurisdictionSlug: string,
+  repSlug: string,
+  lang: Language = "en"
+): Promise<RepresentativeDetailResponse> {
+  const url = `${API_URL}/representative/${encodeURIComponent(jurisdictionSlug)}/${encodeURIComponent(repSlug)}?lang=${lang}`;
+  const response = await fetch(url, {
+    headers: { "Content-Type": "application/json" },
+    next: { revalidate: 3600 },
+  });
+  if (!response.ok) {
+    let message = `Representative not found: ${jurisdictionSlug}/${repSlug}`;
+    try {
+      const body = (await response.json()) as { error?: string };
+      if (body.error) message = body.error;
+    } catch {}
+    throw new ApiError(message, response.status);
+  }
+  return (await response.json()) as RepresentativeDetailResponse;
+}
