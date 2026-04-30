@@ -16,7 +16,8 @@
       "honorific": "Honorific",
       "party": "Party",
       "email": "Email",
-      "phone": "Telephone"
+      "phone": "Telephone",
+      "photo_url": "photo_url"
     }
   },
   "static_fields": {

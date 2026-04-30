@@ -97,16 +97,18 @@ def main():
             first_row = rows[0]
             profile_url = str(first_row.get("profile_url", "")).strip()
 
+            photo_url = str(first_row.get("photo_url", "")).strip()
             cur.execute(
                 """
                 INSERT INTO representatives
-                    (name, website_url, external_ids)
-                VALUES (%s, %s, %s)
+                    (name, website_url, photo_url, external_ids)
+                VALUES (%s, %s, %s, %s)
                 RETURNING id;
                 """,
                 (
                     make_jsonb(full_name),
                     make_jsonb(profile_url) if profile_url and profile_url.lower() != "nan" else None,
+                    photo_url if photo_url and photo_url.lower() != "nan" else None,
                     Json({"ola_slug": str(first_row.get("profile_slug", "")).strip()}),
                 ),
             )

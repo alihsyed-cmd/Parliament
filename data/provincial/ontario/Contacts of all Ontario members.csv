@@ -1,538 +1,538 @@
-﻿Honorific,"First name","Last name","Office type",Address,City,Province,"Postal code","Office email",Email,Telephone,Fax,Toll-free,TTY,"Riding name",Party,"Parliamentary role","Member ID",,,
-,Tyler,Allsopp,"Constituency office","Unit 8
-5503 Hwy. 62 S",Belleville,ON,"K8N 0L5",,tyler.allsopp@pc.ola.org,613-962-1144,613-969-6381,,,"Bay of Quinte","Progressive Conservative Party of Ontario",,108
-,Vacant,seat,"Constituency office","Unit 8
-5503 Hwy. 62 S",Belleville,ON,"K8N 0L5",,,613-962-1144,613-969-6381,,,,,,
-,Aislinn,Clancy,"Legislative office","Room 470
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,aclancy-qp@ola.org,416-325-1223,,,,"Kitchener Centre","Green Party of Ontario",,104
-,Aislinn,Clancy,"Constituency office","Suite 605
-305 King St. W",Kitchener,ON,"N2G 1B9",aclancy-co@ola.org,aclancy-qp@ola.org,"519-579-5460  ","519-579-2121  ",,,"Kitchener Centre","Green Party of Ontario",,104
-,Robin,Lennox,"Constituency office","Suite 3
-630 Main St. E",Hamilton,ON,"L8M 1J7",rlennox-co@ndp.on.ca,rlennox-qp@ndp.on.ca,"905-544-9644  ","905-544-5152  ",,,"Hamilton Centre","New Democratic Party of Ontario",,116
-,Robin,Lennox,"Legislative office","Room 201 
-North Wing, Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,rlennox-qp@ndp.on.ca,416-325-1796,,,,"Hamilton Centre","New Democratic Party of Ontario",,116
-,Adil,Shamji,"Legislative office","Room 441
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,ashamji.mpp.co@liberal.ola.org,416-325-0105,416-325-0103,,,"Don Valley East","Ontario Liberal Party",,7593
-,Adil,Shamji,"Constituency office","Suite L02
-1200 Lawrence Ave. E",Toronto,ON,"M3A 1E1",,ashamji.mpp.co@liberal.ola.org,416-494-6856,416-494-9937,,,"Don Valley East","Ontario Liberal Party",,7593
-,Rob,Cerjanec,"Legislative office","Room 410 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,rcerjanec.mpp.co@liberal.ola.org,416-325-3008,416-325-3003,,,Ajax,"Ontario Liberal Party",,7647
-,Rob,Cerjanec,"Constituency office","Suite 502
-230 Westney Rd. S",Ajax,ON,"L1S 7J5",,rcerjanec.mpp.co@liberal.ola.org,905-427-2060,905-427-6976,866-924-0312,,Ajax,"Ontario Liberal Party",,7647
-,Lucille,Collard,"Constituency office","237 Montreal Rd.",Vanier,ON,"K1L 6C7",,lcollard.mpp.co@liberal.ola.org,613-744-4484,,,,Ottawa—Vanier,"Ontario Liberal Party",,7565
-,Lucille,Collard,"Legislative office","Room 416
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,lcollard.mpp.co@liberal.ola.org,416-325-0007,416-325-0172,,,Ottawa—Vanier,"Ontario Liberal Party",,7565
-,Stephen,Blais,"Constituency office","Unit 204
-4473 Innes Rd.",Orleans,ON,"K4A 1A7",,sblais.mpp.co@liberal.ola.org,613-834-8679,613-834-7647,,,Orléans,"Ontario Liberal Party",,7564
-,Stephen,Blais,"Legislative office","Room 436
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,sblais.mpp.co@liberal.ola.org,416-325-0035,416-325-0044,,,Orléans,"Ontario Liberal Party",,7564
-Hon.,Stephen,Lecce,"Ministry office","Ministry of Energy and Mines
+﻿Honorific,First name,Last name,Office type,Address,City,Province,Postal code,Office email,Email,Telephone,Fax,Toll-free,TTY,Riding name,Party,Parliamentary role,Member ID,,photo_url
+,Tyler,Allsopp,Constituency office,"Unit 8
+5503 Hwy. 62 S",Belleville,ON,K8N 0L5,,tyler.allsopp@pc.ola.org,613-962-1144,613-969-6381,,,Bay of Quinte,Progressive Conservative Party of Ontario,,108,,https://www.ola.org/sites/default/files/member/profile-photo/Tyler_Allsopp.jpeg
+,Vacant,seat,Constituency office,"Unit 8
+5503 Hwy. 62 S",Belleville,ON,K8N 0L5,,,613-962-1144,613-969-6381,,,,,,,,
+,Aislinn,Clancy,Legislative office,"Room 470
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,aclancy-qp@ola.org,416-325-1223,,,,Kitchener Centre,Green Party of Ontario,,104,,https://www.ola.org/sites/default/files/member/profile-photo/Aislinn_Clancy.jpg
+,Aislinn,Clancy,Constituency office,"Suite 605
+305 King St. W",Kitchener,ON,N2G 1B9,aclancy-co@ola.org,aclancy-qp@ola.org,519-579-5460  ,519-579-2121  ,,,Kitchener Centre,Green Party of Ontario,,104,,https://www.ola.org/sites/default/files/member/profile-photo/Aislinn_Clancy.jpg
+,Robin,Lennox,Constituency office,"Suite 3
+630 Main St. E",Hamilton,ON,L8M 1J7,rlennox-co@ndp.on.ca,rlennox-qp@ndp.on.ca,905-544-9644  ,905-544-5152  ,,,Hamilton Centre,New Democratic Party of Ontario,,116,,https://www.ola.org/sites/default/files/member/profile-photo/Lennox_Robin.jpg
+,Robin,Lennox,Legislative office,"Room 201 
+North Wing, Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,rlennox-qp@ndp.on.ca,416-325-1796,,,,Hamilton Centre,New Democratic Party of Ontario,,116,,https://www.ola.org/sites/default/files/member/profile-photo/Lennox_Robin.jpg
+,Adil,Shamji,Legislative office,"Room 441
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,ashamji.mpp.co@liberal.ola.org,416-325-0105,416-325-0103,,,Don Valley East,Ontario Liberal Party,,7593,,https://www.ola.org/sites/default/files/member/profile-photo/Adil_Shamji.jpg
+,Adil,Shamji,Constituency office,"Suite L02
+1200 Lawrence Ave. E",Toronto,ON,M3A 1E1,,ashamji.mpp.co@liberal.ola.org,416-494-6856,416-494-9937,,,Don Valley East,Ontario Liberal Party,,7593,,https://www.ola.org/sites/default/files/member/profile-photo/Adil_Shamji.jpg
+,Rob,Cerjanec,Legislative office,"Room 410 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,rcerjanec.mpp.co@liberal.ola.org,416-325-3008,416-325-3003,,,Ajax,Ontario Liberal Party,,7647,,https://www.ola.org/sites/default/files/member/profile-photo/Rob-Cerjanec.jpg
+,Rob,Cerjanec,Constituency office,"Suite 502
+230 Westney Rd. S",Ajax,ON,L1S 7J5,,rcerjanec.mpp.co@liberal.ola.org,905-427-2060,905-427-6976,866-924-0312,,Ajax,Ontario Liberal Party,,7647,,https://www.ola.org/sites/default/files/member/profile-photo/Rob-Cerjanec.jpg
+,Lucille,Collard,Constituency office,237 Montreal Rd.,Vanier,ON,K1L 6C7,,lcollard.mpp.co@liberal.ola.org,613-744-4484,,,,Ottawa—Vanier,Ontario Liberal Party,,7565,,https://www.ola.org/sites/default/files/member/profile-photo/Lucille-Collard.jpeg
+,Lucille,Collard,Legislative office,"Room 416
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,lcollard.mpp.co@liberal.ola.org,416-325-0007,416-325-0172,,,Ottawa—Vanier,Ontario Liberal Party,,7565,,https://www.ola.org/sites/default/files/member/profile-photo/Lucille-Collard.jpeg
+,Stephen,Blais,Constituency office,"Unit 204
+4473 Innes Rd.",Orleans,ON,K4A 1A7,,sblais.mpp.co@liberal.ola.org,613-834-8679,613-834-7647,,,Orléans,Ontario Liberal Party,,7564,,https://www.ola.org/sites/default/files/member/profile-photo/Stephen_Blais.jpg
+,Stephen,Blais,Legislative office,"Room 436
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,sblais.mpp.co@liberal.ola.org,416-325-0035,416-325-0044,,,Orléans,Ontario Liberal Party,,7564,,https://www.ola.org/sites/default/files/member/profile-photo/Stephen_Blais.jpg
+Hon.,Stephen,Lecce,Ministry office,"Ministry of Energy and Mines
 10th Floor
-77 Grenville St.",Toronto,ON,"M7A 2C1",,stephen.lecce@pc.ola.org,416-327-6758,,,,King—Vaughan,"Progressive Conservative Party of Ontario",,7479
-Hon.,Stephen,Lecce,"Constituency office","Unit 1
-2220 King Rd.","King City",ON,"L7B 1L3",,stephen.lecce@pc.ola.org,"647-560-9700  ",647-560-9701,,,King—Vaughan,"Progressive Conservative Party of Ontario",,7479
-Hon.,Natalia,Kusendova-Bashta,"Ministry office","Ministry of Long-Term Care
+77 Grenville St.",Toronto,ON,M7A 2C1,,stephen.lecce@pc.ola.org,416-327-6758,,,,King—Vaughan,Progressive Conservative Party of Ontario,,7479,,https://www.ola.org/sites/default/files/member/profile-photo/Stephen_Lecce.jpg
+Hon.,Stephen,Lecce,Constituency office,"Unit 1
+2220 King Rd.",King City,ON,L7B 1L3,,stephen.lecce@pc.ola.org,647-560-9700  ,647-560-9701,,,King—Vaughan,Progressive Conservative Party of Ontario,,7479,,https://www.ola.org/sites/default/files/member/profile-photo/Stephen_Lecce.jpg
+Hon.,Natalia,Kusendova-Bashta,Ministry office,"Ministry of Long-Term Care
 6th Floor
-400 University Ave.",Toronto,ON,"M5G 1S5",,natalia.kusendova@pc.ola.org,416-325-6200,,,,"Mississauga Centre","Progressive Conservative Party of Ontario",,7489
-Hon.,Natalia,Kusendova-Bashta,"Constituency office","Unit 701
-50 Burnhamthorpe Rd. W",Mississauga,ON,"L5B 3C3",natalia.kusendovaco@pc.ola.org,natalia.kusendova@pc.ola.org,905-890-1901,,,,"Mississauga Centre","Progressive Conservative Party of Ontario",,7489
-,Ric,Bresee,"Legislative office","Room 263 
-Main Legislative Building",Toronto,ON,"M7A 1A5",,ric.bresee@pc.ola.org,416-325-0119,,,,"Hastings—Lennox and Addington","Progressive Conservative Party of Ontario",,7601
-,Ric,Bresee,"Constituency office","26A St. Lawrence St. W
-P.O. Box 70",Madoc,ON,"K0K 2K0",,ric.bresee@pc.ola.org,613-473-1112,613-473-1397,"855-229-6676  ",,"Hastings—Lennox and Addington","Progressive Conservative Party of Ontario",,7601
-,Ric,Bresee,"Constituency office","6 Dundas St. W",Napanee,ON,"K7R 1Z4",,ric.bresee@pc.ola.org,613-354-3031,613-354-3263,,,"Hastings—Lennox and Addington","Progressive Conservative Party of Ontario",,7601
-Hon.,Andrea,Khanjin,"Ministry office","Ministry of Red Tape Reduction
+400 University Ave.",Toronto,ON,M5G 1S5,,natalia.kusendova@pc.ola.org,416-325-6200,,,,Mississauga Centre,Progressive Conservative Party of Ontario,,7489,,https://www.ola.org/sites/default/files/member/profile-photo/Natalia_Kusendova-Bashta_0.jpg
+Hon.,Natalia,Kusendova-Bashta,Constituency office,"Unit 701
+50 Burnhamthorpe Rd. W",Mississauga,ON,L5B 3C3,natalia.kusendovaco@pc.ola.org,natalia.kusendova@pc.ola.org,905-890-1901,,,,Mississauga Centre,Progressive Conservative Party of Ontario,,7489,,https://www.ola.org/sites/default/files/member/profile-photo/Natalia_Kusendova-Bashta_0.jpg
+,Ric,Bresee,Legislative office,"Room 263 
+Main Legislative Building",Toronto,ON,M7A 1A5,,ric.bresee@pc.ola.org,416-325-0119,,,,Hastings—Lennox and Addington,Progressive Conservative Party of Ontario,,7601,,https://www.ola.org/sites/default/files/member/profile-photo/Ric_Bresee.png
+,Ric,Bresee,Constituency office,"26A St. Lawrence St. W
+P.O. Box 70",Madoc,ON,K0K 2K0,,ric.bresee@pc.ola.org,613-473-1112,613-473-1397,855-229-6676  ,,Hastings—Lennox and Addington,Progressive Conservative Party of Ontario,,7601,,https://www.ola.org/sites/default/files/member/profile-photo/Ric_Bresee.png
+,Ric,Bresee,Constituency office,6 Dundas St. W,Napanee,ON,K7R 1Z4,,ric.bresee@pc.ola.org,613-354-3031,613-354-3263,,,Hastings—Lennox and Addington,Progressive Conservative Party of Ontario,,7601,,https://www.ola.org/sites/default/files/member/profile-photo/Ric_Bresee.png
+Hon.,Andrea,Khanjin,Ministry office,"Ministry of Red Tape Reduction
 7th Floor
-56 Wellesley St. W",Toronto,ON,"M5S 2S3",,,416-212-0088,,,,Barrie—Innisfil,"Progressive Conservative Party of Ontario",,7448
-Hon.,Andrea,Khanjin,"Constituency office","Unit 1
-237 Mapleview Dr. E",Barrie,ON,"L4N 0W5",andrea.khanjin@pc.ola.org,,"705-722-0575  ",705-722-8835,,,Barrie—Innisfil,"Progressive Conservative Party of Ontario",,7448
-,Terence,Kernaghan,"Constituency office","Unit 105
-400 York St.",London,ON,"N6B 3N2",tkernaghan-co@ndp.on.ca,tkernaghan-qp@ndp.on.ca,519-432-7339,,,,"London North Centre","New Democratic Party of Ontario",,7483
-,Terence,Kernaghan,"Legislative office","Room 320
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,tkernaghan-qp@ndp.on.ca,"416-326-7568  ",,,,"London North Centre","New Democratic Party of Ontario",,7483
-Hon.,Trevor,Jones,"Ministry office","Minister of Agriculture, Food and Agribusiness
+56 Wellesley St. W",Toronto,ON,M5S 2S3,,,416-212-0088,,,,Barrie—Innisfil,Progressive Conservative Party of Ontario,,7448,,https://www.ola.org/sites/default/files/member/profile-photo/andrea-khanjin.jpg
+Hon.,Andrea,Khanjin,Constituency office,"Unit 1
+237 Mapleview Dr. E",Barrie,ON,L4N 0W5,andrea.khanjin@pc.ola.org,,705-722-0575  ,705-722-8835,,,Barrie—Innisfil,Progressive Conservative Party of Ontario,,7448,,https://www.ola.org/sites/default/files/member/profile-photo/andrea-khanjin.jpg
+,Terence,Kernaghan,Constituency office,"Unit 105
+400 York St.",London,ON,N6B 3N2,tkernaghan-co@ndp.on.ca,tkernaghan-qp@ndp.on.ca,519-432-7339,,,,London North Centre,New Democratic Party of Ontario,,7483,,https://www.ola.org/sites/default/files/member/profile-photo/terence_kernaghan_0.jpg
+,Terence,Kernaghan,Legislative office,"Room 320
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,tkernaghan-qp@ndp.on.ca,416-326-7568  ,,,,London North Centre,New Democratic Party of Ontario,,7483,,https://www.ola.org/sites/default/files/member/profile-photo/terence_kernaghan_0.jpg
+Hon.,Trevor,Jones,Ministry office,"Minister of Agriculture, Food and Agribusiness
 11th Floor
-77 Grenville St.",Toronto,ON,"M7A 1B3",,trevor.jones@pc.ola.org,416-326-3074,,,,Chatham-Kent—Leamington,"Progressive Conservative Party of Ontario",,7592
-Hon.,Trevor,Jones,"Constituency office","Suite 100
-111 Heritage Rd.",Chatham,ON,"N7M 5W7",,trevor.jones@pc.ola.org,519-351-0510,519-351-7714,,,Chatham-Kent—Leamington,"Progressive Conservative Party of Ontario",,7592
-Hon.,Trevor,Jones,"Constituency office","Unit 2
-115 Erie St. N",Leamington,ON,"N8H 3A3",,trevor.jones@pc.ola.org,519-326-3367,519-326-0404,,,Chatham-Kent—Leamington,"Progressive Conservative Party of Ontario",,7592
-,Anthony,Leardi,"Legislative office","Room 213
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,anthony.leardi@pc.ola.org,,,,,Essex,"Progressive Conservative Party of Ontario",,7597
-,Anthony,Leardi,"Constituency office","310 Thomas Rd.",Amherstburg,ON,"N9V 2Y9",,anthony.leardi@pc.ola.org,519-736-1550,,,,Essex,"Progressive Conservative Party of Ontario",,7597
-Hon.,Rob,Flack,"Ministry office","Ministry of Municipal Affairs and Housing
+77 Grenville St.",Toronto,ON,M7A 1B3,,trevor.jones@pc.ola.org,416-326-3074,,,,Chatham-Kent—Leamington,Progressive Conservative Party of Ontario,,7592,,https://www.ola.org/sites/default/files/member/profile-photo/Trevor_Jones.png
+Hon.,Trevor,Jones,Constituency office,"Suite 100
+111 Heritage Rd.",Chatham,ON,N7M 5W7,,trevor.jones@pc.ola.org,519-351-0510,519-351-7714,,,Chatham-Kent—Leamington,Progressive Conservative Party of Ontario,,7592,,https://www.ola.org/sites/default/files/member/profile-photo/Trevor_Jones.png
+Hon.,Trevor,Jones,Constituency office,"Unit 2
+115 Erie St. N",Leamington,ON,N8H 3A3,,trevor.jones@pc.ola.org,519-326-3367,519-326-0404,,,Chatham-Kent—Leamington,Progressive Conservative Party of Ontario,,7592,,https://www.ola.org/sites/default/files/member/profile-photo/Trevor_Jones.png
+,Anthony,Leardi,Legislative office,"Room 213
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,anthony.leardi@pc.ola.org,,,,,Essex,Progressive Conservative Party of Ontario,,7597,,https://www.ola.org/sites/default/files/member/profile-photo/Anthony_Leardi.png
+,Anthony,Leardi,Constituency office,310 Thomas Rd.,Amherstburg,ON,N9V 2Y9,,anthony.leardi@pc.ola.org,519-736-1550,,,,Essex,Progressive Conservative Party of Ontario,,7597,,https://www.ola.org/sites/default/files/member/profile-photo/Anthony_Leardi.png
+Hon.,Rob,Flack,Ministry office,"Ministry of Municipal Affairs and Housing
 17th Floor
-777 Bay St.",Toronto,ON,"M7A 2J3",,rob.flack@pc.ola.org,416-585-7000,416-585-4230,,,Elgin—Middlesex—London,"Progressive Conservative Party of Ontario",,7596
-Hon.,Rob,Flack,"Constituency office","Suite 201
-750 Talbot St.","St. Thomas",ON,"N5P 1E2",,rob.flack@pc.ola.org,519-631-5995,519-631-9478,1-800-265-7638,,Elgin—Middlesex—London,"Progressive Conservative Party of Ontario",,7596
-Hon.,Graham,McGregor,"Ministry office","Ministry of Citizenship and Multiculturalism
+777 Bay St.",Toronto,ON,M7A 2J3,,rob.flack@pc.ola.org,416-585-7000,416-585-4230,,,Elgin—Middlesex—London,Progressive Conservative Party of Ontario,,7596,,https://www.ola.org/sites/default/files/member/profile-photo/Rob_Flack.png
+Hon.,Rob,Flack,Constituency office,"Suite 201
+750 Talbot St.",St. Thomas,ON,N5P 1E2,,rob.flack@pc.ola.org,519-631-5995,519-631-9478,1-800-265-7638,,Elgin—Middlesex—London,Progressive Conservative Party of Ontario,,7596,,https://www.ola.org/sites/default/files/member/profile-photo/Rob_Flack.png
+Hon.,Graham,McGregor,Ministry office,"Ministry of Citizenship and Multiculturalism
 14th Floor
-56 Wellesley St. W",Toronto,ON,"M7A 2E7",,graham.mcgregor@pc.ola.org,416-212-0039,,,,"Brampton North","Progressive Conservative Party of Ontario",,7588
-Hon.,Graham,McGregor,"Constituency office","Unit 7
-10215 Kennedy Rd. N",Brampton,ON,"L6Z 0C5",,graham.mcgregor@pc.ola.org,289-298-1049,905-495-1041,,,"Brampton North","Progressive Conservative Party of Ontario",,7588
-,Billy,Denault,"Constituency office","The Victoria Center
+56 Wellesley St. W",Toronto,ON,M7A 2E7,,graham.mcgregor@pc.ola.org,416-212-0039,,,,Brampton North,Progressive Conservative Party of Ontario,,7588,,https://www.ola.org/sites/default/files/member/profile-photo/Graham%20McGregor_edited.png
+Hon.,Graham,McGregor,Constituency office,"Unit 7
+10215 Kennedy Rd. N",Brampton,ON,L6Z 0C5,,graham.mcgregor@pc.ola.org,289-298-1049,905-495-1041,,,Brampton North,Progressive Conservative Party of Ontario,,7588,,https://www.ola.org/sites/default/files/member/profile-photo/Graham%20McGregor_edited.png
+,Billy,Denault,Constituency office,"The Victoria Center
 Unit 6
-84 Isabella St.",Pembroke,ON,"K8A 5S5",,billy.denault@pc.ola.org,613-735-6627,613-735-6692,800-267-2515,,Renfrew—Nipissing—Pembroke,"Progressive Conservative Party of Ontario",,111
-Hon.,Caroline,Mulroney,"Ministry office","Ministry of Francophone Affairs
+84 Isabella St.",Pembroke,ON,K8A 5S5,,billy.denault@pc.ola.org,613-735-6627,613-735-6692,800-267-2515,,Renfrew—Nipissing—Pembroke,Progressive Conservative Party of Ontario,,111,,https://www.ola.org/sites/default/files/member/profile-photo/Billy-Denault.jpg
+Hon.,Caroline,Mulroney,Ministry office,"Ministry of Francophone Affairs
 Suite 2501
-700 Bay St.",Toronto,ON,"M7A 0A2",,caroline.mulroney@pc.ola.org,416-325-4983,,,,York—Simcoe,"Progressive Conservative Party of Ontario",,7523
-Hon.,Caroline,Mulroney,"Constituency office","Unit 9
-45 Grist Mill Rd.","Holland Landing",ON,"L9N 1M7",caroline.mulroneyco@pc.ola.org,caroline.mulroney@pc.ola.org,905-895-1555,905-895-0337,,,York—Simcoe,"Progressive Conservative Party of Ontario",,7523
-,Stephanie,Bowman,"Constituency office","Suite 101
-795 Eglinton Ave. E",Toronto,ON,"M4G 4E4",,sbowman.mpp.co@liberal.ola.org,416-425-6777,416-425-0350,,,"Don Valley West","Ontario Liberal Party",,7594
-,Stephanie,Bowman,"Legislative office","Room 412
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,sbowman.mpp.co@liberal.ola.org,416-325-0008,416-325-0018,,,"Don Valley West","Ontario Liberal Party",,7594
-,Kristyn,Wong-Tam,"Constituency office","Suite 401
-120 Carlton St.",Toronto,ON,"M5A 4K2",kwong-tam-co@ndp.on.ca,kwong-tam-qp@ndp.on.ca,416-972-7683,416-972-7686,,,"Toronto Centre","New Democratic Party of Ontario",,7616
-,Kristyn,Wong-Tam,"Legislative office","Room 327
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,kwong-tam-qp@ndp.on.ca,416-325-0031,416-325-0030,,,"Toronto Centre","New Democratic Party of Ontario",,7616
-,Brian,Saunderson,"Ministry office","15th Floor
-56 Wellesley St. West",Toronto,ON,"M7A 2E7",,brian.saunderson@pc.ola.org,,,,,Simcoe—Grey,"Progressive Conservative Party of Ontario",,7610
-,Brian,Saunderson,"Constituency office","Suite 28
-180 Parsons Rd.",Alliston,ON,"L9R 1E8",,brian.saunderson@pc.ola.org,705-435-4087,705-435-1051,,,Simcoe—Grey,"Progressive Conservative Party of Ontario",,7610
-,Brian,Saunderson,"Constituency office","7317 Hwy. 26 E",Stayner,ON,"L0M 1S0",,brian.saunderson@pc.ola.org,705-428-2134,705-428-0104,800-268-7542,,Simcoe—Grey,"Progressive Conservative Party of Ontario",,7610
-Hon.,Kevin,Holland,"Ministry office","Ministry of Natural Resources
+700 Bay St.",Toronto,ON,M7A 0A2,,caroline.mulroney@pc.ola.org,416-325-4983,,,,York—Simcoe,Progressive Conservative Party of Ontario,,7523,,https://www.ola.org/sites/default/files/member/profile-photo/caroline_mulroney.jpg
+Hon.,Caroline,Mulroney,Constituency office,"Unit 9
+45 Grist Mill Rd.",Holland Landing,ON,L9N 1M7,caroline.mulroneyco@pc.ola.org,caroline.mulroney@pc.ola.org,905-895-1555,905-895-0337,,,York—Simcoe,Progressive Conservative Party of Ontario,,7523,,https://www.ola.org/sites/default/files/member/profile-photo/caroline_mulroney.jpg
+,Stephanie,Bowman,Constituency office,"Suite 101
+795 Eglinton Ave. E",Toronto,ON,M4G 4E4,,sbowman.mpp.co@liberal.ola.org,416-425-6777,416-425-0350,,,Don Valley West,Ontario Liberal Party,,7594,,https://www.ola.org/sites/default/files/member/profile-photo/Stephanie_Bowman_0.jpg
+,Stephanie,Bowman,Legislative office,"Room 412
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,sbowman.mpp.co@liberal.ola.org,416-325-0008,416-325-0018,,,Don Valley West,Ontario Liberal Party,,7594,,https://www.ola.org/sites/default/files/member/profile-photo/Stephanie_Bowman_0.jpg
+,Kristyn,Wong-Tam,Constituency office,"Suite 401
+120 Carlton St.",Toronto,ON,M5A 4K2,kwong-tam-co@ndp.on.ca,kwong-tam-qp@ndp.on.ca,416-972-7683,416-972-7686,,,Toronto Centre,New Democratic Party of Ontario,,7616,,https://www.ola.org/sites/default/files/member/profile-photo/Kristyn_Wong_Tam.png
+,Kristyn,Wong-Tam,Legislative office,"Room 327
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,kwong-tam-qp@ndp.on.ca,416-325-0031,416-325-0030,,,Toronto Centre,New Democratic Party of Ontario,,7616,,https://www.ola.org/sites/default/files/member/profile-photo/Kristyn_Wong_Tam.png
+,Brian,Saunderson,Ministry office,"15th Floor
+56 Wellesley St. West",Toronto,ON,M7A 2E7,,brian.saunderson@pc.ola.org,,,,,Simcoe—Grey,Progressive Conservative Party of Ontario,,7610,,https://www.ola.org/sites/default/files/member/profile-photo/Brian_Saunderson.jpeg
+,Brian,Saunderson,Constituency office,"Suite 28
+180 Parsons Rd.",Alliston,ON,L9R 1E8,,brian.saunderson@pc.ola.org,705-435-4087,705-435-1051,,,Simcoe—Grey,Progressive Conservative Party of Ontario,,7610,,https://www.ola.org/sites/default/files/member/profile-photo/Brian_Saunderson.jpeg
+,Brian,Saunderson,Constituency office,7317 Hwy. 26 E,Stayner,ON,L0M 1S0,,brian.saunderson@pc.ola.org,705-428-2134,705-428-0104,800-268-7542,,Simcoe—Grey,Progressive Conservative Party of Ontario,,7610,,https://www.ola.org/sites/default/files/member/profile-photo/Brian_Saunderson.jpeg
+Hon.,Kevin,Holland,Ministry office,"Ministry of Natural Resources
 Whitney Block
-99 Wellesley St. W",Toronto,ON,"M7A 1W3",,kevin.holland@pc.ola.org,416-314-2301,,,,"Thunder Bay—Atikokan","Progressive Conservative Party of Ontario",,7613
-Hon.,Kevin,Holland,"Constituency office","774 James St. N","Thunder Bay",ON,"P7C 5N3",,kevin.holland@pc.ola.org,807-623-6702,807-623-8921,833-743-1684,,"Thunder Bay—Atikokan","Progressive Conservative Party of Ontario",,7613
-,David,Smith,"Legislative office","Room 170 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,david.smith1@pc.ola.org,416-325-1180,416-325-1179,,,"Scarborough Centre","Progressive Conservative Party of Ontario",,7609
-,David,Smith,"Constituency office","2063 Lawrence Ave. E",Scarborough,ON,"M1R 2Z4",,david.smith1@pc.ola.org,416-615-2183,416-615-2011,,,"Scarborough Centre","Progressive Conservative Party of Ontario",,7609
-,Jamie,West,"Constituency office","Unit 4B
-555 Barrydowne Rd.",Sudbury,ON,"P3A 3T4",jwest-co@ndp.on.ca,jwest-qp@ndp.on.ca,705-675-1914,705-675-1456,,,Sudbury,"New Democratic Party of Ontario",,7446
-,Jamie,West,"Legislative office","Room 347
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jwest-qp@ndp.on.ca,416-326-7144,416-326-7280,,,Sudbury,"New Democratic Party of Ontario",,7446
-Hon.,Neil,Lumsden,"Ministry office","Ministry of Sport
+99 Wellesley St. W",Toronto,ON,M7A 1W3,,kevin.holland@pc.ola.org,416-314-2301,,,,Thunder Bay—Atikokan,Progressive Conservative Party of Ontario,,7613,,https://www.ola.org/sites/default/files/member/profile-photo/Kevin_Holland.jpg
+Hon.,Kevin,Holland,Constituency office,774 James St. N,Thunder Bay,ON,P7C 5N3,,kevin.holland@pc.ola.org,807-623-6702,807-623-8921,833-743-1684,,Thunder Bay—Atikokan,Progressive Conservative Party of Ontario,,7613,,https://www.ola.org/sites/default/files/member/profile-photo/Kevin_Holland.jpg
+,David,Smith,Legislative office,"Room 170 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,david.smith1@pc.ola.org,416-325-1180,416-325-1179,,,Scarborough Centre,Progressive Conservative Party of Ontario,,7609,,https://www.ola.org/sites/default/files/member/profile-photo/David-Smith-V1.jpg
+,David,Smith,Constituency office,2063 Lawrence Ave. E,Scarborough,ON,M1R 2Z4,,david.smith1@pc.ola.org,416-615-2183,416-615-2011,,,Scarborough Centre,Progressive Conservative Party of Ontario,,7609,,https://www.ola.org/sites/default/files/member/profile-photo/David-Smith-V1.jpg
+,Jamie,West,Constituency office,"Unit 4B
+555 Barrydowne Rd.",Sudbury,ON,P3A 3T4,jwest-co@ndp.on.ca,jwest-qp@ndp.on.ca,705-675-1914,705-675-1456,,,Sudbury,New Democratic Party of Ontario,,7446,,https://www.ola.org/sites/default/files/member/profile-photo/Jamie-West.jpeg
+,Jamie,West,Legislative office,"Room 347
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jwest-qp@ndp.on.ca,416-326-7144,416-326-7280,,,Sudbury,New Democratic Party of Ontario,,7446,,https://www.ola.org/sites/default/files/member/profile-photo/Jamie-West.jpeg
+Hon.,Neil,Lumsden,Ministry office,"Ministry of Sport
 Suite 240
 2nd Floor
-777 Bay St.",Toronto,ON,"M5G 2E5",,neil.lumsden@pc.ola.org,,,,,"Hamilton East—Stoney Creek","Progressive Conservative Party of Ontario",,7600
-Hon.,Neil,Lumsden,"Constituency office","Unit 102 
-115 Hwy. 8","Stoney Creek",ON,"L8G 1C1",,neil.lumsden@pc.ola.org,905-662-8755,,,,"Hamilton East—Stoney Creek","Progressive Conservative Party of Ontario",,7600
-Hon.,Graydon,Smith,"Ministry office","Ministry of Municipal Affairs and Housing
+777 Bay St.",Toronto,ON,M5G 2E5,,neil.lumsden@pc.ola.org,,,,,Hamilton East—Stoney Creek,Progressive Conservative Party of Ontario,,7600,,https://www.ola.org/sites/default/files/member/profile-photo/Neil_Lumsden.jpg
+Hon.,Neil,Lumsden,Constituency office,"Unit 102 
+115 Hwy. 8",Stoney Creek,ON,L8G 1C1,,neil.lumsden@pc.ola.org,905-662-8755,,,,Hamilton East—Stoney Creek,Progressive Conservative Party of Ontario,,7600,,https://www.ola.org/sites/default/files/member/profile-photo/Neil_Lumsden.jpg
+Hon.,Graydon,Smith,Ministry office,"Ministry of Municipal Affairs and Housing
 17th Floor
-777 Bay St. ",Toronto,ON,"M7A 2J3",,graydon.smith@pc.ola.org,416-585-6500,,,,"Parry Sound—Muskoka","Progressive Conservative Party of Ontario",,7607
-Hon.,Graydon,Smith,"Constituency office","Unit 1
-26 James St.","Parry Sound",ON,"P2A 1T5",,graydon.smith@pc.ola.org,705-746-4266,,1-888-701-1176,,"Parry Sound—Muskoka","Progressive Conservative Party of Ontario",,7607
-Hon.,Graydon,Smith,"Constituency office","Unit 2.04
-230 Manitoba St.",Bracebridge,ON,"P1L 2E1",,graydon.smith@pc.ola.org,705-645-8538,,1-888-267-4826,,"Parry Sound—Muskoka","Progressive Conservative Party of Ontario",,7607
-,Paul,Vickers,"Legislative office","Room 156 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,paul.vickers@pc.ola.org,416-325-1216,,,,"Bruce—Grey—Owen Sound","Progressive Conservative Party of Ontario",,123
-,Paul,Vickers,"Constituency office","Suite 105B
-345 8th Street E","Owen Sound",ON,"N4K 1L3",,paul.vickers@pc.ola.org,519-371-2421,519-371-0953,1-800-461-2664,,"Bruce—Grey—Owen Sound","Progressive Conservative Party of Ontario",,123
-,Daisy,Wai,"Legislative office","Room 184
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,daisy.wai@pc.ola.org,,,,,"Richmond Hill","Progressive Conservative Party of Ontario",,7506
-,Daisy,Wai,"Constituency office","Suite 409
-9555 Yonge St.","Richmond Hill",ON,"L4C 9M5",daisy.waico@pc.ola.org,daisy.wai@pc.ola.org,905-884-8080,905-884-1040,,,"Richmond Hill","Progressive Conservative Party of Ontario",,7506
-,Steve,Pinsonneault,"Legislative office","Room 210
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,steve.pinsonneault@pc.ola.org,416-325-3015,,,,Lambton—Kent—Middlesex,"Progressive Conservative Party of Ontario",,106
-,Steve,Pinsonneault,"Constituency office","Unit 14
-60 McNaughton Ave.",Wallaceburg,ON,"N8A 1R9",,steve.pinsonneault@pc.ola.org,519-627-1015,519-627-7174,,,Lambton—Kent—Middlesex,"Progressive Conservative Party of Ontario",,106
-,Steve,Pinsonneault,"Constituency office","81 Front St. W",Strathroy,ON,"N7G 1X6",,steve.pinsonneault@pc.ola.org,519-245-8696,519-245-8697,800-265-3916,,Lambton—Kent—Middlesex,"Progressive Conservative Party of Ontario",,106
-,Natalie,Pierre,"Legislative office","Room 115 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,natalie.pierre@pc.ola.org,416-325-1229,,,,Burlington,"Progressive Conservative Party of Ontario",,7590
-,Natalie,Pierre,"Constituency office","Suite 306
-3027 Harvester Rd.",Burlington,ON,"L7N 3G7",,natalie.pierre@pc.ola.org,905-639-7924,905-639-3284,,,Burlington,"Progressive Conservative Party of Ontario",,7590
-Hon.,Nolan,Quinn,"Ministry office","Ministry of Colleges, Universities, Research Excellence and Security 
+777 Bay St. ",Toronto,ON,M7A 2J3,,graydon.smith@pc.ola.org,416-585-6500,,,,Parry Sound—Muskoka,Progressive Conservative Party of Ontario,,7607,,https://www.ola.org/sites/default/files/member/profile-photo/Graydon_Smith.png
+Hon.,Graydon,Smith,Constituency office,"Unit 1
+26 James St.",Parry Sound,ON,P2A 1T5,,graydon.smith@pc.ola.org,705-746-4266,,1-888-701-1176,,Parry Sound—Muskoka,Progressive Conservative Party of Ontario,,7607,,https://www.ola.org/sites/default/files/member/profile-photo/Graydon_Smith.png
+Hon.,Graydon,Smith,Constituency office,"Unit 2.04
+230 Manitoba St.",Bracebridge,ON,P1L 2E1,,graydon.smith@pc.ola.org,705-645-8538,,1-888-267-4826,,Parry Sound—Muskoka,Progressive Conservative Party of Ontario,,7607,,https://www.ola.org/sites/default/files/member/profile-photo/Graydon_Smith.png
+,Paul,Vickers,Legislative office,"Room 156 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,paul.vickers@pc.ola.org,416-325-1216,,,,Bruce—Grey—Owen Sound,Progressive Conservative Party of Ontario,,123,,https://www.ola.org/sites/default/files/member/profile-photo/Paul-Vickers.jpg
+,Paul,Vickers,Constituency office,"Suite 105B
+345 8th Street E",Owen Sound,ON,N4K 1L3,,paul.vickers@pc.ola.org,519-371-2421,519-371-0953,1-800-461-2664,,Bruce—Grey—Owen Sound,Progressive Conservative Party of Ontario,,123,,https://www.ola.org/sites/default/files/member/profile-photo/Paul-Vickers.jpg
+,Daisy,Wai,Legislative office,"Room 184
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,daisy.wai@pc.ola.org,,,,,Richmond Hill,Progressive Conservative Party of Ontario,,7506,,https://www.ola.org/sites/default/files/member/profile-photo/daisy-wai.jpg
+,Daisy,Wai,Constituency office,"Suite 409
+9555 Yonge St.",Richmond Hill,ON,L4C 9M5,daisy.waico@pc.ola.org,daisy.wai@pc.ola.org,905-884-8080,905-884-1040,,,Richmond Hill,Progressive Conservative Party of Ontario,,7506,,https://www.ola.org/sites/default/files/member/profile-photo/daisy-wai.jpg
+,Steve,Pinsonneault,Legislative office,"Room 210
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,steve.pinsonneault@pc.ola.org,416-325-3015,,,,Lambton—Kent—Middlesex,Progressive Conservative Party of Ontario,,106,,https://www.ola.org/sites/default/files/member/profile-photo/Steve-Pinsonneault.jpg
+,Steve,Pinsonneault,Constituency office,"Unit 14
+60 McNaughton Ave.",Wallaceburg,ON,N8A 1R9,,steve.pinsonneault@pc.ola.org,519-627-1015,519-627-7174,,,Lambton—Kent—Middlesex,Progressive Conservative Party of Ontario,,106,,https://www.ola.org/sites/default/files/member/profile-photo/Steve-Pinsonneault.jpg
+,Steve,Pinsonneault,Constituency office,81 Front St. W,Strathroy,ON,N7G 1X6,,steve.pinsonneault@pc.ola.org,519-245-8696,519-245-8697,800-265-3916,,Lambton—Kent—Middlesex,Progressive Conservative Party of Ontario,,106,,https://www.ola.org/sites/default/files/member/profile-photo/Steve-Pinsonneault.jpg
+,Natalie,Pierre,Legislative office,"Room 115 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,natalie.pierre@pc.ola.org,416-325-1229,,,,Burlington,Progressive Conservative Party of Ontario,,7590,,https://www.ola.org/sites/default/files/member/profile-photo/Natalie_Pierre.jpg
+,Natalie,Pierre,Constituency office,"Suite 306
+3027 Harvester Rd.",Burlington,ON,L7N 3G7,,natalie.pierre@pc.ola.org,905-639-7924,905-639-3284,,,Burlington,Progressive Conservative Party of Ontario,,7590,,https://www.ola.org/sites/default/files/member/profile-photo/Natalie_Pierre.jpg
+Hon.,Nolan,Quinn,Ministry office,"Ministry of Colleges, Universities, Research Excellence and Security 
 5th Floor
-438 University Ave.",Toronto,ON,"M7A 1N3",,nolan.quinn@pc.ola.org,416-326-1600,,,,"Stormont—Dundas—South Glengarry","Progressive Conservative Party of Ontario",,7611
-Hon.,Nolan,Quinn,"Constituency office","Time Square
+438 University Ave.",Toronto,ON,M7A 1N3,,nolan.quinn@pc.ola.org,416-326-1600,,,,Stormont—Dundas—South Glengarry,Progressive Conservative Party of Ontario,,7611,,https://www.ola.org/sites/default/files/member/profile-photo/Nolan_Quinn_original.jpg
+Hon.,Nolan,Quinn,Constituency office,"Time Square
 Suite 100
-120 Second St. W",Cornwall,ON,"K6J 1G5",,nolan.quinn@pc.ola.org,613-933-6513,613-933-6449,800-514-9660,,"Stormont—Dundas—South Glengarry","Progressive Conservative Party of Ontario",,7611
-,Laura,Smith,"Legislative office","Room 165
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,laura.smith@pc.ola.org,416-325-1243,,,,Thornhill,"Progressive Conservative Party of Ontario",,7612
-,Laura,Smith,"Constituency office","Centre Street Square
+120 Second St. W",Cornwall,ON,K6J 1G5,,nolan.quinn@pc.ola.org,613-933-6513,613-933-6449,800-514-9660,,Stormont—Dundas—South Glengarry,Progressive Conservative Party of Ontario,,7611,,https://www.ola.org/sites/default/files/member/profile-photo/Nolan_Quinn_original.jpg
+,Laura,Smith,Legislative office,"Room 165
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,laura.smith@pc.ola.org,416-325-1243,,,,Thornhill,Progressive Conservative Party of Ontario,,7612,,https://www.ola.org/sites/default/files/member/profile-photo/Laura_Smith.png
+,Laura,Smith,Constituency office,"Centre Street Square
 Unit 4
-1136 Centre St.",Thornhill,ON,"L4J 3M8",,laura.smith@pc.ola.org,905-731-1178,,,,Thornhill,"Progressive Conservative Party of Ontario",,7612
-,Michelle,Cooper,"Legislative office","Room 111 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,michelle.cooper@pc.ola.org,416-325-1248,,,,Eglinton—Lawrence,"Progressive Conservative Party of Ontario",,109
-,Michelle,Cooper,"Constituency office","1104 Eglinton Ave W.",Toronto,ON,"M6C 2E2",,michelle.cooper@pc.ola.org,416-781-2395,416-781-4116,,,Eglinton—Lawrence,"Progressive Conservative Party of Ontario",,109
-,Bill,Rosenberg,"Constituency office","169 Main Street
-P.O. Box 429",Thessalon,ON,"P0R 1L0",,bill.rosenberg@pc.ola.org,705-842-6556,,,,Algoma—Manitoulin,"Progressive Conservative Party of Ontario",,119
-,Jonathan,Tsao,"Legislative office","Room 429 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jtsao.mpp.co@liberal.ola.org,416-325-3033,416-325-3032,,,"Don Valley North","Ontario Liberal Party",,122
-,Jonathan,Tsao,"Constituency office","Suite 103
-2175 Sheppard Ave. E","North York",ON,"M2J 1W8",,jtsao.mpp.co@liberal.ola.org,"416-494-8778  ","416-494-0110  ",,,"Don Valley North","Ontario Liberal Party",,122
-,John,Vanthof,"Constituency office","Unit 107
-145 Government Rd. W","Kirkland Lake",ON,"P2N 2E8",jvanthof-co@ndp.on.ca,jvanthof-qp@ndp.on.ca,705-567-4650,,,,Timiskaming—Cochrane,"New Democratic Party of Ontario",,7192
-,John,Vanthof,"Constituency office","Pinewoods Centre
+1136 Centre St.",Thornhill,ON,L4J 3M8,,laura.smith@pc.ola.org,905-731-1178,,,,Thornhill,Progressive Conservative Party of Ontario,,7612,,https://www.ola.org/sites/default/files/member/profile-photo/Laura_Smith.png
+,Michelle,Cooper,Legislative office,"Room 111 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,michelle.cooper@pc.ola.org,416-325-1248,,,,Eglinton—Lawrence,Progressive Conservative Party of Ontario,,109,,https://www.ola.org/sites/default/files/member/profile-photo/Michelle-Cooperl.jpg
+,Michelle,Cooper,Constituency office,1104 Eglinton Ave W.,Toronto,ON,M6C 2E2,,michelle.cooper@pc.ola.org,416-781-2395,416-781-4116,,,Eglinton—Lawrence,Progressive Conservative Party of Ontario,,109,,https://www.ola.org/sites/default/files/member/profile-photo/Michelle-Cooperl.jpg
+,Bill,Rosenberg,Constituency office,"169 Main Street
+P.O. Box 429",Thessalon,ON,P0R 1L0,,bill.rosenberg@pc.ola.org,705-842-6556,,,,Algoma—Manitoulin,Progressive Conservative Party of Ontario,,119,,https://www.ola.org/sites/default/files/member/profile-photo/Bill-Rosenbergl.jpg
+,Jonathan,Tsao,Legislative office,"Room 429 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jtsao.mpp.co@liberal.ola.org,416-325-3033,416-325-3032,,,Don Valley North,Ontario Liberal Party,,122,,https://www.ola.org/sites/default/files/member/profile-photo/Jonathan-Tsao.jpg
+,Jonathan,Tsao,Constituency office,"Suite 103
+2175 Sheppard Ave. E",North York,ON,M2J 1W8,,jtsao.mpp.co@liberal.ola.org,416-494-8778  ,416-494-0110  ,,,Don Valley North,Ontario Liberal Party,,122,,https://www.ola.org/sites/default/files/member/profile-photo/Jonathan-Tsao.jpg
+,John,Vanthof,Constituency office,"Unit 107
+145 Government Rd. W",Kirkland Lake,ON,P2N 2E8,jvanthof-co@ndp.on.ca,jvanthof-qp@ndp.on.ca,705-567-4650,,,,Timiskaming—Cochrane,New Democratic Party of Ontario,,7192,,https://www.ola.org/sites/default/files/member/profile-photo/john_vanthof.jpg
+,John,Vanthof,Constituency office,"Pinewoods Centre
 Unit 5
 247 Whitewood Ave.
-P.O. Box 398","New Liskeard",ON,"P0J 1P0",jvanthof-co@ndp.on.ca,jvanthof-qp@ndp.on.ca,705-647-5995,705-647-1976,888-701-1105,,Timiskaming—Cochrane,"New Democratic Party of Ontario",,7192
-,John,Vanthof,"Constituency office","2nd Floor
-193 King St.","Sturgeon Falls",ON,"P2B 1R8",jvanthof-co@ndp.on.ca,jvanthof-qp@ndp.on.ca,705-753-0200,705-753-0800,888-771-9551,,Timiskaming—Cochrane,"New Democratic Party of Ontario",,7192
-,John,Vanthof,"Legislative office","Room 348
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jvanthof-qp@ndp.on.ca,416-325-2000,416-325-1999,,,Timiskaming—Cochrane,"New Democratic Party of Ontario",,7192
-,Alexa,Gilmour,"Constituency office","2849 Dundas St. W",Toronto,ON,"M6P 1Y6",agilmour-co@ndp.on.ca,agilmour-qp@ndp.on.ca,416-763-5630,"416-763-5640  ",,,"Parkdale—High Park","New Democratic Party of Ontario",,114
-,Alexa,Gilmour,"Legislative office","Room 204
-North Wing, Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,agilmour-qp@ndp.on.ca,"416-325-3017  ",416-325-2937,,,"Parkdale—High Park","New Democratic Party of Ontario",,114
-,Brian,Riddell,"Legislative office","Room 159 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,brian.riddell@pc.ola.org,416-325-1938,,,,Cambridge,"Progressive Conservative Party of Ontario",,7591
-,Brian,Riddell,"Constituency office","Cambridge Place
+P.O. Box 398",New Liskeard,ON,P0J 1P0,jvanthof-co@ndp.on.ca,jvanthof-qp@ndp.on.ca,705-647-5995,705-647-1976,888-701-1105,,Timiskaming—Cochrane,New Democratic Party of Ontario,,7192,,https://www.ola.org/sites/default/files/member/profile-photo/john_vanthof.jpg
+,John,Vanthof,Constituency office,"2nd Floor
+193 King St.",Sturgeon Falls,ON,P2B 1R8,jvanthof-co@ndp.on.ca,jvanthof-qp@ndp.on.ca,705-753-0200,705-753-0800,888-771-9551,,Timiskaming—Cochrane,New Democratic Party of Ontario,,7192,,https://www.ola.org/sites/default/files/member/profile-photo/john_vanthof.jpg
+,John,Vanthof,Legislative office,"Room 348
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jvanthof-qp@ndp.on.ca,416-325-2000,416-325-1999,,,Timiskaming—Cochrane,New Democratic Party of Ontario,,7192,,https://www.ola.org/sites/default/files/member/profile-photo/john_vanthof.jpg
+,Alexa,Gilmour,Constituency office,2849 Dundas St. W,Toronto,ON,M6P 1Y6,agilmour-co@ndp.on.ca,agilmour-qp@ndp.on.ca,416-763-5630,416-763-5640  ,,,Parkdale—High Park,New Democratic Party of Ontario,,114,,https://www.ola.org/sites/default/files/member/profile-photo/Alexa-Gilmour.jpg
+,Alexa,Gilmour,Legislative office,"Room 204
+North Wing, Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,agilmour-qp@ndp.on.ca,416-325-3017  ,416-325-2937,,,Parkdale—High Park,New Democratic Party of Ontario,,114,,https://www.ola.org/sites/default/files/member/profile-photo/Alexa-Gilmour.jpg
+,Brian,Riddell,Legislative office,"Room 159 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,brian.riddell@pc.ola.org,416-325-1938,,,,Cambridge,Progressive Conservative Party of Ontario,,7591,,https://www.ola.org/sites/default/files/member/profile-photo/Brian_Riddell.png
+,Brian,Riddell,Constituency office,"Cambridge Place
 Suite 601
-73 Water St. N",Cambridge,ON,"N1R 7L6",,brian.riddell@pc.ola.org,519-650-2770,,,,Cambridge,"Progressive Conservative Party of Ontario",,7591
-,Logan,Kanapathi,"Legislative office","Room 171
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,,416-326-7648,,,,Markham—Thornhill,"Progressive Conservative Party of Ontario",,7485
-,Logan,Kanapathi,"Constituency office","Unit 3
-7380 McCowan Rd.",Markham,ON,"L3S 3H8",logan.kanapathico@pc.ola.org,,"905-305-1935  ","905-305-1938  ",,,Markham—Thornhill,"Progressive Conservative Party of Ontario",,7485
-Hon.,Sylvia,Jones,"Ministry office","Ministry of Health
+73 Water St. N",Cambridge,ON,N1R 7L6,,brian.riddell@pc.ola.org,519-650-2770,,,,Cambridge,Progressive Conservative Party of Ontario,,7591,,https://www.ola.org/sites/default/files/member/profile-photo/Brian_Riddell.png
+,Logan,Kanapathi,Legislative office,"Room 171
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,,416-326-7648,,,,Markham—Thornhill,Progressive Conservative Party of Ontario,,7485,,https://www.ola.org/sites/default/files/member/profile-photo/Logan_Kanapathi.jpg
+,Logan,Kanapathi,Constituency office,"Unit 3
+7380 McCowan Rd.",Markham,ON,L3S 3H8,logan.kanapathico@pc.ola.org,,905-305-1935  ,905-305-1938  ,,,Markham—Thornhill,Progressive Conservative Party of Ontario,,7485,,https://www.ola.org/sites/default/files/member/profile-photo/Logan_Kanapathi.jpg
+Hon.,Sylvia,Jones,Ministry office,"Ministry of Health
 5th Floor
-777 Bay St.",Toronto,ON,"M7A 2J3",,,416-327-4300,,,,Dufferin—Caledon,"Progressive Conservative Party of Ontario",,7093
-Hon.,Sylvia,Jones,"Constituency office","Suite A
+777 Bay St.",Toronto,ON,M7A 2J3,,,416-327-4300,,,,Dufferin—Caledon,Progressive Conservative Party of Ontario,,7093,,https://www.ola.org/sites/default/files/member/profile-photo/Sylvia_Jones.jpeg
+Hon.,Sylvia,Jones,Constituency office,"Suite A
 3rd Floor
-180 Broadway Ave.",Orangeville,ON,"L9W 1K3",sylvia.jones@pc.ola.org,,"519-941-7751  ","519-941-3246  ",800-265-1603,,Dufferin—Caledon,"Progressive Conservative Party of Ontario",,7093
-,Andrea,Hazell,"Legislative office","Room 440
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,ahazell.mpp.co@liberal.ola.org,416-325-1207,,,,Scarborough—Guildwood,"Ontario Liberal Party",,7644
-,Andrea,Hazell,"Constituency office","Unit B10
-3785 Kingston Rd.",Scarborough,ON,"M1J 3M4",,ahazell.mpp.co@liberal.ola.org,"416-281-2787  ",416-281-2360,,,Scarborough—Guildwood,"Ontario Liberal Party",,7644
-,Lee,Fairclough,"Legislative office","Room 425
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,lfairclough.mpp.co@liberal.ola.org,416-325-3047,416-325-3029,,,Etobicoke—Lakeshore,"Ontario Liberal Party",,112
-,Lee,Fairclough,"Constituency office","1136 The Queensway",Etobicoke,ON,"M8Z 1P7",,lfairclough.mpp.co@liberal.ola.org,"416-259-2249  ",,,,Etobicoke—Lakeshore,"Ontario Liberal Party",,112
-,John,Jordan,"Legislative office","Room 167 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,john.jordan@pc.ola.org,416-325-1232,,,,Lanark—Frontenac—Kingston,"Progressive Conservative Party of Ontario",,7604
-,John,Jordan,"Constituency office","Unit 207
-91 Cornelia Street W.","Smiths Falls",ON,"K7A 5L3",,john.jordan@pc.ola.org,613-284-1630,,,,Lanark—Frontenac—Kingston,"Progressive Conservative Party of Ontario",,7604
-,Andrew,Dowie,"Constituency office","Unit 1
-5452 Tecumseh Rd. E",Windsor,ON,"N8T 1C7",,andrew.dowie@pc.ola.org,519-251-5199,,,,Windsor—Tecumseh,"Progressive Conservative Party of Ontario",,7617
-,Mohamed,Firin,"Constituency office","1830 and 1832 Weston Rd.",Toronto,ON,"M9N 1V8",,mohamed.firin@pc.ola.org,416-243-7984,416-243-0327,,,"York South—Weston","Progressive Conservative Party of Ontario",,113
-,"Effie J.",Triantafilopoulos,"Legislative office","Whitney Block
+180 Broadway Ave.",Orangeville,ON,L9W 1K3,sylvia.jones@pc.ola.org,,519-941-7751  ,519-941-3246  ,800-265-1603,,Dufferin—Caledon,Progressive Conservative Party of Ontario,,7093,,https://www.ola.org/sites/default/files/member/profile-photo/Sylvia_Jones.jpeg
+,Andrea,Hazell,Legislative office,"Room 440
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,ahazell.mpp.co@liberal.ola.org,416-325-1207,,,,Scarborough—Guildwood,Ontario Liberal Party,,7644,,https://www.ola.org/sites/default/files/member/profile-photo/Andrea_Hazell_2.jpg
+,Andrea,Hazell,Constituency office,"Unit B10
+3785 Kingston Rd.",Scarborough,ON,M1J 3M4,,ahazell.mpp.co@liberal.ola.org,416-281-2787  ,416-281-2360,,,Scarborough—Guildwood,Ontario Liberal Party,,7644,,https://www.ola.org/sites/default/files/member/profile-photo/Andrea_Hazell_2.jpg
+,Lee,Fairclough,Legislative office,"Room 425
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,lfairclough.mpp.co@liberal.ola.org,416-325-3047,416-325-3029,,,Etobicoke—Lakeshore,Ontario Liberal Party,,112,,https://www.ola.org/sites/default/files/member/profile-photo/Lee-Fairclough.jpg
+,Lee,Fairclough,Constituency office,1136 The Queensway,Etobicoke,ON,M8Z 1P7,,lfairclough.mpp.co@liberal.ola.org,416-259-2249  ,,,,Etobicoke—Lakeshore,Ontario Liberal Party,,112,,https://www.ola.org/sites/default/files/member/profile-photo/Lee-Fairclough.jpg
+,John,Jordan,Legislative office,"Room 167 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,john.jordan@pc.ola.org,416-325-1232,,,,Lanark—Frontenac—Kingston,Progressive Conservative Party of Ontario,,7604,,https://www.ola.org/sites/default/files/member/profile-photo/John_Jordan.png
+,John,Jordan,Constituency office,"Unit 207
+91 Cornelia Street W.",Smiths Falls,ON,K7A 5L3,,john.jordan@pc.ola.org,613-284-1630,,,,Lanark—Frontenac—Kingston,Progressive Conservative Party of Ontario,,7604,,https://www.ola.org/sites/default/files/member/profile-photo/John_Jordan.png
+,Andrew,Dowie,Constituency office,"Unit 1
+5452 Tecumseh Rd. E",Windsor,ON,N8T 1C7,,andrew.dowie@pc.ola.org,519-251-5199,,,,Windsor—Tecumseh,Progressive Conservative Party of Ontario,,7617,,https://www.ola.org/sites/default/files/member/profile-photo/Andrew_Dowie.png
+,Mohamed,Firin,Constituency office,1830 and 1832 Weston Rd.,Toronto,ON,M9N 1V8,,mohamed.firin@pc.ola.org,416-243-7984,416-243-0327,,,York South—Weston,Progressive Conservative Party of Ontario,,113,,https://www.ola.org/sites/default/files/member/profile-photo/Mohamed-Firin_1.jpg
+,Effie J.,Triantafilopoulos,Legislative office,"Whitney Block
 Room 1308
-99 Wellesley St. W",Toronto,ON,"M7A 1A2",,effie.triantafilopoulos@pc.ola.org,416-325-1069,416-325-1066,,,"Oakville North—Burlington","Progressive Conservative Party of Ontario",,7499
-,"Effie J.",Triantafilopoulos,"Constituency office","Unit 570
-2525 Old Bronte Rd.",Oakville,ON,"L6M 4J2",,effie.triantafilopoulos@pc.ola.org,905-825-2455,905-825-0663,,,"Oakville North—Burlington","Progressive Conservative Party of Ontario",,7499
-Hon.,"Michael A.",Tibollo,"Ministry office","Ministry of the Attorney General
+99 Wellesley St. W",Toronto,ON,M7A 1A2,,effie.triantafilopoulos@pc.ola.org,416-325-1069,416-325-1066,,,Oakville North—Burlington,Progressive Conservative Party of Ontario,,7499,,https://www.ola.org/sites/default/files/member/profile-photo/effie_triantafilopoulos.jpg
+,Effie J.,Triantafilopoulos,Constituency office,"Unit 570
+2525 Old Bronte Rd.",Oakville,ON,L6M 4J2,,effie.triantafilopoulos@pc.ola.org,905-825-2455,905-825-0663,,,Oakville North—Burlington,Progressive Conservative Party of Ontario,,7499,,https://www.ola.org/sites/default/files/member/profile-photo/effie_triantafilopoulos.jpg
+Hon.,Michael A.,Tibollo,Ministry office,"Ministry of the Attorney General
 McMurtry-Scott Building
 11th Floor
-720 Bay St.",Toronto,ON,"M7A 2S9",,,,,,,Vaughan—Woodbridge,"Progressive Conservative Party of Ontario",,7519
-Hon.,"Michael A.",Tibollo,"Constituency office","Unit 3
-5100 Rutherford Rd.",Woodbridge,ON,"L4H 2J2",michael.tibolloco@pc.ola.org,,905-893-4428,905-893-4537,,,Vaughan—Woodbridge,"Progressive Conservative Party of Ontario",,7519
-,Catherine,Fife,"Constituency office","Suite 220
-100 Regina St. S",Waterloo,ON,"N2J 4P9",cfife-co@ndp.on.ca,cfife-qp@ndp.on.ca,519-725-3477,519-725-3667,,,Waterloo,"New Democratic Party of Ontario",,7204
-,Catherine,Fife,"Legislative office","Room 370
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,cfife-qp@ndp.on.ca,416-325-6913,,,,Waterloo,"New Democratic Party of Ontario",,7204
-Hon.,Lisa,Thompson,"Ministry office","Ministry of Rural Affairs
+720 Bay St.",Toronto,ON,M7A 2S9,,,,,,,Vaughan—Woodbridge,Progressive Conservative Party of Ontario,,7519,,https://www.ola.org/sites/default/files/member/profile-photo/michael_tibollo.jpg
+Hon.,Michael A.,Tibollo,Constituency office,"Unit 3
+5100 Rutherford Rd.",Woodbridge,ON,L4H 2J2,michael.tibolloco@pc.ola.org,,905-893-4428,905-893-4537,,,Vaughan—Woodbridge,Progressive Conservative Party of Ontario,,7519,,https://www.ola.org/sites/default/files/member/profile-photo/michael_tibollo.jpg
+,Catherine,Fife,Constituency office,"Suite 220
+100 Regina St. S",Waterloo,ON,N2J 4P9,cfife-co@ndp.on.ca,cfife-qp@ndp.on.ca,519-725-3477,519-725-3667,,,Waterloo,New Democratic Party of Ontario,,7204,,https://www.ola.org/sites/default/files/member/profile-photo/Catherine_Fife.jpg
+,Catherine,Fife,Legislative office,"Room 370
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,cfife-qp@ndp.on.ca,416-325-6913,,,,Waterloo,New Democratic Party of Ontario,,7204,,https://www.ola.org/sites/default/files/member/profile-photo/Catherine_Fife.jpg
+Hon.,Lisa,Thompson,Ministry office,"Ministry of Rural Affairs
 28th Floor
-777 Bay St.",Toronto,ON,"M7A 2J4",,lisa.thompson@pc.ola.org,,,,,Huron—Bruce,"Progressive Conservative Party of Ontario",,7179
-Hon.,Lisa,Thompson,"Constituency office","408 Queen St.
-P.O. Box 426",Blyth,ON,"N0M 1H0",lisa.thompsonco@pc.ola.org,lisa.thompson@pc.ola.org,519-523-4251,226-523-9296,800-668-9320,,Huron—Bruce,"Progressive Conservative Party of Ontario",,7179
-Hon.,Lisa,Thompson,"Constituency office","Unit 2
-807 Queen St.",Kincardine,ON,"N2Z 2Y2",lisa.thompsonco@pc.ola.org,lisa.thompson@pc.ola.org,519-396-3007,519-396-3011,1-866-396-3007,,Huron—Bruce,"Progressive Conservative Party of Ontario",,7179
-,Sol,Mamakwa,"Constituency office","Unit 104
+777 Bay St.",Toronto,ON,M7A 2J4,,lisa.thompson@pc.ola.org,,,,,Huron—Bruce,Progressive Conservative Party of Ontario,,7179,,https://www.ola.org/sites/default/files/member/profile-photo/lisa_thompson.jpg
+Hon.,Lisa,Thompson,Constituency office,"408 Queen St.
+P.O. Box 426",Blyth,ON,N0M 1H0,lisa.thompsonco@pc.ola.org,lisa.thompson@pc.ola.org,519-523-4251,226-523-9296,800-668-9320,,Huron—Bruce,Progressive Conservative Party of Ontario,,7179,,https://www.ola.org/sites/default/files/member/profile-photo/lisa_thompson.jpg
+Hon.,Lisa,Thompson,Constituency office,"Unit 2
+807 Queen St.",Kincardine,ON,N2Z 2Y2,lisa.thompsonco@pc.ola.org,lisa.thompson@pc.ola.org,519-396-3007,519-396-3011,1-866-396-3007,,Huron—Bruce,Progressive Conservative Party of Ontario,,7179,,https://www.ola.org/sites/default/files/member/profile-photo/lisa_thompson.jpg
+,Sol,Mamakwa,Constituency office,"Unit 104
 73 King St.
-P.O. Box 176","Sioux Lookout",ON,"P8T 1A1",smamakwa-co@ndp.on.ca,smamakwa-qp@ndp.on.ca,807-737-2210,,1-888-444-1723,,Kiiwetinoong,"New Democratic Party of Ontario",,7477
-,Sol,Mamakwa,"Constituency office","Unit 2
-14 Discovery Rd.","Red Lake",ON,"P0V 2M0",smamakwa-co@ndp.on.ca,smamakwa-qp@ndp.on.ca,807-727-1133,,,,Kiiwetinoong,"New Democratic Party of Ontario",,7477
-,Sol,Mamakwa,"Legislative office","Room 361
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,smamakwa-qp@ndp.on.ca,416-326-7692,416-326-7690,,,Kiiwetinoong,"New Democratic Party of Ontario",,7477
-Hon.,Vijay,Thanigasalam,"Ministry office","Ministry of Health
+P.O. Box 176",Sioux Lookout,ON,P8T 1A1,smamakwa-co@ndp.on.ca,smamakwa-qp@ndp.on.ca,807-737-2210,,1-888-444-1723,,Kiiwetinoong,New Democratic Party of Ontario,,7477,,https://www.ola.org/sites/default/files/member/profile-photo/Sol_Mamakwa_v1.jpg
+,Sol,Mamakwa,Constituency office,"Unit 2
+14 Discovery Rd.",Red Lake,ON,P0V 2M0,smamakwa-co@ndp.on.ca,smamakwa-qp@ndp.on.ca,807-727-1133,,,,Kiiwetinoong,New Democratic Party of Ontario,,7477,,https://www.ola.org/sites/default/files/member/profile-photo/Sol_Mamakwa_v1.jpg
+,Sol,Mamakwa,Legislative office,"Room 361
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,smamakwa-qp@ndp.on.ca,416-326-7692,416-326-7690,,,Kiiwetinoong,New Democratic Party of Ontario,,7477,,https://www.ola.org/sites/default/files/member/profile-photo/Sol_Mamakwa_v1.jpg
+Hon.,Vijay,Thanigasalam,Ministry office,"Ministry of Health
 Frost Building South
-7 Queen's Park Cres.",Toronto,ON,"M7A 1Y7",,vijay.thanigasalam@pc.ola.org,416-327-4300,,,,"Scarborough—Rouge Park","Progressive Conservative Party of Ontario",,7511
-Hon.,Vijay,Thanigasalam,"Constituency office","Unit 105
-8130 Sheppard Ave. E",Toronto,ON,"M1B 3W3",,vijay.thanigasalam@pc.ola.org,416-283-8448,416-283-1597,,,"Scarborough—Rouge Park","Progressive Conservative Party of Ontario",,7511
-,Monica,Ciriello,"Constituency office","Unit 400
-1030 Upper James St. ",Hamilton,ON,"L9C 6X6",,monica.ciriello@pc.ola.org,905-388-1515,905-388-7862,,,"Hamilton Mountain","Progressive Conservative Party of Ontario",,7646
-Hon.,Nina,Tangri,"Ministry office","Ministry of Economic Development, Job Creation and Trade
+7 Queen's Park Cres.",Toronto,ON,M7A 1Y7,,vijay.thanigasalam@pc.ola.org,416-327-4300,,,,Scarborough—Rouge Park,Progressive Conservative Party of Ontario,,7511,,https://www.ola.org/sites/default/files/member/profile-photo/vijay_thanigasalam_v1.jpg
+Hon.,Vijay,Thanigasalam,Constituency office,"Unit 105
+8130 Sheppard Ave. E",Toronto,ON,M1B 3W3,,vijay.thanigasalam@pc.ola.org,416-283-8448,416-283-1597,,,Scarborough—Rouge Park,Progressive Conservative Party of Ontario,,7511,,https://www.ola.org/sites/default/files/member/profile-photo/vijay_thanigasalam_v1.jpg
+,Monica,Ciriello,Constituency office,"Unit 400
+1030 Upper James St. ",Hamilton,ON,L9C 6X6,,monica.ciriello@pc.ola.org,905-388-1515,905-388-7862,,,Hamilton Mountain,Progressive Conservative Party of Ontario,,7646,,https://www.ola.org/sites/default/files/member/profile-photo/Monica-Ciriellol.jpg
+Hon.,Nina,Tangri,Ministry office,"Ministry of Economic Development, Job Creation and Trade
 18th Floor
-56 Wellesley St. W",Toronto,ON,"M5S 2S3",,nina.tangri@pc.ola.org,,,,,Mississauga—Streetsville,"Progressive Conservative Party of Ontario",,7494
-Hon.,Nina,Tangri,"Constituency office","330 Queen St. S",Mississauga,ON,"L5M 1M2",,nina.tangri@pc.ola.org,905-569-1643,,,,Mississauga—Streetsville,"Progressive Conservative Party of Ontario",,7494
-,Jess,Dixon,"Legislative office","Room 116
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jess.dixon@pc.ola.org,416-325-0138,,,,"Kitchener South—Hespeler","Progressive Conservative Party of Ontario",,7603
-,Jess,Dixon,"Constituency office","Building A
+56 Wellesley St. W",Toronto,ON,M5S 2S3,,nina.tangri@pc.ola.org,,,,,Mississauga—Streetsville,Progressive Conservative Party of Ontario,,7494,,https://www.ola.org/sites/default/files/member/profile-photo/nina_tangri.jpg
+Hon.,Nina,Tangri,Constituency office,330 Queen St. S,Mississauga,ON,L5M 1M2,,nina.tangri@pc.ola.org,905-569-1643,,,,Mississauga—Streetsville,Progressive Conservative Party of Ontario,,7494,,https://www.ola.org/sites/default/files/member/profile-photo/nina_tangri.jpg
+,Jess,Dixon,Legislative office,"Room 116
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jess.dixon@pc.ola.org,416-325-0138,,,,Kitchener South—Hespeler,Progressive Conservative Party of Ontario,,7603,,https://www.ola.org/sites/default/files/member/profile-photo/Jess_Dixon.png
+,Jess,Dixon,Constituency office,"Building A
 Unit 11
-260 Holiday Inn Dr.",Cambridge,ON,"N3C 2E8",,jess.dixon@pc.ola.org,519-650-9413,519-571-8660,,,"Kitchener South—Hespeler","Progressive Conservative Party of Ontario",,7603
-,Peter,Tabuns,"Constituency office","923 Danforth Ave.",Toronto,ON,"M4J 1L8",tabunsp-co@ndp.on.ca,tabunsp-qp@ndp.on.ca,416-461-0223,416-461-9542,,,Toronto—Danforth,"New Democratic Party of Ontario",,7041
-,Peter,Tabuns,"Legislative office","Room 357 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,tabunsp-qp@ndp.on.ca,416-325-3250,416-325-3252,,,Toronto—Danforth,"New Democratic Party of Ontario",,7041
-Hon.,Victor,Fedeli,"Ministry office","Ministry of Economic Development, Job Creation, and Trade
+260 Holiday Inn Dr.",Cambridge,ON,N3C 2E8,,jess.dixon@pc.ola.org,519-650-9413,519-571-8660,,,Kitchener South—Hespeler,Progressive Conservative Party of Ontario,,7603,,https://www.ola.org/sites/default/files/member/profile-photo/Jess_Dixon.png
+,Peter,Tabuns,Constituency office,923 Danforth Ave.,Toronto,ON,M4J 1L8,tabunsp-co@ndp.on.ca,tabunsp-qp@ndp.on.ca,416-461-0223,416-461-9542,,,Toronto—Danforth,New Democratic Party of Ontario,,7041,,https://www.ola.org/sites/default/files/member/profile-photo/Peter_Tabuns_v2.jpg
+,Peter,Tabuns,Legislative office,"Room 357 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,tabunsp-qp@ndp.on.ca,416-325-3250,416-325-3252,,,Toronto—Danforth,New Democratic Party of Ontario,,7041,,https://www.ola.org/sites/default/files/member/profile-photo/Peter_Tabuns_v2.jpg
+Hon.,Victor,Fedeli,Ministry office,"Ministry of Economic Development, Job Creation, and Trade
 18th Floor
-777 Bay St.",Toronto,ON,"M7A 1S5",,vic.fedeli@pc.ola.org,416-326-8475,,,,Nipissing,"Progressive Conservative Party of Ontario",,7185
-Hon.,Victor,Fedeli,"Constituency office","219 Main St. E","North Bay",ON,"P1B 1B2",vic.fedelico@pc.ola.org,vic.fedeli@pc.ola.org,705-474-8340,705-474-9747,,,Nipissing,"Progressive Conservative Party of Ontario",,7185
-,Dawn,"Gallagher Murphy","Legislative office","Room 212
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,dawn.gallaghermurphy@pc.ola.org,416-325-1183,,,,Newmarket—Aurora,"Progressive Conservative Party of Ontario",,7605
-,Dawn,"Gallagher Murphy","Constituency office","Unit 22
-16635 Yonge St.",Newmarket,ON,"L3X 1V6",,dawn.gallaghermurphy@pc.ola.org,905-853-9889,905-853-6115,1-800-211-1881,,Newmarket—Aurora,"Progressive Conservative Party of Ontario",,7605
-Hon.,Jill,Dunlop,"Ministry office","Ministry of Emergency Preparedness and Response
+777 Bay St.",Toronto,ON,M7A 1S5,,vic.fedeli@pc.ola.org,416-326-8475,,,,Nipissing,Progressive Conservative Party of Ontario,,7185,,https://www.ola.org/sites/default/files/member/profile-photo/victor_fedeli_0.jpg
+Hon.,Victor,Fedeli,Constituency office,219 Main St. E,North Bay,ON,P1B 1B2,vic.fedelico@pc.ola.org,vic.fedeli@pc.ola.org,705-474-8340,705-474-9747,,,Nipissing,Progressive Conservative Party of Ontario,,7185,,https://www.ola.org/sites/default/files/member/profile-photo/victor_fedeli_0.jpg
+,Dawn,Gallagher Murphy,Legislative office,"Room 212
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,dawn.gallaghermurphy@pc.ola.org,416-325-1183,,,,Newmarket—Aurora,Progressive Conservative Party of Ontario,,7605,,https://www.ola.org/sites/default/files/member/profile-photo/Dawn_Gallagher_Murphy.png
+,Dawn,Gallagher Murphy,Constituency office,"Unit 22
+16635 Yonge St.",Newmarket,ON,L3X 1V6,,dawn.gallaghermurphy@pc.ola.org,905-853-9889,905-853-6115,1-800-211-1881,,Newmarket—Aurora,Progressive Conservative Party of Ontario,,7605,,https://www.ola.org/sites/default/files/member/profile-photo/Dawn_Gallagher_Murphy.png
+Hon.,Jill,Dunlop,Ministry office,"Ministry of Emergency Preparedness and Response
 7th Floor
 Suite 702
-777 Bay St.",Toronto,ON,"M5G 2C2",,jill.dunlop@pc.ola.org,,,,,"Simcoe North","Progressive Conservative Party of Ontario",,7512
-Hon.,Jill,Dunlop,"Constituency office","Unit 9
-575 West St. S",Orillia,Ontario,"L3V 5H4",,jill.dunlop@pc.ola.org,705-326-3246,705-326-9579,,,"Simcoe North","Progressive Conservative Party of Ontario",,7512
-Hon.,Mike,Harris,"Ministry office","Ministry of Natural Resources
+777 Bay St.",Toronto,ON,M5G 2C2,,jill.dunlop@pc.ola.org,,,,,Simcoe North,Progressive Conservative Party of Ontario,,7512,,https://www.ola.org/sites/default/files/member/profile-photo/Jill%20Dunlop.jpeg
+Hon.,Jill,Dunlop,Constituency office,"Unit 9
+575 West St. S",Orillia,Ontario,L3V 5H4,,jill.dunlop@pc.ola.org,705-326-3246,705-326-9579,,,Simcoe North,Progressive Conservative Party of Ontario,,7512,,https://www.ola.org/sites/default/files/member/profile-photo/Jill%20Dunlop.jpeg
+Hon.,Mike,Harris,Ministry office,"Ministry of Natural Resources
 Suite 1802
-438 University Avenue",Toronto,ON,"M5G 2K8",,mike.harris@pc.ola.org,416-314-2301,,,,Kitchener—Conestoga,"Progressive Conservative Party of Ontario",,7482
-Hon.,Mike,Harris,"Constituency office","Unit 3 & 4
-63 Arthur St. S",Elmira,ON,"N3B 2M6",mike.harrisco@pc.ola.org,mike.harris@pc.ola.org,"519-669-2090  ","519-669-0476  ",,,Kitchener—Conestoga,"Progressive Conservative Party of Ontario",,7482
-,Catherine,McKenney,"Constituency office","Unit 1
-353 Waverley St. W",Ottawa,ON,"K2P 0W4",cmckenney-co@ndp.on.ca,cmckenney-co@ndp.on.ca,613-722-6414,613-722-6703,,,"Ottawa Centre","New Democratic Party of Ontario",,117
-,Catherine,McKenney,"Legislative office","Room 363
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,cmckenney-co@ndp.on.ca,416-325-0071,,,,"Ottawa Centre","New Democratic Party of Ontario",,117
-Hon.,Ernie,Hardeman,"Constituency office","12 Perry St.",Woodstock,ON,"N4S 3C2",ernie.hardemanco@pc.ola.org,ernie.hardeman@pc.ola.org,519-537-5222,519-537-3577,1-800-265-4046,,Oxford,"Progressive Conservative Party of Ontario",,43
-Hon.,Ernie,Hardeman,"Legislative office","Whitney Block 
+438 University Avenue",Toronto,ON,M5G 2K8,,mike.harris@pc.ola.org,416-314-2301,,,,Kitchener—Conestoga,Progressive Conservative Party of Ontario,,7482,,https://www.ola.org/sites/default/files/member/profile-photo/mike-harris.jpg
+Hon.,Mike,Harris,Constituency office,"Unit 3 & 4
+63 Arthur St. S",Elmira,ON,N3B 2M6,mike.harrisco@pc.ola.org,mike.harris@pc.ola.org,519-669-2090  ,519-669-0476  ,,,Kitchener—Conestoga,Progressive Conservative Party of Ontario,,7482,,https://www.ola.org/sites/default/files/member/profile-photo/mike-harris.jpg
+,Catherine,McKenney,Constituency office,"Unit 1
+353 Waverley St. W",Ottawa,ON,K2P 0W4,cmckenney-co@ndp.on.ca,cmckenney-co@ndp.on.ca,613-722-6414,613-722-6703,,,Ottawa Centre,New Democratic Party of Ontario,,117,,https://www.ola.org/sites/default/files/member/profile-photo/Catherine-McKenney.jpg
+,Catherine,McKenney,Legislative office,"Room 363
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,cmckenney-co@ndp.on.ca,416-325-0071,,,,Ottawa Centre,New Democratic Party of Ontario,,117,,https://www.ola.org/sites/default/files/member/profile-photo/Catherine-McKenney.jpg
+Hon.,Ernie,Hardeman,Constituency office,12 Perry St.,Woodstock,ON,N4S 3C2,ernie.hardemanco@pc.ola.org,ernie.hardeman@pc.ola.org,519-537-5222,519-537-3577,1-800-265-4046,,Oxford,Progressive Conservative Party of Ontario,,43,,https://www.ola.org/sites/default/files/member/profile-photo/ernie_hardeman_1.jpg
+Hon.,Ernie,Hardeman,Legislative office,"Whitney Block 
 Room 1304 
-99 Wellesley St. W",Toronto,ON,"M7A 1A2",,ernie.hardeman@pc.ola.org,416-325-0224,,,,Oxford,"Progressive Conservative Party of Ontario",,43
-,Lisa,Gretzky,"Constituency office","2443 Dougall Ave.",Windsor,ON,"N8X 1T3",lgretzky-co@ndp.on.ca,lgretzky-qp@ndp.on.ca,519-977-7191,519-977-7029,,,"Windsor West","New Democratic Party of Ontario",,7288
-,Lisa,Gretzky,"Legislative office","Room 325
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,lgretzky-qp@ndp.on.ca,416-325-0235,416-325-0873,,,"Windsor West","New Democratic Party of Ontario",,7288
-Hon.,Doug,Downey,"Ministry office","Ministry of the Attorney General
+99 Wellesley St. W",Toronto,ON,M7A 1A2,,ernie.hardeman@pc.ola.org,416-325-0224,,,,Oxford,Progressive Conservative Party of Ontario,,43,,https://www.ola.org/sites/default/files/member/profile-photo/ernie_hardeman_1.jpg
+,Lisa,Gretzky,Constituency office,2443 Dougall Ave.,Windsor,ON,N8X 1T3,lgretzky-co@ndp.on.ca,lgretzky-qp@ndp.on.ca,519-977-7191,519-977-7029,,,Windsor West,New Democratic Party of Ontario,,7288,,https://www.ola.org/sites/default/files/member/profile-photo/lisa_gretzky_0.jpg
+,Lisa,Gretzky,Legislative office,"Room 325
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,lgretzky-qp@ndp.on.ca,416-325-0235,416-325-0873,,,Windsor West,New Democratic Party of Ontario,,7288,,https://www.ola.org/sites/default/files/member/profile-photo/lisa_gretzky_0.jpg
+Hon.,Doug,Downey,Ministry office,"Ministry of the Attorney General
 McMurtry-Scott Building
 11th Floor
-720 Bay St.",Toronto,ON,"M7A 2S9",,doug.downey@pc.ola.org,416-326-2220,,,,Barrie—Springwater—Oro-Medonte,"Progressive Conservative Party of Ontario",,7450
-Hon.,Doug,Downey,"Constituency office","Unit 14
-20 Bell Farm Rd.",Barrie,ON,"L4M 6E4",,doug.downey@pc.ola.org,705-726-5538,705-726-2880,,,Barrie—Springwater—Oro-Medonte,"Progressive Conservative Party of Ontario",,7450
-,Rudy,Cuzzetto,"Legislative office","Whitney Block
+720 Bay St.",Toronto,ON,M7A 2S9,,doug.downey@pc.ola.org,416-326-2220,,,,Barrie—Springwater—Oro-Medonte,Progressive Conservative Party of Ontario,,7450,,https://www.ola.org/sites/default/files/member/profile-photo/Doug_Downey.jpg
+Hon.,Doug,Downey,Constituency office,"Unit 14
+20 Bell Farm Rd.",Barrie,ON,L4M 6E4,,doug.downey@pc.ola.org,705-726-5538,705-726-2880,,,Barrie—Springwater—Oro-Medonte,Progressive Conservative Party of Ontario,,7450,,https://www.ola.org/sites/default/files/member/profile-photo/Doug_Downey.jpg
+,Rudy,Cuzzetto,Legislative office,"Whitney Block
 Room 1307 
-99 Wellesley St. W",Toronto,ON,"M7A 1A2",,rudy.cuzzetto@pc.ola.org,416-325-4890,,,,Mississauga—Lakeshore,"Progressive Conservative Party of Ontario",,7492
-,Rudy,Cuzzetto,"Constituency office","Unit 1 & 2
-120 Lakeshore Rd. W",Mississauga,ON,"L5H 1E8",rudy.cuzzettoco@pc.ola.org,rudy.cuzzetto@pc.ola.org,905-274-8228,905-274-8552,,,Mississauga—Lakeshore,"Progressive Conservative Party of Ontario",,7492
-,Lise,Vaugeois,"Constituency office","272 Park Ave.","Thunder Bay",ON,"P7B 1C5",lvaugeois-co@ndp.on.ca,lvaugeois-qp@ndp.on.ca,"807-345-3647  ","807-345-2922  ",833-690-2016,,"Thunder Bay—Superior North","New Democratic Party of Ontario",,7614
-,Lise,Vaugeois,"Legislative office","Room 203
-North Wing, Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,lvaugeois-qp@ndp.on.ca,416-325-0069,,,,"Thunder Bay—Superior North","New Democratic Party of Ontario",,7614
-Hon.,Stephen,Crawford,"Ministry office","Ministry of Public and Business Service Delivery and Procurement
+99 Wellesley St. W",Toronto,ON,M7A 1A2,,rudy.cuzzetto@pc.ola.org,416-325-4890,,,,Mississauga—Lakeshore,Progressive Conservative Party of Ontario,,7492,,https://www.ola.org/sites/default/files/member/profile-photo/Rudy_Cuzzetto.jpg
+,Rudy,Cuzzetto,Constituency office,"Unit 1 & 2
+120 Lakeshore Rd. W",Mississauga,ON,L5H 1E8,rudy.cuzzettoco@pc.ola.org,rudy.cuzzetto@pc.ola.org,905-274-8228,905-274-8552,,,Mississauga—Lakeshore,Progressive Conservative Party of Ontario,,7492,,https://www.ola.org/sites/default/files/member/profile-photo/Rudy_Cuzzetto.jpg
+,Lise,Vaugeois,Constituency office,272 Park Ave.,Thunder Bay,ON,P7B 1C5,lvaugeois-co@ndp.on.ca,lvaugeois-qp@ndp.on.ca,807-345-3647  ,807-345-2922  ,833-690-2016,,Thunder Bay—Superior North,New Democratic Party of Ontario,,7614,,https://www.ola.org/sites/default/files/member/profile-photo/Lise_Vaugeois.jpg
+,Lise,Vaugeois,Legislative office,"Room 203
+North Wing, Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,lvaugeois-qp@ndp.on.ca,416-325-0069,,,,Thunder Bay—Superior North,New Democratic Party of Ontario,,7614,,https://www.ola.org/sites/default/files/member/profile-photo/Lise_Vaugeois.jpg
+Hon.,Stephen,Crawford,Ministry office,"Ministry of Public and Business Service Delivery and Procurement
 5th Floor
-777 Bay St.",Toronto,ON,"M7A 2J3",,stephen.crawford@pc.ola.org,416-212-2665,,,,Oakville,"Progressive Conservative Party of Ontario",,7498
-Hon.,Stephen,Crawford,"Constituency office","Unit 1
-74 Rebecca St.",Oakville,ON,"L6K 1J2",,stephen.crawford@pc.ola.org,905-827-5141,905-827-3786,,,Oakville,"Progressive Conservative Party of Ontario",,7498
-Hon.,"Prabmeet Singh",Sarkaria,"Ministry office","Ministry of Transportation
+777 Bay St.",Toronto,ON,M7A 2J3,,stephen.crawford@pc.ola.org,416-212-2665,,,,Oakville,Progressive Conservative Party of Ontario,,7498,,https://www.ola.org/sites/default/files/member/profile-photo/stephen_crawford.jpg
+Hon.,Stephen,Crawford,Constituency office,"Unit 1
+74 Rebecca St.",Oakville,ON,L6K 1J2,,stephen.crawford@pc.ola.org,905-827-5141,905-827-3786,,,Oakville,Progressive Conservative Party of Ontario,,7498,,https://www.ola.org/sites/default/files/member/profile-photo/stephen_crawford.jpg
+Hon.,Prabmeet Singh,Sarkaria,Ministry office,"Ministry of Transportation
 5th Floor
-777 Bay St.",Toronto,ON,"M7A 1Z8",,prabmeet.sarkaria@pc.ola.org,416-327-9200,,,,"Brampton South","Progressive Conservative Party of Ontario",,7455
-Hon.,"Prabmeet Singh",Sarkaria,"Constituency office","Unit 402
-7700 Hurontario St.",Brampton,ON,"L6Y 4M3",,prabmeet.sarkaria@pc.ola.org,905-796-8669,905-796-8069,,,"Brampton South","Progressive Conservative Party of Ontario",,7455
-,Amarjot,Sandhu,"Legislative office","Room 160 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,amarjot.sandhu@pc.ola.org,416-325-3028,,,,"Brampton West","Progressive Conservative Party of Ontario",,7456
-,Amarjot,Sandhu,"Constituency office","Unit 309
-10 Gillingham Dr.",Brampton,ON,"L6X 0G6",amarjot.sandhuco@pc.ola.org,amarjot.sandhu@pc.ola.org,905-595-1532,905-451-8496,,,"Brampton West","Progressive Conservative Party of Ontario",,7456
-,Chris,Glover,"Constituency office","Unit A
-226 Bathurst St.",Toronto,ON,"M5T 2R9",cglover-co@ndp.on.ca,cglover-qp@ndp.on.ca,"416-603-9664  ",,,,"Spadina—Fort York","New Democratic Party of Ontario",,7513
-,Chris,Glover,"Legislative office","Room 241
-North Wing, Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,cglover-qp@ndp.on.ca,"416-326-7196  ","416-326-7172  ",,,"Spadina—Fort York","New Democratic Party of Ontario",,7513
-,Lorne,Coe,"Legislative office","Room 270
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,lorne.coe@pc.ola.org,416-325-1331,,,,Whitby,"Progressive Conservative Party of Ontario",,7344
-,Lorne,Coe,"Constituency office","Suite 202
-3000 Garden St.",Whitby,ON,"L1R 2G6",,lorne.coe@pc.ola.org,905-430-1141,905-430-1840,,,Whitby,"Progressive Conservative Party of Ontario",,7344
-,Sheref,Sabawy,"Legislative office","Room 261 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,sheref.sabawy@pc.ola.org,416-325-1185,,,,"Mississauga—Erin Mills","Progressive Conservative Party of Ontario",,7491
-,Sheref,Sabawy,"Constituency office","Unit 40
-4181 Sladeview Cres",Mississauga,ON,"L5L 5R2",,sheref.sabawy@pc.ola.org,905-820-8851,905-820-4307,,,"Mississauga—Erin Mills","Progressive Conservative Party of Ontario",,7491
-Hon.,Kinga,Surma,"Ministry office","Ministry of Infrastructure
+777 Bay St.",Toronto,ON,M7A 1Z8,,prabmeet.sarkaria@pc.ola.org,416-327-9200,,,,Brampton South,Progressive Conservative Party of Ontario,,7455,,https://www.ola.org/sites/default/files/member/profile-photo/prabmeet_sarkaria.jpg
+Hon.,Prabmeet Singh,Sarkaria,Constituency office,"Unit 402
+7700 Hurontario St.",Brampton,ON,L6Y 4M3,,prabmeet.sarkaria@pc.ola.org,905-796-8669,905-796-8069,,,Brampton South,Progressive Conservative Party of Ontario,,7455,,https://www.ola.org/sites/default/files/member/profile-photo/prabmeet_sarkaria.jpg
+,Amarjot,Sandhu,Legislative office,"Room 160 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,amarjot.sandhu@pc.ola.org,416-325-3028,,,,Brampton West,Progressive Conservative Party of Ontario,,7456,,https://www.ola.org/sites/default/files/member/profile-photo/amarjot_sandhu_0.jpg
+,Amarjot,Sandhu,Constituency office,"Unit 309
+10 Gillingham Dr.",Brampton,ON,L6X 0G6,amarjot.sandhuco@pc.ola.org,amarjot.sandhu@pc.ola.org,905-595-1532,905-451-8496,,,Brampton West,Progressive Conservative Party of Ontario,,7456,,https://www.ola.org/sites/default/files/member/profile-photo/amarjot_sandhu_0.jpg
+,Chris,Glover,Constituency office,"Unit A
+226 Bathurst St.",Toronto,ON,M5T 2R9,cglover-co@ndp.on.ca,cglover-qp@ndp.on.ca,416-603-9664  ,,,,Spadina—Fort York,New Democratic Party of Ontario,,7513,,https://www.ola.org/sites/default/files/member/profile-photo/Chris_Glover.jpg
+,Chris,Glover,Legislative office,"Room 241
+North Wing, Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,cglover-qp@ndp.on.ca,416-326-7196  ,416-326-7172  ,,,Spadina—Fort York,New Democratic Party of Ontario,,7513,,https://www.ola.org/sites/default/files/member/profile-photo/Chris_Glover.jpg
+,Lorne,Coe,Legislative office,"Room 270
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,lorne.coe@pc.ola.org,416-325-1331,,,,Whitby,Progressive Conservative Party of Ontario,,7344,,https://www.ola.org/sites/default/files/member/profile-photo/lorne_coe_0.jpg
+,Lorne,Coe,Constituency office,"Suite 202
+3000 Garden St.",Whitby,ON,L1R 2G6,,lorne.coe@pc.ola.org,905-430-1141,905-430-1840,,,Whitby,Progressive Conservative Party of Ontario,,7344,,https://www.ola.org/sites/default/files/member/profile-photo/lorne_coe_0.jpg
+,Sheref,Sabawy,Legislative office,"Room 261 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,sheref.sabawy@pc.ola.org,416-325-1185,,,,Mississauga—Erin Mills,Progressive Conservative Party of Ontario,,7491,,https://www.ola.org/sites/default/files/member/profile-photo/sheref_sabawy.jpg
+,Sheref,Sabawy,Constituency office,"Unit 40
+4181 Sladeview Cres",Mississauga,ON,L5L 5R2,,sheref.sabawy@pc.ola.org,905-820-8851,905-820-4307,,,Mississauga—Erin Mills,Progressive Conservative Party of Ontario,,7491,,https://www.ola.org/sites/default/files/member/profile-photo/sheref_sabawy.jpg
+Hon.,Kinga,Surma,Ministry office,"Ministry of Infrastructure
 Room 5E200
 5th Floor
-777 Bay St.",Toronto,ON,"M7A 2J3",,kinga.surma@pc.ola.org,416-327-4412,,,,"Etobicoke Centre","Progressive Conservative Party of Ontario",,7467
-Hon.,Kinga,Surma,"Constituency office","Lloydmanor Shopping Centre
+777 Bay St.",Toronto,ON,M7A 2J3,,kinga.surma@pc.ola.org,416-327-4412,,,,Etobicoke Centre,Progressive Conservative Party of Ontario,,7467,,https://www.ola.org/sites/default/files/member/profile-photo/kinga_surma.jpg
+Hon.,Kinga,Surma,Constituency office,"Lloydmanor Shopping Centre
 Unit 102
-201 Lloyd Manor Rd.",Etobicoke,ON,"M9B 6H6",kinga.surmaco@pc.ola.org,kinga.surma@pc.ola.org,416-234-2800,416-234-2276,,,"Etobicoke Centre","Progressive Conservative Party of Ontario",,7467
-,Chris,Scott,"Legislative office","Room N404
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,cscott@ola.org,416-325-0109,,,,"Sault Ste. Marie",Independent,,120
-,Chris,Scott,"Constituency office","153 Great Northern Rd. ","Sault Ste Marie",ON,"P6B 4Y9",,cscott@ola.org,705-949-6959,705-946-6269,,,"Sault Ste. Marie",Independent,,120
-,Marit,Stiles,"Legislative office","Room 381
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,mstiles-qp@ndp.on.ca,416-326-7202,416-326-7200,,,Davenport,"New Democratic Party of Ontario",,7460
-,Marit,Stiles,"Constituency office","1199 Bloor St. W",Toronto,ON,"M6H 1N4",mstiles-co@ndp.on.ca,mstiles-qp@ndp.on.ca,416-535-3158,416-535-6587,,,Davenport,"New Democratic Party of Ontario",,7460
-,Chandra,Pasma,"Legislative office","Room 206
-North Wing, Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,cpasma-qp@ndp.on.ca,416-325-3001,416-325-0034,,,"Ottawa West—Nepean","New Democratic Party of Ontario",,7606
-,Chandra,Pasma,"Constituency office","Unit 500
-1580 Merivale Rd.",Nepean,ON,"K2G 4B5",cpasma-co@ndp.on.ca,cpasma-qp@ndp.on.ca,613-721-8075,,,,"Ottawa West—Nepean","New Democratic Party of Ontario",,7606
-,"Jennifer (Jennie)",Stevens,"Constituency office","Unit B
-209 Carlton St.","St. Catharines",ON,"L2R 1S1",jstevens-co@ndp.on.ca,jstevens-qp@ndp.on.ca,905-935-0018,905-935-0191,,,"St. Catharines","New Democratic Party of Ontario",,7514
-,"Jennifer (Jennie)",Stevens,"Legislative office","Room 386
-Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jstevens-qp@ndp.on.ca,416-326-7127,416-326-7126,,,"St. Catharines","New Democratic Party of Ontario",,7514
-Hon.,Steve,Clark,"Legislative office","Room 223
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,steve.clark@pc.ola.org,416-325-7754,416-325-7755,,,"Leeds—Grenville—Thousand Islands and Rideau Lakes","Progressive Conservative Party of Ontario",,7146
-Hon.,Steve,Clark,"Constituency office","Unit 305
-9 Broad St.",Brockville,ON,"K6V 6Z4",,steve.clark@pc.ola.org,613-342-9522,613-342-2501,1-800-267-4408,,"Leeds—Grenville—Thousand Islands and Rideau Lakes","Progressive Conservative Party of Ontario",,7146
-Hon.,Stan,Cho,"Ministry office","Ministry of Tourism, Culture and Gaming
+201 Lloyd Manor Rd.",Etobicoke,ON,M9B 6H6,kinga.surmaco@pc.ola.org,kinga.surma@pc.ola.org,416-234-2800,416-234-2276,,,Etobicoke Centre,Progressive Conservative Party of Ontario,,7467,,https://www.ola.org/sites/default/files/member/profile-photo/kinga_surma.jpg
+,Chris,Scott,Legislative office,"Room N404
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,cscott@ola.org,416-325-0109,,,,Sault Ste. Marie,Independent,,120,,https://www.ola.org/sites/default/files/member/profile-photo/Chris-Scott.jpg
+,Chris,Scott,Constituency office,153 Great Northern Rd. ,Sault Ste Marie,ON,P6B 4Y9,,cscott@ola.org,705-949-6959,705-946-6269,,,Sault Ste. Marie,Independent,,120,,https://www.ola.org/sites/default/files/member/profile-photo/Chris-Scott.jpg
+,Marit,Stiles,Legislative office,"Room 381
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,mstiles-qp@ndp.on.ca,416-326-7202,416-326-7200,,,Davenport,New Democratic Party of Ontario,,7460,,https://www.ola.org/sites/default/files/member/profile-photo/Marit%20Stiles.png
+,Marit,Stiles,Constituency office,1199 Bloor St. W,Toronto,ON,M6H 1N4,mstiles-co@ndp.on.ca,mstiles-qp@ndp.on.ca,416-535-3158,416-535-6587,,,Davenport,New Democratic Party of Ontario,,7460,,https://www.ola.org/sites/default/files/member/profile-photo/Marit%20Stiles.png
+,Chandra,Pasma,Legislative office,"Room 206
+North Wing, Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,cpasma-qp@ndp.on.ca,416-325-3001,416-325-0034,,,Ottawa West—Nepean,New Democratic Party of Ontario,,7606,,https://www.ola.org/sites/default/files/member/profile-photo/Chandra_Pasma.png
+,Chandra,Pasma,Constituency office,"Unit 500
+1580 Merivale Rd.",Nepean,ON,K2G 4B5,cpasma-co@ndp.on.ca,cpasma-qp@ndp.on.ca,613-721-8075,,,,Ottawa West—Nepean,New Democratic Party of Ontario,,7606,,https://www.ola.org/sites/default/files/member/profile-photo/Chandra_Pasma.png
+,Jennifer (Jennie),Stevens,Constituency office,"Unit B
+209 Carlton St.",St. Catharines,ON,L2R 1S1,jstevens-co@ndp.on.ca,jstevens-qp@ndp.on.ca,905-935-0018,905-935-0191,,,St. Catharines,New Democratic Party of Ontario,,7514,,https://www.ola.org/sites/default/files/member/profile-photo/Jennie_Stevens.jpg
+,Jennifer (Jennie),Stevens,Legislative office,"Room 386
+Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jstevens-qp@ndp.on.ca,416-326-7127,416-326-7126,,,St. Catharines,New Democratic Party of Ontario,,7514,,https://www.ola.org/sites/default/files/member/profile-photo/Jennie_Stevens.jpg
+Hon.,Steve,Clark,Legislative office,"Room 223
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,steve.clark@pc.ola.org,416-325-7754,416-325-7755,,,Leeds—Grenville—Thousand Islands and Rideau Lakes,Progressive Conservative Party of Ontario,,7146,,https://www.ola.org/sites/default/files/member/profile-photo/steve_clark_0.jpg
+Hon.,Steve,Clark,Constituency office,"Unit 305
+9 Broad St.",Brockville,ON,K6V 6Z4,,steve.clark@pc.ola.org,613-342-9522,613-342-2501,1-800-267-4408,,Leeds—Grenville—Thousand Islands and Rideau Lakes,Progressive Conservative Party of Ontario,,7146,,https://www.ola.org/sites/default/files/member/profile-photo/steve_clark_0.jpg
+Hon.,Stan,Cho,Ministry office,"Ministry of Tourism, Culture and Gaming
 6th Floor
-438 University Ave.",Toronto,ON,"M7A 1N3",,stan.cho@pc.ola.org,416-326-9326,,,,Willowdale,"Progressive Conservative Party of Ontario",,7520
-Hon.,Stan,Cho,"Constituency office","111 Sheppard Ave. W","North York",ON,"M2N 1M7",,stan.cho@pc.ola.org,416-733-7878,,,,Willowdale,"Progressive Conservative Party of Ontario",,7520
-,Dave,Smith,"Constituency office","Unit E
-864 Chemong Rd.",Peterborough,ON,"K9H 5Z8",dave.smithco@pc.ola.org,dave.smith@pc.ola.org,705-742-3777,,,,Peterborough—Kawartha,"Progressive Conservative Party of Ontario",,7525
-Hon.,Donna,Skelly,"Legislative office","Room 180
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,donna.skelly@pc.ola.org,416-325-7435,,,,Flamborough—Glanbrook,"Progressive Conservative Party of Ontario",,7470
-Hon.,Donna,Skelly,"Constituency office","Suite 104
-2000 Garth St.",Hamilton,ON,"L9B 0C1",,donna.skelly@pc.ola.org,905-679-3770,,,,Flamborough—Glanbrook,"Progressive Conservative Party of Ontario",,7470
-Hon.,"Raymond Sung Joon",Cho,"Ministry office","Ministry for Seniors and Accessibility
+438 University Ave.",Toronto,ON,M7A 1N3,,stan.cho@pc.ola.org,416-326-9326,,,,Willowdale,Progressive Conservative Party of Ontario,,7520,,https://www.ola.org/sites/default/files/member/profile-photo/stan_cho.jpg
+Hon.,Stan,Cho,Constituency office,111 Sheppard Ave. W,North York,ON,M2N 1M7,,stan.cho@pc.ola.org,416-733-7878,,,,Willowdale,Progressive Conservative Party of Ontario,,7520,,https://www.ola.org/sites/default/files/member/profile-photo/stan_cho.jpg
+,Dave,Smith,Constituency office,"Unit E
+864 Chemong Rd.",Peterborough,ON,K9H 5Z8,dave.smithco@pc.ola.org,dave.smith@pc.ola.org,705-742-3777,,,,Peterborough—Kawartha,Progressive Conservative Party of Ontario,,7525,,https://www.ola.org/sites/default/files/member/profile-photo/dave_smith.jpg
+Hon.,Donna,Skelly,Legislative office,"Room 180
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,donna.skelly@pc.ola.org,416-325-7435,,,,Flamborough—Glanbrook,Progressive Conservative Party of Ontario,,7470,,https://www.ola.org/sites/default/files/member/profile-photo/donna_skelly.jpg
+Hon.,Donna,Skelly,Constituency office,"Suite 104
+2000 Garth St.",Hamilton,ON,L9B 0C1,,donna.skelly@pc.ola.org,905-679-3770,,,,Flamborough—Glanbrook,Progressive Conservative Party of Ontario,,7470,,https://www.ola.org/sites/default/files/member/profile-photo/donna_skelly.jpg
+Hon.,Raymond Sung Joon,Cho,Ministry office,"Ministry for Seniors and Accessibility
 5th Floor
-777 Bay St.",Toronto,ON,"M7A 1S5",,raymond.cho@pc.ola.org,416-314-0797,,,,"Scarborough North","Progressive Conservative Party of Ontario",,7364
-Hon.,"Raymond Sung Joon",Cho,"Constituency office","Unit 111
-4500 Sheppard Ave. E",Toronto,ON,"M1S 3R6",,raymond.cho@pc.ola.org,416-297-5040,,,,"Scarborough North","Progressive Conservative Party of Ontario",,7364
-Hon.,Charmaine,Williams,"Ministry office","Ministry of Children, Community and Social Services
+777 Bay St.",Toronto,ON,M7A 1S5,,raymond.cho@pc.ola.org,416-314-0797,,,,Scarborough North,Progressive Conservative Party of Ontario,,7364,,https://www.ola.org/sites/default/files/member/profile-photo/raymond_cho_0.jpg
+Hon.,Raymond Sung Joon,Cho,Constituency office,"Unit 111
+4500 Sheppard Ave. E",Toronto,ON,M1S 3R6,,raymond.cho@pc.ola.org,416-297-5040,,,,Scarborough North,Progressive Conservative Party of Ontario,,7364,,https://www.ola.org/sites/default/files/member/profile-photo/raymond_cho_0.jpg
+Hon.,Charmaine,Williams,Ministry office,"Ministry of Children, Community and Social Services
 7th Floor
-438 University Ave.",Toronto,ON,"M5G 2K8",,charmaine.williams@pc.ola.org,416-325-5225,,,,"Brampton Centre","Progressive Conservative Party of Ontario",,7586
-Hon.,Charmaine,Williams,"Constituency office","Lakeridge Plaza
+438 University Ave.",Toronto,ON,M5G 2K8,,charmaine.williams@pc.ola.org,416-325-5225,,,,Brampton Centre,Progressive Conservative Party of Ontario,,7586,,https://www.ola.org/sites/default/files/member/profile-photo/Charmaine_Williams.png
+Hon.,Charmaine,Williams,Constituency office,"Lakeridge Plaza
 Unit 12
-456 Vodden St. E",Brampton,ON,"L6S 5Y7",,charmaine.williams@pc.ola.org,905-454-1233,905-454-8292,,,"Brampton Centre","Progressive Conservative Party of Ontario",,7586
-,Hardeep,Grewal,"Constituency office","Unit 307
-1 Gateway Blvd.",Brampton,ON,"L6T 0G3",,hardeep.grewal@pc.ola.org,905-799-3939,905-799-9505,,,"Brampton East","Progressive Conservative Party of Ontario",,7587
-Hon.,Paul,Calandra,"Ministry office","Ministry of Education
+456 Vodden St. E",Brampton,ON,L6S 5Y7,,charmaine.williams@pc.ola.org,905-454-1233,905-454-8292,,,Brampton Centre,Progressive Conservative Party of Ontario,,7586,,https://www.ola.org/sites/default/files/member/profile-photo/Charmaine_Williams.png
+,Hardeep,Grewal,Constituency office,"Unit 307
+1 Gateway Blvd.",Brampton,ON,L6T 0G3,,hardeep.grewal@pc.ola.org,905-799-3939,905-799-9505,,,Brampton East,Progressive Conservative Party of Ontario,,7587,,https://www.ola.org/sites/default/files/member/profile-photo/Hardeep_Grewal.png
+Hon.,Paul,Calandra,Ministry office,"Ministry of Education
 5th Floor
-438 University Ave.",Toronto,ON,"M7A 2A5",,paul.calandra@pc.ola.org,416-325-2600,416-325-6348,,,Markham—Stouffville,"Progressive Conservative Party of Ontario",,7484
-Hon.,Paul,Calandra,"Constituency office","Suite 400
-37 Sandiford Dr.",Stouffville,ON,"L4A 3Z2",,paul.calandra@pc.ola.org,905-642-2588,905-642-1618,1-866-531-9551,,Markham—Stouffville,"Progressive Conservative Party of Ontario",,7484
-Hon.,Paul,Calandra,"Constituency office","Unit 2
-2677 Bur Oak Ave.",Markham,ON,"L6B 1K8",,paul.calandra@pc.ola.org,905-642-2588,905-642-1618,1-866-531-9551,,Markham—Stouffville,"Progressive Conservative Party of Ontario",,7484
-,Jeff,Burch,"Legislative office","Room 355
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jburch-qp@ndp.on.ca,416-325-3990,416-325-3415,,,"Niagara Centre","New Democratic Party of Ontario",,7496
-,Jeff,Burch,"Constituency office","9 Clarence St. ","Port Colborne",ON,"L3K 3E7",jburch-co@ndp.on.ca,jburch-qp@ndp.on.ca,905-732-6884,905-732-9782,,,"Niagara Centre","New Democratic Party of Ontario",,7496
-,Jeff,Burch,"Constituency office","Unit 102
-60 King St.",Welland,ON,"L3B 6A4",jburch-co@ndp.on.ca,jburch-qp@ndp.on.ca,905-732-6884,905-732-9782,,,"Niagara Centre","New Democratic Party of Ontario",,7496
-,Stéphane,Sarrazin,"Legislative office","Room 153 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,stephane.sarrazin@pc.ola.org,416-325-1079,,,,Glengarry—Prescott—Russell,"Progressive Conservative Party of Ontario",,7598
-,Stéphane,Sarrazin,"Constituency office","290A McGill St.",Hawkesbury,ON,"K6A 1P8",,stephane.sarrazin@pc.ola.org,613-632-2706,613-632-1554,1-800-294-8250,,Glengarry—Prescott—Russell,"Progressive Conservative Party of Ontario",,7598
-,Sandy,Shaw,"Constituency office","177 King St. W",Dundas,ON,"L9H 1V3",sshaw-co@ndp.on.ca,sshaw-qp@ndp.on.ca,905-628-2755,905-628-1280,,,"Hamilton West—Ancaster—Dundas","New Democratic Party of Ontario",,7472
-,Sandy,Shaw,"Legislative office","Room 359
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,sshaw-qp@ndp.on.ca,416-326-6890,416-326-6885,,,"Hamilton West—Ancaster—Dundas","New Democratic Party of Ontario",,7472
-Hon.,Laurie,Scott,"Constituency office","14 Lindsay St. N",Lindsay,ON,"K9V 1T4",laurie.scottco@pc.ola.org,laurie.scott@pc.ola.org,705-324-6654,705-324-6938,1-800-424-2490,,"Haliburton—Kawartha Lakes—Brock","Progressive Conservative Party of Ontario",,2116
-Hon.,Laurie,Scott,"Legislative office","Room 114
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,laurie.scott@pc.ola.org,416-325-0277,,,,"Haliburton—Kawartha Lakes—Brock","Progressive Conservative Party of Ontario",,2116
-,Mike,Schreiner,"Constituency office","Unit 102
-173 Woolwich St.",Guelph,ON,"N1H 3V4",mschreiner-co@ola.org,mschreiner@ola.org,519-836-4190,,,,Guelph,"Green Party of Ontario",,7449
-,Mike,Schreiner,"Legislative office","Room 467
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,mschreiner@ola.org,416-325-4664,,,,Guelph,"Green Party of Ontario",,7449
-,Peggy,Sattler,"Constituency office","Unit 101
-240 Commissioners Rd. W",London,ON,"N6J 1Y1",psattler-co@ndp.on.ca,psattler-qp@ndp.on.ca,519-657-3120,519-657-0368,,,"London West","New Democratic Party of Ontario",,7225
-,Peggy,Sattler,"Legislative office","Room 368
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,psattler-qp@ndp.on.ca,416-325-6908,416-325-7030,,,"London West","New Democratic Party of Ontario",,7225
-Hon.,Zee,Hamid,"Ministry office","Ministry of the Solicitor General
+438 University Ave.",Toronto,ON,M7A 2A5,,paul.calandra@pc.ola.org,416-325-2600,416-325-6348,,,Markham—Stouffville,Progressive Conservative Party of Ontario,,7484,,https://www.ola.org/sites/default/files/member/profile-photo/paul_calandra_v2.jpg
+Hon.,Paul,Calandra,Constituency office,"Suite 400
+37 Sandiford Dr.",Stouffville,ON,L4A 3Z2,,paul.calandra@pc.ola.org,905-642-2588,905-642-1618,1-866-531-9551,,Markham—Stouffville,Progressive Conservative Party of Ontario,,7484,,https://www.ola.org/sites/default/files/member/profile-photo/paul_calandra_v2.jpg
+Hon.,Paul,Calandra,Constituency office,"Unit 2
+2677 Bur Oak Ave.",Markham,ON,L6B 1K8,,paul.calandra@pc.ola.org,905-642-2588,905-642-1618,1-866-531-9551,,Markham—Stouffville,Progressive Conservative Party of Ontario,,7484,,https://www.ola.org/sites/default/files/member/profile-photo/paul_calandra_v2.jpg
+,Jeff,Burch,Legislative office,"Room 355
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jburch-qp@ndp.on.ca,416-325-3990,416-325-3415,,,Niagara Centre,New Democratic Party of Ontario,,7496,,https://www.ola.org/sites/default/files/member/profile-photo/Jeff_Burch.jpg
+,Jeff,Burch,Constituency office,9 Clarence St. ,Port Colborne,ON,L3K 3E7,jburch-co@ndp.on.ca,jburch-qp@ndp.on.ca,905-732-6884,905-732-9782,,,Niagara Centre,New Democratic Party of Ontario,,7496,,https://www.ola.org/sites/default/files/member/profile-photo/Jeff_Burch.jpg
+,Jeff,Burch,Constituency office,"Unit 102
+60 King St.",Welland,ON,L3B 6A4,jburch-co@ndp.on.ca,jburch-qp@ndp.on.ca,905-732-6884,905-732-9782,,,Niagara Centre,New Democratic Party of Ontario,,7496,,https://www.ola.org/sites/default/files/member/profile-photo/Jeff_Burch.jpg
+,Stéphane,Sarrazin,Legislative office,"Room 153 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,stephane.sarrazin@pc.ola.org,416-325-1079,,,,Glengarry—Prescott—Russell,Progressive Conservative Party of Ontario,,7598,,https://www.ola.org/sites/default/files/member/profile-photo/Stephane_Sarrazin.jpg
+,Stéphane,Sarrazin,Constituency office,290A McGill St.,Hawkesbury,ON,K6A 1P8,,stephane.sarrazin@pc.ola.org,613-632-2706,613-632-1554,1-800-294-8250,,Glengarry—Prescott—Russell,Progressive Conservative Party of Ontario,,7598,,https://www.ola.org/sites/default/files/member/profile-photo/Stephane_Sarrazin.jpg
+,Sandy,Shaw,Constituency office,177 King St. W,Dundas,ON,L9H 1V3,sshaw-co@ndp.on.ca,sshaw-qp@ndp.on.ca,905-628-2755,905-628-1280,,,Hamilton West—Ancaster—Dundas,New Democratic Party of Ontario,,7472,,https://www.ola.org/sites/default/files/member/profile-photo/Sandy_Shaw.jpg
+,Sandy,Shaw,Legislative office,"Room 359
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,sshaw-qp@ndp.on.ca,416-326-6890,416-326-6885,,,Hamilton West—Ancaster—Dundas,New Democratic Party of Ontario,,7472,,https://www.ola.org/sites/default/files/member/profile-photo/Sandy_Shaw.jpg
+Hon.,Laurie,Scott,Constituency office,14 Lindsay St. N,Lindsay,ON,K9V 1T4,laurie.scottco@pc.ola.org,laurie.scott@pc.ola.org,705-324-6654,705-324-6938,1-800-424-2490,,Haliburton—Kawartha Lakes—Brock,Progressive Conservative Party of Ontario,,2116,,https://www.ola.org/sites/default/files/member/profile-photo/laurie_scott_0.jpg
+Hon.,Laurie,Scott,Legislative office,"Room 114
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,laurie.scott@pc.ola.org,416-325-0277,,,,Haliburton—Kawartha Lakes—Brock,Progressive Conservative Party of Ontario,,2116,,https://www.ola.org/sites/default/files/member/profile-photo/laurie_scott_0.jpg
+,Mike,Schreiner,Constituency office,"Unit 102
+173 Woolwich St.",Guelph,ON,N1H 3V4,mschreiner-co@ola.org,mschreiner@ola.org,519-836-4190,,,,Guelph,Green Party of Ontario,,7449,,https://www.ola.org/sites/default/files/member/profile-photo/mike_schreiner_v1.jpg
+,Mike,Schreiner,Legislative office,"Room 467
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,mschreiner@ola.org,416-325-4664,,,,Guelph,Green Party of Ontario,,7449,,https://www.ola.org/sites/default/files/member/profile-photo/mike_schreiner_v1.jpg
+,Peggy,Sattler,Constituency office,"Unit 101
+240 Commissioners Rd. W",London,ON,N6J 1Y1,psattler-co@ndp.on.ca,psattler-qp@ndp.on.ca,519-657-3120,519-657-0368,,,London West,New Democratic Party of Ontario,,7225,,https://www.ola.org/sites/default/files/member/profile-photo/peggy_sattler.jpg
+,Peggy,Sattler,Legislative office,"Room 368
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,psattler-qp@ndp.on.ca,416-325-6908,416-325-7030,,,London West,New Democratic Party of Ontario,,7225,,https://www.ola.org/sites/default/files/member/profile-photo/peggy_sattler.jpg
+Hon.,Zee,Hamid,Ministry office,"Ministry of the Solicitor General
 George Drew Building
-25 Grosvenor St.",Toronto,ON,"M7A 1Y6",,zee.hamid@pc.ola.org,416-326-5000,,,,Milton,"Progressive Conservative Party of Ontario",,105
-Hon.,Zee,Hamid,"Constituency office","159 Main St. E",Milton,ON,"L9T 1N7",,zee.hamid@pc.ola.org,"905-878-1729  ",,,,Milton,"Progressive Conservative Party of Ontario",,105
-,George,Darouze,"Constituency office","P.O. Box 51 
-Main Stn",Manotick,ON,"K4M 1A2",,george.darouze@pc.ola.org,,,,,Carleton,"Progressive Conservative Party of Ontario",,110
-,George,Darouze,"Constituency office","Unit 1 
-1128 Mill Street",Manotick,ON,"K4M 1A4",,george.darouze@pc.ola.org,613-838-4425,,833-779-6821,,Carleton,"Progressive Conservative Party of Ontario",,110
-Hon.,Greg,Rickford,"Ministry office","Ministry of Indigenous Affairs and First Nations Economic Reconciliation
+25 Grosvenor St.",Toronto,ON,M7A 1Y6,,zee.hamid@pc.ola.org,416-326-5000,,,,Milton,Progressive Conservative Party of Ontario,,105,,https://www.ola.org/sites/default/files/member/profile-photo/Hamid-Zee.jpg
+Hon.,Zee,Hamid,Constituency office,159 Main St. E,Milton,ON,L9T 1N7,,zee.hamid@pc.ola.org,905-878-1729  ,,,,Milton,Progressive Conservative Party of Ontario,,105,,https://www.ola.org/sites/default/files/member/profile-photo/Hamid-Zee.jpg
+,George,Darouze,Constituency office,"P.O. Box 51 
+Main Stn",Manotick,ON,K4M 1A2,,george.darouze@pc.ola.org,,,,,Carleton,Progressive Conservative Party of Ontario,,110,,https://www.ola.org/sites/default/files/member/profile-photo/Darouze_George.jpg
+,George,Darouze,Constituency office,"Unit 1 
+1128 Mill Street",Manotick,ON,K4M 1A4,,george.darouze@pc.ola.org,613-838-4425,,833-779-6821,,Carleton,Progressive Conservative Party of Ontario,,110,,https://www.ola.org/sites/default/files/member/profile-photo/Darouze_George.jpg
+Hon.,Greg,Rickford,Ministry office,"Ministry of Indigenous Affairs and First Nations Economic Reconciliation
 Suite 400
-160 Bloor St.",Toronto,ON,"M7A 2E6",,greg.rickford@pc.ola.org,416-326-4740,,,,"Kenora—Rainy River","Progressive Conservative Party of Ontario",,7476
-Hon.,Greg,Rickford,"Constituency office","Unit 2
-439 Government St.",Dryden,ON,"P8N 2P4",greg.rickfordco@pc.ola.org,greg.rickford@pc.ola.org,807-223-6456,,1-800-465-8501,,"Kenora—Rainy River","Progressive Conservative Party of Ontario",,7476
-Hon.,Greg,Rickford,"Constituency office","5907 Hwy. 11/71
-P.O. Box 326",Emo,ON,"P0W 1E0",greg.rickfordco@pc.ola.org,greg.rickford@pc.ola.org,807-274-7619,,,,"Kenora—Rainy River","Progressive Conservative Party of Ontario",,7476
-Hon.,Greg,Rickford,"Constituency office","Suite B
-610 Lakeview Dr.",Kenora,ON,"P9N 3P7",greg.rickfordco@pc.ola.org,greg.rickford@pc.ola.org,807-467-2415,,1-800-465-8501,,"Kenora—Rainy River","Progressive Conservative Party of Ontario",,7476
-,Silvia,Gualtieri,"Legislative office","Room 157
-Main Legislative Building, Queen’s Park",Toronto,ON,"M7A 1A5",,silvia.gualtieri@pc.ola.org,416-325-1237,,,,"Mississauga East—Cooksville","Progressive Conservative Party of Ontario",,115
-,Silvia,Gualtieri,"Constituency office","Unit 204
-2345 Stanfield Rd.",Mississauga,ON,"L4Y 1R6",,silvia.gualtieri@pc.ola.org,905-238-1751,,,,"Mississauga East—Cooksville","Progressive Conservative Party of Ontario",,115
-,Tom,Rakocevic,"Constituency office","Unit 38
-2300 Finch Ave. W","North York",ON,"M9M 2Y3",trakocevic-co@ndp.on.ca,trakocevic-qp@ndp.on.ca,416-743-7272,,,,"Humber River—Black Creek","New Democratic Party of Ontario",,7474
-,Tom,Rakocevic,"Legislative office","Room 207
-North Wing, Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,trakocevic-qp@ndp.on.ca,416-326-7585,416-326-7634,,,"Humber River—Black Creek","New Democratic Party of Ontario",,7474
-Hon.,David,Piccini,"Ministry office","Ministry of Labour, Immigration, Training and Skills Development
+160 Bloor St.",Toronto,ON,M7A 2E6,,greg.rickford@pc.ola.org,416-326-4740,,,,Kenora—Rainy River,Progressive Conservative Party of Ontario,,7476,,https://www.ola.org/sites/default/files/member/profile-photo/Greg%20Rickford.jpeg
+Hon.,Greg,Rickford,Constituency office,"Unit 2
+439 Government St.",Dryden,ON,P8N 2P4,greg.rickfordco@pc.ola.org,greg.rickford@pc.ola.org,807-223-6456,,1-800-465-8501,,Kenora—Rainy River,Progressive Conservative Party of Ontario,,7476,,https://www.ola.org/sites/default/files/member/profile-photo/Greg%20Rickford.jpeg
+Hon.,Greg,Rickford,Constituency office,"5907 Hwy. 11/71
+P.O. Box 326",Emo,ON,P0W 1E0,greg.rickfordco@pc.ola.org,greg.rickford@pc.ola.org,807-274-7619,,,,Kenora—Rainy River,Progressive Conservative Party of Ontario,,7476,,https://www.ola.org/sites/default/files/member/profile-photo/Greg%20Rickford.jpeg
+Hon.,Greg,Rickford,Constituency office,"Suite B
+610 Lakeview Dr.",Kenora,ON,P9N 3P7,greg.rickfordco@pc.ola.org,greg.rickford@pc.ola.org,807-467-2415,,1-800-465-8501,,Kenora—Rainy River,Progressive Conservative Party of Ontario,,7476,,https://www.ola.org/sites/default/files/member/profile-photo/Greg%20Rickford.jpeg
+,Silvia,Gualtieri,Legislative office,"Room 157
+Main Legislative Building, Queen’s Park",Toronto,ON,M7A 1A5,,silvia.gualtieri@pc.ola.org,416-325-1237,,,,Mississauga East—Cooksville,Progressive Conservative Party of Ontario,,115,,https://www.ola.org/sites/default/files/member/profile-photo/Silvia-Gualtieri.jpg
+,Silvia,Gualtieri,Constituency office,"Unit 204
+2345 Stanfield Rd.",Mississauga,ON,L4Y 1R6,,silvia.gualtieri@pc.ola.org,905-238-1751,,,,Mississauga East—Cooksville,Progressive Conservative Party of Ontario,,115,,https://www.ola.org/sites/default/files/member/profile-photo/Silvia-Gualtieri.jpg
+,Tom,Rakocevic,Constituency office,"Unit 38
+2300 Finch Ave. W",North York,ON,M9M 2Y3,trakocevic-co@ndp.on.ca,trakocevic-qp@ndp.on.ca,416-743-7272,,,,Humber River—Black Creek,New Democratic Party of Ontario,,7474,,https://www.ola.org/sites/default/files/member/profile-photo/Tom_Rakocevic.jpg
+,Tom,Rakocevic,Legislative office,"Room 207
+North Wing, Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,trakocevic-qp@ndp.on.ca,416-326-7585,416-326-7634,,,Humber River—Black Creek,New Democratic Party of Ontario,,7474,,https://www.ola.org/sites/default/files/member/profile-photo/Tom_Rakocevic.jpg
+Hon.,David,Piccini,Ministry office,"Ministry of Labour, Immigration, Training and Skills Development
 14th Floor
-400 University Ave",Toronto,ON,"M7A 1T7",,david.piccini@pc.ola.org,416-326-7600,,,,"Northumberland—Peterborough South","Progressive Conservative Party of Ontario",,7524
-Hon.,David,Piccini,"Constituency office","117 Peter St.","Port Hope",ON,"L1A 1C5",,david.piccini@pc.ola.org,905-372-4000,905-885-0050,800-263-3980,,"Northumberland—Peterborough South","Progressive Conservative Party of Ontario",,7524
-,Billy,Pang,"Legislative office","Room 186 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,,416-325-3043,,,,Markham—Unionville,"Progressive Conservative Party of Ontario",,7486
-,Billy,Pang,"Constituency office","Unit 602
-3601 Hwy. 7 E",Markham,ON,"L3R 0M3",billy.pangco@pc.ola.org,,905-474-3288,905-474-2878,,,Markham—Unionville,"Progressive Conservative Party of Ontario",,7486
-,Guy,Bourgouin,"Constituency office","Unit 6
+400 University Ave",Toronto,ON,M7A 1T7,,david.piccini@pc.ola.org,416-326-7600,,,,Northumberland—Peterborough South,Progressive Conservative Party of Ontario,,7524,,https://www.ola.org/sites/default/files/member/profile-photo/david_piccini_0.jpg
+Hon.,David,Piccini,Constituency office,117 Peter St.,Port Hope,ON,L1A 1C5,,david.piccini@pc.ola.org,905-372-4000,905-885-0050,800-263-3980,,Northumberland—Peterborough South,Progressive Conservative Party of Ontario,,7524,,https://www.ola.org/sites/default/files/member/profile-photo/david_piccini_0.jpg
+,Billy,Pang,Legislative office,"Room 186 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,,416-325-3043,,,,Markham—Unionville,Progressive Conservative Party of Ontario,,7486,,https://www.ola.org/sites/default/files/member/profile-photo/Billy_Pang.jpg
+,Billy,Pang,Constituency office,"Unit 602
+3601 Hwy. 7 E",Markham,ON,L3R 0M3,billy.pangco@pc.ola.org,,905-474-3288,905-474-2878,,,Markham—Unionville,Progressive Conservative Party of Ontario,,7486,,https://www.ola.org/sites/default/files/member/profile-photo/Billy_Pang.jpg
+,Guy,Bourgouin,Constituency office,"Unit 6
 631 Front St. 
-P.O. Box 387",Hearst,ON,"P0L 1N0",,,705-372-6400,705-372-6440,,,"Mushkegowuk—James Bay","New Democratic Party of Ontario",,7495
-,Guy,Bourgouin,"Constituency office","1-2 Ash St.",Kapuskasing,ON,"P5N 3H4",,,705-335-6400,705-337-6869,833-530-6440,,"Mushkegowuk—James Bay","New Democratic Party of Ontario",,7495
-,Guy,Bourgouin,"Legislative office","Room 330
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,,416-326-7351,416-326-6972,,,"Mushkegowuk—James Bay","New Democratic Party of Ontario",,7495
-,France,Gélinas,"Constituency office","Hanmer Valley Shopping Centre
+P.O. Box 387",Hearst,ON,P0L 1N0,,,705-372-6400,705-372-6440,,,Mushkegowuk—James Bay,New Democratic Party of Ontario,,7495,,https://www.ola.org/sites/default/files/member/profile-photo/Guy_Bourgouin.jpg
+,Guy,Bourgouin,Constituency office,1-2 Ash St.,Kapuskasing,ON,P5N 3H4,,,705-335-6400,705-337-6869,833-530-6440,,Mushkegowuk—James Bay,New Democratic Party of Ontario,,7495,,https://www.ola.org/sites/default/files/member/profile-photo/Guy_Bourgouin.jpg
+,Guy,Bourgouin,Legislative office,"Room 330
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,,416-326-7351,416-326-6972,,,Mushkegowuk—James Bay,New Democratic Party of Ontario,,7495,,https://www.ola.org/sites/default/files/member/profile-photo/Guy_Bourgouin.jpg
+,France,Gélinas,Constituency office,"Hanmer Valley Shopping Centre
 Unit 15
-5085 Hwy. 69 N",Hanmer,ON,"P3P 1P7",gelinas-co@ndp.on.ca,gelinas-qp@ndp.on.ca,705-969-3621,"705-969-3538  ",877-280-9990,,"Nickel Belt","New Democratic Party of Ontario",,7090
-,France,Gélinas,"Legislative office","Room 316
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,gelinas-qp@ndp.on.ca,416-325-9203,"416-325-9185  ",,,"Nickel Belt","New Democratic Party of Ontario",,7090
-,Will,Bouma,"Legislative office","Room 267
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,will.bouma@pc.ola.org,416-325-0169,,,,Brantford—Brant,"Progressive Conservative Party of Ontario",,7457
-,Will,Bouma,"Constituency office","Suite 101
-96 Nelson St.",Brantford,ON,"N3T 2N1",,will.bouma@pc.ola.org,519-759-0361,519-759-6439,,,Brantford—Brant,"Progressive Conservative Party of Ontario",,7457
-,Matthew,Rae,"Legislative office","Room 249 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,matthew.rae@pc.ola.org,416-325-1084,,,,Perth—Wellington,"Progressive Conservative Party of Ontario",,7608
-,Matthew,Rae,"Constituency office","Unit 2
-55 Lorne Ave. E",Stratford,ON,"N5A 6S4",,matthew.rae@pc.ola.org,519-272-0660,519-272-1064,1-800-461-9701,,Perth—Wellington,"Progressive Conservative Party of Ontario",,7608
-Hon.,George,Pirie,"Ministry office","Ministry of Northern Economic Development and Growth
+5085 Hwy. 69 N",Hanmer,ON,P3P 1P7,gelinas-co@ndp.on.ca,gelinas-qp@ndp.on.ca,705-969-3621,705-969-3538  ,877-280-9990,,Nickel Belt,New Democratic Party of Ontario,,7090,,https://www.ola.org/sites/default/files/member/profile-photo/France_Gelinas.jpg
+,France,Gélinas,Legislative office,"Room 316
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,gelinas-qp@ndp.on.ca,416-325-9203,416-325-9185  ,,,Nickel Belt,New Democratic Party of Ontario,,7090,,https://www.ola.org/sites/default/files/member/profile-photo/France_Gelinas.jpg
+,Will,Bouma,Legislative office,"Room 267
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,will.bouma@pc.ola.org,416-325-0169,,,,Brantford—Brant,Progressive Conservative Party of Ontario,,7457,,https://www.ola.org/sites/default/files/member/profile-photo/will_bouma.jpg
+,Will,Bouma,Constituency office,"Suite 101
+96 Nelson St.",Brantford,ON,N3T 2N1,,will.bouma@pc.ola.org,519-759-0361,519-759-6439,,,Brantford—Brant,Progressive Conservative Party of Ontario,,7457,,https://www.ola.org/sites/default/files/member/profile-photo/will_bouma.jpg
+,Matthew,Rae,Legislative office,"Room 249 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,matthew.rae@pc.ola.org,416-325-1084,,,,Perth—Wellington,Progressive Conservative Party of Ontario,,7608,,https://www.ola.org/sites/default/files/member/profile-photo/Matt_Rae.png
+,Matthew,Rae,Constituency office,"Unit 2
+55 Lorne Ave. E",Stratford,ON,N5A 6S4,,matthew.rae@pc.ola.org,519-272-0660,519-272-1064,1-800-461-9701,,Perth—Wellington,Progressive Conservative Party of Ontario,,7608,,https://www.ola.org/sites/default/files/member/profile-photo/Matt_Rae.png
+Hon.,George,Pirie,Ministry office,"Ministry of Northern Economic Development and Growth
 5th Floor
-99 Wellesley St. W",Toronto,ON,"M7A 1W3",,george.pirie@pc.ola.org,416-326-4740,,1-866-381-5337,,Timmins,"Progressive Conservative Party of Ontario",,7615
-Hon.,George,Pirie,"Constituency office","Unit G
-681 Algonquin Blvd. East",Timmins,ON,"P4N 8S6",,george.pirie@pc.ola.org,705-268-6400,,,,Timmins,"Progressive Conservative Party of Ontario",,7615
-Hon.,Michael,Parsa,"Ministry office","Ministry of Children, Community and Social Services
+99 Wellesley St. W",Toronto,ON,M7A 1W3,,george.pirie@pc.ola.org,416-326-4740,,1-866-381-5337,,Timmins,Progressive Conservative Party of Ontario,,7615,,https://www.ola.org/sites/default/files/member/profile-photo/George_Pirie.png
+Hon.,George,Pirie,Constituency office,"Unit G
+681 Algonquin Blvd. East",Timmins,ON,P4N 8S6,,george.pirie@pc.ola.org,705-268-6400,,,,Timmins,Progressive Conservative Party of Ontario,,7615,,https://www.ola.org/sites/default/files/member/profile-photo/George_Pirie.png
+Hon.,Michael,Parsa,Ministry office,"Ministry of Children, Community and Social Services
 7th Floor
-438 University Ave.",Toronto,ON,"M5G 2K8",,,416-325-5225,416-325-5240,,,"Aurora—Oak Ridges—Richmond Hill","Progressive Conservative Party of Ontario",,7447
-Hon.,Michael,Parsa,"Constituency office","Suite 201
-13085 Yonge St.","Richmond Hill",ON,"L4E 3S8",michael.parsaco@pc.ola.org,,905-773-6250,905-773-8158,888-486-5352,,"Aurora—Oak Ridges—Richmond Hill","Progressive Conservative Party of Ontario",,7447
-Hon.,Peter,Bethlenfalvy,"Ministry office","Ministry of Finance
+438 University Ave.",Toronto,ON,M5G 2K8,,,416-325-5225,416-325-5240,,,Aurora—Oak Ridges—Richmond Hill,Progressive Conservative Party of Ontario,,7447,,https://www.ola.org/sites/default/files/member/profile-photo/michael-parsa.jpg
+Hon.,Michael,Parsa,Constituency office,"Suite 201
+13085 Yonge St.",Richmond Hill,ON,L4E 3S8,michael.parsaco@pc.ola.org,,905-773-6250,905-773-8158,888-486-5352,,Aurora—Oak Ridges—Richmond Hill,Progressive Conservative Party of Ontario,,7447,,https://www.ola.org/sites/default/files/member/profile-photo/michael-parsa.jpg
+Hon.,Peter,Bethlenfalvy,Ministry office,"Ministry of Finance
 ​​​​​​​Frost Building South
 7th Floor
-7 Queen's Park Cres.",Toronto,ON,"M7A 1Y7",,peter.bethlenfalvy@pc.ola.org,416-325-0400,,,,Pickering—Uxbridge,"Progressive Conservative Party of Ontario",,7505
-Hon.,Peter,Bethlenfalvy,"Constituency office","Suite 213
-1550 Kingston Rd.",Pickering,ON,"L1V 1C3",,peter.bethlenfalvy@pc.ola.org,905-509-0336,905-509-0334,1-888-444-1730,,Pickering—Uxbridge,"Progressive Conservative Party of Ontario",,7505
-,Wayne,Gates,"Constituency office","Douglas Heights Seniors Centre
-265 High St.","Fort Erie",ON,"L2A 3R4",wgates-co@ndp.on.ca,wgates-qp@ndp.on.ca,"905-871-8868  ",905-871-4717 ,,,"Niagara Falls","New Democratic Party of Ontario",,7244
-,Wayne,Gates,"Constituency office","Unit 1
-6746 Morrison St.","Niagara Falls",ON,"L2E 6Z8",wgates-co@ndp.on.ca,wgates-qp@ndp.on.ca,"905-357-0681  ","905-357-9456  ",,,"Niagara Falls","New Democratic Party of Ontario",,7244
-,Wayne,Gates,"Legislative office","Room 322
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,wgates-qp@ndp.on.ca,416-212-6102,"416-212-6106  ",,,"Niagara Falls","New Democratic Party of Ontario",,7244
-,Mary-Margaret,McMahon,"Legislative office","Room 433
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,mmcmahon.mpp.co@liberal.ola.org,416-325-0090,416-325-0102,,,"Beaches—East York","Ontario Liberal Party",,7585
-,Mary-Margaret,McMahon,"Constituency office","1896 Danforth Ave.",Toronto,ON,"M4C 1J4",,mmcmahon.mpp.co@liberal.ola.org,416-690-1032,,,,"Beaches—East York","Ontario Liberal Party",,7585
-Hon.,Todd,McCarthy,"Ministry office","Ministry of Environment, Conservation and Parks
+7 Queen's Park Cres.",Toronto,ON,M7A 1Y7,,peter.bethlenfalvy@pc.ola.org,416-325-0400,,,,Pickering—Uxbridge,Progressive Conservative Party of Ontario,,7505,,https://www.ola.org/sites/default/files/member/profile-photo/peter_bethlenfalvy.jpg
+Hon.,Peter,Bethlenfalvy,Constituency office,"Suite 213
+1550 Kingston Rd.",Pickering,ON,L1V 1C3,,peter.bethlenfalvy@pc.ola.org,905-509-0336,905-509-0334,1-888-444-1730,,Pickering—Uxbridge,Progressive Conservative Party of Ontario,,7505,,https://www.ola.org/sites/default/files/member/profile-photo/peter_bethlenfalvy.jpg
+,Wayne,Gates,Constituency office,"Douglas Heights Seniors Centre
+265 High St.",Fort Erie,ON,L2A 3R4,wgates-co@ndp.on.ca,wgates-qp@ndp.on.ca,905-871-8868  ,905-871-4717 ,,,Niagara Falls,New Democratic Party of Ontario,,7244,,https://www.ola.org/sites/default/files/member/profile-photo/wayne_gates_0.jpg
+,Wayne,Gates,Constituency office,"Unit 1
+6746 Morrison St.",Niagara Falls,ON,L2E 6Z8,wgates-co@ndp.on.ca,wgates-qp@ndp.on.ca,905-357-0681  ,905-357-9456  ,,,Niagara Falls,New Democratic Party of Ontario,,7244,,https://www.ola.org/sites/default/files/member/profile-photo/wayne_gates_0.jpg
+,Wayne,Gates,Legislative office,"Room 322
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,wgates-qp@ndp.on.ca,416-212-6102,416-212-6106  ,,,Niagara Falls,New Democratic Party of Ontario,,7244,,https://www.ola.org/sites/default/files/member/profile-photo/wayne_gates_0.jpg
+,Mary-Margaret,McMahon,Legislative office,"Room 433
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,mmcmahon.mpp.co@liberal.ola.org,416-325-0090,416-325-0102,,,Beaches—East York,Ontario Liberal Party,,7585,,https://www.ola.org/sites/default/files/member/profile-photo/Mary_Margaret_McMahon.jpg
+,Mary-Margaret,McMahon,Constituency office,1896 Danforth Ave.,Toronto,ON,M4C 1J4,,mmcmahon.mpp.co@liberal.ola.org,416-690-1032,,,,Beaches—East York,Ontario Liberal Party,,7585,,https://www.ola.org/sites/default/files/member/profile-photo/Mary_Margaret_McMahon.jpg
+Hon.,Todd,McCarthy,Ministry office,"Ministry of Environment, Conservation and Parks
 5th Floor
-777 Bay St.",Toronto,ON,"M7A 2J3",,todd.mccarthy@pc.ola.org,416-314-6790,,,,Durham,"Progressive Conservative Party of Ontario",,7595
-Hon.,Todd,McCarthy,"Constituency office","23 King St. W",Bowmanville,ON,"L1C 1R2",,todd.mccarthy@pc.ola.org,905-697-1501,905-697-1506,800-661-2433,,Durham,"Progressive Conservative Party of Ontario",,7595
-,Jessica,Bell,"Constituency office","Unit 103
-719 Bloor St. W",Toronto,ON,"M6G 1L5",jbell-co@ndp.on.ca,jbell-qp@ndp.on.ca,416-535-7206,,,,University—Rosedale,"New Democratic Party of Ontario",,7518
-,Jessica,Bell,"Legislative office","Room 384
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jbell-qp@ndp.on.ca,416-325-1620,416-325-1424,,,University—Rosedale,"New Democratic Party of Ontario",,7518
-,Tyler,Watt,"Legislative office","Room 447
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,tylerwatt.mpp.co@ola.org,416-325-1777,416-325-0118,,,Nepean,"Ontario Liberal Party",,124
-,Tyler,Watt,"Constituency office","Unit 222/3
-250B Greenbank Rd.",Nepean,ON,"K2H 8X4",,tylerwatt.mpp.co@ola.org,613-518-9288,613-823-8284,,,Nepean,"Ontario Liberal Party",,124
-,Vacant,seat,"Constituency office","Unit 5
-3110 Kingston Rd.",Scarborough,ON,"M1M 1P2",,,416-261-9525,,,,"Scarborough Southwest",,,vac_77
-,Karen,McCrimmon,"Legislative office","Room 428
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,kmccrimmon-co@liberal.ola.org,416-325-1212,,,,Kanata—Carleton,"Ontario Liberal Party",,7645
-,Karen,McCrimmon,"Constituency office","Suite 109
-555 Legget Dr.",Kanata,ON,"K2K 2X3",,kmccrimmon-co@liberal.ola.org,"613-599-3000  ",,,,Kanata—Carleton,"Ontario Liberal Party",,7645
-,"Bobbi Ann",Brady,"Legislative office","Room 472
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,,416-325-0027,416-325-0026,,,Haldimand—Norfolk,Independent,,7599
-,"Bobbi Ann",Brady,"Constituency office","Mailing address: P.O. Box 91",Simcoe,ON,"N3Y 4K8",babrady-co@ola.org,,,,,,Haldimand—Norfolk,Independent,,7599
-,"Bobbi Ann",Brady,"Constituency office","50B Gilbertson Dr.",Simcoe,ON,"N3Y 4L8",babrady-co@ola.org,,519-428-0446,519-428-0835,800-903-8629,,Haldimand—Norfolk,Independent,,7599
-,Jennifer,French,"Constituency office","Unit 2
-78 Centre St. N",Oshawa,ON,"L1G 4B6",jfrench-co@ndp.on.ca,jfrench-qp@ndp.on.ca,"905-723-2411  ","905-723-1054  ",,,Oshawa,"New Democratic Party of Ontario",,7283
-,Jennifer,French,"Legislative office","Room 345
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jfrench-qp@ndp.on.ca,"416-325-0117  ","416-325-0084  ",,,Oshawa,"New Democratic Party of Ontario",,7283
-,John,Fraser,"Constituency office","Unit D
-1883 Bank St.",Ottawa,ON,"K1V 7Z9",,jfraser.mpp.co@liberal.ola.org,"613-736-9573  ","613-736-7374  ",,,"Ottawa South","Ontario Liberal Party",,7226
-,John,Fraser,"Legislative office","Room 419
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,jfraser.mpp.co@liberal.ola.org,416-325-4670,416-325-4671,,,"Ottawa South","Ontario Liberal Party",,7226
-,Robert,Bailey,"Legislative office","Room 254
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,bob.bailey@pc.ola.org,416-325-3040,416-325-3039,,,Sarnia—Lambton,"Progressive Conservative Party of Ontario",,7086
-,Robert,Bailey,"Constituency office","Suite 102
-805 Christina St. N","Point Edward",ON,"N7V 1X6",bob.baileyco@pc.ola.org,bob.bailey@pc.ola.org,519-337-0051,519-337-3246,,,Sarnia—Lambton,"Progressive Conservative Party of Ontario",,7086
-,Aris,Babikian,"Constituency office","Suite 207
-4002 Sheppard Ave. E",Scarborough,ON,"M1S 4R5",aris.babikianco@pc.ola.org,aris.babikian@pc.ola.org,416-297-6568,416-297-4962,,,Scarborough—Agincourt,"Progressive Conservative Party of Ontario",,7509
-,Aris,Babikian,"Legislative office","Room 265
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,aris.babikian@pc.ola.org,416-326-7111,416-326-7099,,,Scarborough—Agincourt,"Progressive Conservative Party of Ontario",,7509
-Hon.,Doug,Ford,"Ministry office","Ministry of Intergovernmental Affairs
+777 Bay St.",Toronto,ON,M7A 2J3,,todd.mccarthy@pc.ola.org,416-314-6790,,,,Durham,Progressive Conservative Party of Ontario,,7595,,https://www.ola.org/sites/default/files/member/profile-photo/Todd_McCarthy.png
+Hon.,Todd,McCarthy,Constituency office,23 King St. W,Bowmanville,ON,L1C 1R2,,todd.mccarthy@pc.ola.org,905-697-1501,905-697-1506,800-661-2433,,Durham,Progressive Conservative Party of Ontario,,7595,,https://www.ola.org/sites/default/files/member/profile-photo/Todd_McCarthy.png
+,Jessica,Bell,Constituency office,"Unit 103
+719 Bloor St. W",Toronto,ON,M6G 1L5,jbell-co@ndp.on.ca,jbell-qp@ndp.on.ca,416-535-7206,,,,University—Rosedale,New Democratic Party of Ontario,,7518,,https://www.ola.org/sites/default/files/member/profile-photo/jessica_bell.jpg
+,Jessica,Bell,Legislative office,"Room 384
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jbell-qp@ndp.on.ca,416-325-1620,416-325-1424,,,University—Rosedale,New Democratic Party of Ontario,,7518,,https://www.ola.org/sites/default/files/member/profile-photo/jessica_bell.jpg
+,Tyler,Watt,Legislative office,"Room 447
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,tylerwatt.mpp.co@ola.org,416-325-1777,416-325-0118,,,Nepean,Ontario Liberal Party,,124,,https://www.ola.org/sites/default/files/member/profile-photo/Tyler-Watt_1.jpg
+,Tyler,Watt,Constituency office,"Unit 222/3
+250B Greenbank Rd.",Nepean,ON,K2H 8X4,,tylerwatt.mpp.co@ola.org,613-518-9288,613-823-8284,,,Nepean,Ontario Liberal Party,,124,,https://www.ola.org/sites/default/files/member/profile-photo/Tyler-Watt_1.jpg
+,Vacant,seat,Constituency office,"Unit 5
+3110 Kingston Rd.",Scarborough,ON,M1M 1P2,,,416-261-9525,,,,Scarborough Southwest,,,vac_77,,
+,Karen,McCrimmon,Legislative office,"Room 428
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,kmccrimmon-co@liberal.ola.org,416-325-1212,,,,Kanata—Carleton,Ontario Liberal Party,,7645,,https://www.ola.org/sites/default/files/member/profile-photo/Karen_McCrimmon2.jpeg
+,Karen,McCrimmon,Constituency office,"Suite 109
+555 Legget Dr.",Kanata,ON,K2K 2X3,,kmccrimmon-co@liberal.ola.org,613-599-3000  ,,,,Kanata—Carleton,Ontario Liberal Party,,7645,,https://www.ola.org/sites/default/files/member/profile-photo/Karen_McCrimmon2.jpeg
+,Bobbi Ann,Brady,Legislative office,"Room 472
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,,416-325-0027,416-325-0026,,,Haldimand—Norfolk,Independent,,7599,,https://www.ola.org/sites/default/files/member/profile-photo/Bobbi_Ann_Brady.jpg
+,Bobbi Ann,Brady,Constituency office,Mailing address: P.O. Box 91,Simcoe,ON,N3Y 4K8,babrady-co@ola.org,,,,,,Haldimand—Norfolk,Independent,,7599,,https://www.ola.org/sites/default/files/member/profile-photo/Bobbi_Ann_Brady.jpg
+,Bobbi Ann,Brady,Constituency office,50B Gilbertson Dr.,Simcoe,ON,N3Y 4L8,babrady-co@ola.org,,519-428-0446,519-428-0835,800-903-8629,,Haldimand—Norfolk,Independent,,7599,,https://www.ola.org/sites/default/files/member/profile-photo/Bobbi_Ann_Brady.jpg
+,Jennifer,French,Constituency office,"Unit 2
+78 Centre St. N",Oshawa,ON,L1G 4B6,jfrench-co@ndp.on.ca,jfrench-qp@ndp.on.ca,905-723-2411  ,905-723-1054  ,,,Oshawa,New Democratic Party of Ontario,,7283,,https://www.ola.org/sites/default/files/member/profile-photo/Jennifer_French.jpg
+,Jennifer,French,Legislative office,"Room 345
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jfrench-qp@ndp.on.ca,416-325-0117  ,416-325-0084  ,,,Oshawa,New Democratic Party of Ontario,,7283,,https://www.ola.org/sites/default/files/member/profile-photo/Jennifer_French.jpg
+,John,Fraser,Constituency office,"Unit D
+1883 Bank St.",Ottawa,ON,K1V 7Z9,,jfraser.mpp.co@liberal.ola.org,613-736-9573  ,613-736-7374  ,,,Ottawa South,Ontario Liberal Party,,7226,,https://www.ola.org/sites/default/files/member/profile-photo/john_fraser.jpg
+,John,Fraser,Legislative office,"Room 419
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,jfraser.mpp.co@liberal.ola.org,416-325-4670,416-325-4671,,,Ottawa South,Ontario Liberal Party,,7226,,https://www.ola.org/sites/default/files/member/profile-photo/john_fraser.jpg
+,Robert,Bailey,Legislative office,"Room 254
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,bob.bailey@pc.ola.org,416-325-3040,416-325-3039,,,Sarnia—Lambton,Progressive Conservative Party of Ontario,,7086,,https://www.ola.org/sites/default/files/member/profile-photo/bob_bailey_0.jpg
+,Robert,Bailey,Constituency office,"Suite 102
+805 Christina St. N",Point Edward,ON,N7V 1X6,bob.baileyco@pc.ola.org,bob.bailey@pc.ola.org,519-337-0051,519-337-3246,,,Sarnia—Lambton,Progressive Conservative Party of Ontario,,7086,,https://www.ola.org/sites/default/files/member/profile-photo/bob_bailey_0.jpg
+,Aris,Babikian,Constituency office,"Suite 207
+4002 Sheppard Ave. E",Scarborough,ON,M1S 4R5,aris.babikianco@pc.ola.org,aris.babikian@pc.ola.org,416-297-6568,416-297-4962,,,Scarborough—Agincourt,Progressive Conservative Party of Ontario,,7509,,https://www.ola.org/sites/default/files/member/profile-photo/aris_babikian_.jpg
+,Aris,Babikian,Legislative office,"Room 265
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,aris.babikian@pc.ola.org,416-326-7111,416-326-7099,,,Scarborough—Agincourt,Progressive Conservative Party of Ontario,,7509,,https://www.ola.org/sites/default/files/member/profile-photo/aris_babikian_.jpg
+Hon.,Doug,Ford,Ministry office,"Ministry of Intergovernmental Affairs
 Room 223
 Main Legislative Building, Queen's Park  
-111 Wellesley St.",Toronto,ON,"M7A 1A4",,,416-325-1941,,,,"Etobicoke North","Progressive Conservative Party of Ontario",,7468
-Hon.,Doug,Ford,"Constituency office","Unit 110
-964 Albion Rd.",Etobicoke,ON,"M9V 1A7",doug.fordco@pc.ola.org,,416-745-2859,"416-745-4601  ",,,"Etobicoke North","Progressive Conservative Party of Ontario",,7468
-Hon.,Doug,Ford,"Legislative office","Premier's Office
+111 Wellesley St.",Toronto,ON,M7A 1A4,,,416-325-1941,,,,Etobicoke North,Progressive Conservative Party of Ontario,,7468,,https://www.ola.org/sites/default/files/member/profile-photo/doug_ford.jpg
+Hon.,Doug,Ford,Constituency office,"Unit 110
+964 Albion Rd.",Etobicoke,ON,M9V 1A7,doug.fordco@pc.ola.org,,416-745-2859,416-745-4601  ,,,Etobicoke North,Progressive Conservative Party of Ontario,,7468,,https://www.ola.org/sites/default/files/member/profile-photo/doug_ford.jpg
+Hon.,Doug,Ford,Legislative office,"Premier's Office
 Room 281
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,,416-325-7635,416-325-9895,,,"Etobicoke North","Progressive Conservative Party of Ontario",,7468
-Hon.,Michael,Kerzner,"Ministry office","Ministry of the Solicitor General
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,,416-325-7635,416-325-9895,,,Etobicoke North,Progressive Conservative Party of Ontario,,7468,,https://www.ola.org/sites/default/files/member/profile-photo/doug_ford.jpg
+Hon.,Michael,Kerzner,Ministry office,"Ministry of the Solicitor General
 George Drew Building
-25 Grosvenor St.",Toronto,ON,"M7A 1Y6",,michael.kerzner@pc.ola.org,416-326-5000,,,,"York Centre","Progressive Conservative Party of Ontario",,7618
-Hon.,Michael,Kerzner,"Constituency office","830 Sheppard Ave. W.",Toronto,ON,"M3H 2T1",,michael.kerzner@pc.ola.org,416-630-0080,,,,"York Centre","Progressive Conservative Party of Ontario",,7618
-,Ted,Hsu,"Constituency office","Unit 403
-837 Princess Street",Kingston,ON,"K7L 1G8",,thsu.mpp.co@liberal.ola.org,613-547-2385,,,,"Kingston and the Islands","Ontario Liberal Party",,7602
-,Ted,Hsu,"Legislative office","Room 421
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,thsu.mpp.co@liberal.ola.org,416-325-0051,416-325-0049,,,"Kingston and the Islands","Ontario Liberal Party",,7602
-Hon.,Sam,Oosterhoff,"Ministry office","Ministry of Energy and Mines
+25 Grosvenor St.",Toronto,ON,M7A 1Y6,,michael.kerzner@pc.ola.org,416-326-5000,,,,York Centre,Progressive Conservative Party of Ontario,,7618,,https://www.ola.org/sites/default/files/member/profile-photo/Michael_Kerzner.png
+Hon.,Michael,Kerzner,Constituency office,830 Sheppard Ave. W.,Toronto,ON,M3H 2T1,,michael.kerzner@pc.ola.org,416-630-0080,,,,York Centre,Progressive Conservative Party of Ontario,,7618,,https://www.ola.org/sites/default/files/member/profile-photo/Michael_Kerzner.png
+,Ted,Hsu,Constituency office,"Unit 403
+837 Princess Street",Kingston,ON,K7L 1G8,,thsu.mpp.co@liberal.ola.org,613-547-2385,,,,Kingston and the Islands,Ontario Liberal Party,,7602,,https://www.ola.org/sites/default/files/member/profile-photo/Ted_Hsu.jpg
+,Ted,Hsu,Legislative office,"Room 421
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,thsu.mpp.co@liberal.ola.org,416-325-0051,416-325-0049,,,Kingston and the Islands,Ontario Liberal Party,,7602,,https://www.ola.org/sites/default/files/member/profile-photo/Ted_Hsu.jpg
+Hon.,Sam,Oosterhoff,Ministry office,"Ministry of Energy and Mines
 10th Floor 
-77 Grenville St.",Toronto,ON,"M7A 2C1",,sam.oosterhoff@pc.ola.org,416-327-6758,,,,"Niagara West","Progressive Conservative Party of Ontario",,7405
-Hon.,Sam,Oosterhoff,"Constituency office","Unit M1
-4961 King St. E",Beamsville,ON,"L0R 1B0",sam.oosterhoffco@pc.ola.org,sam.oosterhoff@pc.ola.org,905-563-1755,905-563-1317,800-665-3697,,"Niagara West","Progressive Conservative Party of Ontario",,7405
-,Joseph,Racinsky,"Constituency office","2nd Floor
-181 St. Andrew St. E",Fergus,ON,"N1M 1P9",,joseph.racinsky@pc.ola.org,519-787-5247,,,,"Wellington—Halton Hills","Progressive Conservative Party of Ontario",,118
-,Teresa,Armstrong,"Constituency office","155 Clarke Rd.",London,ON,"N5W 5C9",tarmstrong-co@ndp.on.ca,,519-668-1104,519-668-1941,,,London—Fanshawe,"New Democratic Party of Ontario",,7183
-,Teresa,Armstrong,"Legislative office","Room 341
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,,416-325-1872,416-325-1912,,,London—Fanshawe,"New Democratic Party of Ontario",,7183
-,Stephanie,Smyth,"Legislative office","Room 444 
-Main Legislative Building, Queen's Park",Toronto,ON,"M7A 1A5",,ssmyth.mpp.co@liberal.ola.org,416-325-3020,416-325-3016,,,"Toronto—St. Paul's","Ontario Liberal Party",,121
-,Stephanie,Smyth,"Constituency office","803 St. Clair Ave. W",Toronto,ON,"M6C 1B9",,ssmyth.mpp.co@liberal.ola.org,416-656-0943,416-656-0875,,,"Toronto—St. Paul's","Ontario Liberal Party",,121
-,Deepak,Anand,"Constituency office","Unit 11
-7895 Tranmere Dr.",Mississauga,ON,"L5S 1V9",,deepak.anandco@pc.ola.org,905-696-0367,905-696-7545,,,Mississauga—Malton,"Progressive Conservative Party of Ontario",,7493
+77 Grenville St.",Toronto,ON,M7A 2C1,,sam.oosterhoff@pc.ola.org,416-327-6758,,,,Niagara West,Progressive Conservative Party of Ontario,,7405,,https://www.ola.org/sites/default/files/member/profile-photo/Sam_Oosterhoff.png
+Hon.,Sam,Oosterhoff,Constituency office,"Unit M1
+4961 King St. E",Beamsville,ON,L0R 1B0,sam.oosterhoffco@pc.ola.org,sam.oosterhoff@pc.ola.org,905-563-1755,905-563-1317,800-665-3697,,Niagara West,Progressive Conservative Party of Ontario,,7405,,https://www.ola.org/sites/default/files/member/profile-photo/Sam_Oosterhoff.png
+,Joseph,Racinsky,Constituency office,"2nd Floor
+181 St. Andrew St. E",Fergus,ON,N1M 1P9,,joseph.racinsky@pc.ola.org,519-787-5247,,,,Wellington—Halton Hills,Progressive Conservative Party of Ontario,,118,,https://www.ola.org/sites/default/files/member/profile-photo/Joseph_Racinsky_0.jpg
+,Teresa,Armstrong,Constituency office,155 Clarke Rd.,London,ON,N5W 5C9,tarmstrong-co@ndp.on.ca,,519-668-1104,519-668-1941,,,London—Fanshawe,New Democratic Party of Ontario,,7183,,https://www.ola.org/sites/default/files/member/profile-photo/teresa_armstrong_0.jpg
+,Teresa,Armstrong,Legislative office,"Room 341
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,,416-325-1872,416-325-1912,,,London—Fanshawe,New Democratic Party of Ontario,,7183,,https://www.ola.org/sites/default/files/member/profile-photo/teresa_armstrong_0.jpg
+,Stephanie,Smyth,Legislative office,"Room 444 
+Main Legislative Building, Queen's Park",Toronto,ON,M7A 1A5,,ssmyth.mpp.co@liberal.ola.org,416-325-3020,416-325-3016,,,Toronto—St. Paul's,Ontario Liberal Party,,121,,https://www.ola.org/sites/default/files/member/profile-photo/Stephanie-Smyth.jpg
+,Stephanie,Smyth,Constituency office,803 St. Clair Ave. W,Toronto,ON,M6C 1B9,,ssmyth.mpp.co@liberal.ola.org,416-656-0943,416-656-0875,,,Toronto—St. Paul's,Ontario Liberal Party,,121,,https://www.ola.org/sites/default/files/member/profile-photo/Stephanie-Smyth.jpg
+,Deepak,Anand,Constituency office,"Unit 11
+7895 Tranmere Dr.",Mississauga,ON,L5S 1V9,,deepak.anandco@pc.ola.org,905-696-0367,905-696-7545,,,Mississauga—Malton,Progressive Conservative Party of Ontario,,7493,,https://www.ola.org/sites/default/files/member/profile-photo/Deepak-Anand.jpg
