@@ -50,6 +50,7 @@ if not GOOGLE_API_KEY:
     logger.critical("GOOGLE_MAPS_API_KEY is not set")
     raise RuntimeError("GOOGLE_MAPS_API_KEY is required")
 
+from photo_urls import resolve_photo_url
 from registry import JurisdictionRegistry
 
 app = Flask(__name__)
@@ -277,7 +278,7 @@ def jurisdiction_detail(slug: str):
             "slug": row[1],
             "name": row[2],
             "party": row[3],
-            "photo_url": row[4],
+            "photo_url": resolve_photo_url(row[4]),
             "role": row[5],
             "district_name": row[6],
             "district_external_id": row[7],
@@ -319,7 +320,7 @@ def representative_detail(jurisdiction_slug: str, rep_slug: str):
         "party": row[3],
         "email": row[4],
         "phone": row[5],
-        "photo_url": row[6],
+        "photo_url": resolve_photo_url(row[6]),
         "website_url": row[7],
         "external_ids": row[8],
     }

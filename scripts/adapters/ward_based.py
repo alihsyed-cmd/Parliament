@@ -8,6 +8,7 @@ this adapter executes spatial queries against the database to answer lookups.
 Used by: Canada federal, Ontario, Toronto, and all future ward-based cities.
 """
 
+from photo_urls import resolve_photo_url
 from typing import Any, Dict, List, Optional
 
 import db
@@ -157,7 +158,7 @@ class WardBasedAdapter(JurisdictionAdapter):
         if phone:
             output["phone"] = phone
         if photo_url:
-            output["photo_url"] = photo_url
+            output["photo_url"] = resolve_photo_url(photo_url)
         if website_url:
             output["website"] = website_url
         if start_date:
@@ -190,7 +191,7 @@ class WardBasedAdapter(JurisdictionAdapter):
         if phone:
             output["phone"] = phone
         if photo_url:
-            output["photo_url"] = photo_url
+            output["photo_url"] = resolve_photo_url(photo_url)
         if website_url:
             output["website"] = website_url
         if start_date:

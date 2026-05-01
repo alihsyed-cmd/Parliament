@@ -24,3 +24,9 @@ Parliament_Roadmap_v3.docx
 # Frontend
 frontend/.next/
 frontend/node_modules/
+
+# Source photos — kept locally; served copy lives in frontend/public/mp-photos/
+data/federal/mp_photos/
+
+# Source photos — kept locally; served copy lives in frontend/public/mp-photos/
+data/federal/mp_photos/
