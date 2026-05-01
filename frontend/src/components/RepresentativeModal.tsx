@@ -48,7 +48,7 @@ export function RepresentativeModal({ member, onClose }: RepresentativeModalProp
               <img
                 src={member.photo_url}
                 alt={`Photo of ${member.name}`}
-                className="w-32 h-32 rounded-md object-cover"
+                className="w-32 h-auto rounded-md"
                 onError={(e) => { e.currentTarget.style.display = "none"; }}
               />
             )}

@@ -50,7 +50,7 @@ export function RepresentativeCard({ representative, showParty }: Representative
             <img
               src={representative.photo_url}
               alt={`Photo of ${representative.name}`}
-              className="w-20 h-20 rounded-md object-cover flex-shrink-0"
+              className="w-20 h-auto rounded-md flex-shrink-0"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
                 const placeholder = e.currentTarget.nextElementSibling as HTMLElement | null;

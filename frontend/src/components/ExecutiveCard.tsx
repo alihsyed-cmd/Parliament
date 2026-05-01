@@ -43,7 +43,7 @@ export function ExecutiveCard({ leader }: ExecutiveCardProps) {
                 <img
                   src={leader.photo_url}
                   alt=""
-                  className="w-14 h-14 rounded-md object-cover flex-shrink-0"
+                  className="w-14 h-auto rounded-md flex-shrink-0"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                     const placeholder = e.currentTarget.nextElementSibling as HTMLElement | null;

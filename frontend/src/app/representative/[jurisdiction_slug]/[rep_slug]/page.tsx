@@ -51,7 +51,7 @@ export default async function RepresentativePage({ params }: PageProps) {
             <PhotoWithFallback
               photoUrl={rep.photo_url}
               alt={`Photo of ${rep.name}`}
-              sizeClass="w-32 h-32"
+              widthClass="w-32"
             />
             <div className="min-w-0 flex-1">
               <h1 className="text-3xl font-semibold tracking-tight mb-2">
