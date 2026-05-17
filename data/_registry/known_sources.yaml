@@ -1,0 +1,189 @@
+# Parliament — Known Sources Registry
+#
+# One entry per (slug, source_type) pair. Used by the agentic pipeline's
+# source discovery stage as ground truth, and grown over time as new
+# jurisdictions are registered.
+#
+# Schema
+# ------
+#   slug            jurisdiction slug, matches jurisdictions.csv
+#   source_type     boundaries | representatives | executive | cabinet | misc | metadata
+#   url             direct URL to the source (page or download)
+#   authority       human-readable name of the issuing government body
+#   format          shapefile | geojson | csv | xml | html | json
+#   notes           free-text context
+#   last_confirmed  YYYY-MM-DD, date this URL was last verified to work
+#
+# Conventions
+# -----------
+# - Prefer the most specific authoritative URL available.
+# - Verify any URL marked "# TODO: verify" by hand before relying on it.
+# - When a URL changes, update last_confirmed.
+# - When a source is retired, move the entry to known_sources_retired.yaml
+#   rather than deleting (audit trail).
+
+sources:
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Federal — Canada
+  # ─────────────────────────────────────────────────────────────────────
+
+  - slug: ca_federal
+    source_type: boundaries
+    url: https://www.elections.ca/content.aspx?section=res&dir=cir/mapsCorner/vector&document=index&lang=e
+    authority: Elections Canada
+    format: shapefile
+    notes: Federal electoral district boundaries. 343-seat model (2023 redistribution). Confirmed working in lookup.py.
+    last_confirmed: 2026-05-16
+
+  - slug: ca_federal
+    source_type: representatives
+    url: https://www.ourcommons.ca/Members/en/search/xml
+    authority: House of Commons of Canada
+    format: xml
+    notes: Current MPs roster. Contains [list of fields actually in the XML]. Contact info (email, phone) not in XML — fetch individual profiles at https://www.ourcommons.ca/Members/en/{name}({id}) using name and id from this feed.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_federal
+    source_type: executive
+    url: https://www.pm.gc.ca/en/about
+    authority: Office of the Prime Minister
+    format: html
+    notes: PM official page. Contains name and official portrait. Bio info present but unstructured. No contact info.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_federal
+    source_type: cabinet
+    url: https://www.pm.gc.ca/en/cabinet
+    authority: Office of the Prime Minister
+    format: html
+    notes: Current federal cabinet ministers, their full title, and title of their Ministry or ministeries they lead.
+    last_confirmed: 2026-05-16
+
+  - slug: ca_federal
+    source_type: misc
+    url: https://www.ourcommons.ca/members/en/house-officers
+    authority: House of Commons of Canada
+    format: html
+    notes: House officers including Speaker, Government and Opposition House Leaders.
+    last_confirmed: 2026-05-16
+
+  - slug: ca_federal
+    source_type: metadata
+    url: https://www.elections.ca/content.aspx?section=ele&dir=cycle&document=index&lang=e
+    authority: Elections Canada
+    format: html
+    notes: Election cycle and rules. Fixed-date election framework (Canada Elections Act s.56.1).
+    last_confirmed: 2026-05-17
+
+  - slug: ca_federal
+    source_type: metadata
+    url: https://www.elections.ca/content.aspx?section=ele&document=index&lang=e
+    authority: Elections Canada
+    format: html
+    notes: Currently scheduled federal elections, by-elections, and referenda. Source of next_election date for jurisdictions.csv.
+    last_confirmed: 2026-05-17
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Provincial — Ontario
+  # ─────────────────────────────────────────────────────────────────────
+
+  - slug: ca_on
+    source_type: boundaries
+    url: https://www.elections.on.ca/en/resource-centre/electoral-districts/current-electoral-district-maps.html
+    authority: Elections Ontario
+    format: shapefile
+    notes: Provincial electoral district boundaries.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on
+    source_type: representatives
+    url: https://www.ola.org/en/members/current
+    authority: Legislative Assembly of Ontario
+    format: html
+    notes: Current MPPs. Roster also available via member search export.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on
+    source_type: executive
+    url: https://www.ontario.ca/page/premier?utm_source=keyword&utm_medium=keyword-url&utm_campaign=premier
+    authority: Government of Ontario
+    format: html
+    notes: Premier page. URL may change between Premiers; pipeline should treat ontario.ca/page/premier-* as the canonical pattern.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on
+    source_type: cabinet
+    url: https://www.ola.org/en/members/current/ministers
+    authority: Legislative Assembly of Ontario
+    format: html
+    notes: Current Ontario cabinet ministers.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on
+    source_type: misc
+    url: https://www.ola.org/en/members/current/composite-list
+    authority: Legislative Assembly of Ontario
+    format: html
+    notes: Opposition leader, critics, party leaders, parliamentary roles.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on
+    source_type: metadata
+    url: https://www.ola.org/en/members/all
+    authority: Legislative Assembly of Ontario
+    format: html
+    notes: Parliament number and start date.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on
+    source_type: metadata
+    url: https://www.ola.org/en/visit-learn/parliament-government/electoral-process-elections-ontario
+    authority: Legislative Assembly of Ontario
+    format: html
+    notes: Election cycle and rules. Electoral district count.
+    last_confirmed: 2026-05-17
+
+  # ─────────────────────────────────────────────────────────────────────
+  # Municipal — Toronto
+  # ─────────────────────────────────────────────────────────────────────
+
+  - slug: ca_on_toronto
+    source_type: boundaries
+    url: https://open.toronto.ca/dataset/city-wards/
+    authority: City of Toronto Open Data Portal
+    format: geojson
+    notes: Ward boundaries. 25-ward model effective since 2018.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on_toronto
+    source_type: representatives
+    url: https://open.toronto.ca/dataset/elected-officials-contact-information/
+    authority: City of Toronto Open Data Portal
+    format: csv
+    notes: Current 25 city councillors with contact info.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on_toronto
+    source_type: executive
+    url: https://www.toronto.ca/city-government/council/office-of-the-mayor/about-mayor/
+    authority: City of Toronto
+    format: html
+    notes: Current mayor profile page.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on_toronto
+    source_type: metadata
+    url: https://www.toronto.ca/city-government/elections/
+    authority: City of Toronto
+    format: html
+    notes: Municipal election dates.
+    last_confirmed: 2026-05-17
+
+  - slug: ca_on_toronto
+    source_type: metadata
+    url: https://www.toronto.ca/city-government/elections/city-elections/election-rules/
+    authority: City of Toronto
+    format: html
+    notes: Election rules and city council structure under City of Toronto Act, 2006.
+    last_confirmed: 2026-05-17
