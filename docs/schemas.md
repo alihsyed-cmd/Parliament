@@ -2,7 +2,8 @@
 
 Canonical column definitions for `jurisdictions.csv` and `politicians.csv`. The agentic pipeline (see `CLAUDE.md`) produces files conforming to these schemas before they are upserted to Supabase.
 
-_Last revised: 2026-05-18 — removed `has_mayor`; `standard_role` enum reduced to 4 values; `specific_title` semantics broadened and abbreviations dropped._
+_Last revised: 2026-05-19 — politicians.csv path updated to slug-flat layout (`data/<slug>/`)._
+_Prior revision 2026-05-18 — removed `has_mayor`; `standard_role` enum reduced to 4 values; `specific_title` semantics broadened and abbreviations dropped._
 
 ---
 
@@ -12,7 +13,7 @@ One row per jurisdiction. The agentic pipeline appends one row per new jurisdict
 
 | Column | Type | Description |
 |---|---|---|
-| `slug` | text | Stable machine-readable identifier. Format: `<country>_<province>_<city>` or `<country>_<province>` or `<country>_federal`. Examples: `ca_federal`, `ca_on`, `ca_on_hamilton`, `ca_bc_vancouver`. Lowercase, underscores only. |
+| `slug` | text | Stable machine-readable identifier. Format: `<country>_<province>_<city>` or `<country>_<province>` or `<country>_federal`. Examples: `ca_federal`, `ca_on`, `ca_on_hamilton`, `ca_bc_vancouver`. Lowercase, underscores only. Also serves as the jurisdiction's folder name under `data/`. |
 | `name_en` | text | Human-readable English name. Examples: "Canada", "Ontario", "Hamilton". |
 | `name_fr` | text | Human-readable French name. Often identical to English for proper nouns. |
 | `level` | text | Enum: `federal`, `provincial`, `municipal`, `state`, `territorial`. |
@@ -44,7 +45,7 @@ One row per jurisdiction. The agentic pipeline appends one row per new jurisdict
 
 ## `politicians.csv` — Schema
 
-One row per politician per role. A politician holding multiple roles (e.g., MP who is also PM who is also a party leader) appears in multiple rows with the same UUID. Lives at `data/<level>/<jurisdiction_dir>/politicians.csv`. The jurisdiction is implied by the file's path (no slug column needed).
+One row per politician per role. A politician holding multiple roles (e.g., MP who is also PM who is also a party leader) appears in multiple rows with the same UUID. Lives at `data/<slug>/politicians.csv`. The jurisdiction is implied by the file's path (no slug column needed inside the file).
 
 | Column | Type | Description |
 |---|---|---|
@@ -66,7 +67,7 @@ One row per politician per role. A politician holding multiple roles (e.g., MP w
 | `website` | text | Official politician page on their government's website. |
 | `photo_url` | text | Direct URL to an official headshot. Must be a hotlinkable image URL, not a page containing the image. |
 | `source_url` | text | URL of the page from which this politician's data was sourced. Used for auditing and freshness verification. |
-| `last_verified` | date (YYYY-MM-DD) | Date the agentic pipeline last confirmed this row's data is accurate. Set on creation; updated on each refresh pass. |
+| `last_verified` | date (YYYY-MM-DD) | Date the agentic pipeline last confirmed this row's data is accurate. Derived from the run_id date portion. Set on creation; updated on each refresh pass. |
 
 **19 columns total.**
 
@@ -101,7 +102,7 @@ Unlike in earlier drafts where this column was reserved for cabinet/committee ti
 
 **One row per role.**
 
-Doug Ford appears in 4 rows in `data/provincial/ontario/politicians.csv`, all sharing his UUID:
+Doug Ford appears in 4 rows in `data/ca_on/politicians.csv`, all sharing his UUID:
 
 | role_scope | standard_role | specific_title | district_id |
 |---|---|---|---|
@@ -119,7 +120,7 @@ Marit Stiles appears in 4 rows, all sharing her UUID:
 | `role` | `misc` | `Leader of the Official Opposition` |
 | `role` | `misc` | `Critic, Intergovernmental Affairs` |
 
-Mark Carney appears in 3 rows in `data/federal/canada/politicians.csv`, all sharing his UUID:
+Mark Carney appears in 3 rows in `data/ca_federal/politicians.csv`, all sharing his UUID:
 
 | role_scope | standard_role | specific_title |
 |---|---|---|

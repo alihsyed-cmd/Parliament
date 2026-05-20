@@ -28,8 +28,15 @@ frontend/node_modules/
 # Source photos — kept locally; served copy lives in frontend/public/mp-photos/
 data/federal/mp_photos/
 
+# Pre-pipeline data, moved out of the canonical tree for reference only
+_archive_pre_pipeline/
+
 # Source photos — kept locally; served copy lives in frontend/public/mp-photos/
 data/federal/mp_photos/
 .DS_Store
 
 .DS_Store
+
+# Pipeline staging — per-run working files, not for version control
+data/_staging/
+
