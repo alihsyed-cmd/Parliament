@@ -1,4 +1,4 @@
-# Parliament — Deferred Work Log
+known# Parliament — Deferred Work Log
 
 Captures known issues, enhancements, and follow-ups that aren't blocking current work but should be addressed at the right time.
 

@@ -40,3 +40,4 @@ data/federal/mp_photos/
 # Pipeline staging — per-run working files, not for version control
 data/_staging/
 
+.DS_Store
