@@ -1,0 +1,50 @@
+run_id: 20260520T041557
+slug: ca_on_hamilton
+generated: 2026-05-20T04:15:57
+sources:
+
+  - source_type: boundaries
+    status: found
+    origin: discovered
+    url: https://open.hamilton.ca/datasets/ward-boundaries
+    authority: City of Hamilton Open Data Portal (Open Hamilton)
+    format: geojson
+    notes: Current ward boundary dataset (15 wards, effective December 1 2018) hosted on the City of Hamilton's official open data portal at open.hamilton.ca. The portal is ArcGIS-based and typically offers Shapefile, GeoJSON, KML, and CSV download options. Acquisition stage should confirm exact formats available at download time.
+    last_confirmed: 2026-05-20
+
+  - source_type: representatives
+    status: found
+    origin: discovered
+    url: https://www.hamilton.ca/city-council/council-committee/city-council-members/city-councillors
+    authority: City of Hamilton
+    format: html
+    notes: Official City of Hamilton page listing all 15 current ward councillors. Individual ward sub-pages follow the pattern /city-councillors/ward-{n} (e.g. /ward-1 through /ward-15). Each sub-page contains the councillor name and contact information. Mayor is listed separately under /mayor-andrea-horwath.
+    last_confirmed: 2026-05-20
+
+  - source_type: executive
+    status: found
+    origin: discovered
+    url: https://www.hamilton.ca/city-council/council-committee/city-council-members/mayor-andrea-horwath
+    authority: City of Hamilton
+    format: html
+    notes: Official City of Hamilton mayoral profile page for the current mayor (Andrea Horwath, elected October 24 2022, took office November 15 2022). Mayor's Office contact information and role description. URL path encodes the current mayor's name and will need updating on mayoral change; the canonical pattern is hamilton.ca/city-council/council-committee/city-council-members/mayor-{name}.
+    last_confirmed: 2026-05-20
+
+  - source_type: cabinet
+    status: not_applicable
+    origin: discovered
+    reason: Hamilton is a municipal government with no cabinet structure; executive authority is vested in the mayor and council collectively through standing committees, not a cabinet of ministers.
+
+  - source_type: misc
+    status: not_applicable
+    origin: discovered
+    reason: Hamilton municipal politics is non-partisan; there are no party leaders, opposition leaders, critics, or parliamentary officers equivalent to those found in federal or provincial legislatures.
+
+  - source_type: metadata
+    status: found
+    origin: discovered
+    url: https://www.hamilton.ca/city-council/municipal-election
+    authority: City of Hamilton
+    format: html
+    notes: Official City of Hamilton municipal election page. Contains next election date (October 26 2026), 15-ward governance structure, 4-year term length, and election framework under Ontario's Municipal Elections Act. Election results archives and by-election results also accessible from this page.
+    last_confirmed: 2026-05-20

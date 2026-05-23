@@ -18,8 +18,7 @@ From the orchestrator:
 Read `sources_approved.yaml`. It contains the six source types, each with a `status`.
 
 - `status: found` → download it (see workflow below).
-- `status: not_applicable` → skip; nothing to download.
-- `status: not_found` → skip; nothing to download.
+- any other status (`not_applicable`, `not_found`, `rejected`, or anything else) → skip; nothing to download.
 
 You download only the directly-named source URL for each `found` source. You do **not** follow, enumerate, or derive sub-pages (e.g., per-ward councillor detail pages, per-member profile pages). Sub-page acquisition is the extraction stage's responsibility, because it requires structural knowledge of the data. Your job ends at the named sources.
 
