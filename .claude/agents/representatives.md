@@ -78,14 +78,14 @@ sleep 2
 
 Assemble rows with the full politicians.csv header. Leave `uuid` blank — reconciliation fills it.
 
-`uuid,role_scope,district_id,district_name_en,district_name_fr,honorific,first_name,last_name,standard_role,specific_title,party_name,date_elected,next_election,phone,email,website,photo_url,source_url,last_verified`
+`uuid,role_scope,district_id,district_name,honorific,first_name,last_name,standard_role,specific_title,party_name,date_elected,next_election,phone,email,website,photo_url,source_url,last_verified`
 
 Field guidance:
 
 - `uuid` — empty (reconciliation computes it).
 - `role_scope` — always `district`.
 - `district_id` — verbatim from `boundary_inventory.yaml` per the sourcing rule above.
-- `district_name_en` / `district_name_fr` — district name; French only if genuinely present, treated as a must-find like other fields (escalate before leaving empty).
+- `district_name` — the district's display name (e.g., "Ward 1", "Etobicoke North"); must-find.
 - `honorific` — the person's title prefix if any; find it before leaving empty.
 - `first_name` / `last_name` — from the boundary file (authoritative). Split full names carefully; preserve accents and exact spelling. When a name is ambiguous to split (compound surnames, middle names, particles like "van der"), prefer keeping the family name intact in `last_name` and flag uncertain splits in your summary.
 - `standard_role` — always `representative`.
@@ -97,7 +97,7 @@ Field guidance:
 - `website` — the representative's official government page; must-find.
 - `photo_url` — a direct, hotlinkable image URL (not a page containing the image); must-find. Verify it points at an image.
 - `source_url` — the primary web source for this person.
-- `last_verified` — the date portion of `run_id` (`YYYY-MM-DD`).
+- `last_verified` — the date portion of the timestamp suffix of `run_id` (the `YYYYMMDD` inside the trailing `_YYYYMMDDTHHMMSS`, formatted `YYYY-MM-DD`).
 
 ### Step 6 — Completeness check
 
@@ -129,7 +129,7 @@ Pages fetched: <count>   (failures: <list or "none">)
 
 Field completeness (filled / total reps):
   honorific <x/n>, party <x/n>, phone <x/n>, email <x/n>, website <x/n>,
-  photo_url <x/n>, district_name_fr <x/n>, date_elected <x/n>
+  photo_url <x/n>, date_elected <x/n>
 
 Fields needing human help (consistently unfindable): <field + what was tried, or "none">
 Conflicts flagged for Gate 2: <e.g. "Ward 3: boundary 'J. Smith' vs page 'John Smith Jr.'" or "none">

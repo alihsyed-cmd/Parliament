@@ -70,7 +70,7 @@ These are handled directly by the orchestrator (the main session), not by any su
 
 At the very start of each pipeline run — after the user names a jurisdiction, before invoking the intake subagent — the orchestrator generates a `run_id`:
 
-- Format: UTC, ISO-8601 compact basic format `YYYYMMDDTHHMMSS` (e.g., `20260519T143000`).
+- Format: `<slug>_<YYYYMMDDTHHMMSS>` — the jurisdiction slug, an underscore, then a UTC ISO-8601 compact timestamp. Example: `ca_on_hamilton_20260519T143000`.
 - One run_id per run. It identifies the run's staging directory and is passed to every subagent that needs it.
 
 ### Staging directory
@@ -85,7 +85,7 @@ Subagents that write intermediate output (source-discovery, acquisition, boundar
 
 ### last_confirmed derivation
 
-Several stages stamp a `last_confirmed` (or `last_verified`) date. This is always the **date portion** of the current run_id, formatted `YYYY-MM-DD`. For run_id `20260519T143000`, that is `2026-05-19`. Every stage derives it the same way so timestamps across a run are internally consistent.
+Several stages stamp a `last_confirmed` (or `last_verified`) date. This is always the **date portion of the timestamp suffix** of the current run_id — the `YYYYMMDD` inside the trailing `_YYYYMMDDTHHMMSS`, formatted `YYYY-MM-DD`. For run_id `ca_on_hamilton_20260519T143000`, that is `2026-05-19`. Every stage derives it the same way so timestamps across a run are internally consistent.
 
 ---
 
@@ -165,6 +165,9 @@ Parliament/
 Both gates are mandatory. They exist to catch source-validity errors (Gate 1) and extraction errors (Gate 2) before bad data is written to the canonical tree, where it would be expensive to detect and correct downstream.
 
 - **Gate 1 — Source validation.** Appears after source discovery. The orchestrator presents each candidate source with URL, authority, format, and origin (registry-cached with date, or newly discovered). The user approves, rejects, or substitutes per source. After the user finalizes their decisions, the orchestrator writes the approved set to data/_staging/<run_id>/sources_approved.yaml, preserving the same structure as sources.yaml. Every source type from sources.yaml appears in the approved file with its outcome: approved sources carry their final URL and status: found; substituted sources carry the user-provided URL and status: found; rejected sources are retained with status: rejected and a one-line reason; not_applicable and not_found types carry through unchanged. This file — not the raw sources.yaml — is the input to acquisition (stage 4).
-- **Gate 2 — Pre-write review.** Appears after validation. The orchestrator presents row counts vs. expected, validation pass/fail per check, and (for refresh runs) a row-level diff summary (N added, M removed, K changed) rather than the full table. The user approves or sends back to an earlier stage.
+
+- **Gate 2 — Pre-write review.** Appears after validation, before the writer (stage 10) runs. The orchestrator presents the validation report and any reconciliation conflicts as a clean numbered list — one line per issue, brief: each item is a number, the issue type (hard failure / warning / conflict), and a one-sentence description. Do not dump the full validation report or detailed context per item; the full detail lives in data/_staging/<run_id>/validation_report.yaml and the user can ask for specifics or read it directly. After the list, state the overall verdict (PASS / PASS WITH WARNINGS / FAIL) and, for refresh runs, a row-level diff summary (N added, M removed, K changed).
+The user then either: (a) approves — the data is written as-is; (b) corrects and approves — the user edits the staged reconciled/politicians.csv (and/or extracted/jurisdiction.csv) directly to resolve flagged issues or confirm a legitimately-empty cell, then approves; or (c) rejects — the run is sent back to an earlier stage or halted.
+On approval, the orchestrator writes data/_staging/<run_id>/write_approved.yaml (recording the approved run_id and approval timestamp). The writer (stage 10) refuses to run unless this file exists. Hard failures should not be approved without the user having resolved them in the staged files first; if the user approves over unresolved hard failures, record that explicit override in write_approved.yaml.
 
 If the user asks the orchestrator to skip a gate or "just run the whole thing without stopping," explain why the gate exists and proceed normally with the gate in place. Skipping risks silently writing wrong data to the canonical tree.

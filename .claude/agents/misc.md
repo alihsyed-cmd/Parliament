@@ -28,7 +28,7 @@ Out of scope: anything that only appears on a party's own website or a non-gover
 ## What a misc row is
 
 - `role_scope` — always `role`.
-- `district_id`, `district_name_en`, `district_name_fr` — empty.
+- `district_id`, `district_name` — empty.
 - `standard_role` — always `misc`.
 - `specific_title` — the full role description, unabbreviated. Examples: `Leader of the Official Opposition`; `Leader of the New Democratic Party of Ontario`; `Government House Leader`; `Speaker of the Legislative Assembly`; `Parliamentary Assistant to the Attorney General`; `Member, Standing Committee on Justice Policy`; `Critic, Health`.
 
@@ -61,7 +61,7 @@ Fetch pages with curl, sequentially: one at a time, `sleep 2` between requests, 
 Assemble rows with the full `politicians.csv` header from `docs/schemas.md`. Leave `uuid` blank.
 
 - `role_scope` — `role`.
-- `district_id` / `district_name_en` / `district_name_fr` — empty.
+- `district_id` / `district_name` — empty.
 - `honorific` — title prefix if any; find it before leaving empty.
 - `first_name` / `last_name` — preserve accents and exact spelling; consistent with official spelling for reconciliation matching.
 - `standard_role` — `misc`.
@@ -73,7 +73,7 @@ Assemble rows with the full `politicians.csv` header from `docs/schemas.md`. Lea
 - `website` — the person's official government page; must-find.
 - `photo_url` — a direct, hotlinkable image URL (not a page containing the image); must-find. Verify it points at an image.
 - `source_url` — the official page the role was sourced from.
-- `last_verified` — the date portion of `run_id` (`YYYY-MM-DD`).
+- `last_verified` — the date portion of the timestamp suffix of `run_id` (the `YYYYMMDD` inside the trailing `_YYYYMMDDTHHMMSS`, formatted `YYYY-MM-DD`).
 
 ## Write the output
 

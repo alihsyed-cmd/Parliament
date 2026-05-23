@@ -58,7 +58,7 @@ If you fetch additional pages, do so with curl, sequentially, with courtesy: one
 Assemble one row with the full `politicians.csv` header from `docs/schemas.md`. Leave `uuid` blank. Field guidance:
 
 - `role_scope` — always `role`.
-- `district_id`, `district_name_en`, `district_name_fr` — empty (the executive is jurisdiction-wide).
+- `district_id`, `district_name` — empty (the executive is jurisdiction-wide).
 - `honorific` — the title prefix if any (e.g., `Hon.`, `Right Hon.`); find it before leaving empty.
 - `first_name` / `last_name` — from the official page; preserve accents and exact spelling; split carefully and flag uncertain splits.
 - `standard_role` — always `executive`.
@@ -70,7 +70,7 @@ Assemble one row with the full `politicians.csv` header from `docs/schemas.md`. 
 - `website` — the official page for the head of government; must-find.
 - `photo_url` — a direct, hotlinkable image URL (not a page containing the image); must-find. Verify it points at an image.
 - `source_url` — the official page this row was sourced from.
-- `last_verified` — the date portion of `run_id` (`YYYY-MM-DD`).
+- `last_verified` — the date portion of the timestamp suffix of `run_id` (the `YYYYMMDD` inside the trailing `_YYYYMMDDTHHMMSS`, formatted `YYYY-MM-DD`).
 
 ## Write the output
 

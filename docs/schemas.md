@@ -14,32 +14,26 @@ One row per jurisdiction. The agentic pipeline appends one row per new jurisdict
 | Column | Type | Description |
 |---|---|---|
 | `slug` | text | Stable machine-readable identifier. Format: `<country>_<province>_<city>` or `<country>_<province>` or `<country>_federal`. Examples: `ca_federal`, `ca_on`, `ca_on_hamilton`, `ca_bc_vancouver`. Lowercase, underscores only. Also serves as the jurisdiction's folder name under `data/`. |
-| `name_en` | text | Human-readable English name. Examples: "Canada", "Ontario", "Hamilton". |
-| `name_fr` | text | Human-readable French name. Often identical to English for proper nouns. |
+| `name` | text | Human-readable English name. Examples: "Canada", "Ontario", "Hamilton". |
 | `level` | text | Enum: `federal`, `provincial`, `municipal`, `state`, `territorial`. |
 | `country_code` | text | ISO 3166-1 alpha-2 code. Examples: `CA`, `US`, `DE`. |
 | `province_code` | text | ISO 3166-2 subdivision code. Examples: `ON`, `BC`, `QC`. Empty for federal jurisdictions. |
 | `parent_slug` | text | For nested jurisdictions (e.g., Montreal boroughs nested inside Montreal). Empty for top-level jurisdictions. |
 | `governance_type` | text | Enum: `ward_based`, `at_large`, `nested_borough`, `consensus`. Describes the structural model. |
 | `partisan` | boolean | `true` if politicians at this level have party affiliations. `false` for non-partisan systems (most Canadian municipal). |
-| `district_term_en` | text | English label for districts at this level. Examples: "Ward", "Riding", "Borough". |
-| `district_term_fr` | text | French equivalent. Examples: "Quartier", "Circonscription", "Arrondissement". |
-| `role_label_singular_en` | text | English singular form of the district-rep role. Examples: "Councillor", "MP", "MPP". |
-| `role_label_plural_en` | text | English plural. Examples: "Councillors", "MPs", "MPPs". |
-| `role_label_singular_fr` | text | French singular. Examples: "Conseiller", "député", "député provincial". |
-| `role_label_plural_fr` | text | French plural. Examples: "Conseillers", "députés", "députés provinciaux". |
+| `district_term` | text | Label for districts at this level. Examples: "Ward", "Riding", "Borough". |
+| `role_label_singular` | text | Singular form of the district-rep role. Examples: "Councillor", "MP", "MPP". |
+| `role_label_plural` | text | Plural form. Examples: "Councillors", "MPs", "MPPs". |
 | `expected_district_count` | integer | Total number of districts this jurisdiction is divided into. Used for validation against actual loaded data. Examples: 25 (Toronto), 343 (federal), 15 (Hamilton), 124 (Ontario). |
-| `expected_cabinet_count` | integer | Total number of role-scoped positions expected (Mayor + cabinet ministers, or Premier + cabinet, or PM + cabinet). For Toronto: 1. For Ontario: 42. For federal: 38. For Hamilton: 1. |
 | `last_election` | date (YYYY-MM-DD) | Date of the most recent election that determined the current officeholders. Used as a fallback when individual politician `date_elected` values are missing. |
 | `election_date_set` | boolean | `true` if `next_election` is a hard, scheduled date. `false` if it's an estimate based on `term_duration_years`. |
 | `next_election` | date (YYYY-MM-DD) | Next scheduled election date. Empty if `election_date_set` is `false`. |
 | `term_duration_years` | integer | Length of an elected term. Used to estimate next election when `election_date_set` is false. Examples: 4 (most Canadian jurisdictions), 2 (US House). |
-| `governance_summary_en` | text | A 1-3 sentence English explanation of how this jurisdiction's government is organized. Example: "Hamilton voters elect a mayor and 15 city councillors who together form the 16-member city council. The mayor is elected city-wide; each councillor represents one of 15 wards." |
-| `governance_summary_fr` | text | French equivalent of `governance_summary_en`. |
+| `governance_summary` | text | A 1-3 sentence explanation of how this jurisdiction's government is organized. Example: "Hamilton voters elect a mayor and 15 city councillors who together form the 16-member city council. The mayor is elected city-wide; each councillor represents one of 15 wards." |
 | `boundary_file` | text | Filename of the boundary file in the jurisdiction's data folder. Examples: `Ward_Boundaries.shp`, `wards.geojson`. The register script reads this to know which file to ingest. |
 | `boundary_district_id_column` | text | Name of the column in the boundary file that contains the district identifier. Examples: `WARD`, `AREA_SHORT_CODE`, `RIDING_NAME`. Must match values found in `politicians.csv`'s `district_id` column. |
 
-**25 columns total.**
+**19 columns total.**
 
 ---
 
@@ -52,8 +46,7 @@ One row per politician per role. A politician holding multiple roles (e.g., MP w
 | `uuid` | UUID | Stable identifier for this politician *within this jurisdiction*. Generated deterministically (UUID5) from `<slug>\|<first_name>\|<last_name>` so re-runs produce the same UUID for the same person. The same person holding multiple roles within one jurisdiction uses the same UUID across all their rows. See "UUID generation" below for rationale and known limitations. |
 | `role_scope` | text | Enum: `district` or `role`. `district` for politicians who represent a geographic area (MP, MPP, Councillor). `role` for politicians who hold a jurisdiction-wide position (Mayor, Premier, PM, cabinet minister, party leader, opposition leader, critic). |
 | `district_id` | text | When `role_scope` is `district`: the identifier matching the boundary file's district ID column. Examples: `WARD 1`, `Humber River—Black Creek`, `7`. Empty when `role_scope` is `role`. |
-| `district_name_en` | text | Human-readable English name of the district. Examples: "Ward 1", "Humber River—Black Creek". Empty for role-scoped politicians. |
-| `district_name_fr` | text | French equivalent. Often identical for proper nouns; localized for generic terms like "Quartier 1". Empty for role-scoped politicians. |
+| `district_name` | text | Human-readable name of the district. Examples: "Ward 1", "Humber River—Black Creek". Empty for role-scoped politicians. |
 | `honorific` | text | Title prefix. Examples: `Hon.`, `Right Hon.`, `Dr.`, `Mr.`, `Ms.`. Empty if none. |
 | `first_name` | text | Given name(s). |
 | `last_name` | text | Family name. |
@@ -69,7 +62,7 @@ One row per politician per role. A politician holding multiple roles (e.g., MP w
 | `source_url` | text | URL of the page from which this politician's data was sourced. Used for auditing and freshness verification. |
 | `last_verified` | date (YYYY-MM-DD) | Date the agentic pipeline last confirmed this row's data is accurate. Derived from the run_id date portion. Set on creation; updated on each refresh pass. |
 
-**19 columns total.**
+**18 columns total.**
 
 ---
 

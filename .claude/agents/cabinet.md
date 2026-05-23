@@ -31,7 +31,7 @@ You do not read the boundary file. Cabinet ministers hold jurisdiction-wide port
 A cabinet row is a role-scoped position:
 
 - `role_scope` — always `role`.
-- `district_id`, `district_name_en`, `district_name_fr` — empty (a portfolio is not a district).
+- `district_id`, `district_name` — empty (a portfolio is not a district).
 - `standard_role` — always `cabinet`.
 - `specific_title` — the full official portfolio, unabbreviated (`Minister of Health`, `Deputy Premier`, `Minister of Intergovernmental Affairs`).
 
@@ -64,7 +64,7 @@ Fetch sub-pages with curl, sequentially: one at a time, `sleep 2` between reques
 Assemble rows with the full `politicians.csv` header from `docs/schemas.md`. Leave `uuid` blank.
 
 - `role_scope` — `role`.
-- `district_id` / `district_name_en` / `district_name_fr` — empty.
+- `district_id` / `district_name` — empty.
 - `honorific` — title prefix if any (`Hon.` is common for ministers); find it before leaving empty.
 - `first_name` / `last_name` — preserve accents and exact spelling; split carefully and flag uncertain splits. Render names consistently with how official sources spell them, so reconciliation can match this minister to their representative/executive rows.
 - `standard_role` — `cabinet`.
@@ -76,7 +76,7 @@ Assemble rows with the full `politicians.csv` header from `docs/schemas.md`. Lea
 - `website` — the minister's official government page; must-find.
 - `photo_url` — a direct, hotlinkable image URL (not a page containing the image); must-find. Verify it points at an image.
 - `source_url` — the official page this row was sourced from.
-- `last_verified` — the date portion of `run_id` (`YYYY-MM-DD`).
+- `last_verified` — the date portion of the timestamp suffix of `run_id` (the `YYYYMMDD` inside the trailing `_YYYYMMDDTHHMMSS`, formatted `YYYY-MM-DD`).
 
 ## Write the output
 
