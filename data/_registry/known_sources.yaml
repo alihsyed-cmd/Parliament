@@ -297,3 +297,43 @@ ca_on_ottawa:
   notes: >
     Official 2026 Municipal Election page. Confirmed election date of Monday October 26, 2026; 2026–2030 council term starting November 15, 2026; references 2025 ward boundary review affecting ward count. Current term is 2022–2026. 10-ward structure with mayor and 10 councillors each serving 4-year terms.
   last_confirmed: '2026-05-26'
+- slug: ca_on_brantford
+  source_type: boundaries
+  url: https://brantfordopendata-brantford.hub.arcgis.com/
+  authority: City of Brantford Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: >-
+    Official City of Brantford open data portal, URL confirmed on brantford.ca/en/your-government/open-data.aspx. Portal page confirms ward boundaries dataset is available in GeoJSON, shapefile, and KML formats.
+  last_confirmed: '2026-05-28'
+- slug: ca_on_brantford
+  source_type: representatives
+  url: https://www.brantford.ca/en/your-government/city-council.aspx
+  authority: City of Brantford
+  format: html
+  notes: >-
+    Official city council listing page. Confirmed 10 councillors (2 per ward, 5 wards) for the 2022-2026 term with names, phone numbers, email addresses, and biographical details. Mayor and all ward councillors listed.
+  last_confirmed: '2026-05-28'
+- slug: ca_on_brantford
+  source_type: executive
+  url: https://www.brantford.ca/en/your-government/about-mayor-kevin-davis.aspx
+  authority: City of Brantford
+  format: html
+  notes: >-
+    Official profile page for Mayor Kevin Davis (50th Mayor, re-elected October 24, 2022). Contains name, photo, biography, and general city contact number (519-759-4150).
+  last_confirmed: '2026-05-28'
+- slug: ca_on_brantford
+  source_type: misc
+  url: https://www.brantford.ca/en/your-government/mayoral-decisions.aspx
+  authority: City of Brantford
+  format: html
+  notes: >-
+    Official Mayoral Decisions page. Confirmed Mayoral Decision 08-2025 (August 1, 2025) appointing Rose Sicoli (Ward 1 Councillor) as Deputy Mayor for External Relations, subsequently amended by Mayoral Decision 12-2025 (November 25, 2025).
+  last_confirmed: '2026-05-28'
+- slug: ca_on_brantford
+  source_type: metadata
+  url: https://www.brantford.ca/en/your-government/city-council.aspx
+  authority: City of Brantford
+  format: html
+  notes: >-
+    City council page confirms governance structure — 5 wards, 2 councillors per ward (10 total), 4-year term, 2022-2026 current term, elected October 24, 2022. For 2026 election date, see also brantford.ca/en/your-government/municipal-election.aspx which confirms October 26, 2026 as the next municipal election date.
+  last_confirmed: '2026-05-28'

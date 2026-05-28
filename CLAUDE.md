@@ -53,12 +53,14 @@ For refresh runs, prior contents of the jurisdiction folder are archived to `dat
 | 8 | Validation | `validation` subagent | Programmatic checks: row counts, district_id match, photo URL probes, encoding, types |
 | 9 | **HITL Gate 2** | **Orchestrator** | Present validation summary + diff for human approval |
 | 10 | Write to canonical tree | `writer` subagent | Archive prior data (if refresh); write new files; append jurisdiction row; append validated sources to registry |
+| — | Migration (post-pipeline) | `export` subagent | Upsert the jurisdiction row to Supabase; delete-then-insert its politicians; load the boundary file as PostGIS district geometry — all in one transaction. Not one of the ten pre-migration stages; runs after writer succeeds. |
 
 ### Orchestration rules
 
 - Between every stage, the orchestrator pauses with a brief summary and waits for the user's next prompt. This applies to every stage transition, not only the two named HITL gates.
 - Subagents never invoke other subagents (Claude Code constraint and intentional design).
 - Stages 1–9 write only within `data/_staging/<run_id>/`. Stage 10 is the only stage that touches the canonical `data/<slug>/` tree or `data/jurisdictions.csv`.
+- After writer (stage 10) succeeds, the orchestrator automatically invokes the `export` subagent for the same slug to migrate the canonical data to Supabase — no separate prompt or gate. Export is also invokable directly (outside a pipeline run) to (re-)sync an already-registered jurisdiction; it reads the canonical tree, not staging, and needs only the slug. Export is the sole stage that writes to the remote database; it writes nothing to the local tree.
 
 ---
 
@@ -122,7 +124,6 @@ These apply to every CSV the pipeline writes. Full column definitions live in `d
 - **Missing data:** Empty cells. Never `null`, `N/A`, `unknown`, or any placeholder string.
 - **UUIDs:** Deterministic UUID5 from `<slug>|<first_name>|<last_name>` (NFC-normalized, lowercased, stripped). The same person produces the same UUID across re-runs and across every row they appear in within a jurisdiction.
 - **One row per role.** A politician holding multiple roles (e.g., MP + PM + cabinet minister + party leader) appears in multiple rows sharing one UUID.
-- **Canonical slug column.** Writer appends a 19th slug column to politicians.csv when writing to the canonical tree — a per-person URL key, stable across refreshes. It is not part of the extraction/reconciliation schema; staged files carry 18 columns. See docs/schemas.md and writer.md.
 
 ---
 
