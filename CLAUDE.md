@@ -122,6 +122,7 @@ These apply to every CSV the pipeline writes. Full column definitions live in `d
 - **Missing data:** Empty cells. Never `null`, `N/A`, `unknown`, or any placeholder string.
 - **UUIDs:** Deterministic UUID5 from `<slug>|<first_name>|<last_name>` (NFC-normalized, lowercased, stripped). The same person produces the same UUID across re-runs and across every row they appear in within a jurisdiction.
 - **One row per role.** A politician holding multiple roles (e.g., MP + PM + cabinet minister + party leader) appears in multiple rows sharing one UUID.
+- **Canonical slug column.** Writer appends a 19th slug column to politicians.csv when writing to the canonical tree — a per-person URL key, stable across refreshes. It is not part of the extraction/reconciliation schema; staged files carry 18 columns. See docs/schemas.md and writer.md.
 
 ---
 

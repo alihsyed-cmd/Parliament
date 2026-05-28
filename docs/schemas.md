@@ -63,7 +63,8 @@ One row per politician per role. A politician holding multiple roles (e.g., MP w
 | `last_verified` | date (YYYY-MM-DD) | Date the agentic pipeline last confirmed this row's data is accurate. Derived from the run_id date portion. Set on creation; updated on each refresh pass. |
 
 **18 columns total.**
-
+slug — canonical-only 19th column.
+Canonical data/<slug>/politicians.csv carries one column beyond the 18 above: slug, a per-person URL/routing key (e.g. tom-rakocevic, anne-obrien) appended by the writer subagent at stage 10. It is not extraction or reconciliation output — staged files (extracted/, reconciled/) never contain it, and validation (stage 8) correctly checks staged files for 18 columns. It is jurisdiction-scoped, shared by all rows of one uuid, and preserved verbatim across refreshes. Consumers of canonical files (the lookup engine, the export agent) should expect 19 columns. For the generation algorithm see writer.md, "Slug generation."
 ---
 
 ## Notes for the Agentic Pipeline Builder
