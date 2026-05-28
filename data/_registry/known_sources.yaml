@@ -337,3 +337,34 @@ ca_on_ottawa:
   notes: >-
     City council page confirms governance structure — 5 wards, 2 councillors per ward (10 total), 4-year term, 2022-2026 current term, elected October 24, 2022. For 2026 election date, see also brantford.ca/en/your-government/municipal-election.aspx which confirms October 26, 2026 as the next municipal election date.
   last_confirmed: '2026-05-28'
+
+
+- slug: ca_on_brant
+  source_type: representatives
+  url: https://www.brant.ca/council-and-county-administration/council-and-committees/mayor-and-councillors/
+  authority: County of Brant
+  format: html
+  notes: >-
+    Official Mayor and Councillors page listing Mayor David Bailey plus 10 ward
+    councillors (2 per ward, 5 wards). Each entry includes name, phone number,
+    email address, and ward designation.
+  last_confirmed: '2026-05-28'
+- slug: ca_on_brant
+  source_type: executive
+  url: https://www.brant.ca/council-and-county-administration/council-and-committees/mayor-and-councillors/
+  authority: County of Brant
+  format: html
+  notes: >-
+    Mayor David Bailey's name, phone, email, and office address on the Mayor and
+    Councillors page. Same URL as representatives source.
+  last_confirmed: '2026-05-28'
+- slug: ca_on_brant
+  source_type: metadata
+  url: https://www.brant.ca/elections
+  authority: County of Brant
+  format: html
+  notes: >-
+    Official 2026 Municipal and School Board Elections page. Confirms election
+    date of Monday, October 26, 2026; 5-ward structure with 2 councillors per
+    ward (10 councillors total plus Mayor).
+  last_confirmed: '2026-05-28'
