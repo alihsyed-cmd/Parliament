@@ -368,3 +368,847 @@ ca_on_ottawa:
     date of Monday, October 26, 2026; 5-ward structure with 2 councillors per
     ward (10 councillors total plus Mayor).
   last_confirmed: '2026-05-28'
+
+- slug: ca_on_guelph
+  source_type: boundaries
+  url: https://geodatahub-cityofguelph.opendata.arcgis.com/datasets/ward-boundary-map
+  authority: City of Guelph Open Data (ArcGIS Hub)
+  format: geojson
+  notes: >
+    Official City of Guelph open data portal (ArcGIS Hub). Ward Boundary Map dataset confirmed via web search showing cityofguelph-namespaced dataset URL. ArcGIS Hub portals offer GeoJSON, shapefile, and KML downloads; acquisition stage should select GeoJSON. Portal also has a legacy CKAN instance at data.open.guelph.ca/dataset/guelph-wards but it appears to be offline or deprecated.
+  last_confirmed: '2026-05-29'
+- slug: ca_on_guelph
+  source_type: representatives
+  url: https://guelph.ca/city-government/mayor-and-council/city-council/
+  authority: City of Guelph
+  format: html
+  notes: >
+    Official City of Guelph city council page. Web search confirmed this page lists all current councillors by ward (6 wards, 2 councillors each, 12 councillors total) for the 2022-2026 term, with contact details. guelph.ca was rate-limiting at time of discovery; URL confirmed official via search results directly citing this page.
+  last_confirmed: '2026-05-29'
+- slug: ca_on_guelph
+  source_type: executive
+  url: https://guelph.ca/city-hall/mayor-and-council/mayors-office/
+  authority: City of Guelph
+  format: html
+  notes: >
+    Official Mayor's Office page for the City of Guelph. Web search confirmed Mayor Cam Guthrie (re-elected 2022) is identified on this page with name, photo, and contact information (519-837-5643, mayor@guelph.ca). guelph.ca was rate-limiting at time of discovery; URL confirmed official via search results.
+  last_confirmed: '2026-05-29'
+- slug: ca_on_guelph
+  source_type: metadata
+  url: https://guelph.ca/city-hall/mayor-and-council/municipal-elections/
+  authority: City of Guelph
+  format: html
+  notes: >
+    Official 2026 Municipal and School Board Election page. Web search confirmed this page documents the 2026 election date (October 26, 2026), advance voting (October 10-18), nomination period (May 1 to August 21, 2026), and council structure (Mayor elected at-large, 12 councillors elected by ward, 6 wards with 2 councillors each, 4-year terms). guelph.ca was rate-limiting at time of discovery; URL confirmed official via search results.
+  last_confirmed: '2026-05-29'
+
+- slug: ca_on_chatham_kent
+  source_type: representatives
+  url: https://www.chatham-kent.ca/localgovernment/councillors/Pages/Councillors-by-Ward.aspx
+  authority: Municipality of Chatham-Kent
+  format: html
+  notes: >-
+    Official councillors listing page. Current term (2022-2026) has 17 councillors across 6 wards.
+  last_confirmed: '2026-05-29'
+- slug: ca_on_chatham_kent
+  source_type: executive
+  url: https://www.chatham-kent.ca/localgovernment/mayor/Pages/Mayor-Darrin-Canniff.aspx
+  authority: Municipality of Chatham-Kent
+  format: html
+  notes: >-
+    Official Mayor Darrin Canniff profile page. Contact: CKmayor@chatham-kent.ca, 519-436-3219.
+  last_confirmed: '2026-05-29'
+- slug: ca_on_chatham_kent
+  source_type: metadata
+  url: https://www.chatham-kent.ca/localgovernment/elections/Pages/2026-Municipal-Election.aspx
+  authority: Municipality of Chatham-Kent
+  format: html
+  notes: >-
+    2026 Municipal Election page. Confirms election date October 26, 2026; current 6-ward / 17-councillor structure for 2022-2026 term.
+  last_confirmed: '2026-05-29'
+
+- slug: ca_on_peterborough
+  source_type: boundaries
+  url: https://data-ptbo.opendata.arcgis.com/datasets/ward
+  authority: City of Peterborough GIS Open Data Portal
+  format: geojson
+  notes: >
+    Official City of Peterborough GIS Open Data portal (data-ptbo.opendata.arcgis.com), linked from peterborough.ca/council-city-hall/open-data/. Dataset titled "Ward" — description confirms "Ward Boundary file contains administrative districts of the City of Peterborough represented by councilors." ArcGIS Hub portals offer GeoJSON, shapefile, and KML downloads; acquisition stage should select GeoJSON. 5-ward model corresponding to the current council.
+  last_confirmed: '2026-05-30'
+- slug: ca_on_peterborough
+  source_type: representatives
+  url: https://www.peterborough.ca/council-city-hall/mayor-and-council/
+  authority: City of Peterborough
+  format: html
+  notes: >
+    Official Mayor and Council page on peterborough.ca. Confirmed to list Mayor Jeff Leal and all 10 ward councillors across 5 wards (2 councillors per ward): Ward 1 Otonabee (Kevin Duguay, Lesley Parnell), Ward 2 Monaghan (Matt Crowley, Don Vassiliadis), Ward 3 Town (Alex Bierk, Joy Lachica), Ward 4 Ashburnham (Gary Baldwin, Keith Riel), Ward 5 Northcrest (Andrew Beamer, Dave Haacke). Deputy Mayor designations noted (Gary Baldwin — First Deputy Mayor; Joy Lachica — Second Deputy Mayor).
+  last_confirmed: '2026-05-30'
+- slug: ca_on_peterborough
+  source_type: executive
+  url: https://www.peterborough.ca/council-city-hall/mayor-and-council/mayors-office/
+  authority: City of Peterborough
+  format: html
+  notes: >
+    Official Mayor's Office page on peterborough.ca. Confirmed current Mayor Jeff Leal with contact details: phone 705-742-7777 ext. 1870, email mayor@peterborough.ca, office at City Hall, 500 George St. N., Peterborough, Ontario, K9H 3R9.
+  last_confirmed: '2026-05-30'
+- slug: ca_on_peterborough
+  source_type: metadata
+  url: https://www.peterborough.ca/council-city-hall/elections/
+  authority: City of Peterborough
+  format: html
+  notes: >
+    Official Elections page on peterborough.ca. Confirmed next municipal and school board election date: Monday, October 26, 2026. Council structure (5 wards, 2 councillors per ward, 10 councillors total, plus Mayor elected at-large) confirmed from the Mayor and Council page at the same domain. 4-year term consistent with Ontario municipal election cycle under the Municipal Elections Act.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_bc
+  source_type: boundaries
+  url: https://elections.bc.ca/resources/maps/gis-spatial-data/
+  authority: Elections BC (Office of the Chief Electoral Officer of British Columbia)
+  format: shapefile
+  notes: >
+    Official Elections BC GIS Spatial Data page. Links to BC Geographic Data Warehouse / BC Data Catalogue for downloadable electoral district boundary files. Available formats include shapefile and KML. Covers all 93 provincial electoral districts established by the 2023 Electoral Boundaries Commission (in effect for the 2024 general election).
+  last_confirmed: '2026-05-29'
+
+- slug: ca_bc
+  source_type: representatives
+  url: https://www.leg.bc.ca/members
+  authority: Legislative Assembly of British Columbia
+  format: html
+  notes: >
+    Official MLA roster hub on the Legislative Assembly website (leg.bc.ca). Directory pages include Find MLA by Constituency, Find MLA by Community, MLA Contact Information (name + email table), and Current Party Standings. 93 MLAs as of the 43rd Parliament (elected October 19, 2024). Individual MLA profile pages linked from directory.
+  last_confirmed: '2026-05-29'
+
+- slug: ca_bc
+  source_type: executive
+  url: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/office-of-the-premier
+  authority: Government of British Columbia — Office of the Premier
+  format: html
+  notes: >
+    Official Office of the Premier page on gov.bc.ca. Confirms current Premier as the Honourable David Eby (37th Premier, since November 18, 2022). Includes name, photo, phone (250-387-1715), fax, email (premier@gov.bc.ca), and mailing address. Describes Premier as head of government and chief officer of the executive branch.
+  last_confirmed: '2026-05-29'
+
+- slug: ca_bc
+  source_type: cabinet
+  url: https://www2.gov.bc.ca/gov/content/governments/organizational-structure/cabinet/cabinet-ministers
+  authority: Government of British Columbia
+  format: html
+  notes: >
+    Official Executive Council and Parliamentary Secretaries page on gov.bc.ca. Last updated January 28, 2026. Lists 33 Executive Council members (Cabinet ministers) and 15 Parliamentary Secretaries with name, title, photo, biography link, mandate letter (PDF), and contact email per minister.
+  last_confirmed: '2026-05-29'
+
+- slug: ca_bc
+  source_type: misc
+  url: https://www.leg.bc.ca/learn/discover-your-legislature/mlas/house-leaders
+  authority: Legislative Assembly of British Columbia
+  format: html
+  notes: >
+    Official Legislative Assembly pages covering parliamentary roles beyond cabinet. House Leaders page (this URL) identifies Government House Leader Mike Farnworth and explains all three House Leader roles. Companion pages at leg.bc.ca/learn/discover-your-legislature/mlas/opposition/leaders-of-opposition-parties (Opposition Leaders — Trevor Halford named as Official Opposition Leader) and leg.bc.ca/about/speaker (Speaker — Raj Chouhan named as current Speaker). Also leg.bc.ca/members/current-party-standings for party standings by caucus.
+  last_confirmed: '2026-05-29'
+
+- slug: ca_bc
+  source_type: metadata
+  url: https://www.leg.bc.ca/learn/discover-your-legislature/about-the-legislative-assembly/bcs-electoral-process/bc-elections
+  authority: Legislative Assembly of British Columbia
+  format: html
+  notes: >
+    Official BC Elections overview page on leg.bc.ca. Describes fixed-date election framework (general elections on the third Saturday in October every four years, established by the Constitution (Fixed Election Dates) Amendment Act, SBC 2001 c.36 — BC was first Canadian province to adopt fixed election dates). Next election on or before October 2028. Covers Westminster parliamentary governance structure, 93-seat legislature, and election scenarios (fixed-date, early dissolution, by-elections).
+  last_confirmed: '2026-05-29'
+
+
+- slug: ca_on_norfolk_county
+  source_type: boundaries
+  url: https://opendata.norfolkcounty.ca/datasets/wards
+  authority: Norfolk County Open Data Portal (GIS)
+  format: geojson
+  notes: >
+    Official Norfolk County GIS Open Data portal, linked directly from norfolkcounty.ca/home-property-and-neighbourhood/maps-and-data/open-data/. Dataset titled "Wards" confirmed via site-search (opendata.norfolkcounty.ca/datasets/wards). Portal returns HTTP 403 on automated fetch but dataset existence and official provenance are confirmed by both the norfolkcounty.ca open-data index page and direct Google site: search showing the Wards dataset page. ArcGIS-style portal; acquisition stage should select GeoJSON download. 7-ward model.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_norfolk_county
+  source_type: representatives
+  url: https://www.norfolkcounty.ca/council-administration-and-government/council/council-members/
+  authority: Norfolk County
+  format: html
+  notes: >
+    Official Council Members page listing Mayor Amy Martin and all eight ward councillors (Wards 1-7; Ward 5 has two seats). Each entry includes phone and email. Current term November 15, 2022 to November 15, 2026.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_norfolk_county
+  source_type: executive
+  url: https://www.norfolkcounty.ca/council-administration-and-government/council/council-members/
+  authority: Norfolk County
+  format: html
+  notes: >
+    Mayor Amy Martin listed on the official Council Members page along with ward councillors. Contact: 519-426-5870 ext. 1248, amy.martin@norfolkcounty.ca. No separate dedicated mayor profile page exists; same URL serves both representatives and executive source types.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_norfolk_county
+  source_type: metadata
+  url: https://www.norfolkcounty.ca/council-administration-and-government/elections/
+  authority: Norfolk County
+  format: html
+  notes: >
+    Official Elections page confirming 2026 Municipal and School Board Election date of Monday October 26, 2026 with online voting October 9-23. Nomination period May 1 - August 21, 2026. Inaugural meeting of new council November 17, 2026. Governance structure (single-tier municipality, 7 wards, 8 councillors plus mayor, 4-year terms) confirmed. Strong Mayor powers extended to Norfolk County as of May 1, 2025.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_london
+  source_type: boundaries
+  url: https://opendata.london.ca/datasets/e22482d6693f4dcda4d423fbd7e6e77f_8/about
+  authority: City of London Open Data Portal (opendata.london.ca)
+  format: geojson
+  notes: >
+    Official City of London open data portal — "2022 Wards" dataset. Contains the 14 electoral ward boundaries used for the 2022 municipal election. ArcGIS Hub portal; GeoJSON, shapefile, and KML downloads available. Acquisition stage should select GeoJSON. Note: ward boundary review has been completed for the 2026 election term; confirm whether an updated dataset is published at acquisition time.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_london
+  source_type: representatives
+  url: https://london.ca/government/council-civic-administration/city-council
+  authority: City of London
+  format: html
+  notes: >
+    Official City Council listing page on london.ca. Confirmed to show Mayor Josh Morgan and all 14 ward councillors (Wards 1-14) for the 2022-2026 term: Ward 1 Hadleigh McAlister, Ward 2 Shawn Lewis, Ward 3 Peter Cuddy, Ward 4 Susan Stevenson, Ward 5 Jerry Pribil, Ward 6 Sam Trosow, Ward 7 Corrine Rahman, Ward 8 Steve Lehman, Ward 9 Anna Hopkins, Ward 10 Paul Van Meerbergen, Ward 11 Skylar Franke, Ward 12 Elizabeth Peloza, Ward 13 David Ferreira, Ward 14 Steven Hillier. Individual councillor profile pages linked from this listing. Downloadable Council Contact List PDF also available.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_london
+  source_type: executive
+  url: https://london.ca/government/council-civic-administration/city-council/mayor-josh-morgan
+  authority: City of London
+  format: html
+  notes: >
+    Official Mayor Josh Morgan profile page on london.ca. Confirmed current mayor (London's 65th Mayor, took office November 15, 2022). Contact: mayor@london.ca, 519-661-4920. Office at City Hall, second floor. Page includes mayoral decisions, expense reports, and State of the City Address content.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_london
+  source_type: metadata
+  url: https://london.ca/government/council-civic-administration/elections
+  authority: City of London
+  format: html
+  notes: >
+    Official Municipal Elections page on london.ca. Confirmed next election date Monday October 26, 2026 (advance voting October 1-3 and 5-10, 2026); new council sworn in November 15, 2026. Council structure: Mayor elected at-large plus 14 ward councillors (one per ward, 14 wards), 4-year terms. Ward boundary review completed; final updated ward boundaries approved for the 2026 election. Governed under the Municipal Elections Act (Ontario).
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_waterloo
+  source_type: boundaries
+  url: https://data.waterloo.ca/datasets/KitchenerGIS::wards
+  authority: City of Waterloo Open Data Portal (data.waterloo.ca)
+  format: geojson
+  notes: >
+    Official City of Waterloo open data portal (data.waterloo.ca), confirmed as the official portal via waterloo.ca/council-and-city-administration/open-data-and-maps/. Dataset titled "Wards" — ward boundary polygons for the City of Waterloo's 7-ward model. ArcGIS Hub portal; GeoJSON, shapefile, and KML downloads available. Acquisition stage should select GeoJSON.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_waterloo
+  source_type: representatives
+  url: https://www.waterloo.ca/council-and-committees/mayor-and-city-council/find-your-councillor-and-ward/
+  authority: City of Waterloo
+  format: html
+  notes: >
+    Official City of Waterloo page listing all 7 ward councillors for the 2022-2026 term: Ward 1 Sandra Hamner, Ward 2 Royce Bodaly, Ward 3 Hans Roach, Ward 4 Diane Freeman, Ward 5 Jen Vasic, Ward 6 Mary Lou Roe, Ward 7 Julie Wright. General council contact: 519-747-8784, council@waterloo.ca.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_waterloo
+  source_type: executive
+  url: https://www.waterloo.ca/council-and-committees/mayor-and-city-council/mayor-of-waterloo/
+  authority: City of Waterloo
+  format: html
+  notes: >
+    Official Mayor of Waterloo page. Current mayor is Dorothy McCabe, elected October 24, 2022. Contact: mayor@waterloo.ca, 519-747-8700.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_waterloo
+  source_type: metadata
+  url: https://www.waterloo.ca/council-and-committees/municipal-elections/
+  authority: City of Waterloo
+  format: html
+  notes: >
+    Official Municipal Elections page. Confirms next election date October 26, 2026; elections held every 4 years; voters elect Mayor, ward councillors, and school board trustees. Council structure: Mayor plus 7 ward councillors. Current term 2022-2026.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_oshawa
+  source_type: boundaries
+  url: https://city-oshawa.opendata.arcgis.com/datasets/a9257f99b2d941a3bff928f4a19d6f9d_11
+  authority: City of Oshawa Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: >
+    Official City of Oshawa open data portal (city-oshawa.opendata.arcgis.com), backed by the City of Oshawa ArcGIS MapServer at map.oshawa.ca. Dataset titled "Oshawa 2018 Ward Boundaries" — delineates and identifies each of the 5 wards used in municipal elections. Five-ward structure adopted in 2018 and continued unchanged for the 2022 election term. ArcGIS Hub portals offer GeoJSON, shapefile, and KML downloads; acquisition stage should select GeoJSON. Confirm at acquisition time whether an updated boundary dataset (e.g. for 2026 term) has been published.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_oshawa
+  source_type: representatives
+  url: https://www.oshawa.ca/city-hall/city-council/council-members/
+  authority: City of Oshawa
+  format: html
+  notes: >
+    Official Council Members page on oshawa.ca. Confirmed to list Mayor Dan Carter and all 10 ward councillors across 5 wards for the 2022-2026 term: Ward 1 John Neal (Regional & City) and Rosemary McConkey (City), Ward 2 Tito-Dante Marimpietri (Regional & City) and Jim Lee (City), Ward 3 Bob Chapman (Regional & City) and Bradley Marks (City), Ward 4 Rick Kerr (Regional & City) and Derek Giberson (City), Ward 5 Brian Nicholson (Regional & City) and John Gray (City). Phone and email provided per councillor.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_oshawa
+  source_type: executive
+  url: https://www.oshawa.ca/city-hall/city-council/office-of-the-mayor/
+  authority: City of Oshawa
+  format: html
+  notes: >
+    Official Office of the Mayor page on oshawa.ca. Current mayor is Dan Carter. Contact: 905-436-5674, mayor@oshawa.ca. Strong mayor powers granted to Oshawa in July 2023 under Bill 3 (Strong Mayors, Building Homes Act, 2022).
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_oshawa
+  source_type: metadata
+  url: https://www.oshawa.ca/city-hall/elections/
+  authority: City of Oshawa
+  format: html
+  notes: >
+    Official Municipal Elections page on oshawa.ca. Confirmed 2026 election date of Monday October 26, 2026; new council term begins November 15, 2026. Current term 2022-2026. Nomination period opens May 1, 2026; nomination day August 21, 2026. Council structure: Mayor elected at-large plus 10 ward councillors across 5 wards (2 councillors per ward). 4-year terms consistent with Ontario Municipal Elections Act.
+  last_confirmed: '2026-05-30'
+
+- slug: ca_on_kingston
+  source_type: boundaries
+  url: https://opendatakingston.cityofkingston.ca/datasets/cityofkingston::electoral-district-boundary-2/about
+  authority: Open Data Kingston (City of Kingston)
+  format: geojson
+  notes: >
+    Official City of Kingston open data portal
+    (opendatakingston.cityofkingston.ca). Dataset titled "Electoral District
+    Boundary" — municipal electoral district (ward) boundaries for Kingston's 12
+    districts. ArcGIS Hub-backed portal offers GeoJSON, shapefile, and KML
+    downloads; acquisition stage should select GeoJSON. Also mirrored at
+    maps-cityofkingston.hub.arcgis.com/datasets/electoral-district-boundary-2.
+  last_confirmed: '2026-05-31'
+- slug: ca_on_kingston
+  source_type: representatives
+  url: https://www.cityofkingston.ca/council-and-city-administration/council/city-council/
+  authority: City of Kingston
+  format: html
+  notes: >
+    Official City Council page listing all 12 district councillors for the
+    2022-2026 term: District 1 Gary Oosterhof (Countryside), District 2 Paul
+    Chaves (Loyalist-Cataraqui), District 3 Lisa Osanic (Collins-Bayridge),
+    District 4 Wendy Stephen (Lakeside), District 5 Don Amos (Portsmouth),
+    District 6 Jimmy Hassan (Trillium), District 7 Brandon Tozzo
+    (Kingscourt-Rideau), District 8 Jeff McLaren (Meadowbrook-Strathcona),
+    District 9 Vincent Cinanni (Williamsville), District 10 Conny Glenn
+    (Sydenham), District 11 Gregory Ridge (King's Town), District 12 Ryan Boehme
+    (Pittsburgh).
+  last_confirmed: '2026-05-31'
+- slug: ca_on_kingston
+  source_type: executive
+  url: https://www.cityofkingston.ca/council-and-city-administration/council/mayor/
+  authority: City of Kingston
+  format: html
+  notes: >
+    Official Mayor page for the City of Kingston. Confirms current Mayor Bryan
+    Paterson (96th Mayor, third consecutive term, re-elected October 24, 2022).
+    Contact: mayor@cityofkingston.ca, 613-546-4291 ext. 1400, 216 Ontario
+    Street, Kingston, ON K7L 2Z3.
+  last_confirmed: '2026-05-31'
+- slug: ca_on_kingston
+  source_type: metadata
+  url: https://www.cityofkingston.ca/council-and-city-administration/elections/
+  authority: City of Kingston
+  format: html
+  notes: >
+    Official Municipal Elections page. Confirms next election date Monday
+    October 26, 2026 (internet voting October 14-26, 2026); elections held every
+    four years on the fourth Monday in October. Council structure: Mayor elected
+    at-large plus 12 district councillors (one per district), 4-year terms.
+    Nomination period May 1 to August 21, 2026. Governed under the Municipal
+    Elections Act (Ontario).
+  last_confirmed: '2026-05-31'
+
+- slug: ca_on_greater_sudbury
+  source_type: boundaries
+  url: https://opendata.greatersudbury.ca/datasets/2fd80bad151b42cea9a6ee103d0dbc3d_0
+  authority: City of Greater Sudbury Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: Official City of Greater Sudbury open data portal (opendata.greatersudbury.ca,
+    an ArcGIS Hub portal operated by the City). Dataset titled "Ward Map and Council
+    (Layer)" — ward boundary polygons for Greater Sudbury's 12-ward model. ArcGIS
+    Hub portals offer GeoJSON, shapefile, and KML downloads; acquisition stage should
+    select GeoJSON. Portal also mirrored at opendata-sudbury.opendata.arcgis.com.
+    Confirmed via web search showing this dataset URL on the city's open data portal.
+  last_confirmed: '2026-05-31'
+- slug: ca_on_greater_sudbury
+  source_type: representatives
+  url: https://www.greatersudbury.ca/city-hall/mayor-and-council/city-council/
+  authority: City of Greater Sudbury
+  format: html
+  notes: Official City Council page on greatersudbury.ca. Describes council structure
+    (Mayor plus 12 ward councillors, one per ward). Individual councillor profiles
+    are linked from this page (e.g. Ward 11 Bill Leduc at greatersudbury.ca/city-hall/mayor-and-council/city-council/councillor-accordion/ward-11-bill-leduc/).
+    Confirmed page lists councillors with name, phone, fax, email, and committee assignments.
+    Current term November 15, 2022 to November 14, 2026.
+  last_confirmed: '2026-05-31'
+- slug: ca_on_greater_sudbury
+  source_type: executive
+  url: https://www.greatersudbury.ca/city-hall/mayor-and-council/mayor/
+  authority: City of Greater Sudbury
+  format: html
+  notes: 'Official Mayor''s page on greatersudbury.ca. Current Mayor is Paul Lefebvre,
+    elected October 24, 2022, took office November 15, 2022. Page includes welcome
+    message, biographical link (about-mayor-lefebvre), and contact/connect pages.
+    General city contact: 705-671-2489 / 311. Dedicated mayor''s office contact available
+    at the linked contact page.'
+  last_confirmed: '2026-05-31'
+- slug: ca_on_greater_sudbury
+  source_type: metadata
+  url: https://www.greatersudbury.ca/city-hall/municipal-schoolboard-elections/
+  authority: City of Greater Sudbury
+  format: html
+  notes: Official Municipal and School Board Elections page on greatersudbury.ca.
+    Confirms next municipal election date of Monday October 26, 2026; online voting
+    October 16-26, 2026; advance voting October 17 and October 24; nomination period
+    May 1 to August 21, 2026. Council structure (Mayor plus 12 ward councillors, 4-year
+    terms, current term 2022-2026) confirmed via the city council and 12-ward model
+    pages at the same domain. Governed under the Municipal Elections Act (Ontario).
+  last_confirmed: '2026-05-31'
+
+- slug: ca_ab
+  source_type: boundaries
+  url: https://www.elections.ab.ca/resources/maps/
+  authority: Elections Alberta (Office of the Chief Electoral Officer of Alberta)
+  format: shapefile
+  notes: 'Official Elections Alberta GIS Boundary Data page. Hosts ED Shapefiles (direct
+    download at elections.ab.ca/uploads/2019Boundaries_ED-Shapefiles.zip) and VA Shapefiles
+    (2023 version) for voting areas. Boundaries for Alberta''s 87 electoral divisions
+    came into effect March 19, 2019 and were used for the 2023 general election. Note:
+    the Electoral Boundaries Commission was mandated in December 2024 to propose new
+    boundaries for 89 ridings; confirm at acquisition time whether updated boundary
+    files have been published on this page.'
+  last_confirmed: '2026-05-31'
+- slug: ca_ab
+  source_type: representatives
+  url: https://www.assembly.ab.ca/members/members-of-the-legislative-assembly
+  authority: Legislative Assembly of Alberta
+  format: html
+  notes: Official MLA directory for the 31st Legislature (2023–present). Lists all
+    87 elected MLAs with names, party affiliations (UC, NDP, PTP), and constituency
+    links. Individual MLA profile pages are linked from the directory. A downloadable
+    CSV contact list of all current MLAs is also available from this page.
+  last_confirmed: '2026-05-31'
+- slug: ca_ab
+  source_type: executive
+  url: https://www.alberta.ca/premier
+  authority: Government of Alberta
+  format: html
+  notes: Official Premier of Alberta page on alberta.ca. Identifies current Premier
+    Danielle Smith (19th Premier, sworn in October 11, 2022). Includes contact form,
+    social media links, and links to cabinet, expense disclosures, and related government
+    information.
+  last_confirmed: '2026-05-31'
+- slug: ca_ab
+  source_type: cabinet
+  url: https://www.alberta.ca/premier-cabinet
+  authority: Government of Alberta
+  format: html
+  notes: Official Cabinet page on alberta.ca. Lists 25 cabinet ministers and 1 associate
+    minister with names, portfolios, headshot photos, and oath dates. Also lists non-cabinet
+    parliamentary secretaries. Page updated May 21, 2026 following a recent cabinet
+    shuffle. Copyright notice confirms Government of Alberta 2026.
+  last_confirmed: '2026-05-31'
+- slug: ca_ab
+  source_type: misc
+  url: https://www.assembly.ab.ca/learn/the-legislative-assembly/roles
+  authority: Legislative Assembly of Alberta
+  format: html
+  notes: Official roles hub on assembly.ab.ca covering Speaker and Presiding Officers,
+    Official Opposition (names Naheed Nenshi as current Leader of the Opposition),
+    Premier and Executive Council, Lieutenant Governor, Independent Officers, and
+    other parliamentary roles. Companion pages linked from this hub include assembly.ab.ca/learn/the-legislative-assembly/roles/speaker-and-presiding-officers
+    and assembly.ab.ca/learn/the-legislative-assembly/roles/official-opposition. Alberta
+    has a partisan legislature; Speaker, Opposition Leader, House Leaders, and Whips
+    are all applicable roles.
+  last_confirmed: '2026-05-31'
+- slug: ca_ab
+  source_type: metadata
+  url: https://www.elections.ab.ca/elections/albertas-next-election/
+  authority: Elections Alberta (Office of the Chief Electoral Officer of Alberta)
+  format: html
+  notes: Official "Alberta's Next Election" page on elections.ab.ca. Confirms next
+    provincial general election is scheduled for October 18, 2027 per Section 38.1
+    of the Election Act (third Monday in October in the 4th calendar year following
+    the most recent general election). Notes Lieutenant Governor retains power to
+    dissolve the Legislature earlier. Supplementary structural context (87 seats,
+    unicameral assembly, single-member plurality, 31st Legislature) available at assembly.ab.ca/learn/the-legislative-assembly.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_ab_calgary
+  source_type: boundaries
+  url: https://data.calgary.ca/Government/Ward-Boundaries/r9vx-mhnf/about
+  authority: City of Calgary — Open Calgary (City and Regional Planning)
+  format: geojson
+  notes: >
+    Official City of Calgary open data portal (data.calgary.ca, Socrata platform). Dataset titled "Ward Boundaries" — current ward boundary polygons for Calgary's 14-ward model. Published by the City and Regional Planning business unit under the City of Calgary. Uses EPSG:4326 WGS84 projection. Open Calgary (Socrata) portals support GeoJSON, shapefile, and CSV exports; acquisition stage should select GeoJSON. A historical dataset (2013-2017 boundaries) also exists at data.calgary.ca/Government/Ward-Boundaries-2013-2017/9u83-tgux — confirm the current dataset reflects the 2025-elected council's ward boundaries at acquisition time (ward boundary changes were enacted for the October 20, 2025 election).
+  last_confirmed: '2026-05-31'
+- slug: ca_ab_calgary
+  source_type: representatives
+  url: https://www.calgary.ca/council/councillors-and-wards.html
+  authority: City of Calgary
+  format: html
+  notes: >
+    Official Councillors and Wards page on calgary.ca. Confirmed to list Mayor Jeromy Farkas and all 14 ward councillors for the 2025-2029 term: Ward 1 Kim Tyers, Ward 2 Jennifer Wyness, Ward 3 Andrew Yule, Ward 4 DJ Kelly, Ward 5 Raj Dhaliwal, Ward 6 John Pantazopoulos, Ward 7 Myke Atkinson, Ward 8 Nathaniel Schmidt, Ward 9 Harrison Clark, Ward 10 Andre Chabot, Ward 11 Rob Ward, Ward 12 Mike Jamieson, Ward 13 Dan McLean, Ward 14 Landon Johnston. Each entry links to individual councillor websites and contact information.
+  last_confirmed: '2026-05-31'
+- slug: ca_ab_calgary
+  source_type: executive
+  url: https://www.calgary.ca/council/mayor/mayordefault.html
+  authority: City of Calgary — Office of the Mayor
+  format: html
+  notes: >
+    Official Mayor's Office page on calgary.ca. Confirms current Mayor Jeromy Farkas (38th Mayor of Calgary, elected October 20, 2025). Page includes contact form link (calgary.ca/council/mayor/contact.html) and links to biographical page (calgary.ca/council/mayor/bio.html) and Meet the Mayor page. No photo on the landing page itself; bio page contains further detail.
+  last_confirmed: '2026-05-31'
+- slug: ca_ab_calgary
+  source_type: metadata
+  url: https://www.calgary.ca/council/about-calgary-city-council.html
+  authority: City of Calgary
+  format: html
+  notes: >
+    Official About Calgary City Council page on calgary.ca. Confirms governance structure: Mayor elected city-wide plus 14 ward councillors (one per ward), four-year terms, council of 15 members total. Most recent general election was October 20, 2025 (confirmed via electionscalgary.ca); next election therefore due October 2029 per four-year fixed cycle under the Local Authorities Election Act (Alberta). Supplementary election-administration detail available at https://www.calgary.ca/council/city-council-elections.html and https://www.electionscalgary.ca/home.html (official Elections Calgary authority site).
+  last_confirmed: '2026-05-31'
+
+- slug: ca_bc_vancouver
+  source_type: boundaries
+  url: https://opendata.vancouver.ca/explore/dataset/city-boundary/
+  authority: City of Vancouver Open Data Portal
+  format: geojson
+  notes: >
+    Official City of Vancouver Open Data Portal (opendata.vancouver.ca, Opendatasoft platform). Dataset titled "City boundary" — a line defining the edges of the City's legal jurisdiction. Vancouver does not use wards; all 10 councillors are elected at large, so the city boundary itself is the single electoral area. Portal supports GeoJSON, shapefile, KML, and CSV export formats; acquisition stage should select GeoJSON. Data is updated weekly but the boundary itself rarely changes.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_bc_vancouver
+  source_type: representatives
+  url: https://vancouver.ca/your-government/city-councillors.aspx
+  authority: City of Vancouver
+  format: html
+  notes: >
+    Official City Councillors page on vancouver.ca. Lists all 10 at-large councillors elected for the 2022-2026 term: Rebecca Bligh, Lisa Dominato, Pete Fry, Sarah Kirby-Yung, Mike Klassen, Lucy Maloney, Peter Meiszner, Brian Montague, Sean Orr, and Lenny Zhou. Individual councillor biography and contact pages are linked from the listing. vancouver.ca blocks automated fetches with HTTP 403; content confirmed via direct search results citing this page.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_bc_vancouver
+  source_type: executive
+  url: https://vancouver.ca/your-government/mayor-ken-sim.aspx
+  authority: City of Vancouver
+  format: html
+  notes: >
+    Official Mayor Ken Sim profile page on vancouver.ca. Ken Sim is the 41st Mayor of Vancouver, elected October 15, 2022. Page includes oath of office, annual financial disclosure statements, and a monthly mayoral calendar. vancouver.ca blocks automated fetches with HTTP 403; content confirmed via direct search results citing this page.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_bc_vancouver
+  source_type: misc
+  url: https://vancouver.ca/your-government/park-board-commissioners.aspx
+  authority: City of Vancouver
+  format: html
+  notes: >
+    Official Park Board Commissioners page on vancouver.ca. Vancouver's elected Park Board (Vancouver Board of Parks and Recreation) is a distinct elected body of 7 commissioners elected at large for a 4-year term alongside the mayor and council — a governance structure unique to Vancouver under the Vancouver Charter. Current commissioners (2022-2026 term): Brennan Bastyovanszky, Laura Christensen, Tom Digby, Angela Haer, Marie-Claire Howard, Scott Jensen, and Jas Virdi. vancouver.ca blocks automated fetches with HTTP 403; content confirmed via direct search results citing this page.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_bc_vancouver
+  source_type: metadata
+  url: https://vancouver.ca/your-government/2026-municipal-election.aspx
+  authority: City of Vancouver
+  format: html
+  notes: >
+    Official 2026 Municipal Election page on vancouver.ca. Confirms next election date of Saturday, October 17, 2026. Vancouver elects Mayor, 10 at-large councillors, 7 Park Board commissioners, and School Board trustees at each municipal election. Elections are administered by Elections BC under the Local Government Elections Act. Governance structure (at-large council, no wards) confirmed. vancouver.ca blocks automated fetches with HTTP 403; content confirmed via direct search results citing this page.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_qc
+  source_type: boundaries
+  url: https://dgeq.org/en/data.html
+  authority: Élections Québec (Directeur général des élections du Québec)
+  format: geojson
+  notes: >
+    Élections Québec open data portal. Hosts the 2026 electoral map GeoJSON
+    covering all 125 electoral divisions (circumscriptions), reflecting the new
+    electoral map effective July 15, 2026, established by the Electoral
+    Boundaries Commission.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_qc
+  source_type: representatives
+  url: https://www.assnat.qc.ca/en/deputes/index.html
+  authority: Assemblée nationale du Québec (National Assembly of Quebec)
+  format: html
+  notes: >
+    Official MNA (Member of the National Assembly) roster on assnat.qc.ca.
+    Lists all 125 currently seated MNAs for the 43rd Legislature, with links to
+    individual MNA profile pages containing name, electoral division, party
+    affiliation, contact details, and photo.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_qc
+  source_type: executive
+  url: https://www.quebec.ca/en/premier
+  authority: Gouvernement du Québec
+  format: html
+  notes: >
+    Official Premier of Quebec page on quebec.ca. Identifies current Premier
+    Christine Fréchette (sworn April 16, 2026, successor to François Legault).
+    Page includes name, photo, biography, and office contact information.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_qc
+  source_type: cabinet
+  url: https://www.quebec.ca/premiere-ministre/equipe/conseil-des-ministres
+  authority: Gouvernement du Québec — Bureau de la première ministre
+  format: html
+  notes: >
+    Official Conseil des ministres (Council of Ministers / Cabinet) page on
+    quebec.ca. Lists cabinet ministers as of May 2026, with names, portfolio
+    titles, and individual minister profile links.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_qc
+  source_type: misc
+  url: https://www.assnat.qc.ca/en/abc-assemblee/fonction-depute/fonctions-parlementaires.html
+  authority: Assemblée nationale du Québec (National Assembly of Quebec)
+  format: html
+  notes: >
+    Official parliamentary roles and functions page on assnat.qc.ca. Covers
+    named parliamentary roles including Speaker, opposition leaders, government
+    and opposition House leaders, House whips, and other parliamentary officers.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_qc
+  source_type: metadata
+  url: https://www.electionsquebec.qc.ca/en/vote/current-and-upcoming-elections/
+  authority: Élections Québec (Directeur général des élections du Québec)
+  format: html
+  notes: >
+    Official current and upcoming elections page on electionsquebec.qc.ca.
+    Confirms the next Quebec general election date of October 5, 2026. Documents
+    the 125-seat unicameral National Assembly, single-member plurality system,
+    and 4-year fixed election cycle.
+  last_confirmed: '2026-05-31'
+
+- slug: ca_on_kitchener
+  source_type: boundaries
+  url: https://open-kitchenergis.opendata.arcgis.com/datasets/KitchenerGIS::wards/about
+  authority: City of Kitchener GeoHub (KitchenerGIS ArcGIS Hub Open Data Portal)
+  format: geojson
+  notes: Official City of Kitchener open data portal (open-kitchenergis.opendata.arcgis.com), confirmed as the official GeoHub via kitchener.ca/en/council-and-city-administration/open-data.aspx. Dataset titled "Wards" — ward boundary polygons for Kitchener's 10-ward model. ArcGIS Hub portals offer GeoJSON, shapefile, and KML downloads; acquisition stage should select GeoJSON. Portal also mirrored via KitchenerGIS namespace on ArcGIS Online.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_kitchener
+  source_type: representatives
+  url: https://www.kitchener.ca/council-and-city-administration/mayor-and-council/city-council/
+  authority: City of Kitchener
+  format: html
+  notes: Official City Council page on kitchener.ca. Confirmed to list all 10 ward councillors for the 2022-2026 term: Ward 1 Scott Davey, Ward 2 Dave Schnider, Ward 3 Jason Deneault, Ward 4 Christine Michaud, Ward 5 Ayo Owodunni, Ward 6 Paul Singh, Ward 7 Bil Ioannidis, Ward 8 Margaret Johnston, Ward 9 Debbie Chapman, Ward 10 Stephanie Stretch. Each listing includes a photo and brief description; individual councillor profile pages are linked from this listing. A "Find your city councillor" tool is also available.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_kitchener
+  source_type: executive
+  url: https://www.kitchener.ca/council-and-city-administration/mayor-and-council/mayor-berry-vrbanovic/
+  authority: City of Kitchener
+  format: html
+  notes: Official Mayor Berry Vrbanovic profile page on kitchener.ca. Confirmed current mayor with contact details: phone 519-741-2300, fax 519-741-2800, email mayor@kitchener.ca, office at Kitchener City Hall, 200 King St. W., 2nd floor, Kitchener, ON N2G 4G7.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_kitchener
+  source_type: metadata
+  url: https://www.kitchener.ca/council-and-city-administration/election/
+  authority: City of Kitchener
+  format: html
+  notes: Official Election page on kitchener.ca. Confirmed next municipal election date of Monday, October 26, 2026. Council structure: Mayor elected at-large plus 10 ward councillors (one per ward, 10 wards), with 4 Regional Councillors and school board trustees also elected. Voter registration, candidate listings, and election hiring information available. Current term is 2022-2026. Four-year cycle consistent with Ontario Municipal Elections Act.
+  last_confirmed: '2026-06-01'
+
+
+- slug: ca_on_markham
+  source_type: boundaries
+  url: https://data-markham.opendata.arcgis.com/datasets/wards
+  authority: City of Markham Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: >
+    Official City of Markham open data portal (data-markham.opendata.arcgis.com, an ArcGIS Hub portal operated by the City of Markham). Dataset titled "Wards" — ward boundary polygons for Markham's 8-ward model. ArcGIS Hub portals offer GeoJSON, shapefile, and KML downloads; acquisition stage should select GeoJSON.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_markham
+  source_type: representatives
+  url: https://www.markham.ca/about-the-city-of-markham/city-hall/regional-ward-councillors
+  authority: City of Markham
+  format: html
+  notes: >
+    Official Regional & Ward Councillors page on markham.ca. Confirmed to list all 4 Regional Councillors (Michael Chan / Deputy Mayor, Jim Jones, Joe Li, Alan Ho) and all 8 Ward Councillors (Ward 1 Keith Irish, Ward 2 Ritch Lau, Ward 3 Reid McAlpine, Ward 4 Karen Rea, Ward 5 Andrew Keyes, Ward 6 Amanda Yeung Collucci, Ward 7 Nimisha Patel, Ward 8 Isa Lee) for the 2022-2026 term.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_markham
+  source_type: executive
+  url: https://www.markham.ca/about-the-city-of-markham/city-hall/mayors-office
+  authority: City of Markham
+  format: html
+  notes: >
+    Official Mayor's Office page on markham.ca. Confirmed current mayor is Frank Scarpitti. Contact: 905-475-4872, mayorscarpitti@markham.ca.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_markham
+  source_type: metadata
+  url: https://www.markham.ca/elections
+  authority: City of Markham
+  format: html
+  notes: >
+    Official 2026 Municipal Election page on markham.ca. Confirms voting period October 16-26, 2026. Council structure: 1 Mayor + 4 Regional Councillors + 8 Ward Councillors (13 members total); 4-year terms. Two-tier structure within Regional Municipality of York.
+  last_confirmed: '2026-06-01'
+
+
+
+- slug: ca_on_vaughan
+  source_type: boundaries
+  url: https://www.vaughan.ca/about-city-vaughan/projects-and-initiatives/city-government-projects/ward-boundary-review/current-ward-boundaries
+  authority: City of Vaughan
+  format: html
+  notes: >
+    Official City of Vaughan "Current Ward Boundaries" page. 5-ward model. ArcGIS REST server at maps.vaughan.ca/arcgis/rest/services/PLANit/Areas/MapServer/1 is the underlying data source. Acquisition stage should attempt GeoJSON export from the ArcGIS REST endpoint (self-signed certificate — use --insecure).
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_vaughan
+  source_type: representatives
+  url: https://www.vaughan.ca/council
+  authority: City of Vaughan
+  format: html
+  notes: >
+    Official council page. 10 members: Mayor Steven Del Duca + 5 Ward Councillors (Wards 1-5) + 4 Local and Regional Councillors (Linda Jackson/Deputy Mayor, Mario Ferri, Gino Rosati, Mario G. Racco). vaughan.ca blocks automated fetches.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_vaughan
+  source_type: executive
+  url: https://www.vaughan.ca/council/mayor-and-members-council/office-mayor-steven-del-duca
+  authority: City of Vaughan
+  format: html
+  notes: >
+    Official Office of the Mayor page. Mayor Steven Del Duca, first-term Mayor elected Fall 2022. Phone 905-832-2281. vaughan.ca blocks automated fetches.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_vaughan
+  source_type: metadata
+  url: https://www.vaughan.ca/council/elections
+  authority: City of Vaughan
+  format: html
+  notes: >
+    Official Elections page. Next election October 26, 2026. Council: 1 Mayor + 4 Local and Regional Councillors + 5 Ward Councillors = 10 members. 4-year terms.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_windsor
+  source_type: boundaries
+  url: https://opendata.citywindsor.ca/Details/222
+  authority: City of Windsor Open Data Catalogue
+  format: geojson
+  notes: >
+    Official City of Windsor open data. Also published on ArcGIS Hub at open-data-portal-citywindsor.hub.arcgis.com (item cf58412260c644e382e6ab67f6d97e76). Acquisition should prefer ArcGIS Hub GeoJSON download. 10 wards.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_windsor
+  source_type: representatives
+  url: https://www.citywindsor.ca/mayor-and-council/city-councillors
+  authority: City of Windsor
+  format: html
+  notes: >
+    Official City Councillors listing. 10 wards, one councillor per ward, 2022-2026 term. Individual profile pages on citywindsor.ca.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_windsor
+  source_type: executive
+  url: https://www.citywindsor.ca/mayor-and-council/mayor-drew-dilkens
+  authority: City of Windsor
+  format: html
+  notes: >
+    Mayor Drew Dilkens — third term, in office since December 2014. Phone 519-255-6315, email mayoro@citywindsor.ca.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_windsor
+  source_type: metadata
+  url: https://www.citywindsor.ca/city-hall/municipal-election
+  authority: City of Windsor
+  format: html
+  notes: >
+    Official election page. Next election 2026-10-26. 10 wards, Mayor + 10 councillors, 4-year terms.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_richmond_hill
+  source_type: representatives
+  url: https://www.richmondhill.ca/en/living-here/Mayor-and-Council.aspx
+  authority: City of Richmond Hill
+  format: html
+  notes: >
+    Official council page. 9 members: Mayor David West + Deputy Mayor Godwin Chan + Regional/Local Councillor Joe DiPaola + Ward 1-6 councillors. Term 2022-11-15 to 2026-11-14.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_richmond_hill
+  source_type: executive
+  url: https://www.richmondhill.ca/en/living-here/Mayor-of-Richmond-Hill.aspx
+  authority: City of Richmond Hill
+  format: html
+  notes: >
+    Mayor David West, second term elected 2022. Phone 905-771-8800 ext. 2480, email officemayor@richmondhill.ca.
+  last_confirmed: '2026-06-01'
+
+- slug: ca_on_richmond_hill
+  source_type: metadata
+  url: https://www.richmondhill.ca/en/election.aspx
+  authority: City of Richmond Hill
+  format: html
+  notes: >
+    Official elections page. Next election 2026-10-26. 6 wards, 9-member council, 4-year terms.
+  last_confirmed: '2026-06-01'
+
+
+- slug: ca_on_oakville
+  source_type: boundaries
+  url: https://portal-exploreoakville.opendata.arcgis.com/datasets/ward-boundaries
+  authority: Town of Oakville Open Data Portal (ExploreOakville ArcGIS Hub)
+  format: geojson
+  notes: Official Town of Oakville open data portal. Current Ward Boundaries dataset
+    — 7-ward model. Acquisition should use current dataset, not legacy 2018 one.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_oakville
+  source_type: representatives
+  url: https://www.oakville.ca/town-hall/mayor-council-administration/mayor-council/
+  authority: Town of Oakville
+  format: html
+  notes: 'Official council page. 15 members: Mayor + 7 Town Councillors (TC, local
+    only) + 7 Town and Regional Councillors (T&RC, also on Halton Regional Council).
+    Two councillors per ward across 7 wards.'
+  last_confirmed: '2026-06-02'
+- slug: ca_on_oakville
+  source_type: executive
+  url: https://www.oakville.ca/town-hall/mayor-council-administration/mayor-council/mayor-rob-burton/
+  authority: Town of Oakville
+  format: html
+  notes: Mayor Rob Burton, 45th Mayor, in office since 2006. Phone 905-845-6601, email
+    mayor@oakville.ca.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_oakville
+  source_type: metadata
+  url: https://www.oakville.ca/town-hall/elections/
+  authority: Town of Oakville
+  format: html
+  notes: Next election 2026-10-26. 7 wards, 15 elected members, 4-year terms.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_burlington
+  source_type: boundaries
+  url: https://navburl-burlington.opendata.arcgis.com/datasets/Burlington::ward-boundaries
+  authority: City of Burlington — Navigate Burlington Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: >
+    Official Burlington open data portal. Ward Boundaries dataset — 6-ward model. Ward bylaw 030-2025 (May 2025) made minor changes for 2026. Confirm dataset is current at acquisition.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_burlington
+  source_type: representatives
+  url: https://www.burlington.ca/en/council-and-city-administration/council-members-and-wards.aspx
+  authority: City of Burlington
+  format: html
+  notes: >
+    Official council page. 6 ward councillors (one per ward): Wards 1, 2, 6 are City and Halton Regional Councillors (dual seat); Wards 3, 4, 5 are City Councillors only. Total council: Mayor + 6 = 7 members.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_burlington
+  source_type: executive
+  url: https://www.burlington.ca/en/council-and-city-administration/mayor.aspx
+  authority: City of Burlington
+  format: html
+  notes: >
+    Mayor Marianne Meed Ward, second term. Phone 905-335-7777, email mayor@burlington.ca.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_burlington
+  source_type: metadata
+  url: https://www.burlington.ca/en/council-and-city-administration/elections.aspx
+  authority: City of Burlington
+  format: html
+  notes: >
+    Next election voting period October 14-26, 2026. 6 wards, 4-year terms.
+  last_confirmed: '2026-06-02'
