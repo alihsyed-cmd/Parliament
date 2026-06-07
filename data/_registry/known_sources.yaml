@@ -1212,3 +1212,1016 @@ ca_on_ottawa:
   notes: >
     Next election voting period October 14-26, 2026. 6 wards, 4-year terms.
   last_confirmed: '2026-06-02'
+
+
+- slug: ca_on_st_catharines
+  source_type: boundaries
+  url: https://st-catharines-open-data-2-stcatharines.hub.arcgis.com/datasets/f9f014cb55584858b27056f5a07cdac1_0
+  authority: City of St. Catharines Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: >
+    Official open data portal. "Wards Public" dataset — 6-ward model, updated June 2025. Wards: Merritton (1), St. Andrew's (2), St. George's (3), St. Patrick's (4), Grantham (5), Port Dalhousie (6).
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_st_catharines
+  source_type: representatives
+  url: https://www.stcatharines.ca/en/council-and-administration/ward-councillors.aspx
+  authority: City of St. Catharines
+  format: html
+  notes: >
+    Official ward councillors page. 12 councillors, 2 per ward across 6 wards. Ward 6 had a 2025 by-election — confirm current roster at acquisition.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_st_catharines
+  source_type: executive
+  url: https://www.stcatharines.ca/en/council-and-administration/mayors-office.aspx
+  authority: City of St. Catharines
+  format: html
+  notes: >
+    Mayor Mat Siscoe, 2022-2026 term. Phone 905-688-5600 ext. 1540, email mayor@stcatharines.ca.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_st_catharines
+  source_type: metadata
+  url: https://www.stcatharines.ca/en/council-and-administration/elections.aspx
+  authority: City of St. Catharines
+  format: html
+  notes: >
+    Next election 2026-10-26. 6 wards, 2 councillors/ward, 4-year terms.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_cambridge
+  source_type: boundaries
+  url: https://geohub.cambridge.ca/datasets/cityofcambridge::wards-2/about
+  authority: City of Cambridge GeoHub (ArcGIS Hub Open Data Portal)
+  format: geojson
+  notes: Official Cambridge GeoHub - 8-ward model. Acquisition should select GeoJSON.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_cambridge
+  source_type: representatives
+  url: https://www.cambridge.ca/mayor-city-council-government/mayor-council/city-council-members/
+  authority: City of Cambridge
+  format: html
+  notes: >
+    Official council page. Mayor + 8 ward councillors + 2 at-large Regional
+    Councillors (Doug Craig, Pam Wolf) = 11 members, 2022-2026 term.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_cambridge
+  source_type: executive
+  url: https://www.cambridge.ca/mayor-city-council-government/mayor-council/city-council-members/mayor-jan-liggett/
+  authority: City of Cambridge
+  format: html
+  notes: Mayor Jan Liggett. Phone 519-740-4517, email mayor@cambridge.ca.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_cambridge
+  source_type: metadata
+  url: https://www.cambridge.ca/mayor-city-council-government/elections/
+  authority: City of Cambridge
+  format: html
+  notes: Next election 2026-10-26. 8 wards, 4-year terms.
+  last_confirmed: '2026-06-02'
+
+
+- slug: ca_on_whitby
+  source_type: boundaries
+  url: https://geohub-whitby.hub.arcgis.com/datasets/Whitby::ward-boundaries/about
+  authority: Town of Whitby GeoHub (ArcGIS Hub Open Data Portal)
+  format: geojson
+  notes: >
+    Official Whitby GeoHub — Ward Boundaries dataset. 4-ward model (North/West/Centre/East). Acquisition should select GeoJSON.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_whitby
+  source_type: representatives
+  url: https://www.whitby.ca/town-hall/mayor-and-council/
+  authority: Town of Whitby
+  format: html
+  notes: >
+    Official council page. 9 members: Mayor + 4 Ward Councillors (one per ward) + 4 at-large Regional Councillors (Mulcahy, Leahy, Yamada, Shahid). 2022-2026 term. Note: for 2026 election, Regional Councillors shift to ward-based — current term they are at-large.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_whitby
+  source_type: executive
+  url: https://www.whitby.ca/town-hall/mayor-and-council/
+  authority: Town of Whitby
+  format: html
+  notes: >
+    Mayor Elizabeth Roy. Phone 905-430-4300 x2203, email mayor@whitby.ca.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_whitby
+  source_type: metadata
+  url: https://www.whitby.ca/town-hall/municipal-elections/
+  authority: Town of Whitby
+  format: html
+  notes: >
+    Next election 2026-10-26. 4 wards, 4-year terms.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_ajax
+  source_type: boundaries
+  url: https://opendata.ajax.ca/datasets/TownofAjax::ajax-ward-boundaries/about
+  authority: Town of Ajax Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: >
+    Official Ajax Open Data Portal — 3-ward model. Acquisition should select GeoJSON.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_ajax
+  source_type: representatives
+  url: https://www.ajax.ca/en/inside-townhall/council-members.aspx
+  authority: Town of Ajax
+  format: html
+  notes: >
+    Official council page. 7 members: Mayor + 3 Ward Councillors + 3 Regional Councillors (one each per ward). 2022-2026 term.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_ajax
+  source_type: executive
+  url: https://www.ajax.ca/en/inside-townhall/mayor-and-council.aspx
+  authority: Town of Ajax
+  format: html
+  notes: 'Mayor Shaun Collier, 2022-2026 term.'
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_ajax
+  source_type: metadata
+  url: https://www.ajax.ca/en/inside-townhall/elections.aspx
+  authority: Town of Ajax
+  format: html
+  notes: 'Next election voting Oct 19-26, 2026. 3 wards, 7-member council.'
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_thunder_bay
+  source_type: boundaries
+  url: https://opendata.thunderbay.ca/datasets/c691fd45b6ba46be9e69c24d77bf610d_0/about
+  authority: City of Thunder Bay Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: 'Official Thunder Bay open data portal. "Wards Feature Layer" — 7 wards: Current River, McIntyre, McKellar, Neebing,
+    Northwood, Red River, Westfort.'
+  last_confirmed: '2026-06-02'
+- slug: ca_on_thunder_bay
+  source_type: representatives
+  url: https://www.thunderbay.ca/en/city-hall/mayor-and-council-profiles.aspx
+  authority: City of Thunder Bay
+  format: html
+  notes: 'Official council profiles page. 13 members: Mayor + 7 ward councillors + 5 at-large councillors. 2022-2026 term.'
+  last_confirmed: '2026-06-02'
+- slug: ca_on_thunder_bay
+  source_type: executive
+  url: https://www.thunderbay.ca/en/city-hall/mayor-ken-boshcoff.aspx
+  authority: City of Thunder Bay
+  format: html
+  notes: Mayor Ken Boshcoff, 10th Mayor, 2022-2026 term. Phone 807-625-3600, email ken.boshcoff@thunderbay.ca. Not seeking
+    re-election in 2026.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_thunder_bay
+  source_type: metadata
+  url: https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx
+  authority: City of Thunder Bay
+  format: html
+  notes: Next election 2026-10-26. 7 wards + 5 at-large = 13-member council, 4-year terms.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_on_milton
+  source_type: boundaries
+  url: https://discover-milton.hub.arcgis.com/datasets/Milton::ward-boundaries/about
+  authority: Town of Milton — Discover Milton Open Data Portal (ArcGIS Hub)
+  format: geojson
+  notes: Official Milton ArcGIS Hub — Ward Boundaries, 4-ward model. Daily updates.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_milton
+  source_type: representatives
+  url: https://www.milton.ca/en/town-hall/councillors.aspx
+  authority: Town of Milton
+  format: html
+  notes: >
+    Official council page. 4 wards, each with Town Councillor + Regional Councillor = 8 + Mayor = 9 members. 2022-2026 term.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_milton
+  source_type: executive
+  url: https://www.milton.ca/en/town-hall/mayor-of-milton.aspx
+  authority: Town of Milton
+  format: html
+  notes: Mayor Gordon Krantz, in office since 1982. Phone 905-878-7252 ext. 2104.
+  last_confirmed: '2026-06-02'
+- slug: ca_on_milton
+  source_type: metadata
+  url: https://www.milton.ca/en/town-hall/2026-municipal-election.aspx
+  authority: Town of Milton
+  format: html
+  notes: Next election 2026-10-26. 4 wards, 9-member council, 4-year terms.
+  last_confirmed: '2026-06-02'
+
+- slug: ca_nu
+  source_type: boundaries
+  url: https://www.elections.nu.ca/en/taxonomy/term/247
+  authority: Elections Nunavut (Office of the Chief Electoral Officer of Nunavut)
+  format: shapefile
+  notes: 'Official Elections Nunavut GIS page. Shapefile archive: EN_FUTURE_NU_Constituencies.zip for all 22 constituencies (2025 map). Direct download at /en/file-download/download/public/2034.\n'
+  last_confirmed: '2026-06-03'
+- slug: ca_nu
+  source_type: representatives
+  url: https://www.assembly.nu.ca/members/mla
+  authority: Legislative Assembly of Nunavut
+  format: html
+  notes: 'Official MLA roster — 7th Assembly (elected 2025-10-27). 22 constituencies; Hudson Bay seat is VACANT. Non-partisan consensus government.\n'
+  last_confirmed: '2026-06-03'
+- slug: ca_nu
+  source_type: executive
+  url: https://www.premier.gov.nu.ca/en/about/about-the-premier
+  authority: Office of the Premier of Nunavut
+  format: html
+  notes: 'Premier John Main, elected by MLAs 2025-11-18, sworn 2025-11-20. MLA for Arviat North-Whale Cove.'
+  last_confirmed: '2026-06-03'
+- slug: ca_nu
+  source_type: cabinet
+  url: https://www.premier.gov.nu.ca/en/premiers-cabinet/cabinet-ministers
+  authority: Office of the Premier of Nunavut
+  format: html
+  notes: '9-member Executive Council, 7th Assembly (sworn 2025-11-20). Includes Premier John Main, Deputy Premier George Hickes, and 7 other ministers.\n'
+  last_confirmed: '2026-06-03'
+- slug: ca_nu
+  source_type: misc
+  url: https://www.assembly.nu.ca/members/mla
+  authority: Legislative Assembly of Nunavut
+  format: html
+  notes: 'Speaker David Joanasie (MLA for South Baffin) identified on MLA roster. Non-partisan — no party leaders, opposition leader, whips, or critics.\n'
+  last_confirmed: '2026-06-03'
+- slug: ca_nu
+  source_type: metadata
+  url: https://www.elections.nu.ca/en/faqs/territorial-elections
+  authority: Elections Nunavut
+  format: html
+  notes: '22 constituencies, 4-year fixed cycle, last election 2025-10-27, next ~2029-10.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_nt
+  source_type: boundaries
+  url: https://www.geomatics.gov.nt.ca/en/resources/field_resource_category/data-3
+  authority: NWT Centre for Geomatics (Government of Northwest Territories)
+  format: shapefile
+  notes: >
+    Official GNWT geomatics page — "Electoral District Boundaries" shapefile zip. 19 districts (2012 Electoral Boundary Commission).
+  last_confirmed: '2026-06-03'
+
+- slug: ca_nt
+  source_type: representatives
+  url: https://www.ntlegislativeassembly.ca/members/members-legislative-assembly/members
+  authority: Legislative Assembly of the Northwest Territories
+  format: html
+  notes: >
+    Official 20th Assembly members page. 19 MLAs, non-partisan consensus government.
+  last_confirmed: '2026-06-03'
+
+- slug: ca_nt
+  source_type: executive
+  url: https://www.gov.nt.ca/en/premier-rj-simpson
+  authority: Government of Northwest Territories
+  format: html
+  notes: >
+    Premier R.J. Simpson (Hay River North). Elected by MLAs at 20th Assembly leadership meeting.
+  last_confirmed: '2026-06-03'
+
+- slug: ca_nt
+  source_type: cabinet
+  url: https://www.gov.nt.ca/en/follow-along-cabinet
+  authority: Government of Northwest Territories
+  format: html
+  notes: >
+    Cabinet roster — Premier + 6 ministers (Cleveland, Kuptana, Macdonald, McKay, Semmler, Wawzonek/Deputy Premier). Last updated April 2025.
+  last_confirmed: '2026-06-03'
+
+- slug: ca_nt
+  source_type: misc
+  url: https://www.ntlegislativeassembly.ca/speaker
+  authority: Legislative Assembly of the Northwest Territories
+  format: html
+  notes: >
+    Speaker Hon. Shane Thompson — only applicable misc role (consensus/non-partisan legislature).
+  last_confirmed: '2026-06-03'
+
+- slug: ca_nt
+  source_type: metadata
+  url: https://www.electionsnwt.ca/
+  authority: Elections NWT
+  format: html
+  notes: >
+    Next election 2027-10-05. 19 ridings, 4-year terms, consensus government.
+  last_confirmed: '2026-06-03'
+
+
+- slug: ca_yt
+  source_type: boundaries
+  url: https://electionsyukon.ca/en/electoral-districts-21
+  authority: Elections Yukon (Office of the Chief Electoral Officer of Yukon)
+  format: shapefile
+  notes: 'Elections Yukon reference page for 21 electoral districts (2025 map). GIS shapefile served by GeoYukon at map-data.service.yukon.ca/GeoYukon/Administrative_Boundaries/. Acquisition must use 2025 21-district version, not legacy 2015 dataset.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_yt
+  source_type: representatives
+  url: https://yukonassembly.ca/mlas
+  authority: Yukon Legislative Assembly
+  format: html
+  notes: 'Official MLA roster — 36th Legislature (elected 2025-11-03). 21 MLAs. Party standings: Yukon Party 14, NDP 6, Liberal 1. yukonassembly.ca returns HTTP 403 on automated fetches.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_yt
+  source_type: executive
+  url: https://yukon.ca/en/your-government/office-premier
+  authority: Government of Yukon — Office of the Premier
+  format: html
+  notes: 'Premier Currie Dixon (Yukon Party), sworn 2025-11-22. yukon.ca returns HTTP 403.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_yt
+  source_type: cabinet
+  url: https://yukon.ca/en/your-government/office-premier/meet-premiers-team
+  authority: Government of Yukon — Office of the Premier
+  format: html
+  notes: '"Meet the Premier''s Team" page. Premier + 8 ministers: Bellmore, Benoit, Cathers, Gehmair, Istchenko, Kent, Laking, Lang. yukon.ca returns HTTP 403.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_yt
+  source_type: misc
+  url: https://yukonassembly.ca/members/speaker
+  authority: Yukon Legislative Assembly
+  format: html
+  notes: 'Speaker Hon. Yvonne Clarke (elected 2025-12-08, Yukon''s 27th Speaker). Also covers: Government House Leader Hon. Scott Kent, Opposition Leader Kate White (NDP), Official Opposition House Leader Lane Tredger (NDP), Third Party House Leader Debra-Leigh Reti (Liberal). yukonassembly.ca returns HTTP 403.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_yt
+  source_type: metadata
+  url: https://yukonassembly.ca/resources/about-assembly
+  authority: Yukon Legislative Assembly
+  format: html
+  notes: 'About the Assembly page. 21 seats, 36th Legislature (elected 2025-11-03), partisan, fixed election cycle (first Monday in November every 4 years). Next election November 2029.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_sk_regina
+  source_type: boundaries
+  url: https://open.regina.ca/dataset/wards
+  authority: City of Regina Open Data Portal
+  format: shapefile
+  notes: 'Official City of Regina open data portal. Dataset titled "Wards" — current ward boundary polygons for Regina''s 10-ward model (new boundaries in effect since November 13, 2024). ArcGIS MapServer also available at opengis.regina.ca/arcgis/rest/services/OpenData/Wards/MapServer. A dedicated 2024 Election Boundaries shapefile also exists at open.regina.ca/dataset/municipal-school-board-election-boundaries-2024.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_sk_regina
+  source_type: representatives
+  url: https://www.regina.ca/city-government/city-council/city-councillors/
+  authority: City of Regina
+  format: html
+  notes: 'Official City Councillors page. 2024-2028 council elected November 13, 2024, sworn in November 18, 2024. Lists 10 ward councillors across Wards 1-10.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_sk_regina
+  source_type: executive
+  url: https://www.regina.ca/city-government/city-council/mayors-office/
+  authority: City of Regina
+  format: html
+  notes: 'Official Office of the Mayor page. Current Mayor is Chad Bachynski (Regina''s 36th Mayor).'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_sk_regina
+  source_type: metadata
+  url: https://www.regina.ca/city-government/elections/
+  authority: City of Regina
+  format: html
+  notes: 'Official elections page. Regina Municipal elections held every four years. 2024-2028 council elected November 13, 2024. Structure: 1 Mayor (at-large) + 10 ward councillors = 11 elected members.'
+  last_confirmed: '2026-06-03'
+
+
+- slug: ca_mb_winnipeg
+  source_type: boundaries
+  url: https://data.winnipeg.ca/Council-Services/Electoral-Ward/ede3-teb8
+  authority: City of Winnipeg Open Data Portal (data.winnipeg.ca)
+  format: geojson
+  notes: 'Official City of Winnipeg Socrata open data portal. Dataset titled "Electoral Ward" — 15-ward boundary polygons. Use Socrata GeoJSON export endpoint for acquisition.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_mb_winnipeg
+  source_type: representatives
+  url: https://www.winnipeg.ca/city-governance/mayor-council/council-members
+  authority: City of Winnipeg
+  format: html
+  notes: 'Official Council Members page. 15 ward councillors + Mayor for the 2022-2026 term. Emma Durand-Wood elected in a 2025 by-election.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_mb_winnipeg
+  source_type: executive
+  url: https://www.winnipeg.ca/city-governance/mayor-council/mayors-office
+  authority: City of Winnipeg — Mayor's Office
+  format: html
+  notes: 'Official Mayor''s Office page. Current Mayor is Scott Gillingham (elected October 26, 2022). Phone 204-986-5665, email mayorgillingham@winnipeg.ca.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_mb_winnipeg
+  source_type: metadata
+  url: https://www.winnipeg.ca/city-governance/wards-elections/2026-election
+  authority: City of Winnipeg
+  format: html
+  notes: 'Official 2026 election page. Next election October 28, 2026. 15 wards + at-large Mayor, 4-year terms. Current term elected October 26, 2022.'
+  last_confirmed: '2026-06-03'
+
+
+- slug: ca_pe
+  source_type: boundaries
+  url: http://www.gov.pe.ca/gis/index.php3?lang=E&number=77554
+  authority: 'Government of Prince Edward Island — Geomatic Services'
+  format: shapefile
+  notes: 'PEI GIS Electoral Data catalog — 27 provincial electoral districts (2017 EBC). SHP format with license click-through.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_pe
+  source_type: representatives
+  url: https://www.assembly.pe.ca/members
+  authority: 'Legislative Assembly of Prince Edward Island'
+  format: html
+  notes: '27 MLAs, 67th General Assembly. PC 22, Liberal 4, Green 1.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_pe
+  source_type: executive
+  url: https://www.princeedwardisland.ca/en/topic/premier-of-prince-edward-island
+  authority: 'Government of PEI — Office of the Premier'
+  format: html
+  notes: 'Premier Hon. Rob Lantz. Phone 902-368-4400, email premier@gov.pe.ca.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_pe
+  source_type: cabinet
+  url: https://www.princeedwardisland.ca/en/information/executive-council-office/meet-the-cabinet
+  authority: 'Government of PEI — Executive Council Office'
+  format: html
+  notes: '11 cabinet ministers including Premier. Lantz, Thompson, Compton, Croucher, Redmond, Burridge, Bell, Deagle, Ramsay, Hudson, Dollar.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_pe
+  source_type: misc
+  url: https://www.assembly.pe.ca/members/speaker
+  authority: 'Legislative Assembly of Prince Edward Island'
+  format: html
+  notes: 'Speaker Hon. Brad Trivers. Opposition Leader Hal Perry (Liberal). House Leaders and Whips also listed.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_pe
+  source_type: metadata
+  url: https://www.electionspei.ca/provincial-elections
+  authority: 'Elections PEI'
+  format: html
+  notes: 'Next election 2027-10-04 (fixed date). 27 districts, FPTP. Last election 2024-04-03.'
+  last_confirmed: '2026-06-03'
+
+- slug: ca_qc_quebec_city
+  source_type: boundaries
+  url: https://www.donneesquebec.ca/recherche/dataset/vque_43
+  authority: Ville de Québec (published via Données Québec)
+  format: geojson
+  notes: Official electoral district boundaries. 21 districts, new boundaries per R.V.Q. 3252 (in effect October 31, 2024). GeoJSON resource at https://www.donneesquebec.ca/recherche/dataset/vque_43/resource/fb320f4e-ea21-4713-b813-6b6be6724aef
+  last_confirmed: 2026-06-04
+- slug: ca_qc_quebec_city
+  source_type: representatives
+  url: https://www.ville.quebec.qc.ca/apropos/gouvernance/conseil-municipal/membres.aspx
+  authority: Ville de Québec
+  format: html
+  notes: Official council members page. 21 district councillors + Mayor, 2025-2029 term. Includes phone, email, photo, party affiliation per member.
+  last_confirmed: 2026-06-04
+- slug: ca_qc_quebec_city
+  source_type: executive
+  url: https://www.ville.quebec.qc.ca/en/apropos/gouvernance/maire/index.aspx
+  authority: Ville de Québec — Office of the Mayor
+  format: html
+  notes: Official Mayor's page. Mayor Bruno Marchand, re-elected November 2, 2025 (first elected 2021).
+  last_confirmed: 2026-06-04
+- slug: ca_qc_quebec_city
+  source_type: misc
+  url: https://www.ville.quebec.qc.ca/apropos/gouvernance/conseil-municipal/membres.aspx
+  authority: Ville de Québec
+  format: html
+  notes: Partisan council — opposition leader (chef de l'opposition officielle) and other named roles. Comité exécutif membership also at /comite-executif/membres.aspx.
+  last_confirmed: 2026-06-04
+- slug: ca_qc_quebec_city
+  source_type: metadata
+  url: https://www.ville.quebec.qc.ca/apropos/elections-municipales/index.aspx
+  authority: Ville de Québec
+  format: html
+  notes: Elections page. Last election 2025-11-02; next 2029. 21 districts, 4-year terms.
+  last_confirmed: 2026-06-04
+- slug: ca_nl
+...
+  source_type: boundaries
+...
+  url: https://geohub-gnl.hub.arcgis.com/datasets/nl-electoral-districts
+...
+  authority: Government of Newfoundland and Labrador — GeoHub
+...
+  format: geojson
+...
+  notes: Official GNL ArcGIS Hub — 40 NL electoral districts. Acquire as GeoJSON.
+...
+  last_confirmed: '2026-06-04'
+- slug: ca_nl
+...
+  source_type: representatives
+...
+  url: https://www.assembly.nl.ca/Members/members.aspx
+...
+  authority: House of Assembly of Newfoundland and Labrador
+...
+  format: html
+...
+  notes: 51st GA (elected 2025-10-14). PC 21, Liberal 15, NDP 2, Independent 2. 40 MHAs.
+...
+  last_confirmed: '2026-06-04'
+- slug: ca_nl
+...
+  source_type: executive
+...
+  url: https://www.gov.nl.ca/premier/
+...
+  authority: Government of Newfoundland and Labrador — Office of the Premier
+...
+  format: html
+...
+  notes: Premier Tony Wakeham (PC), sworn 2025-10-29.
+...
+  last_confirmed: '2026-06-04'
+- slug: ca_nl
+...
+  source_type: cabinet
+...
+  url: https://www.gov.nl.ca/cabinet-ministers/
+...
+  authority: Government of Newfoundland and Labrador
+...
+  format: html
+...
+  notes: 14 cabinet ministers including Premier. Deputy Premier Barry Petten (Transportation and Infrastructure).
+...
+  last_confirmed: '2026-06-04'
+- slug: ca_nl
+...
+  source_type: misc
+...
+  url: https://www.assembly.nl.ca/Members/OfficeHolders.aspx
+...
+  authority: House of Assembly of Newfoundland and Labrador
+...
+  format: html
+...
+  notes: Speaker Paul Lane; Deputy Speaker Jeff Dwyer; Opposition Leader John Hogan (Liberal); Third Party Leader Jim Dinn (NDP); House Leaders and Deputies for all parties.
+...
+  last_confirmed: '2026-06-04'
+- slug: ca_nl
+...
+  source_type: metadata
+...
+  url: https://www.elections.gov.nl.ca/generalelection2025/
+...
+  authority: Elections Newfoundland and Labrador
+...
+  format: html
+...
+  notes: 40 districts, Oct 14 2025 election, unicameral, FPTP.
+...
+  last_confirmed: '2026-06-04'
+- slug: ca_sk
+  source_type: boundaries
+  url: https://www.elections.sk.ca/candidates-political-parties/maps/
+  authority: Elections Saskatchewan (Office of the Chief Electoral Officer of Saskatchewan)
+  format: shapefile
+  notes: Official Elections Saskatchewan maps page (also reachable at elections.sk.ca/2024maps).
+    Hosts downloadable GIS mapping files in shapefile and KML formats for all 61 provincial
+    constituencies. Maps reflect the 2022 Saskatchewan Provincial Constituency Boundaries
+    Commission Final Report, used for the October 28, 2024 general election and to be reused
+    for the October 30, 2028 election. A high-resolution single ZIP of all maps plus individual
+    lower-resolution files are available. Page returns HTTP 403 on automated fetch; provenance
+    and contents confirmed via Elections Saskatchewan news releases and search results. Acquisition
+    stage should select the shapefile download.
+  last_confirmed: '2026-06-04'
+- slug: ca_sk
+  source_type: representatives
+  url: https://www.legassembly.sk.ca/mlas/
+  authority: Legislative Assembly of Saskatchewan
+  format: html
+  notes: Official MLA roster on legassembly.sk.ca. Fetched successfully and confirmed to list
+    all 61 current MLAs (Government Caucus 34, Opposition Caucus 26, Independent 1), each
+    with name (Hon. prefix where applicable), caucus standing, and constituency, plus a constituency
+    map link. Identifies Premier Scott Moe, Speaker Todd Goudy, and Opposition Leader Carla
+    Beck. An alphabetical/constituency member directory with bios and contact info is also
+    available at saskatchewan.ca/government/directory.
+  last_confirmed: '2026-06-04'
+- slug: ca_sk
+  source_type: executive
+  url: https://www.saskatchewan.ca/government/government-structure/premier-scott-moe
+  authority: Government of Saskatchewan — Office of the Premier
+  format: html
+  notes: Official Premier page on saskatchewan.ca. Identifies the Honourable Scott Moe as
+    Premier and President of Executive Council. Includes biography, priorities, and a Contact
+    Premier Moe subpage. URL is term/person-specific; pipeline should treat saskatchewan.ca/government/government-structure/premier-*
+    as the canonical pattern. saskatchewan.ca returns HTTP 403 on automated fetch; provenance
+    confirmed via search results citing this official page.
+  last_confirmed: '2026-06-04'
+- slug: ca_sk
+  source_type: cabinet
+  url: https://www.saskatchewan.ca/government/government-structure/cabinet
+  authority: Government of Saskatchewan — Executive Council
+  format: html
+  notes: Official Cabinet (Executive Council) page on saskatchewan.ca. Lists current cabinet
+    ministers with names and portfolios; in Saskatchewan the Premier is also President of
+    the Executive Council. A new cabinet was sworn in December 11, 2025 (e.g. Jim Reiter as
+    Deputy Premier and Minister of Finance). saskatchewan.ca returns HTTP 403 on automated
+    fetch; provenance confirmed via search results citing this official page and the December
+    11, 2025 government news release.
+  last_confirmed: '2026-06-04'
+- slug: ca_sk
+  source_type: misc
+  url: https://www.legassembly.sk.ca/mlas/
+  authority: Legislative Assembly of Saskatchewan
+  format: html
+  notes: 'Saskatchewan has a partisan legislature, so misc parliamentary roles apply. The
+    official MLA roster identifies Speaker Todd Goudy (MLA Melfort) and Opposition Leader
+    Carla Beck. Other named roles confirmed via official Legislative Assembly content: Government
+    House Leader Tim McLeod, Opposition House Leader Nicole Sarauer, Deputy Speaker Blaine
+    McLeod. The Legislative Assembly "Role of a Member" / roles pages (legassembly.sk.ca/about/roles-in-the-legislative-assembly/)
+    and the member directory are the official sources for Speaker, Opposition Leader, House
+    Leaders, and Whips.'
+  last_confirmed: '2026-06-04'
+- slug: ca_sk
+  source_type: metadata
+  url: https://www.elections.sk.ca/electoralevents/october-2024-provincial-election/
+  authority: Elections Saskatchewan (Office of the Chief Electoral Officer of Saskatchewan)
+  format: html
+  notes: Official Elections Saskatchewan page for the October 28, 2024 (29th) provincial general
+    election. Confirms 61 constituencies, single-member plurality (FPTP), and the fixed four-year
+    cycle (last Monday of October every four years under The Legislative Assembly and Executive
+    Council Act / The Election Act framework), with the next general election scheduled for
+    October 30, 2028. elections.sk.ca returns HTTP 403 on automated fetch; provenance confirmed
+    via Elections Saskatchewan site and search results.
+  last_confirmed: '2026-06-04'
+- slug: ca_bc_victoria
+  source_type: boundaries
+  url: https://opendata.victoria.ca/datasets/VicMap::city-boundary/about
+  authority: City of Victoria Open Data Portal (VicMap)
+  format: geojson
+  notes: Single city boundary polygon — Victoria elects all 8 councillors at-large with no wards. Following Vancouver precedent, city boundary used as the single electoral district. Download link to be resolved during acquisition.
+  last_confirmed: '2026-06-04'
+- slug: ca_bc_victoria
+  source_type: representatives
+  url: https://www.victoria.ca/city-government/mayor-council/members-council
+  authority: City of Victoria
+  format: html
+  notes: Official council members page. 8 at-large councillors, 2022-2026 term.
+  last_confirmed: '2026-06-04'
+- slug: ca_bc_victoria
+  source_type: executive
+  url: https://www.victoria.ca/city-government/mayor-council/mayor-marianne-alto
+  authority: City of Victoria — Office of the Mayor
+  format: html
+  notes: Official Mayor's page. Mayor Marianne Alto (elected 2022).
+  last_confirmed: '2026-06-04'
+- slug: ca_bc_victoria
+  source_type: metadata
+  url: https://www.victoria.ca/city-government/elections
+  authority: City of Victoria
+  format: html
+  notes: Official elections page. Next election October 17, 2026. At-large council structure, 4-year terms.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_ab_edmonton
+  source_type: boundaries
+  url: https://data.edmonton.ca/Administrative/City-of-Edmonton-Ward-Boundary-and-Council-Composi/b4er-5rp2/about_data
+  authority: City of Edmonton Open Data Portal (Socrata)
+  format: geojson
+  notes: >
+    Official ward boundary dataset. 12 wards. GeoJSON export endpoint: https://data.edmonton.ca/resource/b4er-5rp2.geojson — filter to current boundaries.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_ab_edmonton
+  source_type: representatives
+  url: https://www.edmonton.ca/city_government/city_organization/city-councillors
+  authority: City of Edmonton
+  format: html
+  notes: >
+    Official city councillors listing page. 12 ward councillors, 2025-2029 term. Individual ward subpages contain phone/email contact details.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_ab_edmonton
+  source_type: executive
+  url: https://www.edmonton.ca/city_government/city_organization/the-mayor
+  authority: City of Edmonton — Office of the Mayor
+  format: html
+  notes: >
+    Official Mayor's page. Mayor Andrew Knack, sworn October 29, 2025. Contact via web form only — no direct phone/email on profile page.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_ab_edmonton
+  source_type: metadata
+  url: https://www.edmonton.ca/city_government/edmonton-elections
+  authority: City of Edmonton
+  format: html
+  notes: >
+    Edmonton Elections page. Last election October 20, 2025; next October 15, 2029. 12 wards, 4-year terms under Alberta's Local Authorities Election Act.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_mb
+  source_type: boundaries
+  url: https://www.electionsmanitoba.ca/en/resources/maps
+  authority: Elections Manitoba (Office of the Chief Electoral Officer of Manitoba)
+  format: shapefile
+  notes: >
+    Official Elections Manitoba Maps page. Hosts downloadable electoral division
+    boundary shapefiles (2018_Final_ED_Manitoba_Public_Urban.zip for the full
+    province; 2018_Final_ED_Winnipeg_Public_Urban.zip for the Winnipeg/Brandon
+    area) plus PDF boundary maps. Boundaries set by the 2018 Manitoba Electoral
+    Divisions Boundaries Commission, in effect for the 42nd (2019) and 2023
+    general elections — 57 electoral divisions. Acquisition stage should select
+    the provincial shapefile zip.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_mb
+  source_type: representatives
+  url: https://www.gov.mb.ca/legislature/members/mla_list_constituency.html
+  authority: Legislative Assembly of Manitoba
+  format: html
+  notes: >
+    Official MLA listing by constituency on gov.mb.ca. Lists all 57 electoral
+    divisions with member name (linked to individual profile), constituency, and
+    party affiliation (NDP, PC, LIB, IND). Current standings: NDP 33, PC 20, LIB
+    1, IND 2, with one vacancy (The Pas-Kameesak). An alphabetical listing
+    (mla_list_alphabetical.html) and printer-friendly contact PDFs are also
+    available from the same section.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_mb
+  source_type: executive
+  url: https://www.gov.mb.ca/minister/premier/index.html
+  authority: Government of Manitoba — Office of the Premier
+  format: html
+  notes: >
+    Official Office of the Premier page on gov.mb.ca. Identifies current Premier
+    Wab Kinew (25th Premier, sworn in October 18, 2023; NDP; MLA for Fort Rouge).
+    Includes biography and contact details: Premier's Office, 204 Legislative
+    Building, 450 Broadway, Winnipeg, MB R3C 0V8; phone 204-945-3714; email
+    premier@manitoba.ca.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_mb
+  source_type: cabinet
+  url: https://www.gov.mb.ca/legislature/members/cabinet_ministers.html
+  authority: Government of Manitoba — Executive Council
+  format: html
+  notes: >
+    Official "Manitoba Executive Council In Order of Precedence" page on
+    gov.mb.ca. Lists approximately 20 cabinet ministers from the Premier (Wab
+    Kinew) down, with photo, name, portfolio, office location, phone, and email
+    per minister. Companion ministry index at gov.mb.ca/minister/index.html.
+    Confirm current roster at extraction time (page reflected a January 2025
+    update; a cabinet refresh occurred in 2025).
+  last_confirmed: '2026-06-04'
+
+- slug: ca_mb
+  source_type: misc
+  url: https://www.gov.mb.ca/legislature/members/speaker.html
+  authority: Legislative Assembly of Manitoba
+  format: html
+  notes: >
+    Manitoba has a partisan legislature, so misc parliamentary roles apply. The
+    official Speaker page (this URL) is the hub for the Speaker of the Legislative
+    Assembly (biography, office, history subpages). The MLA roster pages
+    (mla_list_constituency.html / mla_list_alphabetical.html) carry party
+    standings from which the Leader of the Official Opposition (PC, 20 seats) is
+    determined. Speaker, Opposition Leader, and Government/Opposition House
+    Leaders are all applicable roles; extraction stage should resolve current
+    names from these official Legislative Assembly pages.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_mb
+  source_type: metadata
+  url: https://www.electionsmanitoba.ca/en/Voting
+  authority: Elections Manitoba (Office of the Chief Electoral Officer of Manitoba)
+  format: html
+  notes: >
+    Official Elections Manitoba provincial elections overview. Confirms Manitoba
+    has a set (fixed) general election date with an early-call provision; next
+    scheduled general election October 5, 2027 (first Tuesday of October in the
+    fourth calendar year after the prior election, under The Elections Act). Last
+    general election October 3, 2023. 57 single-member electoral divisions, first-
+    past-the-post. The Elections Manitoba Maps page additionally documents the
+    2018 boundary commission and 57-division count.
+  last_confirmed: '2026-06-04'
+
+- slug: ca_nb
+  source_type: boundaries
+  url: https://www.gnb.ca/en/campaign/geonb/data-catalogue.html
+  authority: "GeoNB / Service New Brunswick (Government of New Brunswick)"
+  format: shapefile
+  notes: >
+    Official GeoNB Data Catalogue (the province's geographic data gateway).
+    Catalogue lists the dataset "Electoral districts — Provincial, current
+    (2025)" available in ESRI File Geodatabase (FGDB), ESRI Shapefile (SHP),
+    and LPK formats (updated 2025-03-06), covering the 49 provincial electoral
+    districts used for the October 21, 2024 (41st) general election. The
+    legacy Service NB catalogue page (snb.ca/geonb1/e/dc/PED.asp) now
+    redirects to this modernized GeoNB site. Acquisition stage should select
+    the "Electoral districts — Provincial, current" SHP download and take care
+    not to confuse it with the separate "Polling divisions" dataset.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_nb
+  source_type: representatives
+  url: https://www.legnb.ca/en/members/current
+  authority: "Legislative Assembly of New Brunswick"
+  format: html
+  notes: >
+    Official "Members of the 61st Legislative Assembly" roster on legnb.ca.
+    Confirmed to list all 49 MLAs with name, electoral district, and party
+    affiliation. Party standings: Liberal 31, Progressive Conservative 16,
+    Green 2 (61st Assembly, elected October 21, 2024). Individual MLA profile
+    pages are linked from this listing. French equivalent at
+    legnb.ca/fr/members/current.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_nb
+  source_type: executive
+  url: https://www.gnb.ca/en/org/office-of-the-premier.html
+  authority: "Government of New Brunswick — Office of the Premier"
+  format: html
+  notes: >
+    Official Office of the Premier page on gnb.ca. Identifies the Hon. Susan
+    Holt as the 35th Premier of New Brunswick (formed a majority government
+    November 2, 2024; MLA for Fredericton South-Silverwood). Includes
+    biography and contact details: Chancery Place, 675 King Street,
+    Fredericton, NB E3B 1E9; phone 506-453-2144; email on page. The legacy URL
+    www2.gnb.ca/content/gnb/en/departments/premier.html redirects here. URL
+    pattern is person/role-specific; treat gnb.ca/en/org/office-of-the-premier
+    as canonical.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_nb
+  source_type: cabinet
+  url: https://www.gnb.ca/en/gov/contacts/members-executive-council.html
+  authority: "Government of New Brunswick — Executive Council Office"
+  format: html
+  notes: >
+    Official "Members of Executive Council" page on gnb.ca. Lists 19 current
+    Executive Council members (cabinet ministers) with names and portfolios —
+    e.g. Premier Susan Holt, Jean-Claude D'Amours (Minister of
+    Intergovernmental Affairs / Immigration / Deputy Premier role). Each
+    minister's name links to their official legnb.ca profile. Companion
+    mandate-letters page at
+    gnb.ca/en/gov/contacts/members-executive-council/mandates-letters.html.
+    Confirm current roster at extraction time (April 2026 senior leadership
+    changes noted).
+  last_confirmed: '2026-06-06'
+
+- slug: ca_nb
+  source_type: misc
+  url: https://www.legnb.ca/en/members/current
+  authority: "Legislative Assembly of New Brunswick"
+  format: html
+  notes: >
+    New Brunswick has a partisan legislature, so misc parliamentary roles
+    apply. The current members hub on legnb.ca links to the named-role
+    resources: Executive Council (legnb.ca/en/members/executive-council),
+    Official Opposition Critics (PDF, with portfolios), and the Speakers
+    roster (legnb.ca/en/members/speakers) which identifies the current Speaker
+    as Francine Landry (2024–present). Guy Arseneault noted as Deputy Speaker
+    / Opposition House Leader; PC forms the Official Opposition (16 seats).
+    Extraction stage should resolve current Opposition Leader, House Leaders,
+    and Whips from these official Legislative Assembly resources.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_nb
+  source_type: metadata
+  url: https://www.electionsnb.ca/content/enb/en.html
+  authority: "Elections New Brunswick (Office of the Chief Electoral Officer of New Brunswick)"
+  format: html
+  notes: >
+    Official Elections New Brunswick site. Confirms the 41st (Forty-first)
+    General Election held October 21, 2024 across 49 single-member electoral
+    districts (FPTP). Provincial general elections are held on a fixed date —
+    the third Monday of October every four years — so the next scheduled
+    general election is October 2028. Supplementary resources: provincial
+    election overview
+    (electionsnb.ca/content/dam/enb/pdf/resources/provincial-election-e.pdf),
+    modernizing electoral legislation page
+    (electionsnb.ca/content/enb/en/modernizing-nb-electoral-legislation.html),
+    and the election-results section
+    (electionsnb.ca/content/enb/en/resources/publications/election-results.html).
+  last_confirmed: '2026-06-06'
+
+- slug: ca_ns
+  source_type: boundaries
+  url: https://electionsnovascotia.ca/files/GIS/Maps/
+  authority: "Elections Nova Scotia (Office of the Chief Electoral Officer of Nova Scotia)"
+  format: shapefile
+  notes: >
+    Official Elections Nova Scotia GIS directory hosting per-district
+    electoral boundary maps (PDF) for all 55 provincial electoral
+    districts (e.g. ED01_Annapolis.pdf through ED55_Yarmouth.pdf), based
+    on the 2019 Electoral Boundaries Commission boundaries enacted via
+    amendments to the House of Assembly Act (Bill No. 187, Acts of 2019)
+    — the 55-district map used for the November 26, 2024 general
+    election. Base mapping from Service Nova Scotia / Department of
+    Natural Resources (NAD83 CSRS UTM Zone 20N). The GIS directory
+    currently surfaces PDF maps; a downloadable vector/shapefile may
+    also be available here or via the provincial GIS portal GeoNOVA
+    DataLocator (https://nsgi.novascotia.ca/datalocator/,
+    geonova.novascotia.ca/geodata) — both are official Government of
+    Nova Scotia sources. Acquisition stage should locate the exact
+    shapefile/GeoJSON artifact (Elections NS GIS first, GeoNOVA as
+    fallback). Note: parts of electionsnovascotia.ca were under
+    reconstruction at discovery time; the GIS file paths and homepage
+    are live.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_ns
+  source_type: representatives
+  url: https://nslegislature.ca/members/profiles
+  authority: "Nova Scotia House of Assembly (Nova Scotia Legislature)"
+  format: html
+  notes: >
+    Official MLA roster on nslegislature.ca. Confirmed to list all 55
+    Members of the Legislative Assembly for the 65th General Assembly
+    (elected November 26, 2024) with photo, full name, party
+    affiliation, and electoral district. Party standings shown: PC 42,
+    NDP 9, Liberal 3, Independent 1. Each member name links to an
+    individual profile with biographical and contact information (linked
+    from nslegislature.ca/members). A complete contact directory is also
+    available at nslegislature.ca/members/profiles/contact.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_ns
+  source_type: executive
+  url: https://premier.novascotia.ca/
+  authority: "Office of the Premier of Nova Scotia (Government of Nova Scotia)"
+  format: html
+  notes: >
+    Official Premier of Nova Scotia website. Current Premier is the
+    Honourable Tim Houston (30th Premier, PC), re-elected with a
+    majority on November 26, 2024; also President of the Executive
+    Council and Minister of Intergovernmental Affairs and Trade. Site
+    blocks automated fetch (HTTP 403); official provenance and incumbent
+    confirmed via search results. A companion official profile exists at
+    nslegislature.ca/members/cabinet/premier and the MLA profile at
+    nslegislature.ca/members/profiles/tim-houston.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_ns
+  source_type: cabinet
+  url: https://nslegislature.ca/members/cabinet
+  authority: "Nova Scotia Executive Council (via Nova Scotia Legislature)"
+  format: html
+  notes: >
+    Official Cabinet page on nslegislature.ca. Confirmed to list the
+    current Executive Council of 20 members in order of precedence,
+    including the Premier (Tim Houston), Deputy Premier (Barbara Adams),
+    and portfolio ministers (Finance and Treasury Board, Health and
+    Wellness, Justice and Attorney General, Education, Environment and
+    Climate Change, etc.), each with responsibilities listed. Reflects
+    the cabinet sworn in following the November 2024 election and the
+    October 21, 2025 cabinet changes. Government-side companion page:
+    novascotia.ca/government/executive-council-office.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_ns
+  source_type: misc
+  url: https://nslegislature.ca/members
+  authority: "Nova Scotia House of Assembly (Nova Scotia Legislature)"
+  format: html
+  notes: >
+    Official Members hub on nslegislature.ca covering parliamentary
+    roles in a partisan legislature. Links to party standings (PC 42 /
+    NDP 9 / Liberal 3 / Independent 1, with NDP as Official Opposition),
+    the Speaker, and House officers/leaders. Speaker and House Leader
+    role pages and Official Opposition Leader are reachable from this
+    hub and the cabinet/members directory. Acquisition stage should
+    capture the Speaker, Leader of the Official Opposition (NDP),
+    Liberal leader, and Government/Opposition House Leaders from the
+    linked pages.
+  last_confirmed: '2026-06-06'
+
+- slug: ca_ns
+  source_type: metadata
+  url: https://electionsnovascotia.ca/
+  authority: "Elections Nova Scotia (Office of the Chief Electoral Officer of Nova Scotia)"
+  format: html
+  notes: >
+    Official Elections Nova Scotia site — the authority for election
+    dates and provincial electoral structure. Confirms the most recent
+    general election was the 66th general election, held November 26,
+    2024 (early call by the Premier; 65th General Assembly). Nova
+    Scotia's fixed-date election law (third Tuesday in July every 4
+    years, first date would have been July 15, 2025) was REPEALED by a
+    bill that received royal assent March 26, 2025, reverting to a
+    maximum ~5-year cycle; the next general election must be held on or
+    before December 7, 2029. 55 single-member electoral districts (House
+    of Assembly Act, Bill No. 187, 2019). Distribution of seats by party
+    published at
+    electionsnovascotia.ca/files/DistributionOfSeatsByParty_2026_05.pdf;
+    annual CEO/financial reports at
+    electionsnovascotia.ca/Annual-Reports. Site partly under
+    reconstruction at discovery time; homepage and file paths live.
+  last_confirmed: '2026-06-06'
