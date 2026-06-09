@@ -1,0 +1,32 @@
+YUKON (ca_yt) — EMAIL REVIEW LIST
+Generated 2026-06-09. Sorted alphabetically by last name.
+
+PATTERN-FILLED rows used First.Last@yla.gov.yk.ca (every MLA has this Legislative
+Assembly address). REVIEW FOCUS: the cabinet ministers among the pattern-filled rows
+(flagged 'cabinet') — Yukon's existing cabinet is split between @yla.gov.yk.ca
+(Cathers, Istchenko, Kent) and @yukon.ca (Premier Dixon, Gerle). If the new
+government's ministers use @yukon.ca, the flagged pattern-filled rows need switching.
+
+Last name        First          Email                              Cabinet?  Source
+-----------------------------------------------------------------------------------
+Anderson         Doris          Doris.Anderson@yla.gov.yk.ca                 PATTERN-FILLED
+Bellmore         Cory           Cory.Bellmore@yla.gov.yk.ca        cabinet   PATTERN-FILLED
+Benoit           Linda          Linda.Benoit@yla.gov.yk.ca         cabinet   PATTERN-FILLED
+Cathers          Brad           Brad.Cathers@yla.gov.yk.ca         cabinet   existing
+Clarke           Yvonne         Yvonne.Clarke@yla.gov.yk.ca                  existing
+Dixon            Currie         Currie.Dixon@yukon.ca              cabinet   existing
+Gehmair          Jen            Jen.Gehmair@yla.gov.yk.ca          cabinet   PATTERN-FILLED
+Gerle            Adam           Adam.Gerle@yukon.ca                          existing
+Gustafson        Carmen         Carmen.Gustafson@yla.gov.yk.ca               PATTERN-FILLED
+Istchenko        Wade           Wade.Istchenko@yla.gov.yk.ca       cabinet   existing
+Kent             Scott          Scott.Kent@yla.gov.yk.ca           cabinet   existing
+Laking           Ted            Ted.Laking@yla.gov.yk.ca           cabinet   PATTERN-FILLED
+Lang             Laura          Laura.Lang@yla.gov.yk.ca           cabinet   PATTERN-FILLED
+McDonald         Brent          Brent.McDonald@yla.gov.yk.ca                 PATTERN-FILLED
+McLeod           Patti          Patti.McLeod@yla.gov.yk.ca                   existing
+Moen             Linda          Linda.Moen@yla.gov.yk.ca                     PATTERN-FILLED
+Porter           Tyler          Tyler.Porter@yla.gov.yk.ca                   PATTERN-FILLED
+Reti             Debra-Leigh    Debra-Leigh.Reti@yla.gov.yk.ca               PATTERN-FILLED
+Tredger          Lane           Lane.Tredger@yla.gov.yk.ca                   existing
+White            Kate           kate.white@yla.gov.yk.ca                     existing
+Ziegler          Justin         Justin.Ziegler@yla.gov.yk.ca                 PATTERN-FILLED
