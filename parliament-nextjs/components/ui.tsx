@@ -6,6 +6,28 @@ import type { Politician } from "@/lib/types";
 import { photoSrc } from "@/lib/derived";
 import { Icon } from "./Icon";
 
+// ── Contact resolution ──────────────────────────────────────────────────────
+// The API ships two separate fields, either / both / neither populated:
+//   email            — a mailto-style address
+//   contact_form_url — an https URL to the official's government contact form
+// The UI shows ONE button labelled "Email" regardless of which is present.
+// Precedence: a direct email wins over a contact form. If neither exists this
+// returns null and callers hide the affordance entirely.
+export type ContactAction = { href: string; external: boolean; hint: string };
+
+export function getContactAction(
+  pol: Pick<Politician, "email"> & { contact_form_url?: string | null },
+): ContactAction | null {
+  if (!pol) return null;
+  if (pol.email) {
+    return { href: `mailto:${pol.email}`, external: false, hint: pol.email };
+  }
+  if (pol.contact_form_url) {
+    return { href: pol.contact_form_url, external: true, hint: "Contact form" };
+  }
+  return null;
+}
+
 type Size = "sm" | "md" | "lg" | "xl";
 
 export function Avatar({ pol, size = "md" }: { pol: Pick<Politician, "initials" | "party_class" | "photo_url" | "full_name">; size?: Size }) {
@@ -52,6 +74,54 @@ export function RepRow({
       </span>
       <Icon name="chevron_right" size={18} className="chevron" />
     </button>
+  );
+}
+
+// RepRow + inline quick-contact actions. Used on the lookup results page so a
+// user can call or email a representative without first opening the profile.
+// The identity area still opens the full detail view; the action bar stops
+// propagation so a tap on "Call"/"Email" never also navigates.
+export function RepContactCard({
+  pol, eyebrow, onOpen,
+}: {
+  pol: Politician; eyebrow?: string; onOpen?: () => void;
+}) {
+  const email = getContactAction(pol);
+  const tel = pol.phone ? `tel:${pol.phone.replace(/[^\d+]/g, "")}` : null;
+  const hasActions = Boolean(tel || email);
+  return (
+    <div className="rep-card">
+      <button type="button" className="rep" style={{ width: "100%", padding: 0 }} onClick={onOpen}>
+        <Avatar pol={pol} size="sm" />
+        <span className="fill">
+          {eyebrow ? <span className="section-label" style={{ display: "block", marginBottom: 3 }}>{eyebrow}</span> : null}
+          <span className="rep-name" style={{ fontSize: 19, display: "block" }}>{pol.full_name}</span>
+          <span className="rep-sub">
+            <span>{pol.display_title}</span>
+            {pol.party_name ? <><span className="sep" /><span className="accent" style={{ fontWeight: 500 }}>{pol.party_name}</span></> : null}
+          </span>
+        </span>
+        <Icon name="chevron_right" size={18} className="chevron" />
+      </button>
+      {hasActions ? (
+        <div className="rep-actions">
+          {tel ? (
+            <a className="act-btn primary" href={tel}>
+              <Icon name="phone" size={15} stroke={1.8} /> Call
+            </a>
+          ) : null}
+          {email ? (
+            <a
+              className="act-btn"
+              href={email.href}
+              {...(email.external ? { target: "_blank", rel: "noreferrer" } : {})}
+            >
+              <Icon name="mail" size={15} /> Email
+            </a>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
   );
 }
 

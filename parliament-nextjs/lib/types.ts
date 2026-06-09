@@ -22,6 +22,7 @@ export interface ApiPolitician {
   next_election: string;  // ISO date or ""
   phone: string;
   email: string;
+  contact_form_url?: string | null;
   website: string;
   photo_url: string;
   // present only on /representative/<j>/<slug>
