@@ -69,7 +69,7 @@ Assemble rows with the full `politicians.csv` header from `docs/schemas.md`. Lea
 - `party_name` — the person's party where applicable; fill it.
 - `date_elected` — usually empty (misc roles are typically appointed/assigned, not elected); populate only if a source genuinely states an election date for the role.
 - `next_election` — usually empty.
-- `phone` / `email` — the person's official contact, from their profile; must-find.
+- `phone` / `email` — the person's official contact, from their profile; must-find. For `email`, prefer a published address; when the source offers only an official email/contact **web form** (no address), store that form's URL in this column instead of leaving it empty (see `email` in `docs/schemas.md`).
 - `website` — the person's official government page; must-find.
 - `photo_url` — a direct, hotlinkable image URL (not a page containing the image); must-find. Verify it points at an image.
 - `source_url` — the official page the role was sourced from.

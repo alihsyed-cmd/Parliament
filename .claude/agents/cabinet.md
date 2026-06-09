@@ -72,7 +72,7 @@ Assemble rows with the full `politicians.csv` header from `docs/schemas.md`. Lea
 - `party_name` — the minister's party (cabinet is partisan); fill it.
 - `date_elected` — ISO 8601 if found; may be left empty (inferable).
 - `next_election` — usually empty; populate only if a specific date is stated.
-- `phone` / `email` — official office contact; must-find.
+- `phone` / `email` — official office contact; must-find. For `email`, prefer a published address; when the source offers only an official email/contact **web form** (no address), store that form's URL in this column instead of leaving it empty (see `email` in `docs/schemas.md`).
 - `website` — the minister's official government page; must-find.
 - `photo_url` — a direct, hotlinkable image URL (not a page containing the image); must-find. Verify it points at an image.
 - `source_url` — the official page this row was sourced from.

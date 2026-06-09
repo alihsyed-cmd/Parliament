@@ -93,7 +93,7 @@ Field guidance:
 - `party_name` — for partisan systems; empty for non-partisan municipal jurisdictions.
 - `date_elected` — ISO 8601 if found; may be left empty (the one inferable field).
 - `next_election` — usually empty; populate only if the page states a specific date for this seat. May be left empty.
-- `phone` / `email` — official office contact, from boundary file or pages; must-find.
+- `phone` / `email` — official office contact, from boundary file or pages; must-find. For `email`, prefer a published address; when the source offers only an official email/contact **web form** (no address), store that form's URL in this column instead of leaving it empty (see `email` in `docs/schemas.md`).
 - `website` — the representative's official government page; must-find.
 - `photo_url` — a direct, hotlinkable image URL (not a page containing the image); must-find. Verify it points at an image.
 - `source_url` — the primary web source for this person.

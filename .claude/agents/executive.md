@@ -66,7 +66,7 @@ Assemble one row with the full `politicians.csv` header from `docs/schemas.md`. 
 - `party_name` — the executive's party for partisan systems (Premiers, Prime Ministers); empty for non-partisan municipal mayors.
 - `date_elected` — ISO 8601 if found; may be left empty (inferable).
 - `next_election` — usually empty; populate only if the page states a specific date.
-- `phone` / `email` — the official office contact (e.g., the Mayor's Office), not a personal contact; must-find.
+- `phone` / `email` — the official office contact (e.g., the Mayor's Office), not a personal contact; must-find. For `email`, prefer a published address; when the source offers only an official email/contact **web form** (no address), store that form's URL in this column instead of leaving it empty (see `email` in `docs/schemas.md`).
 - `website` — the official page for the head of government; must-find.
 - `photo_url` — a direct, hotlinkable image URL (not a page containing the image); must-find. Verify it points at an image.
 - `source_url` — the official page this row was sourced from.

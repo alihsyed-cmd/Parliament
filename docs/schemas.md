@@ -56,7 +56,7 @@ One row per politician per role. A politician holding multiple roles (e.g., MP w
 | `date_elected` | date (YYYY-MM-DD) | When this politician was elected to this specific role. Empty if unknown; frontend falls back to jurisdiction's `last_election`. |
 | `next_election` | date (YYYY-MM-DD) | When this specific role is next up for election. Empty if not set; frontend falls back to jurisdiction's `next_election` or estimates from `term_duration_years`. |
 | `phone` | text | Contact phone number. Examples: `905-546-2416`, `+1 416-338-5335`. |
-| `email` | text | Contact email. Should be the politician's official office email, not personal. |
+| `email` | text | Official contact for reaching the politician. Prefer a published email address (the official office address, not personal). When the government source publishes **no** email address but offers an official email/contact **web form**, store that form's URL in this column instead of leaving it empty. The two cases are distinguishable by shape — a published address contains `@`; a contact form is an `http(s)://` URL — which lets the frontend route the user to whichever exists (a `mailto:` link or the form page). Leave empty only when neither an address nor a form is published. |
 | `website` | text | Official politician page on their government's website. |
 | `photo_url` | text | Direct URL to an official headshot. Must be a hotlinkable image URL, not a page containing the image. |
 | `source_url` | text | URL of the page from which this politician's data was sourced. Used for auditing and freshness verification. |
