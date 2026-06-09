@@ -169,6 +169,25 @@ def _iso(d) -> str:
     return d.isoformat() if d is not None else ""
 
 
+def _split_contact(value) -> tuple[str, str]:
+    """Normalize the overloaded politicians.email column into two typed fields.
+
+    The column stores either a direct email or a contact-form URL. Returns
+    (email, contact_form_url) — mutually exclusive, both "" when unpopulated,
+    never None. Frontend can then write `email || contact_form_url` unambiguously.
+
+      value contains "@"           -> (value, "")        # mailto target
+      value non-empty, no "@"      -> ("", value)        # absolute form URL
+      value empty/None             -> ("", "")
+    """
+    v = (value or "").strip()
+    if not v:
+        return "", ""
+    if "@" in v:
+        return v, ""
+    return "", v
+
+
 def _politician(d: dict) -> dict:
     """Shape one politicians row (as a dict) into the frontend Politician type.
 
@@ -180,6 +199,7 @@ def _politician(d: dict) -> dict:
     full_name = " ".join(
         p for p in (d["honorific"], d["first_name"], d["last_name"]) if p
     ).strip()
+    email, contact_form_url = _split_contact(d["email"])
     return {
         "uuid": str(d["uuid"]),
         "slug": d["slug"] or str(d["uuid"]),
@@ -193,7 +213,8 @@ def _politician(d: dict) -> dict:
         "date_elected": _iso(d["date_elected"]),
         "next_election": _iso(d["next_election"]),
         "phone": d["phone"] or "",
-        "email": d["email"] or "",
+        "email": email,
+        "contact_form_url": contact_form_url,
         "website": d["website"] or "",
         "photo_url": d["photo_url"] or "",
     }
