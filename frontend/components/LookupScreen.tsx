@@ -1,9 +1,10 @@
 "use client";
 
+// components/LookupScreen.tsx — accordion / responsive level grid + coverage gaps.
 import React from "react";
 import type { Level, LookupResponse, Politician } from "@/lib/types";
 import { Icon } from "./Icon";
-import { RepRow, Countdown } from "./ui";
+import { RepContactCard, Countdown } from "./ui";
 import { ReminderToggle } from "./ReminderToggle";
 import { formatDate, daysUntil, levelMeta } from "@/lib/format";
 
@@ -66,17 +67,17 @@ function LevelPanel({
               {level.executive ? (
                 <div>
                   <div className="section-label" style={{ marginBottom: 4 }}>{meta.execTitle}</div>
-                  <RepRow pol={level.executive} onClick={() => onRep(level.executive!, level)} />
+                  <RepContactCard pol={level.executive} onOpen={() => onRep(level.executive!, level)} />
                 </div>
               ) : null}
 
               {level.representatives.length ? (
-                <div>
+                <div className="stack stack-2">
                   <div className="section-label" style={{ marginBottom: 4 }}>
                     Your {level.representatives.length > 1 ? gov!.role_label_plural : gov!.role_label_singular}
                   </div>
                   {level.representatives.map((r) => (
-                    <RepRow key={r.uuid} pol={r} onClick={() => onRep(r, level)} />
+                    <RepContactCard key={r.uuid} pol={r} onOpen={() => onRep(r, level)} />
                   ))}
                 </div>
               ) : null}
@@ -149,7 +150,7 @@ export function LookupScreen({
       <div className="stack stack-3" style={{ marginBottom: 24, maxWidth: 640 }}>
         <div className="eyebrow accent">Your government</div>
         <h1 className="h-1"><span className="h-italic serif">{totalPeople} {totalPeople === 1 ? "person" : "people"}</span> represent you.</h1>
-        <p className="t-lead">Plus {totalOther} more in cabinet, opposition &amp; leadership across {covered} levels.</p>
+        <p className="t-lead">Plus {totalOther} more in cabinet, opposition &amp; leadership across {covered} levels. Open a level to call or email yours — right here.</p>
       </div>
 
       <div className="levels-grid">

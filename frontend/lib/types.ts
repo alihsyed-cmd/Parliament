@@ -20,6 +20,7 @@ export interface ApiPolitician {
   next_election: string;
   phone: string;
   email: string;
+  contact_form_url?: string | null;
   website: string;
   photo_url: string;
   source_url?: string;

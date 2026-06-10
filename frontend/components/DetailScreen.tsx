@@ -1,9 +1,12 @@
 "use client";
 
+// components/DetailScreen.tsx — contact-first representative detail.
+// Wires /representative/<jurisdiction>/<slug> to surface representations[] (every
+// role a person holds), so a Premier-who's-also-an-MPP shows all their hats.
 import React from "react";
 import type { Level, Politician, Representation, RepresentativeResponse } from "@/lib/types";
 import { Icon } from "./Icon";
-import { Avatar, PartyChip } from "./ui";
+import { Avatar, PartyChip, getContactAction } from "./ui";
 import { formatDate, daysUntil, levelMeta } from "@/lib/format";
 
 const ROLE_BLURB: Record<string, Record<string, string>> = {
@@ -31,7 +34,7 @@ export function DetailScreen({
 }: {
   rep: Politician;
   level: Level;
-  detail: RepresentativeResponse | null;
+  detail: RepresentativeResponse | null; // fetched representations, if available
   onBack: () => void;
   onSeeJurisdiction: (l: Level) => void;
 }) {
@@ -62,30 +65,38 @@ export function DetailScreen({
 
       <div className="detail-grid">
         <div className="stack stack-4">
+          {/* Contact-first */}
           <div className="stack stack-3">
             <div className="eyebrow accent">Get in touch</div>
-            <div className="contact-row">
-              {rep.phone ? (
-                <a className="contact-btn primary" href={`tel:${rep.phone.replace(/[^\d+]/g, "")}`}>
-                  <Icon name="phone" size={22} stroke={1.8} /><span className="lbl">Call</span><span className="val" style={{ opacity: .85 }}>{rep.phone}</span>
-                </a>
-              ) : null}
-              {rep.email ? (
-                <a className="contact-btn" href={`mailto:${rep.email}`}>
-                  <Icon name="mail" size={22} /><span className="lbl">Email</span><span className="val">{rep.email}</span>
-                </a>
-              ) : null}
-              {rep.website ? (
-                <a className="contact-btn" href={/^https?:/.test(rep.website) ? rep.website : `https://${rep.website}`} target="_blank" rel="noreferrer">
-                  <Icon name="link" size={22} /><span className="lbl">Website</span><span className="val">{rep.website.replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0]}</span>
-                </a>
-              ) : null}
-            </div>
+            {(() => {
+              const email = getContactAction(rep);
+              const n = (rep.phone ? 1 : 0) + (email ? 1 : 0) + (rep.website ? 1 : 0);
+              return (
+                <div className="contact-row" style={{ gridTemplateColumns: `repeat(${Math.max(n, 1)}, 1fr)` }}>
+                  {rep.phone ? (
+                    <a className="contact-btn primary" href={`tel:${rep.phone.replace(/[^\d+]/g, "")}`}>
+                      <Icon name="phone" size={22} stroke={1.8} /><span className="lbl">Call</span><span className="val" style={{ opacity: .85 }}>{rep.phone}</span>
+                    </a>
+                  ) : null}
+                  {email ? (
+                    <a className="contact-btn" href={email.href} {...(email.external ? { target: "_blank", rel: "noreferrer" } : {})}>
+                      <Icon name="mail" size={22} /><span className="lbl">Email</span><span className="val">{email.hint}</span>
+                    </a>
+                  ) : null}
+                  {rep.website ? (
+                    <a className="contact-btn" href={/^https?:/.test(rep.website) ? rep.website : `https://${rep.website}`} target="_blank" rel="noreferrer">
+                      <Icon name="link" size={22} /><span className="lbl">Website</span><span className="val">{rep.website.replace(/^https?:\/\//, "").replace(/^www\./, "").split("/")[0]}</span>
+                    </a>
+                  ) : null}
+                </div>
+              );
+            })()}
             <p className="t-xs" style={{ textAlign: "center", color: "var(--ink-3)" }}>
               Calling or writing is the single most effective thing you can do.
             </p>
           </div>
 
+          {/* Multi-role */}
           {multiRole ? (
             <div className="card">
               <div className="eyebrow" style={{ marginBottom: 10 }}>Roles held</div>
