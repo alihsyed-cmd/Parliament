@@ -40,7 +40,6 @@ function LevelPanel({
   const meta = levelMeta[level.level];
   const gov = level.jurisdiction.governance;
   const isGap = !gov || level._gap;
-  const people = (level.executive ? 1 : 0) + level.representatives.length;
   const others = level.cabinet.length + level.other_leadership.length;
   const days = gov?.next_election && gov.election_date_set ? daysUntil(gov.next_election) : null;
   const showBody = wide || open;
@@ -52,10 +51,11 @@ function LevelPanel({
         <span className="fill">
           <span className="eyebrow" style={{ display: "block", marginBottom: 2 }}>{meta.tag}</span>
           <span className="level-name" style={{ display: "block" }}>{level.jurisdiction.name}</span>
-          <span className="level-sub" style={{ display: "block" }}>
-            {isGap ? <span className="accent">Coverage coming soon</span>
-              : <>{people} {people === 1 ? "person" : "people"} · {others} more in cabinet &amp; leadership</>}
-          </span>
+          {isGap ? (
+            <span className="level-sub" style={{ display: "block" }}>
+              <span className="accent">Coverage coming soon</span>
+            </span>
+          ) : null}
         </span>
         <span className="toggle"><Icon name="chevron_down" size={16} stroke={2} /></span>
       </button>
