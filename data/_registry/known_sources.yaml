@@ -2225,3 +2225,1337 @@ ca_on_ottawa:
     electionsnovascotia.ca/Annual-Reports. Site partly under
     reconstruction at discovery time; homepage and file paths live.
   last_confirmed: '2026-06-06'
+- slug: ca_pe_cornwall
+  source_type: boundaries
+  url: https://data.princeedwardisland.ca/search?q=municipal+boundaries
+  authority: Government of Prince Edward Island — Geomatic Services / PEI Open Data
+  format: shapefile
+  notes: 'PEI "Municipal Boundaries" is an official VECTOR dataset (downloadable as GeoJSON/shapefile
+    from data.princeedwardisland.ca; catalog metadata at gov.pe.ca/gis number=1011344). Cornwall is AT-LARGE
+    ("open ward system", Mayor + 6 councillors elected town-wide, no geographic wards), so the single
+    Town of Cornwall municipal-boundary polygon is the lone electoral area (Vancouver/ Victoria at-large
+    precedent). ACQUISITION: resolve the concrete vector download from the PEI open data portal, obtain
+    the municipal boundaries vector file, and isolate the Town of Cornwall polygon. Approved because machine-readable
+    vector geometry IS obtainable (unlike the 4 deferred PEI ward cities which are PDF-only).'
+  last_confirmed: '2026-06-10'
+- slug: ca_pe_cornwall
+  source_type: representatives
+  url: https://cornwallpe.ca/town-hall/counci/
+  authority: Town of Cornwall
+  format: html
+  notes: Official Town of Cornwall Council page. Mayor Minerva McCourt + 6 at-large councillors (one Deputy
+    Mayor) for the 2022-2026 term. Confirm live roster at extraction (Councillor Elaine Barnes noted on
+    leave until Feb 2026 per search). Per-member phone and email present.
+  last_confirmed: '2026-06-10'
+- slug: ca_pe_cornwall
+  source_type: executive
+  url: https://cornwallpe.ca/town-hall/counci/
+  authority: Town of Cornwall
+  format: html
+  notes: Mayor Minerva McCourt on the official Council page; no separate mayor profile page (same URL
+    serves representatives and executive).
+  last_confirmed: '2026-06-10'
+- slug: ca_pe_cornwall
+  source_type: metadata
+  url: https://cornwallpe.ca/elections/
+  authority: Town of Cornwall
+  format: html
+  notes: Official Town of Cornwall Elections page. Next municipal election Monday, November 2, 2026; current
+    term 2022-2026; 4-year cycle; Mayor + 6 councillors elected at-large.
+  last_confirmed: '2026-06-10'
+- slug: ca_nl_st_johns
+  source_type: boundaries
+  url: https://map.stjohns.ca/mapsrv/rest/services/WardMap/MapServer
+  authority: City of St. John's — Land Information Services (GIS / Map Centre)
+...
+  format: geojson
+  notes: 'VECTOR ward geometry IS available (machine-readable, not PDF-only). The City of St.
+  John''s hosts a dedicated ArcGIS REST service "WardMap/MapServer" on its own GIS
+  host (map.stjohns.ca/mapsrv/rest/services). Single polygon layer 0 "WARDS_wCouncillorInfo"
+  — the 5 electoral ward boundary polygons with councillor info attached. Spatial
+  reference EPSG:32181 (NAD83 NL stereographic / UTM-equivalent); service supports
+  query/export with output formats JSON, geoJSON, and PBF (maxRecordCount 2000). Acquisition
+  stage should pull GeoJSON from the layer-0 query endpoint (.../WardMap/MapServer/0/query?where=1=1&outFields=*&f=geojson)
+  and reproject/handle CRS as needed. NOTE on scope: St. John''s council is Mayor
+  + Deputy Mayor + 5 ward councillors + 4 councillors-at-large; only the 5 wards are
+  geographic districts, so this WardMap layer is the complete electoral-boundary set
+  (the 4 at-large seats have no sub-city geometry). The city does NOT publish ward
+  boundaries via an ArcGIS Hub / open-data portal — its public Maps page (stjohns.ca/en/city-hall/maps.aspx)
+  offers only an interactive Map Centre viewer and PDF printable maps — but the underlying
+  REST MapServer makes vector export available. The provincial portal (opendata.gov.nl.ca)
+  carries only Provincial Electoral Districts, not St. John''s municipal wards.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_st_johns
+  source_type: representatives
+  url: https://www.stjohns.ca/en/city-hall/mayor-and-council.aspx
+  authority: City of St. John's
+...
+  format: html
+  notes: 'Official Mayor and Council page on stjohns.ca. Confirmed to list the full council
+  for the term elected at the October 2025 municipal election: Mayor Danny Breen,
+  Deputy Mayor Ron Ellsworth, 5 ward councillors (Ward 1 Jill Bruce, Ward 2 Brenda
+  Halley, Ward 3 Greg Noseworthy, Ward 4 Tom Davis, Ward 5 Donnie Earle), and 4 councillors-at-large
+  (Kate Cadigan, Lynn Hammond, Sandy Hickman, Nikita Ryall) — 11 members total. Each
+  member has a profile page with contact info; entire council reachable at CouncilGroup@stjohns.ca.
+  (Note: stjohns.ca = City of St. John''s, Newfoundland and Labrador — distinct from
+  saintjohn.ca, the unrelated City of Saint John, New Brunswick.)'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_st_johns
+  source_type: executive
+  url: https://www.stjohns.ca/en/city-hall/mayor-and-council.aspx
+  authority: City of St. John's
+...
+  format: html
+  notes: Mayor Danny Breen (Lead for Governance and Strategic Priorities), elected at the October
+  2025 municipal election, appears at the top of the official Mayor and Council page.
+  No separate dedicated mayor profile URL was confirmed; the same page serves both
+  representatives and executive source types (individual member profile pages are
+  linked from it). Deputy Mayor is Ron Ellsworth.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_st_johns
+  source_type: metadata
+  url: https://www.stjohns.ca/en/city-hall/elections.aspx
+  authority: City of St. John's
+...
+  format: html
+  notes: 'Official Elections page on stjohns.ca. Confirms the current council was elected at
+  the 2025 Municipal General Election and that the next general election will take
+  place in 2029 (4-year cycle under Newfoundland and Labrador''s Municipal Elections
+  Act). Council structure: Mayor + Deputy Mayor + 5 ward councillors + 4 councillors-at-large
+  (11 members). City Hall at 10 New Gower Street, St. John''s, NL. A dedicated 2025-municipal-election
+  page also exists (stjohns.ca/en/city-hall/2025-municipal-election.aspx) and the
+  broader 2025-election-results page documents the result. The provincial Municipal
+  and Community Affairs department (gov.nl.ca/mca/local-governance-division/municipal-elections/)
+  is the provincial governance/elections authority if supplementary structural detail
+  is needed.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_conception_bay_south
+  source_type: boundaries
+  url: https://www.conceptionbaysouth.ca/services/mapping-service/
+  authority: Town of Conception Bay South (Planning & Development / GIS)
+...
+  format: vector (ArcGIS feature service)
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR available (not PDF-only). The Town of Conception
+  Bay South operates its own ArcGIS Online organization (cbs.maps.arcgis.com, org
+  id 4cgpd6caJYuDiTSW) and publishes public web map viewers — the "CBS Interactive
+  Map" (webmap 426b507aaa00446faa6913669c2691c9) and an ArcGIS Web AppViewer (item
+  88748811c96841bea552061d92cbf41e). The operational-layer list of those viewers explicitly
+  includes a vector "MunicipalBoundary_MA" feature layer (plus cbs_mun_boundary_buffer,
+  Road_Network, BuildingFootprint, TownOwnedProperty), confirming the single municipal-boundary
+  polygon is available as machine-readable vector geometry via the Town''s ArcGIS
+  feature services. The mapping-service page (this URL, linked from conceptionbaysouth.ca)
+  states the Town provides free public access to its GIS data and has maintained GIS
+  mapping since 2003. NOTE for acquisition: a dedicated, separately-downloadable WARD-boundary
+  vector dataset (4 wards) was not confirmed as an open-data export — ward extents
+  are described only in prose on the election page. The municipal-boundary polygon
+  IS confirmed vector; ward polygons should be pulled from the Town''s ArcGIS feature
+  service (cbs.maps.arcgis.com) or requested from the Town GIS at acquisition time.
+  conceptionbaysouth.ca blocks automated fetches (HTTP 403); URLs and layer list confirmed
+  via search-result snippets and the public ArcGIS web-map item JSON.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_conception_bay_south
+  source_type: representatives
+  url: https://www.conceptionbaysouth.ca/council/councillors/
+  authority: Town of Conception Bay South
+...
+  format: html
+  notes: 'Official Councillors page listing the full council elected/acclaimed in the October
+  2, 2025 municipal election. Mixed structure: Mayor (Darrin Bent, acclaimed) + 4
+  At Large Councillors (Joshua Barrett, Christine Butler, Warrick Cluney, Rex Hillier)
+  + 4 Ward Councillors (Ward 1 Shelley Moores, Ward 2 Andrea Gosse, Ward 3 Gerard
+  Tilley, Ward 4 Melissa Hardy). Deputy Mayor is selected by Council from among councillors.
+  Council = ward-based for the 4 ward seats plus at-large seats. conceptionbaysouth.ca
+  returns HTTP 403 on automated fetch; roster confirmed via search-result snippets
+  citing this page and the 2025 Election Results page (https://www.conceptionbaysouth.ca/2025-election-results/).'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_conception_bay_south
+  source_type: executive
+  url: https://www.conceptionbaysouth.ca/council/
+  authority: Town of Conception Bay South
+...
+  format: html
+  notes: Official Council page covering the head of government. Mayor Darrin Bent (acclaimed
+  in the October 2, 2025 election). No dedicated stand-alone mayor profile page was
+  identified; the Council and Councillors pages on conceptionbaysouth.ca serve as
+  the official source for the Mayor. conceptionbaysouth.ca returns HTTP 403 on automated
+  fetch; confirmed via search-result snippets.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_conception_bay_south
+  source_type: metadata
+  url: https://www.conceptionbaysouth.ca/2025-election-results/
+  authority: Town of Conception Bay South
+...
+  format: html
+  notes: 'Official 2025 Election Results page documenting the October 2, 2025 municipal election
+  outcome and governance structure: Council = Mayor + 4 At Large Councillors + 1 Ward
+  Councillor for each of the Town''s 4 wards (9 members total). NL municipal elections
+  run on a 4-year cycle under the Municipalities Act / Municipal Elections Act, so
+  the next general municipal election is due in 2029. Companion page: Municipal Election
+  2025 (https://www.conceptionbaysouth.ca/municipal-election-2025/). conceptionbaysouth.ca
+  returns HTTP 403 on automated fetch; details confirmed via search-result snippets.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_mount_pearl
+  source_type: boundaries
+  url: https://opendata.gov.nl.ca/public/opendata/page/?page-id=datasetdetails&id=265
+  authority: Open Data Newfoundland and Labrador (Economics and Statistics Branch, Department of
+  Finance, Government of Newfoundland and Labrador)
+...
+  format: shapefile
+  notes: 'VECTOR AVAILABLE. Official Government of Newfoundland and Labrador open data dataset
+  "Municipalities and Local Service Districts" (Open Government Licence). Confirmed
+  downloadable as compressed Shapefile and KMZ — machine-readable vector boundary
+  polygons for all NL municipalities. Mount Pearl is AT-LARGE (Mayor + Deputy Mayor
+  + 5 councillors elected city-wide; the City of Mount Pearl is not divided into wards),
+  so the single Town/City of Mount Pearl municipal-boundary polygon is the lone electoral
+  area (Cornwall/Victoria/Vancouver at-large precedent). ACQUISITION: download the
+  Municipalities and Local Service Districts shapefile from this Open Data NL dataset
+  page and isolate the Mount Pearl municipal-boundary polygon. Alternative official
+  vector sources if needed: provincial GIS hub gis-and-mapping-gnl.hub.arcgis.com
+  and the city''s own GIS at map.mountpearl.ca.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_mount_pearl
+  source_type: representatives
+  url: https://www.mountpearl.ca/government/council/
+  authority: City of Mount Pearl
+...
+  format: html
+  notes: 'Official City Council page. Confirmed 7-member at-large council for the 2025-2029
+  term: Mayor Dave Aker, Deputy Mayor Nicole Kieley (noted on leave at fetch time),
+  and Councillors Bill Antle, Isabelle Fry, Chelsea Lane, Jim Locke, Mark Rice. No
+  wards — all elected city-wide. Per-member phone and email present (e.g. daker@mountpearl.ca,
+  709-748-1032). Confirm live roster at extraction.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_mount_pearl
+  source_type: executive
+  url: https://www.mountpearl.ca/government/council/
+  authority: City of Mount Pearl
+...
+  format: html
+  notes: Mayor Dave Aker (in office since 2017) listed on the official Council page; phone
+  709-748-1032, email daker@mountpearl.ca. No separate dedicated mayor profile page
+  — same URL serves representatives and executive source types.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_mount_pearl
+  source_type: metadata
+  url: https://mountpearlvotes.ca/
+  authority: City of Mount Pearl (Office of the City Clerk / Elections)
+...
+  format: html
+  notes: Official City of Mount Pearl elections website (contact elections@mountpearl.ca, 709-748-1146).
+  Documents the municipal election process. Governance structure (Mayor + Deputy Mayor
+  + 5 councillors, all at-large; 4-year terms under the City of Mount Pearl Act, RSNL
+  1990 c. C-16). NL municipal elections held the last Tuesday in September every four
+  years; last election held 2025, next ~2029. Supplementary governance detail at https://www.mountpearl.ca/government/council/.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_paradise
+  source_type: boundaries
+  url: https://www.gov.nl.ca/mca/municipal-boundaries/
+  authority: Government of Newfoundland and Labrador — Department of Municipal and Community Affairs
+...
+  format: kmz
+  notes: 'Official GNL Municipal and Community Affairs "Municipal Boundaries" page. Publishes
+  a province-wide "Municipal Boundaries" dataset (incorporated municipalities under
+  the Towns and Local Service Districts Act) as a downloadable KMZ — a VECTOR format
+  (compressed Google Earth vector geometry), NOT PDF-only. Paradise is an AT-LARGE
+  town (Mayor + 7 councillors elected town-wide, no geographic wards), so the single
+  Town of Paradise municipal-boundary polygon is the lone electoral area (Vancouver/Victoria/Cornwall
+  at-large precedent). ACQUISITION: download the provincial Municipal Boundaries KMZ
+  and isolate the Town of Paradise polygon; convert KMZ to GeoJSON for the canonical
+  store. Companion GIS data page at gov.nl.ca/mca/gis-data/. VECTOR available — jurisdiction
+  is NOT a PDF-only deferral.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_paradise
+  source_type: representatives
+  url: https://www.paradise.ca/en/government-and-engagement/Mayor-and-Council.aspx
+  authority: Town of Paradise
+...
+  format: html
+  notes: Official Town of Paradise Mayor and Council page. Confirmed to list Mayor Patrick
+  Martin (elected October 2, 2025), Deputy Mayor Kimberley Street, and 5 additional
+  councillors (Sheldon Antle, Glen "Bic" Carew, Erin Furlong, Jennifer Hiscock, Tommy
+  Maher) — Mayor + 7 councillors total, all elected at-large (no wards). General contact
+  709-782-1400, info@paradise.ca. Individual councillor contact detail may require
+  profile subpages at extraction.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_paradise
+  source_type: executive
+  url: https://www.paradise.ca/en/government-and-engagement/Mayor-and-Council.aspx
+  authority: Town of Paradise
+...
+  format: html
+  notes: Mayor Patrick Martin on the official Mayor and Council page (first elected in the
+  October 2, 2025 municipal general election). Mayor's Office email mayor@paradise.ca.
+  No separate dedicated mayor profile page identified; same URL serves representatives
+  and executive.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_paradise
+  source_type: metadata
+  url: https://www.paradise.ca/en/government-and-engagement/2025-election-results.aspx
+  authority: Town of Paradise
+...
+  format: html
+  notes: Official 2025 Election Results page. Confirms the municipal general election was held
+  Thursday, October 2, 2025; governance structure is Mayor + 7 councillors elected
+  at-large (10 candidates ran town-wide for councillor seats; no wards). NL municipal
+  elections run on a 4-year cycle, so the next general election is ~2029. Supplementary
+  provincial-cycle context at gov.nl.ca/mca/local-governance-division/municipal-elections/.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_corner_brook
+  source_type: boundaries
+  url: https://geohub-gnl.hub.arcgis.com/datasets/municipal-boundaries
+  authority: Government of Newfoundland and Labrador — GeoHub (GNL GeoAtlas)
+...
+  format: geojson
+  notes: 'VECTOR available. Corner Brook is AT-LARGE (Mayor + 6 councillors elected town-wide,
+  no geographic wards — City of Corner Brook Act / "open ward" municipal model), so
+  the single Town/City of Corner Brook municipal-boundary polygon is the lone electoral
+  area (Vancouver/Victoria at-large precedent). Machine-readable vector geometry IS
+  obtainable: the official GNL GeoAtlas ArcGIS service exposes "Municipal Boundaries"
+  as layer id 7 (esriGeometryPolygon) at https://dnrmaps.gov.nl.ca/arcgis/rest/services/GeoAtlas/Land_Use/MapServer/7
+  — confirmed queryable with supportedQueryFormats including JSON and geoJSON. Surfaced
+  on the official GNL ArcGIS Hub ("Municipal Boundaries, Newfoundland and Labrador",
+  ArcGIS item c1e4bbde3ea743a488ce23cccedce08f) and also in the NL Open Data portal
+  as the "Municipalities and Local Service Districts" dataset (Economics and Statistics
+  Branch, Dept. of Finance) at https://opendata.gov.nl.ca/. ACQUISITION: export the
+  Municipal Boundaries vector (GeoJSON via the GeoAtlas MapServer layer 7 query endpoint
+  or the GeoHub download) and isolate the Corner Brook polygon (filter on the municipality
+  name attribute). NOT PDF-only — vector geometry confirmed.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_corner_brook
+  source_type: representatives
+  url: https://www.cornerbrook.com/council/corner-brook-city-council/
+  authority: City of Corner Brook
+...
+  format: html
+  notes: 'Official Corner Brook City Council page. Confirmed to list the 2025-2029 council:
+  Mayor Linda Chaisson, Deputy Mayor Pam Keeping, and Councillors Sherry Dean, Eddie
+  Kennedy, Donna Luther, Steve Perchard, Donna Wheeler. Mayor + 6 councillors, all
+  elected AT-LARGE for a four-year term (no wards). Individual council-member profile
+  pages are linked from this listing. City Clerk''s Office contact: city.hall@cornerbrook.com,
+  709-637-1534.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_corner_brook
+  source_type: executive
+  url: https://www.cornerbrook.com/council/corner-brook-city-council/
+  authority: City of Corner Brook
+...
+  format: html
+  notes: Mayor Linda Chaisson listed on the official City Council page (elected October 2025;
+  16 years as a councillor prior). No separate dedicated mayor profile page exists;
+  the same Council page URL serves both representatives and executive source types.
+  Individual mayor profile link present on the council listing.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_corner_brook
+  source_type: metadata
+  url: https://www.cornerbrook.com/council/election/
+  authority: City of Corner Brook
+...
+  format: html
+  notes: 'Official Corner Brook Election Information page. NL municipal general elections were
+  held October 2025 (the 2025-2029 council took office); four-year cycle means the
+  next municipal election is expected in 2029. Governance structure: Mayor + 6 councillors
+  elected at-large under the City of Corner Brook Act (RSNL1990 c.C-15, assembly.nl.ca/legislation),
+  four-year terms. Companion election-cycle site cornerbrookvotes.com used for the
+  2025 election.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_grand_falls_windsor
+  source_type: boundaries
+  url: https://opendata.gov.nl.ca/public/opendata/page/?page-id=datasetdetails&id=265
+  authority: Open Data Newfoundland and Labrador — Economics and Statistics Branch, Department
+  of Finance (Government of Newfoundland and Labrador)
+...
+  format: shapefile
+  notes: 'BOUNDARIES = VECTOR AVAILABLE. Official NL Open Data dataset "Municipalities and
+  Local Service Districts" — spatial identification of all NL municipalities and local
+  service districts as polygon geometry. Confirmed downloadable as Shapefile (compressed,
+  file?id=410) and KMZ (file?id=409); both are machine-readable VECTOR formats, NOT
+  PDF-only. Grand Falls-Windsor is AT-LARGE (Mayor + 6 councillors elected town-wide,
+  no geographic wards), so the single Town of Grand Falls-Windsor municipal-boundary
+  polygon is the lone electoral area (Vancouver / Victoria / Cornwall at-large precedent).
+  ACQUISITION: download the Municipalities & LSD shapefile from the NL open data portal
+  and isolate the Grand Falls-Windsor polygon. An alternative official vector source
+  exists on the GNL GeoHub (geohub-gnl.hub.arcgis.com — "Municipal Boundaries, Newfoundland
+  and Labrador", ArcGIS item c1e4bbde3ea743a488ce23cccedce08f) offering GeoJSON/shapefile
+  if the open-data download is preferred in GeoJSON.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_grand_falls_windsor
+  source_type: representatives
+  url: https://grandfallswindsor.com/town-hall/town-council/
+  authority: Town of Grand Falls-Windsor
+...
+  format: html
+  notes: 'Official Town Council page. Mayor Mike Browne (acclaimed) + 6 councillors elected
+  at-large for the 2025-2029 term: Deputy Mayor Rod (Blackie) Bennett, Amy Coady,
+  Bob (Flipper) Hiscock, David (Davey) Janes, Shawn Feener, Venus Hollett. Elected
+  October 2, 2025. Page has member photos; individual phone/email not listed per-member
+  (general contact via grandfallswindsor.com/contact/ and communications@townofgfw.com).'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_grand_falls_windsor
+  source_type: executive
+  url: https://grandfallswindsor.com/town-hall/town-council/
+  authority: Town of Grand Falls-Windsor
+...
+  format: html
+  notes: Mayor Mike Browne (acclaimed, 2025-2029 term) listed on the official Town Council
+  page. No separate dedicated mayor profile page; same URL serves representatives
+  and executive.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_grand_falls_windsor
+  source_type: metadata
+  url: https://grandfallswindsor.com/municipal-election-2025/
+  authority: Town of Grand Falls-Windsor
+...
+  format: html
+  notes: 'Official 2025 Municipal Election page. Last election October 2, 2025 (advance poll
+  September 20, 2025); 4-year cycle (current term 2025-2029). Governance structure:
+  Mayor + 6 councillors (one designated Deputy Mayor), all elected at-large with no
+  wards. Companion election-results page at grandfallswindsor.com/town-of-grand-falls-windsor-releases-result-of-2025-municipal-election/.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_gander
+  source_type: boundaries
+  url: https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21
+  authority: Statistics Canada (Government of Canada)
+...
+  format: shapefile
+  notes: VECTOR AVAILABLE. The Town of Gander does not publish its own municipal-boundary open-data
+  file (its public-facing GIS is an ArcGIS Experience/web viewer only, no bulk vector
+  download). For an at-large town the single municipal-boundary polygon as vector
+  counts as available. Statistics Canada's 2021 Census Subdivision (CSD) Boundary
+  File covers all 5,173 CSDs including Gander, Town (CSD 1006009) and is offered in
+  shapefile (.shp), GML, File Geodatabase (.gdb), plus Esri REST / WMS services —
+  all machine-readable vector. Acquisition stage should download the CSD boundary
+  file and clip to Gander (DGUID 2021A00051006009 / CSDUID 1006009). The provincial
+  GIS and Mapping NL ArcGIS Hub (gis-and-mapping-gnl.hub.arcgis.com) is a secondary
+  official option if a Gander-specific municipal-boundary layer is exposed there at
+  acquisition time. Gander is at-large (no wards), so a single polygon is the complete
+  electoral geometry.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_gander
+  source_type: representatives
+  url: https://www.gandercanada.com/municipal-government/connect-with-council/
+  authority: Town of Gander
+...
+  format: html
+  notes: Official "Connect with Council" page. Lists Mayor Percy Farwell plus 6 councillors
+  elected at-large in the October 2, 2025 election (Tara Pollett — appointed Deputy
+  Mayor by council, Samantha Abbott, Sheldon Handcock, Jim Lidstone, Krystle West,
+  Patrick Woodford). 2025-2029 term. Each member has a dedicated @gander.ca email
+  (e.g., pfarwell@gander.ca, tpollett@gander.ca). No wards — all members represent
+  the whole town. General contact 709-651-2930 / Info@gandercanada.com.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_gander
+  source_type: executive
+  url: https://www.gandercanada.com/municipal-government/connect-with-council/
+  authority: Town of Gander
+...
+  format: html
+  notes: Mayor Percy Farwell (Gander's 9th Mayor, first elected 2017; acclaimed in the 2025
+  election). His profile with biography and contact email (pfarwell@gander.ca) is
+  on the same "Connect with Council" page as the councillor roster; no separate dedicated
+  mayor page exists, so the same URL serves both representatives and executive.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_gander
+  source_type: metadata
+  url: https://www.gandercanada.com/news/posts/town-of-gander-announces-results-of-2025-municipal-election/
+  authority: Town of Gander
+...
+  format: html
+  notes: 'Official media release announcing the 2025 municipal election results. Confirms election
+  date October 2, 2025; Mayor acclaimed; 6 councillors elected at-large; 2025-2029
+  four-year term. Governance structure: Mayor (elected separately) plus 6 councillors,
+  all at-large, no wards. Next general municipal election expected 2029 under the
+  NL Municipal Elections Act. Provincial administration context at the Government
+  of NL Municipal and Community Affairs elections page (https://www.gov.nl.ca/mca/local-governance-division/municipal-elections/),
+  which is official but administrative (forms/circulars) rather than a governance-structure
+  reference.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_portugal_cove_st_philips
+  source_type: boundaries
+  url: https://gis-and-mapping-gnl.hub.arcgis.com/
+  authority: Government of Newfoundland and Labrador — GIS and Mapping NL (GeoHub) / Municipal
+  and Community Affairs
+...
+  format: shapefile
+  notes: 'VECTOR AVAILABLE. Portugal Cove-St. Philip''s is an AT-LARGE town (Mayor + up to
+  6 councillors elected town-wide, no geographic wards), so the single Town municipal-boundary
+  polygon is the lone electoral area (Cornwall/Vancouver/Victoria at-large precedent).
+  Machine-readable vector geometry is confirmed from official Government of NL sources,
+  NOT PDF-only: (1) the GNL "Municipal Boundaries, Newfoundland and Labrador" feature
+  service (ArcGIS item id c1e4bbde3ea743a488ce23cccedce08f) hosted on the GNL GeoHub
+  / GIS and Mapping NL hub, an ArcGIS feature layer that exports GeoJSON and shapefile
+  — same GNL GeoHub authority already in the registry for ca_nl; and (2) the official
+  Municipal and Community Affairs municipal boundaries page at https://www.gov.nl.ca/mca/municipal-boundaries/
+  which offers downloadable KML/KMZ vector boundary files for incorporated municipalities
+  under the Towns and Local Service Districts Act. ACQUISITION: resolve the concrete
+  vector download (prefer the GNL feature service GeoJSON/shapefile; MCA KML/KMZ is
+  the confirmed-vector official fallback) and isolate the Town of Portugal Cove-St.
+  Philip''s polygon. ArcGIS Hub pages render via JS and return thin content on automated
+  fetch; provenance and vector availability confirmed via search and the MCA page.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_portugal_cove_st_philips
+  source_type: representatives
+  url: https://pcsp.ca/local-government/council/
+  authority: Town of Portugal Cove-St. Philip's
+...
+  format: html
+  notes: 'Official Town Council page on pcsp.ca. Council elected at-large (no wards): Mayor
+  + up to 6 councillors, 2025-2029 term (election held October 2, 2025). Per search,
+  current Mayor Dave Bartlett, Deputy Mayor Kim Churchill, with councillors including
+  Keith Culleton, Wendy Squires-Ennis, Erin Gallant, Robert Stapleton — confirm full
+  live roster at extraction. Town contact: (709) 895-8000, pcsp@pcsp.ca. Page lists
+  members via the Council Members & Committees section; individual member detail/contacts
+  also reachable from this hub.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_portugal_cove_st_philips
+  source_type: executive
+  url: https://pcsp.ca/local-government/council/
+  authority: Town of Portugal Cove-St. Philip's
+...
+  format: html
+  notes: Mayor (Dave Bartlett per 2025 election, 2025-2029 term) listed on the official Council
+  page; no separate dedicated mayor profile page identified, so the same URL serves
+  representatives and executive (Cornwall/Norfolk precedent). Confirm at extraction.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_portugal_cove_st_philips
+  source_type: metadata
+  url: https://pcsp.ca/elections/
+  authority: Town of Portugal Cove-St. Philip's
+...
+  format: html
+  notes: 'Official Town Elections page on pcsp.ca. Last municipal election held Thursday October
+  2, 2025; council serves the 2025-2029 term (4-year cycle under NL Municipal Elections
+  Act), next election ~2029. Structure: Mayor + up to 6 councillors, all elected at-large
+  (no wards). Election-results and candidate articles also published under pcsp.ca/article/
+  and pcsp.ca/election-results/.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_happy_valley_goose_bay
+  source_type: boundaries
+  url: https://opendata.gov.nl.ca/public/opendata/page/?page-id=datasetdetails&id=265
+  authority: Government of Newfoundland and Labrador — Economics and Statistics Branch, Department
+  of Finance (with Department of Intergovernmental and Municipal Affairs)
+...
+  format: shapefile
+  notes: 'BOUNDARIES FORMAT: VECTOR available (NOT PDF-only). Official Government of NL Open
+  Data dataset "Municipalities and Local Service Districts" — spatial polygon identification
+  of all NL municipalities and LSDs. Downloadable as Shapefile (compressed, ~56 KB)
+  and KMZ (~29 KB). Province-wide coverage includes the Town of Happy Valley-Goose
+  Bay. The Town''s OWN ArcGIS Hub open data portal (portal-townhvgb.opendata.arcgis.com)
+  was checked and does NOT publish a municipal-boundary dataset (only trails, points
+  of interest, zoning, hydrant zones, historical maps), so the provincial dataset
+  is the official vector source. Happy Valley-Goose Bay is an AT-LARGE town (Mayor
+  + Deputy Mayor + 5 councillors elected town-wide, no geographic wards), so the single
+  Town of Happy Valley-Goose Bay municipal-boundary polygon is the lone electoral
+  area (Cornwall PE / Vancouver / Victoria at-large precedent). ACQUISITION: download
+  the provincial municipalities shapefile and isolate the Happy Valley-Goose Bay polygon.
+  Provincial alternative/fallback vector source: "Municipal Boundaries" via gov.nl.ca/mca/municipal-boundaries
+  and the GNL GeoHub (geohub-gnl.hub.arcgis.com).'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_happy_valley_goose_bay
+  source_type: representatives
+  url: https://townhvgb.com/our-people/
+  authority: Town of Happy Valley-Goose Bay
+...
+  format: html
+  notes: 'Official "Our People" council page on the Town''s site (townhvgb.com). Lists the
+  14th Council: Mayor Bert Pomeroy, Deputy Mayor Jackie Compton-Hobbs, and 5 councillors
+  (Denise Rumbolt, Dion O''Dell, Jill Williams, Lori Dyson, Todd Winters) — 7 members
+  total, elected at-large in the October 2, 2025 municipal election. No per-member
+  contact info on this page; general town contact (709) 896-3321, pr@townhvgb.com.
+  Confirm live roster at extraction. Note: the /town-hall/council-committees-2/ path
+  returned HTTP 404 at discovery; the "Our People" page is the live council roster.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_happy_valley_goose_bay
+  source_type: executive
+  url: https://townhvgb.com/our-people/
+  authority: Town of Happy Valley-Goose Bay
+...
+  format: html
+  notes: Mayor Bert Pomeroy named on the official "Our People" council page. No separate dedicated
+  mayor profile page found; the same URL serves the representatives and executive
+  source types.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_happy_valley_goose_bay
+  source_type: metadata
+  url: https://www.gov.nl.ca/mca/local-governance-division/municipal-elections/
+  authority: Government of Newfoundland and Labrador — Department of Municipal and Community Affairs
+  (Local Governance Division)
+...
+  format: html
+  notes: Official GNL Municipal Elections page — authority for NL municipal election cycle
+  and governance framework under the Municipalities Act. Confirms 4-year terms and
+  the province-wide municipal election held October 2, 2025 (non-partisan). Council
+  structure (Mayor + Deputy Mayor + 5 councillors, elected at-large) corroborated
+  by the Town's "Our People" page and its official "2025 Municipal Election Report"
+  at townhvgb.com/town-hall/election-results/. Next general municipal election expected
+  ~October 2029 on the 4-year cycle.
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_torbay
+  source_type: boundaries
+  url: https://geohub-gnl.hub.arcgis.com/search?q=municipal%20boundaries
+  authority: Government of Newfoundland and Labrador — GeoHub (geohub-gnl.hub.arcgis.com)
+...
+  format: geojson
+  notes: 'VECTOR available. The Government of Newfoundland and Labrador GeoHub (ArcGIS Hub,
+  official GNL portal — the same portal that hosts ca_nl provincial electoral districts)
+  publishes provincewide municipal/community boundary vector layers, including the
+  "Municipal Boundaries, Newfoundland and Labrador" feature layer (ArcGIS Online item
+  c1e4bbde3ea743a488ce23cccedce08f, owned by GNL) and "NL Communities". ArcGIS Hub
+  feature layers are downloadable as GeoJSON, shapefile, and KML. The same dataset
+  is catalogued on the official Open Data NL portal (opendata.gov.nl.ca) as "Municipalities
+  and Local Service Districts". Torbay''s council is AT-LARGE (Mayor + Deputy Mayor
+  + 5 councillors elected town-wide under the NL Municipalities Act; no geographic
+  wards), so the single Town of Torbay municipal-boundary polygon is the lone electoral
+  area (Vancouver / Victoria / Cornwall PE at-large precedent). ACQUISITION: resolve
+  the concrete GeoJSON/shapefile download from the GeoHub municipal-boundaries feature
+  layer and isolate the Town of Torbay polygon. Machine-readable VECTOR geometry IS
+  obtainable (not PDF-only).'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_torbay
+  source_type: representatives
+  url: https://www.torbay.ca/town-hall/mayor-council/
+  authority: Town of Torbay
+...
+  format: html
+  notes: 'Official Mayor & Council page on torbay.ca. Confirmed (live fetch) to list the full
+  council for the 2025-2029 term, all elected at-large: Mayor Craig Scott, Deputy
+  Mayor Colleen Tapper, and Councillors Karen Gosse, Rhonda Manning, Scott Martin,
+  Tony Pollard, and Jenny Whitten (7 members total). Per-member phone and email present
+  (e.g. cscott@torbay.ca, 709-699-4214).'
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_torbay
+  source_type: executive
+  url: https://www.torbay.ca/town-hall/mayor-council/
+  authority: Town of Torbay
+...
+  format: html
+  notes: Mayor Craig Scott listed on the official Mayor & Council page (cscott@torbay.ca, 709-699-4214).
+  No separate dedicated mayor profile page; same URL serves representatives and executive
+  source types (Cornwall PE / Norfolk County precedent).
+...
+  last_confirmed: '2026-06-12'
+- slug: ca_nl_torbay
+  source_type: metadata
+  url: https://www.torbay.ca/town-hall/elections/
+  authority: Town of Torbay
+...
+  format: html
+  notes: 'Official Town of Torbay Elections page. Confirmed (live fetch) the 2025 municipal
+  election was held Thursday, October 2, 2025 — current 2025-2029 term; next election
+  ~2029 on the standard NL 4-year municipal cycle. Council structure: Mayor + Deputy
+  Mayor + 5 councillors, all elected at-large town-wide (no wards). Governed under
+  the NL Municipalities Act.'
+  last_confirmed: '2026-06-12'
+- slug: ca_nb_moncton
+  source_type: boundaries
+  url: https://open.moncton.ca/datasets/wards/about
+  authority: City of Moncton Open Data Portal (open.moncton.ca, ArcGIS Hub)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR available (NOT PDF-only). The City of Moncton operates
+  its own official ArcGIS Hub open data portal (open.moncton.ca) and publishes a "Wards"
+  dataset of ward boundary polygons. Moncton is WARD-BASED: 4 wards (residents in
+  each ward elect 2 ward councillors), plus 2 councillors-at-large and a Mayor elected
+  city-wide. ArcGIS Hub feature datasets export as GeoJSON, shapefile, and KML; acquisition
+  stage should select GeoJSON for the 4 ward polygons. Dataset item id 75c6b0995e634169b1418790c79224f4_0
+  (open.moncton.ca/datasets/75c6b0995e634169b1418790c79224f4_0/about). A separate
+  "Municipal Boundary" polygon dataset (open.moncton.ca/datasets/0ab93f0336c7483e8975faa4fb8eb441_0/about)
+  and a "Moncton Street and Ward Map" also exist on the same portal. The portal is
+  JS-rendered and returns thin content on automated fetch (only the "Wards" heading
+  surfaces), but the dataset''s existence, ward-polygon content, and official City
+  of Moncton provenance are confirmed via the portal search index. The provincial
+  GeoNB / Service New Brunswick catalogue is the NB vector authority for PROVINCIAL
+  electoral districts but does not publish Moncton municipal ward polygons; the city
+  open data portal is the correct authoritative source for municipal wards. NB 2023
+  local-governance reform note: Moncton was a pre-existing city largely unaffected
+  structurally by the 2023 amalgamation (which targeted rural/small entities); it
+  retains the 4-ward model.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_moncton
+  source_type: representatives
+  url: https://www.moncton.ca/en/city-council
+  authority: City of Moncton
+...
+  format: html
+  notes: 'Official "Meet Your City Council" page on moncton.ca. Confirmed (live fetch) to list
+  the full current council: Mayor Shawn Crossman; 2 Councillors-at-Large (Marty Kingston,
+  Greg Turner); and 8 Ward Councillors, 2 per ward across 4 wards — Ward 1 Mike Gaudet
+  & Félix LeBlanc, Ward 2 Kristin Cavoukian & Marc Leger, Ward 3 Bryan Butler & Julianna
+  Mutch, Ward 4 Kate Doyle & Paul Richard (11 elected officials total). General council
+  contact: 506-853-3333, info.council@moncton.ca, 655 Main St., Moncton NB E1C 1E8.
+  This roster reflects the term elected at the May 2024 NB municipal general election
+  (post-2023 reform / current). Individual member profile and biography pages are
+  linked from this listing and from the open data portal (e.g. Shawn Crossman biography
+  at open.moncton.ca/documents/e412bc2cd5a14bce80b3e7ca3ec7f314).'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_moncton
+  source_type: executive
+  url: https://www.moncton.ca/my-govt-work/mayors-office
+  authority: City of Moncton — Mayor's Office
+...
+  format: html
+  notes: Official Mayor's Office page on moncton.ca. Current Mayor is Shawn Crossman (head
+  of government, elected city-wide). The "Meet Your City Council" page (representatives
+  source) also carries the Mayor at the top with general contact details (506-853-3333).
+  Mayor biography document available on the open data portal at open.moncton.ca/documents/e412bc2cd5a14bce80b3e7ca3ec7f314.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_moncton
+  source_type: metadata
+  url: https://www.moncton.ca/en/municipal-elections-2026
+  authority: City of Moncton
+...
+  format: html
+  notes: 'Official Municipal Elections page on moncton.ca. Confirmed (live fetch): next NB
+  municipal general election is May 11, 2026; residents vote for a Mayor, 2 councillors-at-large,
+  and 2 ward councillors, with the city divided into 4 wards (governance structure:
+  Mayor + 2 at-large + 8 ward councillors = 11 elected officials). New Brunswick municipal
+  elections run on a 4-year cycle administered by Elections New Brunswick; the prior
+  general election was May 2024 (after the 2023 local governance reform). Supplementary
+  candidate/role context at moncton.ca/en/information-candidates and the Role of a
+  Councillor PDF (www5.moncton.ca/docs/council/Role_of_a_Councillor.pdf).'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_saint_john
+  source_type: boundaries
+  url: https://catalogue-saintjohn.opendata.arcgis.com/datasets/a5c0908ffed74c1f935038f197f3c8c1_0
+  authority: City of Saint John Open Data Catalogue (ArcGIS Hub)
+...
+  format: geojson
+  notes: 'Official City of Saint John open data portal (catalogue-saintjohn.opendata.arcgis.com,
+  an ArcGIS Hub portal). Dataset titled "Municipal Electoral Wards" — ward boundary
+  polygons for Saint John''s 4-ward model (West Ward 1, North Ward 2, Central Peninsula
+  Ward 3, East Ward 4). VECTOR machine-readable geometry IS available: ArcGIS Hub
+  datasets serve GeoJSON, shapefile, and KML; acquisition stage should select GeoJSON.
+  NOT PDF-only. Dataset existence and official provenance confirmed via portal search
+  and partial fetch (dataset title returned). The 2023 NB local governance reform
+  did not change Saint John''s municipal boundaries; the 4-ward structure persisted
+  through the May 11, 2026 election. A companion "Municipal Wards Map" web map also
+  exists on the same portal. GeoNB (the provincial GIS catalogue) is the provincial-boundary
+  vector source, but the city''s own ArcGIS Hub is the more direct municipal-ward
+  source and is preferred here.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_saint_john
+  source_type: representatives
+  url: https://saintjohn.ca/en/city-hall/council-and-committees/mayor-and-common-council
+  authority: City of Saint John
+...
+  format: html
+  notes: 'Official Mayor and Common Council page on saintjohn.ca. Common Council comprises
+  a Mayor plus 10 Councillors — 2 elected at large and 8 representing the 4 wards
+  (2 per ward). Roster reflects the council sworn in following the May 11, 2026 NB
+  municipal election: Mayor Donna Reardon (re-elected); at-large Councillors Gary
+  Sullivan and Gina Hooley; Ward 1 Greg Norton and Sherri Colwell-McCavour; Ward 2
+  John MacKenzie and Brian Wyatt; Ward 3 Eric Savoie and Ryan Moore; Ward 4 Paul Dempsey
+  and David Merrithew. saintjohn.ca blocks automated fetches (HTTP 403); roster and
+  official provenance confirmed via Elections NB / CBC election coverage and the official
+  site''s search-indexed pages. An "Elected Officials Contact Information" dataset
+  on the city''s open data portal (catalogue-saintjohn.opendata.arcgis.com) provides
+  structured contact details if the HTML page is hard to parse.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_saint_john
+  source_type: executive
+  url: https://saintjohn.ca/en/city-hall/council-and-committees/mayor-and-common-council
+  authority: City of Saint John
+...
+  format: html
+  notes: Mayor Donna Reardon (re-elected to a second term in the May 11, 2026 municipal election)
+  is the jurisdiction-wide head of government, listed on the official Mayor and Common
+  Council page. No separate dedicated mayor-profile URL confirmed; the Mayor and Common
+  Council page serves both representatives and executive source types. saintjohn.ca
+  blocks automated fetches (HTTP 403); provenance confirmed via Elections NB / CBC
+  coverage of the 2026 election result.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_saint_john
+  source_type: metadata
+  url: https://www1.gnb.ca/elections/en/mun26may11/26may11munschedulelist-e.asp
+  authority: Elections New Brunswick (gnb.ca)
+...
+  format: html
+  notes: 'Official Elections NB local-government election schedule confirming the New Brunswick
+  municipal election held May 11, 2026. NB local governments use a fixed 4-year cycle:
+  elections on the second Monday in May; newly-elected council assumes office the
+  fourth Monday in May; next general municipal election therefore due May 2030. Governance
+  structure (Mayor + 10 Councillors: 2 at-large + 8 ward across 4 wards; 4-year terms
+  under the Local Governance Act) is documented on the City of Saint John''s "Running
+  for Common Council" page at https://saintjohn.ca/en/city-hall/council-and-committees/running-common-council
+  (saintjohn.ca blocks automated fetches — HTTP 403 — but content confirmed via search).
+  The 2023 NB local governance reform reduced provincial entities from 340 to 89 but
+  left Saint John''s boundaries and 4-ward structure unchanged.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_fredericton
+  source_type: boundaries
+  url: https://data-fredericton.opendata.arcgis.com/items/d50b95bdbab44c3ba17311331e1a41e5
+  authority: City of Fredericton Open Data Portal (ArcGIS Hub)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR available (machine-readable, NOT PDF-only). The
+  City of Fredericton operates its own official ArcGIS Hub open data portal (data-fredericton.opendata.arcgis.com;
+  portal landing page also at fredericton.ca/about-fredericton/open-data-portal-0).
+  The current "Wards" dataset (ArcGIS Hub item d50b95bdbab44c3ba17311331e1a41e5) reflects
+  the 12-ward map that became EFFECTIVE JANUARY 2023 following the New Brunswick 2023
+  local governance reform (municipal boundary changes took effect 2023-01-01). Underlying
+  ArcGIS feature service at services3.arcgis.com/ibMYx98GZWvMOYMm/ArcGIS/rest/services/Administrative_Boundaries/FeatureServer
+  hosts polygon (esriGeometryPolygon) ward layers and supports query/output formats
+  including JSON, geoJSON, shapefile, and KML. ACQUISITION CAUTION: that service also
+  contains LEGACY layers "Wards (2016)" (id 6) and "Wards (2019/2020)" (id 7) plus
+  a separate "Wards 2016 / Quartiers 2016" Hub dataset — do NOT use those. Select
+  the CURRENT post-2023-reform "Wards" dataset (12 wards, effective January 2023).
+  The City''s Ward Map page (fredericton.ca/city-government/mayor-council/ward-map)
+  references the "ward-map-2023" artifact and an interactive ArcGIS viewer but offers
+  no direct vector download — the open data portal is the vector source. A companion
+  "City of Fredericton Boundary 2023" vector dataset also exists on the same portal.
+  GeoNB (the provincial GIS catalogue, the boundaries pattern for ca_nb) carries provincial
+  electoral districts and municipal boundaries but the City''s own portal is the authoritative
+  source for the current municipal WARD geometry.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_fredericton
+  source_type: representatives
+  url: https://www.fredericton.ca/your-government/mayor-council
+  authority: City of Fredericton
+...
+  format: html
+  notes: 'Official Mayor & Council page (live fetch confirmed). Lists the full council for
+  the term elected at the May 11, 2026 municipal election (sworn in June 1, 2026):
+  Mayor Steve Hicks (elected at large) and 12 ward councillors (one per ward, Wards
+  1-12): Ward 1 Kate Hunter, Ward 2 Ryan Gregg, Ward 3 Colin Ebbett, Ward 4 Jocelyn
+  Pike, Ward 5 Angela Hicks, Ward 6 Blair Sullivan, Ward 7 Josh Hambrook, Ward 8 Greg
+  Ericson, Ward 9 Ruth Breen (Deputy Mayor), Ward 10 Kelly Murray, Ward 11 Jason LeJeune,
+  Ward 12 Janet Moser. Per-member email present (firstname.lastname@fredericton.ca
+  pattern); some phone numbers listed. General contact councillorsandmayor@fredericton.ca.
+  Structure: Mayor at-large + 12 ward councillors (post-2023-reform). NOTE: the city
+  site uses both /your-government/ and /city-government/ path prefixes for this page;
+  both resolve.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_fredericton
+  source_type: executive
+  url: https://www.fredericton.ca/your-government/mayor-council
+  authority: City of Fredericton
+...
+  format: html
+  notes: 'Mayor Steve Hicks (elected at large at the May 11, 2026 municipal election; longtime
+  4-term city councillor; sworn in June 1, 2026) appears at the top of the official
+  Mayor & Council page. Contact: mayor@fredericton.ca. No separate dedicated standalone
+  mayor profile page was identified; the same Mayor & Council URL serves both the
+  representatives and executive source types (Cornwall PE / Norfolk County precedent).'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_fredericton
+  source_type: metadata
+  url: https://www.fredericton.ca/city-government/elections
+  authority: City of Fredericton
+...
+  format: html
+  notes: 'Official 2026 Municipal Election page. Confirms the most recent NB municipal general
+  election was held May 11, 2026 (advance polls May 2 and May 4; special ballots from
+  April 26); new council sworn in June 1, 2026. Governance structure: Mayor elected
+  at-large plus 12 ward councillors (one per ward, 12 wards) under the New Brunswick
+  post-2023 local governance reform; 4-year terms under NB''s Municipal Elections
+  Act. NB municipal general elections run on a fixed 4-year cycle, so the next is
+  expected ~2030. Provincial administration authority is Elections New Brunswick (electionsnb.ca);
+  the GNB Local Governance Reform pages (fredericton.ca/en/business-development/local-governance-reform
+  and www2.gnb.ca/content/gnb/en/corporate/promo/local-governance.html) document the
+  2023 amalgamation/boundary-reform context (boundary changes effective 2023-01-01;
+  ~4,500 new residents added).'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_dieppe
+  source_type: boundaries
+  url: https://gnb.socrata.com/GeoNB/Ward-boundaries-for-Local-Governments-and-Rural-Di/8jf4-8g7w
+  authority: GeoNB / Service New Brunswick (Government of New Brunswick) — published via New Brunswick
+  Open Data (gnb.socrata.com)
+...
+  format: shapefile
+  notes: 'BOUNDARIES FORMAT VERDICT: machine-readable VECTOR available (NOT PDF-only). Official
+  GeoNB "Ward boundaries for Local Governments and Rural Districts - 2023" dataset,
+  effective January 1, 2023 (post-2023 local governance reform), catalogue-dated 2026-01-31.
+  Province-wide vector ward polygons for ALL NB local governments and rural districts
+  — includes the City of Dieppe''s 5 electoral wards. Downloadable as ESRI Shapefile
+  (SHP), ESRI File Geodatabase (FGDB, geonb_lg_gl_wards_quartiers_fgdb.zip), KML/KMZ,
+  GML, and CSV. Also mirrored on Canada''s Open Government Portal (open.canada.ca/data/en/dataset/75d9c5a9-ed1d-5927-ef59-f38d7a406d34)
+  and GEO.CA (same record id). Same GeoNB / Service New Brunswick authority already
+  in the registry for ca_nb (provincial electoral districts). The GeoNB Data Catalogue
+  landing page is https://www.gnb.ca/en/campaign/geonb/data-catalogue.html (dataset
+  entry "Ward boundaries for Local Governments and Rural Districts"). ACQUISITION:
+  download the province-wide ward shapefile and filter/isolate the City of Dieppe
+  (Ville de Dieppe) ward polygons. IMPORTANT — do NOT use the GeoNB "Municipal areas"
+  or "Community boundaries" datasets: "Municipal areas" is explicitly outdated (no
+  longer in effect as of 2023-01-01) and contains only outer municipal boundaries
+  (no wards); "Community boundaries" is for civic/mailing addresses, not electoral
+  wards. The City of Dieppe''s own "Electoral map" (dieppe.ca Maps page) and the Elections
+  NB Dieppe ward map (electionsnb.ca/content/dam/enb/pdf/maps-cartes-2022/municipalities-municipalites/Dieppe.pdf)
+  are PDF-only and should be treated as visual cross-references, not the vector acquisition
+  source.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_dieppe
+  source_type: representatives
+  url: https://www.dieppe.ca/en/hotel-de-ville/maire-et-conseil-municipal.aspx
+  authority: City of Dieppe (Ville de Dieppe)
+...
+  format: html
+  notes: 'Official "Mayor and Council" page on dieppe.ca (bilingual; French equivalent at /fr/hotel-de-ville/maire-et-conseil-municipal.aspx).
+  Council structure (post-2023 reform): Mayor + 3 Councillors-at-Large + 5 Ward Councillors
+  (Dieppe divided into 5 wards) = 9 elected members. New council elected at the New
+  Brunswick local government general election of May 11, 2026 (per Elections NB results,
+  www3.gnb.ca/elections/results-resultats/2026-05-11/MUN/MUN.html). Search results
+  indicate Mayor Hélène Boudreau (first woman elected mayor of Dieppe; succeeds Yvon
+  Lapierre, who did not re-offer), ward councillors including Jean-Marc Brideau, Gilles
+  Savoie, Marc Lanteigne, Philippe Caouette, and councillors-at-large including Melyssa
+  Boudreau-Janin, Jacob Levesque, Mark Black — extraction stage must confirm the full
+  live roster and ward assignments from the official page. A dedicated "Councillors-at-Large"
+  page exists at dieppe.ca/en/hotel-de-ville/conseillers-generaux.aspx. NOTE: dieppe.ca
+  .aspx pages return HTTP 404 on automated WebFetch (the site blocks automated fetches);
+  URLs and content confirmed via official search-result snippets and the Elections
+  NB results authority.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_dieppe
+  source_type: executive
+  url: https://www.dieppe.ca/en/hotel-de-ville/bureau-du-maire.aspx
+  authority: City of Dieppe (Ville de Dieppe) — Mayor's Office
+...
+  format: html
+  notes: Official Mayor's Office (Bureau du maire) page on dieppe.ca. Head of government is
+  the Mayor of Dieppe — Hélène Boudreau, elected at the May 11, 2026 NB local government
+  general election (first woman elected mayor of Dieppe). The Mayor and Council page
+  (dieppe.ca/en/hotel-de-ville/maire-et-conseil-municipal.aspx) also serves as a source
+  for the mayor. dieppe.ca .aspx pages return HTTP 404 on automated WebFetch; provenance
+  confirmed via search-result snippets and Elections NB May 2026 results. Extraction
+  stage should confirm the mayor's name, photo, and contact details on the live page.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_dieppe
+  source_type: metadata
+  url: https://www.electionsnb.ca/content/enb/en/resources/publications/results.html
+  authority: Elections New Brunswick (Office of the Chief Electoral Officer of New Brunswick)
+...
+  format: html
+  notes: Official Elections New Brunswick results/publications hub. The NB local government
+  general election was held May 11, 2026 (current 2026 term); official Dieppe results
+  at www3.gnb.ca/elections/results-resultats/2026-05-11/MUN/MUN.html and candidate
+  lists at electionsnb.ca/content/dam/enb/pdf/event-may-2026/lists-of-candidates.pdf.
+  NB local governments operate on a 4-year cycle (previous general municipal election
+  was May 10, 2021; next ~2030). Governance structure for Dieppe (Mayor + 3 Councillors-at-Large
+  + 5 Ward Councillors; 5 wards) is established under the Local Governance Act framework
+  following the 2023 local governance reform (effective January 1, 2023). Supplementary
+  structural/term context also available on the City of Dieppe site (dieppe.ca/en/hotel-de-ville/...)
+  and the GNB Local Governance Reform page (www2.gnb.ca/content/gnb/en/corporate/promo/local-governance.html).
+  electionsnb.ca results pages render via JavaScript; provenance confirmed via the
+  official Elections NB domain and search results.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_riverview
+  source_type: boundaries
+  url: https://gnb.socrata.com/GeoNB/Ward-boundaries-for-Local-Governments-and-Rural-Di/8jf4-8g7w
+  authority: GeoNB / Service New Brunswick (Government of New Brunswick), via New Brunswick Open
+  Data (Socrata)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: machine-readable VECTOR available (NOT PDF-only). Official
+  Government of New Brunswick dataset "Ward boundaries for Local Governments and Rural
+  Districts - 2023" — ward polygons defined under the Local Governance Act, effective
+  January 1, 2023 (the post-2023 local governance reform boundaries). Province-wide
+  coverage includes the Town of Riverview''s 4 wards. Downloadable in GeoJSON, ESRI
+  Shapefile, File Geodatabase (FGDB), KML/KMZ, and CSV from the NB Open Data Socrata
+  portal; acquisition stage should select GeoJSON (or Shapefile) and filter to the
+  Riverview local government. Also mirrored on Canada''s Open Government Portal (open.canada.ca,
+  dataset 75d9c5a9-ed1d-5927-ef59-f38d7a406d34) and reachable from the GeoNB Data
+  Catalogue (gnb.ca/en/campaign/geonb/data-catalogue.html). SCOPE NOTE: only the 4
+  wards have geographic boundaries; the 3 councillors-at-large and the Mayor are elected
+  town-wide and have no sub-municipal geometry, so the 4 ward polygons are the complete
+  electoral boundary set for this jurisdiction. Socrata dataset page renders via JavaScript
+  (thin content on automated fetch); identity, formats, effective date, and Riverview
+  coverage confirmed via search and the open.canada.ca mirror.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_riverview
+  source_type: representatives
+  url: https://www.townofriverview.ca/town-hall/council-and-committees/town-councillors
+  authority: Town of Riverview
+...
+  format: html
+  notes: 'Official Town Councillors page. Confirmed (live fetch) to list the council for the
+  term elected at the May 11, 2026 NB municipal general election: Mayor Andrew J.
+  LeBlanc, 4 ward councillors (Ward 1 Richard Blackstock / Deputy Mayor, Ward 2 Jessica
+  Bourque, Ward 3 Kelly Forsythe Preston, Ward 4 Dennis Woods), and 3 councillors-at-large
+  (Samantha Burke, Cecile Cassista, Glenn Miller) — Mayor + 7 councillors. Page shows
+  a June 2026 council photo (current post-2023-reform, post-2026-election roster).
+  General contact council@townofriverview.ca; individual councillor profile pages
+  linked from each name (per-member contact at extraction). Companion hub page: townofriverview.ca/town-hall/council-and-committees.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_riverview
+  source_type: executive
+  url: https://www.townofriverview.ca/town-hall/council-and-committees/town-councillors
+  authority: Town of Riverview
+...
+  format: html
+  notes: 'Head of government: Mayor Andrew J. LeBlanc, elected/seated for the 2026 council
+  term (NB municipal election May 11, 2026), appears at the top of the official Town
+  Councillors page. No separate dedicated mayor profile page was identified; the same
+  URL serves both representatives and executive source types (Cornwall PE / Norfolk
+  County precedent). Deputy Mayor is Ward 1 Councillor Richard Blackstock.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_riverview
+  source_type: metadata
+  url: https://www.townofriverview.ca/town-hall/running-election
+  authority: Town of Riverview
+...
+  format: html
+  notes: 'Official Town of Riverview election/running-for-election page. Governance structure:
+  Mayor plus 7 councillors — one councillor per ward across 4 wards plus 3 councillors-at-large;
+  4-year terms. Most recent NB municipal general election held May 11, 2026 (new council
+  term began May 2026; mandatory council orientation May 22-29, 2026); next general
+  election ~2030 on the 4-year cycle. NB municipal elections are administered by Elections
+  New Brunswick under the Local Governance Act. Supplementary official sources: Elections
+  NB 2026 municipal election results (www3.gnb.ca/elections/results-resultats/2026-05-11/MUN/MUN.html)
+  and the Town''s 2026 election news page (townofriverview.ca/news/municipal-election-2026-open-house).'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_tracadie
+  source_type: boundaries
+  url: https://gnb.socrata.com/GeoNB/Ward-boundaries-for-Local-Governments-and-Rural-Di/8jf4-8g7w
+  authority: New Brunswick Open Data Portal (GeoNB / Service New Brunswick — Government of New
+  Brunswick)
+...
+  format: geojson
+  notes: 'VECTOR AVAILABLE (NOT PDF-only). Official Government of New Brunswick / GeoNB open-data
+  dataset "Ward boundaries for Local Governments and Rural Districts - 2023 / Limites
+  des quartiers pour les gouvernements locaux et les districts ruraux - 2023", published
+  under the NB Open Government Licence by Open Data NB. Confirmed via the Socrata
+  metadata API to be a spatial dataset with polygon geometry (geometry column "the_geom"),
+  effective January 1, 2023 — i.e. the POST-2023-REFORM ward boundaries, the current
+  framework. Socrata geospatial datasets export machine-readable GeoJSON, shapefile,
+  KML, and CSV; acquisition stage should select GeoJSON. Province-wide coverage —
+  includes the 8 wards of the Regional Municipality of Tracadie (ward-based council
+  confirmed). ACQUISITION: download the province-wide ward GeoJSON/shapefile and filter
+  to Tracadie''s 8 wards on the local-government name attribute. Authoritative provincial
+  fallback: Elections NB publishes 2026-edition ESRI Shapefiles for "Municipal Regions",
+  "Municipal Wards" and "Municipal Polling Divisions" at https://www.electionsnb.ca/content/enb/en/maps/municipal-regions.html
+  (also vector; Elections NB additionally has Tracadie Ward 1-8 maps as PDF, but vector
+  is available so this is NOT a PDF-only deferral). NOTE: the legacy GeoNB "Municipal
+  areas" dataset is obsolete (former limits, not in effect since 2023-01-01) — do
+  not use it.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_tracadie
+  source_type: representatives
+  url: https://tracadienb.ca/en/town-hall/municipal-council
+  authority: Municipalité régionale de Tracadie / Regional Municipality of Tracadie
+...
+  format: html
+  notes: 'Official Municipal Council page (tracadienb.ca, the RM of Tracadie''s own site).
+  Confirmed (live fetch) to list the ward-based council: Mayor Clifford Robichaud
+  plus 10 councillors across 8 wards — Ward 1 Patrick Legault, Ward 2 Norma McGraw,
+  Ward 3 Marc Jean, Ward 4 Éric LeBreton, Ward 5 Diane Robichaud, Ward 6 Fernand Thibodeau,
+  Ward 7 Pierre Morais and Isabelle Richard Basque, Ward 8 Nathalie Brideau (Deputy
+  Mayor) and Jean Francis Basque. Six rural wards have one councillor each; wards
+  7 and 8 have two each. Council reflects the May 11, 2026 NB municipal election result
+  (Robichaud unseated former mayor Denis Losier). General contact 506-394-4020, info@tracadienb.ca;
+  some per-member emails present (e.g. clifford.robichaud@tracadienb.ca, greffier@tracadienb.ca).
+  French-language Acadian municipality — names carry accents (preserve UTF-8). Confirm
+  per-councillor contact detail at extraction.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_tracadie
+  source_type: executive
+  url: https://tracadienb.ca/en/town-hall/municipal-council
+  authority: Municipalité régionale de Tracadie / Regional Municipality of Tracadie
+...
+  format: html
+  notes: Mayor Clifford Robichaud (clifford.robichaud@tracadienb.ca) is named on the official
+  Municipal Council page, elected in the May 11, 2026 NB municipal election. No separate
+  dedicated mayor profile page identified; the same Council page URL serves both the
+  representatives and executive source types (Norfolk County / Cornwall PE precedent).
+  Confirm at extraction whether a dedicated mayor page exists.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_tracadie
+  source_type: metadata
+  url: https://www.electionsnb.ca/content/enb/en/representatives/municipal-candidates.html
+  authority: Elections New Brunswick (Elections NB) — Government of New Brunswick
+...
+  format: html
+  notes: 'Elections NB is the authoritative source for the NB local-government election cycle.
+  Most recent NB municipal/local-government general election was held Monday, May
+  11, 2026 (results at https://www3.gnb.ca/elections/results-resultats/2026-05-11/MUN/MUN.html);
+  NB local governments serve 4-year terms, so the next general election is expected
+  ~2030. Governance structure: the Regional Municipality of Tracadie is the first
+  and only regional municipality in New Brunswick — a ward-based council of a Mayor
+  plus 10 councillors across 8 wards, non-partisan, established under the Local Governance
+  Act (post-2023-reform framework). Supplementary structural/reform context at the
+  Government of New Brunswick Local Governance Reform hub (https://www2.gnb.ca/content/gnb/en/corporate/promo/local-governance-reform.html),
+  which documents the reformed system of 77 local governments effective January 1,
+  2023.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_edmundston
+  source_type: boundaries
+  url: https://gnb.socrata.com/GeoNB/Ward-boundaries-for-Local-Governments-and-Rural-Di/7zs3-pcvk
+  authority: Service New Brunswick / GeoNB (Government of New Brunswick) — New Brunswick Open Data
+  (Socrata)
+...
+  format: geojson
+  notes: 'BOUNDARIES VERDICT: VECTOR AVAILABLE (machine-readable, NOT PDF-only). Official GeoNB
+  / Service New Brunswick open-data dataset "Ward boundaries for Local Governments
+  and Rural Districts - 2023 / Limites des quartiers pour les gouvernements locaux
+  et les districts ruraux - 2023" on the GNB Socrata portal (gnb.socrata.com). Confirmed
+  via the dataset API metadata (api/views/7zs3-pcvk.json): first column the_geom is
+  a multipolygon, 330 records (287 Local Government + 43 Rural District ward polygons)
+  covering the whole province including Edmundston. Socrata geospatial datasets export
+  as GeoJSON, shapefile, KML, and CSV; acquisition stage should select GeoJSON and
+  filter to the Edmundston wards. The Edmundston-municipal cross-reference is the
+  City''s own "City maps" page (https://edmundston.ca/en/our-city/city-maps), which
+  offers a downloadable electoral-wards map plus an ArcGIS interactive "Find your
+  ward here" viewer — official City of Edmundston content but a static map + JS viewer,
+  so GeoNB Socrata is the preferred vector artifact. CAUTION — POST-REFORM WARD COUNT
+  MISMATCH: this dataset is the 2023 vintage reflecting the post-amalgamation structure
+  (Edmundston had FIVE wards, two councillors each, after the January 1, 2023 Local
+  Governance Reform merger of Edmundston + Village of Rivière-Verte + parts of the
+  Saint-Jacques and Saint-Joseph DSLs). Edmundston has since been REDISTRICTED to
+  THREE wards with THREE councillors each (current council sworn June 2, 2026 after
+  the May 11, 2026 municipal election). Acquisition/inspection stage MUST confirm
+  whether the GeoNB Socrata dataset has been updated to the new 3-ward map; if it
+  still carries the 2023 5-ward Edmundston polygons, the boundary file will not match
+  the current council and an updated GeoNB/City source must be sought.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_edmundston
+  source_type: representatives
+  url: https://edmundston.ca/en/city-hall/city-council
+  authority: City of Edmundston (Ville d'Edmundston)
+...
+  format: html
+  notes: 'Official City Council page (English; French equivalent at edmundston.ca/fr/hotel-de-ville/conseil-municipal).
+  Confirmed (live fetch) to show the CURRENT post-redistribution structure: Mayor
+  Eric Marquis plus THREE electoral wards with THREE councillors each (9 councillors
+  + mayor), term sworn in June 2, 2026, running to spring 2030. Roster confirmed:
+  Ward 1 — Diane Bélanger-Nadeau, Sylvie St-Onge Morneau, Gilles Duval; Ward 2 — Richard
+  Couturier, Pierre Couturier, Denise Landry-Nadeau; Ward 3 — Eric McGuire, Karen
+  Power, Jean Luc Michaud. Page notes ~4,700 voters per ward. This supersedes the
+  prior 5-ward / 2-councillors-per-ward structure that followed the 2023 amalgamation.
+  Confirm individual contact details (phone/email) at extraction.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_edmundston
+  source_type: executive
+  url: https://edmundston.ca/en/city-hall/city-council/maire-d-edmundston
+  authority: City of Edmundston (Ville d'Edmundston) — Office of the Mayor
+...
+  format: html
+  notes: Official Mayor of Edmundston page (Maire d'Edmundston), linked from the City Council
+  page. Mayor Eric Marquis (first elected May 25, 2021; mayor elected by universal
+  suffrage). The City Council page (representatives source) also lists the Mayor at
+  the top, so that URL is a fallback if the dedicated mayor page path differs at acquisition.
+  Confirm mayor contact details at extraction.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_edmundston
+  source_type: metadata
+  url: https://www.gnb.ca/en/campaign/2026-municipal-election.html
+  authority: Government of New Brunswick (Local Governance) / Elections New Brunswick
+...
+  format: html
+  notes: 'Official Government of New Brunswick "2026 Local Government and Rural District Elections"
+  page. Confirms NB local governments are elected on a fixed four-year (quadrennial)
+  cycle; the most recent general municipal election was held May 11, 2026 (next ~2030).
+  New councils sworn in late May / early June 2026 (Edmundston council sworn June
+  2, 2026). Edmundston governance structure (Mayor elected at-large by universal suffrage
+  + 3 electoral wards × 3 councillors = 9 councillors, post-2025 redistribution, following
+  the January 1, 2023 Local Governance Reform amalgamation) is documented on the City
+  Council page (edmundston.ca/en/city-hall/city-council) and the City''s "Ward review
+  and modes of representation" page (edmundston.ca/fr/hotel-de-ville/examen-des-quartiers-et-modes-de-representation).
+  Elections NB local-government schedule: https://www1.gnb.ca/elections/en/mun26may11/26may11munschedulelist-e.asp.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_quispamsis
+  source_type: boundaries
+  url: https://app.geo.ca/en-ca/map-browser/record/0a781c6f-c35f-54f9-f0e4-e56372cbe375
+  authority: Government of New Brunswick — Service New Brunswick (GeoNB)
+...
+  format: shapefile
+  notes: 'VECTOR AVAILABLE (NOT PDF-only). GeoNB "Local Governments" dataset — polygon boundaries
+  of New Brunswick''s local governments as defined under regulation 2022-50 of the
+  Local Governance Act, i.e. the CURRENT post-2023-reform boundaries (effective January
+  1, 2023; dataset created/published 2024-05-24, last updated 2026-02-19). Machine-readable
+  downloads offered: ESRI shapefile, File Geodatabase (FGDB), GeoJSON, KML/KMZ, plus
+  CSV/TSV/RDF/XML and a published download bundle (e.g. https://geonb.snb.ca/downloads/lg/geonb_lg-gl_rd-dr_fgdb.zip).
+  Do NOT use the GeoNB "Municipal Areas" dataset — that one is explicitly the FORMER
+  (pre-2023) municipal boundaries and is no longer in effect. Quispamsis is AT-LARGE
+  (no wards), so the single Town of Quispamsis local- government polygon is the lone
+  electoral area (Vancouver / Victoria / NL at-large precedent). ACQUISITION: download
+  the Local Governments vector (prefer GeoJSON or shapefile) and isolate the Quispamsis
+  polygon by name attribute. Catalogue record on the federal geo.ca portal points
+  back to the GeoNB / Service New Brunswick authoritative copy; the GeoNB data-catalogue
+  landing is at https://www.gnb.ca/en/campaign/geonb/data-catalogue.html.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_quispamsis
+  source_type: representatives
+  url: https://www.quispamsis.ca/town-government/mayor-and-council/
+  authority: Town of Quispamsis
+...
+  format: html
+  notes: 'Official Mayor and Council page. Confirmed (live fetch) the council comprises eight
+  elected members — one Mayor plus seven councillors, ALL ELECTED AT LARGE (no wards).
+  Current roster: Mayor Mary Schryer; Deputy Mayor Kerrie Luck (deputy mayor is the
+  councillor selected by council, conventionally the highest vote-getter); Councillors
+  Mike Biggar, Noah Donovan, Doug MacDonald, Kirk Miller, Emil Olsen, Beth Thompson.
+  Each councillor has a dedicated profile subpage linked from this page (e.g. /town-government/mayor-and-council/
+  councillor-kirk-miller/) which may carry per-member contact detail; the main page
+  lists only the general town contact (506) 849-5778. Confirm the live roster at extraction
+  — note the May 11, 2026 local government election will seat a new council shortly
+  after this run.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_quispamsis
+  source_type: executive
+  url: https://www.quispamsis.ca/town-government/mayor-and-council/mayor-libby-o-hara/
+  authority: Town of Quispamsis
+...
+  format: html
+  notes: 'Dedicated Mayor profile page (term-specific path). NOTE: the current Mayor is Mary
+  Schryer per the Mayor and Council listing; the registry-style mayor slug path may
+  need substitution to the Schryer profile at acquisition/ extraction time (the mayor-libby-o-hara
+  path reflects the prior incumbent who did not seek re-election). The Mayor and Council
+  page (https://www.quispamsis.ca/town-government/mayor-and-council/) is the stable
+  fallback URL and also names the sitting Mayor. General contact (506) 849-5778.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_quispamsis
+  source_type: metadata
+  url: https://www1.gnb.ca/elections/en/mun26may11/26may11munschedulelist-e.asp
+  authority: Elections New Brunswick (Government of New Brunswick)
+...
+  format: html
+  notes: Official Elections NB schedule for the 2026 Local Government, Rural District Advisory
+  Committee & District Education Council Elections. Confirmed (live fetch) the next
+  NB local government election is Monday, May 11, 2026 — NB municipal elections run
+  on a 4-year cycle (prior general municipal election was 2021). Governance structure
+  (Mayor + 7 councillors, all at-large; Deputy Mayor selected by council; 4-year term
+  under the Local Governance Act) is corroborated by the Town's Mayor and Council
+  page (https://www.quispamsis.ca/town-government/mayor-and-council/). Quispamsis
+  is a standalone local government that was NOT amalgamated in the January 1, 2023
+  reform. Supplementary Elections NB municipal-regions map portal at https://www.electionsnb.ca/content/enb/en/maps/municipal-regions.html.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_miramichi
+  source_type: boundaries
+  url: https://open.canada.ca/data/en/dataset/0a781c6f-c35f-54f9-f0e4-e56372cbe375
+  authority: Service New Brunswick / GeoNB (Government of New Brunswick) — distributed via the
+  Open Government Portal
+...
+  format: shapefile
+  notes: 'VECTOR AVAILABLE (machine-readable). Current post-2023-reform "Local Governments"
+  dataset — LG polygons as defined in regulation 2022-50 under the Local Governance
+  Act, EFFECTIVE DATE January 1, 2023. This is the correct CURRENT boundary set reflecting
+  the 2023 local governance reform (which expanded Miramichi''s boundaries). Hosted
+  on GeoNB''s Socrata platform; download formats include shapefile, File Geodatabase
+  (FGDB/GDB), GeoJSON, and KML/KMZ. Acquisition stage should select GeoJSON or shapefile
+  and isolate the Miramichi local-government polygon. NOTE: Miramichi is an AT-LARGE
+  municipality (no wards), so the relevant geometry is the single city/local-government
+  boundary, not ward subdivisions. Do NOT use the GeoNB "Municipal areas" dataset
+  (gnb.ca/en/campaign/geonb/data-catalogue/municipal-areas.html) — it contains only
+  the FORMER pre-2023 boundaries, explicitly no longer in effect. Datum NAD83(CSRS),
+  NB Stereographic Double (EPSG 2953) in the GeoNB-native files.'
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_miramichi
+  source_type: representatives
+  url: https://www.miramichi.org/members-of-council
+  authority: City of Miramichi
+...
+  format: html
+  notes: Official Members of Council page. Lists Mayor Veronique Arsenault, Deputy Mayor Paddy
+  Quinn, and councillors Peggy Doyle, Terry Doyle, Lisa Harris, Brian King, Lori Matchett,
+  Tim Sutton, and Terry L. Whalen — 8 councillors total (one of whom serves as Deputy
+  Mayor), all elected AT-LARGE (Miramichi has no wards). New mayor and council sworn
+  in May 25, 2026 following the May 11, 2026 NB local government general election.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_miramichi
+  source_type: executive
+  url: https://www.miramichi.org/office-of-the-mayor
+  authority: City of Miramichi
+...
+  format: html
+  notes: Official Office of the Mayor page. Current Mayor Veronique Arsenault (elected May
+  11, 2026, sworn in May 25, 2026). General City Hall contact 506-623-2200; no dedicated
+  mayoral email/phone on the page. Member-of-council page may supplement contact details.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_miramichi
+  source_type: metadata
+  url: https://www1.gnb.ca/elections/en/mun26may11/26may11munschedulelist-e.asp
+  authority: Elections New Brunswick (Government of New Brunswick)
+...
+  format: html
+  notes: Official Elections NB local government election schedule for the May 11, 2026 general
+  election (quadrennial cycle; non-partisan). Confirms the most recent municipal general
+  election date used to derive term start. Governance structure (single-tier local
+  government, at-large council of Mayor + 8 councillors, no wards) confirmed via the
+  GNB Local Governance Reform structure page (https://www2.gnb.ca/content/gnb/en/corporate/promo/local-governance/structure.html)
+  and the GNB 2026 election page (https://www.gnb.ca/en/campaign/2026-municipal-election.html).
+  Miramichi's boundaries were expanded under the January 1, 2023 reform.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_bathurst
+  source_type: boundaries
+  url: https://gnb.socrata.com/GeoNB/Local-Governments-Gouvernements-locaux/sqh9-kfnn
+  authority: Government of New Brunswick (GeoNB / Service New Brunswick) — NB Open Data
+...
+  format: geojson
+  notes: MACHINE-READABLE VECTOR available. NB Open Data "Local Governments / Gouvernements
+  locaux" dataset — graphical representation of local government boundaries as defined
+  in Regulation 2022-50 under the Local Governance Act, effective January 1, 2023
+  (post-reform). Contains the City of Bathurst local government boundary polygon (covers
+  both the former city = "Ward 1" and the annexed areas = "Ward 2"). Export formats
+  include GeoJSON, Shapefile, File Geodatabase (FGDB), and KML; acquisition stage
+  should select GeoJSON and filter to the Bathurst LG. Mirrored on Canada's Open Government
+  Portal at https://open.canada.ca/data/en/dataset/0a781c6f-c35f-54f9-f0e4-e56372cbe375.
+  NOTE — this is a LOCAL-GOVERNMENT (whole-municipality) boundary, not an intra-municipal
+  ward layer. Bathurst is predominantly at-large; the only sub-municipal division
+  ("Ward 2", the 2023-annexed areas) is shown only as an interactive/PDF map on bathurst.ca,
+  NOT as a published vector file. Reconfirm at acquisition whether any ward-2 vector
+  exists; otherwise the LG polygon is the single available electoral-area geometry.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_bathurst
+  source_type: representatives
+  url: https://www.bathurst.ca/city-council
+  authority: City of Bathurst
+...
+  format: html
+  notes: Official City Council page on bathurst.ca. Lists Mayor Kim Chamberlain, Deputy Mayor
+  Michael Willett, and councillors (Penny Anderson, Jessica Boudreau, Stephen J. Brunet,
+  Rickey Hondas, Jean-Francois Leblanc, Erica Lynn Scott, Mike Skerry) with phone
+  and email per member. Council is Mayor + councillors elected predominantly at-large
+  (with Ward 2 representation for 2023-annexed areas) for four-year terms; current
+  roster reflects the May 11, 2026 municipal election. Confirm exact seat count (≈9
+  councillors) and any ward-2-specific seats at extraction.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_bathurst
+  source_type: executive
+  url: https://www.bathurst.ca/city-council
+  authority: City of Bathurst
+...
+  format: html
+  notes: Mayor Kim Chamberlain is listed with contact details on the same official City Council
+  page (no separate dedicated mayor profile page identified). Same URL serves representatives
+  and executive source types.
+...
+  last_confirmed: '2026-06-13'
+- slug: ca_nb_bathurst
+  source_type: metadata
+  url: https://www.electionsnb.ca/content/enb/en.html
+  authority: Elections New Brunswick
+...
+  format: html
+  notes: Official Elections New Brunswick site, which administers local government elections.
+  Confirms the May 11, 2026 quadrennial municipal general election (four-year cycle,
+  next ≈2030) and hosts Local Government and Rural District election results. Governance-structure
+  context (Mayor + ~9 at-large councillors, four-year terms, Ward 1/Ward 2 post-reform
+  structure, Deputy Mayor one-year rotation) is documented on the City's Local Governance
+  Reform pages at https://www.bathurst.ca/en/sections/local-governance-reform/20/local-governance-reform
+  and https://www.bathurst.ca/en/services/city-hall/166/what-are-the-new-boundaries.
+...
+  last_confirmed: '2026-06-13'
