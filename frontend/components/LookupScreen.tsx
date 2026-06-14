@@ -150,7 +150,7 @@ export function LookupScreen({
       <div className="stack stack-3" style={{ marginBottom: 24, maxWidth: 640 }}>
         <div className="eyebrow accent">Your government</div>
         <h1 className="h-1"><span className="h-italic serif">{totalPeople} {totalPeople === 1 ? "person" : "people"}</span> represent you.</h1>
-        <p className="t-lead">Plus {totalOther} more in cabinet, opposition &amp; leadership across {covered} levels. Open a level to call or email yours — right here.</p>
+        <p className="t-lead">Plus {totalOther} more in cabinet, opposition &amp; leadership across {covered} levels. You can contact any one of them — right here.</p>
       </div>
 
       <div className="levels-grid">

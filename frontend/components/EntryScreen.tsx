@@ -29,8 +29,7 @@ export function EntryScreen({ onSubmit, initial = "" }: { onSubmit: (postal: str
             Meet the people <span className="h-italic serif">who work for you.</span>
           </h1>
           <p className="t-lead">
-            Three levels of government. Six elected people, on average. Most Canadians can&apos;t name
-            them. We can fix that — together, in under a minute.
+            From city hall to Parliament Hill: see who represents you, and contact them in seconds.
           </p>
 
           <form onSubmit={submit} className="stack stack-3" style={{ marginTop: 8, maxWidth: 460 }}>
