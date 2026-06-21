@@ -3559,3 +3559,2923 @@ ca_on_ottawa:
   and https://www.bathurst.ca/en/services/city-hall/166/what-are-the-new-boundaries.
 ...
   last_confirmed: '2026-06-13'
+- slug: ca_ns_halifax
+  source_type: boundaries
+  url: https://data-hrm.hub.arcgis.com/datasets/polling-districts-1
+  authority: Halifax Regional Municipality — Halifax Data Mapping and Analytics Hub (ArcGIS Hub
+  Open Data Portal)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR available (NOT PDF-only). Official HRM open data
+  portal (data-hrm.hub.arcgis.com, also surfaced at catalogue-hrm.opendata.arcgis.com).
+  Dataset titled "Polling Districts" — polygon geometry for HRM''s 16 municipal electoral/council
+  districts, with boundaries established by the Nova Scotia Utility and Review Board
+  (UARB). The 16-district map (UARB held at 16 with revisions to six districts) was
+  used for the October 19, 2024 municipal election. Underlying vector geometry is
+  served from the HRM ArcGIS organization (services2.arcgis.com/11XBiaBYA9Ep0yNJ)
+  as the "ADM_Polling_District2024" FeatureServer (esriGeometryPolygon), confirmed
+  queryable/exportable. ArcGIS Hub portals offer GeoJSON, Shapefile, and KML downloads;
+  acquisition stage should select GeoJSON for the current (2024) Polling Districts
+  layer — take care NOT to use the separate "Polling Divisions" (sub-district polling
+  areas) dataset or the legacy 2012/2016/2020 polling-district layers. An official
+  descriptive page also exists at halifax.ca/city-hall/elections/electoral-district-boundaries.
+  data-hrm.hub.arcgis.com renders thin on automated fetch (JS-rendered Hub page);
+  vector availability confirmed via the ArcGIS REST services directory and search.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_halifax
+  source_type: representatives
+  url: https://www.halifax.ca/city-hall/districts-councillors
+  authority: Halifax Regional Municipality
+...
+  format: html
+  notes: Official "Districts and Councillors" page on halifax.ca. Regional Council comprises
+  the Mayor plus 16 Councillors, each elected by district (District 1 through District
+  16) for the 2024-2028 term (elected October 19, 2024). Page links to individual
+  district/councillor profile pages (e.g. /city-hall/districts-councillors/district-8),
+  a District Look-up tool (/district-look), and a downloadable Councillor Contact
+  List (PDF). halifax.ca blocks automated fetches (HTTP 403); roster and structure
+  confirmed via search results citing this official page.
+...
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_halifax
+  source_type: executive
+  url: https://www.halifax.ca/city-hall/mayor-andy-fillmore
+  authority: Halifax Regional Municipality — Office of the Mayor
+...
+  format: html
+  notes: 'Official Mayor''s page on halifax.ca. Head of government title is MAYOR, elected
+  at-large. Current Mayor is Andy Fillmore (4th Mayor of HRM, assumed office November
+  5, 2024; elected at the October 19, 2024 municipal election). Contact: 902-490-4010,
+  mayor@halifax.ca, 1841 Argyle Street, Halifax (PO Box 1749, Halifax, NS B3J 3A5).
+  Companion pages include /about-mayor (Meet the Mayor) and /mayor-fillmore-priorities.
+  URL is person-specific; treat halifax.ca/mayor as the canonical landing pattern.
+  halifax.ca blocks automated fetches (HTTP 403); incumbent and contact confirmed
+  via search results citing this official page.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_halifax
+  source_type: metadata
+  url: https://www.halifax.ca/city-hall/elections
+  authority: Halifax Regional Municipality
+...
+  format: html
+  notes: 'Official "Municipal elections in the Halifax Regional Municipality" page on halifax.ca.
+  Documents election dates, governance structure, and district count. Most recent
+  municipal election held October 19, 2024 (4-year term, 2024-2028); council structure
+  is Mayor (at-large) plus 16 district councillors. Companion pages: /elections/2024-election-results
+  (official results) and /elections/electoral-district-boundaries (16-district UARB
+  boundary detail). Next general municipal election expected October 2028 on the 4-year
+  cycle under Nova Scotia''s Municipal Elections Act. halifax.ca blocks automated
+  fetches (HTTP 403); structure confirmed via search results citing these official
+  pages.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_cape_breton
+  source_type: boundaries
+  url: https://www.thedatazone.ca/Mapping/CBRM-Municipal-Electoral-District-Boundaries/2z36-p63x
+  authority: Cape Breton Regional Municipality (published via datazONE — the Socrata open data
+  portal for PVSC & participating Nova Scotia municipalities)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR available (NOT PDF-only). The official CBRM open-data
+  dataset "CBRM Municipal Electoral District Boundaries" is hosted on datazONE (thedatazone.ca),
+  a Socrata-platform open data portal operated collaboratively by participating Nova
+  Scotia municipalities under the "Open Data & Information Government Licence – PVSC
+  & Participating Municipalities" (PVSC = Property Valuation Services Corporation,
+  a government body). CBRM is a participating municipality, so this is an official
+  government source. The dataset is categorized under "Mapping" and contains the 12
+  CBRM municipal electoral district boundary POLYGONS with attributes including district
+  polygon geometry, CBRM Municipal District Number, eligible voters, and current councillor
+  information. Socrata Mapping datasets expose machine-readable vector geometry and
+  export to GeoJSON, Shapefile, and KML; acquisition stage should select GeoJSON (Socrata
+  export endpoint pattern .../2z36-p63x.geojson). These reflect the boundaries that
+  came into effect for the October 19, 2024 election (NSUARB decision July 6, 2023).
+  The dataset landing page renders via JS (thin content on automated fetch); provenance,
+  polygon geometry, and 12-district coverage confirmed via search-result snippets
+  and the CBRM open-data index. Official government VECTOR fallback if needed: GeoNOVA
+  DataLocator (nsgi.novascotia.ca/datalocator) / geonova.novascotia.ca, the provincial
+  GIS portal already in the registry for ca_ns. The CBRM "2024 district maps and information"
+  page (cbrm.ns.ca/2024-district-maps-and-information.html) additionally offers per-district
+  PDF maps, but vector geometry from datazONE is the preferred acquisition artifact.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_cape_breton
+  source_type: representatives
+  url: https://cbrm.ns.ca/city-hall/councillors/
+  authority: Cape Breton Regional Municipality
+...
+  format: html
+  notes: 'Official CBRM Councillors page. Confirmed to list all 12 district councillors (Districts
+  1-12) for the term following the October 19, 2024 municipal election: D1 Gordon
+  MacDonald, D2 Earlene MacMullin, D3 Esmond "Blue" Marshall, D4 Steve Gillespie,
+  D5 Eldon MacDonald, D6 Glenn Paruch (Deputy Mayor), D7 Steve Parsons, D8 Steven
+  MacNeil, D9 Dave MacKeigan, D10 Paul Nickituk, D11 Darren O''Quinn, D12 Kim Sheppard-Campbell.
+  Page shows names and photos; individual per-councillor contact details are reached
+  via the per-district subpages (e.g. cbrm.ns.ca/district-3.html) — extraction stage
+  should resolve phone/email there. General contact: 311 / 902-563-2276. Deputy Mayor
+  is selected by council from among the district councillors.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_cape_breton
+  source_type: executive
+  url: https://cbrm.ns.ca/city-hall/mayors-office/
+  authority: Cape Breton Regional Municipality — Mayor's Office
+...
+  format: html
+  notes: 'Official Mayor''s Office page. Current Mayor is Cecil P. Clarke (elected at the October
+  19, 2024 municipal election; CBRM mayor is elected at-large municipality-wide).
+  Page includes name, photo, and contact: phone 902-563-5000, email mayor@cbrm.ns.ca,
+  office at 320 Esplanade, Suite 400, Sydney, NS B1P 7B9. Companion legacy URL cbrm.ns.ca/mayor
+  also resolves to the Mayor''s Office.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_cape_breton
+  source_type: metadata
+  url: https://cbrm.ns.ca/city-hall/municipal-election/
+  authority: Cape Breton Regional Municipality
+...
+  format: html
+  notes: 'Official Municipal Election page. Confirms the most recent general election was held
+  Saturday, October 19, 2024; CBRM holds a general election every four years (next
+  ~October 2028, on the 4-year cycle). Governance structure: voters elect a Mayor
+  (at-large), a Councillor within their district (12 districts total), and a CSAP/school
+  board member where applicable — i.e. Mayor + 12 district councillors, 4-year terms,
+  governed under Nova Scotia''s Municipal Government Act / Municipal Elections Act.
+  Updated electoral district boundaries came into effect for the 2024 election per
+  the NSUARB decision released July 6, 2023 (CBRM retained at 12 councillors plus
+  a mayor).'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_kings
+  source_type: boundaries
+  url: https://data.novascotia.ca/Municipalities/Municipal-Polling-Districts/gcep-xeci
+  authority: Government of Nova Scotia — Municipal Affairs (Nova Scotia Open Data Portal, data.novascotia.ca)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR available (NOT PDF-only). Official Government of
+  Nova Scotia open data dataset "Municipal Polling Districts" (four-by-four id gcep-xeci),
+  published by Municipal Affairs under the Open Government Licence – Nova Scotia,
+  last modified 2025-11-26. Machine-readable vector polygon geometry (the_geom MultiPolygon)
+  with fields CO_Code, MU_Code, Poll_Dist, Mun, Reg_Num. A Socrata query confirmed
+  the dataset contains exactly NINE records for "Municipality of the County of Kings"
+  — polling districts KI01 through KI09 — each citing N.S. Reg. 104/2023 (the current
+  UARB-approved electoral boundaries used for the October 2024 municipal election).
+  For Kings the polling districts coincide one-to-one with the nine council electoral
+  districts, so this dataset IS the complete per-district electoral geometry. Exports
+  available in GeoJSON, Shapefile, KML/KMZ, and CSV; acquisition stage should select
+  the GeoJSON export (https://data.novascotia.ca/api/geospatial/gcep-xeci?method=export&format=GeoJSON)
+  and filter Mun = "Municipality of the County of Kings" (KI01-KI09). Provincial GeoNOVA
+  / GeoData (geonova.novascotia.ca/geodata) is the official fallback GIS gateway.
+  The County''s own Public Atlas (ArcGIS Experience Builder, experience.arcgis.com/experience/1f1a03067003497c81658aa1a3609940)
+  carries an Electoral District layer but exposes no documented bulk vector download
+  — the provincial open-data dataset is the cleaner machine-readable source. A County
+  PDF boundary map also exists (countyofkings.ca .../BoundaryReview/Map - County of
+  Kings Electoral Boundaries.pdf) but is PDF-only and NOT needed given the vector
+  source.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_kings
+  source_type: representatives
+  url: https://www.countyofkings.ca/government/council/councillors.aspx
+  authority: Municipality of the County of Kings
+...
+  format: html
+  notes: 'Official "Meet Your Mayor and Council" page. Confirmed to list the 2024-2028 council
+  (elected October 2024, sworn in October 30, 2024): nine district councillors, one
+  per district — District 1 Everett MacPherson (Deputy Mayor), District 2 Doug Gates,
+  District 3 Robbie Hiltz, District 4 Riley Peckford, District 5 Tim Harding, District
+  6 Bob Best, District 7 Emily Lutz, District 8 Christina Sappington, District 9 Peter
+  Allen. Individual councillor profile/contact detail linked from this listing.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_kings
+  source_type: executive
+  url: https://www.countyofkings.ca/government/council/
+  authority: Municipality of the County of Kings
+...
+  format: html
+  notes: Head of government is a MAYOR (not a Warden). Mayor Dave Corkum is elected at-large
+  by the citizens of all nine districts and is accountable to both the citizenry and
+  to Municipal Council. Official Mayor and Council page; the councillors.aspx sub-page
+  (used for representatives) lists the Mayor at the top of the roster. No separate
+  dedicated stand-alone mayor profile page was identified; this Mayor and Council
+  page serves the executive source type.
+...
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_kings
+  source_type: metadata
+  url: https://www.countyofkings.ca/government/Municipal-Elections
+  authority: Municipality of the County of Kings
+...
+  format: html
+  notes: 'Official Municipal Elections page. Confirms Nova Scotia municipal elections are held
+  every four years; 2024 was an election year (residents voted for a Mayor and their
+  District councillor in October 2024); current term is 2024-2028 (new council sworn
+  in October 30, 2024). Governance structure: Mayor (elected at-large) plus nine district
+  councillors (one per district, nine electoral districts) per N.S. Reg. 104/2023,
+  under the Nova Scotia Municipal Elections Act / Municipal Government Act. Next general
+  municipal election expected October 2028.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_colchester
+  source_type: boundaries
+  url: https://data.novascotia.ca/Municipalities/Municipal-Polling-Districts/4qyk-69iq
+  authority: Open Data Nova Scotia — Department of Municipal Affairs (Government of Nova Scotia)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR AVAILABLE (machine-readable polygon geometry —
+  NOT PDF-only). Official Government of Nova Scotia open data (Socrata portal data.novascotia.ca)
+  dataset "Municipal Polling Districts", owned by the Department of Municipal Affairs.
+  Verified via the Socrata metadata API (4qyk-69iq.json): description "This dataset
+  delineates the municipal polling districts for towns and rural, district, county
+  and regional municipalities." Polygon geometry (the_geom) with attribute fields
+  mun (municipality) and poll_dist (polling/electoral district). Coverage explicitly
+  includes COUNTY municipalities, so the Municipality of the County of Colchester''s
+  11 electoral districts are included. Socrata portals export GeoJSON, shapefile,
+  KML, and CSV; acquisition stage should export GeoJSON and filter on the mun attribute
+  to the Colchester county municipality, isolating its 11 district polygons. NOTE
+  on alternatives: the municipality''s own electoral-districts page (colchester.ca/electoral-districts)
+  and its 2024 interactive election map publish only PDF maps (5.24 MB district map
+  + UARB board order PDF) — so the municipality itself is PDF-only, but the provincial
+  open-data portal supplies the vector geometry. The provincial GeoNOVA DataLocator
+  (geonova.novascotia.ca) is a secondary official vector source if needed. The 11-district
+  boundaries follow the municipality''s 2022 boundary review (UARB-approved; eight-year
+  review cycle) and were used for the October 19, 2024 municipal election.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_colchester
+  source_type: representatives
+  url: https://www.colchester.ca/municipal-council
+  authority: Municipality of the County of Colchester
+...
+  format: html
+  notes: 'Official Municipal Council page. Confirmed to list the head of government and all
+  11 district councillors elected at the October 19, 2024 municipal election (2024-2028
+  term): Mayor Christine Blair (at-large); District 1 Paul Weatherby, District 2 Laurie
+  Sandeson (Deputy Mayor), District 3 Sheldon Richardson, District 4 Mike Cooper,
+  District 5 Tim Johnson, District 6 Nigel Leggett, District 7 Sherry Martell, District
+  8 Lisa Patton, District 9 Marie Benoit, District 10 Charlene Fletcher, District
+  11 Al Kennedy. One councillor per district (11 districts). The councillor table
+  includes contact numbers; individual councillor profile pages are linked. NOTE:
+  although this is a Nova Scotia COUNTY municipality, the head of government carries
+  the title MAYOR (elected at-large), not Warden — confirmed on this page and the
+  election page.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_colchester
+  source_type: executive
+  url: https://www.colchester.ca/municipal-council
+  authority: Municipality of the County of Colchester
+...
+  format: html
+  notes: Head of government is MAYOR Christine Blair (NOT a Warden — Colchester elects its
+  Mayor at-large despite being a county municipality). Listed at the top of the official
+  Municipal Council page; no separate dedicated mayor profile page was identified,
+  so the same URL serves both representatives and executive source types. Deputy Mayor
+  is Laurie Sandeson (District 2). Re-confirmed via the 2024 election page (colchester.ca/election)
+  which names the Mayor as a directly-elected position alongside the 11 district councillors.
+...
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_colchester
+  source_type: metadata
+  url: https://www.colchester.ca/election
+  authority: Municipality of the County of Colchester
+...
+  format: html
+  notes: 'Official 2024 Municipal Election page. Confirms the last municipal general election
+  was held Saturday, October 19, 2024 (early voting October 7-19), with a four-year
+  term (next general election ~2028). Governance structure: Mayor elected at-large
+  plus 11 district councillors (one per district), plus a Conseil scolaire acadien
+  provincial (CSAP) representative elected at the same time. 11-district boundaries
+  reflect the 2022 UARB-approved boundary review (eight-year cycle). Nova Scotia municipal
+  elections are administered under the Municipal Elections Act. Supplementary district
+  structure documented at colchester.ca/electoral-districts.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_east_hants
+  source_type: boundaries
+  url: https://newdata-easthants.opendata.arcgis.com/
+  authority: Municipality of East Hants Open Data Portal (ArcGIS Hub)
+...
+  format: geojson
+  notes: 'BOUNDARIES VERDICT: VECTOR AVAILABLE (NOT PDF-only). The Municipality of East Hants
+  operates its own official ArcGIS Hub open-data portal (newdata-easthants.opendata.arcgis.com),
+  linked from the municipality''s "Maps and Data" page (easthants.ca/maps-and-data).
+  The Hub''s dataset search API returns vector electoral-district datasets titled
+  "2012 Election Polling Districts" and "2016 Election Polling Districts" ("Electoral
+  Districts of East Hants as mandated since 2006"), confirming the council electoral
+  districts are published as machine-readable vector geometry (ArcGIS feature services;
+  ArcGIS Hub exposes GeoJSON, shapefile, and KML downloads for each). ACQUISITION
+  NOTE: East Hants has 11 districts effective for the October 19, 2024 election. The
+  Hub may surface only the 2012/2016 vintage polling-district layers; acquisition
+  stage must locate the CURRENT 11-district vector layer — check the live ArcGIS feature
+  services behind the portal and the East Hants Interactive Map (arcgis.com app id
+  02ffb289d1804e5082e880383f4f7df4), and if only older vintages are exported, pull
+  the current districts from the live feature service or confirm with the municipal
+  GIS. A reference PDF of the 2024 districts also exists at easthants.ca/wp-content/uploads/2024/08/EastHantsDistricts.pdf
+  (reference only — vector is the canonical artifact). Provincial fallback: GeoNOVA
+  DataLocator / GeoNOVA (nsgi.novascotia.ca/datalocator) is an official Government
+  of Nova Scotia vector source, though municipal council districts are best obtained
+  from the municipality''s own portal. ArcGIS Hub dataset pages render client-side
+  and return thin content on automated fetch; the vector datasets were confirmed via
+  the Hub''s search/items API.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_east_hants
+  source_type: representatives
+  url: https://www.easthants.ca/council-members/
+  authority: Municipality of the District of East Hants
+...
+  format: html
+  notes: 'Official Council Members page. Confirmed to list the full council elected at the
+  October 19, 2024 municipal election: 11 single-member districts, one councillor
+  per district (the Warden also represents District 11). District 1 Enfield Centre
+  (Sandra Garden-Cole), District 2 Elmsdale (Norval Mitchell), District 3 Nine Mile
+  River-Belnan (Eldon Hebb), District 4 Shubenacadie-Indian Brook (Carl MacPhee),
+  District 5 Maitland-Noel Shore (Keith Rhyno), District 6 North Lantz-Milford (Craig
+  Merriam), District 7 South Lantz (Walter Tingley), District 8 Mount Uniacke-South
+  Rawdon (Michael Perry), District 9 South Uniacke (Elie Moussa), District 10 Enfield-Grand
+  Lake (Cecil Dixon, Deputy Warden per page), District 11 Rawdon-Kennetcook (Eleanor
+  Roulston, Warden). Note: the council page lists Cecil Dixon as Deputy Warden while
+  one search snippet referenced Carl MacPhee elected Deputy Warden Oct 30, 2024 —
+  resolve the current Deputy Warden at extraction. Individual member contact detail
+  (phone/email) to be captured per councillor at extraction.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_east_hants
+  source_type: executive
+  url: https://www.easthants.ca/council-members/
+  authority: Municipality of the District of East Hants
+...
+  format: html
+  notes: 'HEAD OF GOVERNMENT TITLE: WARDEN (not Mayor). As a Nova Scotia district municipality,
+  East Hants is led by a Warden elected by the voters. Current Warden is Eleanor Roulston
+  (also District 11 Rawdon-Kennetcook councillor), reflecting the October 19, 2024
+  election. No separate dedicated Warden profile page identified; the official Council
+  Members page serves both the representatives and executive source types (Norfolk/Cornwall
+  at-large precedent).'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_east_hants
+  source_type: metadata
+  url: https://www.easthants.ca/election/
+  authority: Municipality of the District of East Hants
+...
+  format: html
+  notes: 'Official Election page on easthants.ca. Confirms the last municipal general election
+  was held October 19, 2024 and references the 11-district structure (Districts 1-11).
+  Nova Scotia municipal general elections are held every four years on the third Saturday
+  in October for 4-year terms (provincial framework at novascotia.ca/municipal-elections),
+  so the next general election is due October 2028. Governance structure: Warden plus
+  10 district councillors (11 single-member districts; the Warden concurrently represents
+  District 11). Provincial governance/cycle authority: novascotia.ca/municipal-elections
+  (Government of Nova Scotia, Department of Municipal Affairs).'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_pictou
+  source_type: boundaries
+  url: https://data.novascotia.ca/Municipalities/Municipal-Polling-Districts/gcep-xeci
+  authority: Open Data Nova Scotia (Government of Nova Scotia) / Service Nova Scotia
+...
+  format: shapefile
+  notes: 'BOUNDARIES VERDICT: VECTOR AVAILABLE (machine-readable polygon geometry, NOT PDF-only).
+  Official Government of Nova Scotia Open Data portal dataset "Municipal Polling Districts"
+  (Socrata, dataset id gcep-xeci) — delineates the municipal polling/electoral district
+  polygons for all NS towns and rural/district/county/regional municipalities, including
+  the Municipality of the County of Pictou. Downloadable as Shapefile, GeoJSON, KML,
+  KMZ, and CSV via the Socrata geospatial export API (https://data.novascotia.ca/api/geospatial/gcep-xeci?method=export&format=Shapefile
+  or ...format=GeoJSON). 12-district model for MOPC. Acquisition stage should pull
+  the province-wide vector file and isolate the 12 MOPC districts (filter on the municipality
+  name attribute). ALTERNATIVE OFFICIAL VECTOR SOURCE: the Municipality of Pictou
+  County operates its OWN ArcGIS Hub open-data portal (MOPC GeoHub, https://mopc-pictoucounty.hub.arcgis.com/)
+  which publishes a "Municipal Districts" dataset with CSV/KML/Zip/GeoJSON downloads
+  and GeoServices/WMS/WFS APIs, plus an interactive districts viewer (mopc-pictoucounty.hub.arcgis.com/apps/municipal-districts-1/explore)
+  showing 2016-2024 districts — prefer the MOPC GeoHub "Municipal Districts" GeoJSON
+  if it reflects the current 2024-2028 districts; otherwise use the NS Open Data polling-districts
+  file. Socrata dataset page renders thinly on automated fetch; format availability
+  and provenance confirmed via search and the Socrata export API endpoints.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_pictou
+  source_type: representatives
+  url: https://munpict.ca/council/council/
+  authority: Municipality of the County of Pictou
+...
+  format: html
+  notes: 'Official Municipal Council page (munpict.ca). Confirmed to list all 12 district councillors
+  for the 2024-2028 term (one councillor per district, Districts 1-12), with per-councillor
+  phone and email in a contact table: D1 Joe MacDonald, D2 Deborah Wadden, D3 Darla
+  MacKeil, D4 Ronald Baillie, D5 Wayne Murray (Deputy Warden), D6 Robert Parker (Warden),
+  D7 Donald Parker, D8 Larry Turner, D9 Peter Boyles, D10 Randy Palmer, D11 Andy Thompson,
+  D12 Chester Dewar. Elected October 19, 2024.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_pictou
+  source_type: executive
+  url: https://munpict.ca/council/council/
+  authority: Municipality of the County of Pictou
+...
+  format: html
+  notes: 'HEAD OF GOVERNMENT TITLE: WARDEN (not Mayor). As a Nova Scotia rural/county municipality
+  under the Municipal Government Act, the head of council is a Warden chosen by ballot
+  from among the elected councillors (not directly elected at-large). Current Warden
+  is Robert Parker (District 6 councillor, Warden since 2016, re-elected Warden by
+  council after the 2024 election); Deputy Warden is Wayne Murray (District 5). The
+  Warden/Deputy Warden appear on the same official Municipal Council page as the councillor
+  roster; no separate dedicated Warden profile page exists, so the same URL serves
+  both representatives and executive source types.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_pictou
+  source_type: metadata
+  url: https://munpict.ca/council/council/
+  authority: Municipality of the County of Pictou
+...
+  format: html
+  notes: 'Official Municipal Council / governance page documenting the council structure: 12
+  single-member districts, one councillor each (12-member council), Warden and Deputy
+  Warden chosen by council; monthly council and committee meetings at the MOPC Administration
+  Building. Most recent municipal election held October 19, 2024 (4-year term, 2024-2028),
+  placing the next general municipal election ~October 2028 under Nova Scotia''s Municipal
+  Elections Act four-year cycle. NS municipal elections are administered under the
+  Municipal Government Act / Municipal Elections Act. The shared 2024 election-administration
+  portal electionspictoucounty.ca reported the result but its government provenance
+  was not independently confirmed, so it is not used as the metadata source; the official
+  MOPC page is authoritative for structure and term.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_cumberland
+  source_type: boundaries
+  url: https://data-cumberlandns.opendata.arcgis.com/pages/electoral
+  authority: Municipality of the County of Cumberland — Cumberland GeoHub (ArcGIS Hub Open Data
+  Portal)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR AVAILABLE (NOT PDF-only). The Municipality of the
+  County of Cumberland operates its own official ArcGIS Hub open data portal at data-cumberlandns.opendata.arcgis.com
+  ("Municipality of the County of Cumberland Open Data and Mapping GeoHub"), linked
+  from the municipality''s own site at cumberlandcounty.ns.ca/maps-cumberland-geohub.html
+  and cumberlandcounty.ns.ca/maps.html. The portal advertises "story maps, web apps,
+  and raw geographic data available for you to explore, analyze, collaborate, and
+  download," explicitly including electoral districts, and exposes a dedicated Electoral
+  landing page at /pages/electoral ("Electoral District Maps & Data"). ArcGIS Hub
+  portals universally publish each dataset as downloadable GeoJSON, shapefile, and
+  KML plus a queryable feature service — the same pattern used across many registry
+  jurisdictions (Brampton, Mississauga, Norfolk County, Conception Bay South). 8 single-member
+  council districts (Districts 1-8). This is the municipality''s OWN GIS, so it is
+  materially better than the provincial ca_ns boundaries source (Elections NS, which
+  is PDF-only and covers PROVINCIAL districts, not municipal). ACQUISITION: from the
+  Electoral page / portal search, resolve the council/polling district dataset item
+  and pull the GeoJSON (or shapefile) export. ArcGIS Hub pages render via JavaScript
+  and return thin content on automated fetch; portal provenance, electoral-data availability,
+  and vector download capability confirmed via the municipality''s own GeoHub pages
+  and search results. (Note: a 2024 NSUARB-directed electoral boundary review — "Plan
+  Cumberland" at plancumberland.ca/electoral, prompted by the dissolution of the Town
+  of Parrsboro — was underway; confirm at acquisition that the published dataset reflects
+  the districts of the council seated after the October 2024 municipal election.)'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_cumberland
+  source_type: representatives
+  url: https://www.cumberlandcounty.ns.ca/councillors.html
+  authority: Municipality of the County of Cumberland
+...
+  format: html
+  notes: 'Official "Mayor and Councillors" page on the municipality''s own site (cumberlandcounty.ns.ca).
+  Confirmed via fetch to list Mayor Rod Gilroy plus all 8 district councillors (one
+  per district) for the term seated after the October 2024 Nova Scotia municipal election:
+  District 1 Fred Gould, District 2 Anthony Fromm, District 3 Jennifer Houghtaling,
+  District 4 Kathy Redmond, District 5 Angela ''Angel'' McCormick, District 6 Scott
+  Lockhart, District 7 Carrie Lee, District 8 Marchel Strong. General municipal phone
+  902-667-2313; per-councillor contact detail likely on individual district subpages
+  (resolve at extraction). Chief Administrative Officer: Greg Herrett.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_cumberland
+  source_type: executive
+  url: https://www.cumberlandcounty.ns.ca/councillors.html
+  authority: Municipality of the County of Cumberland
+...
+  format: html
+  notes: 'HEAD-OF-GOVERNMENT TITLE: MAYOR (not Warden). The Municipality shifted from the Warden
+  system to a directly-elected Mayor beginning with the October 2020 election (first
+  Mayor Murray Scott); the current head of government is Mayor Rod Gilroy, listed
+  at the top of the official Mayor and Councillors page. No separate dedicated mayor
+  profile page was identified; the same councillors.html URL serves both the representatives
+  and executive source types (Norfolk County / Cornwall / NL at-large precedent).
+  Confirm a dedicated mayor subpage at extraction if available.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_cumberland
+  source_type: metadata
+  url: https://www.cumberlandcounty.ns.ca/municipal-election-2024.html
+  authority: Municipality of the County of Cumberland
+...
+  format: html
+  notes: 'Official "Municipal Election 2024" page on the municipality''s own site. Documents
+  the October 2024 Nova Scotia municipal general election that seated the current
+  council. Governance structure: Mayor (directly elected at-large since 2020) plus
+  8 single-member district councillors (Districts 1-8), 4-year terms under Nova Scotia''s
+  Municipal Elections Act / Municipal Government Act. Nova Scotia municipal general
+  elections run on a 4-year cycle (last held October 19, 2024), so the next is expected
+  ~October 2028. Supplementary structural context on the district count and the NSUARB-directed
+  boundary review at plancumberland.ca/electoral (the municipality''s "Plan Cumberland"
+  electoral boundary review, triggered by the dissolution of the Town of Parrsboro).'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_west_hants
+  source_type: boundaries
+  url: https://data.novascotia.ca/datasets/gcep-xeci
+  authority: Government of Nova Scotia (Service Nova Scotia / GeoNOVA open data portal, data.novascotia.ca)
+...
+  format: geojson
+  notes: 'Province-wide "Municipal Polling Districts" dataset on the official Nova Scotia open
+  data portal (data.novascotia.ca, Socrata). Delineates municipal polling (electoral)
+  districts for all NS towns, rural, district, county, and regional municipalities,
+  including the Region of Windsor and West Hants Municipality. VECTOR geometry available:
+  portal exports GeoJSON, Shapefile, KML/KMZ, and CSV; acquisition should select GeoJSON
+  and filter to West Hants (11 districts). Attribute schema includes municipality
+  name for filtering. Open Government Licence — Nova Scotia; dataset last modified
+  2025-11-26. Federal mirror / metadata record at https://open.canada.ca/data/en/dataset/94ab3675-1b4c-7795-77e8-636f02cd2cf7.
+  VECTOR AVAILABLE (not PDF-only). The municipality''s own site offers only a PDF
+  district map (westhants.ca/district-map.html) and a JS-driven ArcGIS interactive
+  viewer with no documented downloadable vector layer, so the provincial GeoJSON is
+  the authoritative machine-readable source.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_west_hants
+  source_type: representatives
+  url: https://www.westhants.ca/mayor-and-council.html
+  authority: West Hants Regional Municipality
+...
+  format: html
+  notes: 'Official Mayor and Council page. Confirmed to list Mayor Abraham Zebian plus all
+  11 district councillors (one per district) reflecting the October 2024 NS municipal
+  election: D1 Rupert Jannasch, D2 Scott McLean, D3 Chrystal Remme, D4 Paul Wheadon,
+  D5 Debbie Francis (Deputy Mayor), D6 Bob Morton, D7 Kayla Leary-Pinch, D8 Paul Morton,
+  D9 John A. Smith, D10 Bonnie Smith, D11 Jim Ivey. Page includes per-councillor contact
+  details and links to an interactive district lookup map.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_west_hants
+  source_type: executive
+  url: https://www.westhants.ca/mayor-and-council.html
+  authority: West Hants Regional Municipality
+...
+  format: html
+  notes: Head of government is a directly-elected MAYOR (not a Warden). Current Mayor is Abraham
+  Zebian, elected/re-elected in the October 2024 municipal election (3,711 votes).
+  Listed on the same official Mayor and Council page as the councillors; no separate
+  dedicated mayor profile page found, so this URL serves both representatives and
+  executive source types.
+...
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_west_hants
+  source_type: metadata
+  url: https://novascotia.ca/just/regulations/regs/rwwhdis.htm
+  authority: Government of Nova Scotia (Office of the Registrar of Regulations) — Region of Windsor
+  and West Hants Municipality Act
+...
+  format: html
+  notes: 'Official provincial regulation "Region of Windsor and West Hants Municipality Polling
+  Districts and Number of Councillors Order". Establishes the governance structure:
+  11 polling districts and 11 councillors, with district boundaries set out in Schedule
+  A; effective April 1, 2020 (amalgamation of the Town of Windsor and the former District
+  of West Hants). Authoritative source for district count and structure. Election-cycle/term
+  and next-election (Oct 2024 result, next 2028) context also documented on the municipality''s
+  official elections page at https://www.westhants.ca/elections.html (NS municipal
+  elections held every four years under the Municipal Elections Act).'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_annapolis
+  source_type: boundaries
+  url: https://annapoliscounty.ca/government/municipal-elections/1099-municipal-boundary-descriptions
+  authority: Municipality of the County of Annapolis
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR available (NOT PDF-only). The Municipality of the
+  County of Annapolis is divided into 11 single-member electoral districts (District
+  1 through District 11). This official "2024 Municipal Boundary Descriptions and
+  Maps" page (under government/municipal-elections) hosts the per-district boundary
+  descriptions and an interactive Municipal Boundaries Map for the districts used
+  in the October 19, 2024 municipal election. Machine-readable vector geometry IS
+  obtainable: the County operates an official Socrata open-data portal at thedatazone.ca
+  (e.g. "Annapolis County Zoning Areas", dataset gb6e-6tc4) on which it publishes
+  municipal spatial layers including "Electoral District Boundaries" (confirmed via
+  search); Socrata geospatial datasets export as GeoJSON, shapefile, KML, and CSV.
+  ACQUISITION: locate the Annapolis County "Electoral District Boundaries" dataset
+  on thedatazone.ca and export GeoJSON, OR pull the vector layer from the County GIS
+  that backs the interactive Municipal Boundaries Map. Official provincial fallback
+  for a vector artifact: GeoNOVA DataLocator / GeoData (geonova.novascotia.ca/geodata,
+  nsgi.novascotia.ca/datalocator) — Government of Nova Scotia. NOTE: annapoliscounty.ca
+  blocks automated fetches (HTTP 403); page provenance, 11-district structure, and
+  open-data/electoral-boundaries availability confirmed via search-result snippets.
+  This contrasts with the provincial ca_ns boundaries entry (Elections NS provincial
+  maps are PDF-only) — here the municipality''s own open-data portal supplies vector
+  geometry.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_annapolis
+  source_type: representatives
+  url: https://annapoliscounty.ca/council/meet-your-council
+  authority: Municipality of the County of Annapolis
+...
+  format: html
+  notes: 'Official "Meet Your Council" page. Confirmed to list the full 11-member district
+  council elected at the October 19, 2024 Nova Scotia municipal election: District
+  1 Karie-Ann Parsons-Saltzman, District 2 Jesse Hare, District 3 Deputy Warden Dustin
+  Enslow, District 4 Charles Cranton, District 5 Lynn Longmire, District 6 Jonathan
+  Welch, District 7 Ted Agombar, District 8 Nile Harding, District 9 Gail Oxner, District
+  10 Brian Connell, District 11 Warden Diane LeBlanc. One councillor elected per district
+  (11 districts, 11 councillors). Per-member contact detail expected on this page
+  / linked profiles; annapoliscounty.ca returns HTTP 403 on automated fetch, roster
+  confirmed via search-result snippets citing this page. Confirm live roster at extraction.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_annapolis
+  source_type: executive
+  url: https://annapoliscounty.ca/council/meet-your-council
+  authority: Municipality of the County of Annapolis
+...
+  format: html
+  notes: 'HEAD OF GOVERNMENT TITLE: WARDEN (not Mayor). As a Nova Scotia rural/county municipality,
+  Annapolis County is headed by a Warden chosen by and from among the elected district
+  councillors (not elected at-large). Current Warden is Diane LeBlanc (also the District
+  11 councillor); Deputy Warden is Dustin Enslow (District 3), elected by council
+  following the October 19, 2024 municipal election. The Warden appears at the top
+  of the official "Meet Your Council" page; no separate dedicated warden profile page
+  was identified, so the same URL serves the representatives and executive source
+  types. Because the Warden also holds a district seat, this person appears in both
+  the representatives stream (District 11 councillor) and the executive stream (Warden)
+  sharing one UUID. annapoliscounty.ca returns HTTP 403 on automated fetch; confirmed
+  via search.'
+  last_confirmed: '2026-06-14'
+- slug: ca_ns_annapolis
+  source_type: metadata
+  url: https://annapoliscounty.ca/government/municipal-elections/
+  authority: Municipality of the County of Annapolis
+...
+  format: html
+  notes: 'Official Municipal Elections page. Documents the County''s governance structure (11
+  single-member electoral districts; council of 11 councillors who select a Warden
+  and Deputy Warden from among themselves) and the election cycle. Nova Scotia municipal
+  general elections are held every four years on the third Saturday in October; the
+  most recent was October 19, 2024 (current 2024-2028 term), so the next municipal
+  general election is due in October 2028. Provincial governance/cycle authority (fallback):
+  Government of Nova Scotia Municipal Elections page at novascotia.ca/municipal-elections/.
+  annapoliscounty.ca returns HTTP 403 on automated fetch; election date and 11-district
+  structure confirmed via search-result snippets and the 2024 NS municipal election
+  record.'
+  last_confirmed: '2026-06-14'
+- slug: ca_mb_steinbach
+  source_type: boundaries
+  url: https://geoportal.gov.mb.ca/datasets/municipality/about
+  authority: Government of Manitoba — Data MB (Manitoba Maps geoportal)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR AVAILABLE (not PDF-only). Steinbach is an AT-LARGE
+  city (Mayor + 6 councillors elected city-wide, no geographic wards), so the single
+  City of Steinbach municipal-boundary polygon is the lone electoral area (Vancouver
+  / Victoria / Cornwall at-large precedent). The official Government of Manitoba open-data
+  dataset "MUNICIPALITY" on Data MB (geoportal.gov.mb.ca, ArcGIS Hub) is vector polygon
+  geometry of the boundaries of all incorporated municipalities and Northern Affairs
+  Communities in Manitoba, based on the Municipal Status and Boundaries Regulation
+  (567/88R). Confirmed machine-readable VECTOR downloads in shapefile, GeoJSON, CSV,
+  KML, and ESRI REST (ArcGIS GeoService) — verified via the official Canada Open Government
+  mirror (open.canada.ca/data/en/dataset/ca91c981-d6ed-edbc-1a03-00808f3d46a7, Government
+  of Manitoba as publisher, OpenMB licence, contact manitobamaps@gov.mb.ca). Covers
+  the City of Steinbach. Note: Data MB is the successor to the legacy Manitoba Land
+  Initiative (MLI), which stopped updating Feb 2022. The ArcGIS Hub "about" page renders
+  thin on automated fetch (JS-rendered) — vector availability confirmed via search
+  and the Canada Open Government mirror. ACQUISITION: download the MUNICIPALITY vector
+  (prefer GeoJSON) and isolate the City of Steinbach polygon.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_steinbach
+  source_type: representatives
+  url: https://www.steinbach.ca/city-hall/city-council/
+  authority: City of Steinbach
+...
+  format: html
+  notes: 'Official City Council page on steinbach.ca. Confirmed to list Mayor Earl Funk and
+  all 6 at-large councillors for the 2022-2026 term: Bill Hiebert, Damian Penner,
+  Jake Hiebert, Susan Penner, Jac Siemens, Michael Zwaagstra. All elected at-large
+  (no wards). Page also states "Six council members and the Mayor are all elected
+  at large for four-year terms." Confirm live roster and per-member contact details
+  at extraction.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_steinbach
+  source_type: executive
+  url: https://www.steinbach.ca/city-hall/the-mayors-office/
+  authority: City of Steinbach — Mayor's Office
+...
+  format: html
+  notes: Official Mayor's Office page on steinbach.ca (linked from the City Council page).
+  Current Mayor is Earl Funk (acclaimed in the October 26, 2022 municipal election).
+  If the dedicated Mayor's Office page lacks contact detail at extraction, the City
+  Council page (steinbach.ca/city-hall/city-council/) also carries the Mayor.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_steinbach
+  source_type: metadata
+  url: https://www.steinbach.ca/city-hall/city-council/2026-election/
+  authority: City of Steinbach
+...
+  format: html
+  notes: 'Official 2026 Election page on steinbach.ca. Confirms next municipal election is
+  Wednesday, October 28, 2026; general municipal elections held every four years on
+  the fourth Wednesday in October. Governance structure: Mayor + 6 councillors, all
+  elected at-large (no wards), 4-year terms; current term is 2022-2026 (elected October
+  26, 2022). Manitoba municipal elections are governed under The Municipal Councils
+  and School Boards Elections Act. Council-structure context also on the City Council
+  page (steinbach.ca/city-hall/city-council/).'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_winkler
+  source_type: boundaries
+  url: https://mli.gov.mb.ca/adminbnd/index.html
+  authority: Manitoba Land Initiative (Government of Manitoba, Conservation and Water Stewardship)
+...
+  format: shapefile
+  notes: 'Official Government of Manitoba GIS data portal (Manitoba Land Initiative). Administrative
+  Boundaries page provides a "Municipalities/Local Govt. Districts" dataset with downloadable
+  VECTOR formats — .SHP (shapefile), .DXF, .GEO, and .KMZ (direct shapefile zip: shp_zip_files/bdy_municipality_py_shp.zip).
+  Winkler is an at-large city with no wards, so the single City of Winkler municipal-boundary
+  polygon is the electoral area; it is contained within this province-wide municipal
+  boundaries layer. VECTOR GEOMETRY AVAILABLE (not PDF-only) — acquisition stage should
+  download the .SHP and clip/select the Winkler municipality polygon. The City of
+  Winkler does not operate its own GIS/open-data portal; the MLI provincial layer
+  is the authoritative vector source.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_winkler
+  source_type: representatives
+  url: https://www.cityofwinkler.ca/p/city-council
+  authority: City of Winkler
+...
+  format: html
+  notes: Official City Council page on cityofwinkler.ca. Lists Mayor Henry Siemens, Deputy
+  Mayor Andrew Froese, and 5 councillors (Ryan Hildebrand, Michael Grenier, Don Friesen,
+  Marvin Plett, Peter Froese) for the 2022-2026 term. Councillors are elected AT-LARGE
+  (general vote, no wards) — confirmed by the 2024 by-election that elected ONE councillor
+  city-wide. Page includes general contact details.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_winkler
+  source_type: executive
+  url: https://www.cityofwinkler.ca/p/city-council
+  authority: City of Winkler
+...
+  format: html
+  notes: Head of government is the Mayor (Henry Siemens). Listed on the same official City
+  Council page along with direct contact (204.362.3178, mayor@cityofwinkler.ca). No
+  separate dedicated mayor profile page; this URL serves both representatives and
+  executive source types.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_winkler
+  source_type: metadata
+  url: https://www.cityofwinkler.ca/p/municipal-elections
+  authority: City of Winkler
+...
+  format: html
+  notes: 'Official Municipal Elections page on cityofwinkler.ca, with a linked 2026 Municipal
+  Elections subpage and named Senior Election Official (Wendy Klassen, seo@cityofwinkler.ca).
+  Confirms governance structure: Mayor elected at-large plus councillors elected at-large
+  (no wards); current term 2022-2026; 4-year cycle under the Manitoba Municipal Act.
+  The 2024 by-election content on this page confirms the at-large structure (single
+  seat contested city-wide).'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_portage_la_prairie
+  source_type: boundaries
+  url: https://geoportal.gov.mb.ca/datasets/manitoba::manitoba-municipal-boundaries/about
+  authority: Government of Manitoba — Data MB (geoportal.gov.mb.ca, ArcGIS Hub open-data portal)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR AVAILABLE (NOT PDF-only). Official Government of
+  Manitoba "Manitoba Municipal Boundaries" open dataset on Data MB. Polygon geometry
+  of all incorporated municipalities in Manitoba, per the descriptions in the Municipal
+  Status and Boundaries Regulation (567/88R) and amendments — coverage includes the
+  City of Portage la Prairie. Confirmed downloadable in machine-readable VECTOR formats:
+  Shapefile, GeoJSON, KML, and CSV/GPX. Portage la Prairie is AT-LARGE (Mayor + 6
+  councillors elected city-wide, no geographic wards), so the single City of Portage
+  la Prairie municipal-boundary polygon is the lone electoral area (Vancouver / Victoria
+  / Cornwall at-large precedent). ACQUISITION: download the Manitoba Municipal Boundaries
+  vector (prefer GeoJSON) and isolate the City of Portage la Prairie polygon by municipality-name
+  attribute. An ArcGIS REST vector fallback exists at web43.gov.mb.ca/arcgis/rest/services/WALLAS/WaLLAS_REFERENCE/MapServer/7
+  (Municipal Boundaries layer). ArcGIS Hub /about pages render via JS and return thin
+  content / HTTP 404 on automated fetch; dataset existence, vector formats, and authority
+  confirmed via Data MB search results. NOTE: the Manitoba Land Initiative (mli.gov.mb.ca/municipalities)
+  also lists Portage la Prairie but offers only PDF + DXF — Data MB is the preferred
+  vector source.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_portage_la_prairie
+  source_type: representatives
+  url: https://www.city-plap.com/council-administration/council/
+  authority: City of Portage la Prairie
+...
+  format: html
+  notes: 'Official City Council page on city-plap.com. Confirmed to list Mayor Sharilyn Knox
+  and all 6 city councillors for the 2022-2026 term: Colin Doyle, Ryan Espey, Joe
+  Masi, Preston Meier, Faron Nicholls, Terrie Porter — all elected AT-LARGE (no wards).
+  Per-member email present (firstinitiallastname@city-plap.com pattern, e.g. cdoyle@city-plap.com).
+  A non-voting Youth Member of Council (Efeomo Odeh, 2025-2026 term) also appears
+  on the page.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_portage_la_prairie
+  source_type: executive
+  url: https://www.city-plap.com/council-administration/council/
+  authority: City of Portage la Prairie
+...
+  format: html
+  notes: 'Head of government title: MAYOR. Mayor Sharilyn Knox (declared winner in the 2022
+  municipal election) listed at the top of the official Council page; email sknox@city-plap.com.
+  No separate dedicated mayor profile page was identified, so the same Council page
+  URL serves both representatives and executive source types (Cornwall / Norfolk /
+  Mount Pearl precedent).'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_portage_la_prairie
+  source_type: metadata
+  url: https://www.city-plap.com/council-administration/municipal-council-and-school-board-elections-2026/
+  authority: City of Portage la Prairie
+...
+  format: html
+  notes: 'Official "Municipal Council and School Board Elections 2026" page on city-plap.com.
+  Confirms next municipal election date of Wednesday, October 28, 2026 (held jointly
+  with the Portage la Prairie School Division). Governance structure: Mayor elected
+  at-large plus 6 councillors elected at-large (no wards), 4-year terms; current term
+  2022-2026. Manitoba municipal elections run on a 4-year cycle under The Municipal
+  Councils and School Boards Elections Act. Supplementary provincial context: Elections
+  Manitoba / Municipal Relations.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_thompson
+  source_type: boundaries
+  url: https://www.app.geo.ca/en-ca/map-browser/record/ca91c981-d6ed-edbc-1a03-00808f3d46a7
+  authority: Government of Manitoba — Manitoba Maps (MUNICIPALITY dataset, published via geo.ca)
+...
+  format: geojson
+  notes: Official Government of Manitoba provincial municipality-boundary dataset ("MUNICIPALITY"),
+  digital boundaries of all incorporated municipalities and Northern Affairs Communities
+  in Manitoba, maintained under The Municipal Act. VECTOR geometry is available —
+  confirmed machine-readable downloads in Shapefile, GeoJSON, ArcGIS Feature Service,
+  CSV, and KML (publisher contact manitobamaps@gov.mb.ca, OpenMB Information and Data
+  Use License). Thompson is an at-large city (no wards), so the single City of Thompson
+  municipal-boundary polygon (filter MUNI_NAME = Thompson / MUNI_TYPE = City) is the
+  relevant electoral area. Acquisition stage should extract the Thompson polygon as
+  GeoJSON. The province also hosts the same data via Manitoba Maps / Data MB feature
+  services. VECTOR AVAILABLE — not PDF-only.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_thompson
+  source_type: representatives
+  url: https://www.thompson.ca/p/mayor-and-council
+  authority: City of Thompson
+...
+  format: html
+  notes: 'Official Mayor & Council page on thompson.ca. Council is at-large (no wards): Mayor
+  plus 8 councillors, 9 members total, governed by The Thompson Charter Act, 4-year
+  term (2022-2026). Mayor Colleen Smook; one councillor serves as Deputy Mayor. Individual
+  councillor profile pages are linked (e.g. /p/councillor-earl-colbourne, /p/councillor-les-ellsworth-).
+  Note: roster has shifted via by-elections (2020, 2024) — confirm the exact current
+  8 councillors against the live page at extraction. thompson.ca returns HTTP 500
+  on automated fetch; page existence and structure confirmed via search results citing
+  this official page.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_thompson
+  source_type: executive
+  url: https://www.thompson.ca/p/mayor-colleen-smook
+  authority: City of Thompson — Office of the Mayor
+...
+  format: html
+  notes: Official Mayor profile page on thompson.ca for Mayor Colleen Smook (re-elected in
+  the October 2022 municipal election). General Mayor's Office contact 204-677-7920.
+  URL is person-specific; treat thompson.ca/p/mayor-* as the canonical pattern. thompson.ca
+  returns HTTP 500 on automated fetch; page existence confirmed via search results
+  citing this official page.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_thompson
+  source_type: metadata
+  url: https://www.thompson.ca/p/elections
+  authority: City of Thompson
+...
+  format: html
+  notes: Official Elections page on thompson.ca. Manitoba municipal general elections run on
+  a 4-year cycle (last general election October 2022; next general election October
+  2026). Companion page /p/2022-municipal-election holds the Statement of Official
+  Results for the current term; by-election pages exist for 2020 and 2024. Governance
+  structure (at-large, Mayor + 8 councillors, 4-year term under The Thompson Charter
+  Act) confirmed from the Mayor & Council page at the same domain. thompson.ca returns
+  HTTP 500 on automated fetch; page existence confirmed via search results citing
+  these official pages.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_selkirk
+  source_type: boundaries
+  url: https://mli.gov.mb.ca/adminbnd/index.html
+  authority: Manitoba Land Initiative (Government of Manitoba) — Administrative Boundaries
+...
+  format: shapefile
+  notes: 'VECTOR boundary available (not PDF-only). The Manitoba Land Initiative (MLI) Administrative
+  Boundaries page hosts a province-wide "Municipalities/Local Govt. Districts" dataset
+  in vector SHP format (download: shp_zip_files/bdy_municipality_py_shp.zip), confirmed
+  to include the City of Selkirk polygon. Selkirk has no city-run open-data/GIS portal
+  of its own. Selkirk is an AT-LARGE city (no wards), so the single municipal-boundary
+  polygon is the electoral area and satisfies the boundaries source type as machine-readable
+  vector geometry. Acquisition stage should extract the Selkirk feature from the province-wide
+  municipality shapefile (also offered as DXF/GEO/KMZ). City of Winnipeg open-data
+  pattern (data.winnipeg.ca, Socrata) does not apply — Selkirk relies on the provincial
+  MLI source.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_selkirk
+  source_type: representatives
+  url: https://www.myselkirk.ca/city-government/city-council/
+  authority: City of Selkirk
+...
+  format: html
+  notes: 'Official City Council page on myselkirk.ca. Council is Mayor Larry Johannson plus
+  six councillors elected at-large (no wards): Lorie Fiddler (Deputy Mayor), Kelly
+  Cook, April Smith, Darlene Swiderski, Doug Poirier (2022-2026 term). Page states
+  Selkirk "is not broken into wards, so each member of council represents all citizens
+  in the community." myselkirk.ca returns HTTP 403 on automated fetch; provenance
+  and roster confirmed via search results citing this official page and the Wikipedia
+  governance summary.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_selkirk
+  source_type: executive
+  url: https://www.myselkirk.ca/city-government/city-council/mayor/
+  authority: City of Selkirk
+...
+  format: html
+  notes: Official Mayor page on myselkirk.ca. Head of government title is "Mayor". Current
+  Mayor is Larry Johannson (mayor since 2010, re-elected 2022). Mayor is head of council
+  and presides over council meetings. myselkirk.ca returns HTTP 403 on automated fetch;
+  URL and incumbent confirmed via search results citing this official page.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_selkirk
+  source_type: metadata
+  url: https://www.myselkirk.ca/city-government/city-council/election2026/
+  authority: City of Selkirk
+...
+  format: html
+  notes: 'Official "Election 2026" page on myselkirk.ca. Next municipal election is Wednesday,
+  October 28, 2026 (province-wide Manitoba municipal election date). Governance structure:
+  Mayor + 6 councillors elected at-large (no wards), 4-year terms; current term 2022-2026.
+  Governed under The Municipal Act (Manitoba). Candidate registration windows per
+  Manitoba Municipal and Northern Relations (Mayor: Feb 1-Jun 18, 2026; Councillor:
+  Mar 31-Jun 18, 2026). myselkirk.ca returns HTTP 403 on automated fetch; provenance
+  confirmed via search results citing this official page and gov.mb.ca/mr/mfas election
+  pages.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_morden
+  source_type: boundaries
+  url: https://mli.gov.mb.ca/adminbnd/index.html
+  authority: Manitoba Land Initiative (Government of Manitoba)
+...
+  format: shapefile
+  notes: VECTOR available. Morden is an at-large city with no wards, so the single municipal-boundary
+  polygon is the electoral area. The Manitoba Land Initiative (MLI) Administrative
+  Boundaries page offers the "Municipalities/Local Govt. Districts" layer as downloadable
+  .SHP (shapefile), plus .DXF and .KMZ — all machine-readable vector geometry, not
+  PDF-only. This province-wide dataset contains the boundary polygon for every incorporated
+  Manitoba municipality including the City of Morden; the acquisition stage should
+  download the municipalities shapefile and filter to Morden. A per-municipality page
+  at https://mli.gov.mb.ca/municipalities/index.html also offers per-city .DXF (vector)
+  and .PDF, but the province-wide adminbnd shapefile is the preferred vector source.
+  The City of Morden's own site (morden.ca) does not publish an open GIS portal; MLI
+  is the official provincial open-data source for the municipal boundary. NOTE FOR
+  ORCHESTRATOR — boundary availability is VECTOR, not PDF-only; no deferral needed.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_morden
+  source_type: representatives
+  url: https://morden.ca/city-council
+  authority: City of Morden
+...
+  format: html
+  notes: 'Official City Council page on morden.ca. Lists Mayor Nancy Penner and all six councillors
+  (elected at-large, city-wide; no wards): Gordon Maddock, Brenda Klassen, Doug Frost
+  (Deputy Mayor), Garry Hiebert, Sheldon Friesen, and Tracey Krause. Current term
+  2022-2026 (mayoralty and two council seats filled by a December 20, 2023 by-election
+  following resignations; Nancy Penner moved from councillor to mayor). morden.ca
+  returns HTTP 403 on automated fetch; page content and currency (city contact page
+  updated 2026-03-13) confirmed via search results citing this official page.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_morden
+  source_type: executive
+  url: https://morden.ca/city-council
+  authority: City of Morden
+...
+  format: html
+  notes: 'Head of government title is Mayor. Current Mayor is Nancy Penner (Morden''s first
+  woman mayor, elected in the December 20, 2023 by-election). Morden has no separate
+  dedicated mayor profile page; the Mayor is listed on the same City Council page
+  that serves the representatives source. General city contact: 100-195 Stephen Street,
+  Morden, MB; 204-822-4434; info@morden.ca. morden.ca returns HTTP 403 on automated
+  fetch; confirmed via search results citing this official page.'
+  last_confirmed: '2026-06-15'
+- slug: ca_mb_morden
+  source_type: metadata
+  url: https://www.gov.mb.ca/mr/mfas/elections.html
+  authority: Manitoba Municipal and Northern Relations (Government of Manitoba)
+...
+  format: html
+  notes: Official Province of Manitoba 2026 Municipal and School Board Elections page. Confirms
+  next general municipal election date of Wednesday, October 28, 2026 (general municipal
+  elections held every four years on the fourth Wednesday in October), four-year terms
+  beginning at noon the day after Election Day, and that elections are governed by
+  The Municipal Councils and School Boards Elections Act (CCSM). Morden-specific governance
+  structure (Mayor elected at-large plus six councillors elected at-large, no wards)
+  is documented on the City Council page at https://morden.ca/city-council. The province
+  administers the common election framework for all Manitoba municipalities; Morden
+  does not publish a dedicated city elections page.
+...
+  last_confirmed: '2026-06-15'
+- slug: ca_sk_saskatoon
+  source_type: boundaries
+  url: https://data-citysaskatoon.opendata.arcgis.com/
+  authority: City of Saskatoon Open Data Site (ArcGIS Hub Open Data Portal)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR AVAILABLE (NOT PDF-only). The City of Saskatoon
+  operates an official ArcGIS Hub open data portal (data-citysaskatoon.opendata.arcgis.com)
+  that, by platform design, serves downloadable vector geometry in GeoJSON, KML, Zip(shapefile),
+  and GeoTIFF formats, plus GeoServices/WMS/WFS APIs. Ward boundaries exist as a hosted
+  ArcGIS feature layer: a "2024 Ward Boundary Map" ArcGIS web app viewer (item faf0d2e205cc418eab2f9b374e2aa42b)
+  is backed by a vector ward feature service, and a prior "Saskatoon 2020 Municipal
+  Ward Boundaries" feature layer (item 8dabd0cfeb6c4a868979923156bbbd81) is published
+  as a downloadable feature layer. 10-ward model. IMPORTANT FOR ACQUISITION: the 2020
+  dataset is OUTDATED — the Municipal Wards Commission established NEW ward boundaries
+  (2023 review) that took effect for the November 2024 civic election, which the current
+  2024-2028 council reflects. Acquisition stage must select the CURRENT 2024 ward
+  boundary vector (the 2024 Ward Boundary Map feature service), not the 2020 layer.
+  The official city reference page is saskatoon.ca/city-hall/elections-saskatoon/ward-boundaries-and-changes.
+  Portal pages render via JS and return thin content on automated fetch; vector availability
+  and dataset existence confirmed via search results and the ArcGIS item/web-app references.
+  Sibling precedent: ca_sk_regina (open.regina.ca wards, vector).'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_saskatoon
+  source_type: representatives
+  url: https://www.saskatoon.ca/city-hall/mayor-city-councillors/city-councillors-wards
+  authority: City of Saskatoon
+...
+  format: html
+  notes: 'Official "City Councillors & Wards" page on saskatoon.ca. Lists all 10 ward councillors
+  for the 2024-2028 term (sworn in November 20, 2024): Ward 1 Kathryn MacDonald, Ward
+  2 Senos Timon, Ward 3 Robert Pearce, Ward 4 Troy Davies, Ward 5 Randy Donauer, Ward
+  6 Jasmin Parker, Ward 7 Holly Kelleher, Ward 8 Scott Ford, Ward 9 Bev Dubois, Ward
+  10 Zach Jeffries. Individual ward subpages (e.g. .../ward-2) carry per-councillor
+  contact details. saskatoon.ca CMS returns thin content on automated fetch; roster
+  confirmed via search results directly citing this official page. Confirm live roster
+  at extraction.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_saskatoon
+  source_type: executive
+  url: https://www.saskatoon.ca/city-hall/mayor-city-councillors
+  authority: City of Saskatoon — Office of the Mayor
+...
+  format: html
+  notes: 'Official "Mayor & City Councillors" hub on saskatoon.ca. Head of government title:
+  MAYOR (elected at-large). Current Mayor is Cynthia Block, elected in the November
+  2024 civic election and sworn in November 20, 2024 (Saskatoon''s first female mayor;
+  previously Ward 6 councillor). Mayor profile/contact is reachable from this hub.
+  saskatoon.ca CMS returns thin content on automated fetch; incumbent confirmed via
+  search results citing official city content.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_saskatoon
+  source_type: metadata
+  url: https://www.saskatoon.ca/city-hall/elections-saskatoon
+  authority: City of Saskatoon (Elections Saskatoon / Office of the City Clerk)
+...
+  format: html
+  notes: 'Official "Elections Saskatoon" page on saskatoon.ca. Governance structure: Mayor
+  elected at-large plus 10 ward councillors (one per ward, 10 wards) = 11-member council;
+  4-year terms under The Cities Act (Saskatchewan). Most recent civic election November
+  2024 (current 2024-2028 council); next Saskatchewan municipal general election scheduled
+  November 2028. Companion pages: .../ward-boundaries-and-changes (boundary history,
+  2023 Municipal Wards Commission), .../information-candidates, and the official results
+  site electionresults.saskatoon.ca. Provincial framework reference: saskatchewan.ca/government/municipal-administration/elections.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_prince_albert
+  source_type: boundaries
+  url: https://www.citypa.ca/city-hall/city-council/wards/
+  authority: City of Prince Albert
+...
+  format: arcgis_feature_service
+  notes: 'Official City of Prince Albert "Wards" page. Hosts an interactive ArcGIS web map
+  (View Full Screen at https://arcg.is/eTqmH) showing the 8 electoral ward boundaries,
+  plus a separate ward-boundary-review webappviewer at https://citypa.maps.arcgis.com/apps/webappviewer/index.html?id=2bd0db430e544b3fb3189ba42aa96641.
+  VECTOR GEOMETRY IS AVAILABLE: the city runs its own ArcGIS Online organization (citypa.maps.arcgis.com)
+  and the ward boundaries are rendered as a hosted Esri feature layer (not a static
+  raster), meaning the polygons are extractable as GeoJSON/shapefile via the underlying
+  ArcGIS REST FeatureServer. There is NO public ArcGIS Hub open-data download page
+  or "download" button surfaced on citypa.ca, and the provincial Saskatchewan GeoHub
+  (geohub.saskatchewan.ca) does NOT carry Prince Albert municipal ward boundaries
+  — so the acquisition stage must locate the exact FeatureServer endpoint behind the
+  web map (item id from the webappviewer / arcg.is short link) and export GeoJSON
+  from it. A 2019 Municipal Wards Commission final report PDF also exists at https://www.citypa.ca/media/i1dpzsy5/2019-11-25-final-report-signed.pdf
+  but is a fallback only; the live map is the vector source. 8 wards (boundaries established
+  1994, reviewed 2003/2011/2019, used for the November 2024 municipal election).'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_prince_albert
+  source_type: representatives
+  url: https://www.citypa.ca/en/city-hall/members-of-council.aspx
+  authority: City of Prince Albert
+...
+  format: html
+  notes: 'Official "Members of Council" page. Confirmed to list all 8 ward councillors for
+  the 2024-2028 term (elected November 2024) with phone and email per member: Ward
+  1 Daniel Brown, Ward 2 Troy Parenteau, Ward 3 Tony Head, Ward 4 Bryce Laewetz, Ward
+  5 Stephen Ring, Ward 6 Blake Edwards, Ward 7 Dawn Kilmer, Ward 8 Darren Solomon.
+  Mayor Bill Powalinsky also listed on the same page. One councillor per ward (8 wards).'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_prince_albert
+  source_type: executive
+  url: https://www.citypa.ca/en/city-hall/members-of-council.aspx
+  authority: City of Prince Albert
+...
+  format: html
+  notes: 'Head of government title: Mayor (at-large). Current Mayor is Bill Powalinsky (elected
+  November 2024). Contact on the Members of Council page: phone 306-953-4300, email
+  mayor@citypa.com, c/o 1084 Central Avenue, Prince Albert, SK S6V 7P3. Same URL serves
+  representatives and executive; no separate dedicated mayor profile page was found.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_prince_albert
+  source_type: metadata
+  url: https://www.citypa.ca/city-hall/elections/
+  authority: City of Prince Albert
+...
+  format: html
+  notes: Official Elections page. Confirms council is elected every four years and consists
+  of a Mayor (at-large) plus 8 ward councillors (one per ward). Current 2024-2028
+  council elected in the November 2024 Saskatchewan municipal general election; next
+  general election ~November 2028 under The Local Government Election Act, 2015 (Saskatchewan).
+  Wards page (https://www.citypa.ca/city-hall/city-council/wards/) documents the 8-ward
+  structure and boundary-review history (1994, 2003, 2011, 2019).
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_moose_jaw
+  source_type: boundaries
+  url: https://geohub.saskatchewan.ca/datasets
+  authority: Saskatchewan GeoHub (Government of Saskatchewan provincial geospatial catalogue, ArcGIS
+  Hub)
+...
+  format: geojson
+  notes: 'VECTOR AVAILABLE. Moose Jaw is an at-large city with NO wards, so the single municipal-boundary
+  polygon for the City of Moose Jaw is the electoral area (following the Vancouver/Victoria
+  at-large precedent of using the city boundary as the single district). The official
+  Government of Saskatchewan ArcGIS Hub portal (geohub.saskatchewan.ca) hosts the
+  "Urban Municipalities Boundary Overlay" dataset — polygons for ALL Saskatchewan
+  urban municipal boundaries with attributes for municipality name and type (city/town/village),
+  which includes the City of Moose Jaw. GeoHub supports CSV/KML/Zip/GeoJSON/ GeoTIFF/PNG
+  downloads; acquisition stage should select GeoJSON and filter to the Moose Jaw (city)
+  feature. SECONDARY VECTOR OPTION: the City of Moose Jaw operates its own official
+  ArcGIS portal at gis.moosejaw.ca, whose "City Limits Map" (ArcGIS Experience viewer
+  on moosejaw.ca/maps/) is backed by a queryable ArcGIS REST FeatureServer that can
+  also export the city-limits polygon as GeoJSON. The provincial GeoHub urban-municipality
+  layer is preferred as the cleaner canonical source. NOTE: moosejaw.ca/maps/ exposes
+  the boundary only as a web-map viewer / PDF (not a direct vector download) — the
+  machine-readable VECTOR comes from the GeoHub overlay (or the underlying gis.moosejaw.ca
+  REST service), NOT from the City maps page itself. Provincial ArcGIS endpoints (gis.saskatchewan.ca)
+  return HTTP 403 on automated fetch; dataset existence, title, attributes, and download
+  formats confirmed via search results citing the official GeoHub catalogue.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_moose_jaw
+  source_type: representatives
+  url: https://moosejaw.ca/mayor-and-city-council/
+  authority: City of Moose Jaw
+...
+  format: html
+  notes: 'Official Mayor and City Council page on moosejaw.ca. Confirmed (fetched) to list
+  Mayor James Murdock and all 6 at-large city councillors for the 2024-2028 term (elected
+  November 13, 2024): Patrick Boyle, Carla Delaurier, Heather Eby, Jamey Logan, Dawn
+  Luhning, Chris Warren. Council is elected at-large with NO ward system. Individual
+  councillor profile pages are linked from this listing (photos + contact details).
+  Jamey Logan serves as Deputy Mayor (internal council appointment).'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_moose_jaw
+  source_type: executive
+  url: https://moosejaw.ca/mayor-james-murdock/
+  authority: City of Moose Jaw — Office of the Mayor
+...
+  format: html
+  notes: 'Official profile page for Mayor James Murdock (42nd Mayor of Moose Jaw, elected November
+  13, 2024 with ~63.5% of the mayoral vote). Confirmed (fetched) contact details:
+  email jmurdock@moosejaw.ca, phone 306-694-4422, office at City Hall, 228 Main Street
+  North, Moose Jaw, SK, S6H 3J8. Includes photo and board/committee assignments. URL
+  is person-specific; treat moosejaw.ca/mayor-* as the canonical pattern across terms.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_moose_jaw
+  source_type: metadata
+  url: https://moosejaw.ca/election/
+  authority: City of Moose Jaw
+...
+  format: html
+  notes: Official 2024 Municipal & School Board Election page on moosejaw.ca. Confirmed (fetched)
+  election date of Wednesday, November 13, 2024; council structure of Mayor + 6 city
+  councillors (7 elected officials total) elected at-large with NO wards; four-year
+  term (2024-2028) consistent with Saskatchewan municipal practice under The Local
+  Government Election Act, 2015. Page carries full official 2024 results and election-history
+  (2024, 2021, 2020, 2018, 2016). Next election date not stated on the page (expected
+  November 2028 on the four-year cycle).
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_swift_current
+  source_type: boundaries
+  url: https://geohub.saskatchewan.ca/datasets
+  authority: Government of Saskatchewan — Saskatchewan GeoHub (SaskAdmin / Provincial Office of
+  Geomatics Coordination)
+...
+  format: shapefile
+  notes: Swift Current is an at-large municipality with no wards. The single municipal-boundary
+  polygon for the City of Swift Current is contained in the province-wide "Urban Municipalities
+  Boundary Overlay" (part of the SaskAdmin Administrative Boundary Overlays). This
+  is a machine-readable VECTOR dataset (NOT PDF-only) — Saskatchewan GeoHub publishes
+  it as free open data with download formats including shapefile, GeoJSON, and KML,
+  and it carries attributes identifying urban municipality name and municipal type
+  (city/town/village). Acquisition stage should locate the specific Urban Municipalities
+  overlay dataset on geohub.saskatchewan.ca/datasets and select GeoJSON or shapefile,
+  then filter to Swift Current (city). The same overlay is also offered as a paid
+  product (ESRI ArcShape, ~$162/yr provincial coverage) by ISC/Saskatchewan Registry
+  Services at saskregistries.ca/MapsandPhotos/GISData/AdministrativeBoundaryOverlays;
+  the free GeoHub open-data copy is preferred. The City of Swift Current's own city-maps
+  page (swiftcurrent.ca/divisions/planning-growth-development/city-maps) appears to
+  publish PDF maps rather than vector downloads, so the provincial GeoHub is the authoritative
+  vector source. VECTOR AVAILABLE.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_swift_current
+  source_type: representatives
+  url: https://www.swiftcurrent.ca/about-us/city-council
+  authority: City of Swift Current
+...
+  format: html
+  notes: 'Official City Council page. Council is Mayor Al Bridal plus 6 councillors elected
+  at-large (no wards): Ryan Plewis, Ryan Switzer, Leanne Tuntland-Wiebe, Tom Christiansen,
+  Bruce Deg, Courtney Stewart. Current 2024-2028 term (elected November 13, 2024;
+  sworn in late November 2024). General council contact: council@swiftcurrent.ca.
+  Page returns HTTP 403 to automated fetch; content confirmed via direct search results
+  citing this official page.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_swift_current
+  source_type: executive
+  url: https://www.swiftcurrent.ca/about-us/office-of-the-mayor
+  authority: City of Swift Current
+...
+  format: html
+  notes: Official Office of the Mayor page. Head of government title is "Mayor". Current Mayor
+  is Al Bridal (first elected 2020; re-elected by acclamation in the November 2024
+  municipal election). swiftcurrent.ca returns HTTP 403 to automated fetch; page existence
+  and official provenance confirmed via search results.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_swift_current
+  source_type: metadata
+  url: https://www.swiftcurrent.ca/what-s-new/election-2024/results-history/historical-election-results
+  authority: City of Swift Current
+...
+  format: html
+  notes: 'Official 2024 election / historical election results page on swiftcurrent.ca. Confirms
+  governance structure: Mayor plus 6 councillors, all elected at-large (no wards),
+  4-year terms, current term 2024-2028 (general election held November 13, 2024).
+  Saskatchewan municipal general elections are held province-wide every four years
+  (next 2028) under The Local Government Election Act, 2015; provincial cycle confirmation
+  also at saskatchewan.ca/government/municipal-administration/elections/election-dates-and-workshops-for-municipalities
+  (Government of Saskatchewan). swiftcurrent.ca returns HTTP 403 to automated fetch;
+  provenance confirmed via search results.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_yorkton
+  source_type: boundaries
+  url: https://gis.saskatchewan.ca/arcgis/rest/services/UrbanAreas/MapServer/1
+  authority: Government of Saskatchewan — Saskatchewan GeoHub (Urban Areas service; source data
+  from Information Services Corporation / ISC)
+...
+  format: geojson
+  notes: 'Yorkton is an at-large city (no wards), so the single municipal-boundary polygon
+  is the one electoral area. VECTOR available — NOT PDF-only. The official Saskatchewan
+  GeoHub (geohub.saskatchewan.ca) hosts the ISC-sourced "UrbanAreas" ArcGIS MapServer
+  with a "City" polygon layer (ID 1) and an "Urban Municipality" polygon layer (ID
+  9), both covering all SK urban municipalities including the City of Yorkton (identified
+  by urban name + PPID). The service is a queryable vector feature service supporting
+  GeoJSON export (?f=geojson) and the GeoHub Hub portal offers GeoJSON / Zip (shapefile)
+  / KML downloads. Acquisition stage should query the City layer filtered to Yorkton
+  (e.g. where=URBANNAME=''YORKTON'') and export GeoJSON, or download the city polygon
+  from the GeoHub dataset page. Note: gis.saskatchewan.ca returns HTTP 403 on automated
+  fetch (same pattern as the ca_sk Elections Saskatchewan and saskatchewan.ca entries
+  in the registry); provenance and layer structure confirmed via ArcGIS REST layer
+  listings and GeoHub documentation. Portal landing: https://geohub.saskatchewan.ca/'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_yorkton
+  source_type: representatives
+  url: https://www.yorkton.ca/our-government/council/
+  authority: City of Yorkton
+...
+  format: html
+  notes: 'Official City Council page on yorkton.ca. Confirmed (fetched successfully) to list
+  Mayor Aaron Kienle and all 6 at-large councillors for the 2024-2028 term: Dustin
+  Brears, Randy Goulden, Quinn Haider, Greg Litvanyi, Stephanie Ortynsky, Darcy Zaharia.
+  Council elected November 13, 2024. Page states council is "made up of one Mayor
+  and six Councillors" elected for four-year terms. Individual councillor profiles
+  linked from this page.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_yorkton
+  source_type: executive
+  url: https://www.yorkton.ca/our-government/council/
+  authority: City of Yorkton
+...
+  format: html
+  notes: 'Head of government title: Mayor. Current Mayor is Aaron Kienle, elected November
+  13, 2024 (defeated incumbent Mitch Hippsley). Listed at the top of the official
+  Council page along with the six councillors. No separate dedicated mayor profile
+  page was identified; the Council page serves both representatives and executive
+  source types. City Hall contact: 37 Third Avenue North, Yorkton, SK S3N 2W3, 306-786-1717.
+  Contacts directory at https://www.yorkton.ca/contacts-directory/ if a dedicated
+  mayor contact is needed at extraction.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_yorkton
+  source_type: metadata
+  url: https://www.yorkton.ca/our-government/council/
+  authority: City of Yorkton
+...
+  format: html
+  notes: 'Governance structure confirmed from the official Council page: 1 Mayor + 6 Councillors,
+  all elected at-large (no wards), four-year terms. Current council elected November
+  13, 2024. Saskatchewan urban municipal elections are held province-wide every four
+  years; the next municipal election is Wednesday, November 8, 2028 (per Government
+  of Saskatchewan municipal elections framework, https://www.saskatchewan.ca/government/municipal-administration/elections).
+  A term-specific City of Yorkton elections microsite exists at yorktonvotes.ca (used
+  per election cycle). Note: yorkton.ca/en/your-city/elections.aspx returned HTTP
+  404 at discovery time; the Council page is the stable authority for structure/term,
+  with the provincial elections framework page for the cycle/next-election date.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_north_battleford
+  source_type: boundaries
+  url: https://geohub.saskatchewan.ca/datasets
+  authority: Government of Saskatchewan — Saskatchewan GeoHub (ISC / provincial geospatial catalogue)
+...
+  format: geojson
+  notes: 'Saskatchewan GeoHub hosts the "Urban Municipality" dataset — geospatial polygons
+  and attributes for all urban municipalities in Saskatchewan, identified by urban
+  name and urban type, including the City of North Battleford. MACHINE-READABLE VECTOR
+  (not PDF-only): GeoHub offers GeoJSON, KML, and shapefile/Zip downloads, and the
+  backing ArcGIS REST service (gis.saskatchewan.ca/arcgis/rest/services/UrbanAreas/MapServer)
+  supports f=geojson query export. North Battleford is at-large (no wards), so the
+  single municipal-boundary polygon is the electoral area. The acquisition stage should
+  filter the Urban Municipality layer to North Battleford and export GeoJSON. Browse
+  the catalogue for the Urban Municipality dataset page; data-acquisition questions
+  route to ISC (ask@isc.ca). No municipal open-data portal is operated by the City
+  of North Battleford itself; the provincial GeoHub is the official vector source.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_north_battleford
+  source_type: representatives
+  url: https://www.cityofnb.ca/our-city-government/city-council/your-mayor-and-council/
+  authority: City of North Battleford
+...
+  format: html
+  notes: Official "Your Mayor and Council" page on cityofnb.ca. Lists Mayor Kelli Hawtin and
+  the six city councillors elected at-large in the November 13, 2024 municipal election
+  (current 2024-2028 term). Councillors include Gail Feser, Greg Lightfoot, Kent Lindgren,
+  and others. Council structure is Mayor plus six councillors, all elected at-large
+  (city-wide; no wards) — voters cast up to six councillor votes. Companion roster
+  page at https://www.cityofnb.ca/our-city-government/city-council/ and CivicWeb members
+  directory at https://cityofnb.civicweb.net/portal/members.aspx?id=10.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_north_battleford
+  source_type: executive
+  url: https://www.cityofnb.ca/our-city-government/city-council/your-mayor-and-council/
+  authority: City of North Battleford
+...
+  format: html
+  notes: 'Mayor Kelli Hawtin (first female Mayor of North Battleford), elected November 2024,
+  sworn in at the inaugural council meeting December 2, 2024. Listed on the same official
+  "Your Mayor and Council" page as the councillors; no separate dedicated mayor profile
+  page exists. General City Hall contact 306-445-1700. Head of government title: Mayor.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_north_battleford
+  source_type: metadata
+  url: https://www.cityofnb.ca/our-city-government/municipal-elections/2024-municipal-election/
+  authority: City of North Battleford
+...
+  format: html
+  notes: 'Official 2024 Municipal Election page on cityofnb.ca. Confirms election day Wednesday
+  November 13, 2024; council structure of Mayor plus six councillors elected at-large
+  for four-year terms; voters may vote for one Mayor and up to six councillors. Current
+  term 2024-2028 (next election 2028) under The Cities Act and The Local Government
+  Election Act, 2015 (Saskatchewan). Official results page: https://www.cityofnb.ca/our-city-government/municipal-elections/2024-municipal-election/2024-municipal-election-official-results/.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_warman
+  source_type: boundaries
+  url: https://gis.saskatchewan.ca/arcgis/rest/services/UrbanAreas/MapServer
+  authority: Government of Saskatchewan — Provincial GIS (UrbanAreas service; data sourced from
+  Information Services Corporation of Saskatchewan / ISC)
+...
+  format: geojson
+  notes: MACHINE-READABLE VECTOR — not PDF-only. Official Government of Saskatchewan ArcGIS
+  REST service hosting the "Urban Municipality" feature layer derived from ISC's geospatial
+  database. Contains polygon (esriGeometryPolygon) boundaries for all Saskatchewan
+  urban municipalities, organized by urban type (City / Town / Village / Northern
+  Community). Warman is a City, so its single municipal-boundary polygon is present
+  in the City layer — the correct vector geometry for an at-large jurisdiction. ArcGIS
+  REST feature layers support GeoJSON export via the /query endpoint (e.g. .../UrbanAreas/MapServer/<layerId>/query?where=URBAN_NAME='WARMAN'&outFields=*&f=geojson).
+  gis.saskatchewan.ca returns HTTP 403 on automated WebFetch; service structure, polygon
+  geometry type, and ISC provenance confirmed via search results citing the MapServer
+  endpoint and layer iteminfo. Acquisition stage should identify the City layer ID
+  and query for the Warman feature as GeoJSON.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_warman
+  source_type: representatives
+  url: https://www.warman.ca/100/City-Council
+  authority: City of Warman
+...
+  format: html
+  notes: 'Official City Council page. Confirmed (fetched successfully) to list the full at-large
+  council for the term running until 2028, elected November 13, 2024 (Cripps added
+  in the September 3, 2025 by-election): Mayor Gary Philipchuk (garyp@warman.ca, 306-717-2682),
+  Deputy Mayor Kevin Tooley, Councillors Richard Beck, Tracy Johnson, Marshall Seed,
+  Chris Mason, and Shaun Cripps. Each entry includes name, email, and phone. Council
+  is elected at-large (no wards): 1 Mayor + 6 councillors elected city-wide.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_warman
+  source_type: executive
+  url: https://www.warman.ca/100/City-Council
+  authority: City of Warman
+...
+  format: html
+  notes: 'Mayor Gary Philipchuk (acclaimed in 2024; no separate dedicated mayor profile page
+  exists). Contact: garyp@warman.ca, 306-717-2682. Same official City Council page
+  serves both representatives and executive source types.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_warman
+  source_type: metadata
+  url: https://warman.ca/108/Elections
+  authority: City of Warman
+...
+  format: html
+  notes: 'Official City of Warman elections page. Confirms municipal elections occur every
+  four years (or by by-election on a vacancy); current term runs until 2028; most
+  recent general election November 13, 2024; 2025 by-election held September 3, 2025;
+  next general election expected November 2028. Council structure: 1 Mayor + 6 councillors,
+  all elected at-large (no wards), 4-year term, governed under The Cities Act and
+  The Local Government Election Act (Saskatchewan). CivicPlus CMS returns HTTP 404
+  on automated WebFetch; provenance and contents confirmed via search results citing
+  this official page and the fetched City Council page at www.warman.ca/100/City-Council
+  (the reliably-fetchable companion source for governance structure and term).'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_lloydminster
+  source_type: boundaries
+  url: https://geohub.saskatchewan.ca/datasets
+  authority: Government of Saskatchewan — GeoHub (Saskatchewan Geospatial Hub, Information Services
+  Corporation data)
+...
+  format: geojson
+  notes: 'BOUNDARIES FORMAT VERDICT: VECTOR available (NOT PDF-only). Lloydminster is AT-LARGE
+  (Mayor + 6 councillors elected city-wide, no geographic wards), so the single City
+  of Lloydminster municipal-boundary polygon is the lone electoral area (Vancouver
+  / Victoria / Cornwall / Mount Pearl at-large precedent). Machine-readable vector
+  geometry IS obtainable from the official Government of Saskatchewan GeoHub (geohub.saskatchewan.ca/datasets),
+  which explicitly offers CSV, KML, Zip, GeoJSON, GeoTIFF and PNG downloads. The relevant
+  dataset is the province''s "Urban Municipality" boundary layer — polygon geometry
+  (esriGeometryPolygon) with municipality name and municipal type (city/town/village)
+  attributes — sourced from Information Services Corporation (ISC). Backing official
+  ArcGIS REST feature service: https://gis.saskatchewan.ca/arcgis/rest/services/SaskatchewanJurisdictions/FeatureServer/0
+  (Urban Municipality, ID 0); a companion service exists at https://gis.saskatchewan.ca/arcgis/rest/services/UrbanAreas/MapServer
+  . ACQUISITION: download the Urban Municipality vector (GeoJSON via the GeoHub or
+  the FeatureServer query endpoint ...FeatureServer/0/query?where=1=1&outFields=*&f=geojson)
+  and isolate the City of Lloydminster polygon by municipality-name attribute. The
+  gis.saskatchewan.ca REST host returns HTTP 403 on automated fetch; provenance and
+  vector/GeoJSON availability confirmed via Saskatchewan GeoHub listings and the REST
+  service metadata in search results. NOTE on the bi-provincial boundary: Lloydminster
+  straddles the Alberta–Saskatchewan border; the SK provincial Urban Municipality
+  layer is expected to carry the full incorporated city polygon (single council under
+  The Lloydminster Charter). Alternative official vector fallbacks if the SK polygon
+  is truncated at the provincial line: Statistics Canada 2021 Census Subdivision (CSD)
+  Boundary File (Government of Canada — covers Lloydminster across both provinces,
+  shapefile/GDB/GeoJSON), and the City''s own ArcGIS Enterprise portal at geo.lloydminster.ca/portal
+  (City Maps), whose REST services should expose a city-boundary feature layer. Confirm
+  full cross-border extent at acquisition.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_lloydminster
+  source_type: representatives
+  url: https://www.lloydminster.ca/council-administration/mayor-and-council/
+  authority: City of Lloydminster
+...
+  format: html
+  notes: 'Official Mayor and Council page on lloydminster.ca. Confirmed (fetched) to list the
+  council sworn in November 18, 2024 following the November 13, 2024 civic election:
+  Mayor Gerald Aalbers (acclaimed) plus 6 councillors elected AT-LARGE city-wide (no
+  wards) — David Lopez, Dr. Michael Diachuk, Jason Whiting, Michele Charles Gustafson,
+  Jim Taylor, Justin Vance. Per-member email present (e.g. dlopez@lloydminster.ca);
+  individual phone numbers not listed (general City line 780-875-6184). Governed under
+  The Lloydminster Charter; registered once under Saskatchewan.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_lloydminster
+  source_type: executive
+  url: https://www.lloydminster.ca/council-administration/mayor-and-council/
+  authority: City of Lloydminster
+...
+  format: html
+  notes: 'Mayor Gerald Aalbers (re-elected by acclamation, November 2024; serving his third
+  term) appears at the top of the official Mayor and Council page. Contact: mayor@lloydminster.ca.
+  No separate dedicated mayor profile page was identified, so the same URL serves
+  both representatives and executive source types (Cornwall / Mount Pearl / Norfolk
+  at-large precedent).'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_lloydminster
+  source_type: metadata
+  url: https://www.lloydminster.ca/news/categories/elections/
+  authority: City of Lloydminster
+...
+  format: html
+  notes: 'Official Elections page on lloydminster.ca. Confirms the last civic election was
+  held November 13, 2024 (council sworn in November 18, 2024), electing the Mayor
+  plus up to six City Councillors and school board trustees. Cites the governing framework:
+  The Lloydminster Charter and The Local Government Election Act, 2015 (Saskatchewan).
+  Council structure: Mayor + 6 councillors, all elected at-large (no wards), 4-year
+  term. Note: Lloydminster is bi-provincial (AB/SK) but governed by a single council
+  under The Lloydminster Charter and registered once under Saskatchewan. Supplementary
+  official detail: the 2024 official-results post at https://www.lloydminster.ca/news/posts/lloyd-votes-official-results-for-2024-civic-election/
+  and the Mayor and Council page for current composition.'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_weyburn
+  source_type: boundaries
+  url: https://gis.saskatchewan.ca/arcgis/rest/services/UrbanAreas/MapServer
+  authority: Government of Saskatchewan — Information Services Corporation (ISC) / Saskatchewan
+  GeoHub
+...
+  format: geojson
+  notes: Official Government of Saskatchewan ArcGIS REST service (gis.saskatchewan.ca, surfaced
+  through the Saskatchewan GeoHub at geohub.saskatchewan.ca). The "Urban Municipality"
+  feature layer is sourced from ISC and contains POLYGON geometry for every urban
+  municipality in Saskatchewan, identified by urban name, PPID, and urban type (city/town/village).
+  This is the machine-readable VECTOR boundary source for the City of Weyburn's single
+  municipal limit polygon. Weyburn elects all 6 councillors at-large (no wards), so
+  the city boundary itself is the single electoral area — same precedent as Vancouver
+  and Victoria in the registry. ArcGIS REST MapServer supports query/export to GeoJSON
+  and shapefile; acquisition stage should query the Urban Municipality layer filtered
+  to Weyburn and export GeoJSON. VECTOR available — not PDF-only. The REST endpoint
+  returns HTTP 403 on automated fetch; layer existence, polygon geometry, and ISC
+  provenance confirmed via the ISC Administrative Boundary Overlays metadata (saskregistries.ca)
+  and the Saskatchewan GeoHub catalogue.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_weyburn
+  source_type: representatives
+  url: https://weyburn.ca/mayor-councillors/
+  authority: City of Weyburn
+...
+  format: html
+  notes: 'Official Mayor & Councillors page on weyburn.ca. Confirmed to list Mayor Jeff Richards
+  and all 6 at-large councillors for the 2024-2028 term (elected November 13, 2024):
+  Todd Bedore, John Corrigan, Larry Heggs, Ryan Janke, Laura Morrissette, Kellie Sidloski.
+  Each entry includes an email address, City Hall phone (306-848-3209), and a personal
+  phone number. Council is Mayor + 6 councillors elected at-large (no wards).'
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_weyburn
+  source_type: executive
+  url: https://weyburn.ca/mayor-councillors/
+  authority: City of Weyburn
+...
+  format: html
+  notes: Mayor Jeff Richards is listed on the official Mayor & Councillors page with email
+  and phone contact details. No separate dedicated mayor profile page exists on weyburn.ca;
+  the same URL serves both representatives and executive source types. Head of government
+  title is "Mayor." Richards elected November 13, 2024, defeating incumbent Marcel
+  Roy.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_sk_weyburn
+  source_type: metadata
+  url: https://weyburn.ca/elections/
+  authority: City of Weyburn
+...
+  format: html
+  notes: 'Official Voting and Elections page on weyburn.ca. Confirms elections held every four
+  years to elect a Mayor and six councillors; most recent election November 13, 2024;
+  next regular election in 2028. By-elections may occur on vacancy. Council structure:
+  Mayor + 6 councillors, all elected at-large (no wards). Saskatchewan municipal elections
+  governed under The Local Government Election Act. Supplementary provincial-level
+  election-cycle context available at saskatchewan.ca/government/municipal-administration/elections.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_red_deer
+  source_type: boundaries
+  url: https://data.reddeer.ca/cityboundary
+  authority: The City of Red Deer (ITS Department, GIS Section); boundary sourced from Government
+  of Alberta - Land Titles via AltaLIS
+...
+  format: shapefile
+  notes: 'City of Red Deer municipal boundary on the official city open data portal. Machine-readable
+  VECTOR confirmed: downloadable as Shapefile and KMZ, plus a JSON metadata/API endpoint.
+  NOT PDF-only. For an at-large jurisdiction this single municipal-boundary polygon
+  is the boundary artifact.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_red_deer
+  source_type: representatives
+  url: https://www.reddeer.ca/city-government/mayor-and-city-councillors/city-council/city-council-profiles/
+  authority: The City of Red Deer
+...
+  format: html
+  notes: 'Official city council profiles page. Lists the 8 city-wide councillors elected in
+  the October 2025 municipal election: Kraymer Barnstable, Tristin Brisbois, Bruce
+  Buruma, Cassandra Curtis, Adam Goodwin, Chad Krahn, Jaelene Tweedle, Dianne Wyntjes.
+  Councillors are elected at-large (no wards).'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_red_deer
+  source_type: executive
+  url: https://www.reddeer.ca/city-government/mayor-and-city-councillors/the-mayors-office/
+  authority: The City of Red Deer
+...
+  format: html
+  notes: 'Official Office of the Mayor page. Head of government title is "Mayor". Current Mayor:
+  Cindy Jefferies (elected October 2025).'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_red_deer
+  source_type: metadata
+  url: https://elections.reddeer.ca/
+  authority: The City of Red Deer (Elections)
+...
+  format: html
+  notes: 'Official city elections portal. Provides election dates (last election October 20,
+  2025; next October 15, 2029) and four-year term. Council structure (Mayor + 8 at-large
+  councillors, 2025-2029 term) is documented on the city''s Mayor and City Councillors
+  section: https://www.reddeer.ca/city-government/mayor-and-city-councillors/'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_strathcona_county
+  source_type: boundaries
+  url: https://opendata-strathconacounty.hub.arcgis.com/datasets/wards/about
+  authority: Strathcona County Open Data (ArcGIS Hub portal operated by Strathcona County GIS)
+...
+  format: geojson
+  notes: 'Official Strathcona County open data portal (opendata-strathconacounty.hub.arcgis.com),
+  linked from strathcona.ca GIS/Geo-Data pages. Dataset titled "Wards" — polygon (VECTOR)
+  geometry for the County''s 8-ward model. The portal explicitly offers downloads
+  in CSV, KML, Zip (shapefile), and GeoJSON, plus GeoServices/WMS/WFS APIs; acquisition
+  stage should select GeoJSON. VECTOR geometry available — NOT PDF-only. (Note: separate
+  voting-subdivision PDF maps also exist on strathcona.ca, but the open-data Wards
+  layer is the machine-readable vector source.) A historical "2017 Ward Boundaries"
+  dataset also exists; confirm the "Wards" layer reflects the current 2025-2029 council
+  boundaries at acquisition time.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_strathcona_county
+  source_type: representatives
+  url: https://www.strathcona.ca/council-county/mayor-council/councillors/
+  authority: Strathcona County
+...
+  format: html
+  notes: 'Official Councillors page on strathcona.ca. Confirmed to list all 8 ward councillors
+  for the 2025-2029 term: Ward 1 Robert Parks, Ward 2 Mike Derbyshire, Ward 3 Lorne
+  Harvey, Ward 4 Bill Tonita, Ward 5 Aaron C. Nelson (acclaimed), Ward 6 Corey-Ann
+  Hartwick, Ward 7 Glen Lawrence, Ward 8 Katie Berghofer. Individual councillor profile
+  pages linked from this listing. General office contact 780-416-7226, councillors@strathcona.ca;
+  per-councillor contact details on individual profile pages.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_strathcona_county
+  source_type: executive
+  url: https://www.strathcona.ca/council-county/mayor-council/mayor/
+  authority: Strathcona County
+...
+  format: html
+  notes: 'Official Mayor profile page on strathcona.ca. Current Mayor is Rod Frank (head of
+  government, elected at-large). Mayor and Councillors overview page (strathcona.ca/council-county/mayor-council/)
+  confirms Council is nine elected members: one Mayor plus eight ward Councillors,
+  2025-2029 term.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_strathcona_county
+  source_type: metadata
+  url: https://www.strathcona.ca/council-county/mayor-council/election/
+  authority: Strathcona County
+...
+  format: html
+  notes: Official Election page on strathcona.ca. Confirms 2025 general municipal election
+  held October 20, 2025; next municipal election October 15, 2029 (Alberta 4-year
+  fixed cycle under the Local Authorities Election Act). Governance structure (Mayor
+  elected at-large plus 8 ward councillors, 9-member council, 4-year term) confirmed
+  on the companion Mayor and Councillors page (https://www.strathcona.ca/council-county/mayor-council/).
+  Voting-subdivision maps available at strathcona.ca/.../election/candidate-information/subdivision-maps/.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_lethbridge
+  source_type: boundaries
+  url: https://opendata.lethbridge.ca/datasets/3d37b1a4840d4eac88bb89a49672c2e7_1/about
+  authority: City of Lethbridge (Lethbridge Open Data Catalogue)
+...
+  format: geojson
+  notes: City Boundary dataset on the City of Lethbridge ArcGIS Hub open-data portal. Single
+  municipal administrative boundary polygon for the City of Lethbridge. ArcGIS Hub
+  feature-layer page (the _1 layer suffix indicates a hosted feature service) — exposes
+  machine-readable VECTOR downloads (GeoJSON, Shapefile, KML, CSV) plus a GeoServices
+  REST endpoint. Lethbridge is at-large with no wards, so this single city-wide polygon
+  is the applicable boundary. VECTOR available (not PDF-only).
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_lethbridge
+  source_type: representatives
+  url: https://www.lethbridge.ca/council-administration-governance/mayor-and-councillors/
+  authority: City of Lethbridge
+...
+  format: html
+  notes: Official Mayor and Councillors roster. Confirmed listing the current council seated
+  after the October 2025 Alberta municipal election — Mayor Blaine Hyggen plus 8 at-large
+  councillors (Mark Campbell, Belinda Crowson, Jenn Schmidt-Rempel, Rufa Doria, Al
+  Beeber, Ryan Parker, Ryan Wolfe, Rajko Dodic). Councillors are elected at-large
+  (no wards).
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_lethbridge
+  source_type: executive
+  url: https://www.lethbridge.ca/council-administration-governance/mayor-and-councillors/mayors-office/
+  authority: City of Lethbridge
+...
+  format: html
+  notes: Mayor's Office page. Head of government is the Mayor (Blaine Hyggen, re-elected 2025).
+  Single jurisdiction-wide elected head of government.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_lethbridge
+  source_type: metadata
+  url: https://www.lethbridge.ca/news/posts/municipal-election-101-what-you-need-to-know-ahead-of-october/
+  authority: City of Lethbridge
+...
+  format: html
+  notes: Official City of Lethbridge election information page. Confirms governance structure
+  (Mayor + 8 at-large councillors), 4-year term (October 2025-October 2029), and the
+  October 20, 2025 election under Lethbridge's "At Large" representation system. Next
+  election expected October 2029.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_airdrie
+  source_type: boundaries
+  url: https://open.alberta.ca/opendata/property-municipal-boundaries
+  authority: Government of Alberta (Alberta Environment and Parks; distributed by AltaLIS Ltd.)
+...
+  format: shapefile
+  notes: 'Province-wide "Property - Municipal Boundaries" dataset. Machine-readable VECTOR
+  polygon data (spatial representation type "Vector") covering all Alberta municipalities
+  including Cities. Provides the single corporate boundary polygon for the City of
+  Airdrie (correct artifact for an at-large jurisdiction with no wards). Open Government
+  Licence - Alberta. The open.alberta.ca page intermittently returned HTTP 520 during
+  discovery; format and authority confirmed via the mirrored Government of Alberta
+  record on open.canada.ca (dataset 88a5c41c-8fe3-4abd-bf61-392f4ca91dd0). Note: the
+  City of Airdrie open-data portal (data-airdrie.opendata.arcgis.com) publishes quadrant
+  boundaries, neighbourhoods, and building footprints, but did not surface a clean
+  single corporate-boundary polygon; the provincial dataset is the authoritative VECTOR
+  source for the municipal limit.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_airdrie
+  source_type: representatives
+  url: https://www.airdrie.ca/index.cfm?serviceID=2169
+  authority: City of Airdrie
+...
+  format: html
+  notes: 'Official "Meet City Council" roster page. Lists the six at-large Councillors plus
+  the Mayor for the 2025-2029 term (October 2025 Alberta municipal election): Mayor
+  Heather Spearman; Councillors Ron Chapman, Candice Kolson, Chris Glass, Kristen
+  Shima, Simisola Obasan, Chad Stewart. Confirms council is composed of seven members
+  elected at-large (no wards).'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_airdrie
+  source_type: executive
+  url: https://www.airdrie.ca/index.cfm?serviceID=1969
+  authority: City of Airdrie
+...
+  format: html
+  notes: 'Official "Mayor and Council" landing page. Head of government is the Mayor (title:
+  Mayor / Chief Elected Official), Heather Spearman, a full-time directly-elected
+  jurisdiction-wide executive. The "Meet City Council" page (serviceID=2169) also
+  carries the Mayor''s details.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_airdrie
+  source_type: metadata
+  url: https://www.airdrie.ca/index.cfm?serviceID=2442
+  authority: City of Airdrie
+...
+  format: html
+  notes: 'Official "Government roles and responsibilities" page. Confirms governance structure:
+  a full-time Mayor and six part-time Councillors elected at-large (no wards), on
+  four-year terms. Most recent election October 2025; next general municipal election
+  expected 2029 under Alberta''s fixed four-year cycle (Local Authorities Election
+  Act).'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_st_albert
+  source_type: boundaries
+  url: https://data.stalbert.ca/datasets/aae84bf4c83240a59ee14738c282ab65
+  authority: City of St. Albert (Open Data Portal)
+...
+  format: geojson
+  notes: '"City Boundary" dataset on the City of St. Albert ArcGIS Hub open data portal. Single
+  municipal-boundary polygon (official boundary post-2007 annexation). Machine-readable
+  VECTOR confirmed via the portal''s DCAT-US feed: GeoJSON, Shapefile (zip), CSV,
+  and KML distributions plus an ArcGIS GeoService REST endpoint are all offered. NOT
+  PDF-only. Suitable as the single at-large district polygon for this jurisdiction.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_st_albert
+  source_type: representatives
+  url: https://stalbert.ca/cosa/leadership/council/profiles/
+  authority: City of St. Albert
+...
+  format: html
+  notes: 'Council Profiles & Contacts page. Lists the six city councillors elected city-wide
+  (at-large): Shelley Biermanski, Sandy Clark, Sheena Hughes, Neil Korotash, Ken MacKay,
+  Amanda Patrick. Reflects the October 20, 2025 Alberta municipal election. Profiles
+  link to individual contact details.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_st_albert
+  source_type: executive
+  url: https://stalbert.ca/cosa/leadership/council/profiles/
+  authority: City of St. Albert
+...
+  format: html
+  notes: Head of government is the Mayor (Scott Olivieri, elected Oct 2025). Listed on the
+  same Council Profiles page; Mayor's Office contact at https://stalbert.ca/cosa/contact/departments/mayors-office/.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_st_albert
+  source_type: metadata
+  url: https://stalbert.ca/cosa/elections-census/election/
+  authority: City of St. Albert
+...
+  format: html
+  notes: 'Official elections page. Confirms next general election October 15, 2029 (four-year
+  terms under Alberta''s Local Authorities Election Act / Municipal Government Act).
+  Governance structure: Mayor + six councillors elected at-large (city-wide), one
+  district. Current council seated following the October 20, 2025 election.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_grande_prairie
+  source_type: boundaries
+  url: https://opendata-cityofgp.hub.arcgis.com/
+  authority: City of Grande Prairie Open Data Catalogue (ArcGIS Hub)
+...
+  format: geojson
+  notes: 'Official City of Grande Prairie open data portal (opendata-cityofgp.hub.arcgis.com,
+  an ArcGIS Hub portal under the cityofgp namespace). Confirmed as the City''s official
+  Open Data Catalogue via the City''s GIS Services page (cityofgp.com/city-services/more-services/gis-maps-services),
+  which links to this portal directly. Grande Prairie is AT-LARGE (no wards), so the
+  single municipal-boundary polygon is the relevant electoral geometry. MACHINE-READABLE
+  VECTOR is available: the portal serves boundary datasets as GeoJSON, shapefile,
+  and KML (standard ArcGIS Hub exports, consistent with Calgary/Brantford/Markham
+  registry patterns). Candidate boundary datasets visible on the portal include a
+  "Planning Boundaries" dataset (described as including city boundaries) and a "City
+  of Grande Prairie Neighbourhood Boundaries" dataset. Acquisition stage should locate
+  the dataset containing the single overall municipal/city-limits polygon and export
+  GeoJSON. NOT PDF-only — VECTOR available.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_grande_prairie
+  source_type: representatives
+  url: https://cityofgp.com/city-government/mayor-city-council/council-members
+  authority: City of Grande Prairie
+...
+  format: html
+  notes: 'Official Council Members page on cityofgp.com. Council is Mayor + 8 Councillors,
+  all elected AT-LARGE (city-wide, no wards), for the 2025-2029 term following the
+  October 20, 2025 municipal election. Confirmed to list Mayor Jackie Clayton plus
+  8 councillors with phone and email each: Dylan Bressey, Kevin O''Toole, Chris Thiessen,
+  Mike O''Connor, Grant Berg, Jena Flach, Leonard Auger, Wade Pilat. Each member has
+  a "View full bio" link to an individual profile page under cityofgp.com/city-government/mayor-city-council/council-bios/{name}.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_grande_prairie
+  source_type: executive
+  url: https://cityofgp.com/city-government/mayor-city-council/council-members
+  authority: City of Grande Prairie
+...
+  format: html
+  notes: Mayor Jackie Clayton (re-elected October 20, 2025). Head-of-government title is "Mayor".
+  Listed on the official Council Members page with phone (780-538-0300) and email.
+  An individual mayor bio page exists under cityofgp.com/city-government/mayor-city-council/council-bios/.
+  The parent landing page cityofgp.com/city-government/mayor-city-council confirms
+  council structure ("one Mayor and eight City Councillors"). Same domain serves both
+  representatives and executive source types.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_grande_prairie
+  source_type: metadata
+  url: https://cityofgp.com/city-government/mayor-city-council/2025-election
+  authority: City of Grande Prairie
+...
+  format: html
+  notes: 'Official 2025 Municipal Election hub on cityofgp.com. Confirms the October 20, 2025
+  general municipal election and four-year council terms (2025-2029); next general
+  election therefore due October 2029 under the Local Authorities Election Act (Alberta).
+  Governance structure: Mayor elected at-large plus 8 councillors elected at-large
+  (no wards), council of 9 members total. Official election results and ballot-handling
+  detail (hand count under the Local Authorities Election Act) at cityofgp.com/city-government/mayor-city-council/2025-election/election-results.'
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_medicine_hat
+  source_type: boundaries
+  url: https://open.canada.ca/data/en/dataset/88a5c41c-8fe3-4abd-bf61-392f4ca91dd0
+  authority: Government of Alberta (Property - Municipal Boundaries), distributed by AltaLIS Ltd.
+  under the Province of Alberta Open Government Licence; mirrored on the federal Open
+  Government Portal
+...
+  format: shapefile
+  notes: VECTOR available. Provincial municipal-boundary linework covering all Alberta municipalities
+  (Cities, Towns, Villages, Counties, etc.), including the single City of Medicine
+  Hat corporate-boundary polygon. Machine-readable shapefile, GIS-compatible, kept
+  current with Order in Council changes. For at-large Medicine Hat the single municipal
+  polygon is the required boundary; acquisition stage extracts the Medicine Hat feature
+  from the provincial layer. (City of Medicine Hat also runs an open data portal at
+  https://opendata.medicinehat.ca/ and offers GIS downloads via https://www.medicinehat.ca/business-development/maps-gis/,
+  but the portal is JS-rendered and a discrete city-limits vector dataset could not
+  be confirmed by fetch at discovery time; the provincial AltaLIS layer is the confirmed
+  authoritative VECTOR source.)
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_medicine_hat
+  source_type: representatives
+  url: https://www.medicinehat.ca/government-city-hall/mayor-city-council-administration/council-members/
+  authority: City of Medicine Hat
+...
+  format: html
+  notes: Official Council Members page. Lists Mayor Linnsie Clark and all 8 at-large councillors
+  (Ted Clugston, Bill Cocks, Chris Hellman, Yusuf Mohammed, Cheryl Phaff, Dan Reynish,
+  Brian Varga, Stuart Young) sworn in Nov 3, 2025 following the Oct 20, 2025 municipal
+  election. Office phone 403-529-8181; individual councillor emails not shown on page
+  (contact form provided).
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_medicine_hat
+  source_type: executive
+  url: https://www.medicinehat.ca/government-city-hall/mayor-city-council-administration/mayors-office/
+  authority: City of Medicine Hat
+...
+  format: html
+  notes: Mayor's Office page. Mayor Linnsie Clark (elected Oct 20, 2025, sworn in Nov 3, 2025;
+  second term). Name, photo, and office contact (403-529-8181) present.
+...
+  last_confirmed: '2026-06-17'
+- slug: ca_ab_medicine_hat
+  source_type: metadata
+  url: https://www.medicinehat.ca/government-city-hall/election-2025/election-results/
+  authority: City of Medicine Hat
+...
+  format: html
+  notes: 'Official 2025 Municipal and School Board Election Results page. Confirms governance
+  structure: Mayor + 8 councillors, all elected at-large (city-wide, no wards). 2025
+  election held Oct 20, 2025; council sworn in Nov 3, 2025; four-year term (2025-2029
+  per Alberta Local Authorities Election Act / Municipal Government Act). Voter turnout
+  18,265.'
+  last_confirmed: '2026-06-17'
+- slug: ca_bc_surrey
+  source_type: boundaries
+  url: https://data.surrey.ca/dataset/surrey-city-boundary
+  authority: City of Surrey Open Data Catalogue
+...
+  format: geojson
+  notes: 'Official City of Surrey Open Data Catalogue (data.surrey.ca, redirects to the ArcGIS
+  Hub at opendata-surrey.hub.arcgis.com). Dataset titled "Surrey City Boundary" —
+  the municipal boundary polygon. Surrey elects its Mayor and all 8 councillors at-large
+  (city-wide, no wards), so the single municipal-boundary polygon is the one electoral
+  area. BOUNDARY FORMAT: machine-readable VECTOR — the catalogue offers GeoJSON, KML,
+  and shapefile (Zip) downloads (also CSV, GeoTIFF, PNG). NOT PDF-only. Acquisition
+  stage should select GeoJSON. Backup provincial source confirmed: BC Data Catalogue
+  "Municipalities - Legally Defined Administrative Areas of BC" (catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc,
+  Ministry of Municipal Affairs custodian), also VECTOR — use if the city dataset
+  is unavailable at acquisition.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_surrey
+  source_type: representatives
+  url: https://www.surrey.ca/city-government/mayor-council/city-councillors
+  authority: City of Surrey
+...
+  format: html
+  notes: Official City Councillors page on surrey.ca. Lists all 8 councillors elected at-large
+  (city-wide, no wards) for the 2022-2026 term, elected October 15, 2022 and sworn
+  in November 7, 2022. Individual councillor profile pages are linked from the listing
+  (e.g. .../city-councillors/councillor-doug-elford). surrey.ca blocks automated fetches
+  with HTTP 403 (same pattern as vancouver.ca); official provenance and content confirmed
+  via direct search results citing this page.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_surrey
+  source_type: executive
+  url: https://www.surrey.ca/city-government/mayor-council/mayor-brenda-locke
+  authority: City of Surrey
+...
+  format: html
+  notes: Official Mayor profile page on surrey.ca. Head of government title is "Mayor". Current
+  Mayor is Brenda Locke, elected to her first term October 15, 2022. surrey.ca blocks
+  automated fetches with HTTP 403; official provenance and content confirmed via direct
+  search results citing this page.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_surrey
+  source_type: metadata
+  url: https://www.surrey.ca/city-government/3061.aspx
+  authority: City of Surrey
+...
+  format: html
+  notes: 'Official Surrey Municipal Election page on surrey.ca. Documents the municipal election
+  cycle and council structure: Mayor elected at-large plus 8 councillors elected at-large
+  (no wards), 4-year terms. Current term 2022-2026 (election October 15, 2022; council
+  sworn in November 7, 2022). Next BC general local election is October 2026, administered
+  under the BC Local Government Act / Local Elections Campaign Financing Act. surrey.ca
+  blocks automated fetches with HTTP 403; official provenance confirmed via direct
+  search results.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_burnaby
+  source_type: boundaries
+  url: https://opendata-burnaby.hub.arcgis.com/datasets/burnaby::burnaby-boundary/about
+  authority: City of Burnaby (GIS / Open Data)
+...
+  format: geojson
+  notes: '"Burnaby Boundary" dataset on the City of Burnaby ArcGIS Hub open data portal. Single
+  municipal outer-boundary polygon (suits an at-large jurisdiction). Machine-readable
+  VECTOR confirmed available — distributions include GeoJSON, Shapefile (ZIP), KML,
+  CSV, and an Esri REST GeoService. NOT PDF-only. Provincial vector fallback also
+  exists: DataBC "Municipalities - Legally Defined Administrative Areas of BC" (https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc).'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_burnaby
+  source_type: representatives
+  url: https://www.burnaby.ca/our-city/mayor-and-council
+  authority: City of Burnaby
+...
+  format: html
+  notes: 'Mayor and Council roster. 8 councillors elected at-large (city-wide), no wards: Pietro
+  Calendino, Sav Dhaliwal, Alison Gu, Joe Keithley, Richard T. Lee, Maita Santiago,
+  Daniel Tetrault, James Wang. Reflects the October 2022 BC municipal election (term
+  2022-2026). Individual councillor profile/contact pages link from this page.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_burnaby
+  source_type: executive
+  url: https://www.burnaby.ca/our-city/mayor-and-council
+  authority: City of Burnaby
+...
+  format: html
+  notes: 'Head of government: Mayor Mike Hurley. Official title — "the City''s head and chief
+  executive officer." Single jurisdiction-wide executive. Same page as the council
+  roster.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_burnaby
+  source_type: metadata
+  url: https://www.burnaby.ca/our-city/mayor-and-council/elections
+  authority: City of Burnaby (Elections)
+...
+  format: html
+  notes: 'General Local Election page. Governance structure: Mayor + 8 councillors, all elected
+  at-large (no wards); 4-year terms. Next general local election October 17, 2026
+  (current term 2022-2026). Also covers 7 School Trustees (Burnaby Board of Education)
+  — out of scope for this jurisdiction.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_richmond
+  source_type: boundaries
+  url: https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc
+  authority: GeoBC / DataBC — BC Data Catalogue (Province of British Columbia)
+...
+  format: shapefile
+  notes: 'Machine-readable VECTOR available. "Municipalities - Legally Defined Administrative
+  Areas of BC" dataset on the BC Data Catalogue (catalogue.data.gov.bc.ca, published
+  by GeoBC). Contains the legal boundary polygon for every BC municipality, including
+  the City of Richmond. Distributed under Open Government Licence - British Columbia
+  with shapefile / file-geodatabase / WMS access. Richmond is at-large (Mayor + 8
+  councillors elected city-wide, no wards), so the single municipal boundary polygon
+  is the entire electoral area — acquisition stage should extract the Richmond feature
+  from this provincial layer. NOTE: the City of Richmond''s own GIS (richmond.ca/services/digital/maps.htm,
+  Richmond Interactive Map) is interactive-viewer / PDF-map only and does NOT offer
+  a machine-readable boundary download, so DataBC is the vector source. Catalogue
+  page is JS-rendered (WebFetch returned a shell) but the domain is an official BC
+  government open-data portal and the dataset is well-established.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_richmond
+  source_type: representatives
+  url: https://www.richmond.ca/city-hall/city-council/members.htm
+  authority: City of Richmond
+...
+  format: html
+  notes: 'Official City Council Members page on richmond.ca. Lists Mayor Malcolm Brodie and
+  the city-wide (at-large) councillors for the 2022-2026 term: Alexa Loo, Bill McNulty,
+  Carol Day, Andy Hobbs, Kash Heed, Laura Gillanders, Michael Wolfe. Council structure
+  is Mayor + 8 councillors elected at large (no wards) per the official elections
+  page; individual councillor profile pages (e.g. /members/kheed.htm) are linked from
+  this listing. General contact: mayorandcouncillors@richmond.ca, 604-276-4123.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_richmond
+  source_type: executive
+  url: https://www.richmond.ca/city-hall/city-council/members.htm
+  authority: City of Richmond
+...
+  format: html
+  notes: Head of government is the Mayor (Malcolm Brodie). Listed on the official City Council
+  Members page alongside the councillors; the city does not maintain a separate standalone
+  mayor profile URL distinct from the council members listing, so the same richmond.ca
+  members page serves both representatives and executive. Individual mayor detail/contact
+  reachable from this page.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_richmond
+  source_type: metadata
+  url: https://www.richmond.ca/city-hall/elections.htm
+  authority: City of Richmond
+...
+  format: html
+  notes: Official Local Government Elections page on richmond.ca. Confirms next general local
+  election date of Saturday, October 17, 2026; voters elect one (1) Mayor, eight (8)
+  Councillors (all at-large, city-wide), and seven (7) school trustees. Four-year
+  terms (current term 2022-2026, elected October 15, 2022, inaugural meeting November
+  7, 2022). Elections administered under the BC Local Government Act / Local Elections
+  Campaign Financing Act.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_abbotsford
+  source_type: boundaries
+  url: https://opendata-abbotsford.hub.arcgis.com/datasets/Abbotsford::city-of-abbotsford-boundary
+  authority: City of Abbotsford (Open Data Hub, GIS Division)
+...
+  format: geojson
+  notes: 'Single municipal-boundary polygon for the City of Abbotsford on the city''s ArcGIS
+  Open Data Hub. Machine-readable VECTOR confirmed: the hub exposes downloads in CSV,
+  KML, Zip (Shapefile), GeoJSON, plus GeoServices/WMS/WFS API links. Appropriate for
+  an at-large jurisdiction (one city-wide polygon serves as the single district).
+  Provincial vector fallback also exists at DataBC (catalogue.data.gov.bc.ca, "Municipalities
+  - Legally Defined Administrative Areas of BC"). VECTOR available, not PDF-only.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_abbotsford
+  source_type: representatives
+  url: https://www.abbotsford.ca/council/city-council
+  authority: City of Abbotsford
+...
+  format: html
+  notes: Official city council roster page. Lists Mayor Ross Siemens plus 8 at-large councillors
+  (Les Barkman, Kelly Chahal, Patricia Driessen, Simon Gibson, Dave Loewen, Patricia
+  Ross, Dave Sidhu, Mark Warkentin) elected in the October 2022 BC general local election
+  (term 2022-2026). At-large; no wards.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_abbotsford
+  source_type: executive
+  url: https://www.abbotsford.ca/council
+  authority: City of Abbotsford
+...
+  format: html
+  notes: 'Mayor & Council landing page identifying the head of government, Mayor Ross Siemens
+  (elected October 15, 2022). Title of head of government: Mayor.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_abbotsford
+  source_type: metadata
+  url: https://www.abbotsford.ca/elections
+  authority: City of Abbotsford (Election Office)
+...
+  format: html
+  notes: Official elections page. Establishes governance structure (Mayor + 8 at-large councillors),
+  four-year term, current term 2022-2026, and next general local election Saturday,
+  October 17, 2026.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_coquitlam
+  source_type: boundaries
+  url: https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc
+  authority: Province of British Columbia — DataBC / GeoBC (BC Data Catalogue)
+...
+  format: vector
+  notes: '"Municipalities - Legally Defined Administrative Areas of BC" — legally defined municipal
+  polygons drawn from Letters Patent metes-and-bounds descriptions. Machine-readable
+  VECTOR (KML, WMS, plus DataBC shapefile/WFS distribution); covers all BC municipalities
+  including the single City of Coquitlam polygon. Coquitlam is at-large (no wards),
+  so the single municipal-boundary polygon is the only boundary needed. Mirrored at
+  open.canada.ca dataset e3c3c580-996a-4668-8bc5-6aa7c7dc4932. VECTOR available —
+  not PDF-only. City of Coquitlam also publishes a municipal boundary via its own
+  Open Data Portal (data.coquitlam.ca, exports GeoJSON/KML/Shapefile) as an alternative
+  vector source.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_coquitlam
+  source_type: representatives
+  url: https://www.coquitlam.ca/619/City-Council
+  authority: City of Coquitlam
+...
+  format: html
+  notes: Official City Council roster. Confirms Mayor Richard Stewart and eight Councillors
+  (Asmundson, Djonlic, Hodge, Kim, Mandewo, Marsden, Mazzarolo, Towner), all elected
+  at-large Oct. 15, 2022. For the representatives stream, the 8 at-large councillors
+  are the district- elected roster (single city-wide "district").
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_coquitlam
+  source_type: executive
+  url: https://www.coquitlam.ca/617/Mayor-Richard-Stewart
+  authority: City of Coquitlam
+...
+  format: html
+  notes: Official Mayor's page. Head of government is the Mayor (Richard Stewart), the single
+  city-wide head of government for Coquitlam.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_coquitlam
+  source_type: metadata
+  url: https://www.coquitlam.ca/729/Elections
+  authority: City of Coquitlam
+...
+  format: html
+  notes: 'Official Elections page. Confirms governance structure: voters elect 1 Mayor + 8
+  City Councillors at-large; four-year terms under the BC Local Government Act / Community
+  Charter; last general local election Oct. 15, 2022, next on Saturday, Oct. 17, 2026.
+  About-Our-Local-Government page (https://www.coquitlam.ca/668/About-Our-Local-Government)
+  corroborates structure and term length.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_kelowna
+  source_type: boundaries
+  url: https://opendata.kelowna.ca/datasets/kelowna::city-boundary
+  authority: City of Kelowna (Open Kelowna open-data portal)
+...
+  format: geojson
+  notes: '"City Boundary" dataset on the City of Kelowna''s Esri ArcGIS Hub open-data portal.
+  Single municipal-boundary polygon — the correct artifact for an at-large jurisdiction.
+  VECTOR available (ArcGIS Hub offers Shapefile, GeoJSON, CSV, and KML downloads plus
+  REST/WFS API); NOT PDF-only. DataBC fallback also exists and is vector: https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc
+  (BC Ministry-published, file geodatabase/WMS/WFS).'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_kelowna
+  source_type: representatives
+  url: https://www.kelowna.ca/city-hall/council/our-council
+  authority: City of Kelowna
+...
+  format: html
+  notes: Official "Our Council" roster page. At-large body of Mayor + 8 Councillors (each represents
+  the city at large; no wards). Reflects the October 2022 BC municipal election, term
+  2022-2026. Page returned HTTP 403 to automated fetch (bot block) but is confirmed
+  official and current via City of Kelowna search results; contact/contact-form details
+  are on individual member pages.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_kelowna
+  source_type: executive
+  url: https://www.kelowna.ca/city-hall/council/our-council
+  authority: City of Kelowna
+...
+  format: html
+  notes: Head of government is the Mayor (jurisdiction-wide, directly elected). Listed on the
+  same official "Our Council" page as the eight councillors.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_kelowna
+  source_type: metadata
+  url: https://www.kelowna.ca/city-hall/city-government/elections
+  authority: City of Kelowna
+...
+  format: html
+  notes: Official Elections page. Confirms governance structure (Mayor + 8 Councillors, all
+  elected at large under the Community Charter / Local Government Act), four-year
+  terms, and the fixed-date general local election cycle (next general election day
+  October 17, 2026). Governance overview also at https://www.kelowna.ca/city-hall/city-government/our-organization
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_langley_township
+  source_type: boundaries
+  url: https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc
+  authority: Province of British Columbia — Ministry of Municipal Affairs (DataBC / BC Data Catalogue)
+...
+  format: shapefile
+  notes: '"Municipalities - Legally Defined Administrative Areas of BC" — single authoritative
+  provincial layer of municipal polygons (one polygon per municipality, including
+  Township of Langley). Machine-readable VECTOR: Open Government mirror exposes KML
+  + WMS distributions; the BC Data Catalogue Distribution (Custom Download) service
+  serves Shapefile/FileGDB. For an at-large jurisdiction the single municipal-boundary
+  polygon is the required geometry. VECTOR available (not PDF-only). Township of Langley
+  also publishes its own "Municipal Boundary" vector layer on its ArcGIS Hub open-data
+  portal (https://data-tol.opendata.arcgis.com/datasets/municipal-boundary, GeoJSON/Shapefile/KML/CSV),
+  but that endpoint returns HTTP 403 to programmatic fetch; the provincial DataBC
+  layer is cited as the confirmed primary vector source. Acquisition should pull the
+  single Langley (Township) polygon.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_langley_township
+  source_type: representatives
+  url: https://www.tol.ca/en/the-township/councillors.aspx
+  authority: Township of Langley
+...
+  format: html
+  notes: 'Official roster of the eight at-large Councillors (2022-2026 term, October 2022 BC
+  municipal election): Tim Baillie, Steve Ferguson, Margaret Kunst, Barb Martens,
+  Michael Pratt, Kim Richter, Rob Rindt, Blair Whitmarsh. Individual councillor profile
+  pages linked from here carry contact details. Hub page https://www.tol.ca/en/the-township/mayor-and-council.aspx
+  confirms "a Mayor and eight Councillors make up Council" elected to four-year terms.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_langley_township
+  source_type: executive
+  url: https://www.tol.ca/en/the-township/mayor.aspx
+  authority: Township of Langley
+...
+  format: html
+  notes: 'Office of the Mayor. Head of government title is "Mayor"; municipality-wide (single
+  jurisdiction-wide head of government). Current Mayor: Eric Woodward (2022-2026 term).
+  Contact info present on page / mayor-and-council hub.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_langley_township
+  source_type: metadata
+  url: https://www.tol.ca/en/the-township/results.aspx
+  authority: Township of Langley
+...
+  format: html
+  notes: Official municipal election results page. Confirms at-large election of a Mayor +
+  eight Councillors (October 2022 BC general local election), four-year term (2022-2026),
+  next general local election 2026. Governance structure (Mayor-and-Council, at-large,
+  no wards) corroborated by mayor-and-council and municipal-government pages on the
+  same official site.
+...
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_saanich
+  source_type: boundaries
+  url: https://opendata-saanich.hub.arcgis.com/datasets/municipal-boundary-1
+  authority: District of Saanich Open Data Portal (ArcGIS Hub)
+...
+  format: geojson
+  notes: 'Official District of Saanich open data portal (opendata-saanich.hub.arcgis.com),
+  an ArcGIS Hub portal operated by the District and linked from saanich.ca/EN/main/local-government/data-catalogue-1.html.
+  Dataset titled "Municipal Boundary" — a single VECTOR polygon defining the bounded
+  area of the District of Saanich. Saanich elects its Mayor and all 8 councillors
+  at-large (no wards), so the municipal boundary is the single electoral area, following
+  the Vancouver and Victoria precedents already in the registry. Machine-readable
+  VECTOR available: the ArcGIS Hub portal offers GeoJSON, KML, and Zip (shapefile)
+  downloads (CSV, GeoJSON, KML, Zip, GeoTIFF, PNG per portal user guide); acquisition
+  stage should select GeoJSON. NOT PDF-only.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_saanich
+  source_type: representatives
+  url: https://www.saanich.ca/EN/main/local-government/mayor-council/meet-your-council.html
+  authority: District of Saanich
+...
+  format: html
+  notes: 'Official "Meet Your Council" page on saanich.ca. Confirmed to list Mayor Dean Murdock
+  and all 8 at-large councillors for the 2022-2026 term: Susan Brice, Judy Brownoff,
+  Nathalie Chambers, Zac de Vries, Karen Harper, Teale Phelps Bondaroff, Colin Plant,
+  and Mena Westhaver. At-large council — no wards. General council contact: council@saanich.ca.
+  Individual councillor profile pages are linked from this listing.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_saanich
+  source_type: executive
+  url: https://www.saanich.ca/EN/main/local-government/mayor-council.html
+  authority: District of Saanich — Office of the Mayor
+...
+  format: html
+  notes: 'Official Mayor & Council landing page on saanich.ca. Head of government is the Mayor
+  (title: "Mayor"). Current Mayor is Dean Murdock (elected October 2022). The "Meet
+  Your Council" subpage (meet-your-council.html) carries the Mayor''s profile and
+  contact alongside councillors; no separate dedicated mayor-only profile URL — this
+  landing page and the council page serve the executive source.'
+  last_confirmed: '2026-06-18'
+- slug: ca_bc_saanich
+  source_type: metadata
+  url: https://www.saanich.ca/EN/main/local-government/elections.html
+  authority: District of Saanich
+...
+  format: html
+  notes: 'Official Elections page on saanich.ca. Next BC general local election is Saturday,
+  October 17, 2026; current term is 2022-2026. Governance: Mayor plus 8 councillors
+  elected at-large (no wards), 4-year terms, under BC''s Community Charter and Local
+  Government Act. Companion governance page at saanich.ca/EN/main/local-government/mayor-council/governance.html
+  confirms the at-large, mayor + 8 councillor structure.'
+  last_confirmed: '2026-06-18'
+- slug: ca_qc_montreal
+  source_type: boundaries
+  url: https://donnees.montreal.ca/dataset/districts-electoraux
+  authority: Ville de Montréal — Service du greffe, Élections Montréal & Division de la géomatique
+  (Service des infrastructures du réseau routier)
+...
+  format: geojson
+  notes: '"Élections municipales - Districts électoraux." Machine-readable VECTOR geometry
+  confirmed available — GeoJSON, Shapefile (SHP), and CSV (WKT) formats all offered
+  for download. NOT PDF-only. Covers the 2025-2029 electoral districts (58 districts
+  électoraux, adopted by regulation 2025-05-13), with historical layers for 2021/2017/2013/2009.
+  These are the district-level electoral divisions used to elect the 46 city councillors
+  and the borough councillors. Acquisition stage should pull the 2025-2029 GeoJSON/SHP
+  layer.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_montreal
+  source_type: representatives
+  url: https://donnees.montreal.ca/dataset/listes-des-elus-de-la-ville-de-montreal
+  authority: Ville de Montréal — Service du greffe (City Clerk's Office)
+...
+  format: csv
+  notes: '"Liste des élus de la Ville de Montréal." Authoritative open-data roster of ALL elected
+  officials: includes first name, last name, gender, role(s), responsibilities, arrondissement
+  (borough), district name, AND political party affiliation — critical because Montreal
+  is partisan (Projet Montréal, Ensemble Montréal, Équipe LaSalle, Équipe Anjou, etc.).
+  CSV format. Reflects the 2025-2029 term following the 2025-11-02 election. This
+  single dataset covers the full ~103-member council across all role types. Cross-reference
+  with the HTML council page (see misc/executive) for any party labels or role nuances.
+  NOTE on the "dated 2025-11-02" flag seen on the portal — that is the election date
+  / dataset effective date, i.e. the new term, not a stale prior term.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_montreal
+  source_type: executive
+  url: https://montreal.ca/conseils-decisionnels/conseil-municipal
+  authority: Ville de Montréal
+...
+  format: html
+  notes: 'Official Conseil municipal page. Names the jurisdiction-wide head of government:
+  Soraya Martinez Ferrada (Ensemble Montréal), Mairesse de la Ville de Montréal, 2025-2029
+  term. Also names the Présidente du conseil (Chantal Rossi) and council vice-presidency.
+  The comité exécutif page (montreal.ca/conseils-decisionnels/comite-executif) corroborates
+  her as head of the executive. The open-data élus list (representatives) is the structured
+  backstop for the mayor row.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_montreal
+  source_type: cabinet
+  url: https://montreal.ca/conseils-decisionnels/comite-executif
+  authority: Ville de Montréal — Comité exécutif
+...
+  format: html
+  notes: 'Montreal DOES have a cabinet-equivalent: the comité exécutif. Official page lists
+  the current 2025-2029 membership — 20 members total: Mayor Soraya Martinez Ferrada,
+  President Claude Pinard, Vice-Presidents Christine Black and Aref Salem, 14 committee
+  members with named portfolios (housing/mobility/economy/culture/environment etc.),
+  plus 6 associate councillors (conseillers associés). Notably cross-partisan this
+  term. Treat these as cabinet/deputy-executive roles; many members ALSO hold a councillor/borough-mayor
+  seat (one-row-per-role, shared UUID).'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_montreal
+  source_type: misc
+  url: https://montreal.ca/conseils-decisionnels/conseil-municipal
+  authority: Ville de Montréal
+...
+  format: html
+  notes: Montreal council is partisan, so misc applies. The Conseil municipal page names the
+  Cheffe de l'opposition officielle (Ericka Alneus, Projet Montréal) and other opposition
+  leadership (e.g. Marie Plourde), plus the Présidente du conseil municipal (Chantal
+  Rossi) and Vice-présidence (Émilie Brière) — Speaker-equivalent roles. Party-leader
+  roles (Projet Montréal / Ensemble Montréal chefs) are derivable here and from the
+  open-data party affiliations. Same URL as executive; different roles extracted.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_montreal
+  source_type: metadata
+  url: https://www.quebec.ca/gouvernement/gestion-municipale/organisation-municipale/democratie-municipale/elections-municipales/a-propos
+  authority: Gouvernement du Québec — Affaires municipales
+...
+  format: html
+  notes: 'Official Quebec government page on municipal elections. Confirms fixed-date cycle:
+  general elections on the first Sunday of November every 4 years since 2005; last
+  election 2025-11-02, next 2029-11-04. Term 2025-2029. For Montreal-specific structure
+  (19 arrondissements; 103 elected = Mayor of Montréal + 64 city councillors of whom
+  18 are borough mayors + 38 borough councillors), corroborate with montreal.ca/conseils-decisionnels/conseil-municipal
+  and montreal.ca/mairie-et-personnes-elues.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_laval
+  source_type: boundaries
+  url: https://www.donneesquebec.ca/recherche/dataset/limites-des-districts-electoraux-des-dernieres-elections-municipales
+  authority: Ville de Laval (via Données Québec open-data portal)
+...
+  format: geojson
+  notes: 'Official Ville de Laval electoral-districts dataset hosted on Données Québec (Quebec
+  government open-data portal). VECTOR geometry available: distributed as GeoJSON,
+  Shapefile (.zip), KML, and CSV (limite-district-electoral.*). Machine-readable vector
+  — NOT PDF-only. Publisher contact donneesouvertes@laval.ca. Acquisition stage should
+  confirm the file reflects the 2025 22-district map (réglement L-5000-11) rather
+  than the prior 21-district delimitation; a PDF sommaire of the 2025 districts also
+  exists at laval.ca (reglement-l-5000-11-annexes.pdf) as a fallback reference.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_laval
+  source_type: representatives
+  url: https://www.laval.ca/vie-democratique/hotel-de-ville-personnes-elues/membres-conseil-municipal/
+  authority: Ville de Laval
+...
+  format: html
+  notes: Official Ville de Laval "Membres du conseil municipal" directory. Lists the 22 district
+  councillors (2025-2029 term) with individual profile pages (e.g. /membres-conseil-municipal/martin-fiola/).
+  Partisan — party affiliations (notably Mouvement lavallois – Équipe Stéphane Boyer
+  majority) captured at extraction.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_laval
+  source_type: executive
+  url: https://www.laval.ca/vie-democratique/hotel-de-ville-personnes-elues/
+  authority: Ville de Laval
+...
+  format: html
+  notes: Official Ville de Laval elected-officials hub. Head of government is the Mayor (maire),
+  Stéphane Boyer, elected at-large 2025-11-02 (58.87% of vote). Mayor profile reachable
+  from this hub and the council-members directory.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_laval
+  source_type: cabinet
+  url: https://www.laval.ca/organisation-municipale/salle-presse/communiques-presse/election-municipale-2025-nomination-membres-comite-executif/
+  authority: Ville de Laval
+...
+  format: html
+  notes: 'Official press release naming the comité exécutif (executive committee) appointed
+  after the 2025 election: Mayor Stéphane Boyer (president), Ray Khalil (vice-president),
+  Christine Poirier, Nicholas Borne, Flavia Alexandra Novac — all Mouvement lavallois,
+  with assigned portfolios. Laval is a partisan municipality with a true executive
+  committee, so cabinet APPLIES (unlike typical Ontario committee-of-council cities).'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_laval
+  source_type: misc
+  url: https://www.laval.ca/vie-democratique/hotel-de-ville-personnes-elues/membres-conseil-municipal/
+  authority: Ville de Laval
+...
+  format: html
+  notes: Laval municipal politics is partisan. Party-leader / opposition roles (e.g. official
+  opposition leader, party affiliations) are derivable from the council members directory
+  and councillor profile pages, which carry party banners. Misc APPLIES given the
+  partisan structure; specific named roles (opposition leader, etc.) resolved at extraction.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_laval
+  source_type: metadata
+  url: https://www.laval.ca/vie-democratique/participation-citoyenne/elections-municipales/
+  authority: Ville de Laval
+...
+  format: html
+  notes: Official Ville de Laval municipal-elections page. Confirms governance structure (mayor
+  + district councillors), term length (4 years, election first Sunday of November),
+  last election date (2026-11-02 -> term 2025-2029), and 22 electoral districts (up
+  from 21) under réglement L-5000-11.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_gatineau
+  source_type: boundaries
+  url: https://www.donneesquebec.ca/recherche/dataset/vgat_-1582475471
+  authority: Ville de Gatineau (published via Données Québec)
+...
+  format: geojson
+  notes: 'Official "Districts électoraux" dataset published by Ville de Gatineau on the Données
+  Québec open-data platform (organization page: donneesquebec.ca/recherche/organization/ville-de-gatineau).
+  VECTOR geometry is available — the dataset offers downloadable machine-readable
+  geometry in GeoJSON, KML, and SHP (shapefile) formats, plus CSV/XLSX tabular exports.
+  NOT PDF-only. Covers the 19 municipal electoral districts. Last modified 2026-04-24
+  (per portal). Follows the same Données Québec pattern as ca_qc_quebec_city (vque_43).
+  A separate interactive web map exists on gatineau.ca, but this Données Québec dataset
+  is the machine-readable vector source the acquisition stage should use (select GeoJSON).'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_gatineau
+  source_type: representatives
+  url: https://www.gatineau.ca/portail/default.aspx?p=guichet_municipal%2Fconseil_municipal
+  authority: Ville de Gatineau
+...
+  format: html
+  notes: 'Official "Conseil municipal" page (gatineau.ca, © Ville de Gatineau 2026). Lists
+  "Membres du conseil municipal 2025-2029": the Mayor plus 19 district councillors
+  (districts 1-19, one councillor each), elected November 2, 2025. Each councillor
+  name links to an individual district profile page (e.g. .../conseil_municipal/district_4)
+  carrying photo, contact details, and party affiliation. Party landscape: Action
+  Gatineau (majority), Gatineau ensemble / Équipe Mario Aubé (opposition), and independents.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_gatineau
+  source_type: executive
+  url: https://www.gatineau.ca/portail/default.aspx?p=guichet_municipal%2Fconseil_municipal%2Fmaire
+  authority: Ville de Gatineau — Bureau de la mairesse
+...
+  format: html
+  notes: Official Mayor's page on gatineau.ca. Head of government is Mairesse Maude Marquis-Bissonnette
+  (Action Gatineau), re-elected November 2, 2025 for the 2025-2029 term (first elected
+  in a June 2024 by-election). Page shows name, photo, party affiliation, and a contact/message
+  affordance. Mayor is elected at-large.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_gatineau
+  source_type: cabinet
+  url: https://www.gatineau.ca/portail/default.aspx?p=guichet_municipal/comites_commissions_tables_concertation_organismes_externes/comite_executif
+  authority: Ville de Gatineau
+...
+  format: html
+  notes: 'Official "Comité exécutif" page on gatineau.ca (© Ville de Gatineau 2026). Gatineau,
+  as a larger Quebec city, has a comité exécutif (executive committee) functioning
+  as a municipal cabinet — distinct from most smaller municipalities and consistent
+  with the ca_qc_quebec_city precedent. The 2025-2029 comité exécutif is composed
+  of Action Gatineau members; reported composition: Steve Moran (président), Maude
+  Marquis-Bissonnette (vice-présidente), Adrian Corbo, Catherine Craig-St-Louis, and
+  Caroline Murray. NOTE: the page is JavaScript-rendered; WebFetch returned only the
+  navigation shell, so the member roster must be resolved at extraction time from
+  the live page (French version). Official authority and page existence confirmed.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_gatineau
+  source_type: misc
+  url: https://www.gatineau.ca/portail/default.aspx?p=guichet_municipal%2Fconseil_municipal
+  authority: Ville de Gatineau
+...
+  format: html
+  notes: Gatineau municipal politics is partisan (unlike most Ontario/anglophone Canadian municipalities),
+  so misc roles apply — following the ca_qc_quebec_city precedent. Named roles include
+  party affiliations (Action Gatineau, Gatineau ensemble / Équipe Mario Aubé) and
+  chef de l'opposition. The council members page is the official hub; individual district
+  profile pages carry per-councillor party affiliation. Opposition leadership and
+  other named roles to be resolved from these official pages at extraction time.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_gatineau
+  source_type: metadata
+  url: https://www.gatineau.ca/portail/default.aspx?p=guichet_municipal/elections_municipales/election_municipale_2025
+  authority: Ville de Gatineau
+...
+  format: html
+  notes: 'Official "Élection municipale de 2025 – Résultats" page on gatineau.ca. Confirms
+  the election was held November 2, 2025; Mayor plus 19 district councillors elected;
+  19 named electoral districts (Aylmer, Lucerne, Deschênes, Plateau, ... , Buckingham).
+  Governance structure: at-large Mayor + 19 single-member districts, 4-year terms
+  (2025-2029); next general election November 4, 2029 under the Quebec Loi sur les
+  élections et les référendums dans les municipalités. Page hosts downloadable per-district
+  results PDFs.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_longueuil
+  source_type: boundaries
+  url: https://www.donneesquebec.ca/recherche/dataset/districts-electoraux-longueuil
+  authority: Ville de Longueuil (Service de la géomatique et des technologies innovantes), via
+  Données Québec
+...
+  format: shapefile
+  notes: '"Districts électoraux" dataset published by Ville de Longueuil on Données Québec.
+  VECTOR geometry available — confirmed downloadable resources: GeoJSON (districtelectoral.json),
+  Shapefile/ZIP (districtelectoral.zip), and KMZ (districtelectoral.kmz), plus CSV
+  and XLSX attribute tables. Reflects the new 18-district découpage used for the Nov
+  2, 2025 election. NOT PDF-only — true vector boundaries are available. Also mirrored
+  on Longueuil''s GeoHub (ArcGIS) open data portal at geohub.longueuil.quebec.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_longueuil
+  source_type: representatives
+  url: https://longueuil.quebec/fr/services/elus
+  authority: Ville de Longueuil
+...
+  format: html
+  notes: 'Official "Élus" roster. Lists the mairesse and the district councillors grouped by
+  arrondissement (Vieux-Longueuil, Saint-Hubert, Greenfield Park), with district names
+  and party affiliation shown (all current members Coalition Longueuil). PARTISAN
+  — affiliation captured here. Note count: conseil-de-ville page cites 18 district
+  councillors; the Élus page also surfaces 2 additional borough councillors (Greenfield
+  Park / Saint-Hubert) — extraction stage to reconcile district vs borough councillor
+  rows.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_longueuil
+  source_type: executive
+  url: https://longueuil.quebec/fr/services/elus
+  authority: Ville de Longueuil
+...
+  format: html
+  notes: Head of government is the Mairesse (Mayor), elected at-large city-wide. Current incumbent
+  Catherine Fournier (Coalition Longueuil), elected/term 2025-2029. Same official
+  Élus roster as representatives; mayor also presides over the comité exécutif.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_longueuil
+  source_type: cabinet
+  url: https://longueuil.quebec/fr/services/instances-decisionnelles-et-consultatives/comite-executif
+  authority: Ville de Longueuil
+...
+  format: html
+  notes: 'Comité exécutif (executive committee) — Longueuil''s municipal equivalent of a cabinet.
+  Composed of the mayor (president) plus five councillors she designates. Current
+  members: Catherine Fournier (présidente), Jonathan Tabarah (vice-président), Lyette
+  Bouchard, Marie-Michèle Drolet, Sylvain Joly, Sylvain Lambert. Official page.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_longueuil
+  source_type: metadata
+  url: https://www.longueuil.quebec/fr/services/elections-municipales
+  authority: Ville de Longueuil
+...
+  format: html
+  notes: 'Official municipal elections page. Confirms election date Nov 2, 2025, turnout, and
+  results. Governance structure (mairesse at-large + 18 district councillors across
+  3 arrondissements: Vieux-Longueuil 10, Saint-Hubert 7, Greenfield Park 1; term 2025-2029)
+  corroborated by official conseil-de-ville page (https://longueuil.quebec/fr/conseil-de-ville)
+  and the "nouveau-decoupage" page for the 15-to-18 district expansion. Next general
+  election fixed at first Sunday of Nov 2029 under Quebec''s Loi sur les élections
+  et les référendums dans les municipalités.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_sherbrooke
+  source_type: boundaries
+  url: https://www.donneesquebec.ca/recherche/dataset/3579a4b8ceb24c7896edc0d86ee4714e_0
+  authority: Ville de Sherbrooke — Données géomatiques (published via Données Québec)
+...
+  format: geojson
+  notes: Official "Districts électoraux" dataset for the Ville de Sherbrooke, published by
+  the city's geomatics organization ("Ville de Sherbrooke - Données géomatiques")
+  on Données Québec. VECTOR geometry CONFIRMED — the dataset provides downloadable
+  polygon geometry in GeoJSON, SHP, KML, CSV, ZIP, and REST (ESRI) formats; it is
+  NOT PDF-only. Attributes include ID, NUMERO (district number), NOM (district name),
+  MUNICIPALITE (municipality code), and CONSEILLER (councillor name). Covers the city's
+  14 electoral districts. The same dataset is mirrored on the City of Sherbrooke's
+  own ArcGIS Hub open-data portal at https://donneesouvertes-sherbrooke.opendata.arcgis.com/datasets/3579a4b8ceb24c7896edc0d86ee4714e_0
+  (and item 149954a5323744bd838b3c64e564ae4e). Acquisition stage should select the
+  GeoJSON download. Note the district map reflects the boundaries used for the November
+  2, 2025 election; confirm currency at acquisition.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_sherbrooke
+  source_type: representatives
+  url: https://www.sherbrooke.ca/fr/vie-municipale/elues-et-elus-municipaux
+  authority: Ville de Sherbrooke
+...
+  format: html
+  notes: Official "Élues et élus municipaux" page on sherbrooke.ca listing the mayor (mairesse)
+  and the 14 district councillors for the 2025-2029 term (elected November 2, 2025,
+  sworn in November 12, 2025). District councillor seats are organized within four
+  arrondissements (Brompton–Rock Forest– Saint-Élie–Deauville, Fleurimont, Lennoxville,
+  Les Nations) plus 2 borough councillors. Party affiliations to be captured at extraction
+  (Sherbrooke Citoyen, Vision Action Sherbrooke, and numerous independents). Page
+  is JavaScript-rendered (returned a browser-compatibility notice on automated fetch)
+  but confirmed official and live via search results. Individual district councillor
+  detail (district name, party, contact) resolved at extraction.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_sherbrooke
+  source_type: executive
+  url: https://www.sherbrooke.ca/fr/vie-municipale/elues-et-elus-municipaux
+  authority: Ville de Sherbrooke — Cabinet de la mairesse
+...
+  format: html
+  notes: Head of government is the Mairesse (Mayor), elected at-large. Current Mairesse is
+  Marie-Claude Bibeau (independent), elected November 2, 2025 (former federal Liberal
+  cabinet minister; won a four-way race with ~46.4%). The "Élues et élus municipaux"
+  page presents the mayor alongside council members; a dedicated mayor/cabinet subpage
+  may also exist and should be resolved at extraction. Same authoritative listing
+  serves representatives and executive.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_sherbrooke
+  source_type: cabinet
+  url: https://www.sherbrooke.ca/fr/vie-municipale/structure-organisationnelle
+  authority: Ville de Sherbrooke
+...
+  format: html
+  notes: 'Applies for Sherbrooke: like other large Quebec cities (cf. Québec City pattern),
+  Sherbrooke has a comité exécutif (executive committee) — the municipal analog of
+  a cabinet. Presided by Mairesse Marie-Claude Bibeau, with Geneviève La Roche (councillor,
+  Ascot) as vice-president and additional councillor members (e.g. Annie Faucher,
+  Laure Letarte-Lavoie, Karine Godbout, Pierre Avard). The official "Structure organisationnelle"
+  page documents the governance bodies; current comité exécutif membership is also
+  announced via official sherbrooke.ca press releases (e.g. /fr/vie-municipale/actualites/communiques-de-presse).
+  Roles such as maire suppléant (alternate mayor) and président(e) du conseil also
+  exist. Extraction should resolve current comité exécutif roster from these official
+  pages.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_sherbrooke
+  source_type: misc
+  url: https://www.sherbrooke.ca/fr/vie-municipale/elues-et-elus-municipaux
+  authority: Ville de Sherbrooke
+...
+  format: html
+  notes: Sherbrooke municipal politics is partisan (registered municipal parties Sherbrooke
+  Citoyen, Vision Action Sherbrooke, plus independents), so misc named roles apply
+  — following the Québec City precedent. Applicable named roles include the président(e)
+  du conseil municipal (Danielle Berthold, Desranleau district), maire suppléant /
+  mairesse suppléante (Paul Gingues, University district), vice-présidence du comité
+  exécutif, and any chef de l'opposition / party leaders. Resolve current holders
+  from the official elected-officials and governance pages at extraction.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_sherbrooke
+  source_type: metadata
+  url: https://www.sherbrooke.ca/fr/vie-municipale/election-municipale/division-du-territoire-en-districts-electoraux
+  authority: Ville de Sherbrooke
+...
+  format: html
+  notes: 'Official "Division du territoire en districts électoraux" page confirming the governance
+  structure: the city territory is divided into 14 electoral districts plus 2 borough
+  (arrondissement) districts, across 4 arrondissements. Mayor elected at-large; councillors
+  elected by district; 4-year terms. Last municipal election November 2, 2025 (current
+  2025-2029 term); next general municipal election expected November 2029 per the
+  Quebec fixed four-year municipal cycle (Loi sur les élections et les référendums
+  dans les municipalités). General election-administration detail at https://www.sherbrooke.ca/fr/vie-municipale/election-municipale.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_trois_rivieres
+  source_type: boundaries
+  url: https://www.donneesquebec.ca/recherche/dataset/districts-electoraux-v3r
+  authority: Ville de Trois-Rivières (via Données Québec open-data portal)
+...
+  format: geojson
+  notes: '"Districts électoraux" dataset published by Ville de Trois-Rivières. Hosts the 2025
+  electoral districts (14 districts). VECTOR geometry is available: downloadable resources
+  include GeoJSON and SHP (shapefile, in ZIP), plus CSV; the 2025 vector files are
+  dated 2025-05-13. A 2023 PDF field-description document is also attached, but boundaries
+  are NOT PDF-only — machine-readable vector geometry (GeoJSON + SHP) is available.
+  This is the page that hosts/links the downloadable files.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_trois_rivieres
+  source_type: representatives
+  url: https://www.v3r.net/a-propos-de-la-ville/vie-democratique/conseil-municipal/maire-et-conseillers-municipaux
+  authority: Ville de Trois-Rivières
+...
+  format: html
+  notes: Official city "Maire et conseillers municipaux" page. Lists all 14 district councillors
+  (one per electoral district) elected in the 2025-11-02 election, term 2025-2029,
+  each with a linked per-district profile page (e.g. /district-des-rivieres). The
+  city does NOT display party affiliations on these pages — councillors are presented
+  without party labels (consistent with the historically independent council).
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_trois_rivieres
+  source_type: executive
+  url: https://www.v3r.net/a-propos-de-la-ville/vie-democratique/conseil-municipal/maire-et-conseillers-municipaux
+  authority: Ville de Trois-Rivières
+...
+  format: html
+  notes: Same official council page presents the Mayor (Maire) Jean-François Aubin in a dedicated
+  section ahead of the 14 councillors. Mayor is the single jurisdiction-wide head
+  of government, elected at-large. Sworn in 2025-11-13.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_trois_rivieres
+  source_type: metadata
+  url: https://www.v3r.net/a-propos-de-la-ville/vie-democratique/conseil-municipal
+  authority: Ville de Trois-Rivières
+...
+  format: html
+  notes: 'Official "Conseil municipal" governance page. Confirms structure: mayor + 14 councillors
+  (15 members), 4-year terms ("mandat de quatre ans"). District count (14) corroborated
+  by the Données Québec boundaries dataset. Current term reflects the 2025-11-02 Quebec
+  municipal election (term 2025-2029); next general municipal election 2029 per the
+  fixed 4-year Quebec municipal cycle.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_saint_jean_sur_richelieu
+  source_type: boundaries
+  url: https://www.donneesquebec.ca/recherche/dataset/sjsr-districts-electoraux
+  authority: Ville de Saint-Jean-sur-Richelieu (published via Données Québec)
+...
+  format: geojson
+  notes: Official dataset "Délimitation des districts électoraux de la Ville de Saint-Jean-sur-Richelieu"
+  published by the City on Données Québec (donneesquebec.ca/recherche/dataset/sjsr-districts-electoraux).
+  VECTOR geometry is available unambiguously — the dataset offers GeoJSON and SHP
+  (shapefile, zipped) vector resources plus CSV, NOT PDF-only. Covers the city's 12
+  electoral districts (one councillor per district). City geomatics contact geomatique@sjsr.ca.
+  Confirmed via the harvested federal Open Government mirror (open.canada.ca/data/en/dataset/6218a375-a8fe-45ce-959b-22c90a291b0b),
+  which lists GeoJSON + SHP + CSV resources; last modified 2026-05-27. Acquisition
+  stage should select the GeoJSON resource from the Données Québec dataset page.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_saint_jean_sur_richelieu
+  source_type: representatives
+  url: https://sjsr.ca/conseil-municipal/
+  authority: Ville de Saint-Jean-sur-Richelieu
+...
+  format: html
+  notes: 'Official Conseil municipal page on sjsr.ca. Confirmed to list Mayor Éric Latour plus
+  all 12 district councillors for the 2025-2029 term (elected November 2, 2025): District
+  1 Mélanie Dufresne, District 2 Bruno Santerre, District 3 Jérémie Meunier, District
+  4 Louis Boucher, District 5 Sébastien Gaudette, District 6 Patricia Poissant, District
+  7 Yvon Godin, District 8 Marie Tremblay, District 9 Daniel Hacherel, District 10
+  Ian Langlois, District 11 Claire Charbonneau, District 12 Luko Boisvert. Per-member
+  party affiliations are not shown on this page itself — see the misc source (election
+  results pages) for party/team affiliations.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_saint_jean_sur_richelieu
+  source_type: executive
+  url: https://sjsr.ca/conseil-municipal/
+  authority: Ville de Saint-Jean-sur-Richelieu
+...
+  format: html
+  notes: Head of government is the Maire (Mayor), elected at-large. Current Mayor Éric Latour
+  (Coalition Éric Latour), elected November 2, 2025 with 13,321 votes (40.9%). Listed
+  on the Conseil municipal page alongside the 12 district councillors; no separate
+  dedicated mayor profile page identified, so the same URL serves representatives
+  and executive. A communiqué confirming his election is at sjsr.ca/communiques/eric-latour-elu-maire-de-saint-jean-sur-richelieu/.
+...
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_saint_jean_sur_richelieu
+  source_type: misc
+  url: https://sjsr.ca/election-municipale/resultats/
+  authority: Ville de Saint-Jean-sur-Richelieu
+...
+  format: html
+  notes: 'Saint-Jean-sur-Richelieu has a PARTISAN municipal council organized around party
+  slates, so misc applies (party affiliations, opposition leader, comité exécutif).
+  The official election results section and its per-district sub-pages (resultats/1-2-3-4/,
+  resultats/5-6-7-8/, resultats/9-10-11-12/) carry each elected councillor''s party/team
+  affiliation. Party landscape (2025 election): Coalition Éric Latour (winning slate,
+  mayor + several districts), Équipe Maryline Charbonneau – Démocratie Saint-Jean
+  (runner-up slate), Équipe Andrée Bouchard, Équipe François Roy, plus independents.
+  Mayoral runner-up Marilyne/Maryline Charbonneau (12,685 votes) heads the principal
+  opposition slate. Comité exécutif membership, if published, available via the Conseil
+  municipal section of sjsr.ca.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_saint_jean_sur_richelieu
+  source_type: metadata
+  url: https://sjsr.ca/election-municipale/
+  authority: Ville de Saint-Jean-sur-Richelieu
+...
+  format: html
+  notes: 'Official municipal election page on sjsr.ca. Confirms the November 2, 2025 Quebec
+  general municipal election; one mayor and 12 municipal councillors elected; 4-year
+  term (2025-2029); turnout 41.82% (32,551 voters). Quebec municipal elections are
+  held province-wide every 4 years on the first Sunday of November under the Loi sur
+  les élections et les référendums dans les municipalités, so the next general election
+  is November 2029. Governance structure: Mayor elected at-large + 12 district councillors
+  (one per district).'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_repentigny
+  source_type: boundaries
+  url: https://www.donneesquebec.ca/recherche/dataset/districts-electoraux-2025
+  authority: Ville de Repentigny (via Données Québec open data portal)
+...
+  format: shapefile
+  notes: '"Districts électoraux 2025" dataset for Repentigny''s 12 municipal electoral districts
+  (term 2025-2029). MACHINE-READABLE VECTOR geometry available: resources include
+  Shapefile (SHP), GeoJSON, JSON, and KML. Metadata explicitly states "Type représentation
+  spatiale: Vecteur". NOT PDF-only. Mirrored on the federal open-government portal
+  at https://ouvert.canada.ca/data/fr/dataset/2bf02698-f0aa-4758-a538-a01be833d439
+  (same Repentigny dataset, with GeoJSON/CSV). The city site also publishes per-district
+  PDF reference maps at https://repentigny.ca/la-ville/vie-democratique/elections-municipales/districts-electoraux,
+  but the vector files for acquisition are on Données Québec.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_repentigny
+  source_type: representatives
+  url: https://repentigny.ca/la-ville/vie-democratique/mairie-elus
+  authority: Ville de Repentigny
+...
+  format: html
+  notes: 'Official "Mairie et élus" page listing the 12 district councillors (one per electoral
+  district) for the 2025-2029 term. Each councillor name links to an individual profile
+  page (contact details). Districts 1-12: Raymond Masse, Benoit Delisle, Karine Benoit,
+  Luc Rhéaume, Éric Lepage, Martine Roux, Marlène Diallo, Jennifer Robillard, Alexis
+  Delage, Kevin Buteau, Chantal Routhier, Normand Urbain. Party affiliations not on
+  this page — see misc/metadata (results page) for party data.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_repentigny
+  source_type: executive
+  url: https://repentigny.ca/la-ville/vie-democratique/mairie-elus
+  authority: Ville de Repentigny
+...
+  format: html
+  notes: 'Head of government: Maire (Mayor) Nicolas Dufour, elected at-large. Re-elected in
+  the November 2, 2025 election with 69.42% (second mandate). Same official "Mairie
+  et élus" page describes the mayor''s role as "chef exécutif de l''administration".'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_repentigny
+  source_type: misc
+  url: https://repentigny.ca/la-ville/vie-democratique/elections-municipales/resultats
+  authority: Ville de Repentigny
+...
+  format: html
+  notes: 'Official 2025 election results page documenting party affiliations — Repentigny runs
+  partisan municipal politics. Governing party: "Avenir Repentigny - Équipe Nicolas
+  Dufour" (mayor + all 12 district councillors). Opposition party that contested but
+  won no seats: "Repentigny Ensemble" (mayoral candidate Maxime Comtois). Use for
+  party-leader / opposition designations.'
+  last_confirmed: '2026-06-20'
+- slug: ca_qc_repentigny
+  source_type: metadata
+  url: https://repentigny.ca/la-ville/vie-democratique/elections-municipales/resultats
+  authority: Ville de Repentigny
+...
+  format: html
+  notes: 'Governance and election metadata: most recent election 2025-11-02 (Quebec-wide fixed
+  municipal election date), term 2025-2029 (4-year term per Quebec Loi sur les élections
+  et les référendums dans les municipalités; next general election 2029-11), 12 electoral
+  districts, mayor elected at-large + one councillor per district. Supplementary landing
+  page: https://repentigny.ca/la-ville/vie-democratique/elections-municipales'
+  last_confirmed: '2026-06-20'
