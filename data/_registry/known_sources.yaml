@@ -6479,3 +6479,31 @@ ca_on_ottawa:
   districts, mayor elected at-large + one councillor per district. Supplementary landing
   page: https://repentigny.ca/la-ville/vie-democratique/elections-municipales'
   last_confirmed: '2026-06-20'
+- slug: ca_mb_brandon
+  source_type: representatives
+  url: https://www.brandon.ca/city-hall/mayor-and-council/meet-the-mayor-and-councillors/
+  authority: City of Brandon
+  format: html
+  notes: '10 ward councillors with ward name/number, email, and (most) phone. Per-ward pages at .../councillor-ward-N/.'
+  last_confirmed: '2026-06-26'
+- slug: ca_mb_brandon
+  source_type: executive
+  url: https://www.brandon.ca/city-hall/mayor-and-council/meet-the-mayor-and-councillors/the-mayor/
+  authority: City of Brandon
+  format: html
+  notes: 'Mayor Jeff Fawcett (elected 2022). mayor@brandon.ca, 204-729-2202.'
+  last_confirmed: '2026-06-26'
+- slug: ca_mb_brandon
+  source_type: boundary
+  url: https://gisapp.brandon.ca/arcgis/rest/services/Open_Data/Open_Data_AGP_MapService/MapServer/4
+  authority: City of Brandon GIS (Open Data)
+  format: esri-rest
+  notes: 'Layer "Councillor Wards", 10 polygon features, fields WARD_NUM (1-10) + WARD (name). Export GeoJSON via /query?where=1=1&outSR=4326&f=geojson. NOTE: this service was DOWN during the 2026-06 batch (deferral reason); confirmed back ONLINE 2026-06-26.'
+  last_confirmed: '2026-06-26'
+- slug: ca_mb_brandon
+  source_type: metadata
+  url: https://brandon.ca/council-information/wards/view-all-members
+  authority: City of Brandon
+  format: html
+  notes: 'Ward-based, 10 wards + at-large Mayor (11-member council). MB general municipal election fourth Wednesday of October every 4 years; last 2022-10-26, next 2026-10-28.'
+  last_confirmed: '2026-06-26'
