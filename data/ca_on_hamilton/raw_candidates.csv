@@ -1,0 +1,65 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+f95b5576-98d5-58ca-ad0a-8a7cd24da280,ca_on_hamilton,Sasha,Austin,civicengagementhamilton@gmail.com,,role,,
+cb7876a9-cd4c-50d9-b7fb-283e561700df,ca_on_hamilton,Ejaz,Butt,ejazbuttotwu@gmail.com,,role,,
+f9d42e6c-03f1-5d12-8f42-ee8f31f923cf,ca_on_hamilton,Rob,Cooper,rob@voterobcooper.com,289-768-2964,role,,
+8be71ff4-5ab7-5815-9387-33ea8b903cf9,ca_on_hamilton,Paul,Fromm,paul@paulfromm.com,416-428-5308,role,,
+c1135748-0517-5d75-9017-e85a69d26ad6,ca_on_hamilton,Scarlett,Gillespie,scarlett4mayor@gmail.com,,role,,
+92ff42b9-86d5-5bef-9486-4b8a3bcb70e9,ca_on_hamilton,Keanin,Loomis,keanin@voteloomis.ca,,role,,
+20776303-3555-5456-bce1-1b81af4d040a,ca_on_hamilton,Pamela,Mitchell,pamelaliveitdundas@gmail.com,905-869-0515,role,,
+e34b0e95-964c-5ca4-a17f-ab12f5c9c432,ca_on_hamilton,Nathalie Xian Yi,Yan,nathaliehealthc@hotmail.com,905-527-7255,role,,
+0425181c-44b9-5cb4-ac2a-c7d091b6aecc,ca_on_hamilton,Nathan,Savelli,savelliforward1@gmail.com,,district,1,Ward 1
+efb09f2e-cf7c-5dc9-8724-90fd9175633e,ca_on_hamilton,Maureen,Wilson,maureenowilson@gmail.com,,district,1,Ward 1
+8d5dd6d7-1948-5358-bcaa-c403e98a7cfb,ca_on_hamilton,Cal,DiFalco,cal@difalco.info,,district,10,Ward 10
+f661381e-ec5d-5947-a31b-50553555fc9b,ca_on_hamilton,Olivia,Fung,oliviafungward10@gmail.com,289-242-3622,district,10,Ward 10
+8b3fbf64-a184-5f1c-a3d9-b63f8d51911e,ca_on_hamilton,Akash,Grewal,voteakash2026@gmail.com,905-519-2105,district,10,Ward 10
+5a93190d-781c-5e83-b1a8-b5a78bd60361,ca_on_hamilton,Michael T.,Loomans,mtloomans@gmail.com,,district,10,Ward 10
+35de7681-fa8e-5819-b2c0-0b3bcfca4b0d,ca_on_hamilton,Tanjoban,Nijjar,jobannijjar01@gmail.com,647-969-5053,district,10,Ward 10
+964a6ab8-739b-5c67-84b3-8197db2192cc,ca_on_hamilton,Nicole,Trombetta,nicoletrombettaward10@gmail.com,,district,10,Ward 10
+b00c5320-b82e-519a-8533-a67f98ef6d48,ca_on_hamilton,Damon,Mombourquette,votedamonward11@outlook.com,,district,11,Ward 11
+42f1802b-8ac2-56fe-aeda-0eab343074bf,ca_on_hamilton,Mark,Tadeson,mtadeson11@gmail.com,905-512-4759,district,11,Ward 11
+5ec6c0f1-8303-5473-9da1-9d36f8b2b4e5,ca_on_hamilton,Fred,Bennink,fredbenninkward12@gmail.com,905-301-7503,district,12,Ward 12
+d2b92b45-56a2-54f8-bbf6-37998d041dd1,ca_on_hamilton,Craig,Cassar,craigcassarward12@gmail.com,,district,12,Ward 12
+48a19230-b54c-5689-bec7-10f62461d64d,ca_on_hamilton,Rick,Kunc,rickkunc2026@gmail.com,,district,13,Ward 13
+840c66c7-0105-50cc-b0e4-6463a42d2715,ca_on_hamilton,Loren,Lieberman,loren@lorenlieberman.ca,905-628-1416,district,13,Ward 13
+68d63d01-77a3-5f98-9f47-e7f28203036a,ca_on_hamilton,Kojo,Damptey,kojoforward14@gmail.com,,district,14,Ward 14
+26a877e3-7950-53fd-b5b0-1bf468cf27e5,ca_on_hamilton,Mike,Spadafora,reelectspadafora14@gmail.com,,district,14,Ward 14
+fcb7d115-0b85-5097-b752-d5b1394d40b4,ca_on_hamilton,Chase,Alford,chase4ward15@gmail.com,548-996-8245,district,15,Ward 15
+a42e5cb2-2297-550e-90eb-f8eddc870c65,ca_on_hamilton,Ted,McMeekin,Ted@tedmcmeekin4ward15.com,,district,15,Ward 15
+f41bacbb-6086-595d-bd81-6b486ecf4001,ca_on_hamilton,Colleen,Stewart,ward15.colleenstewart@gmail.com,905-512-8511,district,15,Ward 15
+b63395b0-e66a-5636-964a-69ebbb52db3e,ca_on_hamilton,Zac,Wrobel,zacwrobelward15@gmail.com,,district,15,Ward 15
+2c5e456e-9944-5846-9885-ab8ff9b6c8e5,ca_on_hamilton,Jeff,Yaeger,jeffyaegerward15@gmail.com,519-497-5569,district,15,Ward 15
+69b801a1-5c9b-5d7a-920d-23ebab384a62,ca_on_hamilton,Eisham,Abdulkarim,vote.ward2@gmail.com,,district,2,Ward 2
+7bd3f538-3784-542e-979c-b4f007ad00e3,ca_on_hamilton,Daniel,Greene,,,district,2,Ward 2
+e35ecd30-6805-513e-99ea-44b510411a20,ca_on_hamilton,Bill,Houston,houstonwilliam20@gmail.com,905-973-6547,district,2,Ward 2
+ff1ca181-544e-52c6-bbbb-cc566183a077,ca_on_hamilton,Cameron,Kroetsch,Cameron@CameronForWard2.ca,,district,2,Ward 2
+221ae1f6-fa09-52a3-bb75-c8bf7f950f84,ca_on_hamilton,Brian,Lewis,brian@brianlewis.ca,289-674-3534,district,2,Ward 2
+c497b521-96d0-5ab9-af90-7cb1864a254f,ca_on_hamilton,Dan,Myles,happydude584@hotmail.com,,district,2,Ward 2
+a58c0af8-13bf-5f9a-99fc-51cdc1add6f1,ca_on_hamilton,Kelly,Oucharek,kelly@kellyoucharek.ca,,district,2,Ward 2
+dde86191-012c-51a6-8cb1-6ea704522324,ca_on_hamilton,Tony,Sciara,bringhamiltonback@gmail.com,905-933-8669,district,2,Ward 2
+2d33f7a3-66aa-57e6-ab48-32ad86517776,ca_on_hamilton,Bernard,Tompkins,Bernard@Bernardforward2.ca,905-975-3675,district,2,Ward 2
+9cac7ba9-718c-500c-a592-81fe3c78ff54,ca_on_hamilton,Wade,Campbell,wadeforward3councillor@gmail.com,,district,3,Ward 3
+a986879c-19d8-57dd-a5c8-889287246e64,ca_on_hamilton,Christine,Cayuga,cayugaward3@gmail.com,365-336-4196,district,3,Ward 3
+a70e2090-b843-57e5-b249-c0d555bcfbe2,ca_on_hamilton,Christopher,DeMelo,demelo.christopher@gmail.com,647-405-3825,district,3,Ward 3
+54f1a80a-59f9-52d5-ac6f-1f4f4fedf343,ca_on_hamilton,Nrinder,Nann,Vote@NannForWard3.ca,289-426-1843,district,3,Ward 3
+f5cb522b-de00-58a6-9662-0f736e66ff81,ca_on_hamilton,Graham,Schreiber,ward3.conversation@outlook.com,416-803-4678,district,3,Ward 3
+f1121215-5c4d-5ae6-852c-b616f3080df2,ca_on_hamilton,Andrew,Selman,andrewselmanward3@gmail.com,,district,3,Ward 3
+a2377243-832b-5bea-b24a-ab685784054e,ca_on_hamilton,Kristeen,Sprague,kristeensprague89@gmail.com,905-906-4752,district,3,Ward 3
+8071cd87-247d-5eac-868f-ad909e6e601c,ca_on_hamilton,Todd,Anderson,toddmanderson62@gmail.com,905-962-8440,district,4,Ward 4
+732637b2-e99e-55ec-8402-c9bf1aa6cb36,ca_on_hamilton,Rod,Douglas,rdouglas4ourward@gmail.com,,district,4,Ward 4
+ee128e42-43e3-516a-b3db-0e568d92c168,ca_on_hamilton,Jason,Farr,farrfor4@gmail.com,905-973-0438,district,4,Ward 4
+637de43d-a053-5a3f-b984-20a9c7b9c720,ca_on_hamilton,Tammy,Hwang,hello@tammyhwang.ca,,district,4,Ward 4
+4d3bfd71-6994-54bf-b416-29a55bc015d9,ca_on_hamilton,Matt,Francis,mattfrancisward5@gmail.com,,district,5,Ward 5
+f352ecd9-74bd-5d9b-8c09-5a8b703dafa8,ca_on_hamilton,Melissa,Debicki,melissa.debicki@gmail.com,,district,6,Ward 6
+62938dab-c95b-555d-bf75-fbde9cb5f8a9,ca_on_hamilton,Tom,Jackson,,905-383-3470,district,6,Ward 6
+21deaa88-b681-551e-bf45-a14bdb508e4d,ca_on_hamilton,Peter,Werhun,contact@pete46.ca,,district,6,Ward 6
+f50299e6-a9bd-5679-ad4b-db1dc144446e,ca_on_hamilton,Heather,Beale,heather@heatherbeale.ca,905-318-6195,district,7,Ward 7
+cb7f187d-de99-5e0a-9939-8470147f8c7b,ca_on_hamilton,Mark,Daly,mark@markdalyward7.ca,,district,7,Ward 7
+3ab71fde-b088-569d-a7c7-f9cc766914d2,ca_on_hamilton,Gordon,Leslie,gingerooo69@gmail.com,,district,7,Ward 7
+570c72ed-d3dd-5ec4-8dab-a5e700fa4791,ca_on_hamilton,Esther,Pauls,esther_pauls@icloud.com,905-975-7786,district,7,Ward 7
+20400ea9-75d3-5377-9daf-3da33fb2cb10,ca_on_hamilton,Dawn,Danko,campaign@dawndanko.ca,905-807-7453,district,8,Ward 8
+05dec082-d93a-5556-85e9-ec5c9a97fb06,ca_on_hamilton,Jacob,Tenbrinke,jacob@jacob4ward8.com,905-902-7741,district,8,Ward 8
+0c615f29-5f67-5eea-a5e7-3de28a22dab1,ca_on_hamilton,Brad,Clark,clarkbrad1@icloud.com,,district,9,Ward 9
+f16d0a8a-1016-5e0e-80bc-d4facb6efe72,ca_on_hamilton,Abhijeet,Gill,ward9gill@gmail.com,905-921-3100,district,9,Ward 9
+470d37aa-15ea-558e-8459-0b2bed0c8ed2,ca_on_hamilton,Brad,Stapleton,stapletonward9@gmail.com,,district,9,Ward 9
+3f7018be-1df9-50c4-bed2-3e4177d27da5,ca_on_hamilton,Jonathan,Stathakos,info@votejonathan.ca,,district,9,Ward 9
+9ac94076-13b7-50e2-9504-3941522528fa,ca_on_hamilton,Eileen,Walker,eejwalker@gmail.com,905-870-6421,district,9,Ward 9
