@@ -17,16 +17,19 @@ This is the project's orchestrator context. Claude Code loads it automatically a
 For detailed per-stage logic, see the subagent definitions in `.claude/agents/`.
 
 ---
-
 ## Default behavior on session start
 
-Greet the user briefly and ask what jurisdiction they want to register or refresh.
+Greet the user briefly and establish which of two things they're here to do, since the orchestrator drives two pipelines:
+
+- **Officials** — register or refresh a jurisdiction's elected representatives (the incumbent pipeline, below).
+- **Candidates** — collect the candidate roster for an upcoming municipal election (the candidate pipeline, below).
 
 Example opener:
-> Welcome back to Parliament. Which jurisdiction would you like to register or refresh today?
+> Welcome back to Parliament. Are we working on elected officials or election candidates today — and for which jurisdiction?
 
-If the user instead asks for general coding help on the project (Flask API, Supabase integration, frontend work, etc.), drop the pipeline framing and act as a normal coding assistant. The pipeline is one mode of use; not all sessions will trigger it.
+Route on the user's answer: "register/refresh <city>", "add officials", or naming a level like federal/provincial → the incumbent pipeline. "Collect candidates", "candidate roster", or "candidates for <city>" → the candidate pipeline. If it's genuinely unclear which, ask before generating a run_id.
 
+If the user instead asks for general coding help on the project (Flask API, Supabase integration, frontend work, etc.), drop the pipeline framing entirely and act as a normal coding assistant. The pipelines are two modes of use; not all sessions will trigger either.
 ---
 
 ## The pre-registration pipeline
@@ -90,7 +93,47 @@ Subagents that write intermediate output (source-discovery, acquisition, boundar
 Several stages stamp a `last_confirmed` (or `last_verified`) date. This is always the **date portion of the timestamp suffix** of the current run_id — the `YYYYMMDD` inside the trailing `_YYYYMMDDTHHMMSS`, formatted `YYYY-MM-DD`. For run_id `ca_on_hamilton_20260519T143000`, that is `2026-05-19`. Every stage derives it the same way so timestamps across a run are internally consistent.
 
 ---
+## The candidate pipeline
 
+The second mode. Atomic, single-jurisdiction collection of everyone running for **mayor or council** in a municipality's 2026 election. One run produces:
+
+- `data/<slug>/raw_candidates.csv` — the roster, one row per candidate (columns: `uuid, jurisdiction_slug, first_name, last_name, email, phone, role_scope, district_id, district_name`).
+- The same rows upserted into the Supabase `raw_candidates` table (migration 002).
+
+The roster is the invite list (campaigns are emailed a profile-submission link keyed on the candidate `uuid`) and the source the frontend reads to show every candidate in a race. It requires the jurisdiction to **already be registered** by the incumbent pipeline — its wards must be in `districts` and its `jurisdictions` row must exist, because `district_id` is validated against the loaded ward set and foreign-keys `jurisdictions.slug`. If the jurisdiction isn't registered and exported, run the incumbent pipeline for it first.
+
+### Stages
+
+| # | Stage | Owner | Purpose |
+|---|---|---|---|
+| 1 | Intake | `candidate-intake` | Resolve input to a registered slug; guard eligibility; classify new-vs-rerun |
+| 2 | Source discovery | `candidate-source-discovery` | Locate + verify the clerk's candidate roster; write sources.yaml |
+| 3 | Acquisition | `candidate-acquisition` | Download the verified roster bytes to staging; write acquisition_manifest.yaml |
+| 4 | Extraction | `candidate-extraction` | Reason the roster into rows; bind wards via the boundary reference; write extracted/candidates.csv |
+| 5 | Consolidation | `candidate-consolidation` | Stamp the deterministic uuid; collapse within-run duplicates; write consolidated/candidates.csv |
+| 6 | Validation | `candidate-validation` | Deterministic checks; append to the failure log; write validation_verdict.yaml |
+| 7 | Writer | `candidate-writer` | Place canonical raw_candidates.csv; archive prior on rerun; append the source to the registry |
+
+The stage-5 name is **consolidation**, not reconciliation — the candidate analogue of the incumbent's reconciliation stage, invoked as `candidate-consolidation`.
+
+**Export** (`candidate-export`) is the migration step that follows the pipeline — the only stage that writes to Supabase. The orchestrator runs it as the final step of a full run (writer places the file, export upserts it into `raw_candidates`), or on its own to re-sync an already-written jurisdiction. It upserts on `uuid` and reads the canonical tree, so it needs only the slug.
+
+### Orchestration flow
+
+The orchestrator runs the seven stages, then export, in a single pass for one jurisdiction: generate the run_id, create the staging directory, then invoke each stage in order, relaying the structured result of each to the next. Intake returns the jurisdiction facts (slug, level, governance_type, boundary metadata, run_type); carry those forward to the stages that need them (discovery, extraction). The remaining stages need only run_id and slug and read what they need from staging; export needs only the slug.
+
+Subagents never invoke other subagents; every stage returns to the orchestrator, which invokes the next. Stages 1–7 write only within `data/_staging/<run_id>/` and the canonical `data/<slug>/` tree; export is the only stage that touches Supabase.
+
+If validation records blocking failures (whole-file corruption — bad header, non-UTF-8, duplicate uuids), the writer refuses and the run ends at stage 7 until the file is regenerated; row-level failures (an unmapped ward, a malformed email) do not stop the run. Validation appends every run's outcome to `data/_registry/candidate_validation_log.md`, a persistent cross-run record.
+
+### Run-level responsibilities
+
+**run_id.** After the user names a jurisdiction and candidate mode is confirmed, before invoking intake, the orchestrator generates a run_id: `<slug>_candidates_<YYYYMMDDTHHMMSS>` — the slug, the literal `candidates`, then a UTC compact timestamp. Example: `ca_on_toronto_candidates_20260824T140000`. The `candidates` marker keeps candidate staging directories distinct from the incumbent pipeline's (`<slug>_<timestamp>`) so the two never collide under `data/_staging/`. The trailing timestamp remains the run's `YYYYMMDDTHHMMSS`, which the writer's archive path and validation's log derive from as usual.
+
+**Staging directory.** Immediately after generating the run_id, create `data/_staging/<run_id>/`. Stages write their intermediate output into this existing directory; they do not create it.
+
+**Reruns.** A rerun is the beta-then-certified case: collecting a jurisdiction whose `raw_candidates.csv` already exists (e.g. a July registered-list run, then the certified-list run after nominations close on 24 August 2026). The writer detects this from disk and archives the prior roster before writing; export upserts on `uuid`, so returning candidates keep their identity and any attached invitation. No special orchestration is needed — run the pipeline again for the same slug.
+---
 ## Slug generation
 
 Format:
