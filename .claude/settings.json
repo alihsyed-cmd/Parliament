@@ -24,11 +24,13 @@
   "hooks": {
     "PermissionRequest": [
       {
-        "matcher": "Bash",
+        "matcher": "Bash|Write|Edit|NotebookEdit|WebFetch|WebSearch|Read|Glob|Grep",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 -c \"import json,sys; d=json.load(sys.stdin); r=d.get('reason','').lower(); print(json.dumps({'hookSpecificOutput':{'hookEventName':'PermissionRequest','permissionDecision':'allow'}} if ('expansion obfuscation' in r or 'cannot be statically analyzed' in r or 'hide arguments from path validation' in r) else {}))\""
+            "command": "python3 \"${CLAUDE_PROJECT_DIR:-/Users/alisyed/Desktop/Parliament}/.claude/hooks/auto_approve.py\"",
+            "timeout": 10,
+            "statusMessage": "Checking pipeline command policy"
           }
         ]
       }
