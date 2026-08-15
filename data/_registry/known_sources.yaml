@@ -5663,3 +5663,15 @@ sources:
   notes: Rolling registered-candidates listing (nomination period open May 1 - Aug 21, 2026; certified
     by City Clerk Aug 24, 2026). Client-side JS rendered table.
   last_confirmed: '2026-08-09'
+- slug: ca_on_brampton
+  source_type: candidates
+  url: https://www.brampton.ca/EN/City-Hall/Election/Candidates/Pages/candidateListing.aspx
+  authority: City of Brampton — Office of the City Clerk
+  format: html
+  covers:
+  - mayor
+  - councillor
+  notes: Rolling registered-candidates listing (nominations close Aug 24, 2026, when the certified
+    list is confirmed). Mayor and council only — school board trustee races on the same page are
+    out of scope.
+  last_confirmed: '2026-08-13'

@@ -25,14 +25,14 @@ From the orchestrator: `run_id`, `slug`.
 
 For every row compute:
 
-    CANDIDATE_NS = uuid.UUID("<one fixed UUID you hardcode once, distinct from the incumbent pipeline's namespace>")
+    CANDIDATE_NS = uuid.UUID("c4a7d1e2-9f3b-5c6d-8e1a-2b3c4d5e6f7a")
     key = f"{slug}|{first_name}|{last_name}|{role_scope}|{district_id}"
     key = unicodedata.normalize("NFC", key).casefold().strip()
     row_uuid = uuid.uuid5(CANDIDATE_NS, key)
 
 Write it into a new `uuid` column.
 
-- **Distinct namespace.** Candidates are a separate identity space from officeholders — they FK to the `invitations` table, not to `politicians` — so they get their own hardcoded namespace constant, never the incumbent pipeline's. Hardcode it once and reuse it on every run.
+- **Distinct namespace.** Candidates are a separate identity space from officeholders — they FK to the `invitations` table, not to `politicians` — so they get their own namespace constant, never the incumbent pipeline's. The constant above is the project's fixed candidate namespace: **use it verbatim, never mint a new one.** A fresh namespace silently changes every UUID in the jurisdiction, which orphans any invitation already issued against the old one. (This literal was pinned on 2026-08-13 during the Brampton run; the earlier Hamilton run predates the pin and used a different, unrecoverable value — see the Hamilton note in `data/_registry/candidate_validation_log.md`.)
 - **Key fields.** `slug` scopes to the jurisdiction; name identifies the person; `district_id` separates two different same-named people running in different wards; `role_scope` separates a mayoral candidate from a same-named council candidate whose `district_id` is empty (mayors, at-large councillors, and unmapped-ward councillors all carry an empty `district_id`, so without `role_scope` a mayor and a same-named councillor would collide onto one UUID, and therefore onto one invitation token). Together these make a same-jurisdiction collision require two genuinely different people with the same name in the same race — vanishingly rare.
 - **Stability caveat.** The UUID is stable across runs only insofar as its inputs are. For mayors and correctly-resolved councillors that holds. If a councillor's ward resolves to a different `district_id` between runs (or maps in one run and is unmappable in another), their UUID changes, which would orphan an earlier invitation row. Rare and acceptable — note it if you detect it; do not engineer around it.
 

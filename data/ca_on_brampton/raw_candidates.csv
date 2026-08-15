@@ -1,0 +1,61 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+014ab224-1d45-5c87-b67c-c0947ded78c7,ca_on_brampton,Patrick,Brown,patrick@votepatrickbrown.com,,role,,
+01a8a1d4-c563-536b-b111-e18ef38f8793,ca_on_brampton,Staceyann,Brooks,info@staceyannbrooks.ca,365.987.5113,role,,Wards 1 & 5
+01ce6275-c928-5f6b-a4df-6f886a53f8ef,ca_on_brampton,Santokh,Randhawa,santokh_15singh@hotmail.com,905.452.6265,role,,Wards 3 & 4
+064516ad-6ab1-5d6c-91dc-753bb91e509d,ca_on_brampton,Monica,Singh Soares,,647.808.3178,role,,Wards 7 & 8
+08376e2d-bdc4-5868-ace9-876691f7fbd7,ca_on_brampton,Navjit Kaur,Brar,info@navjitkaur.ca,,role,,Wards 2 & 6
+095b569b-ecda-55cd-a9d3-a8cf508ffbfa,ca_on_brampton,Romolo,Tantalo,,,role,,Wards 1 & 5
+096401eb-0936-57f3-a9fc-ac2f4895e43a,ca_on_brampton,Nirmala Devi,Madhu,nirmala.brampton@gmail.com,647.326.5763,role,,Wards 9 & 10
+0988de00-4b96-51de-b1aa-6bbb4981ac8b,ca_on_brampton,Gaurav,Walia,,,role,,
+09b2a73c-8ab2-50fd-9e80-e5aa4620058d,ca_on_brampton,Tirth Vinodkumar,Patel,elect@tirthpatel.ca,647.970.8683,role,,
+0a6a4fba-8175-58c9-a9ca-28ee710cdc8f,ca_on_brampton,Prempal,Gill,premgill@ymail.com,647.606.4931,role,,Wards 2 & 6
+17ddda08-5392-58ed-8e5c-747764e5424a,ca_on_brampton,Prabh,Gill,elect@prabhsgill.ca,416.880.2720,role,,
+212b8248-3455-5fcd-b211-5c3d9f27450b,ca_on_brampton,Azad,Goyat,,647.999.9951,role,,Wards 9 & 10
+25952808-0486-50af-a4a3-9615d3f6c164,ca_on_brampton,Romy,Dogra,voteromy@gmail.com,,role,,Wards 2 & 6
+315aee03-5787-51fb-9cd9-aaa8682158ad,ca_on_brampton,Sandeep Kumar,Goel,voteforsandeep@gmail.com,416.417.0230,role,,Wards 3 & 4
+375e8ad9-2fac-5bd5-983a-8baa06bb83fe,ca_on_brampton,Jugraj Singh,Khinda,contact@jugraj.ca,647.803.3858,role,,Wards 3 & 4
+3fbac8b6-f859-55bd-b5e4-27160a861acf,ca_on_brampton,Ajaib Singh,Sran,ajaibsran@hotmail.com,647.273.9898,role,,Wards 2 & 6
+409c6793-68de-5e21-9888-4a9614b7c41d,ca_on_brampton,Vidya Sagar,Gautam,vsgautam@hotmail.com,416.456.2408,role,,
+433752b9-e65a-5a4f-9c77-10799ad87cb6,ca_on_brampton,Satpaul Singh,Johal,satpaul.singh.johal@satpaulsinghjohal.com,416.895.3784,role,,Wards 9 & 10
+44285d07-aaf2-5495-8361-21f1f022498a,ca_on_brampton,Janice,Gordon-Daniels,janicegordoncitycouncil@gmail.com,416-839-4884,role,,Wards 9 & 10
+4bf96c99-a36a-5cf2-bf1c-740b0cde2302,ca_on_brampton,,Gursimranjit Singh,Gursimranjit.Brampton@gmail.com,942.588.0017,role,,
+52bd1f6d-873c-5c83-8bab-515253d0b4d3,ca_on_brampton,Steven,Lee,votestevenlee@gmail.com,,role,,Wards 1 & 5
+59c23546-29ae-55ff-9d79-98781d32dc8b,ca_on_brampton,Harkirat,Singh,,,role,,Wards 9 & 10
+5a89c706-53db-5e97-bed9-2f9eb45f5ac7,ca_on_brampton,Rod,Power,rod@rodpower.ca,647.722.5971,role,,Wards 7 & 8
+5fb0a2c8-2aa5-5bf1-88d1-20a9a2ef84c8,ca_on_brampton,Jagdish Singh,Grewal,,647.569.4090,role,,Wards 9 & 10
+60d490c5-a882-527b-87a0-0eaff8cf71e3,ca_on_brampton,Anil,Sahajpal,anilsahajpal04@gmail.com,647.594.2816,role,,Wards 7 & 8
+63ec5779-d996-560e-a8c1-7c0b3eff1875,ca_on_brampton,Michael Paul,Palleschi,votepalleschi@yahoo.ca,,role,,Wards 2 & 6
+697d0d18-f68d-513a-85a9-4981beeef8e8,ca_on_brampton,Jermaine,Chambers,info@jermainechambers.ca,647.770.4690,role,,Wards 2 & 6
+77750788-7302-5608-a530-fb48239eabb4,ca_on_brampton,Dennis,Keenan,info@votekeenan.ca,,role,,Wards 3 & 4
+7a1817bc-0c33-55d0-adb4-4829b70d6c31,ca_on_brampton,Idris,Orughu,,,role,,Wards 1 & 5
+7d153f61-ac1e-577e-92d8-a3f1470c0555,ca_on_brampton,Rowena,Santos,voterowenasantos@gmail.com,,role,,Wards 1 & 5
+825c5eeb-6465-58cc-8515-7fdf8f89298a,ca_on_brampton,Michael,Dancy,mike@mikedancy.com,416.321.0900,role,,Wards 9 & 10
+89629404-72b4-5cf2-b1cb-5bf9291f6236,ca_on_brampton,Jagruti,Bhatt,connect@jagrutibhatt.ca,905.793.3054,role,,
+8fa44bc3-3070-500e-b264-6b123049a5e0,ca_on_brampton,Prabhjot Singh,Dhaliwal,,416.358.2613,role,,Wards 9 & 10
+937a6b6c-9f77-5d96-a6d0-f9bb54608d0a,ca_on_brampton,Parth,Sharma,,647.308.3739,role,,Wards 2 & 6
+984005bc-68a9-56be-8b38-3580effa9d86,ca_on_brampton,Paul,Vicente,,905.598.4700,role,,Wards 1 & 5
+987d3921-5d70-54de-b97d-4a34d494092d,ca_on_brampton,Martin,Medeiros,votemartinmedeiros@gmail.com,,role,,Wards 3 & 4
+997f4d40-fbab-5493-b307-fa108bd5a0eb,ca_on_brampton,Sameer,Tandon,ourwardourfuture@gmail.com,437.602.0715,role,,Wards 2 & 6
+9f62534d-63d7-5810-9441-e05c4b87cf98,ca_on_brampton,Ayanna,Kahlon,voteayannakahlon@gmail.com,647.996.2061,role,,Wards 7 & 8
+a03de64a-82ae-56e7-8c6d-091f75683895,ca_on_brampton,Pat,Fortini,,,role,,Wards 7 & 8
+a3e30017-4eb6-504a-bd67-175d7a58759b,ca_on_brampton,Rakesh,Sharma,info@rakeshsharma.ca,416.823.9505,role,,Wards 7 & 8
+a534eea9-49b9-5517-bf35-1c9c47bae42a,ca_on_brampton,Sandeep,Somal,votesandeepsomal@outlook.com,365.987.6855,role,,
+a6eda16f-fdba-5fcd-9eae-41ececc6fc26,ca_on_brampton,Christopher,Soranno,sorannocj@gmail.com,416.897.6395,role,,Wards 7 & 8
+abfc3eb9-0ee0-5720-830f-a117d755e0e7,ca_on_brampton,Yadvinder,Deswal,,,role,,Wards 2 & 6
+bd69dcb0-96bc-5544-b168-f4f697ada46d,ca_on_brampton,Ripudaman Singh,Dhillon,ripudhillon@yahoo.com,416.569.6311,role,,Wards 7 & 8
+c1e0a553-1235-58c0-972f-eee6f6607b3f,ca_on_brampton,Aman,Sharma,aman@amansharma.net,416.666.7953,role,,Wards 7 & 8
+c89909cd-5024-50ce-b13f-0e0deccd1e55,ca_on_brampton,Carmen,Wilson,votecarmenwilson2026@outlook.com,,role,,Wards 2 & 6
+ca9fb6dd-1705-5d53-b06d-042be4a98550,ca_on_brampton,Khimani,Williams,khimaniforcouncil@yahoo.com,289.505.7795,role,,Wards 1 & 5
+cad619c7-1467-5584-bc3a-940a6df68a18,ca_on_brampton,Raghav,Dhir,info@raghavdhir.ca,416.890.2068,role,,Wards 2 & 6
+cb049942-821d-5518-818d-b97336601c29,ca_on_brampton,Gurpreet Singh,Dhillon,info@gurpreetsinghdhillon.com,647.825.0910,role,,Wards 9 & 10
+cf402897-6a5d-5de7-87f3-e1d89dd58555,ca_on_brampton,Nayan,Brahmbhatt,info@nayanbrahmbhatt.ca,647.923.7480,role,,Wards 7 & 8
+d63105a8-43dc-5194-a979-318071f578e8,ca_on_brampton,Amit,Dutta,team.amitdutta@gmail.com,365.306.1003,role,,Wards 1 & 5
+d7c35bd2-ab7b-5ca6-bac8-de4bdf0ba59b,ca_on_brampton,Sandeep,Kumar,sandeep842017@outlook.com,416.846.9859,role,,Wards 9 & 10
+d9265f2e-3926-5b6b-a3e8-84e3a3f19f14,ca_on_brampton,Kamran,Hassan,,,role,,Wards 9 & 10
+d968ac93-6755-52de-b2d9-05ca8eb9753d,ca_on_brampton,Vedaant,Vyas,councillorvedaant@gmail.com,289.654.0643,role,,Wards 7 & 8
+e91a7955-a01e-5739-9926-383b62e89281,ca_on_brampton,Tracy Ann,Pepe,support@tracypepe.com,647.517.1402,role,,Wards 1 & 5
+f1d5c14c-0c18-52e4-9144-673852a2cd8b,ca_on_brampton,Sukhman,Sangha,vote@sukhmansangha.com,647.993.9078,role,,Wards 9 & 10
+f2108ef7-7631-5ff3-8b7e-24df6d1c0c2e,ca_on_brampton,Keval,Shah,votekevalshah@gmail.com,647.967.8683,role,,Wards 2 & 6
+f3b39378-f0ab-5d78-b9cc-96858ee1c039,ca_on_brampton,Gita Devi,Dawadi Dhakal,campaign@electgitabrampton.ca,437.799.8683,role,,Wards 3 & 4
+f465669d-1295-57f1-a8ce-3ec08b21fb0f,ca_on_brampton,Kaniki Karine,Mujinga,,,role,,Wards 3 & 4
+fd86f9a4-53f3-57b1-81df-68bb0d465b09,ca_on_brampton,Avi,Dhaliwal,ELECT@AVIDHALIWAL.COM,905.872.7000,role,,
