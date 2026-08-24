@@ -67,13 +67,19 @@ if not GOOGLE_API_KEY:
 
 app = Flask(__name__)
 
+from werkzeug.middleware.proxy_fix import ProxyFix
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
+
 allowed_origins = [
     o.strip()
     for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:5173").split(",")
 ]
-CORS(app, origins=allowed_origins, methods=["GET"], allow_headers=["Content-Type"])
-logger.info("CORS origins: %s", allowed_origins)
 
+CORS(app, origins=allowed_origins, methods=["GET", "POST"],
+     allow_headers=["Content-Type"], supports_credentials=True)
+
+from claim import claim_bp
+app.register_blueprint(claim_bp)
 POSTAL_CODE_REGEX = re.compile(r"^[A-Z]\d[A-Z]\d[A-Z]\d$")
 
 # English-only for now. Sent on every response so the envelope is stable when
