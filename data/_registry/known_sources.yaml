@@ -5675,3 +5675,385 @@ sources:
     list is confirmed). Mayor and council only — school board trustee races on the same page are
     out of scope.
   last_confirmed: '2026-08-13'
+
+- slug: ca_on_toronto
+  source_type: candidates
+  url: "https://www.toronto.ca/data/elections/candidate_list/mayorCandidates_2026.json"
+  authority: "City of Toronto, Office of the City Clerk"
+  format: "json"
+  covers: ['mayor']
+  notes: "JSON data endpoint underlying the JS-rendered page https://www.toronto.ca/city-government/elections/candidate-list/ (an empty shell to plain curl/WebFetch). Endpoint resolved by fetching the page's main1.1.4.js bundle, which builds candidate data URLs via candidateList(t) = DATA_FOLDER + \"/\" + t, DATA_FOLDER = https://www.toronto.ca/data/elections/candidate_list. All 42 entries have status \"Active\"; the site keeps withdrawn candidates in a separate feed (see withdrawn entry below), so this file already excludes withdrawals. Root JSON object has keys seq, spaces, candidates (array).
+"
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_toronto
+  source_type: candidates
+  url: "https://www.toronto.ca/data/elections/candidate_list/councilorCandidates_2026.json"
+  authority: "City of Toronto, Office of the City Clerk"
+  format: "json"
+  covers: ['councillor']
+  notes: "Same discovery method and endpoint family as the mayor artifact above. Root JSON object has keys seq, spaces, ward (array of 25 ward objects, each with name/num and a candidate array). Ward \"num\" is a plain integer string (e.g. \"1\"..\"25\") matching City Council ward numbering. All 148 entries have status \"Active\" (withdrawals excluded already; see below).
+"
+  last_confirmed: 2026-08-17
+
+
+- slug: ca_on_london
+  source_type: candidates
+  url: "https://london.ca/government/council-civic-administration/elections/list-candidates"
+  authority: "City of London, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'school_board_trustee']
+  notes: "Official \"List of Candidates\" page on london.ca. Structured as nested <details> sections: Mayor, City Council (with sub-sections Ward 1 through Ward 14, one section per ward, no multi-ward council races), and School Board Trustees (with multi-ward trustee zones, out of scope for this pipeline). Each candidate entry lists name (bold), and where provided, Qualifying Address, Phone, Email, and Website. Page states it is \"updated each business day by 4:30 p.m.\" and that the certified list under s.35(1)(2) of the Municipal Elections Act will be posted only after City Clerk certification (before 4:00 p.m. on 2026-08-24). Nominations close 2:00 p.m. 2026-08-21. As of today (2026-08-17), this is the rolling registered/nomination-register list, not yet certified. Plain curl returns the full server-rendered HTML with all candidate data present (confirmed via direct fetch) — not a JS shell, so no headless-Chrome fallback needed. A downloadable PDF \"2026 Nomination candidate register\" (dated 2026-08-14) is also linked from the page, but the HTML page itself carries the same (or more current) data in a parseable structured form, so the PDF is not needed and is out of scope per policy regardless."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_mississauga
+  source_type: candidates
+  url: "https://ovs.voterview.ca/candidateList/candidatedetails?filter=&countyMun=2105&schoolcode="
+  authority: "City of Mississauga, Office of the City Clerk (Elections) — data served via the VoterView/DFX election services platform under contract to the City, embedded directly on the City's official mississaugavotes.ca elections microsite."
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "The human-facing page https://mississaugavotes.ca/2026-municipal-election/for-voters/whos-running/ is a JS shell that only statically lists withdrawn candidates; the live candidate roster is loaded client-side via an iframe (https://ovs.voterview.ca/candidatelist/2105) which in turn AJAX-fetches this HTML fragment endpoint. This endpoint is the resolved data source. It returns 100 total candidate cards across Mayor (10), Councillor Ward 1-11 (60), and school-board Trustee races (30, out of scope). All 11 wards have at least one councillor candidate. The endpoint reflects only currently-registered candidates — cross-checked against the site's static withdrawn-candidates table (6 names: George Tavares, Rahul Mehta, Charles Corey, Syed Jaffrey, Olivia Gannon, Zulfiqar Ali, all recorded as withdrawn from specific races); of these, Syed Jaffrey does not appear anywhere in this endpoint (fully withdrawn), while the other five appear registered under a *different* office than the one they withdrew from (e.g. Rahul Mehta withdrew from Mayor, now shows as Councillor Ward 8) — i.e. they re-registered for a different race rather than leaving the election, so their current entries are legitimately active and should not be excluded."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_markham
+  source_type: candidates
+  url: "https://www.markham.ca/elections/candidates-and-third-party-advertisers/whos-running"
+  authority: "City of Markham (Office of the City Clerk)"
+  format: "html"
+  covers: ['mayor', 'regional_councillor', 'councillor']
+  notes: "Official \"Who's Running\" candidates page on markham.ca. Plain curl (no JS rendering needed) returns full HTML with real candidate names and contact details embedded in the markup — confirmed by grepping for \"Martin Ross\" and his email in the raw curl output. Page states \"The list of registered candidates will be posted to this page once available\" — nomination period is open until 2026-08-21, so this is a rolling REGISTERED list, not yet certified. Contains 1 Mayor, 7 Regional Councillor candidates (at-large), 24 Ward Councillor candidates across all 8 wards, and 14 School Board Trustee candidates (York Region, York Catholic, Viamonde/MonAvenir — out of scope for this pipeline, mayor/council only). A duplicate mirror of the same content exists at electionsmarkham.ca (electionsmarkham.ca/en/candidates/who-s-running/ and /candidate-list/) — markham.ca chosen as the primary record since it verified cleanly via plain curl; both are official City of Markham domains."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_kitchener
+  source_type: candidates
+  url: "https://app2.kitchener.ca/election/candidates.aspx"
+  authority: "City of Kitchener, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'regional_councillor', 'school_board_trustee']
+  notes: "Official City of Kitchener 2026 municipal election candidates list, served from an ASPX endpoint under app2.kitchener.ca (the City's election-systems subdomain). Page lists Mayor (4), Ward Councillors across all 10 wards (42), Regional Councillors for Waterloo Region (12), and School Board Trustees across 4 boards (12), for a combined 70 entries. Regional Councillor and school board trustee races are out of scope for the ca_on_kitchener candidates roster (regional council is a separate jurisdiction; trustees are excluded by pipeline policy) and will be filtered at extraction. Page states the nomination deadline is 2 p.m. Friday, August 21, 2026, and that the list \"continues to be updated until the deadline\" — confirming this is a rolling registered list, not yet certified. No withdrawn-candidate markers were observed on the page."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/mayor"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor']
+  notes: "Official \"Who is Running?\" per-office sub-page. Live registered-candidate list, structured as one <h3> heading per candidate with Phone/Email/Website/Address lines beneath. Page last modified 2026-04-27 to 2026-08-14 across the set (actively maintained during nomination period)."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-1"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Same per-office page template as Mayor, one ward. Part of a fragmented roster of 11 pages (Mayor + Ward 1-10) under /city-hall/municipal-election/who-is-running/."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-2"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-3"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-4"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-5"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-6"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-7"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-8"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-9"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards. Single candidate, no contact fields present on this page."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_windsor
+  source_type: candidates
+  url: "https://citywindsor.ca/city-hall/municipal-election/who-is-running/Councillor-Ward-10"
+  authority: "City of Windsor, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "Part of the same fragmented roster as Mayor / other wards. Roster also lists Trustee candidates for 4 school boards and a Third Party Advertiser page under the same /who-is-running/ index (not part of this candidates roster; mayor/council only in scope). A \"withdrawals\" sub-page listed in the sitemap currently 404s (no withdrawn candidates published at this time)."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_oakville
+  source_type: candidates
+  url: "https://www.oakville.ca/town-hall/elections/candidates/registered-candidates/"
+  authority: "Town of Oakville, Office of the Town Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'trustee']
+  notes: "Data is directly embedded in the HTML (not a JS shell). Page lists registered candidates for Mayor, Town Councillor (per ward), Town and Regional Councillor (per ward), and school board trustees (Halton DSB, Halton Catholic DSB, Conseil scolaire Viamonde, Conseil scolaire catholique MonAvenir) across all 7 wards. Trustees are out of scope for this pipeline and will be skipped at extraction. Page explicitly states this is a rolling registered list, updated as of 2026-08-14, ahead of the 2026-08-21 2pm nomination close."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_burlington
+  source_type: candidates
+  url: "https://myvote.burlington.ca/for-voters/list-of-candidates/"
+  authority: "City of Burlington — Office of the City Clerk (myvote.burlington.ca official election portal)"
+  format: "html"
+  covers: ['mayor', 'councillor', 'school_board_trustee']
+  notes: "Static HTML page (plain curl returns full data, not a JS shell) listing all registered candidates grouped by office/ward heading (Mayor Candidates; City and Regional Councillor - Ward 1 through Ward 6; Halton District School Board Trustee; Halton Catholic District School Board Trustee; Conseil scolaire Viamonde; Conseil scolaire catholique MonAvenir). Page states \"Last Updated: Monday, Aug. 17, 2026 at 8:30 a.m.\" Some entries marked \"Withdrawn\" inline instead of a separate status field. No downloadable CSV/JSON/XLSX offered alongside the HTML."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_oshawa
+  source_type: candidates
+  url: "https://www.oshawa.ca/city-hall/elections/registered-candidates/"
+  authority: "City of Oshawa, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "Single combined static HTML page listing all registered candidates for the 2026 Municipal and School Board Elections, organized under headings \"Office of Mayor\", \"Ward 1\"..\"Ward 5\" (each ward split into \"Office of Regional and City Councillor - Ward N\" and \"Office of City Councillor - Ward N\" sub-tables), and \"School Boards\" (four trustee boards, out of scope). Page intro states \"Nominations for the Municipal and School Board Elections must be filed by 2 p.m. on Nomination Day, Friday, August 21. Once candidates are registered, their names will appear below.\" — explicit registered/rolling list language. Plain curl returns full content (no JS shell). Mayor: 7 candidates. Ward 1: 2 regional/city + 5 city = 7. Ward 2: 2 + 3 = 5. Ward 3: 1 + 4 = 5. Ward 4: 4 + 8 = 12. Ward 5: 2 + 5 = 7. Council total = 36. Mayor + council = 43. (School board trustees: 10 additional, out of scope for this pipeline.)"
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_barrie
+  source_type: candidates
+  url: "https://www.barrie.ca/government-news/2026-municipal-election/candidates-list"
+  authority: "City of Barrie, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'trustee']
+  notes: "Static HTML page listing candidates who have filed nominations, organized by office (Mayor, Ward Councillor 1-10, and four school board authorities' trustees). Page explicitly states this is a working/registered list, not certified; certification occurs by Monday, August 24, 2026 at 4pm per the Municipal Elections Act, 1996. All 10 wards represented with at least one candidate. Most candidates carry a campaign email and/or phone number; a few (e.g. Brent Bowser, Christian Cadera in Ward 1) list no contact info at all."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_guelph
+  source_type: candidates
+  url: "https://guelph.ca/city-government/mayor-and-council/municipal-elections/candidates-of-the-2026-municipal-and-school-board-election/"
+  authority: "City of Guelph, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'school_board_trustee']
+  notes: "Official City of Guelph municipal elections page. Content is present as static HTML tables (one table per office/ward: Mayor, Ward 1-6 Councillor, plus four school board trustee tables), so a plain curl works despite an initial superficial check suggesting a JS shell -- names appear as \"Last, First\" in <thead>/<th> table markup, not \"First Last\" prose. Emails are Cloudflare email-obfuscated (/cdn-cgi/l/email-protection with data-cfemail hex) and must be decoded (standard single-byte XOR cf-email scheme) during extraction; phone numbers and campaign website links appear in plain text. Page explicitly marks some candidates \"(withdrawn)\" inline. Page does not explicitly label the list \"registered\" vs \"certified\", but nomination period (May 1 - Aug 21, 2026 per guelph.ca election notice) is still open as of today (2026-08-17), so this is the pre-certification registered list."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_cambridge
+  source_type: candidates
+  url: "https://www.cambridge.ca/mayor-city-council-government/elections/nominations-candidate-profiles/"
+  authority: "City of Cambridge, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'regional_councillor', 'school_board_trustee']
+  notes: "Plain HTML page (confirmed via curl - names present in raw bytes, no JS rendering needed). Organized under collapsible sections by office: Mayor (7), Ward Councillors 1-8 (21), Regional Councillors (5), School Board Trustees across 4 boards (11 - out of scope for this pipeline). Nomination period open until 2026-08-21 2:00pm; certification by clerk expected 2026-08-24, so this is a rolling registered list, not yet certified."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_milton
+  source_type: candidates
+  url: "https://www.milton.ca/en/2026-election-candidates.aspx"
+  authority: "Town of Milton, Office of the Town Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "Official Town of Milton candidate roster page. Full HTML data table (not JS shell) listing Mayoral candidates, Regional Councillor candidates, and Town Councillor candidates by ward, plus school board trustee candidates (out of scope for this pipeline). Page states candidates are added after nomination package review during Town Hall business hours, confirming this is a rolling registered list. Nominations close 2026-08-21 2pm; certification by clerk expected by 2026-08-24."
+  last_confirmed: 2026-08-17
+
+
+- slug: ca_on_st_catharines
+  source_type: candidates
+  url: "https://www.stcatharines.ca/council-and-administration/elections/registered-candidates/"
+  authority: "City of St. Catharines, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'school_board_trustee']
+  notes: "Plain curl (HTTP 200, 159KB) returns full server-rendered HTML tables directly — not a JS shell. Confirmed by grepping raw bytes for candidate names (\"Anthony A. Adeoye\", \"Mat Siscoe\", ward headers Ward 1-6). Page title \"Registered Candidates | City of St. Catharines\" confirms rolling registered (pre-certification) status, consistent with nomination close 2026-08-21 / certification by 2026-08-24. Structured as Mayor table, City Councillor tables per ward (Ward 1 Merritton through Ward 6 Port Dalhousie, using ward names not numbers), and School Board Trustee tables (District School Board of Niagara, Niagara Catholic DSB, Conseil Scolaire Catholique MonAvenir, Conseil Scolaire Viamonde) — trustees out of scope for this pipeline. One candidate, John Edgar (Ward 1 - Merritton, City Councillor), is shown struck through with \"(nomination withdrawn)\" annotation in the raw HTML — must be excluded at extraction. Email and phone present for most mayoral and council candidates; some entries have one or neither field populated."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_waterloo
+  source_type: candidates
+  url: "https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/"
+  authority: "City of Waterloo, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'regional_councillor', 'school_board_trustee']
+  notes: "Official City of Waterloo 2026 municipal election candidates page. Plain curl returns full HTML with real candidate data embedded directly in table markup (confirmed by grepping the raw downloaded bytes for \"MCCABE\" and finding <td>Dorothy MCCABE</td> with mailto: link) — no JS rendering needed. Page lists Mayor (1), Ward Councillors across all 7 wards (22), Region of Waterloo Regional Councillors (6, at-large — separate jurisdiction, out of scope for this pipeline), and School Board Trustees across 4 boards (7, out of scope). Combined 36 entries; 23 in scope for mayor+councillor. Page footer states \"All candidate nominations listed on this page have been filed with City Clerk under the Municipal Elections Act\" — this is filing confirmation, not certification; filings continue to be added through August 14, 2026 (most recent seen), consistent with a rolling REGISTERED list ahead of the 2026-08-24 nomination-close/certification date. No withdrawn-candidate markers observed."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_kingston
+  source_type: candidates
+  url: "https://www.cityofkingston.ca/council-and-city-administration/elections/candidates/candidate-list/"
+  authority: "City of Kingston (Office of the City Clerk)"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "Single HTML page with accordion sections, one per office: \"Mayor\" then \"District 1 - Countryside\" through \"District 12 - Pittsburgh\" (district labels match DISTRICT_NAME values in the boundary file exactly, confirming a clean name join). Each section contains an HTML table with columns Candidate Name, Email Address, Phone #, Website. A separate \"School Board Trustee\" section further down the same page lists trustee candidates for 4 boards — out of scope for this pipeline, to be skipped at extraction. One withdrawn mayoral candidate observed inline as \"Stephen Cuthbertson (withdrawn)\" — schema has no status field, so extraction must exclude withdrawn rows explicitly. No downloadable CSV/JSON/XLSX offered; page is static server-rendered HTML (not a JS shell) with no thead-based header text repeated per district table, so parsing needs to key off the accordion section label preceding each table."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_brantford
+  source_type: candidates
+  url: "https://www.brantford.ca/your-government/municipal-election/candidates/"
+  authority: "City of Brantford, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "Official City of Brantford candidates page. Confirmed via curl that raw HTML (not a JS shell) contains candidate names, ward headings (\"Ward 1\"..\"Ward 5\"), and email addresses. Page lists Mayor (6), Ward 1-5 Councillors (4/4/6/5/5 = 24), plus four school board trustee races (Grand Erie DSB, Brant Haldimand Norfolk Catholic DSB, Conseil Scolaire Catholique MonAvenir, Conseil Scolaire Viamonde) which are out of scope for this pipeline. Page states candidates have \"filed nominations\"; official certification is scheduled for Monday, August 24, 2026 (2 p.m. nomination close was Aug 21). Nearly all candidates carry both email and phone; one mayoral candidate (Ricky Willdy) and one (Leslie Bory) show email only, no phone."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_ajax
+  source_type: candidates
+  url: "https://elections.ajax.ca/voters/offices-to-be-elected-mayor"
+  authority: "Town of Ajax — Office of the Municipal Clerk (Ajax Elections)"
+  format: "html"
+  covers: ['mayor']
+  notes: "wpDataTable (id wpdtSimpleTable-6) with columns Name, Qualifying Address, Telephone, Email, Links. Page states \"The following is the list of candidates registered for the Ajax 2026 Municipal and School Board Elections\" and \"The Municipal Clerk will provide a certified list of candidates following the close of nominations on August 21, 2026.\""
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_ajax
+  source_type: candidates
+  url: "https://elections.ajax.ca/voters/offices-to-be-elected-ward-1-local-councillor"
+  authority: "Town of Ajax — Office of the Municipal Clerk (Ajax Elections)"
+  format: "html"
+  covers: ['councillor']
+  notes: "Ward 1 Local Councillor race. Same wpDataTable structure. One row is \"Angie Papas - Withdrawn\" (no address/phone/email) — a withdrawn candidacy, not an active row."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_ajax
+  source_type: candidates
+  url: "https://elections.ajax.ca/voters/offices-to-be-elected-ward-1-regional-councillor"
+  authority: "Town of Ajax — Office of the Municipal Clerk (Ajax Elections)"
+  format: "html"
+  covers: ['councillor']
+  notes: "Ward 1 Regional Councillor race. Same wpDataTable structure."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_ajax
+  source_type: candidates
+  url: "https://elections.ajax.ca/voters/offices-to-be-elected-ward-2-local-councillor"
+  authority: "Town of Ajax — Office of the Municipal Clerk (Ajax Elections)"
+  format: "html"
+  covers: ['councillor']
+  notes: "Ward 2 Local Councillor race. Two rows are withdrawn candidacies (\"Asad Ali - Withdrawn\", \"Asif Kasim - Withdrawn\"). Asad Ali reappears as an active candidate on the Ward 2 Regional Councillor list — a re-registration under a different office, not a duplicate."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_ajax
+  source_type: candidates
+  url: "https://elections.ajax.ca/voters/offices-to-be-elected-ward-2-regional-councillor"
+  authority: "Town of Ajax — Office of the Municipal Clerk (Ajax Elections)"
+  format: "html"
+  covers: ['councillor']
+  notes: "Ward 2 Regional Councillor race. Same wpDataTable structure."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_ajax
+  source_type: candidates
+  url: "https://elections.ajax.ca/voters/offices-to-be-elected-ward-3-local-councillor"
+  authority: "Town of Ajax — Office of the Municipal Clerk (Ajax Elections)"
+  format: "html"
+  covers: ['councillor']
+  notes: "Ward 3 Local Councillor race. Same wpDataTable structure."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_ajax
+  source_type: candidates
+  url: "https://elections.ajax.ca/voters/offices-to-be-elected-ward-3-regional-councillor"
+  authority: "Town of Ajax — Office of the Municipal Clerk (Ajax Elections)"
+  format: "html"
+  covers: ['councillor']
+  notes: "Ward 3 Regional Councillor race. Same wpDataTable structure. Includes Angie Papas, who withdrew from the Ward 1 Local Councillor race and re-registered here — a legitimate active candidacy, not a duplicate."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_brant
+  source_type: candidates
+  url: "https://www.brant.ca/council-and-county-administration/elections/certified-candidates/"
+  authority: "County of Brant, Office of the Municipal Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "Plain HTML page (candidate names/contacts present directly in the served bytes, confirmed via curl — not a JS shell). No CSV/JSON/PDF alternative found on the page. Lists Mayor (3), Ward 1-5 Councillors (24 total across all 5 wards), plus 5 School Board Trustees (3 public, 2 separate) who are out of scope for this pipeline and will be skipped at extraction. Page's own boilerplate text describes it as the \"certified candidates\" list \"as certified by the Municipal Clerk,\" but per run instructions the County of Brant's 2026 nomination period does not close until 2026-08-24 (today is 2026-08-17), so certification cannot yet have occurred — this page copy is standing CMS text, not evidence of actual certification. Recording roster_status as registered (pre-certification) accordingly; downstream stages should treat this as a rolling, possibly-incomplete list. No candidates found marked as withdrawn on the page (searched for \"withdraw\" in raw HTML — no matches)."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_whitby
+  source_type: candidates
+  url: "https://planyourvote.voterview.ca/api/service?route=candidate_list%3Fward%3D%26schoolSupportCode%3D%26nominationDateFrom%3D2026-01-01%26nominationDateTo%3D2026-12-31"
+  authority: "Town of Whitby, Office of the Town Clerk (via Voterview \"Plan Your Vote\" platform)"
+  format: "json"
+  covers: ['mayor', 'councillor', 'regional_councillor', 'trustee']
+  notes: "The public-facing page https://www.whitby.ca/town-hall/municipal-elections/candidates/ is procedural only (how to become a candidate) and contains no roster. That page links to \"Who is Running?\" -> https://planyourvote.voterview.ca/candidate-list, a JS-rendered Angular SPA (Voterview \"Plan Your Vote\" tool) that renders nothing without executing JS. Network inspection (Chrome headless NetLog) revealed the underlying data endpoint recorded as `url` above, which returns a JSON payload (a JSON string containing escaped JSON — must be json.loads() twice) with a `Positions` array. Each position has `BallotDescription` (office) and a `Candidates` array with name, email (EmailAddress/PublicEmail), phone (Telephone/CellPhone/HomeTelephone/PublicPhone), and ward fields (WardName/Wards). 13 positions total: Mayor (3), Town Councillor x4 wards (3+6+6+4=19), Regional Councillor x4 wards (4+2+2+2=10) — 32 mayor/council candidates — plus 4 school-board trustee positions (7 candidates: DDSB 4, DCDSB 2, Conseil scolaire Viamonde 0, Conseil scolaire catholique MonAvenir 1) which are out of scope for this pipeline. Ward numbers in BallotDescription (Ward 1-4) correspond to North/West/Centre/East per the boundary file (WARD column). No candidate appeared in more than one position (checked by CandidateID). No withdrawal/status field exists in the schema; all candidates show EligibilityConfirmed=\"No\" (pre-certification, consistent with registered status)."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_peterborough
+  source_type: candidates
+  url: "https://www.peterborough.ca/council-city-hall/elections/voters/"
+  authority: "City of Peterborough, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor', 'trustee']
+  notes: "Official City of Peterborough Voters page (linked from the Candidates page, which itself states 'A list of uncertified candidates is posted on our Voters page'). Confirmed via fetch to contain the full uncertified candidate roster as plain HTML (candidate names present in raw response bytes, no JS rendering required) - 6 mayor candidates, 26 ward councillor candidates across all 5 wards (Ward 1 Otonabee: 5, Ward 2 Monaghan: 6, Ward 3 Town: 4, Ward 4 Ashburnham: 4, Ward 5 Northcrest: 7), plus 6 school board trustee candidates (out of scope for this pipeline - mayor and council only). Most candidates list a campaign email and/or personal website; roughly two-thirds also list a phone number. No structured CSV/JSON/XLSX download was found alongside the HTML page."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_greater_sudbury
+  source_type: candidates
+  url: "https://www.greatersudbury.ca/city-hall/municipal-schoolboard-elections/for-voters/accordion-2026-registered-candidates/council-candidates/"
+  authority: "City of Greater Sudbury, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "\"Council Candidates\" accordion page under 2026 Registered Candidates. Organized by Ward 1-12 headings; each candidate has Name, Date filed, Telephone (where provided), Email, Website (where provided). Bilingual city site; accented names present (René Lapierre, Natalie Labbée). 37 candidate entries across all 12 wards. Page states candidate info is \"updated daily\" -- consistent with a registered (pre-nomination-close) list. Nominations close 2026-08-21 2pm; certification by 2026-08-24 4pm."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_greater_sudbury
+  source_type: candidates
+  url: "https://www.greatersudbury.ca/city-hall/municipal-schoolboard-elections/for-voters/accordion-2026-registered-candidates/mayoral-candidates/"
+  authority: "City of Greater Sudbury, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor']
+  notes: "\"Mayoral Candidates\" accordion page, same site/structure as council-candidates (Name, Date filed, Telephone, Email, Website). 6 candidate entries. Bill Leduc, who withdrew the mayoral race on 2026-08-14 per the withdrawn-candidates page, is correctly already absent from this list."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_norfolk_county
+  source_type: candidates
+  url: "https://www.norfolkcounty.ca/vote/filed-nominations/"
+  authority: "Norfolk County, Office of the County Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "Official \"Filed Nominations\" page (norfolkcounty.ca/vote/filed-nominations/; the alternate URL /vote/filed-candidate-nominations/ 301-redirects here — same page, same content). This is the authoritative roster of record: one table per office/ward (Mayor, Ward 1-7 Councillor) with candidate name and nomination filing date. Explicitly states it is a preliminary filed list, not yet certified (\"The clerk will review and certify these nominations by 4:00 p.m. on August 24, 2026, and will post them publicly thereafter\"). 27 candidate rows counted across mayor + 7 wards, including one mayoral candidate (Rhyus Reeves) explicitly marked \"Withdrawn on August 5, 2026\" in the Date Filed cell. Page also lists school board trustee races (Grand Erie x2 panels, Brant-Haldimand-Norfolk Catholic, MonAvenir, Viamonde) which are out of scope for this pipeline. No email/phone on this page."
+  last_confirmed: 2026-08-17
+
+- slug: ca_on_norfolk_county
+  source_type: candidates
+  url: "https://www.norfolkcounty.ca/vote/voter-resources/"
+  authority: "Norfolk County, Office of the County Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "Official \"Voter Resources\" page, \"Candidate Contact Information\" section, same norfolkcounty.ca domain/authority as the Filed Nominations roster. Candidate names grouped under the same office/ward headings (Mayor, Ward 1-7 Councillors) with phone, email, address, and campaign website supplied directly by the candidate (\"Norfolk County is not responsible for content posted on external websites by candidates... this information is supplied directly by the candidates\"). Coverage is a strict subset of the Filed Nominations roster — candidates who did not supply contact info are simply absent (e.g. mayoral candidates Doug Brunton, Ken Hewitt, Adam Veri, and Ward 2's Debbie Wilbur, Ward 5's Bob Townsend do not appear here at all). Use this as a supplementary contact lookup keyed by candidate name against the Filed Nominations roster, not as the roster of record. Some entries have only email or only phone."
+  last_confirmed: 2026-08-17

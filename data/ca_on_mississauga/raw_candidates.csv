@@ -1,0 +1,71 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+2ff896fe-d727-57ff-a698-5b7dbe7f178e,ca_on_mississauga,Stephen,Dasko,spdasko@gmail.com,(416) 414-4402,district,1,Ward 1
+d0412f7f-0c78-5ae4-82de-6d1f547e3eb4,ca_on_mississauga,Olivia,Gannon,oliviagannon@hotmail.com,(416) 984-5488,district,1,Ward 1
+63fe803c-2f26-5469-ac8a-33b8ff4b96bf,ca_on_mississauga,Suha,Hashim,suhaward10@gmail.com,(647) 220-5713,district,10,Ward 10
+55d918c4-c13c-5729-9ef6-f81df7384494,ca_on_mississauga,Aatish,Jamal,info@votejamal.ca,(647) 303-4180,district,10,Ward 10
+647ddfd9-b51c-5189-9c04-79920897e07e,ca_on_mississauga,Sue,Mcfadden,reelectsue@gmail.com,(647) 904-2713,district,10,Ward 10
+ad5adf19-3fcf-5620-b6a1-af7ab82d94ad,ca_on_mississauga,Brad,Butt,bradbuttcpc@gmail.com,(365) 220-1240,district,11,Ward 11
+60c7059e-6e64-54d6-a8d7-22e5c32d859d,ca_on_mississauga,Amin,Nanji,aminvoteward11@gmail.com,(416) 821-0891,district,11,Ward 11
+4e10fbd3-9696-5f8e-b2f5-d961a6098b52,ca_on_mississauga,Dev,Vashi,info@devvashi.ca,(647) 588-8706,district,11,Ward 11
+52d6b993-4fa6-5ef3-9af1-ac29583422a2,ca_on_mississauga,Fawzi Samer,Alghoul,,,district,2,Ward 2
+911e1372-8767-5b91-a337-8b5e3e6e27f1,ca_on_mississauga,Ronnie,Amyotte,,,district,2,Ward 2
+1c8b599b-ccce-591c-a54f-ec804de32efa,ca_on_mississauga,Michelle,Baker,info@michellebaker.ca,(647) 478-8781,district,2,Ward 2
+49698724-3683-5678-93b3-febf47120b2a,ca_on_mississauga,Michael,Carroll,mike@michaelcarroll.ca,(647) 688-4561,district,2,Ward 2
+ba046038-8fe1-5f83-98b7-262e8e37ed68,ca_on_mississauga,Leeann,Cole,leeanncoleward2@gmail.com,(647) 928-6276,district,2,Ward 2
+d3de6a55-074e-5e51-9c2e-7f9119d6f188,ca_on_mississauga,Tom,Ellard,contact@tomellard.ca,(647) 797-0575,district,2,Ward 2
+e36ec746-4064-550b-bc01-abb4ac5d0247,ca_on_mississauga,Syed,Jaffery,raza8@hotmail.com,(416) 938-5786,district,2,Ward 2
+077938c3-f7a7-5d1f-ba4f-34c28ad1f884,ca_on_mississauga,Ross,Kutisker-Jacobson,voterosskjward2@gmail.com,(905) 475-6346,district,2,Ward 2
+99abeabb-190e-51c3-b0f2-b5ea17066912,ca_on_mississauga,Ananya,Majumder,electmajumder@gmail.com,(289) 652-6497,district,2,Ward 2
+f198e46e-1797-5878-be21-c02e24571922,ca_on_mississauga,Alex,Ragozzino,,,district,2,Ward 2
+8d25cfee-2f9e-5b4b-b624-b5e67493c0c5,ca_on_mississauga,Sue,Shanly,,,district,2,Ward 2
+d47c77dd-f12a-5407-a216-86cad0b63707,ca_on_mississauga,Chris,Fonseca,chrisfonseca2026@gmail.com,,district,3,Ward 3
+6ad9dafe-6b12-5090-9133-74d05e293ff4,ca_on_mississauga,Mendi,Kabashi,mendikab@gmail.com,(647) 901-6376,district,3,Ward 3
+ae2e5930-bc32-5db0-9721-a3ed396e9b0e,ca_on_mississauga,Kim,Pines,info@kimpines.ca,(905) 226-9609,district,3,Ward 3
+f6c0592b-2fb2-5864-b726-d32f5ff5a42f,ca_on_mississauga,Stjepan,Vukovic,szvukovic16@gmail.com,(647) 285-2769,district,3,Ward 3
+e32b47f1-441d-5cf8-a50a-c02a12f5b57d,ca_on_mississauga,Zulfiqar,Ali,ali.ce.ca@outlook.com,(365) 777-9881,district,4,Ward 4
+a27ed8f9-5799-537d-9bce-6f8f4c284798,ca_on_mississauga,John,Kovac,johnkovac2026@gmail.com,,district,4,Ward 4
+7e221962-5a91-55d2-8a2d-5c8f0d864955,ca_on_mississauga,Aruna,Anand,arunaanandward5@gmail.com,(416) 999-3152,district,5,Ward 5
+0a8c8d49-94dc-5d77-81aa-369c40b3be30,ca_on_mississauga,Ismail,Bawa,voteforismailbawa@gmail.com,(416) 423-9514,district,5,Ward 5
+19c6a98c-656b-5e14-b515-cfea9c83bc50,ca_on_mississauga,Raghavan Babu,Bhogaiah,,(403) 462-7266,district,5,Ward 5
+6d394fe2-92ba-548a-9c81-c6eb85908970,ca_on_mississauga,Mandeep Singh,Dhaliwal,info@mandeepforward5.com,(647) 966-9945,district,5,Ward 5
+cbb347dc-c47a-5a6e-b6c3-e6f4cd1e3e52,ca_on_mississauga,Jamie,Dookie,jdookie@yahoo.com,(416) 454-0726,district,5,Ward 5
+f1b91728-548b-5d60-bf13-f089fc142565,ca_on_mississauga,Natalie,Hart,natalie@votehart.ca,(905) 288-7956,district,5,Ward 5
+019007ee-e4f7-50d7-bb12-2f5b3f74b916,ca_on_mississauga,Vipan,Mehta,vipan4mississauga@gmail.com,(416) 841-9183,district,5,Ward 5
+f4ae0bfd-8e22-5cff-ba97-2f1f6f6743a6,ca_on_mississauga,Michael Anthony,Perretta,c218888@aol.com,(416) 319-8880,district,5,Ward 5
+37f7b760-27a4-5fad-b7fe-d97c5497d667,ca_on_mississauga,Rosemarie,Sanchez Sanchez,sanchezrosemarie137@gmail.com,(416) 474-9433,district,5,Ward 5
+97328a00-bd72-502b-84ce-6768a18be5b9,ca_on_mississauga,Danny,Singh,dsingh.ward5@gmail.com,(647) 204-4802,district,5,Ward 5
+2875a099-a29b-5ecb-bdbe-263a45f9ce39,ca_on_mississauga,Gurcharan,Guleria,humrahi@gmail.com,(416) 454-3858,district,6,Ward 6
+16d1a0e6-1ba1-545f-b8fd-13bf26a51d3d,ca_on_mississauga,Joe,Horneck,info@joehorneck.ca,(289) 652-6004,district,6,Ward 6
+cb65288f-51ef-5590-b0fb-c24a22e7ed2d,ca_on_mississauga,Gerald,Adad,gerald.adad7@gmail.com,,district,7,Ward 7
+2a0f8d69-8d33-54b7-9a85-40eae7b16ad5,ca_on_mississauga,Amir,Ali,electamir@gmail.com,(905) 488-0973,district,7,Ward 7
+398ba622-1a8b-5d65-b220-9ac6b950cd28,ca_on_mississauga,Lucas,Alves,alvespublicaffairs@gmail.com,(647) 928-5309,district,7,Ward 7
+ecafddf0-043d-566f-8076-cfc9323ce817,ca_on_mississauga,Joel,Binda,info@joelbinda.com,,district,7,Ward 7
+873f953f-7817-5ed9-a4ef-4cd3e869aa04,ca_on_mississauga,Asha,Falinski,vote@ashafalinski.ca,,district,7,Ward 7
+4101c21e-0bf5-5c27-a552-a577ce7aba72,ca_on_mississauga,Ahsan,Khokhar,ahsanward7@gmail.com,(289) 779-4231,district,7,Ward 7
+60162c69-9e8c-583d-b564-7ca1e514010e,ca_on_mississauga,Keshav,Mandadi,votemandadi@gmail.com,(416) 564-8268,district,7,Ward 7
+94f960f2-fdd7-5ba1-9c5c-41c7dd8170a1,ca_on_mississauga,Louroz,Mercader,info@lourozmercader.ca,(416) 998-8094,district,7,Ward 7
+87c55ba7-cb19-52e2-8a42-737e3a167fac,ca_on_mississauga,Naila,Saeed,naila@nailasaeed.ca,(647) 799-8098,district,7,Ward 7
+f4680bba-c66e-5c1c-b965-a71d7ed42fd8,ca_on_mississauga,Maisa,Salhia,voteSalhia@gmail.com,(416) 890-3700,district,7,Ward 7
+451256f2-a1e6-5301-a668-9e87ccdd58f4,ca_on_mississauga,Amitabh,Srivastava,info@AmitabhSrivastava.ca,(647) 801-7000,district,7,Ward 7
+a6ca563b-368f-5446-a59f-9fedc715e5ed,ca_on_mississauga,Tassawar,Syed,tm.syed@yahoo.com,(647) 773-4372,district,7,Ward 7
+c2f50a3e-2533-52f1-a537-f9ba824b6f54,ca_on_mississauga,George,Tavares,info@abetterward7.ca,,district,7,Ward 7
+918e3814-69a1-5e65-ae7f-74c8f56d6131,ca_on_mississauga,Peter,Tolias,,(416) 206-5077,district,7,Ward 7
+f0b2df4d-e28e-5950-b992-48653cf9281d,ca_on_mississauga,Hazra,Wade,hazra-wade@outlook.com,(416) 312-8049,district,7,Ward 7
+320bf111-a09e-5fca-a82f-f120bac7eb8d,ca_on_mississauga,Leslie,Zurek-Silvestri,lesliejsilvestri@gmail.com,(905) 301-7171,district,7,Ward 7
+b24d66ed-58bf-571d-9c9a-1fdd4b61df58,ca_on_mississauga,Matt,Mahoney,mahoneyward8@gmail.com,(437) 339-4882,district,8,Ward 8
+7c391297-4567-581e-bf59-77b5c45d3605,ca_on_mississauga,Viktoria,Manzar,viktoriaward8@gmail.com,,district,8,Ward 8
+0224643d-de1d-5f3b-8891-70e8e8eb37e0,ca_on_mississauga,Rahul,Mehta,betterward8@gmail.com,,district,8,Ward 8
+824084b4-b05c-55fe-a100-31511715b0ad,ca_on_mississauga,Ramsha,Haq,rhma@synergy-consulting.ca,(437) 477-7111,district,9,Ward 9
+9a830235-9230-5d8b-afc1-7ddae0b65b88,ca_on_mississauga,Anwar,Knight,,,district,9,Ward 9
+e120f0c2-447d-5840-9e98-6233b4afa398,ca_on_mississauga,Martin,Reid,martin@martinreid.ca,(416) 567-7343,district,9,Ward 9
+09f96b8a-8459-5309-bcb2-b704563e44cb,ca_on_mississauga,Mohammad,Shabbeer,shabvision@gmail.com,(647) 786-8631,district,9,Ward 9
+76cd87fa-e976-5a33-a413-410472de824a,ca_on_mississauga,Bonnie,Crombie,info@bonniecrombie.ca,,role,,
+05f091e2-add0-5ae1-a6b0-08726d943eed,ca_on_mississauga,Dipika,Damerla,votedipikadamerla@gmail.com,,role,,
+cad179d9-11ae-545b-9c15-d1a6226caf28,ca_on_mississauga,Frank,Fang,vote@votefrankfang.ca,(416) 557-3222,role,,
+c4f14165-352e-555e-bb96-75d16d250e64,ca_on_mississauga,Amjad,Jilani,,,role,,
+b6ac1699-820a-53ce-87a2-8b222427f29c,ca_on_mississauga,Mike,Matulewicz,matulewiczmike@hotmail.com,(416) 702-9961,role,,
+83dae46b-1e89-56b4-a63e-6b5bbf13ecf9,ca_on_mississauga,Fadi,Naami,fadinaami@gmail.com,(905) 580-3234,role,,
+29149c76-ab5a-5374-87e7-9dbdb10899c1,ca_on_mississauga,Carolyn,Parrish,info@parrishformayor.com,,role,,
+a8f21fad-1071-56c2-a969-bf9d9832b6db,ca_on_mississauga,David,Shaw,mayordavid2022mississauga@proton.me,(905) 302-7050,role,,
+2a317f66-098e-5b6d-9bae-d9823b430ade,ca_on_mississauga,Alvin,Tedjo,Team@tedjo.ca,(905) 275-6622,role,,
+570f52b9-3bd8-578e-a32f-8bc509ee5685,ca_on_mississauga,Ana Luisa,Vasquez De Espinal,analuisa1174@gmail.com,(289) 338-3918,role,,

@@ -1,0 +1,191 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+9e8be9ac-84bc-5a99-95c2-bed81b99400d,ca_on_toronto,Abraham,Abbey,,,district,01,Etobicoke North
+5632175f-85d3-5547-82de-9237f8496513,ca_on_toronto,Ala'a,Adib,alaa@alaaadib.ca,,district,01,Etobicoke North
+50cd6c24-aa89-5554-8dc4-1d056328736a,ca_on_toronto,Saima,Babar,,,district,01,Etobicoke North
+a42ca1b4-01a1-5faf-9bf0-f62655af4baf,ca_on_toronto,Chloe,Brown,chloeb4ward1@gmail.com,647-703-6237,district,01,Etobicoke North
+0e441f42-fd4d-5063-87b4-7221a64937b5,ca_on_toronto,Vincent,Crisanti,votecrisanti@gmail.com,,district,01,Etobicoke North
+c3910a8d-3f3a-57ce-a589-b3e3b226fffe,ca_on_toronto,Norman,Hamilton,electnormanhamilton@gmail.com,647-574-5685,district,01,Etobicoke North
+ec92b4bb-2ab2-5bfe-be33-d1dff8a61b24,ca_on_toronto,Joseph,Martino,,,district,01,Etobicoke North
+21eace9d-5077-5c1b-b3fc-12f1e3105495,ca_on_toronto,Jennifer,Alexander,info@jenalexander.ca,,district,02,Etobicoke Centre
+c3875d56-40bb-5d80-b89c-8ed50412c266,ca_on_toronto,Stephen,Holyday,,,district,02,Etobicoke Centre
+095364d5-8448-5e1e-9019-46d1e49e3821,ca_on_toronto,Anthony,Internicola,,,district,03,Etobicoke-Lakeshore
+15cdf8b9-9c43-591f-89a6-14b36a22e7ba,ca_on_toronto,Cody,MacRae,,,district,03,Etobicoke-Lakeshore
+9d733f1a-f35d-512f-8049-a02f60538c2b,ca_on_toronto,Amber,Morley,info@voteambermorley.ca,,district,03,Etobicoke-Lakeshore
+0693fda9-9c8b-560e-a63f-df6fa624b11e,ca_on_toronto,Ted,Opitz,,,district,03,Etobicoke-Lakeshore
+7a5d3f2d-966f-59f8-af04-071824d5c142,ca_on_toronto,Michael,Corcoran,,,district,04,Parkdale-High Park
+d229c4a6-d19f-5c9d-9181-fd667082bd69,ca_on_toronto,Nadia,Guerrera,nadia@nadiaguerrera.ca,,district,04,Parkdale-High Park
+6b34912b-f716-56f2-8878-0995ecde4b00,ca_on_toronto,Debbie,King,info@votedebbieking.ca,,district,04,Parkdale-High Park
+b24fef44-a893-5c09-b392-495e80fd78c6,ca_on_toronto,Diana Chan,McNally,info@dianachanmcnally.ca,647-812-2088,district,04,Parkdale-High Park
+1078a9f1-71d0-520c-b805-20f5908354f8,ca_on_toronto,Bridget,Ogundipe,info@bridgetogundipe.ca,,district,04,Parkdale-High Park
+fd0ad20f-7eec-57e0-b504-64237690b4b9,ca_on_toronto,Adam,Pham,vote@adampham.ca,416-893-6288,district,04,Parkdale-High Park
+6eb9ae6f-2cf7-5495-98a6-c2e3c32f1f5c,ca_on_toronto,Vanessa,Raponi,info@vanessaraponi.ca,437-869-2288,district,04,Parkdale-High Park
+3e7c91b9-77ca-58fe-9192-aa177c6b3444,ca_on_toronto,Lloyd,Traiforos,lloyd4ward4@gmail.com,,district,04,Parkdale-High Park
+a96de78a-309f-5ace-b59a-8066b0ab3886,ca_on_toronto,Holly,Weber,info@hollyweber.ca,,district,04,Parkdale-High Park
+ad1dc739-4625-585a-b064-1ca6e1f0eb69,ca_on_toronto,Sharmarke,Ali,Vote@sharmarkeali.ca,,district,05,York South-Weston
+7a5d330f-6138-59ec-a79f-5bfeb5d0cb34,ca_on_toronto,Matthew,Boateng,,,district,05,York South-Weston
+3e8cb391-5cc3-51ef-8fb3-b5fa5dcba9da,ca_on_toronto,Daniel,Di Giorgio,votedigiorgio@gmail.com,,district,05,York South-Weston
+5414df0d-234e-5987-b5f4-be392cca704b,ca_on_toronto,Frances,Nunziata,,,district,05,York South-Weston
+db38bf14-5269-596f-899e-8e27eadfda25,ca_on_toronto,Nekpen,Obasogie,vote@nekpenobasogie.ca,,district,05,York South-Weston
+2a3561d6-b007-57d8-bd69-0711666470b0,ca_on_toronto,Chiara,Padovani,chiara@chiarapadovani.ca,647-479-9796,district,05,York South-Weston
+fe778f7e-b2a1-5638-87f8-80626bc330c2,ca_on_toronto,Sileen,Phillips,info@sileenphillips-ysw.ca,437-297-6462,district,05,York South-Weston
+97c9dbf8-a2f5-5195-b1b7-0cc867bf891f,ca_on_toronto,Conroy,Irving,voteconroyirving@gmail.com,437-992-0882,district,06,York Centre
+985514cb-26e9-5b2f-8358-7bf270af72c8,ca_on_toronto,James,Pasternak,,,district,06,York Centre
+9480a887-1221-54b9-841f-29acc6b4415a,ca_on_toronto,Lorna,Antwi,votelornaantwi@gmail.com,647-824-3817,district,07,Humber River-Black Creek
+14f83bb3-c35e-5cf4-bad4-71423ed2bf17,ca_on_toronto,Amanda,Coombs,voteamandacoombs@gmail.com,647-581-7362,district,07,Humber River-Black Creek
+7eabda1a-6141-5f92-8e69-95c7edc8d1ee,ca_on_toronto,Anthony,Perruzza,info@voteanthonyperruzza.com,647-451-0477,district,07,Humber River-Black Creek
+1e43c90a-83d3-5e61-8189-9ef5c27add16,ca_on_toronto,Mike,Colle,mikecolle2026@gmail.com,,district,08,Eglinton-Lawrence
+1f14c2e9-785b-5205-a835-879dd354483d,ca_on_toronto,Liz,Grade,liz@votelizgrade.ca,,district,08,Eglinton-Lawrence
+cd89f50a-e6d7-5191-b8f3-ae7bf2a73429,ca_on_toronto,Domenico,Maiolo,,,district,08,Eglinton-Lawrence
+a8a09da6-7ee0-5d88-b88e-42910ffb95ee,ca_on_toronto,Jason,McDonald,jason@mcdonald2026.ca,,district,08,Eglinton-Lawrence
+1f8b725f-9f65-518a-abbc-d998748db2af,ca_on_toronto,Enzo,Torrone,torrone@ward8.ca,416-278-6280,district,08,Eglinton-Lawrence
+179e48e9-ba16-55ca-8016-9318694ac02f,ca_on_toronto,Daniel,Trayes,dantrayes@gmail.com,647-512-5145,district,08,Eglinton-Lawrence
+d80aa0c7-9268-52e3-b93e-f5f6cb38a11f,ca_on_toronto,Alejandra,Bravo,,,district,09,Davenport
+35136c7c-356f-516a-b1c4-2234af7267db,ca_on_toronto,Ashley,Jansen,,,district,09,Davenport
+b017ffa6-c076-5a1f-ab5c-6c13e0f5eb48,ca_on_toronto,Marco,Martins,votemarcomartins@gmail.com,,district,09,Davenport
+a247408f-7717-5d15-ac61-40fe8b2d322c,ca_on_toronto,Neil,Simon,voteneilsimon@gmail.com,,district,09,Davenport
+7e8f0f2a-c035-5177-a7bb-a4bcd23f8ae5,ca_on_toronto,Ian,Cunningham,ian@iancunninghamto.ca,437-428-1848,district,10,Spadina-Fort York
+73f9696d-62d3-55a7-b027-51c82f56336e,ca_on_toronto,Xue,Ding,xue.ding@mi-tech.ca,647-594-5577,district,10,Spadina-Fort York
+764dd4c3-470b-5336-8314-93727ac7c8ed,ca_on_toronto,Andi,Hoàng-Lefranc,info@andiforward10.ca,,district,10,Spadina-Fort York
+24cbe94e-4445-5430-8da5-70573023c54d,ca_on_toronto,Bashar,Kassir,,,district,10,Spadina-Fort York
+12434527-70f0-59da-af99-1d4f98ab2661,ca_on_toronto,Ausma,Malik,info@ausma.ca,,district,10,Spadina-Fort York
+92483bdd-29d1-5b8d-9b97-fe6bcdb2c3ae,ca_on_toronto,Paul,Nash,nashp1071@gmail.com,,district,10,Spadina-Fort York
+d4242ecf-d58c-5276-94f5-4fe45e6f87b7,ca_on_toronto,Husain,Neemuchwala,votehusain@gmail.com,647-448-7246,district,10,Spadina-Fort York
+267680ec-d637-513c-83e4-598300733da4,ca_on_toronto,Aanchal,Vashistha,voteforaanchal@gmail.com,,district,10,Spadina-Fort York
+212fc61f-f40f-5c23-a892-cd2cf0083009,ca_on_toronto,Gabe,Blanc,info@gabeforunirose.ca,,district,11,University-Rosedale
+75662808-545c-58c4-bcd6-820856ab4d16,ca_on_toronto,Keenan,Courtis,Info@keenancourtis.ca,,district,11,University-Rosedale
+b4bb8f8d-700d-589c-8ea8-b5f15b9544c6,ca_on_toronto,Dana,Fisher,info@danafisher.ca,647-947-8281,district,11,University-Rosedale
+23fc173c-0dca-58e3-99c4-83ffea318def,ca_on_toronto,Terri,Hawkes,info@voteterrihawkes.ca,,district,11,University-Rosedale
+71dccedb-a5c3-5e4e-80bb-69f2124dbf55,ca_on_toronto,Mike,Layton,,,district,11,University-Rosedale
+d8a23954-6677-5fdf-bb34-7644c27c61fa,ca_on_toronto,Karina,Lemke,team@votekarina.ca,,district,11,University-Rosedale
+a28ee76a-8a57-5061-82c6-93b75f654b7c,ca_on_toronto,Alice,Li,vote@aliceli.ca,,district,11,University-Rosedale
+ad193e77-8292-5c25-be91-117e17ddae62,ca_on_toronto,Huy,Lieu,,,district,11,University-Rosedale
+52b14f52-f328-564a-b273-ddd2bed6c9e8,ca_on_toronto,Gian,Pileri,info@gianpileri.ca,,district,11,University-Rosedale
+36941fd1-733c-57de-9807-e990799bdf5f,ca_on_toronto,Dianne,Saxe,info@votesaxe.ca,,district,11,University-Rosedale
+ce139b55-3fd0-59f8-a422-42d8ec6ab33f,ca_on_toronto,Diana,Yoon,contact@voteyoon.ca,,district,11,University-Rosedale
+d665b9bc-9328-586b-b514-601eb926a0a5,ca_on_toronto,David,Cottrell,contact@votecottrell.ca,437-700-0050,district,12,Toronto-St. Paul's
+67fb74e2-234b-5080-8f5d-8e7a441521ad,ca_on_toronto,Jenny,Kalimbet,,,district,12,Toronto-St. Paul's
+07831cfe-d797-5af4-bbca-f17169c1c754,ca_on_toronto,Ahmed,Kamal,ak2026election@gmail.com,,district,12,Toronto-St. Paul's
+6833ba49-1297-5482-8f03-70e714ee223a,ca_on_toronto,Joshua,Kishner,,,district,12,Toronto-St. Paul's
+02bb5f00-8c68-5b27-86a4-990580ac1943,ca_on_toronto,Josh,Matlow,,,district,12,Toronto-St. Paul's
+0e22e86b-c674-543b-9cc6-00bad8fa0f0f,ca_on_toronto,Mina,Nadimi,mnierin868@gmail.com,,district,12,Toronto-St. Paul's
+bd20187f-88f2-5509-b68c-9aa32538843b,ca_on_toronto,Joe,Cadeau,info@votejoecadeau.ca,647-740-8313,district,13,Toronto Centre
+6d3b6fa6-9dc3-5793-b51e-ad7a68643dba,ca_on_toronto,Tom,Cai,tom.cai@tomforward13.com,,district,13,Toronto Centre
+7b4bf07d-569f-5386-95d8-7dc148af9f7a,ca_on_toronto,Victoria,Davis,info@victoriaforcentre.ca,,district,13,Toronto Centre
+af5be27f-3a5f-5228-a66f-2add3a9ee2b0,ca_on_toronto,Walied,Khogali Ali,info@votewalied.ca,416-888-1112,district,13,Toronto Centre
+218288bc-fca7-59bb-8b6b-d5031d14ce93,ca_on_toronto,Norman,MacLeod,,,district,13,Toronto Centre
+d535f6b2-ae66-5d56-93da-0d6575de3967,ca_on_toronto,Chris,Moise,contact@chrismoise.vote,647-493-3447,district,13,Toronto Centre
+438c879a-39a7-5e8f-8d96-5a68c72de7e2,ca_on_toronto,Curran,Stikuts,contact@votecurran.ca,,district,13,Toronto Centre
+1d7bf235-b877-5f91-a26e-14105b7fab95,ca_on_toronto,Daniel,Tate,info@votetate.ca,,district,13,Toronto Centre
+1fca27d8-0c85-5d58-9335-542a48cc3050,ca_on_toronto,Nicki,Ward,info@nickiward.ca,,district,13,Toronto Centre
+51c9d949-f3ab-5d29-9c85-ac2065a45c43,ca_on_toronto,Susan,Chapelle,info@electsusanchapelle.com,647-576-7786,district,14,Toronto-Danforth
+b6ad654d-7002-5eac-98c7-6496603a7d75,ca_on_toronto,Jason,Stevens,votejstevens@gmail.com,647-819-0339,district,14,Toronto-Danforth
+11bb0edb-0946-57be-ac79-c5b106f0cf1e,ca_on_toronto,Denise,Walcott,,,district,14,Toronto-Danforth
+ffa05820-235f-5d29-ab81-1bf4f39552f5,ca_on_toronto,Rachel,Chernos Lin,,,district,15,Don Valley West
+df0787ab-2a4e-5b6a-ad24-a49e9a3f8627,ca_on_toronto,Sheena,Sharp,info@votesheenasharp.ca,647-505-9425,district,15,Don Valley West
+db08d1ac-979a-5565-889d-e72f37a8939c,ca_on_toronto,Denis,Tsang,info@VoteDenisTsang.ca,,district,15,Don Valley West
+0edcb866-3206-5c43-8f3c-58cd12014779,ca_on_toronto,Jon,Burnside,,,district,16,Don Valley East
+f9bb2911-db27-5188-818c-fc6089fe7ea8,ca_on_toronto,Sinan,Erdemir,info@votesinan.com,647-558-0364,district,16,Don Valley East
+4a0d4dd5-7e0a-592d-ab11-24fb4da2fd23,ca_on_toronto,Stacey,Moffatt,,,district,16,Don Valley East
+bc5665e6-0036-5ed6-8a24-6670b067f406,ca_on_toronto,Jeffery,Adamson,,,district,17,Don Valley North
+57a3d1af-36c9-564f-8b06-1a24e019d8dc,ca_on_toronto,Shelley,Carroll,shelley@voteshelleycarroll.ca,,district,17,Don Valley North
+cd875d4f-3f5c-5c28-87d2-fc4ee615085f,ca_on_toronto,Jethro Adir,Kavod,,,district,17,Don Valley North
+7c4f548b-767a-5c4e-8e65-cece1808087a,ca_on_toronto,Hassan Mubarak,Noor Mohamed,info@hassanmubarak.ca,,district,17,Don Valley North
+bbe9838a-c7d3-51b7-8b2a-c265cb55028e,ca_on_toronto,Roy,Samathanam,Roysamathanam@royward17.ca,,district,17,Don Valley North
+a2577805-88cf-5538-a574-282854ff54ea,ca_on_toronto,Sabrina,Zuniga,sabrina@sabrinazuniga.ca,,district,17,Don Valley North
+6e4c35c8-a653-5db2-8a6b-3fae7f4f1c6d,ca_on_toronto,Lily,Cheng,connect@votelilycheng.ca,647-313-8975,district,18,Willowdale
+8eafce92-db1f-5149-9e85-ad91795e0b69,ca_on_toronto,David,Magazzinich,Campaign@davidfortoronto.ca,,district,18,Willowdale
+bce3b162-8e57-5fac-a54e-d9df703bcd05,ca_on_toronto,Nathan,Yusifov,,647-875-1401,district,18,Willowdale
+b9e50e96-7c65-58b5-a02f-a829c49b7961,ca_on_toronto,Ardeshir,Zarezade,info@voteardeshir.ca,,district,18,Willowdale
+fae04417-fd4a-5ee0-9b1f-7e2f8a0a58c6,ca_on_toronto,Syeda Jaana,Ali,votesyedajaanaliward19@gmail.com,,district,19,Beaches-East York
+ddbda1f9-4420-58e4-b593-5af5675d2650,ca_on_toronto,James,Dann,hello@jamesdann.ca,,district,19,Beaches-East York
+b7762801-fe03-5701-b825-1832dcda14bb,ca_on_toronto,Natalie,Johnson,contact@votenataliejohnson.ca,,district,19,Beaches-East York
+485369ad-7985-56c0-b6f0-74f4b9fa9e98,ca_on_toronto,Tycen,Legg,hello@tycenlegg.ca,437-435-9696,district,19,Beaches-East York
+0394cddf-80cc-5c8b-8771-14cfff4fe4c5,ca_on_toronto,Kevin,Morrison,kevin@electkevinmorrison.com,416-856-9807,district,19,Beaches-East York
+ae1e95fb-0269-5ac4-b49b-ea4e0230979e,ca_on_toronto,Adam,Smith,campaign@adamsmithward19.ca,416-454-5014,district,19,Beaches-East York
+8f6585f4-07d9-5479-8d7f-4394fd1b76ea,ca_on_toronto,Austin,Vieira,austinbey@austinvieira.com,,district,19,Beaches-East York
+4ebb6823-96eb-5c30-92e5-a2b1f3e18b2b,ca_on_toronto,Jeff,Wahl,votejeff4bey@gmail.com,,district,19,Beaches-East York
+537d18e4-1386-5781-9594-5911ad152283,ca_on_toronto,Devin,Wilkins,info@votedevinwilkins.ca,,district,19,Beaches-East York
+28374dc2-3d7c-59ed-8809-fcb76c24a7a6,ca_on_toronto,Jennie,Worden,info@jennieworden.ca,437-494-6123,district,19,Beaches-East York
+000b4d79-66a3-5704-82af-32770c9902fc,ca_on_toronto,Malik,Ahmad,,,district,20,Scarborough Southwest
+0bacc8c3-fb4c-5fd1-a7c0-af9e0354429a,ca_on_toronto,Laikul,Choudhury,,,district,20,Scarborough Southwest
+fa325e3b-6de0-5e9c-b721-14903a00ca5f,ca_on_toronto,Naser,Kaid,,,district,20,Scarborough Southwest
+99ed5d66-a25f-54ef-a55d-12a257ed31c3,ca_on_toronto,Parthi,Kandavel,,,district,20,Scarborough Southwest
+cd25c527-c6fc-5a11-b333-8f6c549f8925,ca_on_toronto,Ariel-Rachel,Karokis,,,district,20,Scarborough Southwest
+03e97490-1780-5e3d-8944-acc5f68285d9,ca_on_toronto,Luigi,Lisciandro,,,district,20,Scarborough Southwest
+e4cace32-7e68-5364-8a5b-5a37ec54ca9d,ca_on_toronto,Philip,Mills,philipmills352@protonmail.com,647-522-8465,district,20,Scarborough Southwest
+ac79b874-9223-5992-bf3e-5b220d5f2d48,ca_on_toronto,Sharmina,Nasrin,hello@sharminanasrin.ca,416-705-8597,district,20,Scarborough Southwest
+225f225f-713f-53c6-b0bb-b292e3752e32,ca_on_toronto,Mohammad Ali,Reza,,,district,20,Scarborough Southwest
+1e07cb0a-eede-5725-b606-488032fd0751,ca_on_toronto,Kevin,Rupasinghe,info@kevinrupasinghe.ca,647-560-8984,district,20,Scarborough Southwest
+53d06f50-1380-5c8c-80a9-6861ce0ffec9,ca_on_toronto,Taiba,Ahmed,info@taibafor21.ca,,district,21,Scarborough Centre
+6ea999cf-f912-5ec6-bffe-4e1823e7dd15,ca_on_toronto,Bahareh,Barahmand,,,district,21,Scarborough Centre
+3455b1a9-e63b-5056-94d2-08586aa15ddf,ca_on_toronto,Patience,Evbagharu,Info@PatienceInAction.ca,647-369-4899,district,21,Scarborough Centre
+1eb29a96-6630-5db8-8184-a2575d721a12,ca_on_toronto,Uthish,Ganesh,uthishganesh.info@gmail.com,647-779-7723,district,21,Scarborough Centre
+3a3887b9-2718-57b6-9333-12c478da8b17,ca_on_toronto,Stella,Kargiannakis,WeCanDoBetter416@gmail.com,,district,21,Scarborough Centre
+9971e021-e934-53af-812c-bf5a569d6001,ca_on_toronto,Akina,Lalla,,,district,21,Scarborough Centre
+e0358ea4-a680-5fe1-ba28-3bcdb5a18e7b,ca_on_toronto,Willie,Reodica,,,district,21,Scarborough Centre
+f857ef53-5320-53b6-91d9-66f238c52e64,ca_on_toronto,Madura,Shanmugaratnam,scarboroughward21@gmail.com,,district,21,Scarborough Centre
+2167b053-249f-59dd-8763-166027a6c842,ca_on_toronto,Michael,Thompson,reelectmichaelthompson@gmail.com,,district,21,Scarborough Centre
+44eb305d-9d7e-5446-bef1-255609c41e95,ca_on_toronto,Krissan,Veerasingam,krissan@krissanveeras.ca,647-691-6676,district,21,Scarborough Centre
+12d80a3d-f20c-55f3-8600-408e8ca3d04c,ca_on_toronto,Madhuri,Azad,azad4ward22@gmail.com,,district,22,Scarborough-Agincourt
+bdbe9400-a7fa-5ef3-8884-2eaa2521247d,ca_on_toronto,Bill,Chan,,,district,22,Scarborough-Agincourt
+6fe59c6a-f425-575d-8d24-967eb424927a,ca_on_toronto,Jackson,Ho,team@voteforjackson.ca,647-917-2221,district,22,Scarborough-Agincourt
+9b595d31-872a-5e16-962e-f53f98be5f07,ca_on_toronto,Rakhee,Kotecha,rakhee4councillor@gmail.com,,district,22,Scarborough-Agincourt
+158834cb-4cd8-5f27-84a4-e69eb9b782e9,ca_on_toronto,Dan,Lovell,danlovell4ward22@gmail.com,,district,22,Scarborough-Agincourt
+aff0d704-e631-58aa-9423-5765b1101431,ca_on_toronto,Nick,Mantas,,,district,22,Scarborough-Agincourt
+f45d286a-e4fa-5452-bee0-980c3435e4fd,ca_on_toronto,Donny,Morgan,donnymorgancouncilor@protonmail.com,,district,22,Scarborough-Agincourt
+7e0cc157-8222-50fb-9204-9e8ecbae42e7,ca_on_toronto,Han,Dong,votehandong@gmail.com,,district,23,Scarborough North
+380a3ad8-1697-5b04-a9e0-060ed18ddc7d,ca_on_toronto,Sajawal,Javed,sajawaljaved.north23@gmail.com,,district,23,Scarborough North
+4156185a-f17d-5b29-a7de-689db3ea9f88,ca_on_toronto,Kevin,Li,kevinli2026toronto@gmail.com,,district,23,Scarborough North
+498e01f9-61e7-5ee2-ba2b-ea78b82392a6,ca_on_toronto,Jamaal,Myers,info@electjamaalmyers.com,647-992-3423,district,23,Scarborough North
+889a8a75-43de-556a-8aeb-ac2c148901de,ca_on_toronto,John-Mark,Oleh,contact@johnmarkoleh.ca,647-225-1234,district,23,Scarborough North
+222e4d24-04be-5dc1-b61d-6152e44a4338,ca_on_toronto,Paul,Ainslie,,,district,24,Scarborough East
+c30749bc-6dfc-53b4-a9b2-546927f62126,ca_on_toronto,Rajinder,Lall,,,district,24,Scarborough East
+6d94cd27-b6ed-5aa7-89c2-55b5867919a6,ca_on_toronto,Nachi,Ramasamy,,,district,24,Scarborough East
+b11fc7fa-a26e-5f1e-ba3b-76689373129d,ca_on_toronto,Shawn,Allen,info@electshawnallen.ca,647-371-5795,district,25,Scarborough-Rouge Park
+f1761b9d-a87f-5242-bb89-2e2fb07cedb3,ca_on_toronto,Dharshan,Casinathen,,,district,25,Scarborough-Rouge Park
+6f5a5a22-1a6b-5b16-930a-b25ba29b8d33,ca_on_toronto,Ashan,Fernando,ashan.fernando@ashanfernando.ca,416-407-0229,district,25,Scarborough-Rouge Park
+e89f5a5a-af1a-5140-9457-b40a3eca6827,ca_on_toronto,Jannette,Lumley,,,district,25,Scarborough-Rouge Park
+0bb115f6-ced3-5574-9b1b-06886cc007e2,ca_on_toronto,Zakir,Patel,info@votezakir.ca,437-267-6843,district,25,Scarborough-Rouge Park
+e0bd101a-2a8d-57ba-959f-2fa71695f9eb,ca_on_toronto,Neethan,Shan,info@neethanshan.ca,437-797-6878,district,25,Scarborough-Rouge Park
+c4064010-2f42-5d36-b3b5-e969f77cfb79,ca_on_toronto,Imad,Abdulkadir,,,role,,
+3cea6205-f995-5ae1-9cef-3b416c065cb7,ca_on_toronto,Bahira,Abdulsalam,,,role,,
+45bf5359-6559-5f91-aaef-a9147c7fad8f,ca_on_toronto,Chris,Alexander,,,role,,
+ec9585ed-1519-5111-a538-9411342e33e4,ca_on_toronto,Jamie,Atkinson,Info@jamieatkinson.ca,416-821-3106,role,,
+4006b573-0bb9-5df6-82be-6f72963274bf,ca_on_toronto,Brad,Bradford,info@bradford26.ca,,role,,
+e56a5871-a7c6-56a3-b970-b290eefa7758,ca_on_toronto,Darrell,Brown,,,role,,
+d4e95628-cb86-5bb8-8c87-09457b4ecb74,ca_on_toronto,Brian,Buffey,,,role,,
+f54dcde4-efa8-570a-a06e-f7869d24cdfd,ca_on_toronto,Braeden,Chow,therealchow4mayor@gmail.com,,role,,
+3dc7c590-8c22-564b-b634-8a34d5d31e76,ca_on_toronto,Olivia,Chow,info@oliviachow.ca,,role,,
+35ef7e32-c32a-5d50-8e98-c9dd16312701,ca_on_toronto,Roberto,Curto,,,role,,
+ab437402-ed11-523c-877a-480e0cdc2d2e,ca_on_toronto,Laura,Dean,lauradeanformayor@gmail.com,,role,,
+e5018638-3d17-5d0a-b4f1-73b34c755505,ca_on_toronto,Cory,Deville,vote@deville2026.ca,,role,,
+6524d7ee-63ab-53f3-9a52-199a0e58989f,ca_on_toronto,Wincess,Dorville,,,role,,
+3a4f3476-bd7b-5403-a3ea-40af12d4d8d8,ca_on_toronto,Laura,Ellis,,,role,,
+968af773-39f9-56a7-a5be-77bad3288765,ca_on_toronto,Martin,Fraser,,,role,,
+58605e45-96e1-5d59-9b9e-3d3debef1c87,ca_on_toronto,Alton,Frederick,,,role,,
+dababc59-73fb-5463-b276-ef8ede30536f,ca_on_toronto,Edward,Gong,gong4mayor@gmail.com,,role,,
+df1b0765-4c21-5459-9b65-5949199d5b35,ca_on_toronto,Faizan,Haider,info@faizanhaider.ca,,role,,
+fd1fd2ee-578c-51db-aa18-a5a48e51a166,ca_on_toronto,Thomas,Hall,,,role,,
+7142a70e-d380-53df-811f-52954361aa48,ca_on_toronto,Peter,Handjis,,,role,,
+035780d2-9d72-5bfc-b47a-7b34267d5ee7,ca_on_toronto,Jack,Hartley,,,role,,
+e3e4d842-3f3b-5839-8701-30af26f4b21f,ca_on_toronto,Heather,He,heatherhemayor@gmail.com,,role,,
+5f78a1a2-1181-5886-bac5-c264117f4158,ca_on_toronto,Mohamad,Kaaki,mohamadkaakim@gmail.com,,role,,
+bbcd468e-1988-5cf8-bea5-f7822c6704bd,ca_on_toronto,Georgios,Kalkounis,george@kalkounis.com,416-418-7666,role,,
+4534885b-e2dc-54ab-a70e-5db2be3664c7,ca_on_toronto,Isidoros,Kyrlangitses,,,role,,
+e67c1457-277a-5527-8a06-cbf5eb9a15e2,ca_on_toronto,Michael,Lamoureux,mayormike@michaellamoureux.ca,416-435-8690,role,,
+4952da3c-da64-594b-bb38-3d9537fd2a89,ca_on_toronto,Rick,Lee,,,role,,
+3e52befa-b125-5f3b-ba16-36a28ada1f69,ca_on_toronto,Eddie,Mayanja,,,role,,
+515a1cbf-c349-5b57-a00f-0249bd7ac024,ca_on_toronto,Sarah,McVie,mayormcvie2026@gmail.com,,role,,
+b7de5c22-8fc9-5ee0-9fad-a0925fd43f37,ca_on_toronto,Joseph,Osuji,,,role,,
+9d59dc25-e296-587b-a1e8-bcc9afe4e7be,ca_on_toronto,Odessa Paloma,Parker,info@odessaformayor.ca,,role,,
+33730a66-d986-59e5-a2e6-03956f1d6af5,ca_on_toronto,Faisal,Razi,,,role,,
+b5a0e612-7749-5fa6-863d-b21a78a7b4b1,ca_on_toronto,Amy,Rosen,Amy@RosenForMayor.ca,,role,,
+c30aa4ac-65f7-55f1-91de-b66c807d9f7b,ca_on_toronto,Kannan,S'ree Jr,,,role,,
+b55a4f18-1271-51f6-8063-231eb4880602,ca_on_toronto,Lyall,Sanders,Lyall@Sanders4Mayor.ca,647-704-7237,role,,
+18e539f5-193e-5188-a066-d54d0113229f,ca_on_toronto,Naomi,Sayers,,,role,,
+ef58698d-0068-55f4-b055-6f1d0b05a727,ca_on_toronto,Robert,Shusterman,rob.shusterman@gmail.com,416-837-1787,role,,
+99b25b21-727e-5e46-a433-882ad9eb40b0,ca_on_toronto,Weizhen,Tang,,,role,,
+f84f6f67-2066-5f41-a2fe-7330462e127a,ca_on_toronto,Jeffery,Tunney,smallguycleaner@hotmail.com,647-769-8609,role,,
+2f8b37f2-a80b-5734-97d9-d5b5b74679ad,ca_on_toronto,Jack,Weenen,,,role,,
+54447a3a-6bd4-50d2-b173-505d3ba11a56,ca_on_toronto,Leila,Yohannes,,,role,,
+009c6a17-69b7-51ac-af34-d9215ab77442,ca_on_toronto,Mostafa,Zandkarimi,,,role,,

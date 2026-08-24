@@ -1,0 +1,38 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+adab7404-3bd5-55d7-9ccc-8181936015a9,ca_on_kingston,Joseph,Abreu,josephabreu4countryside@gmail.com,,district,1,Countryside
+2854daa3-d13d-5d8a-acf6-5e711b85c5fa,ca_on_kingston,Vic,Sahai,vicsahai4kingston@gmail.com,613-544-9750,district,1,Countryside
+41e71e5b-0f03-5bf3-b310-55f820258849,ca_on_kingston,Jeff,Scott,jgscottkingston@gmail.com,613-547-6906,district,1,Countryside
+961a325c-44be-5c90-a6f5-b1fd88fddfa8,ca_on_kingston,Andrew,DaCosta,andrewforcouncil2026@gmail.com,343-422-5096,district,10,Sydenham
+5050769c-d8d3-516f-9c06-37b2e9538c4f,ca_on_kingston,Jago,Garrett,jagoforcouncil@gmail.com,,district,10,Sydenham
+74b01f8f-d04c-5665-a5f2-dd4b6cdc7027,ca_on_kingston,Rajesh,Kumar,rajesh.kumar04@gmail.com,416-579-9192,district,10,Sydenham
+3fbbc9f4-2822-542d-8ab7-8020ca685447,ca_on_kingston,John,Meligrana,john.meligrana@gmail.com,416-473-4438,district,10,Sydenham
+d7ce0f95-6b7c-5feb-8d92-8f7f942de503,ca_on_kingston,Annie,Palone,teamannie2026@gmail.com,613-483-9375,district,10,Sydenham
+e92d15fe-7ca3-5eb9-88cf-3c3f8a056b61,ca_on_kingston,Aba,Mortley,abaforcouncil@gmail.com,613-800-8750,district,11,King's Town
+fc4d5388-60ea-58d0-bb3f-ff4c301e79c4,ca_on_kingston,Melissa,Reid,mmreid2018@gmail.com,343-333-2899,district,11,King's Town
+c6ae6932-e955-5bc4-b428-46c7aae7ea01,ca_on_kingston,Greg,Ridge,info@gregoryridge.ca,613-929-2285,district,11,King's Town
+acc0b04d-5b3f-5235-96c9-7dfb2ef0655e,ca_on_kingston,Ryan,Boehme,ryan@ryanboehme.ca,613-561-8557,district,12,Pittsburgh
+ca5f9c9c-31d2-5b60-982f-9cab459614cd,ca_on_kingston,Matt,McTaggart,matt@mattmctaggart.ca,613-985-0314,district,12,Pittsburgh
+1491aafc-cfe7-5832-b305-6c6a43276011,ca_on_kingston,Chelsea,Rae,chelsea@chelsearae.ca,613-770-3467,district,12,Pittsburgh
+c9d73977-f555-53bf-bd02-28e3894ae5ca,ca_on_kingston,Zachary,Typhair,zachary@zacharytyphair.ca,613-876-8011,district,12,Pittsburgh
+63722cee-5717-5c4f-86aa-a3b837c9975b,ca_on_kingston,Paul,Chaves,paulchaves2026@gmail.com,,district,2,Loyalist-Cataraqui
+8f3b2748-10e2-54ee-aaf2-af21ef1fa07f,ca_on_kingston,Dorian,Hartley,dorianhartley77@gmail.com,613-888-8798,district,2,Loyalist-Cataraqui
+21d3ba86-203a-59b7-b0df-b11d18893831,ca_on_kingston,Jeff,Pearce,jeff@jeffpearceforcouncil.ca,613-770-0904,district,2,Loyalist-Cataraqui
+fa540a6b-6e11-5abe-a2a6-134b0d642eae,ca_on_kingston,Charanjeev,Sekhon,charanjeevsekhon0@gmail.com,613-766-4058,district,2,Loyalist-Cataraqui
+85b38b18-4edd-5449-ad27-155e2b33b940,ca_on_kingston,Joel Anthony,Bruce,joelanthonybruce@gmail.com,613-217-4104,district,3,Collins-Bayridge
+19f4e744-20a2-5660-b7bc-6a520d6c2afa,ca_on_kingston,Lisa,Osanic,lisaosanic@gmail.com,613-389-7336,district,3,Collins-Bayridge
+ec100a72-0193-5e0f-9606-723ca598d594,ca_on_kingston,Stephen,Cuthbertson,stephen@stephencuth.ca,613-917-9656,district,4,Lakeside
+ba019d1d-19cb-5c11-9db8-3465cf7b41fd,ca_on_kingston,Wendy,Stephen,wendystephenygk@gmail.com,613-328-4742,district,4,Lakeside
+8d7a7485-3420-5399-aece-e0db71cabce9,ca_on_kingston,Don,Amos,donamos4portsmouth@gmail.com,613-888-3278,district,5,Portsmouth
+c9792151-f12b-5365-a6bc-d6ac61e04fd6,ca_on_kingston,Prakash,Dayal,dayalpr@gmail.com,613-217-6708,district,6,Trillium
+ce04b7cb-19eb-503b-afcc-d3ca07705150,ca_on_kingston,Jamshed,Hassan,jimmyhassan@hotmail.com,613-888-6760,district,6,Trillium
+6707a0d3-5eee-5f7d-af39-29af3553ff74,ca_on_kingston,Michael,Judd,michaeljudd4u@gmail.com,905-467-9361,district,7,Kingscourt-Rideau
+01fba1aa-2c57-56a1-9106-edb802338df1,ca_on_kingston,Kevin,Smith,1997smithkevin@gmail.com,,district,7,Kingscourt-Rideau
+f4c3e066-4761-53d9-8871-6d0defd21442,ca_on_kingston,Brandon,Tozzo,brandon@brandontozzo.ca,613-540-1718,district,7,Kingscourt-Rideau
+c7de1616-18e1-5598-9c19-6b5157ae746c,ca_on_kingston,Roger,Dennis,rogeradennis1966@gmail.com,613-329-9965,district,8,Meadowbrook-Strathcona
+3a60e84a-cff0-5b31-95bd-494418d91577,ca_on_kingston,Daria,Juudi-Hope,info@votedaria.ca,,district,8,Meadowbrook-Strathcona
+f91b3a87-181b-58cb-8c39-eede3ef4b9e1,ca_on_kingston,Jeff,McLaren,jeff@jeffmclaren.ca,613-328-1638,district,8,Meadowbrook-Strathcona
+1ebce3f6-e990-5eb9-afe1-5de2f0e45565,ca_on_kingston,Vincent,Cinanni,vince@vince4kingston.ca,343-580-1498,district,9,Williamsville
+b855ccec-ed81-58fb-ae91-92f56c02e4ae,ca_on_kingston,Grant William,Bedard,william_bedard@hotmail.ca,613-766-4915,role,,
+81ef1656-1e49-5596-9778-4616bdb224c1,ca_on_kingston,Conny,Glenn,connyaprilglenn@gmail.com,,role,,
+105fe0ba-67f2-5e00-9b64-e2adabcf214f,ca_on_kingston,Vanessa,Mensah,info@vanessamensahforkingston.ca,613-449-3396,role,,
+6f61f27b-212e-527e-850d-532b10167377,ca_on_kingston,Bryan,Paterson,bryan@bryan4mayor.ca,613-917-5464,role,,

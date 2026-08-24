@@ -1,0 +1,33 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+881455e4-6ac0-5be5-8e8a-5c0efc95410b,ca_on_markham,Christina,Cadorin,christina@voteforchristina.ca,416.550.9893,district,1,Ward 1
+3e5445bc-e898-5549-85f6-1533547c958f,ca_on_markham,Keith,Irish,keith@keithirish.ca,,district,1,Ward 1
+7f505d1a-1a41-5759-b110-478e7ab33f26,ca_on_markham,Ritch,Lau,ward2@ritchlau.ca,,district,2,Ward 2
+9f68f9bd-b78c-5756-a66c-7324f2c439b4,ca_on_markham,Richard,Lee,,,district,2,Ward 2
+4b86c2d2-7049-523d-a469-4faa40bca398,ca_on_markham,Mark,Lin,votemarklin@gmail.com,289.818.9238,district,2,Ward 2
+88452b6a-d826-5fcd-83be-fa45fd2132ef,ca_on_markham,Haohui,Yu,dave@vote4yu.ca,647.864.0476,district,2,Ward 2
+05bfe276-fbfc-5ebf-9f98-07b3015ed853,ca_on_markham,Marina,Antonoglou,,,district,3,Ward 3
+ce89bbe7-4ff3-5365-81c6-07dac05c837f,ca_on_markham,Annie,Chan,vote.anniechan@gmail.com,416.889.8666,district,3,Ward 3
+aa02749d-9f3b-51db-9d23-d6dd02a9889d,ca_on_markham,Larry,Lau,votelarrylau@gmail.com,,district,3,Ward 3
+e4745739-5901-54e0-9c96-c73cb0328840,ca_on_markham,Ron,Lynn,ron@ronlynn.ca,437.500.0801,district,3,Ward 3
+164500f1-af69-55d8-899b-f3f4426c753f,ca_on_markham,Jack,Ng,jacktkng2026@gmail.com,,district,3,Ward 3
+ea47e6d8-c627-5bbf-9707-31d9aeff91b1,ca_on_markham,Thomas,Psarianos,info@psarianos4ward3.com,647.367.4539,district,3,Ward 3
+dbb5d57e-ccef-5250-9bc4-6df517212871,ca_on_markham,Karen,Rea,karen4markham@gmail.com,416.702.6286,district,4,Ward 4
+5f3b2322-2c72-5315-884a-93049818dfef,ca_on_markham,Andrew,Keyes,andrew@keyes.ca,416.509.7496,district,5,Ward 5
+2abd5ffa-9962-5af7-9b33-0a015c16eb17,ca_on_markham,Laurence,Liang,,705.825.5264,district,5,Ward 5
+07f923f4-f2e8-5dd1-a882-db87265bb824,ca_on_markham,Thamiraa,Ragikaran,voteforthamiraa@gmail.com,647.936.8742,district,5,Ward 5
+ee7cd910-38fd-5326-9ebd-b8e6347faa17,ca_on_markham,Jude,Ahiaegbe,,,district,6,Ward 6
+b2cbadbd-c1e4-5f27-ae10-8ee307751af4,ca_on_markham,Joanna,Yu,votejoannayu@gmail.com,416.801.8648,district,6,Ward 6
+182ec71f-bd09-585c-8a99-1e1f23a68e4c,ca_on_markham,Killi,Chelliah,contact@killichelliah.ca,416.624.7562,district,7,Ward 7
+021a2a88-182c-52f7-b897-92dcbb829956,ca_on_markham,Nimisha,Patel,nimisha@nimishapatel.ca,416.671.6464,district,7,Ward 7
+99b39bff-c486-57bf-883c-0cebfe360d11,ca_on_markham,Sameer,Qureshi,sameerformarkham@gmail.com,647.995.9360,district,7,Ward 7
+09d32343-e783-5e21-b630-1a8efa8c1db9,ca_on_markham,Stanley,Sam,emailstanley77@gmail.com,416.844.4396,district,7,Ward 7
+22a128d9-2bf0-53fb-85cd-1b33c3c53f54,ca_on_markham,Jenny,Chen,votejennychen@gmail.com,,district,8,Ward 8
+90ef9763-232c-51ae-a0db-c6c130a38a5e,ca_on_markham,Isa,Lee,,,district,8,Ward 8
+74173e26-d4bf-5bbd-9089-ec5f58a2cf82,ca_on_markham,Kristian,Chan,,,role,,Regional Councillor
+16a69d93-9d7b-5c47-83a2-9270d32bf771,ca_on_markham,Paul,Chiang,paul@paulchiang.ca,,role,,Regional Councillor
+ad8ae3f8-4865-5176-b6a4-f8b40c3a116f,ca_on_markham,Alan,Ho,alan@re-elect-alanho.ca,289.577.3303,role,,Regional Councillor
+56705b05-d475-56b6-b127-459d886e3f07,ca_on_markham,Jim,Jones,jjonesmlive@gmail.com,416.725.5930,role,,Regional Councillor
+09e4a3df-57a8-5687-a968-db1c64a17a61,ca_on_markham,Ivy,Lee,info@ivylee.ca,416.817.8809,role,,Regional Councillor
+d295f43e-c43c-512a-87f0-454f692fa5d7,ca_on_markham,Joe,Li,joeli@joeli.ca,416.200.9792,role,,Regional Councillor
+27a7b7ea-953a-5bf4-b1a9-51e6a87cc5bb,ca_on_markham,Martin,Ross,martinross4mayor@gmail.com,416.989.7459,role,,
+21ce2982-c466-50fb-8e6f-ce3036f9134a,ca_on_markham,Joe,Tay,joe@joetay.ca,647.888.1810,role,,Regional Councillor

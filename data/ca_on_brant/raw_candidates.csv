@@ -1,0 +1,28 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+900eede4-f942-5769-80e7-da9446ef7e63,ca_on_brant,Mary-Jane,Brown,maryjaneb913@gmail.com,519.750.4346,district,1,Ward 1
+8f4817da-a31f-5293-8ea4-c08f6e64af4d,ca_on_brant,Denise Louise,Dyment,,,district,1,Ward 1
+388e81ba-606d-5d9a-8366-d3dc9b7a027c,ca_on_brant,John,Kemp,jkempward1@gmail.com,519.771.1473,district,1,Ward 1
+0a1550d3-b91e-587b-b187-48ba5397f456,ca_on_brant,John,MacAlpine,macalpine4brant@outlook.com,519.757.9359,district,1,Ward 1
+85984748-4416-54f5-b0ee-ca49523689ff,ca_on_brant,Steve,Schmitt,schmellio@silomail.com,226.802.0469,district,1,Ward 1
+31b7c0bf-36a1-5f35-9707-43eb64f984be,ca_on_brant,Steve,Howes,votehowes@gmail.com,519.442.4955,district,2,Ward 2
+89e9eafe-6788-52c7-aeba-4834d78ba2a6,ca_on_brant,Jeff,Johnston,colonelh20@gmail.com,226.920.5622,district,2,Ward 2
+3dd92a49-c071-5863-9353-feeb6296e3ab,ca_on_brant,James,McCulloch,james4ward2@gmail.com,226.750.8472,district,2,Ward 2
+87e83346-1dac-5a6e-833b-7135e39305a0,ca_on_brant,Clifford,Atfield,cliffatfieldward3@gmail.com,519.442.6041,district,3,Ward 3
+ea1b2ef0-1508-511b-ab20-33f34ea83acc,ca_on_brant,John,Bell,johnbellward3cob@gmail.com,519.209.2277,district,3,Ward 3
+b6e6717b-ef8b-5459-ad11-8be1d6ce56a9,ca_on_brant,John,Peirce,johnpeirceward3@gmail.com,519.442.7134,district,3,Ward 3
+e67ebabf-ef10-510f-93d8-8b69533c10b3,ca_on_brant,Arooj,Shaikh,aroojforcouncillorward3@gmail.com,416.988.5043,district,3,Ward 3
+e6b11405-5081-58d9-878a-68d0b8a6045e,ca_on_brant,David,Spencer,,416.909.5211,district,3,Ward 3
+f641ea90-6bfe-5618-828f-e81470ce6732,ca_on_brant,Emad,Yosif,yosfi@hotmail.ca,519.717.1516,district,3,Ward 3
+032a16f7-4b33-59ba-b7b7-c383d7f7caa8,ca_on_brant,Andrea,Bowden,bowden4ward4@gmail.com,226.920.8225,district,4,Ward 4
+ea6e7322-fdd7-59f1-8eec-0b83202b43a3,ca_on_brant,Robert,Chambers,Robert.chambers@silomail.com,519.754.6399,district,4,Ward 4
+58568c86-09c1-59dc-8fc9-6939590c399d,ca_on_brant,Claudine,Craigie,Claudine.Craigie@gmail.com,519.913.9235,district,4,Ward 4
+508c628e-e1b5-5b4f-9a05-a2d7f088b417,ca_on_brant,Corey,Donn,cdonnbrant@gmail.com,519.909.6101,district,4,Ward 4
+09b897c1-70df-5fa9-9975-8b12a6cb553a,ca_on_brant,Glenn,Hughes,yourvoicematterstomeward4@gmail.com,416.885.6802,district,4,Ward 4
+6e18f774-2b5c-570c-ab5c-01b7c277654f,ca_on_brant,Heather,Keam,heather_ward4@hotmail.com,519.458.4626,district,4,Ward 4
+e0216caf-907b-5504-86fe-81b097bfbb92,ca_on_brant,Elaine,Tully,elaine@electelaine.ca,519.770.7373,district,4,Ward 4
+103d9c11-3a9b-5960-aedb-44007ff5f26c,ca_on_brant,Sonia,Brown,soniabrown3@rogers.com,226.920.4458,district,5,Ward 5
+50c6c535-5628-5888-a084-1b3c85de6817,ca_on_brant,Mike,Gatopoulos,mike@mikegatopoulos.ca,519.717.0874,district,5,Ward 5
+078aa9af-7d23-5bd9-8de1-74ded3669610,ca_on_brant,Ella,Haley,ehaley1@gmail.com,226.802.2802,district,5,Ward 5
+0b6fe90e-8943-5338-bef0-00b77ef05ce1,ca_on_brant,Christine,Garneau Bisaillon,campaign@garneauformayor.ca,519.448.4688,role,,
+7648e524-b10b-5ade-91d7-75c03129fa27,ca_on_brant,Graham,Horner,,519.442.2095,role,,
+cef0fb85-a7ee-52bd-8146-44425c07cc73,ca_on_brant,Jennifer,Kyle,kyleforbrant@gmail.com,519.242.0898,role,,
