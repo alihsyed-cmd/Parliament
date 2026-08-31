@@ -75,12 +75,15 @@ allowed_origins = [
     for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:5173").split(",")
 ]
 
-CORS(app, origins=allowed_origins, methods=["GET", "POST"],
+CORS(app, origins=allowed_origins, methods=["GET", "POST", "PATCH", "DELETE"],
      allow_headers=["Content-Type"], supports_credentials=True)
 
 from claim import claim_bp
 app.register_blueprint(claim_bp)
 POSTAL_CODE_REGEX = re.compile(r"^[A-Z]\d[A-Z]\d[A-Z]\d$")
+
+from portal import portal_bp
+app.register_blueprint(portal_bp)
 
 # English-only for now. Sent on every response so the envelope is stable when
 # i18n returns; there is no ?lang= input param anymore.
