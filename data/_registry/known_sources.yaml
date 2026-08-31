@@ -6057,3 +6057,73 @@ sources:
   covers: ['mayor', 'councillor']
   notes: "Official \"Voter Resources\" page, \"Candidate Contact Information\" section, same norfolkcounty.ca domain/authority as the Filed Nominations roster. Candidate names grouped under the same office/ward headings (Mayor, Ward 1-7 Councillors) with phone, email, address, and campaign website supplied directly by the candidate (\"Norfolk County is not responsible for content posted on external websites by candidates... this information is supplied directly by the candidates\"). Coverage is a strict subset of the Filed Nominations roster — candidates who did not supply contact info are simply absent (e.g. mayoral candidates Doug Brunton, Ken Hewitt, Adam Veri, and Ward 2's Debbie Wilbur, Ward 5's Bob Townsend do not appear here at all). Use this as a supplementary contact lookup keyed by candidate name against the Filed Nominations roster, not as the roster of record. Some entries have only email or only phone."
   last_confirmed: 2026-08-17
+
+- slug: ca_on_hamilton
+  source_type: candidates
+  url: "https://www.hamilton.ca/city-council/municipal-election/candidates-third-party-advertisers/certified-candidates"
+  authority: "Hamilton, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "2026 municipal election certified candidate roster, re-fetched 2026-08-29 after the Aug 24 2026 clerk certification deadline. Retrieved via headless-chrome."
+  last_confirmed: 2026-08-29
+
+- slug: ca_on_vaughan
+  source_type: candidates
+  url: "https://www.vaughan.ca/news/city-vaughans-list-acclaimed-and-certified-candidates-2026-municipal-election"
+  authority: "Vaughan, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "2026 municipal election certified candidate roster, re-fetched 2026-08-29 after the Aug 24 2026 clerk certification deadline. Retrieved via headless-chrome."
+  last_confirmed: 2026-08-29
+
+- slug: ca_on_ottawa
+  source_type: candidates
+  url: "https://ottawa.ca/en/city-hall/elections/candidates/nominated-candidates/candidates-mayor"
+  authority: "City of Ottawa, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor']
+  notes: "2026 certified/acclaimed candidate roster — Mayor. ottawa.ca is Incapsula-protected and publishes ONE PAGE PER WARD under /certified-and-acclaimed-candidates/; retrieved via headless Chrome with ~75s spacing to stay under the bot-block threshold."
+  last_confirmed: 2026-08-29
+
+- slug: ca_on_ottawa
+  source_type: candidates
+  url: "https://ottawa.ca/en/city-hall/elections/candidates/nominated-candidates/candidates-city-councillor"
+  authority: "City of Ottawa, Office of the City Clerk"
+  format: "html"
+  covers: ['councillor']
+  notes: "2026 certified/acclaimed candidate roster — Ward 1 Orleans East-Cumberland (hub page). ottawa.ca is Incapsula-protected and publishes ONE PAGE PER WARD under /certified-and-acclaimed-candidates/; retrieved via headless Chrome with ~75s spacing to stay under the bot-block threshold."
+  last_confirmed: 2026-08-29
+
+- slug: ca_on_richmond_hill
+  source_type: boundary
+  url: "https://services5.arcgis.com/cu2HFDk7AqvG7e31/arcgis/rest/services/Ward_Boundary_read/FeatureServer/0"
+  authority: "City of Richmond Hill GIS (ArcGIS Online org account CRH_GIS_TechTeam)"
+  format: "esri-rest"
+  notes: "Layer 0 \"Ward Boundary\", 6 polygon features, field WARD = 'WARD 1'..'WARD 6' (also carries the sitting COUNCILOR name). Export GeoJSON via /query?where=1=1&outFields=*&outSR=4326&f=geojson. Richmond Hill has NO public open-data portal and no gis.richmondhill.ca host; this item was located via the ArcGIS Online search API by owner CRH_GIS_TechTeam."
+  last_confirmed: '2026-08-31'
+
+- slug: ca_on_thunder_bay
+  source_type: candidates
+  url: "https://www.thunderbay.ca/en/city-hall/2026-election-candidate-profiles.aspx"
+  authority: "City of Thunder Bay, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "2026 Election Candidate Profiles page — the certified candidate roster. Retrieved 2026-08-31 via plain curl (no JS shell). Thunder Bay elects 5 At Large councillors plus 7 ward councillors."
+  last_confirmed: 2026-08-31
+
+- slug: ca_on_chatham_kent
+  source_type: boundary
+  url: "https://services1.arcgis.com/BlSm9A1poQIGIz9S/arcgis/rest/services/Future_Municipality_of_Chatham_Kent_Wards/FeatureServer/13"
+  authority: "Municipality of Chatham-Kent GIS (ArcGIS Online org account CK_agol_admin)"
+  format: "esri-rest"
+  notes: "Layer 13 \"NewWardBoundaries\" — the EIGHT wards adopted by Bylaw 29-2025 and effective at the 2026 election. Fields wardNumber (1-8), wardName, numCouncillors (14 councillors total: wards 3 and 4 elect 1, the rest elect 2). Ward 2 South East Kent has a ring self-intersection that must be repaired (shapely make_valid) before a PostGIS load. Saved as data/ca_on_chatham_kent/wards_2026.geojson but NOT yet activated in jurisdictions.csv: adopting it replaces the outgoing six wards the sitting council was elected under, and districts has UNIQUE(jurisdiction_slug, external_id) with no version column, so both sets cannot coexist. Pending a product decision."
+  last_confirmed: '2026-08-31'
+
+- slug: ca_on_richmond_hill
+  source_type: candidates
+  url: "https://www.richmondhill.ca/en/living-here/election-candidates.aspx"
+  authority: "City of Richmond Hill, Office of the City Clerk"
+  format: "html"
+  covers: ['mayor', 'councillor']
+  notes: "\"Certified Candidates\" page (also reachable as richmondhill.ca/RHVotes). Nominations closed 2026-08-21 14:00; Clerk certified 2026-08-24. Richmond Hill elects a Mayor, up to two AT-LARGE Regional Councillors, and one ward Councillor in each of Wards 1-6. Retrieved 2026-08-31."
+  last_confirmed: 2026-08-31

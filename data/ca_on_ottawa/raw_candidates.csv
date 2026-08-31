@@ -1,5 +1,5 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
-cba0a2e0-fda1-5683-be74-846d5f0d9e88,ca_on_ottawa,Yvette,Ashiri,electyvette@yvetteashiri.ca,613 400-1343,district,1,Orléans East-Cumberland
+cba0a2e0-fda1-5683-be74-846d5f0d9e88,ca_on_ottawa,Yvette,Ashiri,electyvette@yvetteashiri.ca,343-254-4781,district,1,Orléans East-Cumberland
 a143a718-4d9d-5c6a-b589-e5c8514380bc,ca_on_ottawa,Bob,Bell,bob4orleans@gmail.com,613-612-4968,district,1,Orléans East-Cumberland
 4c4eba50-0138-5e08-afc1-be99b5d82a95,ca_on_ottawa,Mazhar,Choudhry,mazhar@choudhry.org,,district,1,Orléans East-Cumberland
 4d2e0c3f-ab4e-5443-92ea-ac389a458709,ca_on_ottawa,Barbara Daniela,Gandolfo,BarbaraForCouncil@gmail.com,,district,1,Orléans East-Cumberland
@@ -8,63 +8,95 @@ a143a718-4d9d-5c6a-b589-e5c8514380bc,ca_on_ottawa,Bob,Bell,bob4orleans@gmail.com
 771c3803-93ac-5087-80ad-7d2e66fb67e2,ca_on_ottawa,Tammie,Trellert,hello@tammietrellert.ca,,district,1,Orléans East-Cumberland
 dca35376-25a2-54b9-8c8b-b96227c4e034,ca_on_ottawa,Jessica,Bradley,Jessica@Bradley2026.ca,,district,10,Gloucester-Southgate
 d74f789f-02da-5122-9fa4-8010498c3464,ca_on_ottawa,Donna,Dickson,contact@votedonnadickson.ca,613-793-4290,district,10,Gloucester-Southgate
+e5167473-0827-55d1-9784-63e7faec3e0c,ca_on_ottawa,Ayub,Omar,,,district,10,Gloucester-Southgate
+df3fb2bb-577c-5631-b62b-61ed9819c01b,ca_on_ottawa,Ahmed,Rashid,ahmedrashid4ward10@gmail.com,,district,10,Gloucester-Southgate
 80c04344-5394-5860-8b78-02e38fabb3a0,ca_on_ottawa,John,Redins,john@johnredins.com,613-277-4227,district,10,Gloucester-Southgate
+cce042c7-e011-54d1-8062-e1898175851c,ca_on_ottawa,Coreen,Corcoran,coreenBHC@proton.me,,district,11,Beacon Hill-Cyrville
 0be3e7ef-ce6f-5818-a270-49509258c6d8,ca_on_ottawa,Cathryne,Milburn,cathryne.milburn@gmail.com,,district,11,Beacon Hill-Cyrville
-06ae551b-f64a-54ca-8065-015d26514f01,ca_on_ottawa,Tim,Tierney,tim@timtierney.ca,613-276-3536,district,11,Beacon Hill-Cyrville
+06ae551b-f64a-54ca-8065-015d26514f01,ca_on_ottawa,Tim,Tierney,tim@timtierney.ca,343-842-1234,district,11,Beacon Hill-Cyrville
+8598b403-528d-5ca8-b39a-952beaec026b,ca_on_ottawa,Julie Fiala,Chartrand,juliefialachartrand@gmail.com,613-400-9967,district,12,Rideau-Vanier
 a9aa0dd2-720e-50dc-b622-3d795e8530c0,ca_on_ottawa,Lyra,Evans,lyra.evans.ott@gmail.com,613-793-9469,district,12,Rideau-Vanier
+297dcce0-e74b-5db1-b73b-e8e74b8f242d,ca_on_ottawa,Brian,Paquette,the9thpaquette@gmail.com,613-207-8049,district,12,Rideau-Vanier
+d66b4825-2061-5a56-8bc5-c8143c1d373b,ca_on_ottawa,Stéphanie,Plante,steph@sp2026.ca,,district,12,Rideau-Vanier
+3b98c924-68c4-5d49-a4a2-d5d8112dbe2b,ca_on_ottawa,Michael Karl,Sewanaku,mikesforrideau@gmail.com,343-204-9716,district,12,Rideau-Vanier
+46685268-99b9-5e07-afec-c0b2b9791561,ca_on_ottawa,Eric,Smith,,,district,12,Rideau-Vanier
 815169a8-b3c4-58a6-8a05-77aa838226d2,ca_on_ottawa,Peter J.,Karwacki,peterkarwacki.overbrook@gmail.com,613-304-5844,district,13,Rideau-Rockcliffe
 5f3928f3-f29a-5ddf-9882-6e4b8040ccc7,ca_on_ottawa,Rawlson,King,info@rawlsonking.ca,613 822- 0396,district,13,Rideau-Rockcliffe
 8f6b176d-45c9-55be-9ab9-c26eb93052e5,ca_on_ottawa,Dillon,Anderson,dillon2003@hotmail.ca,705-358-9039,district,14,Somerset
 b4d0fd1c-867b-59a3-b5f7-9c7ef84af0cf,ca_on_ottawa,Robert,Dekker,info@robertdekker.ca,343-567-5264,district,14,Somerset
+b6d96dd5-be46-5735-9dc4-989c9c2568a1,ca_on_ottawa,Nicholas,Gollé,nicholasgolle@nicholasgolle4somersetward.ca,,district,14,Somerset
 176a0a7a-7717-5ff0-9eb8-a68fb0fecb42,ca_on_ottawa,Michael,Tay,michaeltaycommunity@gmail.com,,district,14,Somerset
-97a6aba1-4e35-5a8b-b692-445978a54789,ca_on_ottawa,Ariel,Troster,,,district,14,Somerset
+97a6aba1-4e35-5a8b-b692-445978a54789,ca_on_ottawa,Ariel,Troster,info@troster2026.ca,,district,14,Somerset
 c89cc9aa-b83c-5885-9bac-1fdcae1c5f18,ca_on_ottawa,Joanne,Chianello,joanne@joannechianello.ca,,district,15,Kitchissippi
-0f1084c7-d6e5-5556-9551-8caa5b3c435a,ca_on_ottawa,Michelle,Groulx,info@michellegroulx.ca,613-699-1310,district,15,Kitchissippi
+cc9efbfc-49a7-524f-9ff1-049af0e139bd,ca_on_ottawa,Xavier,Commerford,,,district,15,Kitchissippi
 b6243efd-0093-5594-8e5d-14976ec536f2,ca_on_ottawa,Brian,Innes,info@brianinnes.ca,613-252-2347,district,15,Kitchissippi
 4a2b23d7-b8b9-5cf8-a7e1-b785649b56f7,ca_on_ottawa,Subhir,Uppal,vote@subhiruppal.com,613-725-5678,district,15,Kitchissippi
-35d4aef5-ad3b-581e-b50e-4e840115f329,ca_on_ottawa,Riley,Brockington,RiverWard2026@yahoo.com,,district,16,River
+35d4aef5-ad3b-581e-b50e-4e840115f329,ca_on_ottawa,Riley,Brockington,RiverWard2026@yahoo.com,343-254-5210,district,16,River
+bd03d376-da12-5b2a-8e8b-8a3332ee23fa,ca_on_ottawa,Jaac,Doduck,info@votedoduck.ca,,district,17,Capital
 36c4787d-cc1b-57fa-ad3f-ccfa761d5945,ca_on_ottawa,Farah,Gulzar,farahgulzarward17@gmail.com,705-491-2105,district,17,Capital
 746e0153-2d14-521f-9c22-bcac68131dab,ca_on_ottawa,Shawn,Menard,info@menard2026.ca,343-296-9312,district,17,Capital
-d13295b1-8702-58ff-8b42-0596000cb76b,ca_on_ottawa,Marty,Carr,,,district,18,Alta Vista
+d6e990ce-2695-591c-9e63-481bfb707204,ca_on_ottawa,Muhyadin Omar,Barkhat,muhyadinbarkhat6@gmail.com,613-265-7069,district,18,Alta Vista
+d13295b1-8702-58ff-8b42-0596000cb76b,ca_on_ottawa,Marty,Carr,altavistamarty@gmail.com,,district,18,Alta Vista
 224a7107-6e3b-5469-b849-3c057b6d8237,ca_on_ottawa,Tressy,El-Hawi,tressyelhawi67@gmail.com,613-869-7878,district,18,Alta Vista
-66f6dd5d-b9bc-5937-b759-1dad514801ac,ca_on_ottawa,Derek,McSweeney,derekmcsweeney59@gmail.com,613-850-9411,district,18,Alta Vista
+66f6dd5d-b9bc-5937-b759-1dad514801ac,ca_on_ottawa,Derek,McSweeney,derekmcsweeney@votemcsweeney.ca,613-850-9411,district,18,Alta Vista
+90dd31f3-ccfc-5dde-9739-4522df04313d,ca_on_ottawa,Elsa,Niyongabo,votezelsa@gmail.com,,district,18,Alta Vista
 f5158254-23dc-537d-9b5b-16382f733f24,ca_on_ottawa,Catherine,Kitts,,,district,19,Orléans South-Navan
 850f85ac-3adc-544b-b05d-4a8eda1a1dc9,ca_on_ottawa,Jason,Wing,,,district,19,Orléans South-Navan
 0936fad8-8199-5955-aa4d-2f6817941f69,ca_on_ottawa,Laura,Dudas,info@voteforlaura.ca,,district,2,Orléans West-Innes
+4d1e72bb-725b-5b61-ba05-530b735e21f8,ca_on_ottawa,Jenna,Jessop,contact@jennajessop.ca,,district,2,Orléans West-Innes
+1ce8d98a-c4b2-5216-b7c2-a8056bd08432,ca_on_ottawa,David,Purchase,david@davidpurchase.ca,613-867-9581,district,2,Orléans West-Innes
+e87f8f4d-a139-5b6c-86dd-799b4ed717c2,ca_on_ottawa,Bruce Anthony,Faulkner,,,district,20,Osgoode
 38939177-f238-57b2-a505-a65b4511055b,ca_on_ottawa,Isabelle,Skalski,electisabelleskalski@gmail.com,,district,20,Osgoode
-956fe029-6bc1-5bc6-a327-6b5cee3d0ef7,ca_on_ottawa,David,Brown,,613-325-1631,district,21,Rideau-Jock
+956fe029-6bc1-5bc6-a327-6b5cee3d0ef7,ca_on_ottawa,David,Brown,electdavidbrown1@gmail.com,613-325-1631,district,21,Rideau-Jock
 4fcb21bc-3341-56fb-bb91-cf25cce43ca5,ca_on_ottawa,Steve,Desroches,info@stevedesroches.vote,,district,22,Riverside South-Findlay Creek
 5d9839e0-b99d-511b-9a0e-7e62306893fa,ca_on_ottawa,Muyiwa,Ojo,info@muyiwaojo.ca,343-576-0956,district,22,Riverside South-Findlay Creek
 1990d172-37d4-5aa3-a3fc-ea04d6a558bc,ca_on_ottawa,Sam,Bhalesar,sambhalesar@gmail.com,613-868-8168,district,23,Kanata South
 86c81574-748c-5afa-a216-4c71aff11992,ca_on_ottawa,Erin,Coffin,erinbcoffin@yahoo.com,613-219-0097,district,23,Kanata South
-20dd35ad-4079-5e11-a5dc-625935da14ac,ca_on_ottawa,Allan,Hubley,,,district,23,Kanata South
+20dd35ad-4079-5e11-a5dc-625935da14ac,ca_on_ottawa,Allan,Hubley,votehubley@gmail.com,,district,23,Kanata South
 210c1a32-2bd4-5aca-a922-da3700e0fd35,ca_on_ottawa,Megan,Strazds-Esenbergs,meganforcouncil23@gmail.com,,district,23,Kanata South
 c3e5af88-451f-53bd-8ebc-cee5b5ade724,ca_on_ottawa,Zahy A,Adam,info@adamzahy.ca,,district,24,Barrhaven East
+8c477faf-5f04-5b0d-90d8-28e0e159485b,ca_on_ottawa,Ahmed,Alsabaawi,,,district,24,Barrhaven East
 2e7ee69e-8719-5840-aa6e-0ca60802a1e4,ca_on_ottawa,Wilson,Lo,info@wilsonlo.ca,,district,24,Barrhaven East
 5ebbc985-6d57-5bbd-88ec-cb7250d04176,ca_on_ottawa,Yoosaf,Melparamba,yoosaf.ottawa@gmail.com,343-987-4363,district,24,Barrhaven East
-d934f5db-fe48-5cad-b0c5-9aa9097984be,ca_on_ottawa,Jules,Ruhinda,,,district,24,Barrhaven East
+d934f5db-fe48-5cad-b0c5-9aa9097984be,ca_on_ottawa,Jules,Ruhinda,julesteamward24@gmail.com,,district,24,Barrhaven East
+0fbb3537-6aab-548a-9bf8-51b5ab337403,ca_on_ottawa,Jeff,Balys,jeff@balys.org,613-222-4031,district,3,Barrhaven West
 d6e7bf38-7f45-544f-9d31-1596389d9499,ca_on_ottawa,Donna,Blackburn,info@donnablackburn.ca,613-884-6084,district,3,Barrhaven West
 6de3cefd-06a1-5b3b-867d-c55b251fdd4d,ca_on_ottawa,David,Hill,david@barrhavendavid.ca,,district,3,Barrhaven West
-fe90ef62-ef4b-5083-a3e2-0ed512d07bbb,ca_on_ottawa,Cathy,Curry,,,district,4,Kanata North
-54f6f83e-8028-55c6-b546-e8ee1ae4caf0,ca_on_ottawa,Christine,Harrison,hello@christineharrison.ca,613-203-8805,district,5,West Carleton-March
-bb889489-d584-5cc2-9448-fb2ad4414002,ca_on_ottawa,Clarke,Kelly,info@voteclarkekelly.ca,613-978-1031,district,5,West Carleton-March
+fe90ef62-ef4b-5083-a3e2-0ed512d07bbb,ca_on_ottawa,Cathy,Curry,cathyforkanata@gmail.com,,district,4,Kanata North
+294acb73-f0b6-5921-b3ec-9ab225a9da15,ca_on_ottawa,Rob,Millan,rob@robmillan.ca,,district,4,Kanata North
+e4545959-211e-543f-aac6-3d397e8b398e,ca_on_ottawa,James,Murchison,murchison2026@gmail.com,,district,4,Kanata North
+54f6f83e-8028-55c6-b546-e8ee1ae4caf0,ca_on_ottawa,Christine,Harrison,hello@christineharrison.ca,613-203-8805,district,5,West Carleton
+bb889489-d584-5cc2-9448-fb2ad4414002,ca_on_ottawa,Clarke,Kelly,info@voteclarkekelly.ca,613-978-1031,district,5,West Carleton
+b0528fe2-7605-5177-81b9-db35467355cf,ca_on_ottawa,Dylan,Nose,,,district,5,West Carleton
 c72c99b9-1866-571b-909e-fea73dffe676,ca_on_ottawa,Marie-Ange Yindaki,Ahinful,info@marieangeahinful.com,613-400-1590,district,6,Stittsville
-83b1b36f-b3c0-5222-afd8-41b65f381db1,ca_on_ottawa,Tanya,Hein,,,district,6,Stittsville
+83b1b36f-b3c0-5222-afd8-41b65f381db1,ca_on_ottawa,Tanya,Hein,Tanya@VoteTanya.ca,343-202-8261,district,6,Stittsville
 8121352d-466a-52ee-bacb-6eba2ef3d48c,ca_on_ottawa,Kevin,Hua,kevin@kevinhua.ca,613-859-5380,district,6,Stittsville
+7952595c-f103-533a-a49d-bf02bed63883,ca_on_ottawa,Paul,Meek,hello@paulmeek.ca,343-297-6057,district,6,Stittsville
 2d297d77-9eac-5646-8171-5ffd2eb4cc87,ca_on_ottawa,Sheetal,Narwal,info@sheetalnarwal.ca,343-543-6363,district,6,Stittsville
+369e3f38-eb5d-59c5-8249-c3feedda7073,ca_on_ottawa,Devin Michael Fitzgerald,O'Brien,devobrien48@gmail.com,613-612-0353,district,6,Stittsville
 8e2907c7-685b-597e-acac-5e7a873272f6,ca_on_ottawa,Theresa,Qadri,votetheresaq@gmail.com,613-620-0539,district,6,Stittsville
 f2c68ddf-97f3-5f4e-834d-d12da95fd7fd,ca_on_ottawa,Mani,Sharma,nagmani@nagmanisharma.ca,613-663-9292,district,6,Stittsville
 a35b2e07-dbd0-5a89-a5f6-30c5d78d52cf,ca_on_ottawa,Chelsea,Walton,info@votechelsea.com,,district,6,Stittsville
 356284e9-c954-5fc1-bf0c-a463c8757a54,ca_on_ottawa,Theresa,Kavanagh,theresa@reelecttheresakavanagh.ca,,district,7,Bay
+15d27e18-7b57-5747-bddc-be08d37d5831,ca_on_ottawa,Butch,Moore,,,district,7,Bay
 b00bbfc7-fac4-5f94-836c-176b7827d448,ca_on_ottawa,Spencer,Radford,vote@spencerradford.ca,,district,7,Bay
+651c2553-c502-5a91-b8c7-9ca4fc490c87,ca_on_ottawa,Malloum,Abakar,abakarmalloumcollege@gmail.com,343-209-6100,district,8,College
 bd5b5431-29b5-5f9a-a305-980e1f996c65,ca_on_ottawa,Laine,Johnson,lainejohnson4college@gmail.com,,district,8,College
 7baca26b-a426-5838-aacb-f74154313629,ca_on_ottawa,Sean,Devine,seandevine2026@gmail.com,,district,9,Knoxdale-Merivale
 60945dd8-f7ff-513b-b3b2-21a01c69714a,ca_on_ottawa,Anna,Ielo-Tal,anna4council@gmail.com,,district,9,Knoxdale-Merivale
 1b91f67e-7c4f-5566-a230-49ff2f89f7eb,ca_on_ottawa,Cole Fraser,Jones,cole@colefraserjones.ca,,district,9,Knoxdale-Merivale
 545f1b41-4806-5097-bcae-f33b19f81e80,ca_on_ottawa,Brandon,Ly,contact@brandonly.ca,,district,9,Knoxdale-Merivale
+64417014-f1a6-50ea-a4cf-9ad64630e626,ca_on_ottawa,Queen Divine Priya Amber,Bakshi,,613-400-4856,role,,
 51cfd0b6-cc64-53cd-a0f9-9877f153d56c,ca_on_ottawa,Zed,Chebib,ziad.fami.unif@gmail.com,613-805-9449,role,,
+11f179a7-5ade-559e-898c-6d150bdcd0d0,ca_on_ottawa,Bernard,Couchman,bcouchman@h2oboy.ca,343-998-4746,role,,
+a4a5400e-8783-560b-8ee3-1fbc81d3c734,ca_on_ottawa,Suraj,Harish,surajp.harish@gmail.com,613-413-3529,role,,
 7c4b457f-383b-5e86-a2e0-888c7e0d2d62,ca_on_ottawa,Alex,Lawson,contact@votealex.ca,613-981-8881,role,,
 e49ba667-add8-5fc7-b8e9-e2c6271eee20,ca_on_ottawa,Jeff,Leiper,info@leiper2026.ca,613-416-7437,role,,
+133aaa69-f74c-5970-96c4-04bd4b96e812,ca_on_ottawa,Geoff,Nicholas,MLKsixtythree@gmail.com,343-575-9545,role,,
+01a8c172-7ecd-5ff2-a4cb-637b91adff41,ca_on_ottawa,Josh,Rachlis,josh@joshrachlis.com,,role,,
 11130c2a-9104-56c7-aaef-fb6cf3896c7f,ca_on_ottawa,Neil,Saravanamuttoo,neil@neilformayor.ca,,role,,
+503c1a81-a1b7-5355-ae79-836d3f6f4a1b,ca_on_ottawa,Ali,Shayvard,aliforottawa@gmail.com,613-316-1077,role,,
+a557a24c-844c-5de1-b6e1-c5bf421a6745,ca_on_ottawa,Jacob,Solomon,realtor@jacobsolomon.ca,613-701-2099,role,,
 385c3f76-2c0d-59e5-873d-a2ea50b7fd5b,ca_on_ottawa,Mark,Sutcliffe,contact@marksutcliffe2026.ca,,role,,
+dcdcbc64-3a54-53f2-8282-fab0ec30f5e4,ca_on_ottawa,Amjad Ali,Syed,,,role,,
 b17e3a3d-b0ab-5328-9c1a-7ce319d960f7,ca_on_ottawa,Peter,Westaway,bikeman@bikemobile.ca,613-698-6982,role,,

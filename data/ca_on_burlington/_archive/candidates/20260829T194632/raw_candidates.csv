@@ -1,0 +1,28 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+e857a517-0000-5f39-87a4-fc6fa8c7ffa7,ca_on_burlington,Kelvin,Galbraith,kelvingalbraith@gmail.com,905-928-4513,district,1,Ward 1
+688025fc-8552-5a5f-8662-8c765d0161a3,ca_on_burlington,Cheryl,Hurst,cherylcommunity@gmail.com,,district,1,Ward 1
+d8f27d23-3a58-5f7b-84c2-c2a7ec7dd6d3,ca_on_burlington,James,Kerr,james@votekerr.ca,905-466-1438,district,1,Ward 1
+7b62859e-b867-551e-91d7-f05c9549a620,ca_on_burlington,Robert,Radway,robertradway07@gmail.com,289-208-6474,district,1,Ward 1
+3d4b1212-7e76-5256-be40-f84a0e593967,ca_on_burlington,Masha,Brar,masha@mashab.ca,,district,2,Ward 2
+1767bc6f-e9f6-54b9-883e-4d560a69fa3c,ca_on_burlington,Sean,Campbell,sean@seancampbell.info,905-599-1135,district,2,Ward 2
+e6fb557d-0ff2-50da-8b9a-895f0607f347,ca_on_burlington,Gary,Carr,electgarycarr@gmail.com,,district,2,Ward 2
+0219b0ce-c82d-57b3-9c21-491c5199765b,ca_on_burlington,Jeremy,Gaetan,jeremy4ward2@gmail.com,905-407-2875,district,2,Ward 2
+128ffd2c-c52c-52ad-96ca-e168b2eb398b,ca_on_burlington,Tony,Brecknock,tony@brecknock.com,905-334-8118,district,3,Ward 3
+568eaecf-2fad-5f9e-a51c-44f391d928aa,ca_on_burlington,Mark,Carr,info@markcarr.com,905-484-1014,district,3,Ward 3
+f4f19934-ac75-5c9c-a4bc-09cd5bc1183d,ca_on_burlington,Kyle,Hutton,kyle@kylehutton.ca,289-635-3157,district,3,Ward 3
+7caddeb4-df23-5095-bc61-96104d3d399e,ca_on_burlington,Katy,Moore,katy@thirstformoore.ca,289-795-8313,district,3,Ward 3
+ab5b2038-c2d0-5224-8c16-cd8a2a9be5f0,ca_on_burlington,Chris,Carter,info@chriscarterofficial.com,,district,4,Ward 4
+895dc1c2-7a91-5fbe-8342-046ba9e3957b,ca_on_burlington,Olivia,Duke,olivia@oliviaduke.ca,,district,4,Ward 4
+0fd6be4c-a54b-5abd-b2b7-27490b8571df,ca_on_burlington,Kristy,Dickinson,kristy@votekd.ca,905-483-7976,district,5,Ward 5
+d1a42ed3-71ce-540d-b162-e0803e034dcf,ca_on_burlington,Alex,Don,info@alexdon.ca,,district,5,Ward 5
+325265ee-83d0-5920-8ce2-00f53ebbf1e8,ca_on_burlington,Paul,Sharman,paul@paulsharman.ca,905-320-7467,district,5,Ward 5
+69faca23-7d9e-57c6-843d-bd25883fe4ca,ca_on_burlington,Osob,Adus,connect@osobward6.ca,,district,6,Ward 6
+0016274f-616d-592c-bb2b-c0501d02cc2b,ca_on_burlington,Angelo,Bentivegna,angelobentivegnaward6@gmail.com,905-973-6923,district,6,Ward 6
+de04183b-0bf7-55b2-87c5-2e0d9620f06a,ca_on_burlington,Chris,Bouchard,chrisbouchardward6@gmail.com,905-630-2252,district,6,Ward 6
+b3235ca0-879d-55b2-a241-8591da16af46,ca_on_burlington,Frank,Domenic,frankdomenic6@gmail.com,,district,6,Ward 6
+3b275649-faed-5331-afc7-ee25a33219e3,ca_on_burlington,Rowen,Fraser,rowen@rowrowforcouncil.com,,district,6,Ward 6
+8c866246-9e59-55b7-8e84-fbf80b97f2f7,ca_on_burlington,Keith,Demoe,,,role,,
+1ae762f4-013c-5f1a-a30f-438ae13c6364,ca_on_burlington,Lisa,Kearns,lisakearnsward2@gmail.com,416-414-5335,role,,
+e726b15e-83ba-54f4-b6ff-71fd4fb9b36d,ca_on_burlington,Marianne,Meed Ward,marianne4mayor@gmail.com,289-204-1848,role,,
+06daf1c7-668e-5739-9d86-7ef89602433f,ca_on_burlington,Rory,Nisan,rnisan@gmail.com,742-401-1999,role,,
+2f707850-7f6b-5072-95c6-3a2b7bbfe843,ca_on_burlington,Yugalkeesor,Ramdhonee,yramdhonee@cogeco.ca,742-401-2835,role,,

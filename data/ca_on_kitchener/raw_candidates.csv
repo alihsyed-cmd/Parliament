@@ -1,39 +1,53 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+f72e5178-e363-53b4-a2ec-760bd738bd6f,ca_on_kitchener,Elizabeth,Bate,elizabeth@voteelizabethward1.ca,(416) 439-1692,district,1,Ward 1
 112c511f-8f27-5724-b9c4-77863ddef88a,ca_on_kitchener,Scott,Davey,scottdavey@gmail.com,(519) 489-9056,district,1,Ward 1
+9764d905-28c9-5708-a5d4-64ee8c5b72e2,ca_on_kitchener,Haile,Kiflai,halewanake@gmail.com,(226) 600-0722,district,1,Ward 1
+3d422c16-7865-54d4-8304-527210bf149b,ca_on_kitchener,Zahid Mian,Mahmood,mianzahid53@gmail.com,,district,1,Ward 1
+21a269c6-472e-5c88-a1bc-b81fd0b26461,ca_on_kitchener,Everton,Dixon,evertondixon@gopineapple.com,(647) 807-2775,district,10,Ward 10
 7b8d224e-e050-5244-8996-4d9a69de5ca7,ca_on_kitchener,Sam,Nabi,hello@samnabi.ca,(226) 988-4137,district,10,Ward 10
-b96545e9-10b4-557f-abc2-a0b4df2cdcb9,ca_on_kitchener,Aalaa,Rehman,aalaarehman@gmail.com,(437) 236-7011,district,10,Ward 10
+20ca24e3-603e-59bf-bd61-e5190bd7a392,ca_on_kitchener,Peter Gordon,Piluk,peter@peterforward10.ca,,district,10,Ward 10
+b96545e9-10b4-557f-abc2-a0b4df2cdcb9,ca_on_kitchener,Aalaa,Rehman,aalaarehman@gmail.com,(519) 721-2905,district,10,Ward 10
 920a7ee6-fbb8-5258-b737-ea8ce5c3f945,ca_on_kitchener,Stephanie,Stretch,steph@stephaniestretch.ca,(519) 716-1655,district,10,Ward 10
 b94aef6c-8e74-57e1-a3c0-e336e56f1662,ca_on_kitchener,Soran,Ibrahim,soranib77@gmail.com,(519) 590-8002,district,2,Ward 2
 ba4a3668-5fc9-51fc-be87-bc36857c1671,ca_on_kitchener,Derrick,Rabethge,derrickrabethge@gmail.com,,district,2,Ward 2
 af4df0a0-a564-5a09-a6fa-4d93c5e38f62,ca_on_kitchener,Dave,Schnider,daveschniderward2@gmail.com,,district,2,Ward 2
+cfb58e43-09ca-578f-ae92-3b3811c00cde,ca_on_kitchener,Shawn,Bradshaw,ShawnBradshaw@mail.com,,district,3,Ward 3
 82339518-dfe5-5eef-9ab8-b2a4a5ded84a,ca_on_kitchener,Joanne,Delaney-Fraser,joannedelaneyfraser@live.com,(519) 575-5139,district,3,Ward 3
 e209b580-9ac4-5018-8133-27e386aaf071,ca_on_kitchener,Jason,Deneault,jasondeneaultward3@gmail.com,,district,3,Ward 3
 e1a79899-bffc-5f64-a90a-f421bd5a771a,ca_on_kitchener,Lurdes,Jordao,lurdes.jordao@hotmail.com,(519) 650-9174,district,3,Ward 3
 4ef0a755-3847-550b-8729-2f0a358ab889,ca_on_kitchener,Ismail,Mohamed,ismailforward3@gmail.com,,district,3,Ward 3
 df2ab2f0-884c-5310-b928-1a16976e5000,ca_on_kitchener,Matt,Parker,parker.matt15@gmail.com,(226) 507-7130,district,3,Ward 3
+7056c0a4-45b8-52da-bc21-43dc0f8b50f0,ca_on_kitchener,Anant,Jain,voteanantward4@gmail.com,(519) 212-9255,district,4,Ward 4
 9f168052-6c39-552f-a492-b0fd8a5ff5d9,ca_on_kitchener,Ibraheem,Kappaya,kappaya4kitchener@gmail.com,(519) 731-0823,district,4,Ward 4
 28cbb973-0296-5f5e-91e2-54ba97b409ca,ca_on_kitchener,Christine,Michaud,christinemichaud@rogers.com,,district,4,Ward 4
-1311d745-8483-5ceb-97d9-0e8cd4000957,ca_on_kitchener,Vikki,Poirier,vikki.poirier.1977@gmail.com,(226) 868-1196,district,4,Ward 4
+1311d745-8483-5ceb-97d9-0e8cd4000957,ca_on_kitchener,Vikki,Poirier,vikki4council@gmail.com,(226) 868-1196,district,4,Ward 4
 6f2e1ae8-94d1-5767-bef3-8c5c62166254,ca_on_kitchener,Harry,Scanlan,harry.scanlan@gmail.com,(519) 501-6635,district,4,Ward 4
+927d6611-3424-5c66-b48a-b7a4fd5a3fa5,ca_on_kitchener,Nate,Bahlbi,,,district,5,Ward 5
 912a558d-a5ba-5676-bf37-4e899748bef8,ca_on_kitchener,Dimple,Birdee,dmplbrd85@gmail.com,(647) 821-5054,district,5,Ward 5
 9fce36c8-975a-5c6f-93e8-4aa600b7bbd4,ca_on_kitchener,Muhammad Miqdad,Hudda,mmiqdadhudda@gmail.com,(519) 778-7861,district,5,Ward 5
 175b1680-305c-56aa-ae9e-9719d5b16c65,ca_on_kitchener,Jon,Massimi,jon4ward5kw@gmail.com,,district,5,Ward 5
-e2538ea8-55d6-549c-8022-e4bb7476a00f,ca_on_kitchener,Nitin,Nair,nairforward5@gmail.com,(647) 995-6969,district,5,Ward 5
 8347d414-e13f-5151-b04a-e3bdd1ed6523,ca_on_kitchener,Rich,Peers,rich.jobrunner@gmail.com,(519) 500-2345,district,5,Ward 5
-688c5bbd-9b34-5ccc-b53b-e9cceca7382a,ca_on_kitchener,Danielle,Rose,daniellerosekw@gmail.com,(226) 887-7884,district,5,Ward 5
-cb54be4e-411c-5ed3-af3a-1df18a2196f4,ca_on_kitchener,Sumit,Sehli,Sumit.Sehli@gmail.com,(437) 522-3559,district,5,Ward 5
-7ab10921-a698-502d-8666-a1deb8d73198,ca_on_kitchener,Fitz,Vanderpool,,,district,5,Ward 5
+f4d39bfb-7d76-5817-a543-47a633bf6623,ca_on_kitchener,Navjot,Sandhu,,(647) 674-3309,district,5,Ward 5
+cb54be4e-411c-5ed3-af3a-1df18a2196f4,ca_on_kitchener,Sumit,Sehli,vote@sumitsehli.ca,(519) 574-5363,district,5,Ward 5
+7ab10921-a698-502d-8666-a1deb8d73198,ca_on_kitchener,Fitz,Vanderpool,vote4fitzvanderpool@gmail.com,,district,5,Ward 5
 aea98bde-327f-5a74-b427-be7faa5043d0,ca_on_kitchener,Tracey,Weiler,tracey@traceyweiler.com,(519) 504-1274,district,5,Ward 5
 ec6b70a5-bd08-5c6d-bb27-e0acade00868,ca_on_kitchener,Amber Louise,Culley,amberculley98@gmail.com,(226) 339-0522,district,6,Ward 6
 e4055c93-1c7d-5b35-9afa-ad0023a993b6,ca_on_kitchener,Paul,Singh,paulsinghward6@gmail.com,(519) 721-3272,district,6,Ward 6
 7ad0e1b5-4a8a-56ff-95fc-3181c443efa0,ca_on_kitchener,Brooklin,Wallis,votebrooklin@gmail.com,(548) 384-6416,district,6,Ward 6
 25fd179a-18eb-51b2-bb9f-399a3fcfd5a7,ca_on_kitchener,Bil,Ioannidis,Bil.Ioannidis1@gmail.com,,district,7,Ward 7
+4ffa9117-c649-5d78-8e4c-7c1c65eaa3f6,ca_on_kitchener,Richie,Nanan,richienanan7@gmail.com,(519) 222-8800,district,7,Ward 7
 ee1f39cd-9ca0-5e8c-8e2c-25990d25e828,ca_on_kitchener,Nikki,Rollick,votenikkirollick@gmail.com,,district,7,Ward 7
+41fcdb5e-bfa4-52db-bc54-031b325f5f48,ca_on_kitchener,Wendy,Creighton,ward8wendy@gmail.com,,district,8,Ward 8
 bb68e708-7ee7-54a1-b926-41856f02c697,ca_on_kitchener,Margaret,Johnston,margaretjohnstonward8@gmail.com,(519) 778-5426,district,8,Ward 8
+4b47ebb0-6458-53f1-b5a2-229274c7b0c9,ca_on_kitchener,Philip,Molto,philip.molto@gmail.com,(226) 220-1714,district,8,Ward 8
 8ff527b0-ceb4-526d-ba37-95e36f1b8c2f,ca_on_kitchener,Carly,Pettinger,carly@votecarly.ca,(226) 792-2117,district,8,Ward 8
+3162c904-7ab0-52e9-8720-ed0101de6e74,ca_on_kitchener,Mohamed,Askalany,,,district,9,Ward 9
 de620bc3-8d2b-517e-9f67-995c67f5de65,ca_on_kitchener,Debbie,Chapman,debchapman@golden.net,(226) 476-3319,district,9,Ward 9
 8568baa9-1a22-5332-8105-adfecc18d393,ca_on_kitchener,Tim,Willcox,,,district,9,Ward 9
 df2d69e3-0813-5bcc-9883-83e9f3b0db72,ca_on_kitchener,David,Alton,joyfulcities@gmail.com,,role,,
 01812ae8-2d60-5b0d-bfb4-d16c123ed03e,ca_on_kitchener,Wazhma,Frogh,WFmayorcampaign@gmail.com,,role,,
+fd57f637-f639-526e-9199-08c73fee44a1,ca_on_kitchener,Wali,Khan,,,role,,
+563938ab-dbdb-5c10-8128-2b66054adebb,ca_on_kitchener,Manikantan,Nair,votefornair@gmail.com,(226) 600-9262,role,,
 b9cc5b50-98f1-553f-ae98-cf114a134435,ca_on_kitchener,George,Trihenea,vote@georgetrihenea.ca,,role,,
 aee27568-6a38-5af6-a81c-8fb16b44771d,ca_on_kitchener,Berry,Vrbanovic,berryv@outlook.com,,role,,
+f879b88c-c0ff-5510-98f0-357b96b1c544,ca_on_kitchener,Cindy,Ward,drcindywardphd@gmail.com,(226) 750-9019,role,,

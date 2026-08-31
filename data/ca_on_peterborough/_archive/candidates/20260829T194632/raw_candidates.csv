@@ -1,0 +1,32 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+411508ec-ae4f-5b86-81ae-b35964390e23,ca_on_peterborough,Gary,Baldwin,garyabaldwin@gmail.com,705-743-7056,district,Ashburnham Ward 4,Ward 4 - Ashburnham
+c8911b02-f462-5cc2-a2b0-a211e907a2a1,ca_on_peterborough,Ashley,Bonner,ashleybonner4ashburnham@gmail.com,,district,Ashburnham Ward 4,Ward 4 - Ashburnham
+35d09ae7-555b-5772-b977-fbc2b19f332a,ca_on_peterborough,Andrew,MacGregor,andrew@andrewmacgregor.ca,,district,Ashburnham Ward 4,Ward 4 - Ashburnham
+77e7fdb8-55bc-5fe4-b683-4aa7198c978a,ca_on_peterborough,Jason,Stabler,stablerptbo@gmail.com,,district,Ashburnham Ward 4,Ward 4 - Ashburnham
+7b55901b-ae80-559e-a81c-868a52f46e4e,ca_on_peterborough,Matt,Crowley,mattcrowleyptbo@gmail.com,,district,Monaghan Ward 2,Ward 2 - Monaghan
+672c483f-f8b4-5a61-806f-33a2e71e9960,ca_on_peterborough,Ashley,Flynn,ashleyflynnptbo@hotmail.com,705-242-8453,district,Monaghan Ward 2,Ward 2 - Monaghan
+49c1a254-d8dd-50fb-b3f4-479644a49caa,ca_on_peterborough,Rose,Kitney,rosekitneypbo@gmail.com,705-879-7948,district,Monaghan Ward 2,Ward 2 - Monaghan
+3924a6fe-9cb0-5a4d-bac3-86e1c90c0a36,ca_on_peterborough,Jen,Lacey,electjen@outlook.com,,district,Monaghan Ward 2,Ward 2 - Monaghan
+29c5a7db-e65e-51b9-b82a-3e3e310821f3,ca_on_peterborough,Aris,Metaxakis,,705-876-0609,district,Monaghan Ward 2,Ward 2 - Monaghan
+bc5a9a25-dcca-5a0f-bbbf-50ae9565e7ad,ca_on_peterborough,AJ,Shearer,voteforaj@ajshearer.com,705-957-9073,district,Monaghan Ward 2,Ward 2 - Monaghan
+a5196613-47f2-5156-bfbe-b5c3d68c1a82,ca_on_peterborough,Andrew,Beamer,andrewbeamer@cogeco.ca,705-743-8004,district,Northcrest Ward 5,Ward 5 - Northcrest
+07565771-bc42-532f-bb21-d124b8c905c8,ca_on_peterborough,Debbie,Halstead,Debbie@DebbieWard5.ca,705-750-7099,district,Northcrest Ward 5,Ward 5 - Northcrest
+9b92e6b0-b882-5260-bc99-fc4037ba2eab,ca_on_peterborough,Phil,Jolicoeur,voteforphilptbo@gmail.com,289-251-7445,district,Northcrest Ward 5,Ward 5 - Northcrest
+f6c97a0b-0573-53d7-b425-83ab9f176518,ca_on_peterborough,Paul,Lawton,campaign@paulclawton.com,,district,Northcrest Ward 5,Ward 5 - Northcrest
+2bc7aa51-3b93-5f3a-aeec-264d6be202e9,ca_on_peterborough,Charmaine,Magumbe,electcharmaine2026@gmail.com,705-977-1709,district,Northcrest Ward 5,Ward 5 - Northcrest
+d7354901-d99a-5dbd-be61-fc43a89ab16b,ca_on_peterborough,Gavin,Muir,gavin4northcrest@gavinmuir.ca,,district,Northcrest Ward 5,Ward 5 - Northcrest
+9441a39d-93fa-5a23-b5ea-04828c825b02,ca_on_peterborough,Jim,Wasson,jwasson9@cogeco.ca,705-748-5876,district,Northcrest Ward 5,Ward 5 - Northcrest
+6d1cafea-a11b-58a8-a605-735e8af566c2,ca_on_peterborough,Jessica,Correa,correa4councillor@gmail.com,,district,Otonabee Ward 1,Ward 1 - Otonabee
+683990e6-8270-5e94-96eb-43f6a9f3a4bd,ca_on_peterborough,Kevin,Duguay,kevin@voteduguay.ca,705-768-4390,district,Otonabee Ward 1,Ward 1 - Otonabee
+97e3ad26-b67f-5693-95ba-469650a8fa1a,ca_on_peterborough,Lesley,Parnell,lesleyparnell@bell.net,705-991-1272,district,Otonabee Ward 1,Ward 1 - Otonabee
+bb82fe22-cf08-5729-a258-b1071579446e,ca_on_peterborough,Chris,Potter,chris@chrispotter.vote,705-748-4434,district,Otonabee Ward 1,Ward 1 - Otonabee
+9172e96d-a816-5a39-8539-eddff9270112,ca_on_peterborough,Alex,Bierk,alexbierkfordowntown@gmail.com,,district,Town Ward 3,Ward 3 - Town
+fdd02f65-f9c5-5c5a-9a49-9b5b0e9c4e50,ca_on_peterborough,Jenni,Cathcart,jenni4PTBO@gmail.com,,district,Town Ward 3,Ward 3 - Town
+c38436cd-4864-59d7-b5f6-eff0a6791e84,ca_on_peterborough,Jessica,Kuhlmorgen-Hille,askjessaquestion@gmail.com,,district,Town Ward 3,Ward 3 - Town
+0744e0e0-b5f1-5b30-8ecc-7378d453dab1,ca_on_peterborough,Joy,Lachica,,,district,Town Ward 3,Ward 3 - Town
+0c0ac629-eee2-5433-879d-65b1acec57aa,ca_on_peterborough,Michael,Eamon,,,role,,
+3fdf2638-5543-50bd-90b4-28be295c5201,ca_on_peterborough,Brian,Lumsden,blumsden725@gmail.com,,role,,
+1f84efc1-4b76-562e-860d-930ae8b63b2a,ca_on_peterborough,Neil,Morton,neildmorton@gmail.com,,role,,
+e87e9a56-869b-5eb9-ae6e-0cfa791c3d1d,ca_on_peterborough,Jacob,Méthot,Methot.Jacob@outlook.com,,role,,
+f7a0f5ac-86b3-5ae5-ae48-564e58b185e3,ca_on_peterborough,Keith,Riel,keith.riel@outlook.com,705-743-8715,role,,
+a27ff55a-33dd-55a8-a8ab-ee1c92c8f8fe,ca_on_peterborough,Rebecca,Schillemat,rebecca@schillemat.ca,,role,,

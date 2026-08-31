@@ -233,3 +233,241 @@ Verdict: PASS
 Rows: 26  (role-scoped 6, district-scoped 20)  ·  wards represented 7/7
 Contact coverage: email 20/26, phone 19/26
 Blocking failures: 0   Row failures: 0
+
+## ca_on_toronto_candidates_20260829T194632 — ca_on_toronto — 2026-08-29T19:58:39+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 243  (role-scoped 53, district-scoped 190)  ·  wards represented 25/25
+Contact coverage: email 148/243, phone 72/243
+Blocking failures: 0   Row failures: 0
+
+## ca_on_mississauga_candidates_20260829T194632 — ca_on_mississauga — 2026-08-29T19:58:43+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 89  (role-scoped 14, district-scoped 75)  ·  wards represented 11/11
+Contact coverage: email 79/89, phone 62/89
+Blocking failures: 0   Row failures: 0
+
+## ca_on_brampton_candidates_20260829T194632 — ca_on_brampton — 2026-08-29T19:58:45+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 81  (role-scoped 81, district-scoped 0)  ·  wards represented 0/10
+Contact coverage: email 62/81, phone 57/81
+Blocking failures: 0   Row failures: 0
+
+## ca_on_hamilton_candidates_20260829T194632 — ca_on_hamilton — 2026-08-29T19:58:47+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 89  (role-scoped 13, district-scoped 76)  ·  wards represented 15/15
+Contact coverage: email 87/89, phone 47/89
+Blocking failures: 0   Row failures: 0
+
+## ca_on_london_candidates_20260829T194632 — ca_on_london — 2026-08-29T19:58:49+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 81  (role-scoped 12, district-scoped 69)  ·  wards represented 14/14
+Contact coverage: email 72/81, phone 52/81
+Blocking failures: 0   Row failures: 0
+
+## ca_on_markham_candidates_20260829T194632 — ca_on_markham — 2026-08-29T19:58:51+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 44  (role-scoped 14, district-scoped 30)  ·  wards represented 8/8
+Contact coverage: email 36/44, phone 27/44
+Blocking failures: 0   Row failures: 0
+
+## ca_on_vaughan_candidates_20260829T194632 — ca_on_vaughan — 2026-08-29T19:58:54+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 26  (role-scoped 12, district-scoped 14)  ·  wards represented 5/5
+Contact coverage: email 0/26, phone 0/26
+Blocking failures: 0   Row failures: 0
+
+## ca_on_windsor_candidates_20260829T194632 — ca_on_windsor — 2026-08-29T19:58:55+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 54  (role-scoped 11, district-scoped 43)  ·  wards represented 10/10
+Contact coverage: email 45/54, phone 26/54
+Blocking failures: 0   Row failures: 0
+
+## ca_on_oakville_candidates_20260829T194632 — ca_on_oakville — 2026-08-29T19:58:57+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 51  (role-scoped 5, district-scoped 46)  ·  wards represented 7/7
+Contact coverage: email 48/51, phone 36/51
+Blocking failures: 0   Row failures: 0
+
+## ca_on_kitchener_candidates_20260829T194632 — ca_on_kitchener — 2026-08-29T19:58:58+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 52  (role-scoped 7, district-scoped 45)  ·  wards represented 10/10
+Contact coverage: email 47/52, phone 31/52
+Blocking failures: 0   Row failures: 0
+
+## ca_on_burlington_candidates_20260829T194632 — ca_on_burlington — 2026-08-29T19:59:02+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 31  (role-scoped 5, district-scoped 26)  ·  wards represented 6/6
+Contact coverage: email 28/31, phone 19/31
+Blocking failures: 0   Row failures: 0
+
+## ca_on_oshawa_candidates_20260829T194632 — ca_on_oshawa — 2026-08-29T19:59:03+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 57  (role-scoped 9, district-scoped 48)  ·  wards represented 5/5
+Contact coverage: email 53/57, phone 1/57
+Blocking failures: 0   Row failures: 0
+
+## ca_on_barrie_candidates_20260829T194632 — ca_on_barrie — 2026-08-29T19:59:05+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 41  (role-scoped 4, district-scoped 37)  ·  wards represented 10/10
+Contact coverage: email 37/41, phone 28/41
+Blocking failures: 0   Row failures: 0
+
+## ca_on_st_catharines_candidates_20260829T194632 — ca_on_st_catharines — 2026-08-29T19:59:07+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 36  (role-scoped 5, district-scoped 31)  ·  wards represented 6/6
+Contact coverage: email 31/36, phone 25/36
+Blocking failures: 0   Row failures: 0
+
+## ca_on_cambridge_candidates_20260829T194632 — ca_on_cambridge — 2026-08-29T19:59:08+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 40  (role-scoped 11, district-scoped 29)  ·  wards represented 8/8
+Contact coverage: email 27/40, phone 13/40
+Blocking failures: 0   Row failures: 0
+
+## ca_on_whitby_candidates_20260829T194632 — ca_on_whitby — 2026-08-29T19:59:10+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 33  (role-scoped 3, district-scoped 30)  ·  wards represented 4/4
+Contact coverage: email 23/33, phone 19/33
+Blocking failures: 0   Row failures: 0
+
+## ca_on_guelph_candidates_20260829T194632 — ca_on_guelph — 2026-08-29T19:59:12+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 49  (role-scoped 6, district-scoped 43)  ·  wards represented 6/6
+Contact coverage: email 47/49, phone 27/49
+Blocking failures: 0   Row failures: 0
+
+## ca_on_greater_sudbury_candidates_20260829T194632 — ca_on_greater_sudbury — 2026-08-29T19:59:14+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 58  (role-scoped 8, district-scoped 50)  ·  wards represented 12/12
+Contact coverage: email 54/58, phone 39/58
+Blocking failures: 0   Row failures: 0
+
+## ca_on_brant_candidates_20260829T194632 — ca_on_brant — 2026-08-29T19:59:39+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 33  (role-scoped 6, district-scoped 27)  ·  wards represented 5/5
+Contact coverage: email 31/33, phone 31/33
+Blocking failures: 0   Row failures: 0
+
+## ca_on_brantford_candidates_20260829T194632 — ca_on_brantford — 2026-08-29T19:59:40+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 37  (role-scoped 7, district-scoped 30)  ·  wards represented 5/5
+Contact coverage: email 37/37, phone 34/37
+Blocking failures: 0   Row failures: 0
+
+## ca_on_kingston_candidates_20260829T194632 — ca_on_kingston — 2026-08-29T19:59:41+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 36  (role-scoped 4, district-scoped 32)  ·  wards represented 12/12
+Contact coverage: email 36/36, phone 31/36
+Blocking failures: 0   Row failures: 0
+
+## ca_on_milton_candidates_20260829T194632 — ca_on_milton — 2026-08-29T19:59:42+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 45  (role-scoped 10, district-scoped 35)  ·  wards represented 4/4
+Contact coverage: email 40/45, phone 37/45
+Blocking failures: 0   Row failures: 0
+
+## ca_on_norfolk_county_candidates_20260829T194632 — ca_on_norfolk_county — 2026-08-29T19:59:44+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 33  (role-scoped 7, district-scoped 26)  ·  wards represented 7/7
+Contact coverage: email 23/33, phone 23/33
+Blocking failures: 0   Row failures: 0
+
+## ca_on_peterborough_candidates_20260829T194632 — ca_on_peterborough — 2026-08-29T19:59:45+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 35  (role-scoped 7, district-scoped 28)  ·  wards represented 5/5
+Contact coverage: email 31/35, phone 16/35
+Blocking failures: 0   Row failures: 0
+
+## ca_on_ajax_candidates_20260829T194632 — ca_on_ajax — 2026-08-29T20:00:16+00:00
+
+Roster status: certified
+Verdict: PASS WITH ROW FAILURES
+Rows: 36  (role-scoped 5, district-scoped 31)  ·  wards represented 3/3
+Contact coverage: email 32/36, phone 24/36
+Blocking failures: 0   Row failures: 1
+
+### Row failures (logged, non-blocking)
+- [email_sanity] Malcolm Andre Barrington — ward Ward 1 — email='Barrington4 ward1@gmail.com' is not an address
+
+## ca_on_waterloo_candidates_20260829T194632 — ca_on_waterloo — 2026-08-29T20:00:41+00:00
+
+Roster status: certified
+Verdict: PASS WITH ROW FAILURES
+Rows: 28  (role-scoped 5, district-scoped 23)  ·  wards represented 7/7
+Contact coverage: email 27/28, phone 9/28
+Blocking failures: 0   Row failures: 1
+
+### Row failures (logged, non-blocking)
+- [required_fields] Abdullah — ward Ward 7 — empty first_name
+
+## ca_on_ottawa_candidates_20260829T194632 — ca_on_ottawa — 2026-08-30T20:50:26+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 101  (role-scoped 14, district-scoped 87)  ·  wards represented 24/24
+Contact coverage: email 90/101, phone 51/101
+Blocking failures: 0   Row failures: 0
+
+## ca_on_thunder_bay_candidates_20260831T140935 — ca_on_thunder_bay — 2026-08-31T14:12:37+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 46  (role-scoped 24, district-scoped 22)  ·  wards represented 7/7
+Contact coverage: email 44/46, phone 41/46
+Blocking failures: 0   Row failures: 0
+
+## ca_on_richmond_hill_candidates_20260831T141435 — ca_on_richmond_hill — 2026-08-31T14:21:33+00:00
+
+Roster status: certified
+Verdict: PASS
+Rows: 33  (role-scoped 6, district-scoped 27)  ·  wards represented 6/6
+Contact coverage: email 20/33, phone 13/33
+Blocking failures: 0   Row failures: 0

@@ -1,0 +1,27 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+9d947179-f2d7-5520-a7bd-284d9abcd11a,ca_on_norfolk_county,Greg,D'Hulster,gregdhulster@gmail.com,519-550-0685,district,1,Ward 1
+7ee979f2-cf4a-5200-9523-4cd614f0f903,ca_on_norfolk_county,Tom,Masschaele,tom4council@gmail.com,519-428-4242,district,1,Ward 1
+934343a7-26fe-5007-805b-d535480b5b28,ca_on_norfolk_county,Linda,Vandendriessche,mvan@kwic.com,519-983-6098,district,2,Ward 2
+96cca440-f329-57b1-b609-c1626f44f695,ca_on_norfolk_county,Debbie,Wilbur,,,district,2,Ward 2
+ad8b9aa5-f5ad-5085-8ef4-76a2397a4f42,ca_on_norfolk_county,Chris,Gill,1967chrisgill@gmail.com,289-919-0665,district,3,Ward 3
+485ac415-e6b9-520f-9540-0ed1633ed664,ca_on_norfolk_county,Doug,Moyaert,dmoyaert@execulink.com,519-582-2886,district,3,Ward 3
+832e7ea0-05d0-543a-b77c-4b5041d1ad7f,ca_on_norfolk_county,Hetty,Verlinden,hettyverlinden@gmail.com,519-588-8802,district,3,Ward 3
+ec11d4e2-8919-5799-bdb5-dbae6ac95bda,ca_on_norfolk_county,Chris,Van Paassen,chrisvp@live.ca,519-428-0448,district,4,Ward 4
+f42a0540-47ec-514a-850f-b9ff9c3fb5ac,ca_on_norfolk_county,Kevin,Allen,kevin@thinknorfolk.ca,519-718-4663,district,5,Ward 5
+b589503f-2664-52ab-ba06-f329ae299372,ca_on_norfolk_county,Ryan,Boyko,ryanboykoward5@gmail.com,,district,5,Ward 5
+290a2eb4-d19c-5e28-83a5-69de325eb359,ca_on_norfolk_county,Quentin,Dixon,info@electquentin.ca,519-909-9424,district,5,Ward 5
+6ea3d562-568c-516b-b491-d458ddacb061,ca_on_norfolk_county,Alan,Duthie,alanforward5@gmail.com,519-718-4422,district,5,Ward 5
+00d1e830-dad3-5369-9a51-aac19832a9e0,ca_on_norfolk_county,Glenn,Paquette,glennforward5@gmail.com,905-978-1965,district,5,Ward 5
+3bc8732f-5f8a-5fdf-8e87-1c3a703e1f31,ca_on_norfolk_county,Princess,Peace,princesspeace@icloud.ca,,district,5,Ward 5
+36137f35-47aa-5899-9f4f-d43a2951b9fb,ca_on_norfolk_county,Bob,Townsend,,,district,5,Ward 5
+240b4385-e0af-5e03-a51d-b8634700d6b5,ca_on_norfolk_county,Dennis,Travale,travale4simcoe@gmail.com,519-426-8798,district,5,Ward 5
+10564182-03b3-573f-9c2c-a20bd04922c2,ca_on_norfolk_county,Zvonko,Horvat,,226-545-1021,district,6,Ward 6
+7ffe621f-8736-5d89-b501-3180c43949f4,ca_on_norfolk_county,Pam,Taylor,pamtaylor4ward6@proton.me,519-221-6972,district,6,Ward 6
+48805712-9225-5e44-8504-b12d55b3bec0,ca_on_norfolk_county,Warren,Cummings,warren.cummings@rogers.com,226-208-0434,district,7,Ward 7
+9bec2344-267a-5bf2-89cc-a0ac8749da43,ca_on_norfolk_county,Kim,Huffman,kimhuffman@hotmail.com,519-427-7524,district,7,Ward 7
+f0e7b8f7-c79b-534e-9afc-8af21e42944e,ca_on_norfolk_county,Doug,Brunton,,,role,,
+fa9b6e2c-ac03-57d1-b939-16854041f868,ca_on_norfolk_county,David,Finch,roadhog2007@gmail.com,905-515-0244,role,,
+39963cec-4a72-5d90-b0ee-78da8fb34fb7,ca_on_norfolk_county,Noel,Haydt,noel.haydt@gmail.com,519-900-9086,role,,
+29311327-8beb-5f95-9904-0f663acd3ee0,ca_on_norfolk_county,Ken,Hewitt,,,role,,
+716fc392-f526-510d-ab17-303cc3cf5c8a,ca_on_norfolk_county,Keith,Milner,kmilner9@hotmail.com,905-630-0543,role,,
+182819af-6c22-5323-9e3b-ae9ee83fa98d,ca_on_norfolk_county,Adam,Veri,,,role,,

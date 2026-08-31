@@ -1,0 +1,47 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+9d522260-6919-5a7c-83f5-b138a104c1ae,ca_on_thunder_bay,Andrew,Foulds,andrewfouldsforcurrentriver@hotmail.com,,district,CURRENT RIVER,Current River
+88528ee9-4cdc-57df-8727-5f5a252a29ad,ca_on_thunder_bay,Stéphane Léonard,Kuziora,2112kuziora@gmail.com,506-688-1197,district,CURRENT RIVER,Current River
+d9fbbaec-12a7-5b44-8e64-357f5c290eb1,ca_on_thunder_bay,Albert,Aiello,Info@albertaiello.com,807-628-6378,district,MCINTYRE,McIntyre
+cb589256-7a4a-504b-9971-8dc25991dfe1,ca_on_thunder_bay,Brian,Phillips,brianphillips2007@icloud.com,807-632-1566,district,MCINTYRE,McIntyre
+dadd32cf-59a7-5ea9-a6ee-e11eda5f0156,ca_on_thunder_bay,Marco,Cupelli,marco@lprm.ca,416-721-4119,district,MCKELLAR,McKellar
+c3b45ece-d455-5eb5-b822-bf722b8d5f59,ca_on_thunder_bay,Tony,DiPaolo,tony@tonyforMcKellar.ca,807-473-6056,district,MCKELLAR,McKellar
+d001a6f2-39f2-54be-ab4d-84bf78757031,ca_on_thunder_bay,Brian,Hamilton,brianhamilton2551@gmail.com,,district,MCKELLAR,McKellar
+1846be99-032d-576c-87b1-940456ab6f6d,ca_on_thunder_bay,Tracey,MacKinnon,,,district,MCKELLAR,McKellar
+0efda6ad-adf4-5868-ac71-9c9771dfbe37,ca_on_thunder_bay,Donnalee,Morettin,DLMorettin.McKellar@gmail.com,807-357-9845,district,MCKELLAR,McKellar
+1c36eebd-c368-50f4-8f09-d8dd9515a27a,ca_on_thunder_bay,John Warren,Beals,johnbeals@tbaytel.net,807-626-3680,district,NEEBING,Neebing
+d0e1798b-bb99-5b61-b5c5-a3400ab28b78,ca_on_thunder_bay,Greg,Johnsen,gjohnsenintbay@gmail.com,807-577-5230,district,NEEBING,Neebing
+961ccf46-ccc1-54c5-a63a-6ac8a03f0483,ca_on_thunder_bay,André,Gagné,agagne058@gmail.com,807-251-4455,district,NORTHWOOD,Northwood
+7188584a-6cf7-505a-83b2-bd31e25cab9c,ca_on_thunder_bay,Syed,Kabir,info@syedkabir.ca,807-252-8575,district,NORTHWOOD,Northwood
+cf55a4ea-a03f-5c71-a42f-860dca8507cb,ca_on_thunder_bay,John,Ongaro,info@johnongaro.ca,807-577-3306,district,NORTHWOOD,Northwood
+cd839789-20f7-5e3b-b9bd-e1fb5764895e,ca_on_thunder_bay,Cory,Bagdon,Info@corybagdon.ca,807-708-7065,district,RED RIVER,Red River
+9aed1482-6c2b-5ab4-b9ae-412056121487,ca_on_thunder_bay,Dino,Cicchitano,dino@tbaytel.net,807-473-7554,district,RED RIVER,Red River
+a1cb0ea0-ee1d-5b20-b769-acd3cc6e0843,ca_on_thunder_bay,Michael,Giardetti,michael.giardetti@tbaytel.net,807-633-3577,district,RED RIVER,Red River
+c71b6124-544f-5751-8b2c-486147465934,ca_on_thunder_bay,John,Murray,john@redlionsmokehouse.ca,807-286-0045,district,RED RIVER,Red River
+6c9f00a0-5fae-50fe-99ea-bfc1ba7bb4bd,ca_on_thunder_bay,Jamie,Scrimger,jamiescrimgertbay@gmail.com,807-631-6071,district,RED RIVER,Red River
+a9382e8d-ce81-5a93-bd32-bbd5c3ee4be3,ca_on_thunder_bay,Angel,Gamble,,807-356-5488,district,WESTFORT,Westfort
+bef13a5f-cb8c-528e-84df-2c7c6aac103e,ca_on_thunder_bay,Clinton,Harris,marleyharris2018@gmail.com,807-632-3229,district,WESTFORT,Westfort
+c7348ede-8b90-5e97-9b86-85db374ed299,ca_on_thunder_bay,Stephen,Margarit,votemargarit@gmail.com,807-620-5634,district,WESTFORT,Westfort
+c5a66263-7406-5065-9097-0db9e4e2a56a,ca_on_thunder_bay,Rajni,Agarwal,ragarwal@avistarealty.ca,807-626-3842,role,,Councillor at Large
+56389821-2bd4-59d9-88b2-ca58c4f9bac2,ca_on_thunder_bay,Donald,Baxter,vagasbaxter@gmail.com,807-630-1098,role,,
+17e856ce-808d-5036-8384-8c865b2b5afe,ca_on_thunder_bay,Mark,Bentz,mbentz@tbaytel.net,807-474-6412,role,,Councillor at Large
+610d817e-c9b3-5842-804f-a9cc6d181cfe,ca_on_thunder_bay,Gene,Capar,Caparatlarge@gmail.com,,role,,Councillor at Large
+cbe3fae4-9c25-5e1f-9837-3d8fb348da29,ca_on_thunder_bay,Gary,Christian,gary4tbay@gmail.com,807-867-0468,role,,Councillor at Large
+173d21ba-2e44-55c6-978f-2a8735b0c90d,ca_on_thunder_bay,Julie,Colquhoun,jaecolquhoun@outlook.com,807-630-1784,role,,Councillor at Large
+b803b8d2-ade6-580f-ac76-f4ac89093383,ca_on_thunder_bay,Maureen (Moe),Comuzzi,info@moeformayor.ca,807-624-8234,role,,
+7ba7e53f-6a3b-536d-aa11-ab6485d7b833,ca_on_thunder_bay,Patrick George,Cully,p2pat@hotmail.com,807-633-7033,role,,Councillor at Large
+f28f8652-1e30-5698-ae32-4607e47ab773,ca_on_thunder_bay,Heather K.,Dahlstrom,hkdtbay2026@gmail.com,,role,,Councillor at Large
+e20e2c9d-e8aa-5573-934a-08418a1d27cc,ca_on_thunder_bay,Stephanie,Danylko,sdanylko@yahoo.ca,807-474-7050,role,,Councillor at Large
+ce11adde-f3c3-58d6-84cf-d60fbd30eae2,ca_on_thunder_bay,Peter Mark John,Diedrich,peter@peterdiedrich4mayor.com,807-633-1697,role,,
+e35ef9bd-b709-5690-bbe3-543851f572da,ca_on_thunder_bay,Kasey Taylor,Etreni,etreni@hotmail.com,807-630-8198,role,,Councillor at Large
+10004f04-2f55-5bd1-a684-572c3b19fa85,ca_on_thunder_bay,Trevor,Giertuga,tgiertuga@hotmail.com,807-630-2889,role,,
+826a8486-ee59-58ae-9b75-97b4541b9a68,ca_on_thunder_bay,Tyler,Goode,goodeforcouncil@gmail.com,807-709-2803,role,,Councillor at Large
+d9d5731f-0fa2-514c-ab66-6db6c4c58904,ca_on_thunder_bay,Shane,Judge,shanejudge01@gmail.com,807-708-1953,role,,
+925656c0-0de5-5f7a-8219-5ab364f32a85,ca_on_thunder_bay,Volker,Kromm,volkerkromm@gmail.com,807-627-6511,role,,
+10c6030a-2c75-5856-bcf2-f78aebbf8855,ca_on_thunder_bay,Dino,Menei,dinomenei@yahoo.com,807-626-3421,role,,Councillor at Large
+4b573949-ed66-5da3-b94e-899213353c9e,ca_on_thunder_bay,Jamie,Nichols,Nichols@rnccoffee.ca,807-631-3259,role,,Councillor at Large
+5b6cd0ab-676e-5df9-9531-3c09a530b277,ca_on_thunder_bay,Peter,Panetta,undergroundgym@tbaytel.net,807-622-5666,role,,
+d4d743f7-f5e0-5adb-ad8e-a5568bc87cc1,ca_on_thunder_bay,Aldo,Ruberto,rubertoformayor@gmail.com,807-629-5171,role,,
+737be694-2ea5-5cca-ada5-3e24eed2a199,ca_on_thunder_bay,Wolfgang,Schoor,wolfgang@tbaytel.net,807-344-3746,role,,
+83635198-62c7-50d0-9ae7-a85b23ca7cc6,ca_on_thunder_bay,Robert,Trevisan,trevisan@tbaytel.net,807-624-8745,role,,Councillor at Large
+a806ea11-92ce-52bb-bc9f-9c6c79898a6b,ca_on_thunder_bay,Doug,Vincent,dougvincentformayor2026@gmail.com,807-867-0786,role,,
+a3843d56-a0f7-5924-937b-f4025ed9fcc7,ca_on_thunder_bay,Peng,You,pengyou4you@gmail.com,807-628-4305,role,,Councillor at Large

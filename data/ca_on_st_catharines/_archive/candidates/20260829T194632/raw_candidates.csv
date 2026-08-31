@@ -1,0 +1,33 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+d7b1ec0e-2fe5-51da-a7d1-4c9dd8e59131,ca_on_st_catharines,Matt,Aymar,matt4merritton@gmail.com,,district,1,Ward 1
+9a39cdf9-8c93-5f86-b9b8-0b5125cbf68a,ca_on_st_catharines,Geoffrey (Geoff),Crane,geoffcrane47@gmail.com,905.684.7655,district,1,Ward 1
+70881fb0-47c1-5383-af2a-4aa9270d5b56,ca_on_st_catharines,Jacqueline (Jackie),Lindal,Jackielindal4Merritton@gmail.com,289.219.0701,district,1,Ward 1
+a5460561-287f-56fb-baa3-1cd487a210dc,ca_on_st_catharines,Jim,Adair,councilorjimadair@gmail.com,905.685.2906,district,2,Ward 2
+c6ab8548-7369-5604-a66f-af504b1981a7,ca_on_st_catharines,Bryan,Blue,vote@bryanblue.ca,,district,2,Ward 2
+f2574b31-bfba-569e-8f09-b8c69498e676,ca_on_st_catharines,Noel,Buckley,,,district,2,Ward 2
+1b2718ba-e86c-549a-a30f-d2f25124782c,ca_on_st_catharines,Adriana,Clifford,adrianaclifford4ward2@gmail.com,289.697.7809,district,2,Ward 2
+1b8f1db3-b856-59b9-bd74-750c49644bd1,ca_on_st_catharines,Matthew (Matt),Harris,matt@mattharris.ca,,district,2,Ward 2
+ef2cb062-0a96-5ee6-94fc-7fb8440c7133,ca_on_st_catharines,Alexander,Miller,alexander4ward3@gmail.com,289.438.7884,district,3,Ward 3
+e9c134e3-9b65-57eb-a759-99671c285c25,ca_on_st_catharines,Sal,Sorrento,,905.327.4299,district,3,Ward 3
+a81f416f-8f48-5199-a623-d079f12a2e05,ca_on_st_catharines,Mark,Stevens,markstevens7614@gmail.com,289.668.1444,district,3,Ward 3
+eceddd99-afa9-5e83-856a-9ba5eda9083f,ca_on_st_catharines,Kevin,Townsend,info@KevinTownsend.ca,289.707.4368,district,3,Ward 3
+d3bcb825-ff4f-55e4-ae9a-bd932ecfb4c7,ca_on_st_catharines,Kate,Werneburg,contact@katewstc.com,289.245.6817,district,3,Ward 3
+33feacfb-8b46-5817-8e19-a372a91bb35a,ca_on_st_catharines,Grant,Higginson,grant@granthigginson.ca,,district,4,Ward 4
+270d7476-1ae7-5091-8cb4-30efe1e19743,ca_on_st_catharines,Noah,Machek,noahmachek.ward4@outlook.com,289.690.5927,district,4,Ward 4
+192a9776-90bc-5531-822d-a4d8b143bbdf,ca_on_st_catharines,Allen,McKay,timeforchange2026@gmail.com,,district,4,Ward 4
+ed02ba15-bcce-57d8-831b-dd575d2d072c,ca_on_st_catharines,Robin,McPherson,robinmcphersonstc@gmail.com,,district,4,Ward 4
+e21060ba-b2a1-5b21-b733-39124f03a23b,ca_on_st_catharines,Caleb,Ratzlaff,calebratzlaff4ward4@gmail.com,289.489.3283,district,4,Ward 4
+2d04deae-2215-5af3-be61-4cd6d1c7873c,ca_on_st_catharines,Austin,Shynal,Ward4stc@gmail.com,289.257.4787,district,4,Ward 4
+24c64f79-8f9b-5774-a230-20a14bf4a795,ca_on_st_catharines,Spencer,Bellows-DeWolfe,spencerbellowsdewolfe@gmail.com,905.380.2929,district,5,Ward 5
+a925873a-f3b7-5ea2-8333-1f5618f7fa08,ca_on_st_catharines,Dawn,Dodge,,,district,5,Ward 5
+de94ee54-6c7c-5d8c-bc52-9964db8fa5c1,ca_on_st_catharines,Dunsin Sunday,Fakorede,dunsin4ward5councillor@gmail.com,647.498.8836,district,5,Ward 5
+ed761ba7-412c-56f3-aaa2-79bc5c3e3a21,ca_on_st_catharines,Emmanuel,Oneka,emmanuel.oneka@outlook.com,647.335.2445,district,5,Ward 5
+d6c031ef-aece-5d27-916d-17fe192e1a13,ca_on_st_catharines,Bill,Phillips,billphillips0204@gmail.com,,district,5,Ward 5
+2e93fac1-cee0-5667-bb00-257170acb8bc,ca_on_st_catharines,Marty,Mako,martymako76@gmail.com,,district,6,Ward 6
+8512a41e-5261-53e4-8888-f93b893ed034,ca_on_st_catharines,Constantina,O'Reilly,avroarrow4@gmail.com,905.937.2682,district,6,Ward 6
+ea281d38-e0d4-5bc6-af20-0045c875d5fc,ca_on_st_catharines,Bruce,Williamson,cbrucewilliamson@gmail.com,905.934.2787,district,6,Ward 6
+ebf641d7-6ee6-5c28-ae4d-03bfadaf8b92,ca_on_st_catharines,Anthony A.,Adeoye,anthony4mayorstc@gmail.com,905.749.7227,role,,
+3b5a538b-2eed-5242-8cf3-597e7f5a9d23,ca_on_st_catharines,Henry,Bosch,,,role,,
+2b79b2ee-db7c-5847-8e69-637d14bebfcd,ca_on_st_catharines,Jimmy,Jackson,jjackson.niagaracentre@gmail.com,289.219.0368,role,,
+665c716b-4b8c-5916-91b4-279e566edc9c,ca_on_st_catharines,Mat,Siscoe,,289.302.8355,role,,
+05fdee0a-a3cb-5d2a-9a3f-9a508ea900ed,ca_on_st_catharines,Ann-Marie,Zammit,amz4stc@gmail.com,905.348.4782,role,,

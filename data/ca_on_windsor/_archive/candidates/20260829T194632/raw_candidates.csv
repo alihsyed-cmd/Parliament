@@ -1,0 +1,34 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+34ce2fc2-a3ce-50d3-8ebd-a9091091d28c,ca_on_windsor,Darcie,Renaud,renaud4ward1@gmail.com,226-270-6818,district,WARD 1,Ward 1
+f14df020-733f-5a17-a1b6-d8eeff7ca5f4,ca_on_windsor,Wally,Chafchak,wchafchak@cogeco.net,,district,WARD 10,Ward 10
+aa7be8f9-03b2-582a-8262-56f0adcefd72,ca_on_windsor,Adam,Ibrahim,voteadamibrahim@gmail.com,,district,WARD 10,Ward 10
+d3c1e892-2cac-54aa-8101-21e341971687,ca_on_windsor,Mark,Masanovich,masanovichward10@gmail.com,519-984-4428,district,WARD 10,Ward 10
+ba9f729a-8d75-5047-90e0-97ead41678c3,ca_on_windsor,Jim,Morrison,voteforjim22@outlook.com,,district,WARD 10,Ward 10
+c5c41cc0-d0b6-5184-95b1-b02cd7f266e2,ca_on_windsor,Frazier,Fathers,campaign@frazierfathers.ca,,district,WARD 2,Ward 2
+e8868810-1198-5680-a4dc-92b8609f09dc,ca_on_windsor,Anthony,Jabbour,ajabboura34@gmail.com,226-260-7623,district,WARD 2,Ward 2
+fb69d80f-8b57-53f3-a3cb-177ec90268b8,ca_on_windsor,Nick,Markham,nmarkham747@hotmail.com,,district,WARD 2,Ward 2
+e05546dc-0e11-5860-bda0-a5721a310866,ca_on_windsor,Renaldo,Agostino,renaldoago@mac.com,519-999-6433,district,WARD 3,Ward 3
+ba60211e-cffb-5c5a-bd5d-6a69c11d0098,ca_on_windsor,Rabia,Kirma,vote@rabiakirma.ca,519-980-7331,district,WARD 3,Ward 3
+c73f5dcd-4842-59b4-b82a-de9b4195a756,ca_on_windsor,Chris,Holt,,,district,WARD 4,Ward 4
+145ece33-5497-5b22-a1d7-0b97eac53a38,ca_on_windsor,Rasha,Zaid,rasha@rashazaid.ca,226-773-3999,district,WARD 4,Ward 4
+a589ea59-e4c6-58e8-b877-c3bf7aea2ec8,ca_on_windsor,Ken,Acton,info@actonward5.ca,226-271-1148,district,WARD 5,Ward 5
+04ccb4d8-a14c-54e8-a7c0-0e2d2a5fdda3,ca_on_windsor,Farah,Ahmed,haifo251@gmail.com,226-246-2248,district,WARD 5,Ward 5
+7a10bd65-9597-5e91-880f-22b675191227,ca_on_windsor,Alessandro,Didone,voltage64@hotmail.com,519-819-0704,district,WARD 5,Ward 5
+4c8148ba-7959-5b38-a70e-31581639cf03,ca_on_windsor,Natasha Elizabeth,Feghali,natashafeghali@hotmail.com,519-980-2008,district,WARD 5,Ward 5
+2c231559-9695-51c3-b1b0-f01f72d13191,ca_on_windsor,Shane,Potvin,hello@shanepotvin.com,,district,WARD 5,Ward 5
+1066add3-f68a-5fc4-a3cc-4e394cdc1d68,ca_on_windsor,Nick,Jirgens,betterpicknick@gmail.com,,district,WARD 6,Ward 6
+e8f341b8-70ff-5b6b-8279-496a995a0410,ca_on_windsor,Hiral,Munim,electhiral@gmail.com,,district,WARD 6,Ward 6
+34e1cda9-3940-5ab4-88d6-c82e000ff67b,ca_on_windsor,Jeremy,Renaud,jeremynrenaud@gmail.com,519-566-1735,district,WARD 6,Ward 6
+9cf19ffc-a2f6-5ee5-a330-c406a18bbf38,ca_on_windsor,Owen,Smith,owenrogersmith@gmail.com,,district,WARD 6,Ward 6
+7cf58e14-18fe-55d8-84e6-b29a00af2ca9,ca_on_windsor,Angelo,Marignani,,,district,WARD 7,Ward 7
+eb2a0390-592e-5c94-958f-5c7509b3d77e,ca_on_windsor,Victoria,Soluade,victoriaforward7@gmail.com,,district,WARD 7,Ward 7
+24a202e7-cae2-5e1d-b5b5-540b0dbed549,ca_on_windsor,Gary,Kaschak,,,district,WARD 8,Ward 8
+80eb7d7a-bbd2-5671-8018-adb43a639ce0,ca_on_windsor,Kevin,Racine,kevin.racine.ward8@gmail.com,,district,WARD 8,Ward 8
+be3dfb6b-0965-5c5e-b395-8a7a171d891a,ca_on_windsor,Kieran,McKenzie,,,district,WARD 9,Ward 9
+0068e2b7-62ca-5050-99d6-6f05409d07c1,ca_on_windsor,Benjamin,Danyluk,firethemall2026@gmail.com,519-818-5455,role,,
+c6f5595c-b283-5732-aa41-af15fdb7c273,ca_on_windsor,Fred,Francis,ffrancis3@outlook.com,519-990-4138,role,,
+bba68bb0-1670-5d52-acfc-cef3f1fd0979,ca_on_windsor,Dylon,Graves,imdylongraves@gmail.com,519-300-0000,role,,
+aab7de7c-a8af-5758-b019-144b790e09ed,ca_on_windsor,Tara,Grayer,grayer4mayor.media@outlook.com,,role,,
+a5c73a10-654a-5eeb-bb67-bb18d09b3d9c,ca_on_windsor,Nick,Kolasky,worldtravelnick@gmail.com,,role,,
+b47f5d7b-5a15-5dd2-bf8b-a6e87601222e,ca_on_windsor,Kat,Pasquach,hello@votekatformayor.ca,,role,,
+959c24d1-6c7d-5217-872a-1b2b452ca19b,ca_on_windsor,Patrick,Sutherland,patricksutherland2025@gmail.com,,role,,

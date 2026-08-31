@@ -1,6 +1,8 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
 239e4e1b-b451-52c0-be4d-e4aac9f06af7,ca_on_milton,Nabil,Ahmed,nabilahmedrealtor@gmail.com,647-782-8112,district,1,Ward 1
 20117826-87fb-53ca-be9a-2ca49016185d,ca_on_milton,Colin,Best,electcolinbest@gmail.com,905-691-5057,district,1,Ward 1
+c4fb9a78-5176-535d-907a-dbafea8d6e41,ca_on_milton,Rahul,Chaudhari,,,district,1,Ward 1
+d9dfc365-e7e9-5b80-89e1-c58bd8562fac,ca_on_milton,Sajid,Chaudhry,vote4sajid@outlook.com,647-895-1975,district,1,Ward 1
 4dd28377-3075-528c-a69b-37b39d22e675,ca_on_milton,Donna,Danielli,ddanielli@interhop.net,905-699-7433,district,1,Ward 1
 76cec36c-4c70-521e-8225-cb6780385a11,ca_on_milton,Owen,Gray,owengraymilton@gmail.com,416-459-3314,district,1,Ward 1
 cc41296d-b21f-5a09-951d-f7f53080abb9,ca_on_milton,Gourav,Suri,go.suri@yahoo.com,905-691-6191,district,1,Ward 1
@@ -22,6 +24,7 @@ fde49bca-05f2-51df-aa81-3cd67c333442,ca_on_milton,Rick,Di Lorenzo,rick@dilorenzo
 60fe1d54-faa6-5d44-87a7-c5e10f83445b,ca_on_milton,Adil,Khalqi,votekhalqi@gmail.com,647-575-1860,district,3,Ward 3
 0248c2e1-fbe1-5b45-8da3-b37ddb221319,ca_on_milton,Salman,Zafar,electsalmanzafar@gmail.com,647-262-8759,district,3,Ward 3
 0310e9ae-07b0-51e4-bf8c-24109c10ef7e,ca_on_milton,Naveed,Ahmed,,,district,4,Ward 4
+91c24daf-6ae1-5981-b7b8-55010e03728d,ca_on_milton,Zaheer,Ashraf,Zaheer.ashraf81@gmail.com,416-858-7710,district,4,Ward 4
 fd6a34ab-9c7b-5ddb-bdda-6d072038750d,ca_on_milton,Adejisola,Atiba,voteadejisola@gmail.com,647-988-9915,district,4,Ward 4
 aeb4c2c9-bccd-5e4d-a6e0-991ed5183ead,ca_on_milton,Tahira,Haroon,tahiraharoonward4@gmail.com,416-454-7050,district,4,Ward 4
 6c58cd83-7dec-5a05-8bb3-4008f8a40a66,ca_on_milton,Khurshid,Khan,khanformilton@gmail.com,905-514-7777,district,4,Ward 4
@@ -35,8 +38,9 @@ e578d8d8-487c-5565-892f-67c076ca7812,ca_on_milton,Sarah,Marshall,marshall4milton
 aecad3c3-8a6d-517b-bbf5-520ac91fcb03,ca_on_milton,Nadeem,Akbar,info@nadeemakbar.ca,289-670-5007,role,,
 4f725b5f-db06-57e8-88ca-84ca74064bde,ca_on_milton,Abdulkareem,Akbik,abdulkareem@akbik.ca,905-299-8109,role,,
 73915ed4-53dc-5a42-ab9b-25736da0b52c,ca_on_milton,Sameera,Ali,info@sameeraali.ca,,role,,
+7dec3cb7-1b28-576c-a345-c2f7271004ca,ca_on_milton,Chéz,Amun,intellectualistt@gmail.com,437-428-2686,role,,
 e1f2357d-1f85-55e5-ac64-32b9be277a5b,ca_on_milton,Zainab,Azim,info@zainab4mayor.ca,416-475-1144,role,,
 96bf994c-2659-5953-8f02-611daaafbe61,ca_on_milton,Arjun,Joshi,arjunj4000@gmail.com,,role,,
+0afd736d-015f-5a7e-8091-1babcc528310,ca_on_milton,Asif,Khan,,,role,,
 c773bf20-289b-5f9b-96b3-b1546bb8f603,ca_on_milton,Gord,Krantz,,905-878-9423,role,,
 b307d075-d426-5d55-a8ec-96308db1a627,ca_on_milton,George,Minakakis,george@electgeorge.ca,437-727-2877,role,,
-f8d188f3-ea12-5f85-ac1f-4d7de85fb3b3,ca_on_milton,Mohammad,Tariq,mohammad@mcdadi.com,905-462-1842,role,,

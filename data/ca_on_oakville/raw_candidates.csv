@@ -1,8 +1,11 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
 dbb87d13-8e61-5568-a563-09046f6b3bf7,ca_on_oakville,Alexandra,Caldwell,alexandracaldwellward1@gmail.com,647-207-3172,district,1,Ward 1
 467d4a14-c776-5a83-9ccf-2ffc81f34299,ca_on_oakville,Amir,Henry,amirhenryward1@gmail.com,,district,1,Ward 1
+29b61a1b-b0ac-5d78-b405-9b09e1b9ef2e,ca_on_oakville,David,Imrie,votedrimrie@gmail.com,,district,1,Ward 1
+a542b131-ad9d-5c0a-ba51-d99a403204e3,ca_on_oakville,Pierce,Lang,piercetlang@gmail.com,905-510-5396,district,1,Ward 1
 6eb19c96-12c4-562d-8666-a76da6ca825d,ca_on_oakville,Jonathan,McNeice,jonathan.mcneice@gmail.com,905-315-0417,district,1,Ward 1
 ae540189-9d69-5d10-af31-dccdd8a04093,ca_on_oakville,Nancy,Ortenburg,nancyortenburg@gmail.com,,district,1,Ward 1
+bb99d448-cdf5-5dc6-9db6-ca5c842cf5a1,ca_on_oakville,Zena,Al-Mudaris,zena.oakville@gmail.com,,district,2,Ward 2
 fd13f1b4-d335-5f67-80b8-c3b149c2fe2f,ca_on_oakville,Ray,Chisholm,rayjohnchisholm@gmail.com,,district,2,Ward 2
 89ad8392-f0bf-5b7a-bf4e-326723f43845,ca_on_oakville,Desmond,Jordan,desmondoakvilleward2@gmail.com,905-901-5120,district,2,Ward 2
 d5e3ae8a-06e3-541b-99b0-438075aaa014,ca_on_oakville,Ayesha,Khawaja,ayesha.khawaja.oak@gmail.com,905-616-4965,district,2,Ward 2
@@ -11,31 +14,38 @@ e6951933-e296-504c-955c-6829f2a29261,ca_on_oakville,Sarah,Perkin,sellenp@hotmail
 cf6ca6cf-95f3-5c61-8634-cff6c942a10c,ca_on_oakville,Sana,Waqar,sana4oakville@sanawaqar.ca,437-240-5491,district,2,Ward 2
 2b742265-1890-5470-8ab2-12ede932532d,ca_on_oakville,Morgan,Elliott,morgan@morganelliott.ca,437-996-4352,district,3,Ward 3
 051eadd6-a71c-5b90-a748-2e3b9ebaec2b,ca_on_oakville,Janet,Haslett-Theall,janet@haslett-theall.ca,416-579-8309,district,3,Ward 3
-7afb0e32-5dd8-5350-9fdb-2effab4d74ff,ca_on_oakville,Kashif,Chaudry,ourward4@gmail.com,,district,4,Ward 4
-fdd6a9f8-fc0b-5e94-8296-78b1b575773b,ca_on_oakville,Suzan,Chong,suzan@suzanchong.ca,,district,4,Ward 4
+84898beb-9499-522a-95f0-93b6748b9288,ca_on_oakville,Jen,Zhou,jen@votejen.ca,647-567-9506,district,3,Ward 3
+c4343dac-3848-5b75-8ac2-0417b6a7b651,ca_on_oakville,Kashif (Kash),Chaudry,ourward4@gmail.com,,district,4,Ward 4
+fdd6a9f8-fc0b-5e94-8296-78b1b575773b,ca_on_oakville,Suzan,Chong,suzan@suzanchong.ca,289-803-9013,district,4,Ward 4
+0a62be97-0c9d-56f6-ae50-316fa598ed58,ca_on_oakville,Vandana,Giri,vandglc@gmail.com,647-870-2151,district,4,Ward 4
+7f26193a-6b6c-5a23-a372-7609812198e5,ca_on_oakville,Roger,Lapworth,lapworth@cogeco.ca,416-894-3054,district,4,Ward 4
 4c77d1d9-d14b-524e-9dd5-f19934785cfb,ca_on_oakville,Hutchison,Lee,hutchisonleeforward4@gmail.com,289-400-3106,district,4,Ward 4
 4cdb7a21-9085-5d00-93d0-38c8d2d50b22,ca_on_oakville,Peter,Longo,peter@peterlongo.ca,,district,4,Ward 4
 00b17f4c-315f-5a3f-9c9d-24c36c71e2f2,ca_on_oakville,Farah,Shamim,farah@farah4u.ca,289-300-2930,district,4,Ward 4
-0cae1bcf-d8e1-542a-8b3b-659d43ec50d9,ca_on_oakville,Syed Hasan,Tahir,htahir@hotmail.com,905-617-2977,district,4,Ward 4
+2db6c2c1-b8df-51e0-8db3-9a197f4743a9,ca_on_oakville,Luba,Slanina,lubaslanina@gmail.com,,district,4,Ward 4
+70213e98-2d1e-55cb-a6b3-8337211d3879,ca_on_oakville,Syed,Tahir,htahir@hotmail.com,905-617-2977,district,4,Ward 4
 db5208d0-9838-534e-b29f-e27e19db5121,ca_on_oakville,Jerome,Adamo,sayyestojerome@gmail.com,905-467-1196,district,5,Ward 5
+47a658bc-f020-553a-9729-e9422690aee7,ca_on_oakville,Mirsab,Fasih,mirsab.urrahman@gmail.com,647-786-5695,district,5,Ward 5
 503c51ad-5066-5455-9612-761be271365e,ca_on_oakville,Mackenzie,Grant,hello@mackenziegrant.ca,289-952-3842,district,5,Ward 5
 86584aca-2448-51e9-ab14-41c132224a9b,ca_on_oakville,Sue,Heddle,sueheddle@gmail.com,416-906-7998,district,5,Ward 5
-6b079998-1345-56b4-b991-24622dd673c5,ca_on_oakville,Orla,Johnston,,416-347-6166,district,5,Ward 5
-3667ff64-b5c0-5168-8108-73d47cdd4657,ca_on_oakville,Thane,Mitches,mitchesward5@gmail.com,,district,5,Ward 5
+6b079998-1345-56b4-b991-24622dd673c5,ca_on_oakville,Orla,Johnston,orla@orlajohnston.ca,416-347-6166,district,5,Ward 5
+3667ff64-b5c0-5168-8108-73d47cdd4657,ca_on_oakville,Thane,Mitches,mitchesward5@gmail.com,416-995-2675,district,5,Ward 5
 1b489e34-b6fa-515b-b269-68aa48342fcf,ca_on_oakville,Michael,Reid,michaelreid4oakville@gmail.com,416-802-0518,district,5,Ward 5
 d3e0cff5-dbe0-5569-a39f-089d0d394575,ca_on_oakville,Matt Ray,Smith,info@mattraysmith.ca,437-987-6484,district,5,Ward 5
 ce4af7ef-731f-5463-835e-3760bbb30789,ca_on_oakville,Audrey,Wubbenhorst,audrey@audreyw.ca,416-668-3649,district,5,Ward 5
 b4130325-5602-54f1-9e48-c839820b65b5,ca_on_oakville,Tom,Adams,tgadams2@gmail.com,289-300-6067,district,6,Ward 6
-1c167bd2-2835-59c6-a67e-15ce01aa23e4,ca_on_oakville,Zena,Al-Mudaris,zena.oakville@gmail.com,,district,6,Ward 6
 017ef8d9-0d86-57a5-a41a-cffb1b0c249f,ca_on_oakville,Natalia,Lishchyna,nataliainsix@gmail.com,,district,6,Ward 6
+9e66ca28-c983-555b-b05f-5f27ced43975,ca_on_oakville,Pierre,Sauvageot,,289-888-2958,district,6,Ward 6
+2aa644ae-1bc1-5b00-a1fe-33914a1d6246,ca_on_oakville,Smita,Tulsani,smitaforward6@gmail.com,437-575-9393,district,6,Ward 6
 a93f944a-224f-5d82-a514-4bcae5f5faff,ca_on_oakville,Gaganpreet,Darar,gagan.oakville@gmail.com,942-990-0070,district,7,Ward 7
 67e594ff-ab1e-5818-985c-e7f5e81aa625,ca_on_oakville,Ali,Hosny,connect@votealihosny.ca,647-581-5814,district,7,Ward 7
-60f7fabd-832c-5409-b6c4-02ff8a360f12,ca_on_oakville,Bilal,Kader,,,district,7,Ward 7
+60f7fabd-832c-5409-b6c4-02ff8a360f12,ca_on_oakville,Bilal,Kader,bilal@votebilal.ca,,district,7,Ward 7
 3f1d752d-8791-5506-abd3-1e99d73b2030,ca_on_oakville,Zulfi,Malik,zulfi786@hotmail.com,647-404-7159,district,7,Ward 7
 fa14c7ea-1294-5114-a6b3-844872d48ffc,ca_on_oakville,Nav,Nanda,,,district,7,Ward 7
-78eed0f2-7878-5ea9-8ac3-c75fb18c7976,ca_on_oakville,Riaz Ahmad,Sinawan,riazsinawan@hotmail.com,365-822-2121,district,7,Ward 7
+26708cb4-69fc-5fa6-b2c4-e6e0dc017698,ca_on_oakville,Ajay,Rosha,,,district,7,Ward 7
 b22dc26b-8816-5905-9e2f-6f679ee44746,ca_on_oakville,Vick,Walia,vick@votevickwalia.ca,437-234-5000,district,7,Ward 7
-ca4efef4-5c95-5910-9cd8-107fe188fa76,ca_on_oakville,Scott,Xie,hearme@scottxie.ca,647-979-5959,district,7,Ward 7
+ca4efef4-5c95-5910-9cd8-107fe188fa76,ca_on_oakville,Scott,Xie,reelectscott@gmail.com,,district,7,Ward 7
+e7e9fd90-f8a2-56c6-b3d9-d3257e69ce15,ca_on_oakville,Rob,Burton,response@robburton.ca,,role,,
 e01b955f-0bd4-51b1-acd2-170f50aa91e2,ca_on_oakville,Arvind,Choudhary,info@arvindchoudhary.ca,905-973-8213,role,,
 1b8e794d-a290-5b47-84fb-762b1b4fb17a,ca_on_oakville,Julia,Hanna,julia@juliahanna.ca,,role,,
 383316e1-a764-5e4f-bb9b-c5ff7dade40e,ca_on_oakville,Jeff,Knoll,hq@voteknoll.ca,289-813-0013,role,,

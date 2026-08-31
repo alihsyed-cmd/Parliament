@@ -1,18 +1,27 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
-43830731-6b4e-52c3-8087-e3727209afc3,ca_on_vaughan,Marilyn,Iafrate,marilyn@marilyniafrate.ca,416-543-6815,district,Ward 1,Ward 1
+43830731-6b4e-52c3-8087-e3727209afc3,ca_on_vaughan,Marilyn,Iafrate,,,district,Ward 1,Ward 1
 04d54764-e210-5a52-aa49-3d7e7749da92,ca_on_vaughan,Nadeem,Mahmood,,,district,Ward 1,Ward 1
-47cd9579-f069-55e1-b031-4aef4825fe89,ca_on_vaughan,Angela,Saggese,angelasaggese9@gmail.com,416-420-5592,district,Ward 1,Ward 1
-56c0f83b-55ea-553f-86f3-c7fee4cf152c,ca_on_vaughan,Vince,Scaramuzzo,,647-289-1446,district,Ward 1,Ward 1
-f2f0130d-0513-5c08-9cf3-c390ff536e0b,ca_on_vaughan,Anna,DeBartolo,annadebartolo25@gmail.com,416-898-9653,district,Ward 2,Ward 2
+47cd9579-f069-55e1-b031-4aef4825fe89,ca_on_vaughan,Angela,Saggese,,,district,Ward 1,Ward 1
+56c0f83b-55ea-553f-86f3-c7fee4cf152c,ca_on_vaughan,Vince,Scaramuzzo,,,district,Ward 1,Ward 1
+b3941c87-733d-5942-bd2e-758662e5114c,ca_on_vaughan,Pedro,Benevides,,,district,Ward 2,Ward 2
+f2f0130d-0513-5c08-9cf3-c390ff536e0b,ca_on_vaughan,Anna,DeBartolo,,,district,Ward 2,Ward 2
 e5065880-3a0c-50d1-a6a8-f4dacbe83e79,ca_on_vaughan,Adriano,Volpentesta,,,district,Ward 2,Ward 2
+772d6c40-81a4-5bbe-b9d2-0fd9d1998483,ca_on_vaughan,Asadullah,Aminpur,,,district,Ward 3,Ward 3
 bb0de8de-d7d0-5e88-925e-bd5c77da2ea9,ca_on_vaughan,Rosanna,DeFrancesca,,,district,Ward 3,Ward 3
-bc0efc90-7a71-5709-9bed-1c1032aed8bf,ca_on_vaughan,Chris,Ainsworth,chris@chrisainsworth.ca,416-873-8588,district,Ward 4,Ward 4
-f5b22550-53d3-505c-81e0-7002dfe16c61,ca_on_vaughan,Gila,Martow,info@gila.ca,,district,Ward 5,Ward 5
+bc0efc90-7a71-5709-9bed-1c1032aed8bf,ca_on_vaughan,Chris,Ainsworth,,,district,Ward 4,Ward 4
+2e7233b4-30c9-5c33-825b-00f6479c9777,ca_on_vaughan,Karim,Aziz,,,district,Ward 4,Ward 4
+0df4c820-9ef1-5570-8c93-fb1c2f5ff84b,ca_on_vaughan,Nirmala,Ramlall,,,district,Ward 4,Ward 4
+702cf86b-6f94-5765-8f3d-b14f160cdc85,ca_on_vaughan,Deven,Sandhu,,,district,Ward 4,Ward 4
+f5b22550-53d3-505c-81e0-7002dfe16c61,ca_on_vaughan,Gila,Martow,,,district,Ward 5,Ward 5
+a73aeedc-da17-5ef1-b911-27d8cfdd9e1c,ca_on_vaughan,Shelly-Ann Starlette,Cerrelli,,,role,,
 9d69c9a1-9296-5ab9-acc0-880ca364ded2,ca_on_vaughan,Steven,Del Duca,,,role,,
+e7b52437-5899-57f9-821f-06bdc11ebc12,ca_on_vaughan,Mario,Di Nardo,,,role,,Regional Councillor
 3058db59-0f59-5b5f-8845-5c9a028f54fb,ca_on_vaughan,Mario,Ferri,,,role,,Regional Councillor
-5b06a8b6-b6d0-5085-b49d-867df101e217,ca_on_vaughan,Fitz-Roy,Gordon,info@fitz4thewin.com,647-766-3294,role,,Regional Councillor
-2df34c68-5ed3-5040-be0d-378e45e30633,ca_on_vaughan,Linda D.,Jackson,info@reallindajackson.ca,437-434-1478,role,,Regional Councillor
+5b06a8b6-b6d0-5085-b49d-867df101e217,ca_on_vaughan,Fitz-Roy,Gordon,,,role,,Regional Councillor
+2df34c68-5ed3-5040-be0d-378e45e30633,ca_on_vaughan,Linda D.,Jackson,,,role,,Regional Councillor
 0bec5657-b6a1-5c21-acb5-f0ef6ed91365,ca_on_vaughan,Alex,Nascimben,,,role,,Regional Councillor
-4e2253bf-5f2a-5d2d-87a3-feef156e1332,ca_on_vaughan,Mario G.,Racco,vote@mariogracco.ca,416-419-3017,role,,Regional Councillor
+4e2253bf-5f2a-5d2d-87a3-feef156e1332,ca_on_vaughan,Mario G.,Racco,,,role,,Regional Councillor
 f37aca29-b4a6-5e2a-93d2-e7c7c3f352f1,ca_on_vaughan,Mandy,Rai,,,role,,Regional Councillor
-a253a209-df47-5114-8104-9c60471b1437,ca_on_vaughan,Gino,Rosati,info@ginorosati.ca,416-998-4747,role,,Regional Councillor
+a253a209-df47-5114-8104-9c60471b1437,ca_on_vaughan,Gino,Rosati,,,role,,Regional Councillor
+c417685f-b99c-55fc-865f-01c966cad02a,ca_on_vaughan,Bob,Santos,,,role,,Regional Councillor
+fe3cb868-d84c-5e4e-93a2-588b1aee3692,ca_on_vaughan,Alireza,Siadatan,,,role,,Regional Councillor

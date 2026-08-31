@@ -1,0 +1,73 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+166fe51d-e228-559b-9546-099a51a2721b,ca_on_london,Roger,Caranci,,519-636-3407,district,1,Ward 1
+e011e3b0-4148-57a2-b651-bba6048bd7f6,ca_on_london,Janette,Larocque,,,district,1,Ward 1
+c968fd7d-8da1-5fab-b784-2ca7bafe5eea,ca_on_london,Hadleigh,McAlister,Mcalisterward1@gmail.com,519-280-2208,district,1,Ward 1
+08a56723-b9f4-5d8c-bf7e-2ad6aa0d015c,ca_on_london,Juman,Al-Jumaili,Info@votejuman.ca,519-317-9205,district,10,Ward 10
+cbb38880-cde6-586f-935e-5dc8646a5ffa,ca_on_london,Steven,Edwards,stevenedwardsward10@gmail.com,519-868-1921,district,10,Ward 10
+7712129b-33da-569b-918b-e6321d1ea1d1,ca_on_london,Alexander,Moore,Alexmooreward10@gmail.com,226-926-7553,district,10,Ward 10
+4c3369be-0252-52b1-963d-64c17776778d,ca_on_london,Paul,Van Meerbergen,ReelectPaulVanMW10@gmail.com,519-641-7611,district,10,Ward 10
+7c56bb13-8fd1-5442-a77e-38a4e2e34a1c,ca_on_london,Lois Margaret,Ward,Loismw90@gmail.com,519-520-1344,district,10,Ward 10
+c2bf6aa7-ca0f-51a0-a25d-c7a5feb3b2eb,ca_on_london,Skylar,Franke,Info@skylarfranke.ca,,district,11,Ward 11
+f62190af-6ea5-5a75-a6fe-cf8f40fc1a04,ca_on_london,Harinder,Kumar (Harry),Harry4W11@gmail.com,519-630-6407,district,11,Ward 11
+6d899e3e-f581-55df-a20c-657cc0458f0e,ca_on_london,Alexander,Main,amain0418@yahoo.com,226-503-8512,district,12,Ward 12
+c368c043-5969-59ad-afbb-8db9ff28aa56,ca_on_london,Elizabeth,Peloza,Hello@elizabethpeloza.ca,226-455-6711,district,12,Ward 12
+a2aa2810-2d97-5977-8ccf-4c1a3c5fb573,ca_on_london,Ribal,Zebian,Ribalzebian60@gmail.com,226-998-7306,district,12,Ward 12
+dccfb5c9-2f63-5295-978c-467e814bc49c,ca_on_london,Schelley,Bisson,Contact@bisson13.ca,226-984-7889,district,13,Ward 13
+5171b082-f653-5e6b-b60d-8b99f1540b31,ca_on_london,Christopher (Tony),Biviano,,226-235-1584,district,13,Ward 13
+1eefa4c4-b0c8-502b-852c-e0c08ad883e5,ca_on_london,Andrew Joseph,Crook,Andrew@andrewcrook.ca,519-854-5092,district,13,Ward 13
+6d81f86a-2dbe-5c2c-9e13-aafdce6db7e0,ca_on_london,Stephen,D’Amelio,info@votestephen.ca,519-619-4156,district,13,Ward 13
+60c2b3a5-019e-5b71-b575-532866a25a25,ca_on_london,David,Ferreira,me@davidferreira.ca,,district,13,Ward 13
+41b17ecc-e127-5c16-bed7-3ac1d2567e70,ca_on_london,Nicholas,Saika-Voivod,Nicholas.saika@gmail.com,226-637-3012,district,13,Ward 13
+7130b85f-da61-59e0-be76-9526fcb7cf35,ca_on_london,Ubaid,Bhatti,,,district,14,Ward 14
+61420bbe-779a-54a8-88c3-33336c0b1d10,ca_on_london,Jason,King,Jason@jasonwking.ca,,district,14,Ward 14
+bcd535d0-d66e-5609-8e0d-09eaa5e620aa,ca_on_london,Sarah,Lehman,Votesarahlehman@gmail.com,,district,14,Ward 14
+1178dafd-69fe-5bc8-b9d1-6d2bf4ecbe71,ca_on_london,Shawn,Lewis,Shawn@shawnlewis.ca,,district,2,Ward 2
+ca2d9f8c-365b-59a7-8e79-3796e4f09a25,ca_on_london,Zack,Ramsey,zack_ramsey@hotmail.com,548-388-8000,district,2,Ward 2
+77bc98cd-b650-5bc2-ae0c-f67ec237b14b,ca_on_london,Peter,Cuddy,Info@petercuddy.ca,519-495-2530,district,3,Ward 3
+49c0d6ef-7175-51d9-b803-0dd5147224bf,ca_on_london,Ben,Durham,ben@bendurham.ca,,district,3,Ward 3
+fb2c2a34-9254-5ddc-ac84-b700f077df8e,ca_on_london,Harkirat,Kaur,Info@voteharkirat.ca,437-226-0006,district,3,Ward 3
+3042fb73-c690-5621-924c-b7612e3f5391,ca_on_london,Leroy,Osbourne,Info@voteosbourne.ca,226-271-1798,district,3,Ward 3
+d30ea87b-d9fc-5534-aead-cf4d292ab850,ca_on_london,Riya,Philip,philip.riya1@gmail.com,647-877-8833,district,3,Ward 3
+6b7c6b2a-1a51-5eb5-ae46-ed9b4b3d6832,ca_on_london,Bonnie,Baleck,,,district,4,Ward 4
+93893bc3-76f3-5429-b949-fd948a3ef17c,ca_on_london,Elivis,Birindwa,Lufunguloelvis@yahoo.ca,226-700-2529,district,4,Ward 4
+31eea2a8-0876-53df-89a8-49971be09047,ca_on_london,Alicia,Caskey,,226-840-6024,district,4,Ward 4
+4baa6f23-e76a-5bb7-a092-3b1aac42b5e4,ca_on_london,Tom,Cull,connect@votetomcull.ca,,district,4,Ward 4
+6883820b-8957-5779-b86f-5befcf04d58b,ca_on_london,Mario,Jozic,info@mariojozic.ca,519-709-1754,district,4,Ward 4
+6072c7b3-488d-55b5-b830-392d891fffd7,ca_on_london,Alan,Lieknins,,,district,4,Ward 4
+ff03c1d1-e006-5ff3-b86d-1ad4c0b6fe4c,ca_on_london,Stephen,Orser (Ors),stephenorser@yahoo.com,519-204-6040,district,4,Ward 4
+b8de656d-d06b-58ba-952c-4c68143623b5,ca_on_london,Randi,Prunner,,,district,4,Ward 4
+3a0d4d2e-f035-5294-84ea-2e15b4bd2e04,ca_on_london,Bob,Wright,rjlwright1@gmail.com,519-808-7051,district,4,Ward 4
+f7393a4f-c837-50d4-9c7f-0d6324df6441,ca_on_london,Simon Sabeesh,Karikassery,Simonsabeesh@gmail.com,226-374-6362,district,5,Ward 5
+5235ebb0-352a-5c72-b9e1-f08d13bc9a0f,ca_on_london,Corrine,Rahman,Rahmanfor5@gmail.com,226-377-5200,district,5,Ward 5
+d4f1f281-ddb5-5638-9df5-79f09a6a574f,ca_on_london,Abid,Raza,infoabidraza5@gmail.com,519-639-3709,district,5,Ward 5
+8da955e4-c718-509a-9cdf-00ee7cb99af5,ca_on_london,Mary Blake,Rose,,,district,5,Ward 5
+9f5b52f1-5cbc-58d8-a08a-a2e8f1740749,ca_on_london,Ian Sterling,Leishman,Ian@ianleishman.ca,226-270-3988,district,6,Ward 6
+89238951-6798-593e-9010-942c4559dcc5,ca_on_london,Stephanie,Marentette,Steph4ward6@gmail.com,,district,6,Ward 6
+68f61140-5ee1-50a2-94cb-5545c8927782,ca_on_london,Naomi,Nadea,info@naominadea.ca,519-813-4247,district,6,Ward 6
+83747bce-b7bb-57a0-bd47-fdf37965750f,ca_on_london,Sam,Trosow,Trosow4council@gmail.com,,district,6,Ward 6
+4373a48f-8d7d-550a-968c-0f09ac8163a1,ca_on_london,Kamrul,Ahsan (Kam),Kamrul@afmkamrulahsan.ca,1-437-433-5172,district,7,Ward 7
+f57adcd7-d3d2-5ccd-927d-984cf15eac81,ca_on_london,German,Gutierrez,,,district,7,Ward 7
+2c7d6d05-75c7-54a4-9aab-721893600467,ca_on_london,Sam,Hajar,sam-hajar@londonward7.ca,519-902-0971,district,7,Ward 7
+26a67ba8-6824-5523-b238-b6f4f8da291b,ca_on_london,Waseem,Kazzah,Campaign@waseemkazzah.ca,519-697-7278,district,7,Ward 7
+3997aa86-74cc-5c4c-8d0f-3d591028cc49,ca_on_london,Bensy,Mathew,bensy4ward7@yahoo.com,647-854-6050,district,7,Ward 7
+b75eeef5-a3bb-5567-9035-5a2fdf66d141,ca_on_london,Dan,Meinen,Campaign@danmeinen.ca,226-980-5028,district,7,Ward 7
+a100894e-c338-5f62-b74c-db3191e3f526,ca_on_london,Djuma Moïse,Sharifu,Djumasharifu@outlook.com,548-468-0928,district,7,Ward 7
+98204880-6e25-50aa-bbe4-cc963ab4cd5b,ca_on_london,Jonathan,Sher,sherforward7@gmail.com,519-494-2437,district,7,Ward 7
+a1354a1a-549a-5e11-805b-89e3a794ae13,ca_on_london,Praveen,Varkey,,519-870-5783,district,7,Ward 7
+2c4a81cd-1011-57f6-9bc2-c59300f0cca2,ca_on_london,Steve,Lehman,,,district,8,Ward 8
+cc3800cb-6e90-5cca-a2bf-1f5667ba63ee,ca_on_london,Coralia Esterra,Tudor,votetudor@gmail.com,519-857-7749,district,8,Ward 8
+ef083c6e-b362-50fa-96fa-f70059982b90,ca_on_london,Tammy,Abi-Khalil,Contact@tammy4ward9.ca,,district,9,Ward 9
+b65852df-2e66-5ef8-861e-041ad34d88ac,ca_on_london,Anna,Hopkins,Ahopkins@rogers.com,,district,9,Ward 9
+553cb6ef-fc78-5ac2-9243-a3649410ca96,ca_on_london,Dino,Jose,info@dinojose.com,,district,9,Ward 9
+1e4914dc-0c18-5c19-acad-4dcd8716c0a1,ca_on_london,Matt,Millar,Matt@ward9.online,,district,9,Ward 9
+81aed531-c01d-5ab7-84c0-830dbb59b539,ca_on_london,Luke,Thomas,Lukethomasward9@gmail.com,,district,9,Ward 9
+e95fcafa-dc00-54f1-bc6d-eede64c75254,ca_on_london,John,Feher,Feherformayor@gmail.com,519-719-0276,role,,
+1ca34e4e-ca68-5f61-aca1-cac0ab109d0e,ca_on_london,Lawrence-Zachary,Howe,vote@lawrencezachary.ca,,role,,
+36e90a02-28c3-51ff-8ad0-420e022a716a,ca_on_london,Kirsten,Krose,campaign@kirstenkrose.ca,,role,,
+746ece07-a03b-5e01-a030-bae84cd7c7b4,ca_on_london,Dan,Lenart,dan.lenart.66@gmail.com,,role,,
+ee6ea704-0dd4-5a50-9c12-a4998e67793a,ca_on_london,Bronagh Joyce,Morgan,bronaghmorganmayor@gmail.com,,role,,
+848683cd-0581-5c00-944f-dfe6e35635df,ca_on_london,Josh,Morgan,contact@joshmorgan.ca,,role,,
+df0a662d-06eb-5469-b297-07fde970eb34,ca_on_london,Christine,Rosehart,1hereafter@proton.me,226-236-6543,role,,
+f7dd7c28-a2a4-59df-8b62-59f640bf31e4,ca_on_london,Susan,Stevenson,info@votesusanstevenson.ca,519-900-0082,role,,
+10e5c5d1-1004-563d-9363-72924a9a5d8e,ca_on_london,Jeff,Yam,,,role,,
+c3ae5554-5e0c-5deb-8fb5-71decee029aa,ca_on_london,Mustafa,Zeboon,zebuunformayor@gmail.com,,role,,

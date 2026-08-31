@@ -73,6 +73,46 @@ BOUNDARY_FILTERS = {
 }
 
 
+# Jurisdictions whose stored candidate UUIDs were minted under a namespace that
+# is NOT the pinned CANDIDATE_NS, and therefore cannot be reproduced by the
+# formula above. Regenerating them on a rerun would silently change the primary
+# key of every returning candidate, leaving the old rows stranded in Supabase
+# (export upserts, it never deletes) and orphaning any invitation already issued
+# against the old uuid.
+#
+# Hamilton is the only such jurisdiction: its first run predates the 2026-08-13
+# namespace pin and that run's script was never saved, so its namespace is
+# unrecoverable (UUID5 is not invertible; the pinned constant and all four
+# uuid.NAMESPACE_* values were tested against several key formulas — zero
+# matches).
+#
+# For these slugs we keep the stored uuid for anyone whose NAME appears in the
+# prior canonical file, and mint a normal pinned-namespace uuid for genuinely
+# new candidates. Matching is on name alone, deliberately: a candidate who
+# withdrew in one ward and refiled in another is the same person and should keep
+# the same identity and invitation.
+REUSE_PRIOR_UUIDS = {"ca_on_hamilton"}
+
+
+def _name_key(first, last):
+    return unicodedata.normalize("NFC", f"{first}|{last}").casefold().strip()
+
+
+def prior_uuid_by_name(slug):
+    """Map name-key -> uuid from the jurisdiction's existing canonical roster."""
+    path = p("data", slug, "raw_candidates.csv")
+    if not os.path.exists(path):
+        return {}
+    out = {}
+    with open(path, encoding="utf-8-sig", newline="") as fh:
+        for r in csv.DictReader(fh):
+            u = (r.get("uuid") or "").strip()
+            if not u:
+                continue
+            out.setdefault(_name_key(r.get("first_name", ""), r.get("last_name", "")), u)
+    return out
+
+
 # --------------------------------------------------------------------------
 # Stage 5 - consolidation
 # --------------------------------------------------------------------------
@@ -86,13 +126,23 @@ def consolidate(run_id, slug):
     if missing:
         raise SystemExit(f"extracted/candidates.csv missing columns: {missing}")
 
+    prior = prior_uuid_by_name(slug) if slug in REUSE_PRIOR_UUIDS else {}
+    reused = 0
     for r in rows:
+        carried = prior.get(_name_key(r.get("first_name", ""), r.get("last_name", "")))
+        if carried:
+            r["uuid"] = carried
+            reused += 1
+            continue
         key = "|".join([
             slug, r.get("first_name", ""), r.get("last_name", ""),
             r.get("role_scope", ""), r.get("district_id", ""),
         ])
         key = unicodedata.normalize("NFC", key).casefold().strip()
         r["uuid"] = str(uuidlib.uuid5(CANDIDATE_NS, key))
+    if prior:
+        print(f"      uuid reuse: {reused}/{len(rows)} carried from the prior "
+              f"{slug} roster (unrecoverable legacy namespace)")
 
     groups = {}
     for r in rows:

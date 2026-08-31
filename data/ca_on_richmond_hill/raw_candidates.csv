@@ -1,0 +1,34 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+838d841e-551d-5f9d-90fa-ecf9d6da47b2,ca_on_richmond_hill,Carol,Davidson,votecaroldavidson@gmail.com,437-433-1962,district,1,Ward 1
+9fbe222d-8d4c-5962-9343-9a71ee363c26,ca_on_richmond_hill,Catherine,Dell'Erba,,,district,1,Ward 1
+a87cbe04-9e58-5109-bcdc-6b752ee798e8,ca_on_richmond_hill,Raymond,Dodaro,,,district,1,Ward 1
+eba7aee6-fd90-56f2-bd89-276e5f0c2e41,ca_on_richmond_hill,Giovanni,Nardone,Info@giovanninardone.com,647-914-4634,district,1,Ward 1
+1ae5659e-3628-565a-b2b8-a82b2cd0e836,ca_on_richmond_hill,Muhammad,Kermalli,vote@muhammadkermalli.com,905-853-3378,district,2,Ward 2
+fc88a549-8cb8-5f6f-bf31-171297a9b9d7,ca_on_richmond_hill,Hamidreza,Kheirkhah Ghehi,,,district,2,Ward 2
+1299386a-492e-52ee-b4ca-18ebb240f965,ca_on_richmond_hill,Sigmund,Lee,votesigmund@gmail.com,416-833-4347,district,2,Ward 2
+dad67358-bde5-504e-a5aa-74c605046d45,ca_on_richmond_hill,Tom,Muench,reelecttommuench@gmail.com,647-444-9024,district,2,Ward 2
+c06b041e-7a98-5bc9-bebd-880e086517f1,ca_on_richmond_hill,Scott,Thompson,,,district,2,Ward 2
+2db7c7ce-7524-5177-b7a1-515137a5ede6,ca_on_richmond_hill,Castro,Liu,,,district,3,Ward 3
+cb50657e-a912-5d3f-a4c1-ca3603dbb8df,ca_on_richmond_hill,Juni,Yeung,JuniYeungVotes@gmail.com,+1 647 631 1702,district,3,Ward 3
+ed66f862-b9bc-550b-8567-cae19b0d5864,ca_on_richmond_hill,Ahmad,Amanullah,,,district,4,Ward 4
+e3982ac3-d2d9-5f00-9661-305dd8fc4cbb,ca_on_richmond_hill,Sharon,Chisholm,vote.chisholm@gmail.com,,district,4,Ward 4
+0bbd64c6-74f5-5589-b408-09134fce9dd5,ca_on_richmond_hill,Simon,Cui,voteforsimoncui@gmail.com,416-270-6760,district,4,Ward 4
+520fd55a-1b1c-54bd-9985-a107133db358,ca_on_richmond_hill,Rose,Weinberg,voterosew@gmail.com,647-999-3733,district,4,Ward 4
+1a349f16-92dc-5762-88d4-a354afd0abe4,ca_on_richmond_hill,Danny,Yoon,votedannyyoon@gmail.com,,district,4,Ward 4
+1e5b74c2-cdac-54d2-9e26-da8a2e850c25,ca_on_richmond_hill,Ray,Behroozian,ray@voteforray.ca,416-464-8454,district,5,Ward 5
+fb26d9ec-b66f-5da0-84b8-33759e92fd85,ca_on_richmond_hill,Yuliya,Benedziktavich,benedikt.yuliya@gmail.com,,district,5,Ward 5
+720854b9-62f3-5f72-a0c4-1debc0b6334f,ca_on_richmond_hill,Karen,Cilevitz,karen.cilevitz@rogers.com,647-296-7582,district,5,Ward 5
+8d7278e6-2b8e-5666-bed3-5852c6d36de7,ca_on_richmond_hill,Alex,Jafari,,,district,5,Ward 5
+20f5c06a-7a85-532a-858b-4a4a86d8216f,ca_on_richmond_hill,Ali,Mahboub-Shadkhou,,,district,5,Ward 5
+5e09a8a0-0239-58ac-860d-0c53a342c8d2,ca_on_richmond_hill,Vera,Murano,,,district,5,Ward 5
+f996fc2c-078c-534e-86c3-f661d213f2f8,ca_on_richmond_hill,Marty,Paulin,info@electmarty.ca,365-653-5557,district,5,Ward 5
+626a563e-e63f-5de4-9ffe-429291c4e564,ca_on_richmond_hill,Richard,Rupp,Action@RichardRupp.ca,,district,5,Ward 5
+a252f6b8-38e4-5a8a-ac00-3f2321fec2f7,ca_on_richmond_hill,Hasti,Anasory,info@votehasti.ca,416-887-2749,district,6,Ward 6
+ff1c8ed3-81f5-59ff-ac33-cd08c069dd14,ca_on_richmond_hill,Andrew,Mendonca,andrewcorh@gmail.com,,district,6,Ward 6
+e9530e6f-bcf1-5b44-bdfd-e4f493603e5b,ca_on_richmond_hill,Michael,Shiu,,,district,6,Ward 6
+7b7958f1-a396-557b-a320-039c4e8227f2,ca_on_richmond_hill,Domenic,Bardari,domenicformayor@gmail.com,647-877-7697,role,,
+5efe6edb-357b-538c-8d57-d9c04f4717fa,ca_on_richmond_hill,Godwin,Chan,,,role,,Regional Councillor
+c18de2e7-cb9b-5713-b14c-e67abcdd4311,ca_on_richmond_hill,Marco,Coletta,,,role,,Regional Councillor
+907f51e6-1721-5b80-a196-66528091bf63,ca_on_richmond_hill,Holo,Devnani,holo.devnani@gmail.com,,role,,
+928be5ed-1b6c-5c19-8d8f-7fcb1049bb5f,ca_on_richmond_hill,Joe,DiPaola,,,role,,Regional Councillor
+6c0ae566-df13-564d-933c-0576aa8d0d04,ca_on_richmond_hill,David,West,campaign_manager@votedavidwest.ca,,role,,

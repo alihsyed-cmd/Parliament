@@ -1,8 +1,11 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
 bcbddf40-4fd2-505d-b294-3fd7f680b89b,ca_on_greater_sudbury,William,Cable,willcableward1@gmail.com,705-885-2701,district,1,Ward 1
+9db039ac-25df-5677-a934-8354e3cf31a0,ca_on_greater_sudbury,Tysen,Galoni,tjdgaloni@gmail.com,437-218-7425,district,1,Ward 1
 83c18657-f0ba-59f6-bb02-0b46e7eb0ba7,ca_on_greater_sudbury,Mark,Signoretti,votemarksignoretti@gmail.com,,district,1,Ward 1
 953708a8-5174-5bff-8630-3df4e69b7c6f,ca_on_greater_sudbury,Tay,Butt,elect@taybutt.ca,705-929-7236,district,10,Ward 10
-f972f166-a9c3-5abf-a609-0a18a3528f26,ca_on_greater_sudbury,Cora,Demarco,ward10corademarco@gmail.com,,district,10,Ward 10
+f972f166-a9c3-5abf-a609-0a18a3528f26,ca_on_greater_sudbury,Cora,DeMarco,ward10corademarco@gmail.com,,district,10,Ward 10
+ea1c07cb-8763-5218-a439-dc2aa1fe0a21,ca_on_greater_sudbury,Trinity Mary,Hollis,trinityhollis@hotmail.com,705-522-0712,district,10,Ward 10
+7c8ee780-fbdc-502e-8d43-e8521369b443,ca_on_greater_sudbury,Cathan,Pasanen,,705-665-1802,district,10,Ward 10
 07be2c2c-cddc-5d21-af43-727f9497a47e,ca_on_greater_sudbury,Suzanne,Seiling,seiling.suzanne@gmail.com,,district,10,Ward 10
 d42e9eff-0417-57e0-b02b-2028a5619e5a,ca_on_greater_sudbury,Paul,Stopciati,pstopciati@persona.ca,705-507-1002,district,10,Ward 10
 0b5798af-3189-5daf-8b31-7c2acac9e176,ca_on_greater_sudbury,Derek,Young,dyoungward10@gmail.com,705-918-2601,district,10,Ward 10
@@ -10,34 +13,47 @@ d42e9eff-0417-57e0-b02b-2028a5619e5a,ca_on_greater_sudbury,Paul,Stopciati,pstopc
 2f2d7925-98bc-5aba-a7c1-8cbf12922741,ca_on_greater_sudbury,Daniel,Larocque,danlarocqueward11@gmail.com,705-626-0525,district,11,Ward 11
 c832aaea-b5c2-5e8c-9182-1349716dace4,ca_on_greater_sudbury,Bill,Leduc,billyleduc@hotmail.com,249-878-5808,district,11,Ward 11
 74720a28-ff42-5b59-b75b-0b7a3d78fd99,ca_on_greater_sudbury,Shawn,Ouimet,,705-662-0458,district,11,Ward 11
-f73c6ff6-182f-5dc7-9d33-e389fd404aa9,ca_on_greater_sudbury,Ron,Goswell,counciller.rongoswell@goswell.ca,,district,12,Ward 12
-29d562ce-bb96-5be8-b787-db4daf2f7d64,ca_on_greater_sudbury,Deborah,Josipovic,deborahjosipovic@gmail.com,519-420-8308,district,12,Ward 12
+f22f2035-a397-5319-a742-a3a3d89b3736,ca_on_greater_sudbury,Robert,Rovinelli,robertrovinelli.ward11@gmail.com,705-920-5248,district,11,Ward 11
+a8115d1d-00a1-5689-ada4-6edfa9956960,ca_on_greater_sudbury,Roxanne,Tessier,roxannetessier@gmail.com,705-923-4848,district,11,Ward 11
+5bc1862a-e0b3-5433-89e8-e39e4578b892,ca_on_greater_sudbury,Amy,Voz,amy.voz@outlook.com,705-562-6289,district,11,Ward 11
+f73c6ff6-182f-5dc7-9d33-e389fd404aa9,ca_on_greater_sudbury,Ron,Goswell,Councillor.RonGoswell@Goswell.ca,,district,12,Ward 12
 a983b196-8f9d-5fa6-8e89-f2068810979f,ca_on_greater_sudbury,Jeff,MacIntyre,Jeff@JeffMacIntyre.ca,,district,12,Ward 12
 1082d592-ff53-5c48-a103-bc63ccb2b744,ca_on_greater_sudbury,Colin,McKerral,cmckerral@hotmail.com,705-822-9024,district,12,Ward 12
 2772543d-704a-503e-b5c4-bed744041f10,ca_on_greater_sudbury,Matteo,Raso,matteo_luigi_raso@protonmail.com,705-929-2266,district,12,Ward 12
+3b9fd6ea-a859-5a08-b75c-32c574a1f43d,ca_on_greater_sudbury,Linnet,Rimmer,linnet.rimmer@gmail.com,705-988-7706,district,12,Ward 12
 265beda6-8970-5e2c-a05d-01d845ae2237,ca_on_greater_sudbury,Eric,Benoit,eric4ward2@gmail.com,705-207-1046,district,2,Ward 2
 21204781-2e5c-5c86-a1a5-b5b8e0f73b9a,ca_on_greater_sudbury,Christel,Brandle,christelbrandle@hotmail.com,705-690-6696,district,2,Ward 2
 f2e8bfd5-b8d7-5a33-b555-3efb9a614fbc,ca_on_greater_sudbury,Glen,Duffy,ward2glenduffy@gmail.com,705-919-5140,district,2,Ward 2
+50d43293-240a-5bab-a45d-6d711cb21059,ca_on_greater_sudbury,Tracy,Oost,toostelection2026@gmail.com,705-690-7628,district,2,Ward 2
 b23844e0-6966-5af8-bf60-913d086776be,ca_on_greater_sudbury,Dan,Xilon,danxilon57@gmail.com,705-822-6982,district,2,Ward 2
 eb540fda-3c90-5746-a575-7586d9e45c45,ca_on_greater_sudbury,Michel,Brabant,brabantmi@icloud.com,705-698-4232,district,3,Ward 3
+62af8603-f194-5fc9-b3e3-e556e09dbbb5,ca_on_greater_sudbury,Marcel,Montpellier,marcelmontpellierforward3@gmail.com,249-979-4940,district,3,Ward 3
 3570db4a-a5f3-5585-8428-3f607ed66c9b,ca_on_greater_sudbury,Devin,White,ward3sudbury@gmail.com,,district,3,Ward 3
 cd09d5fc-fb34-5c3f-8977-355ddd0954a2,ca_on_greater_sudbury,Vincent,Bolt,vincentboltward4@gmail.com,,district,4,Ward 4
 8d603eff-aeaa-5cef-9689-e485724f995c,ca_on_greater_sudbury,Pauline,Fortin,fortin4ward4@gmail.com,,district,4,Ward 4
 939e9d76-8031-5fcb-b185-2066dd623005,ca_on_greater_sudbury,Mike,Parent,mikeparent1973@gmail.com,705-493-0625,district,5,Ward 5
-2ef5a244-4090-5f54-bc28-7fd485b9a318,ca_on_greater_sudbury,Dan,Boulard,danboulard64@gmail.com,705-923-2021,district,6,Ward 6
+17ac6f91-bb69-5374-ae2c-e94eb1c17d32,ca_on_greater_sudbury,Roger,Trottier,rogertrottier21@hotmail.com,705-897-4659,district,5,Ward 5
+2ef5a244-4090-5f54-bc28-7fd485b9a318,ca_on_greater_sudbury,Dan,Boulard,danboulard.w6@gmail.com,705-923-2021,district,6,Ward 6
+f6d95205-13a9-50fb-9866-e5118f610d18,ca_on_greater_sudbury,Keegan,Dutrisac,info@keegandutrisac.ca,705-885-8400,district,6,Ward 6
 1d499ca6-4428-58d5-989e-0eba201b908d,ca_on_greater_sudbury,René,Lapierre,lapierre1973@gmail.com,705-618-0637,district,6,Ward 6
-62c7e38b-ab8d-5056-b665-c17a8377dc16,ca_on_greater_sudbury,Natalie,Labbée,electlabbeeforward7@gmail.com,,district,7,Ward 7
+37dad3ed-29b6-59d7-9333-01c26cb0deda,ca_on_greater_sudbury,Natalie,Labbee,info@natalielabbee.ca,,district,7,Ward 7
+3b08c4e0-7c47-5aa6-886b-efbc4494c9da,ca_on_greater_sudbury,Dave,Rajotte,dave.fisherofmen.rajotte@gmail.com,705-677-5522,district,7,Ward 7
+10664799-c127-5de3-bb3c-e168241e1c5e,ca_on_greater_sudbury,Aaron,Walsh,info@ajwalsh.com,705-222-7663,district,7,Ward 7
 9f7190ba-1b5f-5f84-93f0-ac041c5dc9e6,ca_on_greater_sudbury,Karanbir,Badhesha,info@badhesha4council.ca,,district,8,Ward 8
 ea80e97d-6eb1-5616-bcc4-d0c993c0902c,ca_on_greater_sudbury,George,Lalonde,info@georgelalonde.ca,,district,8,Ward 8
+47d6565f-6bbb-53de-af22-756456a124c1,ca_on_greater_sudbury,Carla,Ross-Arsenault,carla4ward8@gmail.com,705-524-2226,district,8,Ward 8
 90d0f9d6-0323-5a34-9a72-2b9cd09fbb17,ca_on_greater_sudbury,Shawn,Rossi,rossiforward8@gmail.com,,district,8,Ward 8
 19e7b3c1-cbc6-58a0-97a5-e79c683b6367,ca_on_greater_sudbury,Natalie,Tessier,info@tessierward8.com,705-822-1333,district,8,Ward 8
 57cf79c8-f4a3-5866-aea4-e5e1a92282ac,ca_on_greater_sudbury,Eddie,Astgen,eddieastgenward9@gmail.com,705-618-0538,district,9,Ward 9
 0e9c33f3-33d6-5082-bd9c-15b211e817b4,ca_on_greater_sudbury,Wanda,Berton-Heyerichs,,,district,9,Ward 9
+95f0b064-4d66-5905-b6a7-f54e6afb14fe,ca_on_greater_sudbury,James,Borg,jamesborgspace69@gmail.com,705-929-3670,district,9,Ward 9
 708b4c84-cd38-5379-a7a3-f38ef94e92a8,ca_on_greater_sudbury,Carly,Gasparini,carly4council@gmail.com,,district,9,Ward 9
 034d3ec3-106f-5f06-9f32-efe2328ef808,ca_on_greater_sudbury,Shawn,Poland,shawnpolandward9@gmail.com,705-561-1659,district,9,Ward 9
 6d59b4dd-4d1c-5374-80f0-a838b065d7cb,ca_on_greater_sudbury,Joseph,Boutros,forwardwithjoe@gmail.com,,role,,
+4bcf7ec7-affa-5ae6-be92-1218238dad8e,ca_on_greater_sudbury,Troy,Crowder,,,role,,
 eb5f21ad-730f-5264-948c-31c245841a80,ca_on_greater_sudbury,Bob,Johnston,kitchencruizin@gmail.com,705-918-9215,role,,
-0fd85bf4-247e-53b1-a84f-776446b0fbe2,ca_on_greater_sudbury,Paul,Lefebvre,,705-673-0478,role,,
+0fd85bf4-247e-53b1-a84f-776446b0fbe2,ca_on_greater_sudbury,Paul,Lefebvre,marisue@paullefebvre.ca,705-243-4512,role,,
+9ee59ef6-b48e-54de-9fe9-0388a2979c12,ca_on_greater_sudbury,Michael,McIntosh,mcintosh75@hotmail.com,,role,,
 4420373a-ff4c-5046-aaa5-2074bbfee55f,ca_on_greater_sudbury,Keenan,Menard,keenanforsudburymayor@hotmail.com,,role,,
 80fc8279-2f27-57c5-a7d6-74c0088d063f,ca_on_greater_sudbury,Rodney,Newton,rodneynewton.sudbury@hotmail.com,705-822-9154,role,,
 967e4111-dbd7-5ca3-992e-af7b7649d52c,ca_on_greater_sudbury,Miranda,Rocca-Circelli,votemirandaformayor@gmail.com,,role,,

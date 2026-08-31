@@ -1,31 +1,38 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
-41b4c627-0d46-58e3-98fd-c25091f9a74b,ca_on_brantford,Michael,Boucher,michaelboucher_ward1@outlook.com,519-721-5622,district,Ward 1,Ward 1
-7d7a5ad2-737c-594b-bd81-975f99bfe0d3,ca_on_brantford,Darryl,Casey,darryl.casey.ward1@outlook.com,226-966-6233,district,Ward 1,Ward 1
-14e846a4-427b-51c9-9f03-019114d7b568,ca_on_brantford,Bob,Sproul,bobsproulward1@gmail.com,519-755-6660,district,Ward 1,Ward 1
-9a81dc74-e5e9-557c-a342-9012c117aadd,ca_on_brantford,Michael,Sullivan,votemichaelsullivan4ward1@gmail.com,519-770-5823,district,Ward 1,Ward 1
-9961f3f4-5b42-58ff-8dd7-cdac9e6ad858,ca_on_brantford,Gino,Caputo,gcaputo77@rogers.com,226-938-1967,district,Ward 2,Ward 2
-a58cb845-8fc1-511f-905d-faaa5d8cda5b,ca_on_brantford,Erica,James,erica-for-ward-2@hotmail.com,519-755-2350,district,Ward 2,Ward 2
-abfdb55e-6115-5aae-974f-19a3786394d4,ca_on_brantford,Mark,Littell,mark@littell.ca,519-752-6275,district,Ward 2,Ward 2
-5d638c4c-bbc1-5449-90e8-3009a006366b,ca_on_brantford,Dave,Malcolm,dave.malcolm@live.com,519-751-5240,district,Ward 2,Ward 2
-302f2c4b-6018-59c8-8cf0-5a76ed5d9fc3,ca_on_brantford,Trevor J,Cherewka,tcherewka@gmail.com,519-774-6135,district,Ward 3,Ward 3
-995df12a-d3b6-5bcb-bb63-b0a3ccad5cf2,ca_on_brantford,Mike,Clancy,maturedemocracy.net@gmail.com,226-583-8461,district,Ward 3,Ward 3
-e578606a-6a3f-536d-9294-8694bce7c51f,ca_on_brantford,Andrew,Davis,andrew@brantfordward3.com,226-938-1131,district,Ward 3,Ward 3
-90836ea8-d174-51d3-a097-24e07e57dd45,ca_on_brantford,Jay,Goldberg,Jgoldberg.phd@gmail.com,519-710-7010,district,Ward 3,Ward 3
-a89c3f49-baf5-5b74-9404-e4f177dbab9a,ca_on_brantford,Arron,Jeavons,arronjeavons@gmail.com,519-209-3235,district,Ward 3,Ward 3
-99138acb-09b6-52b1-a29e-4deb2ca716be,ca_on_brantford,Rod,Philpot,Rod@RodPhilpot.ca,226-450-0032,district,Ward 3,Ward 3
-9dbc4b46-424c-5a17-9066-67d3873f6f32,ca_on_brantford,Nicole,Callander,votecallander@gmail.com,519-772-6961,district,Ward 4,Ward 4
-e3959556-a038-563d-8de4-03bb825ef05d,ca_on_brantford,Nicole,Durnford,nicole@votenicole.ca,519-755-5022,district,Ward 4,Ward 4
-afafd3dc-4b3d-5122-86e7-c0da8682397a,ca_on_brantford,Colleen,Goupil,votecolleen2026@gmail.com,519-774-8248,district,Ward 4,Ward 4
-cd3bb99a-0b10-5d40-b900-5653508f3190,ca_on_brantford,Linda,Hunt,lindahunt4ward4@gmail.com,519-753-1233,district,Ward 4,Ward 4
-e1c6c84b-79e4-5c09-ae6c-6e15f3e54674,ca_on_brantford,Al,Moscoe,info@moscoe4council.ca,519-861-6647,district,Ward 4,Ward 4
-30102be7-e2cc-531f-a925-b26f8a54c968,ca_on_brantford,Karleigh,Csordas,hello@karforward5.ca,519-770-5305,district,Ward 5,Ward 5
-6b8dfaa2-1e79-5afe-81a0-4f821af242ee,ca_on_brantford,Robert Stanley,Harland,robertharlandward5@gmail.com,647-200-0666,district,Ward 5,Ward 5
-38839668-5334-56db-aa9f-c468e1557006,ca_on_brantford,Mandy,Stelling,vote@mandystelling.ca,519-751-9583,district,Ward 5,Ward 5
-621da274-ef97-5c89-ad7c-0195e6cee0c8,ca_on_brantford,Dan,Thompson,dan@danthompson.ca,226-337-3357,district,Ward 5,Ward 5
-8e76b78e-38ac-5af0-b68a-2e0b4f7cf1e3,ca_on_brantford,Brian,Van Tilborg,vantilborgba@gmail.com,519-759-3269,district,Ward 5,Ward 5
-24a15368-62a8-5774-8d33-a0314b163dee,ca_on_brantford,Leslie,Bory,labourfirst@proton.me,,role,,
-171d64f3-31b1-56d8-9e2b-5d5199b6ecb2,ca_on_brantford,Richard,Carpenter,carpenter4mayor@gmail.com,519-755-9535,role,,
-e51f4107-2b64-5496-9a9f-f23fbb984651,ca_on_brantford,Dan,McCreary,danmccreary@rogers.com,519-761-2439,role,,
-5006bbec-16f2-5c17-8194-79bb844ec697,ca_on_brantford,Mandy,Samwell,mandysamwellformayor@gmail.com,519-732-1667,role,,
-9353e27b-66c6-51f5-82ab-ed7bcedd2a25,ca_on_brantford,Rose,Sicoli,info@rosesicoli.ca,519-209-3734,role,,
-1717a86d-5b2c-5e2b-80b0-3b0efd8a6a36,ca_on_brantford,Ricky,Willdy,prowilldy@gmail.com,,role,,
+41b4c627-0d46-58e3-98fd-c25091f9a74b,ca_on_brantford,Michael,BOUCHER,michaelboucher_ward1@outlook.com,519-721-5622,district,Ward 1,Ward 1
+7d7a5ad2-737c-594b-bd81-975f99bfe0d3,ca_on_brantford,Darryl,CASEY,darryl.casey.ward1@outlook.com,226-966-6233,district,Ward 1,Ward 1
+5a978d5a-a645-5881-91bf-fffad078c513,ca_on_brantford,Nick,SINGH,electsinghward1@gmail.com,519-429-1777,district,Ward 1,Ward 1
+14e846a4-427b-51c9-9f03-019114d7b568,ca_on_brantford,Bob,SPROUL,bobsproulward1@gmail.com,519-755-6660,district,Ward 1,Ward 1
+9a81dc74-e5e9-557c-a342-9012c117aadd,ca_on_brantford,Michael,SULLIVAN,votemichaelsullivan4ward1@gmail.com,519-770-5823,district,Ward 1,Ward 1
+9961f3f4-5b42-58ff-8dd7-cdac9e6ad858,ca_on_brantford,Gino,CAPUTO,gcaputo77@rogers.com,226-938-1967,district,Ward 2,Ward 2
+a58cb845-8fc1-511f-905d-faaa5d8cda5b,ca_on_brantford,Erica,JAMES,erica-for-ward-2@hotmail.com,519-755-2350,district,Ward 2,Ward 2
+abfdb55e-6115-5aae-974f-19a3786394d4,ca_on_brantford,Mark,LITTELL,mark@littell.ca,519-752-6275,district,Ward 2,Ward 2
+5d638c4c-bbc1-5449-90e8-3009a006366b,ca_on_brantford,Dave,MALCOLM,dave.malcolm@live.com,519-751-5240,district,Ward 2,Ward 2
+765ca011-8c9c-53dc-9250-8c503a403461,ca_on_brantford,Dave,WROBEL,davewrobel@me.com,519-755-0815,district,Ward 2,Ward 2
+302f2c4b-6018-59c8-8cf0-5a76ed5d9fc3,ca_on_brantford,Trevor J,CHEREWKA,tcherewka@gmail.com,519-774-6135,district,Ward 3,Ward 3
+995df12a-d3b6-5bcb-bb63-b0a3ccad5cf2,ca_on_brantford,Mike,CLANCY,maturedemocracy.net@gmail.com,226-583-8461,district,Ward 3,Ward 3
+e578606a-6a3f-536d-9294-8694bce7c51f,ca_on_brantford,Andrew,DAVIS,andrew@brantfordward3.com,226-938-1131,district,Ward 3,Ward 3
+a89c3f49-baf5-5b74-9404-e4f177dbab9a,ca_on_brantford,Arron,JEAVONS,arronjeavons@gmail.com,519-209-3235,district,Ward 3,Ward 3
+4e9b50d1-3921-557d-9576-0d942aa7aa55,ca_on_brantford,Frank,KOHLBERGER,esquire28@hotmail.com,250-819-6095,district,Ward 3,Ward 3
+99138acb-09b6-52b1-a29e-4deb2ca716be,ca_on_brantford,Rod,PHILPOT,Rod@RodPhilpot.ca,226-450-0032,district,Ward 3,Ward 3
+fe1243bd-1734-5403-b86b-ee702400cf47,ca_on_brantford,Kailee,POISSON,kailee4council@gmail.com,,district,Ward 3,Ward 3
+6a69c22f-3b84-5848-baeb-6e07340e33c2,ca_on_brantford,Gordon,RICHES,gordon.riches.w3@gmail.com,519-732-2192,district,Ward 3,Ward 3
+6abe3070-36b5-50ae-a874-bc4c6ab9e735,ca_on_brantford,Dan,SKATER,Skater4ward3@outlook.com,519-751-4891,district,Ward 3,Ward 3
+775fc9f2-1749-54a1-860a-ca151a48ffce,ca_on_brantford,Mark,ST. ANGELO,votemsa@pm.me,647-700-5988,district,Ward 3,Ward 3
+9dbc4b46-424c-5a17-9066-67d3873f6f32,ca_on_brantford,Nicole,CALLANDER,votecallander@gmail.com,519-772-6961,district,Ward 4,Ward 4
+e3959556-a038-563d-8de4-03bb825ef05d,ca_on_brantford,Nicole,DURNFORD,nicole@votenicole.ca,519-755-5022,district,Ward 4,Ward 4
+afafd3dc-4b3d-5122-86e7-c0da8682397a,ca_on_brantford,Colleen,GOUPIL,votecolleen2026@gmail.com,519-774-8248,district,Ward 4,Ward 4
+cd3bb99a-0b10-5d40-b900-5653508f3190,ca_on_brantford,Linda,HUNT,lindahunt4ward4@gmail.com,519-753-1233,district,Ward 4,Ward 4
+e1c6c84b-79e4-5c09-ae6c-6e15f3e54674,ca_on_brantford,Al,MOSCOE,info@moscoe4council.ca,519-861-6647,district,Ward 4,Ward 4
+30102be7-e2cc-531f-a925-b26f8a54c968,ca_on_brantford,Karleigh,CSORDAS,hello@karforward5.ca,519-770-5305,district,Ward 5,Ward 5
+6b8dfaa2-1e79-5afe-81a0-4f821af242ee,ca_on_brantford,Robert Stanley,HARLAND,robertharlandward5@gmail.com,647-200-0666,district,Ward 5,Ward 5
+38839668-5334-56db-aa9f-c468e1557006,ca_on_brantford,Mandy,STELLING,vote@mandystelling.ca,519-751-9583,district,Ward 5,Ward 5
+621da274-ef97-5c89-ad7c-0195e6cee0c8,ca_on_brantford,Dan,THOMPSON,dan@danthompson.ca,226-337-3357,district,Ward 5,Ward 5
+8e76b78e-38ac-5af0-b68a-2e0b4f7cf1e3,ca_on_brantford,Brian,VAN TILBORG,vantilborgba@gmail.com,519-759-3269,district,Ward 5,Ward 5
+24a15368-62a8-5774-8d33-a0314b163dee,ca_on_brantford,Leslie,BORY,labourfirst@proton.me,,role,,
+171d64f3-31b1-56d8-9e2b-5d5199b6ecb2,ca_on_brantford,Richard,CARPENTER,carpenter4mayor@gmail.com,519-755-9535,role,,
+e51f4107-2b64-5496-9a9f-f23fbb984651,ca_on_brantford,Dan,MCCREARY,danmccreary@rogers.com,519-761-2439,role,,
+975e79b6-2807-57e0-9ead-fc81a10f96cb,ca_on_brantford,Richard Michael,MISURA,twodoorsdown@live.ca,519-754-6095,role,,
+5006bbec-16f2-5c17-8194-79bb844ec697,ca_on_brantford,Mandy,SAMWELL,mandysamwellformayor@gmail.com,519-732-1667,role,,
+9353e27b-66c6-51f5-82ab-ed7bcedd2a25,ca_on_brantford,Rose,SICOLI,info@rosesicoli.ca,519-209-3734,role,,
+1717a86d-5b2c-5e2b-80b0-3b0efd8a6a36,ca_on_brantford,Ricky,WILLDY,prowilldy@gmail.com,,role,,

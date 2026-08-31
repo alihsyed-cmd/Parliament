@@ -1,20 +1,21 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
 4fd30121-a060-539c-9076-dd74b4a657d0,ca_on_ajax,Malcolm Andre,Barrington,Barrington4 ward1@gmail.com,289-380-8330,district,1,Ward 1
-7e22fa5c-b599-5c8d-8ccc-5d4107304e25,ca_on_ajax,Sadiq,Boodoo,vote@sadiqboodoo.ca,,district,1,Ward 1
 5fe86d21-6c20-5af0-8165-55140581932a,ca_on_ajax,Nabeel Ilyas,Choudhry,,647-533-3921,district,1,Ward 1
 ca3a2b6d-ce5a-5be9-a31c-033fa8d67de2,ca_on_ajax,Rob,Ford,rob.ford.ward.1@gmail.com,,district,1,Ward 1
 638a9c3d-c1b6-5859-8ee2-0b35551f6bd1,ca_on_ajax,Aqsa Asif,Malik,,,district,1,Ward 1
 b918ed7a-0ec2-5af5-af9d-e1752116cbab,ca_on_ajax,Kristy,McDonald,Kristy@kristymcdonald.ca,416-558-8503,district,1,Ward 1
 7f08650a-e75d-5122-a2c9-7c01328bf622,ca_on_ajax,Kelly,Miller,votekelly4ajax@gmail.com,,district,1,Ward 1
 c8ba130e-2b0e-58c0-bbf9-b3386a25e3c6,ca_on_ajax,Jai,Sahak,jaiforajax@gmail.com,416-605-7674,district,1,Ward 1
-e2c94f6c-1359-585b-92ab-7461424bb584,ca_on_ajax,Rob,Tyler Morin,Robtylermorin@gmail.com,,district,1,Ward 1
+927d6f78-43ca-5056-b5f8-5d6941ac5b57,ca_on_ajax,Stephen,Sullivan,stephensullivanajax@gmail.com,,district,1,Ward 1
+a8ec0f16-5234-50a7-aa70-20d479a4f563,ca_on_ajax,Rob,Tyler-Morin,Robtylermorin@gmail.com,,district,1,Ward 1
 2eca0548-5cf0-5006-8960-8623a24d020d,ca_on_ajax,Andras,Adaikkalam,contact@andrasforajax.ca,416-819-4563,district,2,Ward 2
 08db1b6c-9825-5980-98ae-1c98ae3f917b,ca_on_ajax,Asad,Ali,AsadforAjax@gmail.com,437-855-7286,district,2,Ward 2
-4e5c0a8b-8705-5564-9785-f26b752b5c1a,ca_on_ajax,Sajid,Dogar,dogarsajid22@gmail.com,416-879-1336,district,2,Ward 2
+62204fa3-9a3c-5dfe-9224-3422a4d2a1b1,ca_on_ajax,Arthur,Augustine,arthuraugustine@me.com,289-314-1715,district,2,Ward 2
+9c4f4963-0e93-5ec3-86d1-ac0336a23dde,ca_on_ajax,Doug,Glass,votedougglass@gmail.com,,district,2,Ward 2
 9ca6a3d5-980a-5ba8-b29c-a1a6d0672df9,ca_on_ajax,Jay,Hayles,Jayhaylesajax@gmail.com,289-807-6333,district,2,Ward 2
 9ce21934-6884-5581-91e0-6468a920b428,ca_on_ajax,Nancy,Henry,nancyhenry.ajax@gmail.com,,district,2,Ward 2
 18bdc7e5-c308-55a5-9da2-c9f065d19b37,ca_on_ajax,Azhar,Khan,azharkhanforajax@gmail.com,647-886-5386,district,2,Ward 2
-2460bedd-0786-5f8f-b677-6b8ba831e2a9,ca_on_ajax,Sterling,Lee,yourvoice4ajax@gmail.com,905-925-2529,district,2,Ward 2
+2460bedd-0786-5f8f-b677-6b8ba831e2a9,ca_on_ajax,Sterling,Lee,yourvoice4ajax@gmail.com,905-925-2529 (AJAX),district,2,Ward 2
 43956fbe-f35c-5c5e-ac79-a44dbadb6300,ca_on_ajax,M. Asif,Malik,info@asif4ajax.ca,416-823-6794,district,2,Ward 2
 233d4da4-c13d-5697-b0d4-1bcb13248d12,ca_on_ajax,Ranjith,Paranivasagam,ranjithpforajax@gmail.com,647-938-1500,district,2,Ward 2
 2895cf5c-2dcc-5b22-a259-818ff4c14301,ca_on_ajax,Stephanie,Ashton,ashtonforajax@rogers.com,647-825-3958,district,3,Ward 3
@@ -28,7 +29,9 @@ fc763b75-1711-5852-ae22-6f64b6c1887b,ca_on_ajax,Santosh,Gaddam,ajaxteam@santoshg
 c44f99f2-285e-504e-94e6-f874bfaef490,ca_on_ajax,Angie,Papas,angiepapas4ajax@gmail.com,647-406-8607,district,3,Ward 3
 46581070-4ca4-5891-aeff-c5a43478caae,ca_on_ajax,Lisa,Patel,electlisapatel@gmail.com,416-826-6446,district,3,Ward 3
 3fe930e5-01c6-5cf3-b351-2f66b62cba35,ca_on_ajax,Bhanuteja,Somarouthu,bhanuforajax@gmail.com,289-799-8331,district,3,Ward 3
+514b0cd9-8347-54f9-8f2b-e0a5e4cf2129,ca_on_ajax,Muzammil,Yazdani,nicetoseeyou@me.com,416-878-7689,district,3,Ward 3
 c862eae8-31f9-5ccb-9b06-290d353646e6,ca_on_ajax,Marilyn,Crawford,Marilyn@marilyncrawford.ca,,role,,
+e1fba7ff-082f-5769-8374-60d3b8faf323,ca_on_ajax,Carion,Fenn,,,role,,
 585fecdb-8df9-50e5-b6e2-856d255b94ad,ca_on_ajax,Richard,Hinds,info@hindsformayor.ca,,role,,
 b7bb40fe-7139-5539-a091-ffbf0cc520a5,ca_on_ajax,Ashmeed,Khan,info@Ashmeed4Ajax.ca,905-391-9239,role,,
-4100c6f6-5c45-5755-8710-ce0f5626048e,ca_on_ajax,Sajid Raza,Rehman,,647-291-6034,role,,
+383f9225-9331-59bb-978a-a55222cc89b7,ca_on_ajax,Vian,Persad,info@vianpersad.ca,,role,,

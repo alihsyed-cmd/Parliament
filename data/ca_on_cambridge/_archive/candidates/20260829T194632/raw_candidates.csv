@@ -1,0 +1,36 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+afa11b34-9f12-56d6-a07b-daa41533d0fc,ca_on_cambridge,Jeff,Donkersgoed,jeffdonkersgoedward1@gmail.com,,district,1,Ward 1
+0b964289-4d2f-5b18-a543-53baf6024959,ca_on_cambridge,Helen,Shwery,helen@helenshwery.com,,district,1,Ward 1
+f8f6f878-a294-50d3-802f-e4dda3b923ee,ca_on_cambridge,David,Craig,info@votedavidcraig.ca,,district,2,Ward 2
+4d4db1ff-d2df-5cbb-9a93-dd4ce7d06be8,ca_on_cambridge,Mike,Devine,,,district,2,Ward 2
+08173207-0328-59ea-b35d-4aee6083cc6a,ca_on_cambridge,Mark,Linton,marklintonelection@gmail.com,226-341-8989,district,2,Ward 2
+aa92ced5-fb0f-5384-a7be-995e6e9929f4,ca_on_cambridge,Kiran,Abid,kiran4cambridge@gmail.com,647-864-4696,district,3,Ward 3
+19376a56-51bb-534f-a9b5-6f1000055be4,ca_on_cambridge,Corey,Kimpson,,,district,3,Ward 3
+529008f7-c581-5006-ad9d-08c95382a2c2,ca_on_cambridge,Ross,Earnshaw,,(519) 722-9498,district,4,Ward 4
+f7c9a382-9a65-5025-8da4-03c105ce37b2,ca_on_cambridge,Ahmad Jawad,Malik,,,district,4,Ward 4
+347cb5dc-24fa-5455-a1cf-43569d3b880a,ca_on_cambridge,David,O'Hara,djro333@gmail.com,(519) 222-4161,district,4,Ward 4
+5463ed5c-2d7a-57ef-88c0-ff7b5e9ec821,ca_on_cambridge,Sheri,Roberts,sherirobertsward5@gmail.com,,district,5,Ward 5
+557ed5c4-18dd-57e9-80fa-92a64ef21aa9,ca_on_cambridge,Nazim,Shah,support@nazimshah.ca,519-800-0295,district,5,Ward 5
+fad02cb4-764b-5dae-a902-c81176719b81,ca_on_cambridge,Randy,Carter,,,district,6,Ward 6
+3c92464b-e122-5115-b34f-9316b13b284a,ca_on_cambridge,Adam,Cooper,,,district,6,Ward 6
+f09ff220-ae46-5b39-819a-448c035ab627,ca_on_cambridge,Barbara,Harrington,ward6.harrington@gmail.com,,district,6,Ward 6
+e919482a-61c3-5223-adf5-878266f39877,ca_on_cambridge,Chris,McCormick,ward6.2chris@gmail.com,,district,6,Ward 6
+a8cf3455-78f5-5f4e-b82d-8221610ae64f,ca_on_cambridge,Tasneem,Chhadiya,TasneemChhadiya7@gmail.com,519-221-5096,district,7,Ward 7
+b4f90dd1-4d98-5446-af62-dd8eab8620e7,ca_on_cambridge,Kristen,Danson,kristen@kristenforcambridge.ca,,district,7,Ward 7
+e062ca67-ac49-53c2-881c-9cd8a4785872,ca_on_cambridge,David,Guerin,david@davidguerin.com,,district,7,Ward 7
+1b215834-0021-55c8-85f5-d42726e909e6,ca_on_cambridge,Dani,Ieso,,,district,7,Ward 7
+7994a02c-045b-582b-9dd5-6301c2cad43e,ca_on_cambridge,John,Teat,johnteatforcambridge@gmail.com,,district,7,Ward 7
+8368dabc-97ff-5284-a9e4-bd0ad7f50191,ca_on_cambridge,Nicholas,Ermeta,,,district,8,Ward 8
+f79471c1-dfcc-5edb-b1a8-b006a60258ba,ca_on_cambridge,Arpan,Pandit,panditarpanm@gmail.com,437-269-3925,district,8,Ward 8
+d2d08e80-245a-532d-b64b-80677f101a7d,ca_on_cambridge,Salman,Arefin,,,role,,Regional Councillor
+842f3c1a-8643-5085-ab49-e8e6e94a1a6a,ca_on_cambridge,Ryan,Bolender,,(519) 900-4531,role,,
+a6d2ff67-6619-5ce4-96ae-7c0289caa44e,ca_on_cambridge,Bryan,Causarano-Bolton,hello@causbolt.ca,,role,,Regional Councillor
+5260e323-4ce2-5e9e-9466-e34557d28a9b,ca_on_cambridge,Tony,Chaves,,,role,,
+79635e9f-b79d-51da-97d9-bea906dfd0ff,ca_on_cambridge,Doug,Craig,Info@dougcraig.ca,,role,,Regional Councillor
+b5ca3321-0434-587d-b7c4-ced84ed82006,ca_on_cambridge,Scott,Hamilton,scott@scottformayor.ca,,role,,
+39c3d2a0-9e84-5d75-9cab-7920795d5be8,ca_on_cambridge,Ihtsham,Haq,,,role,,
+01e58164-d835-5805-858f-a4eadfa06ced,ca_on_cambridge,Brian,Kennedy,brian@kennedyforcambridge.ca,,role,,
+a513077e-fee9-55f5-a63e-5bbdeb52411f,ca_on_cambridge,Shahzada Jalal,Khan,shinecambridge.official@gmail.com,,role,,
+450e5ad0-1d17-5788-9f75-2a45caa39c1f,ca_on_cambridge,Jan,Liggett,Jan4Mayor2026@gmail.com,,role,,
+3958d4c4-647f-556f-8ddf-3da817499364,ca_on_cambridge,Prakash,Venkataraman,info@voteprakash.ca,1-800-311-5611,role,,Regional Councillor
+bd411581-4c18-5266-908b-a9e6d60fcbfa,ca_on_cambridge,Pam,Wolf,pam_wolf@rogers.com,,role,,Regional Councillor

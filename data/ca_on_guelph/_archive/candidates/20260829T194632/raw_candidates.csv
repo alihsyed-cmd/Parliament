@@ -1,0 +1,45 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+815d750a-cc6d-52bb-be67-3c36d8fceb96,ca_on_guelph,Tammy,Corbin,tammy.howie@hotmail.com,,district,1,Ward 1
+47773bf3-153a-5aae-bb73-d41028742845,ca_on_guelph,Dan,Gibson,dangibson.guelph@gmail.com,905-351-4001,district,1,Ward 1
+20e08164-52a5-5665-aad7-5e6ca86a0228,ca_on_guelph,Daniel,Kaufmann,danielkaufmann0210@gmail.com,519-731-2078,district,1,Ward 1
+885c38a0-f11f-5cc9-87db-55d195387182,ca_on_guelph,Marcel Dion,Lambert,,,district,1,Ward 1
+3eddc549-6ca6-5ff3-a63b-94ff2e2dd47b,ca_on_guelph,Owen,Martens,contact@owenmartens.ca,519-803-5919,district,1,Ward 1
+86f96e83-aa78-57ec-84d2-147a1b179115,ca_on_guelph,Evan,Silva,Evan4Guelph@outlook.com,,district,1,Ward 1
+8664d796-bda5-5c9b-99ca-25ca2ef14244,ca_on_guelph,Dave,Williams,davewilliams4ward1@gmail.com,905-965-6639,district,1,Ward 1
+292be428-8ddf-5131-8e2e-1578d388120d,ca_on_guelph,Mustafa,Zuberi,Mustafa4Ward1@gmail.com,,district,1,Ward 1
+176fde3d-fef0-5163-be3e-b851d11501b7,ca_on_guelph,Michelle,Bowman,info@bowman4ward2.ca,,district,2,Ward 2
+183ee0e2-74fa-56f2-9e91-ab46d1bde5b3,ca_on_guelph,Troy,Bridgeman,troybridgeman1961@gmail.com,519-830-6800,district,2,Ward 2
+00f822fc-15a2-59a3-9722-0901fb408694,ca_on_guelph,Greg,Cox,greg@gregcox.vote,519-830-1733,district,2,Ward 2
+77fcb7f8-d6ac-5050-acb3-f940abb84ee8,ca_on_guelph,Morgan,Dandie,dandieforward2@gmail.com,,district,2,Ward 2
+dbaca773-f072-5090-a909-10f0bc99b3e3,ca_on_guelph,Kim,Fry,kim@kimfry.ca,647-987-7793,district,2,Ward 2
+7816d51a-29bd-57af-b16f-a136a6177b50,ca_on_guelph,Rodrigo,Goller,rodrigo@goller4ward2.ca,,district,2,Ward 2
+d4fbcff5-d235-517a-99de-1ca4df56e275,ca_on_guelph,Barbara,Mann,,,district,2,Ward 2
+64c0b8a9-8d2a-5878-a741-f2c477e884fd,ca_on_guelph,Alec,Purves,alecpurves@gmail.com,226-332-6338,district,2,Ward 2
+164472d8-9429-5cf7-b6ca-bc395996dc0d,ca_on_guelph,Phil,Allt,phil@philallt.ca,519-900-1441,district,3,Ward 3
+04535441-8932-5f12-824a-a565dd9f87b9,ca_on_guelph,Kevin,Bowman,kevin4guelph@gmail.com,,district,3,Ward 3
+ef57c137-5101-5953-8303-66f767ee9dbb,ca_on_guelph,Ross,Jennings,ross@rossforward3.ca,,district,3,Ward 3
+010a552e-4e42-59cf-a320-527f64047fd7,ca_on_guelph,Annika,Maldonado,maldonadoannika56@gmail.com,519-362-8849,district,3,Ward 3
+5e7d4d54-1d16-5915-ad93-cf3b6052432d,ca_on_guelph,Marty,Williams,marty@martyfor3.ca,,district,3,Ward 3
+1d83f332-3015-5975-b278-e142328bd5d8,ca_on_guelph,Linda,Busuttil,Linda4GuelphCouncil@gmail.com,519-546-2274,district,4,Ward 4
+0edfa7e9-94ec-57a3-9030-49db4cc9c3f2,ca_on_guelph,Brendan,Clark,info@brendanclark.ca,519-400-0091,district,4,Ward 4
+d60fc475-1a9b-52fe-9ca2-46b92de59796,ca_on_guelph,Jesse,Guite,,,district,4,Ward 4
+e41c3414-ab88-5322-9d97-73f043fae926,ca_on_guelph,Ali,Malik,aliward4guelph@gmail.com,647-772-1587,district,4,Ward 4
+1e5d1827-7eb1-578a-9412-89b6b8b47daf,ca_on_guelph,Derek,McCaughan,derekmccaughanward4@gmail.com,519-569-5142,district,4,Ward 4
+9b24a03e-3dcc-5be0-a935-64f7fa2d0edd,ca_on_guelph,Michael,Agueci,MichaelForGuelph@gmail.com,647-787-7021,district,5,Ward 5
+a6d630bf-6d6e-5fa9-b02d-84d45a60b6bd,ca_on_guelph,Xandine,Arnott,xandine.community@gmail.com,519-897-1373,district,5,Ward 5
+a14ee47e-0496-5144-aabd-88f6f9846204,ca_on_guelph,Greg,Cawsey,info@gregcawsey.ca,519-546-4625,district,5,Ward 5
+98757086-db8b-5e78-a80a-d053902905eb,ca_on_guelph,Dakota,Cherry,dakotacherry@live.ca,519-535-3512,district,5,Ward 5
+a1ba856a-1730-575e-88e5-898dca594ea1,ca_on_guelph,Jon,Christensen,jon@jonchristensen.ca,,district,5,Ward 5
+40f03288-60bd-5eba-b327-2f3009402a0c,ca_on_guelph,James,Doran,jd@jamiedoran.com,705-220-2317,district,5,Ward 5
+3d57b8ee-279c-5c56-994a-903055f2f1bf,ca_on_guelph,Cathy,Downer,cathydowner@rogers.com,519-829-5912,district,5,Ward 5
+095131e4-bbc0-564d-b0a7-daf7e6c3ae77,ca_on_guelph,Wesley,Harris,info@votewes.ca,519-994-7733,district,5,Ward 5
+6cb582e9-a99a-5953-bbc8-9ed3128ccc3b,ca_on_guelph,Rebecca,Adam,,,district,6,Ward 6
+90e1cfcb-29dc-5cc9-a87b-976b0c9e3c2f,ca_on_guelph,Shane,Coulis,shane4ward6@gmail.com,,district,6,Ward 6
+da174c79-c057-556c-87a5-3ed2d0360660,ca_on_guelph,Luke,Devos,luke@lukedevos.ca,,district,6,Ward 6
+c80a7941-66c4-5fec-a6e4-c60db019f1ae,ca_on_guelph,Katherine,Hauser,katherine@hauserward6.ca,,district,6,Ward 6
+3c0e337f-6e36-5653-a772-4b762f6d2f5f,ca_on_guelph,Helen,Liu,hpn2022@gmail.com,226-820-3736,district,6,Ward 6
+f88b93f6-adf6-57bf-beeb-021cbf75c49a,ca_on_guelph,Laura,McQuillen,connect@lauramcquillen.ca,,district,6,Ward 6
+ef42a1ad-fede-50a9-97a7-686599c277ad,ca_on_guelph,Leanne,Caron,info@leannecaron.ca,,role,,
+b70fcedf-8202-5f39-ba21-77d6eda894ec,ca_on_guelph,Ken Yee,Chew,connect@chewforguelph.ca,,role,,
+46531075-515c-52fa-8d7a-f7f834fa2893,ca_on_guelph,Ryan,Meunier,info@meunierformayor.ca,,role,,
+3735974b-1648-5bab-abb9-7173c6e13b28,ca_on_guelph,Evaristo,"Ramos, Jr.",,226-706-4201,role,,

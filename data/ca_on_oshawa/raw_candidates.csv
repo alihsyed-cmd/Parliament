@@ -1,44 +1,58 @@
 uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
 adf64db6-15e1-55f9-b068-52c3b3d3aa8d,ca_on_oshawa,Christopher,Biancaniello,biancaniello.ward1@outlook.com,,district,1,Ward 1
+316f363e-46fd-505f-a3cf-9b3c75a72e78,ca_on_oshawa,Nadea,Clarke,nadeaclarke20@gmail.com,,district,1,Ward 1
 cd35bcd5-b3a4-5e37-b43a-a900d6e06601,ca_on_oshawa,Danjeza,Danglli,danjezadanglli@gmail.com,,district,1,Ward 1
 ab077205-5af5-5c46-9023-d1b00235ec0f,ca_on_oshawa,Martin,Franssen,martin@votemartin.ca,,district,1,Ward 1
 2d1a901c-7fb6-5850-88bd-48d758b8575e,ca_on_oshawa,Rosemary,McConkey,oshawarosemary@gmail.com,,district,1,Ward 1
 6b3ec6b5-b3d9-5fec-af40-17757f8961e2,ca_on_oshawa,Olaleye Afolabi,Oluwaolorunlanke,oluwaolorunlanke@gmail.com,,district,1,Ward 1
 609af5c8-2342-554b-aace-fa895b6167b1,ca_on_oshawa,A. Salam,Shinwary,salam.jan111@gmail.com,,district,1,Ward 1
+45325615-9eba-5c80-9689-339d3c6a47e5,ca_on_oshawa,Selvan,Sinnadurai,voteselvan@hotmail.com,,district,1,Ward 1
 9c7e13dd-a3c9-5a21-b32c-06aaeb5106cb,ca_on_oshawa,Omar,Wisdom,omar@votewisdom.ca,,district,1,Ward 1
 49fcfd2e-42a7-5071-879b-22d771f07474,ca_on_oshawa,Cameron,Anderson,anderson4oshawa@gmail.com,,district,2,Ward 2
+6c5ac2a7-9029-57a3-aed0-2ad1636e350e,ca_on_oshawa,Avik,Banerjee,avik4oshawa@gmail.com,,district,2,Ward 2
 8989915b-0e11-53f6-af52-12dff47dfc27,ca_on_oshawa,Sarah,Chiapparro,sarah.chipparro@gmail.com,,district,2,Ward 2
-af408db7-440d-5487-ae24-1c8a6e34e6d5,ca_on_oshawa,Jane,Hurst,hurst_jane@hotmail.com,,district,2,Ward 2
+98f3bca5-3a8f-57db-b7d9-360c5cd3e143,ca_on_oshawa,Liam,Fraser,Liam4Oshawa@proton.me,,district,2,Ward 2
+af408db7-440d-5487-ae24-1c8a6e34e6d5,ca_on_oshawa,Jane,Hurst,jane@janehurstward2.ca,,district,2,Ward 2
 8d8ba0c3-bc4e-5ac8-a3ba-ecf20c4e43d7,ca_on_oshawa,Bradley,Marks,bradley.marksosh@gmail.com,,district,2,Ward 2
 df9acf44-9970-56ef-86a9-2a4de135be0b,ca_on_oshawa,John R.E.,Sturdy,johnsturdy69@gmail.com,,district,2,Ward 2
+2db9372b-0e46-5e36-b27e-b145a29eeec7,ca_on_oshawa,Miguel,Araujo,miguelaraujo826@gmail.com,,district,3,Ward 3
 a2e2a808-aeb2-5346-9197-18a5657fc790,ca_on_oshawa,Roger,Bouma,roger@electroger.ca,,district,3,Ward 3
 9d702e3a-c8f8-5303-a229-0aea4a2a734f,ca_on_oshawa,Robert (Bob),Chapman,bob@bobchapman.ca,,district,3,Ward 3
+83ee582e-a025-5d55-808c-d99ad05e4e46,ca_on_oshawa,Timothy,Dobson,tdobson@youroshawa.com,,district,3,Ward 3
+41c17af4-067a-5e25-9e16-e362870dae78,ca_on_oshawa,Sam,Howes,howesyourplumbing@gmail.com,,district,3,Ward 3
+9a498120-8bf3-5419-a089-478c7819ab51,ca_on_oshawa,Rizwan,Javed,info@rizwanjaved.ca,,district,3,Ward 3
 3fa9ecdb-d621-509a-92bf-9ba95d1a37c0,ca_on_oshawa,Sylwia,Lesner,sylwialesnerward3@gmail.com,,district,3,Ward 3
+1932b472-97f4-5dfc-83ba-545774d4ffae,ca_on_oshawa,Shailene,Panylo,shailenepanylo@gmail.com,,district,3,Ward 3
+926f68f9-0e53-506b-a429-e4e24b537d87,ca_on_oshawa,Katherine,Pollard,oshawaishome@gmail.com,,district,3,Ward 3
 b84eb7e5-9c39-534a-a603-5dd50e5acdb1,ca_on_oshawa,Matthew,Schaffer,matthewjschaffer@outlook.com,,district,3,Ward 3
 f910b882-b3f5-5a63-afc5-f3f10733397d,ca_on_oshawa,Rahul Padmini,Soumian,rahulpsrealtor@gmail.com,,district,3,Ward 3
-49b23089-14a2-5f8b-8ac8-33acd8e50aa6,ca_on_oshawa,Domenic,Albis,dalbis@albis.ca,,district,4,Ward 4
+49b23089-14a2-5f8b-8ac8-33acd8e50aa6,ca_on_oshawa,Domenic,Albis,dom@downtowndomenic.ca,,district,4,Ward 4
 484304e2-d830-51a4-9d17-ab54a7e7ae19,ca_on_oshawa,Jeff,Davis,info@jeff-davis.ca,,district,4,Ward 4
+ba250d17-2717-59bd-93f2-61af9a475b27,ca_on_oshawa,Lisa,Freeman,lisafreeman4oshawa@gmail.com,,district,4,Ward 4
 e3db0508-6bdd-5306-a52e-de0838e512fd,ca_on_oshawa,Theresa,Grant,,,district,4,Ward 4
 e16cfe48-45d2-53de-a72b-53152f049c46,ca_on_oshawa,Eric,Guernsey,info@electeric.ca,,district,4,Ward 4
+e129993c-3149-5db7-9835-f7e5a0f4203d,ca_on_oshawa,Edouard Nwaha,Gwet,elect.edouard@gmail.com,,district,4,Ward 4
 5b9f13f5-d507-5b44-8281-96f9c2ade788,ca_on_oshawa,Rick,Kerr,rrkerr@msn.com,,district,4,Ward 4
 9ad1ccc5-b084-5ff1-950a-9158dfd1c163,ca_on_oshawa,Jose,Morales,joseforward4@gmail.com,,district,4,Ward 4
-fe16d265-2443-5822-8e9c-f431d6e7c30f,ca_on_oshawa,Edouard,Nwaha Gwet,elect.edouard@gmail.com,,district,4,Ward 4
+59312807-6ef1-5833-8bc6-31294bb88d30,ca_on_oshawa,Pauline,Mwangi,pmwangiwwhite@gmail.com,,district,4,Ward 4
 ad165fd7-e213-5c7a-8c64-88d04d8e60a7,ca_on_oshawa,Jack,O'Donnell,jack@jackodonnell.ca,,district,4,Ward 4
 7bfa3b83-50df-55ae-8225-ca87a1312532,ca_on_oshawa,Deb,Oldfield,deb4oshawa@gmail.com,,district,4,Ward 4
-5cf5d11f-ebc9-5678-bc8a-3c7b3135694d,ca_on_oshawa,Don,Rockbrune,oshawa@insportify.com,,district,4,Ward 4
 11cac36f-9e2d-58b5-8eef-01d0c24889f3,ca_on_oshawa,Doug,Sanders,dougsanders524@gmail.com,,district,4,Ward 4
 c3e7d586-5678-553a-80b7-992753c70009,ca_on_oshawa,Dave,Thompson,dave@davethompsonoshawa.ca,,district,4,Ward 4
 4d99b18f-afaf-5903-83b5-b84265ab4e56,ca_on_oshawa,Todd,Forbes,forbest29@yahoo.ca,,district,5,Ward 5
 f2aecba0-8f09-54fd-9b28-98984b5cbb74,ca_on_oshawa,Siddharth (Sid),Goyal,sidgoyaloshawa@gmail.com,,district,5,Ward 5
 e72a04a2-357d-51be-9af7-2f6858cc624d,ca_on_oshawa,John,Gray,johngray063@yahoo.com,,district,5,Ward 5
 4368373a-a4f5-56f0-bdd6-10a0e178af9b,ca_on_oshawa,Adedeji,Ibinayo,dejinayo22@yahoo.com,,district,5,Ward 5
+4881c479-f02d-5ed8-a1cd-f8092ce746af,ca_on_oshawa,Scheshawna,Lemaire,,905-441-7953,district,5,Ward 5
 68c50157-c61e-5787-90ae-d6ebf3357ae6,ca_on_oshawa,Kristen,McKinnon,kristenjmckinnon81@gmail.com,,district,5,Ward 5
 37f263c6-ae92-5470-93c1-508357373b49,ca_on_oshawa,Brian Charles,Nicholson,bnicholson2000@rogers.com,,district,5,Ward 5
 16cf160f-759e-58e5-aea7-75d976bd422d,ca_on_oshawa,Christeen Elizabeth,Thornton,talktochristeen@gmail.com,,district,5,Ward 5
+59e0ae95-6a3f-5f33-abff-78bc6f29a3d7,ca_on_oshawa,Sherland,Chhangur,schhangur@hotmail.com,,role,,
 f53af485-d1b5-5e7c-a53b-720e6481b407,ca_on_oshawa,Michael,Coons,michael.coons94@outlook.com,,role,,
 001f6511-c3e4-5a1a-a193-84199dd62035,ca_on_oshawa,Derek,Giberson,2026@derekgiberson.ca,,role,,
+8f29063a-b9d0-5239-869d-d6f2b0cef8e2,ca_on_oshawa,Jeremy,Large,JeremyNLarge@gmail.com,,role,,
 7b717b82-cf20-557f-998a-46024235e6b1,ca_on_oshawa,Jim,Lee,,,role,,
-811037dc-fba4-5c65-b089-dcf9345196c4,ca_on_oshawa,Tito-Dante,Marimpietri,titodantemarimpietri@gmail.com,,role,,
+811037dc-fba4-5c65-b089-dcf9345196c4,ca_on_oshawa,Tito-Dante,Marimpietri,,,role,,
 8462ceb0-1ac8-540e-b7e7-c63f28bec06a,ca_on_oshawa,Henry,Onwuachu,henry@henryforoshawa.ca,,role,,
 ad27cb92-bf64-5503-af41-4926b7e320c6,ca_on_oshawa,Joseph,Tomlins,josephtomlinsformayor@gmail.com,,role,,
 3fdaba9b-3ad7-5045-ad24-cc41e86ed7a2,ca_on_oshawa,Dave,Westlake,davejwestlake@gmail.com,,role,,
