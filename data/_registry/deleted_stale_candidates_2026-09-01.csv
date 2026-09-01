@@ -1,0 +1,63 @@
+uuid,jurisdiction_slug,first_name,last_name,email,phone,role_scope,district_id,district_name
+aa02749d-9f3b-51db-9d23-d6dd02a9889d,ca_on_markham,Larry,Lau,votelarrylau@gmail.com,,district,3,Ward 3
+74173e26-d4bf-5bbd-9089-ec5f58a2cf82,ca_on_markham,Kristian,Chan,,,role,,Regional Councillor
+e2538ea8-55d6-549c-8022-e4bb7476a00f,ca_on_kitchener,Nitin,Nair,nairforward5@gmail.com,(647) 995-6969,district,5,Ward 5
+688c5bbd-9b34-5ccc-b53b-e9cceca7382a,ca_on_kitchener,Danielle,Rose,daniellerosekw@gmail.com,(226) 887-7884,district,5,Ward 5
+c497b521-96d0-5ab9-af90-7cb1864a254f,ca_on_hamilton,Dan,Myles,happydude584@hotmail.com,,district,2,Ward 2
+732637b2-e99e-55ec-8402-c9bf1aa6cb36,ca_on_hamilton,Rod,Douglas,rdouglas4ourward@gmail.com,,district,4,Ward 4
+09b2a73c-8ab2-50fd-9e80-e5aa4620058d,ca_on_brampton,Tirth Vinodkumar,Patel,elect@tirthpatel.ca,647.970.8683,role,,
+4bf96c99-a36a-5cf2-bf1c-740b0cde2302,ca_on_brampton,,Gursimranjit Singh,Gursimranjit.Brampton@gmail.com,942.588.0017,role,,
+a03de64a-82ae-56e7-8c6d-091f75683895,ca_on_brampton,Pat,Fortini,,,role,,Wards 7 & 8
+fd86f9a4-53f3-57b1-81df-68bb0d465b09,ca_on_brampton,Avi,Dhaliwal,ELECT@AVIDHALIWAL.COM,905.872.7000,role,,
+7afb0e32-5dd8-5350-9fdb-2effab4d74ff,ca_on_oakville,Kashif,Chaudry,ourward4@gmail.com,,district,4,Ward 4
+0cae1bcf-d8e1-542a-8b3b-659d43ec50d9,ca_on_oakville,Syed Hasan,Tahir,htahir@hotmail.com,905-617-2977,district,4,Ward 4
+1c167bd2-2835-59c6-a67e-15ce01aa23e4,ca_on_oakville,Zena,Al-Mudaris,zena.oakville@gmail.com,,district,6,Ward 6
+78eed0f2-7878-5ea9-8ac3-c75fb18c7976,ca_on_oakville,Riaz Ahmad,Sinawan,riazsinawan@hotmail.com,365-822-2121,district,7,Ward 7
+fe16d265-2443-5822-8e9c-f431d6e7c30f,ca_on_oshawa,Edouard,Nwaha Gwet,elect.edouard@gmail.com,,district,4,Ward 4
+5cf5d11f-ebc9-5678-bc8a-3c7b3135694d,ca_on_oshawa,Don,Rockbrune,oshawa@insportify.com,,district,4,Ward 4
+ef57c137-5101-5953-8303-66f767ee9dbb,ca_on_guelph,Ross,Jennings,ross@rossforward3.ca,,district,3,Ward 3
+f8d188f3-ea12-5f85-ac1f-4d7de85fb3b3,ca_on_milton,Mohammad,Tariq,mohammad@mcdadi.com,905-462-1842,role,,
+f7c9a382-9a65-5025-8da4-03c105ce37b2,ca_on_cambridge,Ahmad Jawad,Malik,,,district,4,Ward 4
+f09ff220-ae46-5b39-819a-448c035ab627,ca_on_cambridge,Barbara,Harrington,ward6.harrington@gmail.com,,district,6,Ward 6
+b4f90dd1-4d98-5446-af62-dd8eab8620e7,ca_on_cambridge,Kristen,Danson,kristen@kristenforcambridge.ca,,district,7,Ward 7
+52d6b993-4fa6-5ef3-9af1-ac29583422a2,ca_on_mississauga,Fawzi Samer,Alghoul,,,district,2,Ward 2
+15cdf8b9-9c43-591f-89a6-14b36a22e7ba,ca_on_toronto,Cody,MacRae,,,district,03,Etobicoke-Lakeshore
+3e7c91b9-77ca-58fe-9192-aa177c6b3444,ca_on_toronto,Lloyd,Traiforos,lloyd4ward4@gmail.com,,district,04,Parkdale-High Park
+212fc61f-f40f-5c23-a892-cd2cf0083009,ca_on_toronto,Gabe,Blanc,info@gabeforunirose.ca,,district,11,University-Rosedale
+b4bb8f8d-700d-589c-8ea8-b5f15b9544c6,ca_on_toronto,Dana,Fisher,info@danafisher.ca,647-947-8281,district,11,University-Rosedale
+36941fd1-733c-57de-9807-e990799bdf5f,ca_on_toronto,Dianne,Saxe,info@votesaxe.ca,,district,11,University-Rosedale
+6833ba49-1297-5482-8f03-70e714ee223a,ca_on_toronto,Joshua,Kishner,,,district,12,Toronto-St. Paul's
+485369ad-7985-56c0-b6f0-74f4b9fa9e98,ca_on_toronto,Tycen,Legg,hello@tycenlegg.ca,437-435-9696,district,19,Beaches-East York
+000b4d79-66a3-5704-82af-32770c9902fc,ca_on_toronto,Malik,Ahmad,,,district,20,Scarborough Southwest
+e4cace32-7e68-5364-8a5b-5a37ec54ca9d,ca_on_toronto,Philip,Mills,philipmills352@protonmail.com,647-522-8465,district,20,Scarborough Southwest
+c30749bc-6dfc-53b4-a9b2-546927f62126,ca_on_toronto,Rajinder,Lall,,,district,24,Scarborough East
+c30aa4ac-65f7-55f1-91de-b66c807d9f7b,ca_on_toronto,Kannan,S'ree Jr,,,role,,
+e011e3b0-4148-57a2-b651-bba6048bd7f6,ca_on_london,Janette,Larocque,,,district,1,Ward 1
+f62190af-6ea5-5a75-a6fe-cf8f40fc1a04,ca_on_london,Harinder,Kumar (Harry),Harry4W11@gmail.com,519-630-6407,district,11,Ward 11
+5171b082-f653-5e6b-b60d-8b99f1540b31,ca_on_london,Christopher (Tony),Biviano,,226-235-1584,district,13,Ward 13
+31eea2a8-0876-53df-89a8-49971be09047,ca_on_london,Alicia,Caskey,,226-840-6024,district,4,Ward 4
+ff03c1d1-e006-5ff3-b86d-1ad4c0b6fe4c,ca_on_london,Stephen,Orser (Ors),stephenorser@yahoo.com,519-204-6040,district,4,Ward 4
+f7393a4f-c837-50d4-9c7f-0d6324df6441,ca_on_london,Simon Sabeesh,Karikassery,Simonsabeesh@gmail.com,226-374-6362,district,5,Ward 5
+4373a48f-8d7d-550a-968c-0f09ac8163a1,ca_on_london,Kamrul,Ahsan (Kam),Kamrul@afmkamrulahsan.ca,1-437-433-5172,district,7,Ward 7
+a1354a1a-549a-5e11-805b-89e3a794ae13,ca_on_london,Praveen,Varkey,,519-870-5783,district,7,Ward 7
+cc3800cb-6e90-5cca-a2bf-1f5667ba63ee,ca_on_london,Coralia Esterra,Tudor,votetudor@gmail.com,519-857-7749,district,8,Ward 8
+01e58164-d835-5805-858f-a4eadfa06ced,ca_on_cambridge,Brian,Kennedy,brian@kennedyforcambridge.ca,,role,,
+a513077e-fee9-55f5-a63e-5bbdeb52411f,ca_on_cambridge,Shahzada Jalal,Khan,shinecambridge.official@gmail.com,,role,,
+0f1084c7-d6e5-5556-9551-8caa5b3c435a,ca_on_ottawa,Michelle,Groulx,info@michellegroulx.ca,613-699-1310,district,15,Kitchissippi
+9a39cdf9-8c93-5f86-b9b8-0b5125cbf68a,ca_on_st_catharines,Geoffrey (Geoff),Crane,geoffcrane47@gmail.com,905.684.7655,district,1,Ward 1
+70881fb0-47c1-5383-af2a-4aa9270d5b56,ca_on_st_catharines,Jacqueline (Jackie),Lindal,Jackielindal4Merritton@gmail.com,289.219.0701,district,1,Ward 1
+1b8f1db3-b856-59b9-bd74-750c49644bd1,ca_on_st_catharines,Matthew (Matt),Harris,matt@mattharris.ca,,district,2,Ward 2
+de94ee54-6c7c-5d8c-bc52-9964db8fa5c1,ca_on_st_catharines,Dunsin Sunday,Fakorede,dunsin4ward5councillor@gmail.com,647.498.8836,district,5,Ward 5
+5050769c-d8d3-516f-9c06-37b2e9538c4f,ca_on_kingston,Jago,Garrett,jagoforcouncil@gmail.com,,district,10,Sydenham
+acc0b04d-5b3f-5235-96c9-7dfb2ef0655e,ca_on_kingston,Ryan,Boehme,ryan@ryanboehme.ca,613-561-8557,district,12,Pittsburgh
+ce04b7cb-19eb-503b-afcc-d3ca07705150,ca_on_kingston,Jamshed,Hassan,jimmyhassan@hotmail.com,613-888-6760,district,6,Trillium
+b855ccec-ed81-58fb-ae91-92f56c02e4ae,ca_on_kingston,Grant William,Bedard,william_bedard@hotmail.ca,613-766-4915,role,,
+90836ea8-d174-51d3-a097-24e07e57dd45,ca_on_brantford,Jay,Goldberg,Jgoldberg.phd@gmail.com,519-710-7010,district,Ward 3,Ward 3
+7e22fa5c-b599-5c8d-8ccc-5d4107304e25,ca_on_ajax,Sadiq,Boodoo,vote@sadiqboodoo.ca,,district,1,Ward 1
+e2c94f6c-1359-585b-92ab-7461424bb584,ca_on_ajax,Rob,Tyler Morin,Robtylermorin@gmail.com,,district,1,Ward 1
+4e5c0a8b-8705-5564-9785-f26b752b5c1a,ca_on_ajax,Sajid,Dogar,dogarsajid22@gmail.com,416-879-1336,district,2,Ward 2
+4100c6f6-5c45-5755-8710-ce0f5626048e,ca_on_ajax,Sajid Raza,Rehman,,647-291-6034,role,,
+6d1cafea-a11b-58a8-a605-735e8af566c2,ca_on_peterborough,Jessica,Correa,correa4councillor@gmail.com,,district,Otonabee Ward 1,Ward 1 - Otonabee
+29d562ce-bb96-5be8-b787-db4daf2f7d64,ca_on_greater_sudbury,Deborah,Josipovic,deborahjosipovic@gmail.com,519-420-8308,district,12,Ward 12
+62c7e38b-ab8d-5056-b665-c17a8377dc16,ca_on_greater_sudbury,Natalie,Labbée,electlabbeeforward7@gmail.com,,district,7,Ward 7
+00d1e830-dad3-5369-9a51-aac19832a9e0,ca_on_norfolk_county,Glenn,Paquette,glennforward5@gmail.com,905-978-1965,district,5,Ward 5
