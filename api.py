@@ -66,7 +66,9 @@ if not GOOGLE_API_KEY:
     raise RuntimeError("GOOGLE_MAPS_API_KEY is required")
 
 app = Flask(__name__)
-
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+if not app.config["SECRET_KEY"]:
+    raise RuntimeError("SECRET_KEY is required")
 from werkzeug.middleware.proxy_fix import ProxyFix
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 
