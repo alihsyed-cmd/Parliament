@@ -1,0 +1,14 @@
+# Vercel's Root Directory is `frontend`, so nothing outside it is used by the
+# build. Excluding the rest keeps credentials and pipeline data out of the
+# upload and makes deploys fast.
+data/
+scripts/
+docs/
+screenshots/
+_archive_pre_pipeline/
+.claude/
+*.zip
+*.csv
+*.md
+cookies.txt
+parliamentapp.ca.txt
