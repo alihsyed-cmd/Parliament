@@ -118,9 +118,6 @@ export function BrowsePage({
           expandedName={expanded.provincial} setExpandedName={setFor("provincial")}
           renderExpanded={(item) => item.covered ? (
             <div className="stack stack-3">
-              <div className="card" style={{ padding: "4px 14px" }}>
-                <PersonRow name="Andrea Okonjo" sub="Premier of Ontario" initials="AO" />
-              </div>
               <button className="btn outline sm" onClick={() => onOpenProvince(item.slug!)}>
                 View all of Ontario <Icon name="chevron_right" size={14} />
               </button>
@@ -131,12 +128,12 @@ export function BrowsePage({
           title="Federal" subtitle={`Showing ${FEDERAL_RIDINGS.length} of 343 ridings`}
           count={FEDERAL_RIDINGS.length} items={FEDERAL_RIDINGS}
           expandedName={expanded.federal} setExpandedName={setFor("federal")}
-          renderExpanded={(item) => (
-            <div className="card" style={{ padding: "4px 14px" }}>
-              <PersonRow name={item.mp!} sub={`MP, ${item.name}`}
-                initials={item.mp!.split(" ").map((s) => s[0]).join("").slice(0, 2).toUpperCase()} />
-            </div>
-          )}
+          renderExpanded={(item) => item.mp
+            ? <div className="card" style={{ padding: "4px 14px" }}>
+                <PersonRow name={item.mp} sub={`MP, ${item.name}`}
+                  initials={item.mp.split(" ").map((s) => s[0]).join("").slice(0, 2).toUpperCase()} />
+              </div>
+            : <ComingSoonNote noun="riding" />}
         />
       </div>
     </div>
@@ -153,12 +150,6 @@ export function ProvincePage() {
       </div>
       <div className="detail-grid">
         <div className="stack stack-5">
-          <div>
-            <div className="section-label" style={{ marginBottom: 8 }}>Premier</div>
-            <div className="card" style={{ padding: "4px 14px" }}>
-              <PersonRow name="Andrea Okonjo" sub="Premier of Ontario" initials="AO" />
-            </div>
-          </div>
           <div>
             <div className="section-label" style={{ marginBottom: 8 }}>MPPs · {ON_MPPS.length}</div>
             <div className="card" style={{ padding: "4px 14px" }}>
