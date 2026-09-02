@@ -95,3 +95,40 @@ def test_claimed_but_empty_reads_as_vacant(sub):
 def test_ready_without_uid_does_not_crash(sub):
     """Schema forbids it; the code must not lean on that."""
     assert sub((None, None, "ready", True)) is None
+
+
+# ── Race grouping ────────────────────────────────────────────────────────────
+def test_race_key_matches_frontend_shape():
+    """The key is a client-side lookup handle; both sides must build it alike."""
+    assert cp._race_key("ca_on_toronto", "district", "01", "Councillor") == \
+        "ca_on_toronto|Councillor|01"
+    assert cp._race_key("ca_on_toronto", "role", "", None) == "ca_on_toronto|citywide|"
+    # office is currently always None for district rows lacking a role label
+    assert cp._race_key("s", "district", "7", None) == "s|district|7"
+
+
+def test_race_key_tolerates_unsafe_district_ids():
+    """Real ids contain spaces; the key holds them because it is never a URL."""
+    assert cp._race_key("ca_on_thunder_bay", "district", "CURRENT RIVER", "Councillor") == \
+        "ca_on_thunder_bay|Councillor|CURRENT RIVER"
+
+
+def test_race_title_rules():
+    assert cp._race_title("Ward 4", "Councillor", "Guelph") == "Ward 4 Councillor"
+    assert cp._race_title("", "Mayor", "Guelph") == "Mayor of Guelph"
+    assert cp._race_title("", None, "Guelph") == "Guelph — citywide"
+    assert cp._race_title("Ward 4", None, "Guelph") == "Ward 4"
+
+
+def test_roster_query_never_selects_contact_columns():
+    sql = cp.ROSTER_BY_JURISDICTION_SQL.lower()
+    assert "email" not in sql
+    assert "phone" not in sql
+    assert "select *" not in sql
+
+
+def test_roster_selects_visibility_columns_but_allowlist_stays_clean():
+    """status/is_published are read to decide visibility, never returned."""
+    sql = cp.ROSTER_BY_JURISDICTION_SQL.lower()
+    assert "is_published" in sql and "status" in sql
+    assert "email" not in cp.PUBLIC_CANDIDATE_COLS

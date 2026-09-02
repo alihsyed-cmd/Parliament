@@ -72,26 +72,46 @@ PUBLIC_SUBMISSION_SQL = """
     WHERE candidate_uuid = %s;
 """
 
+# One municipality's whole certified roster, with each candidate's publicly
+# visible submission fields joined on. LEFT JOIN because the overwhelming
+# majority of candidates have no submissions row at all — a row is created on
+# first save, not at import.
+#
+# Ordering is done in SQL so every race renders in a stable, alphabetical order
+# without the API caring: district first so races group, then surname. Sorting
+# by name in Postgres rather than JS also keeps accented surnames ordered the
+# same way for every client.
+ROSTER_BY_JURISDICTION_SQL = f"""
+    SELECT {", ".join("c." + col for col in PUBLIC_CANDIDATE_COLS)},
+           s.website, s.stream_video_uid, s.status, s.is_published
+    FROM raw_candidates c
+    LEFT JOIN submissions s ON s.candidate_uuid = c.uuid
+    WHERE c.jurisdiction_slug = %s
+    ORDER BY c.role_scope DESC, c.district_id, c.last_name, c.first_name;
+"""
+
+JURISDICTION_EXISTS_SQL = """
+    SELECT 1 FROM jurisdictions WHERE slug = %s;
+"""
+
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
-def _public_submission(candidate_uuid: str):
+def _visible_submission(website, video_uid, status, is_published):
     """
     The publicly visible half of a submission, or None.
 
-    Returns None when there is no submissions row, when the human kill switch
-    is off, or when the candidate has published nothing yet — so a claimed page
-    with nothing on it renders identically to an unclaimed one rather than as an
-    empty "submitted by the candidate" shell.
+    THE one place the exposure rule lives. Both endpoints call it — the profile
+    from its own row, the roster from a joined row — so the rule cannot drift
+    between a candidate's page and their race listing.
+
+    Returns None when the human kill switch is off, or when the candidate has
+    published nothing yet, so a claimed page with nothing on it renders
+    identically to an unclaimed one rather than as an empty "submitted by the
+    candidate" shell.
 
     Website and video are independent: a website publishes the moment it is
     saved, regardless of what the video is doing.
     """
-    row = db.query_one(PUBLIC_SUBMISSION_SQL, (candidate_uuid,))
-    if not row:
-        return None
-
-    website, video_uid, status, is_published = row
-
     # The kill switch hides everything a candidate supplied. It is written only
     # by a human and must outrank any automated state.
     if not is_published:
@@ -99,14 +119,25 @@ def _public_submission(candidate_uuid: str):
 
     website = (website or "").strip() or None
 
-    # 'ready' is the only status a voter ever sees the effect of. The schema
-    # guarantees ready implies a UID, but this does not lean on that.
+    # 'ready' is the only status a voter ever sees the effect of. Anything else
+    # — draft, processing, failed — is reported as simply no video, with no
+    # status field for a client to build a spinner from. The schema guarantees
+    # ready implies a UID, but this does not lean on that.
     visible_video = video_uid if (status == "ready" and video_uid) else None
 
     if website is None and visible_video is None:
         return None
 
     return {"website": website, "video_uid": visible_video}
+
+
+def _public_submission(candidate_uuid: str):
+    """Per-candidate lookup for the profile endpoint."""
+    row = db.query_one(PUBLIC_SUBMISSION_SQL, (candidate_uuid,))
+    if not row:
+        return None
+    website, video_uid, status, is_published = row
+    return _visible_submission(website, video_uid, status, is_published)
 
 
 # ── GET /candidates/<uuid> ───────────────────────────────────────────────────
@@ -149,4 +180,100 @@ def candidate_profile(candidate_uuid: str):
         "district_name": c["district_name"] or "",
         "claim_status": _claim_status(str(parsed)),
         "submission": _public_submission(str(parsed)),
+    })
+
+
+# ── GET /jurisdictions/<slug>/races ──────────────────────────────────────────
+#
+# Deliberately NOT /races/<key>/candidates, which the frontend brief named.
+# Two findings drove the change, both discovered in the certified data:
+#
+#   1. district_id is not URL-safe. Real values include "Ward 1",
+#      "CURRENT RIVER" and "Ashburnham Ward 4". A composite key embedded in a
+#      path segment would need percent-encoding that proxies and clients mangle
+#      differently, and a mis-encoded key is a silent empty race.
+#
+#   2. A whole municipality is small. The largest roster is Toronto at 243
+#      candidates, so one response covers every race in the city. The ward card,
+#      the race chooser and the race list are three views of the same data, and
+#      serving them from one cacheable call avoids both a key format and a
+#      request per race.
+#
+# The race `key` is still returned, in the exact shape the frontend already
+# builds, so raceByKey() and racePath() keep working. It is a client-side lookup
+# handle, never a URL, which is what makes the unsafe characters harmless.
+def _race_key(slug: str, role_scope: str, district_id: str, office) -> str:
+    """Mirror of the frontend's raceKey(). Kept identical so neither side has to
+    translate; office is currently always None, per the declined column."""
+    if role_scope == "district":
+        return f"{slug}|{office or 'district'}|{district_id}"
+    return f"{slug}|{office or 'citywide'}|"
+
+
+def _race_title(district_name: str, office, jurisdiction_name: str) -> str:
+    """Mirror of the frontend's allRaces() title rule."""
+    if district_name:
+        return f"{district_name} {office}" if office else district_name
+    return f"{office} of {jurisdiction_name}" if office else f"{jurisdiction_name} — citywide"
+
+
+@public_bp.route("/jurisdictions/<slug>/races", methods=["GET"])
+def jurisdiction_races(slug: str):
+    """
+    Every race in one municipality, each with its certified candidates.
+
+    Public and unauthenticated for the same reason as the profile endpoint: the
+    certified roster is public record from certification day.
+    """
+    if not db.query_one(JURISDICTION_EXISTS_SQL, (slug,)):
+        return jsonify({"error": "not_found", "message": "Jurisdiction not found."}), 404
+
+    j_row = db.query_one(JURISDICTION_LABELS_SQL, (slug,))
+    jurisdiction_name = j_row[0] if j_row else slug
+    role_label_singular = (j_row[1] if j_row else "") or ""
+
+    rows = db.query(ROSTER_BY_JURISDICTION_SQL, (slug,))
+
+    races: dict = {}
+    order: list = []
+    for row in rows:
+        c = dict(zip(PUBLIC_CANDIDATE_COLS, row[:len(PUBLIC_CANDIDATE_COLS)]))
+        website, video_uid, status, is_published = row[len(PUBLIC_CANDIDATE_COLS):]
+
+        office = _office_label(c, role_label_singular)
+        key = _race_key(slug, c["role_scope"], c["district_id"] or "", office)
+
+        if key not in races:
+            order.append(key)
+            races[key] = {
+                "key": key,
+                "office": office,
+                "role_scope": c["role_scope"],
+                "district_id": c["district_id"] or "",
+                "district_name": c["district_name"] or "",
+                "title": _race_title(c["district_name"] or "", office, jurisdiction_name),
+                "candidates": [],
+            }
+
+        races[key]["candidates"].append({
+            "uuid": str(c["uuid"]),
+            "first_name": c["first_name"] or "",
+            "last_name": c["last_name"] or "",
+            "name": _full_name(c),
+            # Same visibility rule as the profile endpoint, applied to the
+            # joined row so this needs no extra query per candidate.
+            "submission": _visible_submission(website, video_uid, status, is_published),
+        })
+
+    out = [races[k] for k in order]
+    for r in out:
+        r["candidate_count"] = len(r["candidates"])
+
+    return jsonify({
+        "lang": LANG,
+        "jurisdiction": jurisdiction_name,
+        "jurisdiction_slug": slug,
+        "race_count": len(out),
+        "candidate_count": sum(r["candidate_count"] for r in out),
+        "races": out,
     })

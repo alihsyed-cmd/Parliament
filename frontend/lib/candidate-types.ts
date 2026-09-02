@@ -14,9 +14,14 @@ export interface CandidateRow {
   office: string | null;
   first_name: string;
   last_name: string;
-  /** Outreach only. Never rendered to voters. */
-  email: string;
-  phone: string;
+  /**
+   * Outreach only, and absent from every voter-facing API response — the public
+   * read endpoints select an allowlist that omits both columns server-side.
+   * Optional so the compiler refuses any attempt to render a value the server
+   * never sends.
+   */
+  email?: string;
+  phone?: string;
 }
 
 /** GET /candidates/<uuid>/claim */

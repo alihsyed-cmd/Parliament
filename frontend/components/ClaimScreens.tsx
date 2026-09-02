@@ -75,7 +75,7 @@ export function ClaimChallengeScreen({
   const where = info ? [info.district || info.office, info.jurisdiction].filter(Boolean).join(", ") : officeLine(row!);
   const claimable = info ? info.claimable : !!row!.email;
   const claimed = info ? info.claim_status === "claimed" : false;
-  const hint = info ? info.masked_hint : maskEmail(row!.email);
+  const hint = info ? info.masked_hint : maskEmail(row!.email ?? "");
 
   if (!claimable) {
     return (
