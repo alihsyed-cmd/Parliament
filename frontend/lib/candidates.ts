@@ -4,10 +4,11 @@
 // httpOnly and scoped to .parliamentapp.ca; without the flag it is silently
 // omitted and the call 401s.
 
+import React from "react";
 import type {
   CandidateRow, ClaimInfo, PortalInfo, ExchangeResult, Submission, Race,
 } from "./candidate-types";
-import { CANDIDATE_ROWS, CANDIDATE_SUBMISSIONS, MUNICIPALITY_NAME } from "./candidate-data";
+import { MUNICIPALITY_NAME } from "./candidate-data";
 
 export const CANDIDATE_API_BASE =
   process.env.NEXT_PUBLIC_CANDIDATE_API ?? "https://api.parliamentapp.ca";
@@ -133,15 +134,137 @@ export const candidateApi = {
   },
 };
 
-/* ─────────── derivation (no races table; everything comes off the row) ───────────
- * NOTE: there is no public endpoint yet for race listings, candidate profiles,
- * or name search. Those surfaces read CANDIDATE_ROWS until one exists. */
+/* ─────────── live reads ───────────
+ * Race listings and candidate profiles come from the public read endpoints.
+ * Name search has no endpoint yet, so searchCandidates() still resolves against
+ * whatever is cached and returns nothing until one exists — it only feeds the
+ * claim page, which is gated shut regardless.
+ *
+ * Responses land in a module-level cache so the synchronous derivation helpers
+ * below keep working unchanged. Screens trigger a load with useRaces(); every
+ * other lookup reads the warm cache. */
+
+const raceCache = new Map<string, Race[]>();
+const candidateCache = new Map<string, CandidateRow>();
+const jurisdictionNames = new Map<string, string>();
+
+interface RaceResponse {
+  jurisdiction: string;
+  jurisdiction_slug: string;
+  races: {
+    key: string; office: string | null; role_scope: "district" | "role";
+    district_id: string; district_name: string; title: string;
+    candidates: {
+      uuid: string; first_name: string; last_name: string;
+      submission: Submission | null;
+    }[];
+  }[];
+}
+
+function cacheCandidate(row: CandidateRow) {
+  candidateCache.set(row.uuid, row);
+  return row;
+}
+
+/** GET /jurisdictions/<slug>/races — every race in one municipality, with its
+ *  certified candidates. Public: no credentials, by design. */
+export async function fetchRaces(slug: string): Promise<Race[]> {
+  const cached = raceCache.get(slug);
+  if (cached) return cached;
+
+  const data = await call<RaceResponse>(
+    `/jurisdictions/${encodeURIComponent(slug)}/races`,
+  );
+  jurisdictionNames.set(slug, data.jurisdiction);
+
+  const races: Race[] = data.races.map((r) => {
+    const candidates: CandidateRow[] = r.candidates.map((c) => cacheCandidate({
+      uuid: c.uuid,
+      jurisdiction_slug: slug,
+      district_id: r.district_id,
+      district_name: r.district_name,
+      role_scope: r.role_scope,
+      office: r.office,
+      first_name: c.first_name,
+      last_name: c.last_name,
+      submission: c.submission,
+    }));
+    return {
+      key: r.key,
+      path: candidates.length ? racePath(candidates[0]) : `/on/${slug}`,
+      jurisdiction_slug: slug,
+      office: r.office,
+      district_name: r.district_name,
+      title: r.title,
+      candidates,
+    };
+  });
+
+  raceCache.set(slug, races);
+  return races;
+}
+
+/** GET /candidates/<uuid> — one certified candidate. Public: no credentials. */
+export async function fetchCandidate(uuid: string): Promise<CandidateRow> {
+  const cached = candidateCache.get(uuid);
+  if (cached) return cached;
+
+  const c = await call<{
+    uuid: string; jurisdiction_slug: string; jurisdiction: string;
+    district_id: string; district_name: string; role_scope: "district" | "role";
+    office: string | null; first_name: string; last_name: string;
+    submission: Submission | null;
+  }>(`/candidates/${encodeURIComponent(uuid)}`);
+
+  jurisdictionNames.set(c.jurisdiction_slug, c.jurisdiction);
+  return cacheCandidate({
+    uuid: c.uuid,
+    jurisdiction_slug: c.jurisdiction_slug,
+    district_id: c.district_id,
+    district_name: c.district_name,
+    role_scope: c.role_scope,
+    office: c.office,
+    first_name: c.first_name,
+    last_name: c.last_name,
+    submission: c.submission,
+  });
+}
+
+/**
+ * Load a municipality's races. Returns `null` while in flight so a screen can
+ * tell "still loading" from "no races", which otherwise render the same and
+ * would flash a wrong count.
+ */
+export function useRaces(slug: string | null | undefined) {
+  const [races, setRaces] = React.useState<Race[] | null>(
+    slug ? raceCache.get(slug) ?? null : [],
+  );
+
+  React.useEffect(() => {
+    if (!slug) { setRaces([]); return; }
+    const warm = raceCache.get(slug);
+    if (warm) { setRaces(warm); return; }
+
+    let live = true;
+    setRaces(null);
+    fetchRaces(slug)
+      .then((r) => { if (live) setRaces(r); })
+      // A municipality with no roster 404s; that is "no races", not an error
+      // worth surfacing to a voter mid-lookup.
+      .catch(() => { if (live) setRaces([]); });
+    return () => { live = false; };
+  }, [slug]);
+
+  return races;
+}
 
 export const streamThumb = (uid: string) =>
   `https://videodelivery.net/${uid}/thumbnails/thumbnail.jpg?time=3s`;
 
 export function municipalityName(slug: string) {
-  return MUNICIPALITY_NAME[slug] ?? slug;
+  // Server-supplied name first: it covers every registered municipality, where
+  // the static map only ever held a handful.
+  return jurisdictionNames.get(slug) ?? MUNICIPALITY_NAME[slug] ?? slug;
 }
 
 /** `office` is null for mayoral and at-large candidates. Screens fall back to
@@ -165,7 +288,9 @@ export function initialsOf(row: Pick<CandidateRow, "first_name" | "last_name">) 
 }
 
 export function submissionFor(row: CandidateRow): Submission | null {
-  return CANDIDATE_SUBMISSIONS[row.uuid] ?? null;
+  // Decided server-side: present only when publicly visible. A mid-encode or
+  // unpublished video arrives as null, identical to having none.
+  return row.submission ?? null;
 }
 
 /** Hard mask: first char of local part, first char of domain. */
@@ -206,32 +331,14 @@ export function sortVideoFirst(rows: CandidateRow[]) {
   return [...withVideo, ...rest];
 }
 
+/** Every race currently loaded, across all fetched municipalities. */
 export function allRaces(): Race[] {
-  const map = new Map<string, Race>();
-  CANDIDATE_ROWS.forEach((row) => {
-    const key = raceKey(row);
-    if (!map.has(key)) {
-      const label = officeLabel(row);
-      const muni = municipalityName(row.jurisdiction_slug);
-      map.set(key, {
-        key,
-        path: racePath(row),
-        jurisdiction_slug: row.jurisdiction_slug,
-        office: row.office,
-        district_name: row.district_name,
-        title: row.district_name
-          ? (label ? `${row.district_name} ${label}` : row.district_name)
-          : (label ? `${label} of ${muni}` : `${muni} — citywide`),
-        candidates: [],
-      });
-    }
-    map.get(key)!.candidates.push(row);
-  });
-  return [...map.values()];
+  return [...raceCache.values()].flat();
 }
 
+/** Warm-cache read. Screens call useRaces(slug) to populate it first. */
 export function racesFor(slug: string) {
-  return allRaces().filter((r) => r.jurisdiction_slug === slug);
+  return raceCache.get(slug) ?? [];
 }
 
 export function raceByKey(key: string) {
@@ -239,13 +346,22 @@ export function raceByKey(key: string) {
 }
 
 export function candidateByUuid(uuid: string) {
-  return CANDIDATE_ROWS.find((r) => r.uuid === uuid) ?? null;
+  return candidateCache.get(uuid) ?? null;
 }
 
+/**
+ * Name search. There is no /candidates/search endpoint yet, so this resolves
+ * against whatever the cache already holds rather than the full roster — which
+ * means it finds nothing until a municipality has been loaded. It feeds only
+ * the claim page, and that path is gated shut, so an empty result is the
+ * correct outcome rather than a broken one.
+ */
 export function searchCandidates(q: string) {
   const t = q.trim().toLowerCase();
   if (!t) return [];
-  return CANDIDATE_ROWS.filter((r) => fullName(r).toLowerCase().includes(t)).slice(0, 8);
+  return [...candidateCache.values()]
+    .filter((r) => fullName(r).toLowerCase().includes(t))
+    .slice(0, 8);
 }
 
 export function daysToElection() {

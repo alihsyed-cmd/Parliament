@@ -7,16 +7,17 @@ import { Icon } from "./Icon";
 import { RepContactCard, Countdown } from "./ui";
 import { ReminderToggle } from "./ReminderToggle";
 import { formatDate, daysUntil, levelMeta } from "@/lib/format";
-import { racesFor } from "@/lib/candidates";
+import { useRaces } from "@/lib/candidates";
 
 /** Links the certified-candidate stack off the existing lookup, kept clearly
  *  separate from the officials currently holding the seat. */
 function CandidateCta({
   slug, onSeeCandidates,
 }: { slug?: string; onSeeCandidates: (slug: string) => void }) {
-  if (!slug) return null;
-  const races = racesFor(slug);
-  if (!races.length) return null;
+  const races = useRaces(slug);
+  // null = still loading, [] = no roster for this municipality. Both render
+  // nothing; the card simply appears once a roster is known.
+  if (!slug || !races || !races.length) return null;
   const total = races.reduce((n, r) => n + r.candidates.length, 0);
   return (
     <button type="button" className="card button cand-cta" onClick={() => onSeeCandidates(slug)}>

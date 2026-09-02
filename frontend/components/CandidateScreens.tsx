@@ -7,7 +7,7 @@ import React from "react";
 import type { CandidateRow } from "@/lib/candidate-types";
 import {
   CLAIM_AFFORDANCE_VISIBLE, fullName, municipalityName, officeLine, raceByKey,
-  racesFor, sortAlphabetical, streamThumb, submissionFor,
+  sortAlphabetical, streamThumb, submissionFor, useRaces,
 } from "@/lib/candidates";
 import { Icon } from "./Icon";
 
@@ -22,8 +22,11 @@ function ElectionFooterNote() {
 export function RaceChooser({
   slug, onOpenRace,
 }: { slug: string; onOpenRace: (key: string) => void }) {
-  const races = racesFor(slug);
+  const loaded = useRaces(slug);
   const name = municipalityName(slug);
+  // Hold the frame while loading rather than flashing "0 races on your ballot".
+  if (!loaded) return null;
+  const races = loaded;
   return (
     <div className="container fade-in">
       <div className="stack stack-3" style={{ marginBottom: 26, maxWidth: 620 }}>

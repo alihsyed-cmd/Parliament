@@ -22,6 +22,10 @@ export interface CandidateRow {
    */
   email?: string;
   phone?: string;
+  /** Publicly visible submission, as decided server-side. Absent/null means the
+   *  page shows the certified record alone — which is also how a mid-encode
+   *  video reads, deliberately. */
+  submission?: Submission | null;
 }
 
 /** GET /candidates/<uuid>/claim */
