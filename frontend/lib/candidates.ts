@@ -194,6 +194,7 @@ export async function fetchRaces(slug: string): Promise<Race[]> {
       path: candidates.length ? racePath(candidates[0]) : `/on/${slug}`,
       jurisdiction_slug: slug,
       office: r.office,
+      district_id: r.district_id,
       district_name: r.district_name,
       title: r.title,
       candidates,

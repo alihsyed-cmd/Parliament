@@ -7,7 +7,9 @@ import type {
 } from "@/lib/types";
 import type { Place } from "@/lib/browse-data";
 import { api, ApiError } from "@/lib/api";
-import { CLAIM_AFFORDANCE_VISIBLE, SUBMISSIONS_ENABLED, candidateByUuid } from "@/lib/candidates";
+import {
+  CLAIM_AFFORDANCE_VISIBLE, SUBMISSIONS_ENABLED, candidateByUuid, racesFor,
+} from "@/lib/candidates";
 import { BrandMark } from "@/components/ui";
 import { Icon } from "@/components/Icon";
 import { EntryScreen } from "@/components/EntryScreen";
@@ -108,6 +110,28 @@ export default function Page() {
   const editPostal = () => { setLookupErr(null); setRoute("entry"); };
   const home = () => setRoute("entry");
 
+  /**
+   * The card promises "your ward", so go straight there when the viewer's ward
+   * resolves to a race. The roster is already loaded by the time the card is
+   * clickable — it only renders once races are known — so this reads the warm
+   * cache rather than waiting again.
+   *
+   * Falls back to the full chooser when there is no ward to match: an at-large
+   * municipality, or a ward with no certified ward race. Going back from the
+   * ward race still lands on the chooser, so the mayoral and citywide races
+   * stay one tap away.
+   */
+  const openCandidates = (slug: string, districtId?: string) => {
+    setRaceMuni(slug);
+    const mine = districtId
+      ? racesFor(slug).find(
+          (r) => r.jurisdiction_slug === slug && r.district_id === districtId,
+        )
+      : undefined;
+    if (mine) { setActiveRace(mine.key); setRoute("race-list"); return; }
+    setRoute("race-chooser");
+  };
+
   const openBrowse = (focus: { section: string; name: string } | null = null) => {
     setBrowseFocus(focus);
     setRoute("browse");
@@ -178,7 +202,7 @@ export default function Page() {
             <LookupScreen
               data={lookup} postal={api.formatPostalCode(postal)}
               onRep={(r, l) => openRep(r, l, false)} onSeeAll={openRoster}
-              onSeeCandidates={(slug) => { setRaceMuni(slug); setRoute("race-chooser"); }}
+              onSeeCandidates={openCandidates}
             />
           ) : null
         ) : null}

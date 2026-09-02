@@ -74,6 +74,9 @@ export interface Race {
   path: string;
   jurisdiction_slug: string;
   office: string | null;
+  /** Joins to the ward the postal-code lookup returns, so a voter can be sent
+   *  straight to their own race. Empty for citywide/at-large races. */
+  district_id: string;
   district_name: string;
   title: string;
   candidates: CandidateRow[];

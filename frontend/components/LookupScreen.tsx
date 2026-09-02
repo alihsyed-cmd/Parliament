@@ -12,15 +12,20 @@ import { useRaces } from "@/lib/candidates";
 /** Links the certified-candidate stack off the existing lookup, kept clearly
  *  separate from the officials currently holding the seat. */
 function CandidateCta({
-  slug, onSeeCandidates,
-}: { slug?: string; onSeeCandidates: (slug: string) => void }) {
+  slug, districtId, onSeeCandidates,
+}: {
+  slug?: string;
+  /** The viewer's own ward, straight off the municipal representative. */
+  districtId?: string;
+  onSeeCandidates: (slug: string, districtId?: string) => void;
+}) {
   const races = useRaces(slug);
   // null = still loading, [] = no roster for this municipality. Both render
   // nothing; the card simply appears once a roster is known.
   if (!slug || !races || !races.length) return null;
   const total = races.reduce((n, r) => n + r.candidates.length, 0);
   return (
-    <button type="button" className="card button cand-cta" onClick={() => onSeeCandidates(slug)}>
+    <button type="button" className="card button cand-cta" onClick={() => onSeeCandidates(slug, districtId)}>
       <span className="row between">
         <span>
           <span className="eyebrow accent" style={{ display: "block", marginBottom: 6 }}>
@@ -143,8 +148,9 @@ export function LookupScreen({
 }: {
   data: LookupResponse; postal: string;
   onRep: (p: Politician, l: Level) => void; onSeeAll: (l: Level) => void;
-  onSeeCandidates?: (slug: string) => void;
+  onSeeCandidates?: (slug: string, districtId?: string) => void;
 }) {
+  const municipal = data.levels.find((l) => l.level === "municipal");
   const firstCovered = data.levels.findIndex((l) => !l._gap && l.jurisdiction.governance);
   const [openIdx, setOpenIdx] = React.useState(firstCovered === -1 ? 0 : firstCovered);
   const [wide, setWide] = React.useState(false);
@@ -186,7 +192,8 @@ export function LookupScreen({
       {onSeeCandidates ? (
         <div style={{ marginBottom: 20, maxWidth: 640 }}>
           <CandidateCta
-            slug={data.levels.find((l) => l.level === "municipal")?.jurisdiction.slug}
+            slug={municipal?.jurisdiction.slug}
+            districtId={municipal?.representatives?.[0]?.district_id}
             onSeeCandidates={onSeeCandidates}
           />
         </div>
