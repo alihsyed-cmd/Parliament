@@ -87,6 +87,12 @@ POSTAL_CODE_REGEX = re.compile(r"^[A-Z]\d[A-Z]\d[A-Z]\d$")
 from portal import portal_bp
 app.register_blueprint(portal_bp)
 
+# Public candidate reads. Registered after portal_bp, which owns PATCH on the
+# same /candidates/<uuid> rule; Flask keys the two by endpoint name, so GET and
+# PATCH coexist on the path.
+from candidates_public import public_bp
+app.register_blueprint(public_bp)
+
 # English-only for now. Sent on every response so the envelope is stable when
 # i18n returns; there is no ?lang= input param anymore.
 LANG = "en"
