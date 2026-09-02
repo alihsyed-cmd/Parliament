@@ -7,6 +7,34 @@ import { Icon } from "./Icon";
 import { RepContactCard, Countdown } from "./ui";
 import { ReminderToggle } from "./ReminderToggle";
 import { formatDate, daysUntil, levelMeta } from "@/lib/format";
+import { racesFor } from "@/lib/candidates";
+
+/** Links the certified-candidate stack off the existing lookup, kept clearly
+ *  separate from the officials currently holding the seat. */
+function CandidateCta({
+  slug, onSeeCandidates,
+}: { slug?: string; onSeeCandidates: (slug: string) => void }) {
+  if (!slug) return null;
+  const races = racesFor(slug);
+  if (!races.length) return null;
+  const total = races.reduce((n, r) => n + r.candidates.length, 0);
+  return (
+    <button type="button" className="card button cand-cta" onClick={() => onSeeCandidates(slug)}>
+      <span className="row between">
+        <span>
+          <span className="eyebrow accent" style={{ display: "block", marginBottom: 6 }}>
+            Election · October 26, 2026
+          </span>
+          <span className="h-3" style={{ display: "block" }}>See who&apos;s running in your ward</span>
+          <span className="t-xs" style={{ display: "block", marginTop: 4 }}>
+            {total} certified candidates across {races.length} race{races.length === 1 ? "" : "s"}
+          </span>
+        </span>
+        <Icon name="chevron_right" size={20} className="chevron" />
+      </span>
+    </button>
+  );
+}
 
 function CoverageGap({ level }: { level: string }) {
   const who = level === "municipal" ? "your municipality" : level === "provincial" ? "your province" : "Canada";
@@ -110,10 +138,11 @@ function LevelPanel({
 }
 
 export function LookupScreen({
-  data, postal, onRep, onSeeAll,
+  data, postal, onRep, onSeeAll, onSeeCandidates,
 }: {
   data: LookupResponse; postal: string;
   onRep: (p: Politician, l: Level) => void; onSeeAll: (l: Level) => void;
+  onSeeCandidates?: (slug: string) => void;
 }) {
   const firstCovered = data.levels.findIndex((l) => !l._gap && l.jurisdiction.governance);
   const [openIdx, setOpenIdx] = React.useState(firstCovered === -1 ? 0 : firstCovered);
@@ -150,8 +179,17 @@ export function LookupScreen({
       <div className="stack stack-3" style={{ marginBottom: 24, maxWidth: 640 }}>
         <div className="eyebrow accent">Your government</div>
         <h1 className="h-1"><span className="h-italic serif">{totalPeople} {totalPeople === 1 ? "person" : "people"}</span> represent you.</h1>
-        <p className="t-lead">Plus {totalOther} more in cabinet, opposition &amp; leadership across {covered} levels. You can contact any one of them — right here.</p>
+        <p className="t-lead">Plus {totalOther} more in cabinet, opposition &amp; leadership across {covered} levels. Open a level to call or email yours — right here.</p>
       </div>
+
+      {onSeeCandidates ? (
+        <div style={{ marginBottom: 20, maxWidth: 640 }}>
+          <CandidateCta
+            slug={data.levels.find((l) => l.level === "municipal")?.jurisdiction.slug}
+            onSeeCandidates={onSeeCandidates}
+          />
+        </div>
+      ) : null}
 
       <div className="levels-grid">
         {data.levels.map((lvl, i) => (

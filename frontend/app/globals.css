@@ -295,3 +295,55 @@ a { color: inherit; }
 .act-btn.primary:visited,
 .act-btn.primary:focus { background: var(--accent); border-color: var(--accent); color: #fff; }
 .act-btn.primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+
+/* ---------- Candidate surfaces ---------- */
+.cand-cta{width:100%;text-align:left;cursor:pointer;border-color:var(--accent);background:var(--accent-soft)}
+.cand-cta:hover{border-color:var(--accent-ink)}
+.race-card{width:100%;text-align:left;cursor:pointer}
+.cand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;max-width:900px}
+.cand-cell{display:flex;flex-direction:column;gap:6px;min-height:86px;padding:13px 13px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper);text-align:left;cursor:pointer;font:inherit;color:inherit}
+.cand-cell:hover{border-color:var(--ink-3);background:var(--paper-2)}
+.cand-cell .nm{font-family:var(--serif);font-size:17px;line-height:1.16;letter-spacing:-0.008em;color:var(--ink)}
+.cand-cell .mt{display:flex;align-items:center;gap:6px;margin-top:auto;font-family:var(--sans);font-size:11.5px;color:var(--ink-3)}
+.cand-cell .mt .url{font-family:var(--mono);font-size:11px;color:var(--accent-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.playdot{width:15px;height:15px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.playdot svg{width:7px;height:7px;fill:#fff;margin-left:1px}
+.notlisted-box{border:1px dashed var(--line);border-radius:var(--r-md);background:var(--paper-2);padding:15px}
+.src-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:0.11em;text-transform:uppercase;color:var(--ink-3)}
+.claim-quiet{display:flex;align-items:center;justify-content:center;gap:7px;padding:22px 0 0;font-family:var(--sans);font-size:12px;color:var(--ink-3)}
+.claim-quiet a{color:var(--ink-3);text-decoration:underline}
+.claim-quiet a:hover{color:var(--ink)}
+.confirm-mark{width:60px;height:60px;border-radius:50%;background:var(--accent-soft);border:1.5px solid var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;margin:0 auto}
+.err-mark{width:52px;height:52px;border-radius:50%;background:var(--paper-2);border:1.5px solid var(--line);color:var(--ink-3);display:flex;align-items:center;justify-content:center;margin:0 auto}
+
+/* ---------- Manage / edit + processing (#4, #5) ---------- */
+.vid-thumb{position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:16/10;background:var(--paper-2);border:1px solid var(--line)}
+.vid-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.vid-thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.08)}
+.vid-thumb .play span{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.95);color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-1)}
+.act-row{display:flex;gap:10px}
+.act-row .act-btn{flex:1;min-width:0}
+.act-btn.muted{color:var(--ink-3);border-style:dashed}
+.upload-drop{width:100%;display:flex;flex-direction:column;align-items:center;gap:6px;padding:26px 18px;border:1px dashed var(--line);border-radius:var(--r-md);background:var(--paper-2);cursor:pointer;font:inherit;color:inherit;text-align:center}
+.upload-drop:hover{border-color:var(--ink-3);background:var(--paper-3)}
+.upload-drop .ic{width:40px;height:40px;border-radius:50%;background:var(--paper);border:1px solid var(--line);color:var(--ink-3);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+.spin{width:52px;height:52px;border-radius:50%;border:3px solid var(--line-2);border-top-color:var(--accent-ink);margin:0 auto;animation:om-spin 0.9s linear infinite}
+@keyframes om-spin{to{transform:rotate(360deg)}}
+
+/* ---------- Header nav (Browse / About / For candidates / Contact) ---------- */
+.nav-links { display: flex; align-items: center; gap: 22px; }
+.nav-links a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--ink-2); text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+.nav-links a svg { display: none; color: var(--ink-3); }
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.active { color: var(--ink); border-bottom-color: var(--accent); }
+@media (max-width: 700px) {
+  .nav-links { gap: 6px; }
+  .nav-links a { padding: 8px; border-radius: 999px; border-bottom: 0; }
+  .nav-links a svg { display: inline-flex; }
+  .nav-links a .lbl { display: none; }
+  .nav-links a.active { background: var(--paper-2); }
+}
+
+/* ---------- Browse rows (reuses .acc / .card / .chip) ---------- */
+.acc .acc-head .level-name { font-size: inherit; }
+

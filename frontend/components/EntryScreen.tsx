@@ -3,8 +3,16 @@
 import React from "react";
 import { Icon } from "./Icon";
 import { api } from "@/lib/api";
+import type { Place } from "@/lib/browse-data";
+import { SearchPlaces } from "./StaticPages";
 
-export function EntryScreen({ onSubmit, initial = "" }: { onSubmit: (postal: string) => void; initial?: string }) {
+export function EntryScreen({
+  onSubmit, initial = "", onSelectPlace,
+}: {
+  onSubmit: (postal: string) => void;
+  initial?: string;
+  onSelectPlace?: (p: Place) => void;
+}) {
   const [value, setValue] = React.useState(initial);
   const valid = api.isValidPostalCode(value);
 
@@ -29,7 +37,8 @@ export function EntryScreen({ onSubmit, initial = "" }: { onSubmit: (postal: str
             Meet the people <span className="h-italic serif">who work for you.</span>
           </h1>
           <p className="t-lead">
-            From city hall to Parliament Hill: see who represents you, and contact them in seconds.
+            Three levels of government. Six elected people, on average. Most Canadians can&apos;t name
+            them. We can fix that — together, in under a minute.
           </p>
 
           <form onSubmit={submit} className="stack stack-3" style={{ marginTop: 8, maxWidth: 460 }}>
@@ -52,6 +61,13 @@ export function EntryScreen({ onSubmit, initial = "" }: { onSubmit: (postal: str
               We don&apos;t store your postal code unless you ask us to.
             </p>
           </form>
+
+          {onSelectPlace ? (
+            <div style={{ marginTop: 18, maxWidth: 460 }}>
+              <div className="t-xs" style={{ marginBottom: 8 }}>Not near you? Look someone up directly.</div>
+              <SearchPlaces onSelect={onSelectPlace} />
+            </div>
+          ) : null}
         </div>
 
         <div>

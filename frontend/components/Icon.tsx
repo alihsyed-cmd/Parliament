@@ -21,6 +21,7 @@ const PATHS: Record<string, React.ReactNode> = {
   star: <path d="M12 3l2.9 6 6.6 1-4.8 4.6 1.1 6.6L12 18l-5.9 3.1 1.1-6.6L2.5 10l6.6-1L12 3z" />,
   check: <path d="M5 12l5 5L20 7" />,
   share: <><circle cx="6" cy="12" r="3" /><circle cx="18" cy="6" r="3" /><circle cx="18" cy="18" r="3" /><path d="M9 11l7-4M9 13l7 4" /></>,
+  play: <path d="M7 4.5l12 7.5-12 7.5z" />,
 };
 
 export function Icon({
