@@ -38,6 +38,31 @@ const NAV_LINKS: { route: Route; label: string; icon: string }[] = [
 
 const LOOKUP_ROUTES: Route[] = ["lookup", "roster", "detail"];
 
+/**
+ * Screen state lives in this component rather than in the URL, so without help
+ * the browser's Back leaves the site from the very first tap. Every screen
+ * change pushes a history entry that carries nothing but its index; the
+ * snapshot it points at stays in memory, since Level and Politician objects
+ * are not worth serializing and a reload starts a fresh session anyway.
+ */
+type Nav = {
+  route: Route;
+  postal: string;
+  level: Level | null;
+  rep: Politician | null;
+  fromRoster: boolean;
+  browseFocus: { section: string; name: string } | null;
+  raceMuni: string | null;
+  race: string | null;
+  candidate: string | null;
+};
+
+const navKey = (n: Nav) => [
+  n.route, n.postal, n.level?.jurisdiction.slug ?? "", n.rep?.uuid ?? "",
+  n.fromRoster ? "r" : "", n.browseFocus?.section ?? "", n.browseFocus?.name ?? "",
+  n.raceMuni ?? "", n.race ?? "", n.candidate ?? "",
+].join("|");
+
 export default function Page() {
   const router = useRouter();
   const [route, setRoute] = React.useState<Route>("entry");
@@ -107,6 +132,71 @@ export default function Page() {
     }
   }, []);
 
+  const nav: Nav = {
+    route, postal, level: activeLevel, rep: activeRep, fromRoster: cameFromRoster.current,
+    browseFocus, raceMuni, race: activeRace, candidate: activeCandidate,
+  };
+  const navKeyNow = navKey(nav);
+  const navRef = React.useRef(nav); navRef.current = nav;
+  const rosterRef = React.useRef(roster); rosterRef.current = roster;
+  const repDetailRef = React.useRef(repDetail); repDetailRef.current = repDetail;
+  const hist = React.useRef({ stack: [] as Nav[], idx: 0, restoring: false });
+
+  /** Put the app back on a screen the viewer has already seen. A payload that
+   *  no longer matches the target screen is refetched through the same opener
+   *  that loaded it the first time. */
+  const restore = React.useCallback((n: Nav) => {
+    if (navKey(n) === navKey(navRef.current)) return;
+    hist.current.restoring = true;
+    setPostal(n.postal);
+    cameFromRoster.current = n.fromRoster;
+    setBrowseFocus(n.browseFocus);
+    setRaceMuni(n.raceMuni);
+    setActiveRace(n.race);
+    setActiveCandidate(n.candidate);
+    if (n.route === "roster" && n.level
+        && rosterRef.current?.jurisdiction.slug !== n.level.jurisdiction.slug) {
+      void openRoster(n.level);
+      return;
+    }
+    if (n.route === "detail" && n.rep && n.level
+        && repDetailRef.current?.representative.uuid !== n.rep.uuid) {
+      void openRep(n.rep, n.level, n.fromRoster);
+      return;
+    }
+    setActiveLevel(n.level);
+    setActiveRep(n.rep);
+    setRoute(n.route);
+  }, [openRoster, openRep]);
+
+  React.useEffect(() => {
+    const h = hist.current;
+    if (h.stack.length === 0) {
+      h.stack = [navRef.current];
+      window.history.replaceState({ ...window.history.state, pIdx: 0 }, "");
+      return;
+    }
+    if (h.restoring) { h.restoring = false; h.stack[h.idx] = navRef.current; return; }
+    if (navKey(h.stack[h.idx]) === navKeyNow) return;
+    h.idx += 1;
+    h.stack = [...h.stack.slice(0, h.idx), navRef.current];
+    window.history.pushState({ ...window.history.state, pIdx: h.idx }, "");
+  }, [navKeyNow]);
+
+  React.useEffect(() => {
+    const onPop = (e: PopStateEvent) => {
+      const h = hist.current;
+      const i = (e.state as { pIdx?: number } | null)?.pIdx;
+      const target = typeof i === "number" ? h.stack[i] : undefined;
+      // Entries can outlive their snapshots — a reload keeps the browser's
+      // history but starts the app over. Fall back to where this load began.
+      h.idx = target ? (i as number) : 0;
+      restore(target ?? h.stack[0]);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [restore]);
+
   const editPostal = () => { setLookupErr(null); setRoute("entry"); };
   const home = () => setRoute("entry");
 
@@ -158,6 +248,12 @@ export default function Page() {
     candidate: () => setRoute("race-list"),
     "claim-unavailable": () => setRoute("candidate"),
   };
+  /** The in-app chevron and the browser's Back are the same motion: pop the
+   *  entry we pushed, so the two stacks never drift apart. */
+  const goBack = () => {
+    if (hist.current.idx > 0) { window.history.back(); return; }
+    BACK[route]?.();
+  };
   const onBack = BACK[route];
   const candidateRow = activeCandidate ? candidateByUuid(activeCandidate) : null;
 
@@ -167,7 +263,7 @@ export default function Page() {
         <div className="inner">
           <div className="row row-gap-3">
             {onBack ? (
-              <button className="btn ghost icon-only" onClick={onBack} aria-label="Back">
+              <button className="btn ghost icon-only" onClick={goBack} aria-label="Back">
                 <Icon name="arrow_left" size={20} />
               </button>
             ) : null}
@@ -213,7 +309,7 @@ export default function Page() {
 
         {route === "detail" && activeRep && activeLevel ? (
           <DetailScreen rep={activeRep} level={activeLevel} detail={repDetail}
-            onBack={BACK.detail!} onSeeJurisdiction={openRoster} />
+            onBack={goBack} onSeeJurisdiction={openRoster} />
         ) : null}
 
         {route === "browse" ? <BrowsePage focus={browseFocus} onOpenProvince={() => setRoute("province-ontario")} /> : null}
@@ -235,7 +331,7 @@ export default function Page() {
           <CandidateProfileScreen row={candidateRow} onClaim={openClaim} />
         ) : null}
         {route === "claim-unavailable" ? (
-          <ClaimUnavailable onBack={() => setRoute(activeCandidate ? "candidate" : "candidates")} />
+          <ClaimUnavailable onBack={goBack} />
         ) : null}
       </main>
     </>
