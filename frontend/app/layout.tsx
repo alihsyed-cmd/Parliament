@@ -23,9 +23,13 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Parliament — find your representatives",
+  title: "Parliament App",
   description:
     "Meet the people who work for you. Enter your postal code to see your municipal, provincial, and federal representatives.",
+  appleWebApp: {
+    capable: false,
+    title: "Parliament App",
+  },
 };
 
 export const viewport: Viewport = {
