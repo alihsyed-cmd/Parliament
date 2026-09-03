@@ -172,9 +172,22 @@ export async function fetchRaces(slug: string): Promise<Race[]> {
   const cached = raceCache.get(slug);
   if (cached) return cached;
 
-  const data = await call<RaceResponse>(
-    `/jurisdictions/${encodeURIComponent(slug)}/races`,
-  );
+  let data: RaceResponse;
+  try {
+    data = await call<RaceResponse>(
+      `/jurisdictions/${encodeURIComponent(slug)}/races`,
+    );
+  } catch (e) {
+    // A jurisdiction with no roster 404s, and that answer is stable: cache it
+    // so the lookup screen — which now asks on behalf of every level — stops
+    // re-asking for the two that will never have one. Any other failure stays
+    // uncached and retries.
+    if (e instanceof CandidateApiError && e.status === 404) {
+      raceCache.set(slug, []);
+      return [];
+    }
+    throw e;
+  }
   jurisdictionNames.set(slug, data.jurisdiction);
 
   const races: Race[] = data.races.map((r) => {
@@ -344,6 +357,14 @@ export function racesFor(slug: string) {
 
 export function raceByKey(key: string) {
   return allRaces().find((r) => r.key === key) ?? null;
+}
+
+/** The loaded race a candidate belongs to, found by membership rather than by
+ *  rebuilding the server's key. Both sides derive the key the same way, but
+ *  only one of them redeploys first, and a key this side invented that the API
+ *  never issued would resolve to an empty race screen. */
+export function raceContaining(uuid: string) {
+  return allRaces().find((r) => r.candidates.some((c) => c.uuid === uuid)) ?? null;
 }
 
 export function candidateByUuid(uuid: string) {

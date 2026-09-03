@@ -8,7 +8,7 @@ import type {
 import type { Place } from "@/lib/browse-data";
 import { api, ApiError } from "@/lib/api";
 import {
-  CLAIM_AFFORDANCE_VISIBLE, SUBMISSIONS_ENABLED, candidateByUuid, racesFor,
+  CLAIM_AFFORDANCE_VISIBLE, SUBMISSIONS_ENABLED, candidateByUuid, raceContaining,
 } from "@/lib/candidates";
 import { BrandMark } from "@/components/ui";
 import { Icon } from "@/components/Icon";
@@ -201,25 +201,31 @@ export default function Page() {
   const home = () => setRoute("entry");
 
   /**
-   * The card promises "your ward", so go straight there when the viewer's ward
-   * resolves to a race. The roster is already loaded by the time the card is
-   * clickable — it only renders once races are known — so this reads the warm
-   * cache rather than waiting again.
-   *
-   * Falls back to the full chooser when there is no ward to match: an at-large
-   * municipality, or a ward with no certified ward race. Going back from the
-   * ward race still lands on the chooser, so the mayoral and citywide races
-   * stay one tap away.
+   * Every race in the jurisdiction, including the wards that are not this
+   * viewer's. Their own ballot lines already sit in the lookup panel, so this
+   * link exists for the rest.
    */
-  const openCandidates = (slug: string, districtId?: string) => {
+  const openCandidates = (slug: string) => {
     setRaceMuni(slug);
-    const mine = districtId
-      ? racesFor(slug).find(
-          (r) => r.jurisdiction_slug === slug && r.district_id === districtId,
-        )
-      : undefined;
-    if (mine) { setActiveRace(mine.key); setRoute("race-list"); return; }
     setRoute("race-chooser");
+  };
+
+  const openRace = (slug: string, key: string) => {
+    setRaceMuni(slug);
+    setActiveRace(key);
+    setRoute("race-list");
+  };
+
+  /** A name tapped straight from the lookup panel. The race it belongs to is
+   *  recorded too, so backing out of the profile lands on that race rather
+   *  than on whatever race was last opened. */
+  const openCandidate = (uuid: string) => {
+    const row = candidateByUuid(uuid);
+    const race = raceContaining(uuid);
+    if (row) setRaceMuni(row.jurisdiction_slug);
+    setActiveRace(race?.key ?? null);
+    setActiveCandidate(uuid);
+    setRoute("candidate");
   };
 
   const openBrowse = (focus: { section: string; name: string } | null = null) => {
@@ -245,7 +251,7 @@ export default function Page() {
     "province-ontario": () => setRoute("browse"),
     "race-chooser": () => setRoute("lookup"),
     "race-list": () => setRoute("race-chooser"),
-    candidate: () => setRoute("race-list"),
+    candidate: () => setRoute(activeRace ? "race-list" : "lookup"),
     "claim-unavailable": () => setRoute("candidate"),
   };
   /** The in-app chevron and the browser's Back are the same motion: pop the
@@ -299,6 +305,7 @@ export default function Page() {
               data={lookup} postal={api.formatPostalCode(postal)}
               onRep={(r, l) => openRep(r, l, false)} onSeeAll={openRoster}
               onSeeCandidates={openCandidates}
+              onOpenRace={openRace} onOpenCandidate={openCandidate}
             />
           ) : null
         ) : null}
