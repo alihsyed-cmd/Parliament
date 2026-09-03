@@ -87,11 +87,25 @@ ROSTER_BY_JURISDICTION_SQL = f"""
     FROM raw_candidates c
     LEFT JOIN submissions s ON s.candidate_uuid = c.uuid
     WHERE c.jurisdiction_slug = %s
-    ORDER BY c.role_scope DESC, c.district_id, c.last_name, c.first_name;
+    ORDER BY c.role_scope DESC, c.district_id, COALESCE(c.district_name, ''),
+             c.last_name, c.first_name;
 """
 
 JURISDICTION_EXISTS_SQL = """
     SELECT 1 FROM jurisdictions WHERE slug = %s;
+"""
+
+# What this jurisdiction calls its head of government — "Mayor" here, but the
+# tree also holds Reeve, Premier and Prime Minister. Read from the sitting
+# executive rather than assumed, so the mayoral race is titled by the same
+# authority that titles the incumbent sitting in the seat. ORDER BY only to
+# make the pick deterministic where a jurisdiction records more than one.
+JURISDICTION_EXECUTIVE_TITLE_SQL = """
+    SELECT specific_title
+    FROM politicians
+    WHERE jurisdiction_slug = %s AND standard_role = 'executive'
+    ORDER BY specific_title
+    LIMIT 1;
 """
 
 
@@ -202,19 +216,45 @@ def candidate_profile(candidate_uuid: str):
 # The race `key` is still returned, in the exact shape the frontend already
 # builds, so raceByKey() and racePath() keep working. It is a client-side lookup
 # handle, never a URL, which is what makes the unsafe characters harmless.
-def _race_key(slug: str, role_scope: str, district_id: str, office) -> str:
-    """Mirror of the frontend's raceKey(). Kept identical so neither side has to
-    translate; office is currently always None, per the declined column."""
+def _race_key(
+    slug: str, role_scope: str, district_id: str, office, district_name: str = "",
+) -> str:
+    """
+    Mirror of the frontend's raceKey(). Kept identical so neither side has to
+    translate; office is currently always None, per the declined column.
+
+    The third field is whatever separates one ballot line from another within
+    the jurisdiction. For a ward race that is the district_id. For a
+    jurisdiction-wide race it is the label the clerk published — "Regional
+    Councillor", "Councillor at Large", "Wards 1 & 5" — and empty for the head
+    of government's own race. Without it every jurisdiction-wide candidate
+    collapses into one race: Markham's three mayoral candidates and eleven
+    regional-councillor candidates were being served as a single fourteen-name
+    contest, under whichever label happened to be read first.
+    """
     if role_scope == "district":
         return f"{slug}|{office or 'district'}|{district_id}"
-    return f"{slug}|{office or 'citywide'}|"
+    return f"{slug}|{office or 'citywide'}|{district_name}"
 
 
-def _race_title(district_name: str, office, jurisdiction_name: str) -> str:
-    """Mirror of the frontend's allRaces() title rule."""
+def _race_title(
+    district_name: str, office, jurisdiction_name: str, executive_title=None,
+) -> str:
+    """
+    Mirror of the frontend's allRaces() title rule.
+
+    A jurisdiction-wide race with no label is the head of government's, so it
+    takes that jurisdiction's own word for the office. Falling back to
+    "<place> — citywide" keeps a jurisdiction whose executive is not yet
+    registered readable rather than mistitled.
+    """
     if district_name:
         return f"{district_name} {office}" if office else district_name
-    return f"{office} of {jurisdiction_name}" if office else f"{jurisdiction_name} — citywide"
+    if office:
+        return f"{office} of {jurisdiction_name}"
+    if executive_title:
+        return f"{executive_title} of {jurisdiction_name}"
+    return f"{jurisdiction_name} — citywide"
 
 
 @public_bp.route("/jurisdictions/<slug>/races", methods=["GET"])
@@ -232,6 +272,9 @@ def jurisdiction_races(slug: str):
     jurisdiction_name = j_row[0] if j_row else slug
     role_label_singular = (j_row[1] if j_row else "") or ""
 
+    exec_row = db.query_one(JURISDICTION_EXECUTIVE_TITLE_SQL, (slug,))
+    executive_title = (exec_row[0] if exec_row else "") or ""
+
     rows = db.query(ROSTER_BY_JURISDICTION_SQL, (slug,))
 
     races: dict = {}
@@ -241,7 +284,10 @@ def jurisdiction_races(slug: str):
         website, video_uid, status, is_published = row[len(PUBLIC_CANDIDATE_COLS):]
 
         office = _office_label(c, role_label_singular)
-        key = _race_key(slug, c["role_scope"], c["district_id"] or "", office)
+        district_name = c["district_name"] or ""
+        key = _race_key(
+            slug, c["role_scope"], c["district_id"] or "", office, district_name,
+        )
 
         if key not in races:
             order.append(key)
@@ -250,8 +296,10 @@ def jurisdiction_races(slug: str):
                 "office": office,
                 "role_scope": c["role_scope"],
                 "district_id": c["district_id"] or "",
-                "district_name": c["district_name"] or "",
-                "title": _race_title(c["district_name"] or "", office, jurisdiction_name),
+                "district_name": district_name,
+                "title": _race_title(
+                    district_name, office, jurisdiction_name, executive_title,
+                ),
                 "candidates": [],
             }
 

@@ -113,11 +113,42 @@ def test_race_key_tolerates_unsafe_district_ids():
         "ca_on_thunder_bay|Councillor|CURRENT RIVER"
 
 
+def test_race_key_separates_jurisdiction_wide_ballot_lines():
+    """
+    Markham elects a Mayor and eleven Regional Councillors, both jurisdiction-
+    wide. Sharing a key merged them into one fourteen-name race.
+    """
+    mayor = cp._race_key("ca_on_markham", "role", "", None, "")
+    regional = cp._race_key("ca_on_markham", "role", "", None, "Regional Councillor")
+    assert mayor != regional
+    assert mayor == "ca_on_markham|citywide|"
+    assert regional == "ca_on_markham|citywide|Regional Councillor"
+
+
 def test_race_title_rules():
     assert cp._race_title("Ward 4", "Councillor", "Guelph") == "Ward 4 Councillor"
     assert cp._race_title("", "Mayor", "Guelph") == "Mayor of Guelph"
     assert cp._race_title("", None, "Guelph") == "Guelph — citywide"
     assert cp._race_title("Ward 4", None, "Guelph") == "Ward 4"
+
+
+def test_head_of_government_race_takes_the_executive_title():
+    """The unlabelled jurisdiction-wide race is the mayor's, named as the
+    jurisdiction names the incumbent — never inferred from candidate names."""
+    assert cp._race_title("", None, "Guelph", "Mayor") == "Mayor of Guelph"
+    assert cp._race_title("", None, "Norfolk County", "Mayor") == "Mayor of Norfolk County"
+
+
+def test_labelled_jurisdiction_wide_race_keeps_the_clerks_label():
+    """An at-large seat is not the mayor's race and must not borrow its title."""
+    assert cp._race_title("Regional Councillor", None, "Markham", "Mayor") == \
+        "Regional Councillor"
+    assert cp._race_title("Wards 1 & 5", None, "Brampton", "Mayor") == "Wards 1 & 5"
+
+
+def test_unregistered_executive_falls_back_rather_than_mistitling():
+    assert cp._race_title("", None, "Guelph", "") == "Guelph — citywide"
+    assert cp._race_title("", None, "Guelph", None) == "Guelph — citywide"
 
 
 def test_roster_query_never_selects_contact_columns():

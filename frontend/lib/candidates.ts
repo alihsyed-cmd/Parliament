@@ -315,19 +315,24 @@ export function maskEmail(email: string) {
   return `${local[0]}•••@${domain[0]}•••${domain.slice(domain.indexOf("."))}`;
 }
 
+/** Mirror of the API's _race_key. The third field is whatever separates one
+ *  ballot line from another: the ward for a ward race, and for a
+ *  jurisdiction-wide race the clerk's label ("Regional Councillor", "Wards 1 &
+ *  5"), empty for the head of government's own race. */
 export function raceKey(row: CandidateRow) {
   return row.role_scope === "district"
     ? `${row.jurisdiction_slug}|${row.office || "district"}|${row.district_id}`
-    : `${row.jurisdiction_slug}|${row.office || "citywide"}|`;
+    : `${row.jurisdiction_slug}|${row.office || "citywide"}|${row.district_name || ""}`;
 }
 
 export function racePath(row: CandidateRow) {
   const base = `/on/${row.jurisdiction_slug}`;
   if (row.office === "mayor") return `${base}/mayor`;
-  if (row.role_scope === "district") {
-    return `${base}/${(row.district_name || "").toLowerCase().replace(/\s+/g, "-")}`;
-  }
-  return `${base}/citywide`;
+  const named = (row.district_name || "").toLowerCase().replace(/\s+/g, "-");
+  if (row.role_scope === "district") return `${base}/${named}`;
+  // A city can hold several jurisdiction-wide races; only the unlabelled one
+  // is "citywide" outright.
+  return named ? `${base}/${named}` : `${base}/citywide`;
 }
 
 /** Grid list: pure alphabetical by surname. */

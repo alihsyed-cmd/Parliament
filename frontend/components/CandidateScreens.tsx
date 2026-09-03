@@ -82,6 +82,7 @@ export function RaceListScreen({
 }: { raceKey: string; onOpenCandidate: (uuid: string) => void }) {
   const race = raceByKey(key);
   if (!race) return null;
+  const muni = municipalityName(race.jurisdiction_slug);
   const rows = sortAlphabetical(race.candidates);
   const submitted = rows.filter((r) => submissionFor(r)).length;
 
@@ -89,7 +90,9 @@ export function RaceListScreen({
     <div className="container fade-in">
       <div className="stack stack-3" style={{ marginBottom: 22, maxWidth: 620 }}>
         <div className="eyebrow accent">
-          {municipalityName(race.jurisdiction_slug)} · {race.title}
+          {/* The head of government's race is titled "Mayor of Markham", so
+              prefixing the city again would read "Markham · Mayor of Markham". */}
+          {race.title.includes(muni) ? race.title : `${muni} · ${race.title}`}
         </div>
         <h1 className="h-1">{rows.length} candidates on your ballot</h1>
         <div className="card tint" style={{ padding: "12px 15px" }}>
