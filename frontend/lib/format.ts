@@ -10,6 +10,22 @@ export function formatDate(iso?: string): string {
   return `${MONTHS[mi]} ${Number(d)}, ${y}`;
 }
 
+const MONTHS_LONG = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+  "Friday", "Saturday"];
+
+/** "Monday, October 26, 2026" — for prose, where the terse form reads clipped. */
+export function formatDateLong(iso?: string): string {
+  if (!iso) return "";
+  const [y, m, d] = iso.split("-").map(Number);
+  if (!y || !m || !d || !MONTHS_LONG[m - 1]) return formatDate(iso);
+  // Built in UTC and read back in UTC: a date-only string is midnight GMT, and
+  // reading the weekday locally would name the day before across the Atlantic.
+  const weekday = WEEKDAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
+  return `${weekday}, ${MONTHS_LONG[m - 1]} ${d}, ${y}`;
+}
+
 export function daysUntil(iso?: string): number | null {
   if (!iso) return null;
   const t = new Date(iso).getTime() - Date.now();

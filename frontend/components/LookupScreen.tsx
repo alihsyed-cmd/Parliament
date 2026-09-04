@@ -6,7 +6,7 @@ import type { Level, LookupResponse, Politician } from "@/lib/types";
 import { Icon } from "./Icon";
 import { RepContactCard, Countdown } from "./ui";
 import { ReminderToggle } from "./ReminderToggle";
-import { formatDate, daysUntil, levelMeta } from "@/lib/format";
+import { formatDate, formatDateLong, daysUntil, levelMeta } from "@/lib/format";
 import { fullName, sortAlphabetical, submissionFor, useRaces } from "@/lib/candidates";
 import type { CandidateRow, Race } from "@/lib/candidate-types";
 
@@ -42,12 +42,16 @@ function BallotName({ row, onOpen }: { row: CandidateRow; onOpen: (uuid: string)
  *  large, Brampton runs five ward-pair races — so they get a line each and
  *  open on their own screen rather than turning the panel into a ballot. */
 function LevelCandidates({
-  slug, races, districtId, onSeeCandidates, onOpenRace, onOpenCandidate,
+  slug, races, districtId, electionDate, daysAway,
+  onSeeCandidates, onOpenRace, onOpenCandidate,
 }: {
   slug: string;
   races: Race[];
   /** The viewer's own ward, straight off this level's representative. */
   districtId?: string;
+  /** Only ever a confirmed date. An estimated one names no day. */
+  electionDate?: string;
+  daysAway?: number | null;
   onSeeCandidates: (slug: string) => void;
   onOpenRace: (slug: string, raceKey: string) => void;
   onOpenCandidate: (uuid: string) => void;
@@ -61,14 +65,24 @@ function LevelCandidates({
   const named = [head, ward].filter(Boolean) as Race[];
   const mine = [...named, ...wide.filter((r) => r !== head)];
 
+  const away = daysAway == null || daysAway < 0 ? null
+    : daysAway === 0 ? "that\u2019s today"
+    : daysAway === 1 ? "that\u2019s tomorrow"
+    : `that\u2019s in ${daysAway} days`;
+
   return (
     <div className="stack stack-2">
-      <div className="row between" style={{ marginBottom: 4 }}>
+      {electionDate && away ? (
+        <div className="ballot-banner">
+          <p>
+            You have an election coming up on <strong>{formatDateLong(electionDate)}</strong>
+            {" \u2014 "}{away}, and the candidates are:
+          </p>
+        </div>
+      ) : (
+        // No confirmed date to count down to, so say only what is known.
         <span className="section-label">On the ballot</span>
-        <button className="btn ghost sm" onClick={() => onSeeCandidates(slug)}>
-          All {races.length} race{races.length === 1 ? "" : "s"} <Icon name="chevron_right" size={14} />
-        </button>
-      </div>
+      )}
 
       {mine.length ? mine.map((r) => {
         const rows = sortAlphabetical(r.candidates);
@@ -102,6 +116,12 @@ function LevelCandidates({
           </span>
         </button>
       )}
+
+      <div className="row" style={{ justifyContent: "flex-end" }}>
+        <button className="btn ghost sm" onClick={() => onSeeCandidates(slug)}>
+          All {races.length} race{races.length === 1 ? "" : "s"} <Icon name="chevron_right" size={14} />
+        </button>
+      </div>
     </div>
   );
 }
@@ -155,6 +175,10 @@ function LevelPanel({
   const hasRaces = !!slug && !!races && races.length > 0;
   const runningCount = hasRaces ? races.reduce((n, r) => n + r.candidates.length, 0) : 0;
   const myWard = level.representatives?.[0]?.district_id;
+  // Only a confirmed date reaches the banner; an estimated next_election is a
+  // planning figure, not something to tell a voter to mark on a calendar.
+  const electionDate = gov?.election_date_set ? gov.next_election : undefined;
+  const showBallot = hasRaces && !!onSeeCandidates;
 
   return (
     <div className={`acc ${showBody ? "open" : ""}`}>
@@ -211,15 +235,17 @@ function LevelPanel({
                 </div>
               ) : null}
 
-              {hasRaces && onSeeCandidates ? (
+              {showBallot ? (
                 <LevelCandidates
                   slug={slug!} races={races!} districtId={myWard}
-                  onSeeCandidates={onSeeCandidates}
+                  electionDate={electionDate} daysAway={days}
+                  onSeeCandidates={onSeeCandidates!}
                   onOpenRace={onOpenRace} onOpenCandidate={onOpenCandidate}
                 />
               ) : null}
 
-              {gov ? (
+              {/* The banner already gives the date and the countdown in full. */}
+              {gov && !(showBallot && electionDate && days != null && days >= 0) ? (
                 <div className="row between" style={{ fontFamily: "var(--mono)", fontSize: 11, color: "var(--ink-3)", paddingTop: 2 }}>
                   <span>{gov.election_date_set ? `NEXT · ${formatDate(gov.next_election)}` : `LAST · ${formatDate(gov.last_election)}`}</span>
                   {days != null && days < 365 ? <Countdown days={days} /> : null}
