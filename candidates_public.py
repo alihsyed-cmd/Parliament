@@ -30,7 +30,7 @@ pages first.
 import logging
 import uuid as uuid_lib
 
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 
 import db
 # Imported rather than reimplemented: the office label a voter sees on a profile
@@ -94,6 +94,49 @@ ROSTER_BY_JURISDICTION_SQL = f"""
 JURISDICTION_EXISTS_SQL = """
     SELECT 1 FROM jurisdictions WHERE slug = %s;
 """
+
+# Name search across every certified roster, for the claim page's "find your
+# name on the ballot" field.
+#
+# Deliberately cross-jurisdictional and unauthenticated: a candidate arriving at
+# /claim knows their own name and nothing else about our data model. Requiring
+# them to first pick a municipality — or, as the client-cache implementation
+# did, to have already loaded one — is the same as the feature not existing.
+#
+# The jurisdiction is joined for its display name and role label, and the
+# submission for the same visibility rule the roster applies, so a search hit is
+# a fully-formed candidate row the client can cache like any other.
+#
+# The WHERE clause is assembled from one ILIKE per whitespace-separated token,
+# ANDed, against the concatenated full name. That matches "smith", "john smith"
+# and "smith john" alike, which is how people type their own name into a box.
+SEARCH_CANDIDATES_SQL = f"""
+    SELECT {", ".join("c." + col for col in PUBLIC_CANDIDATE_COLS)},
+           s.website, s.stream_video_uid, s.status, s.is_published,
+           j.name, j.role_label_singular
+    FROM raw_candidates c
+    LEFT JOIN submissions s ON s.candidate_uuid = c.uuid
+    LEFT JOIN jurisdictions j ON j.slug = c.jurisdiction_slug
+    WHERE {{conditions}}
+    ORDER BY c.last_name, c.first_name
+    LIMIT %s;
+"""
+
+# One token must match the full name, not either half, so "john smith" is a
+# single AND of two substring tests rather than a cross-product of columns.
+SEARCH_TOKEN_CONDITION = (
+    r"(COALESCE(c.first_name, '') || ' ' || COALESCE(c.last_name, '')) "
+    r"ILIKE %s ESCAPE '\'"
+)
+
+# Two characters is where a prefix stops matching most of the roster. Below it
+# the answer is "keep typing", not a 1,600-row scan.
+SEARCH_MIN_QUERY = 2
+SEARCH_DEFAULT_LIMIT = 8
+SEARCH_MAX_LIMIT = 20
+# More than this and the caller is filtering, not naming themselves; the extra
+# tokens are ignored rather than turned into extra scans.
+SEARCH_MAX_TOKENS = 4
 
 # What this jurisdiction calls its head of government — "Mayor" here, but the
 # tree also holds Reeve, Premier and Prime Minister. Read from the sitting
@@ -324,4 +367,79 @@ def jurisdiction_races(slug: str):
         "race_count": len(out),
         "candidate_count": sum(r["candidate_count"] for r in out),
         "races": out,
+    })
+
+
+# ── GET /candidates/search ───────────────────────────────────────────────────
+def _like_escape(term: str) -> str:
+    """
+    Neutralise LIKE metacharacters in user input.
+
+    Without this a candidate typing "_" or "%" — or a bored stranger typing
+    "%%%%" — writes their own pattern, and "%" alone matches the entire table.
+    The backslash is escaped first so it cannot double-escape the two that
+    follow it.
+    """
+    return term.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
+
+
+@public_bp.route("/candidates/search", methods=["GET"])
+def candidate_search():
+    """
+    Find certified candidates by name, across every loaded municipality.
+
+    Public and unauthenticated, on the same footing as the profile and roster
+    endpoints: a name on a certified ballot is public record. This returns
+    strictly the roster's own public columns, so it exposes nothing the race
+    page does not already show to anyone who visits it.
+
+    A query shorter than two characters, or one that is all whitespace, is
+    answered with an empty result set rather than an error — the field is
+    searched on every keystroke, and "keep typing" is not a failure the client
+    should have to render.
+    """
+    q = (request.args.get("q") or "").strip()
+
+    try:
+        limit = int(request.args.get("limit", SEARCH_DEFAULT_LIMIT))
+    except (TypeError, ValueError):
+        limit = SEARCH_DEFAULT_LIMIT
+    limit = max(1, min(limit, SEARCH_MAX_LIMIT))
+
+    tokens = [t for t in q.split() if t][:SEARCH_MAX_TOKENS]
+    if len(q) < SEARCH_MIN_QUERY or not tokens:
+        return jsonify({
+            "lang": LANG, "query": q, "result_count": 0, "results": [],
+        })
+
+    conditions = " AND ".join([SEARCH_TOKEN_CONDITION] * len(tokens))
+    params = tuple(f"%{_like_escape(t)}%" for t in tokens) + (limit,)
+    rows = db.query(SEARCH_CANDIDATES_SQL.format(conditions=conditions), params)
+
+    n = len(PUBLIC_CANDIDATE_COLS)
+    results = []
+    for row in rows:
+        c = dict(zip(PUBLIC_CANDIDATE_COLS, row[:n]))
+        website, video_uid, status, is_published = row[n:n + 4]
+        jurisdiction_name, role_label_singular = row[n + 4:n + 6]
+        role_label_singular = role_label_singular or ""
+
+        results.append({
+            "uuid": str(c["uuid"]),
+            "first_name": c["first_name"] or "",
+            "last_name": c["last_name"] or "",
+            "name": _full_name(c),
+            "office": _office_label(c, role_label_singular),
+            "role_scope": c["role_scope"],
+            "jurisdiction": jurisdiction_name or c["jurisdiction_slug"],
+            "jurisdiction_slug": c["jurisdiction_slug"],
+            "district_id": c["district_id"] or "",
+            "district_name": c["district_name"] or "",
+            "submission": _visible_submission(
+                website, video_uid, status, is_published,
+            ),
+        })
+
+    return jsonify({
+        "lang": LANG, "query": q, "result_count": len(results), "results": results,
     })

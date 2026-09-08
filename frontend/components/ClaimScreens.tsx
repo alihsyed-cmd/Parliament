@@ -7,7 +7,7 @@ import React from "react";
 import type { ClaimInfo } from "@/lib/candidate-types";
 import {
   SUBMISSIONS_ENABLED, candidateApi, candidateByUuid, fullName, initialsOf,
-  maskEmail, officeLine, searchCandidates,
+  maskEmail, officeLine, useCandidateSearch,
 } from "@/lib/candidates";
 import { Icon } from "./Icon";
 
@@ -15,7 +15,11 @@ import { Icon } from "./Icon";
  *  link unprompted, so this URL is what outreach prints and says aloud. */
 export function ClaimSearchScreen({ onPick }: { onPick: (uuid: string) => void }) {
   const [q, setQ] = React.useState("");
-  const results = searchCandidates(q);
+  // Server-side search, debounced. null = still looking; [] = genuinely no one
+  // by that name. Conflating the two is what told a candidate on a cold page
+  // load that they were not on the ballot.
+  const results = useCandidateSearch(q);
+  const typed = q.trim().length >= 2;
 
   return (
     <div className="container fade-in" style={{ maxWidth: 560 }}>
@@ -29,7 +33,7 @@ export function ClaimSearchScreen({ onPick }: { onPick: (uuid: string) => void }
         <input value={q} onChange={(e) => setQ(e.target.value)}
           placeholder="Type your name…" aria-label="Search candidates by name" />
       </div>
-      {results.length ? (
+      {results?.length ? (
         <div className="card" style={{ marginTop: 12, padding: "4px 14px" }}>
           {results.map((r, i) => (
             <React.Fragment key={r.uuid}>
@@ -45,7 +49,11 @@ export function ClaimSearchScreen({ onPick }: { onPick: (uuid: string) => void }
             </React.Fragment>
           ))}
         </div>
-      ) : q.trim() ? (
+      ) : results === null ? (
+        <p className="t-sm" style={{ textAlign: "center", padding: 24, color: "var(--ink-3)" }}>
+          Searching…
+        </p>
+      ) : typed ? (
         <p className="t-sm" style={{ textAlign: "center", padding: 24, color: "var(--ink-3)" }}>
           No candidate by that name. New nomination filings take a few days to appear.
         </p>

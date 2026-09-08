@@ -135,14 +135,12 @@ export const candidateApi = {
 };
 
 /* ─────────── live reads ───────────
- * Race listings and candidate profiles come from the public read endpoints.
- * Name search has no endpoint yet, so searchCandidates() still resolves against
- * whatever is cached and returns nothing until one exists — it only feeds the
- * claim page, which is gated shut regardless.
+ * Race listings, candidate profiles and name search all come from the public
+ * read endpoints.
  *
  * Responses land in a module-level cache so the synchronous derivation helpers
- * below keep working unchanged. Screens trigger a load with useRaces(); every
- * other lookup reads the warm cache. */
+ * below keep working unchanged. Screens trigger a load with useRaces() or
+ * useCandidateSearch(); every other lookup reads the warm cache. */
 
 const raceCache = new Map<string, Race[]>();
 const candidateCache = new Map<string, CandidateRow>();
@@ -376,19 +374,116 @@ export function candidateByUuid(uuid: string) {
   return candidateCache.get(uuid) ?? null;
 }
 
+/* ─────────── name search ───────────
+ * GET /candidates/search — the whole certified roster, every municipality, no
+ * credentials.
+ *
+ * This used to filter the module cache, which meant a candidate landing on
+ * /claim from an emailed link or a printed URL searched an empty map and was
+ * told their name was not on the ballot. Only a voter who had already run a
+ * postal-code lookup — warming the cache with one city — got any results at
+ * all. The roster is 1,600 rows across 29 municipalities and lives server-side;
+ * search belongs there too. */
+
+/** The query the server was last asked, mapped to its rows. Keyed on the
+ *  normalized query so a backspace to a prior prefix renders instantly rather
+ *  than re-asking. */
+const searchCache = new Map<string, CandidateRow[]>();
+
+const SEARCH_MIN_QUERY = 2;
+/** Long enough that a fast typist sends one request per word, short enough that
+ *  the list feels live under the caret. */
+const SEARCH_DEBOUNCE_MS = 200;
+
+interface SearchResponse {
+  query: string;
+  result_count: number;
+  results: {
+    uuid: string; jurisdiction_slug: string; jurisdiction: string;
+    district_id: string; district_name: string;
+    role_scope: "district" | "role"; office: string | null;
+    first_name: string; last_name: string; submission: Submission | null;
+  }[];
+}
+
+function normalizeQuery(q: string) {
+  return q.trim().replace(/\s+/g, " ").toLowerCase();
+}
+
 /**
- * Name search. There is no /candidates/search endpoint yet, so this resolves
- * against whatever the cache already holds rather than the full roster — which
- * means it finds nothing until a municipality has been loaded. It feeds only
- * the claim page, and that path is gated shut, so an empty result is the
- * correct outcome rather than a broken one.
+ * Search certified candidates by name.
+ *
+ * Rows are cached exactly as the roster caches them — the response carries the
+ * same public columns, including the visible submission — so picking a result
+ * hands the claim challenge a warm row even if its own claim call fails.
  */
-export function searchCandidates(q: string) {
-  const t = q.trim().toLowerCase();
-  if (!t) return [];
-  return [...candidateCache.values()]
-    .filter((r) => fullName(r).toLowerCase().includes(t))
-    .slice(0, 8);
+export async function searchCandidates(
+  q: string, signal?: AbortSignal,
+): Promise<CandidateRow[]> {
+  const t = normalizeQuery(q);
+  if (t.length < SEARCH_MIN_QUERY) return [];
+
+  const cached = searchCache.get(t);
+  if (cached) return cached;
+
+  const data = await call<SearchResponse>(
+    `/candidates/search?q=${encodeURIComponent(t)}`, { signal },
+  );
+
+  const rows = data.results.map((c) => {
+    jurisdictionNames.set(c.jurisdiction_slug, c.jurisdiction);
+    return cacheCandidate({
+      uuid: c.uuid,
+      jurisdiction_slug: c.jurisdiction_slug,
+      district_id: c.district_id,
+      district_name: c.district_name,
+      role_scope: c.role_scope,
+      office: c.office,
+      first_name: c.first_name,
+      last_name: c.last_name,
+      submission: c.submission,
+    });
+  });
+
+  searchCache.set(t, rows);
+  return rows;
+}
+
+/**
+ * Debounced name search for a controlled input.
+ *
+ * `results` is null while a query is in flight and has nothing cached to show,
+ * which is what separates "still looking" from "no candidate by that name" —
+ * rendering the second during the first is exactly the bug a candidate reads as
+ * "I am not on this site".
+ */
+export function useCandidateSearch(q: string) {
+  const t = normalizeQuery(q);
+  const warm = t.length >= SEARCH_MIN_QUERY ? searchCache.get(t) : [];
+  const [results, setResults] = React.useState<CandidateRow[] | null>(warm ?? null);
+
+  React.useEffect(() => {
+    if (t.length < SEARCH_MIN_QUERY) { setResults([]); return; }
+
+    const hit = searchCache.get(t);
+    if (hit) { setResults(hit); return; }
+
+    let live = true;
+    const controller = new AbortController();
+    setResults(null);
+    const timer = setTimeout(() => {
+      searchCandidates(t, controller.signal)
+        .then((r) => { if (live) setResults(r); })
+        // An aborted or failed search shows the empty-state copy rather than an
+        // error screen: the field is the first thing a candidate touches, and
+        // retrying is one more keystroke.
+        .catch(() => { if (live) setResults([]); });
+    }, SEARCH_DEBOUNCE_MS);
+
+    return () => { live = false; clearTimeout(timer); controller.abort(); };
+  }, [t]);
+
+  return results;
 }
 
 export function daysToElection() {

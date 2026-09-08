@@ -163,3 +163,91 @@ def test_roster_selects_visibility_columns_but_allowlist_stays_clean():
     sql = cp.ROSTER_BY_JURISDICTION_SQL.lower()
     assert "is_published" in sql and "status" in sql
     assert "email" not in cp.PUBLIC_CANDIDATE_COLS
+
+
+# ── GET /candidates/search ───────────────────────────────────────────────────
+# The name-search endpoint is cross-jurisdictional and unauthenticated, so it is
+# the widest-reaching read in the file. These tests pin the two things that make
+# that safe: it returns the same allowlist as every other public read, and a
+# caller cannot turn the query into their own LIKE pattern.
+def test_search_query_never_selects_contact_columns():
+    sql = cp.SEARCH_CANDIDATES_SQL.lower()
+    assert "email" not in sql
+    assert "phone" not in sql
+    assert "select *" not in sql
+
+
+def test_search_escapes_like_metacharacters():
+    """Without this, '%' alone matches all 1,617 rows."""
+    assert cp._like_escape("%") == r"\%"
+    assert cp._like_escape("_") == r"\_"
+    assert cp._like_escape("\\") == "\\\\"
+    # The backslash is escaped first, so it cannot double-escape what follows.
+    assert cp._like_escape("\\%") == r"\\\%"
+
+
+def test_search_leaves_ordinary_names_untouched():
+    for name in ("Chow", "Erskine-Smith", "D'Amours", "Côté"):
+        assert cp._like_escape(name) == name
+
+
+@pytest.fixture
+def search_client(monkeypatch):
+    """A test client whose db.query records what it was asked."""
+    from flask import Flask
+
+    calls = []
+
+    def fake_query(sql, params=()):
+        calls.append((sql, params))
+        return []
+
+    monkeypatch.setattr(cp.db, "query", fake_query)
+    app = Flask(__name__)
+    app.register_blueprint(cp.public_bp)
+    return app.test_client(), calls
+
+
+def test_short_query_answers_empty_without_touching_the_database(search_client):
+    """One character is 'keep typing', not a scan and not an error."""
+    client, calls = search_client
+    for q in ("", " ", "a", "  "):
+        res = client.get("/candidates/search", query_string={"q": q})
+        assert res.status_code == 200
+        assert res.get_json()["results"] == []
+    assert calls == []
+
+
+def test_each_token_becomes_one_anded_condition(search_client):
+    """'olivia chow' must match the full name, not either half."""
+    client, calls = search_client
+    client.get("/candidates/search", query_string={"q": "olivia chow"})
+    sql, params = calls[0]
+    assert sql.count("ILIKE") == 2
+    assert " AND " in sql
+    assert params[:2] == ("%olivia%", "%chow%")
+
+
+def test_limit_is_clamped(search_client):
+    client, calls = search_client
+    client.get("/candidates/search", query_string={"q": "chow", "limit": "9999"})
+    assert calls[-1][1][-1] == cp.SEARCH_MAX_LIMIT
+
+    client.get("/candidates/search", query_string={"q": "chow", "limit": "-3"})
+    assert calls[-1][1][-1] == 1
+
+    client.get("/candidates/search", query_string={"q": "chow", "limit": "junk"})
+    assert calls[-1][1][-1] == cp.SEARCH_DEFAULT_LIMIT
+
+
+def test_token_count_is_capped(search_client):
+    """A long paste is answered, not turned into an unbounded scan."""
+    client, calls = search_client
+    client.get("/candidates/search", query_string={"q": "a b c d e f g"})
+    assert calls[0][0].count("ILIKE") == cp.SEARCH_MAX_TOKENS
+
+
+def test_wildcard_query_cannot_match_the_whole_table(search_client):
+    client, calls = search_client
+    client.get("/candidates/search", query_string={"q": "%%"})
+    assert calls[0][1][0] == r"%\%\%%"
