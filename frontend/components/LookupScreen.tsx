@@ -35,9 +35,12 @@ function BallotName({ row, onOpen }: { row: CandidateRow; onOpen: (uuid: string)
  *  belong here is decided by the jurisdiction slug, so a roster can only ever
  *  surface under the level that runs that election.
  *
- *  Every ballot line the viewer can vote on is listed: the head of government's
- *  race, their own ward, and any other jurisdiction-wide seat. Names are shown
- *  for the two that are unambiguously theirs. The rest are jurisdiction-wide
+ *  Every ballot line the viewer can vote on is listed: their own ward first,
+ *  then the head of government's race, then any other jurisdiction-wide seat.
+ *  The ward leads because it is the race that is uniquely this voter's — the
+ *  mayoral field is the same one every reader of the city sees, and is the race
+ *  they are least likely to need us to tell them about. Names are shown for the
+ *  two that are unambiguously theirs. The rest are jurisdiction-wide
  *  seats that vary in kind by city — Markham elects Regional Councillors at
  *  large, Brampton runs five ward-pair races — so they get a line each and
  *  open on their own screen rather than turning the panel into a ballot. */
@@ -62,7 +65,7 @@ function LevelCandidates({
   const wide = races.filter((r) => !r.district_id);
   const head = wide.find((r) => !r.district_name);
   const ward = districtId ? races.find((r) => r.district_id === districtId) : undefined;
-  const named = [head, ward].filter(Boolean) as Race[];
+  const named = [ward, head].filter(Boolean) as Race[];
   const mine = [...named, ...wide.filter((r) => r !== head)];
 
   const away = daysAway == null || daysAway < 0 ? null
