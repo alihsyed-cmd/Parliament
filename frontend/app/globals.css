@@ -67,7 +67,7 @@ a { color: inherit; }
 .container.wide { max-width: var(--maxw-wide); }
 
 .brand-mark { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; }
-.brand-mark .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.brand-mark .glyph { height: 20px; width: auto; display: block; color: var(--accent); }
 .brand-mark .name { font-family: var(--serif); font-size: 19px; font-weight: 500; letter-spacing: -.01em; }
 
 /* ---------- Type ---------- */

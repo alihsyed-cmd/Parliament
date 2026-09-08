@@ -143,10 +143,28 @@ export function Spinner({ size = 16 }: { size?: number }) {
   );
 }
 
-export function BrandMark({ onClick, showDot = true }: { onClick?: () => void; showDot?: boolean }) {
+// The app logo, drawn from the same geometry as the favicon and home-screen icons
+// (see scripts/make_logo.py). Tight viewBox so it fills its box at header size.
+function BrandGlyph() {
+  return (
+    <svg className="glyph" viewBox="88 90 336 332" aria-hidden="true" focusable="false">
+      <g fill="currentColor">
+        <rect x="249" y="98" width="14" height="34" rx="7" />
+        <path d="M150 232a106 106 0 0 1 212 0Z" />
+        <rect x="118" y="244" width="276" height="32" rx="11" />
+        <rect x="170" y="288" width="32" height="80" rx="7" />
+        <rect x="240" y="288" width="32" height="80" rx="7" />
+        <rect x="310" y="288" width="32" height="80" rx="7" />
+        <rect x="96" y="378" width="320" height="36" rx="13" />
+      </g>
+    </svg>
+  );
+}
+
+export function BrandMark({ onClick, showGlyph = true }: { onClick?: () => void; showGlyph?: boolean }) {
   return (
     <span className="brand-mark" onClick={onClick} role={onClick ? "button" : undefined}>
-      {showDot ? <span className="dot" /> : null}
+      {showGlyph ? <BrandGlyph /> : null}
       <span className="name">parliament</span>
     </span>
   );

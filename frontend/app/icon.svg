@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Parliament">
+  <title>Parliament</title>
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#d4462f"/>
+      <stop offset="0.55" stop-color="#c83b2c"/>
+      <stop offset="1" stop-color="#a52b1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#pg)"/>
+  <rect x="249.00" y="98.00" width="14.00" height="34.00" rx="7.00" ry="7.00" fill="#fbf7ee"/>
+  <path d="M 150.00 232.00 A 106.00 106.00 0 0 1 362.00 232.00 Z" fill="#fbf7ee"/>
+  <rect x="118.00" y="244.00" width="276.00" height="32.00" rx="11.00" ry="11.00" fill="#fbf7ee"/>
+  <rect x="170.00" y="288.00" width="32.00" height="80.00" rx="7.00" ry="7.00" fill="#fbf7ee"/>
+  <rect x="240.00" y="288.00" width="32.00" height="80.00" rx="7.00" ry="7.00" fill="#fbf7ee"/>
+  <rect x="310.00" y="288.00" width="32.00" height="80.00" rx="7.00" ry="7.00" fill="#fbf7ee"/>
+  <rect x="96.00" y="378.00" width="320.00" height="36.00" rx="13.00" ry="13.00" fill="#fbf7ee"/>
+</svg>
