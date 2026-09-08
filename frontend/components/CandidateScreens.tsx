@@ -10,6 +10,9 @@ import {
   sortAlphabetical, streamThumb, submissionFor, useRaces,
 } from "@/lib/candidates";
 import { Icon } from "./Icon";
+// SCOPED BETA, Don Valley North only. Deleting the module and the three
+// references to it below removes the feature completely.
+import { wardWatchUrl } from "@/lib/wardwatch-beta";
 
 function ElectionFooterNote() {
   return (
@@ -118,6 +121,32 @@ export function RaceListScreen({
   );
 }
 
+/**
+ * Outbound link to a candidate's WardWatch profile. SCOPED BETA: rendered only
+ * where lib/wardwatch-beta.ts returns a URL, which today is the seven matched
+ * Don Valley North candidates and nobody else. The caller checks for a URL
+ * first, so there is no empty state to render and every other card is byte-for
+ * -byte what it was.
+ *
+ * The disclaimer is not decoration. Parliament tells voters on the race screen
+ * that it does not rank, feature or recommend candidates, and WardWatch
+ * publishes scorecards — so the link says whose judgement it is.
+ */
+function WardWatchBlock({ url }: { url: string }) {
+  return (
+    <div>
+      <a className="act-btn" href={url} target="_blank" rel="noreferrer"
+         style={{ padding: 14, width: "100%" }}>
+        View on WardWatch <span aria-hidden>↗</span>
+      </a>
+      <p className="t-xs" style={{ marginTop: 8 }}>
+        WardWatch is an independent site covering Toronto&apos;s 2026 election.
+        Parliament doesn&apos;t endorse or verify what it publishes.
+      </p>
+    </div>
+  );
+}
+
 export function CandidateProfileScreen({
   row, onClaim,
 }: { row: CandidateRow; onClaim: (uuid: string) => void }) {
@@ -127,6 +156,7 @@ export function CandidateProfileScreen({
   const href = sub?.website
     ? (/^https?:/.test(sub.website) ? sub.website : `https://${sub.website}`)
     : null;
+  const wardwatch = wardWatchUrl(row);
 
   return (
     <div className="container fade-in" style={{ maxWidth: 620 }}>
@@ -154,6 +184,7 @@ export function CandidateProfileScreen({
               Visit website <span className="mono" style={{ fontSize: 13, opacity: 0.85 }}>{sub!.website}</span> ↗
             </a>
           ) : null}
+          {wardwatch ? <WardWatchBlock url={wardwatch} /> : null}
         </div>
       ) : (
         <div className="card ghost" style={{ padding: 18, marginTop: 22 }}>
@@ -162,6 +193,15 @@ export function CandidateProfileScreen({
             This is the complete record Parliament has for this candidate: name, office, and ward, as
             certified by the City of {muni}. No website or campaign video has been submitted.
           </p>
+          {wardwatch ? (
+            <div style={{ marginTop: 14 }}>
+              <p className="t-sm" style={{ marginBottom: 10 }}>
+                This profile is still incomplete, but there is information about this
+                candidate available to you elsewhere.
+              </p>
+              <WardWatchBlock url={wardwatch} />
+            </div>
+          ) : null}
         </div>
       )}
 
