@@ -1,9 +1,11 @@
-# Environment
+# Environment / credentials
 .env
 .env.local
+cookies.txt
 
 # macOS
 .DS_Store
+Thumbs.db
 
 # Python
 __pycache__/
@@ -12,32 +14,31 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
+.pytest_cache/
 
 # IDE
 .vscode/
 .idea/
 
-# OS
-Thumbs.db
-Parliament_Roadmap_v3.docx
-
 # Frontend
 frontend/.next/
 frontend/node_modules/
+frontend/tsconfig.tsbuildinfo
+.vercel/
 
-# Source photos — kept locally; served copy lives in frontend/public/mp-photos/
-data/federal/mp_photos/
+# Pipeline staging — per-run working files, disposable once the run's
+# canonical output is written to data/<slug>/
+data/_staging/
 
 # Pre-pipeline data, moved out of the canonical tree for reference only
 _archive_pre_pipeline/
 
 # Source photos — kept locally; served copy lives in frontend/public/mp-photos/
 data/federal/mp_photos/
-.DS_Store
 
-.DS_Store
-
-# Pipeline staging — per-run working files, not for version control
-data/_staging/
-
-.DS_Store
+# Local design/reference material at the repo root, not build inputs.
+# Root-anchored so tracked boundary-source archives under data/ are unaffected.
+/*.zip
+/screenshots/
+/parliamentapp.ca.txt
+/Parliament_Roadmap_v3.docx
