@@ -7,7 +7,7 @@ import React from "react";
 import type { Level, Politician, Representation, RepresentativeResponse } from "@/lib/types";
 import { Icon } from "./Icon";
 import { Avatar, PartyChip, getContactAction } from "./ui";
-import { formatDate, daysUntil, levelMeta } from "@/lib/format";
+import { formatDate, daysUntil, metaFor } from "@/lib/format";
 
 const ROLE_BLURB: Record<string, Record<string, string>> = {
   representative: {
@@ -38,7 +38,7 @@ export function DetailScreen({
   onBack: () => void;
   onSeeJurisdiction: (l: Level) => void;
 }) {
-  const meta = levelMeta[level.level];
+  const meta = metaFor(level.level);
   const gov = level.jurisdiction.governance;
   const representations: Representation[] = detail?.representations ?? [];
   const multiRole = representations.length > 1 || (rep.roles?.length ?? 0) > 1;

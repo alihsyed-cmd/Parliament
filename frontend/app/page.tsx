@@ -3,7 +3,8 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import type {
-  Level, LookupResponse, JurisdictionResponse, RepresentativeResponse, Politician, ErrorKind,
+  Level, LookupResponse, JurisdictionResponse, JurisdictionIndexEntry,
+  RepresentativeResponse, Politician, ErrorKind,
 } from "@/lib/types";
 import type { Place } from "@/lib/browse-data";
 import { api, ApiError } from "@/lib/api";
@@ -17,7 +18,7 @@ import { LookupScreen } from "@/components/LookupScreen";
 import { RosterScreen } from "@/components/RosterScreen";
 import { DetailScreen } from "@/components/DetailScreen";
 import { LookupLoading, ErrorScreen } from "@/components/StatusScreens";
-import { BrowsePage, ProvincePage } from "@/components/BrowseScreens";
+import { BrowsePage } from "@/components/BrowseScreens";
 import { AboutPage, ContactPage, ForCandidatesPage } from "@/components/StaticPages";
 import {
   CandidateProfileScreen, RaceChooser, RaceListScreen,
@@ -26,7 +27,7 @@ import { ClaimUnavailable } from "@/components/ClaimScreens";
 
 type Route =
   | "entry" | "lookup" | "roster" | "detail"
-  | "browse" | "province-ontario" | "about" | "contact" | "candidates"
+  | "browse" | "about" | "contact" | "candidates"
   | "race-chooser" | "race-list" | "candidate" | "claim-unavailable";
 
 const NAV_LINKS: { route: Route; label: string; icon: string }[] = [
@@ -51,7 +52,6 @@ type Nav = {
   level: Level | null;
   rep: Politician | null;
   fromRoster: boolean;
-  browseFocus: { section: string; name: string } | null;
   raceMuni: string | null;
   race: string | null;
   candidate: string | null;
@@ -59,7 +59,7 @@ type Nav = {
 
 const navKey = (n: Nav) => [
   n.route, n.postal, n.level?.jurisdiction.slug ?? "", n.rep?.uuid ?? "",
-  n.fromRoster ? "r" : "", n.browseFocus?.section ?? "", n.browseFocus?.name ?? "",
+  n.fromRoster ? "r" : "",
   n.raceMuni ?? "", n.race ?? "", n.candidate ?? "",
 ].join("|");
 
@@ -80,7 +80,6 @@ export default function Page() {
   const [repDetail, setRepDetail] = React.useState<RepresentativeResponse | null>(null);
   const cameFromRoster = React.useRef(false);
 
-  const [browseFocus, setBrowseFocus] = React.useState<{ section: string; name: string } | null>(null);
   const [raceMuni, setRaceMuni] = React.useState<string | null>(null);
   const [activeRace, setActiveRace] = React.useState<string | null>(null);
   const [activeCandidate, setActiveCandidate] = React.useState<string | null>(null);
@@ -99,6 +98,18 @@ export default function Page() {
       setLoading(false);
     }
   }, []);
+
+  // Deep link from a reminder email: /?postal=M5V2T6 opens that lookup directly
+  // instead of the entry screen. Read straight off window.location rather than
+  // useSearchParams, which would put this whole client page behind a Suspense
+  // boundary for the sake of one optional parameter.
+  const deepLinked = React.useRef(false);
+  React.useEffect(() => {
+    if (deepLinked.current) return;
+    deepLinked.current = true;
+    const code = new URLSearchParams(window.location.search).get("postal");
+    if (code && api.isValidPostalCode(code)) doLookup(code);
+  }, [doLookup]);
 
   const openRoster = React.useCallback(async (level: Level) => {
     setActiveLevel(level);
@@ -134,7 +145,7 @@ export default function Page() {
 
   const nav: Nav = {
     route, postal, level: activeLevel, rep: activeRep, fromRoster: cameFromRoster.current,
-    browseFocus, raceMuni, race: activeRace, candidate: activeCandidate,
+    raceMuni, race: activeRace, candidate: activeCandidate,
   };
   const navKeyNow = navKey(nav);
   const navRef = React.useRef(nav); navRef.current = nav;
@@ -150,7 +161,6 @@ export default function Page() {
     hist.current.restoring = true;
     setPostal(n.postal);
     cameFromRoster.current = n.fromRoster;
-    setBrowseFocus(n.browseFocus);
     setRaceMuni(n.raceMuni);
     setActiveRace(n.race);
     setActiveCandidate(n.candidate);
@@ -228,15 +238,20 @@ export default function Page() {
     setRoute("candidate");
   };
 
-  const openBrowse = (focus: { section: string; name: string } | null = null) => {
-    setBrowseFocus(focus);
-    setRoute("browse");
-  };
+  /** Open a jurisdiction's full roster from the browse tree or place search.
+   *  Only the identity is known up front; openRoster fetches the rest. */
+  const openJurisdiction = React.useCallback((j: JurisdictionIndexEntry) => {
+    void openRoster({
+      level: j.level,
+      jurisdiction: {
+        slug: j.slug, name: j.name, level: j.level, governance: null,
+        country_code: j.country_code, province_code: j.province_code,
+      },
+      executive: null, representatives: [], cabinet: [], other_leadership: [],
+    });
+  }, [openRoster]);
 
-  const onSelectPlace = (place: Place) => {
-    if (place.kind === "provincial" && place.covered) { setRoute("province-ontario"); return; }
-    openBrowse({ section: place.kind, name: place.name });
-  };
+  const onSelectPlace = (place: Place) => openJurisdiction(place.entry);
 
   /** Claiming lives on its own route so the emailed-link flow and this one
    *  share a single entry. While the gate is closed nothing here can send. */
@@ -248,7 +263,6 @@ export default function Page() {
   const BACK: Partial<Record<Route, () => void>> = {
     roster: () => setRoute("lookup"),
     detail: () => setRoute(cameFromRoster.current ? "roster" : "lookup"),
-    "province-ontario": () => setRoute("browse"),
     "race-chooser": () => setRoute("lookup"),
     "race-list": () => setRoute("race-chooser"),
     candidate: () => setRoute(activeRace ? "race-list" : "lookup"),
@@ -278,7 +292,7 @@ export default function Page() {
           <nav className="nav-links">
             {NAV_LINKS.map((n) => (
               <a key={n.route} href="#" className={route === n.route ? "active" : ""}
-                onClick={(e) => { e.preventDefault(); n.route === "browse" ? openBrowse(null) : setRoute(n.route); }}>
+                onClick={(e) => { e.preventDefault(); setRoute(n.route); }}>
                 <Icon name={n.icon} size={15} />
                 <span className="lbl">{n.label}</span>
               </a>
@@ -319,8 +333,7 @@ export default function Page() {
             onBack={goBack} onSeeJurisdiction={openRoster} />
         ) : null}
 
-        {route === "browse" ? <BrowsePage focus={browseFocus} onOpenProvince={() => setRoute("province-ontario")} /> : null}
-        {route === "province-ontario" ? <ProvincePage /> : null}
+        {route === "browse" ? <BrowsePage onOpenJurisdiction={openJurisdiction} /> : null}
         {route === "about" ? <AboutPage /> : null}
         {route === "contact" ? <ContactPage /> : null}
         {route === "candidates" ? (

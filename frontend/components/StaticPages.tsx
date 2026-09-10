@@ -4,17 +4,25 @@
 // postal lookup), About, Contact, For candidates.
 
 import React from "react";
-import { PLACE_INDEX, type Place } from "@/lib/browse-data";
+import { usePlaces, type Place } from "@/lib/browse-data";
 import { CLAIM_AFFORDANCE_VISIBLE, SUBMISSIONS_ENABLED, candidateApi } from "@/lib/candidates";
 import { Icon } from "./Icon";
 
 export function SearchPlaces({ onSelect }: { onSelect: (p: Place) => void }) {
   const [q, setQ] = React.useState("");
   const [focused, setFocused] = React.useState(false);
-  const results = q.trim().length
-    ? PLACE_INDEX.filter((p) => p.name.toLowerCase().includes(q.trim().toLowerCase())).slice(0, 6)
+  // Every place offered here is one the API serves, so a result is always a
+  // page that exists.
+  const places = usePlaces();
+  const needle = q.trim().toLowerCase();
+  const results = needle.length
+    ? places.filter((p) => p.name.toLowerCase().includes(needle)).slice(0, 6)
     : [];
-  const kindLabel = { municipal: "City", provincial: "Province", federal: "Riding" } as const;
+  // Labelled from the jurisdiction's own level, so a territory doesn't get
+  // called a province just because it shares that row of the browse tree.
+  const kindLabel: Record<string, string> = {
+    municipal: "City", provincial: "Province", territorial: "Territory", federal: "Federal",
+  };
 
   return (
     <div style={{ position: "relative" }}>
@@ -23,7 +31,7 @@ export function SearchPlaces({ onSelect }: { onSelect: (p: Place) => void }) {
         <input value={q} onChange={(e) => setQ(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setTimeout(() => setFocused(false), 120)}
-          placeholder="Or search a riding, city, or province" aria-label="Search places" />
+          placeholder="Or search a city or province" aria-label="Search places" />
       </div>
       {focused && results.length ? (
         <div className="card" style={{ position: "absolute", top: "calc(100% + 6px)", left: 0, right: 0, zIndex: 10, padding: 6, boxShadow: "var(--shadow-2)" }}>
@@ -32,7 +40,7 @@ export function SearchPlaces({ onSelect }: { onSelect: (p: Place) => void }) {
               <span className="fill row between">
                 <span className="t-body">{r.name}</span>
                 <span className="t-xs mono" style={{ color: "var(--ink-3)" }}>
-                  {kindLabel[r.kind]}{r.covered ? "" : " · soon"}
+                  {kindLabel[r.entry.level] ?? kindLabel[r.kind]}
                 </span>
               </span>
             </button>

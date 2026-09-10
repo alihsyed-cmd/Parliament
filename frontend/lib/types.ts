@@ -1,6 +1,12 @@
 // lib/types.ts — Parliament API contract (mirrors the live /lookup, /jurisdiction, /representative responses)
 
-export type LevelName = "municipal" | "provincial" | "federal";
+// The API's own level vocabulary. "territorial" is a first-class level for
+// Yukon, the Northwest Territories and Nunavut; it occupies the same slot as
+// "provincial" in the three-level display but keeps its own label.
+export type LevelName = "municipal" | "provincial" | "territorial" | "federal";
+
+/** The display slot a level occupies: territories sit in the provincial row. */
+export type LevelSlot = "municipal" | "provincial" | "federal";
 
 export type PartyClass =
   | "lib" | "con" | "ndp" | "bloc" | "green" | "ppc"
@@ -96,3 +102,17 @@ export interface RepresentativeResponse {
 }
 
 export type ErrorKind = "network" | "invalid" | "not_found" | "server";
+
+/** One row of GET /jurisdictions — every jurisdiction the API actually serves. */
+export interface JurisdictionIndexEntry {
+  slug: string;
+  name: string;
+  level: LevelName;
+  country_code: string;
+  province_code: string;
+}
+
+export interface JurisdictionsResponse {
+  lang: string;
+  jurisdictions: JurisdictionIndexEntry[];
+}

@@ -4,7 +4,7 @@ import React from "react";
 import type { JurisdictionResponse, Level, Politician } from "@/lib/types";
 import { Icon } from "./Icon";
 import { Avatar, PartyChip, RepRow, Skeleton } from "./ui";
-import { levelMeta } from "@/lib/format";
+import { metaFor } from "@/lib/format";
 
 function CollapsibleGroup({
   title, people, defaultOpen, onRep,
@@ -41,8 +41,10 @@ export function RosterScreen({
   loading: boolean;
   onRep: (p: Politician, l: Level) => void;
 }) {
-  const meta = levelMeta[level.level];
-  const gov = level.jurisdiction.governance;
+  const meta = metaFor(level.level);
+  // Opened from browse, `level` carries only the jurisdiction's identity; the
+  // governance block arrives with the fetched roster.
+  const gov = data?.jurisdiction.governance ?? level.jurisdiction.governance;
   const src = data ?? level;
   const executive = src.executive;
   const cabinet = src.cabinet ?? [];
@@ -63,7 +65,7 @@ export function RosterScreen({
     <div className="container fade-in">
       <div className="stack stack-3" style={{ marginBottom: 24 }}>
         <div className="eyebrow accent">{meta.tag} · {meta.brand}</div>
-        <h1 className="h-1">{level.jurisdiction.name}</h1>
+        <h1 className="h-1">{data?.jurisdiction.name || level.jurisdiction.name}</h1>
         {gov?.governance_summary ? <p className="t-lead">{gov.governance_summary}</p> : null}
       </div>
 

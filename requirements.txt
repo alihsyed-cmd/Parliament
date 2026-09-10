@@ -5,3 +5,4 @@ requests
 python-dotenv
 psycopg2-binary
 sentry-sdk[flask]
+tzdata

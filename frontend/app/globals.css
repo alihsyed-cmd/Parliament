@@ -308,6 +308,14 @@ a { color: inherit; }
 .ballot-banner{background:var(--accent-soft);border:1px solid var(--accent-soft-2);border-radius:var(--r-md);padding:11px 13px}
 .ballot-banner p{margin:0;font-family:var(--sans);font-size:13px;line-height:1.5;color:var(--accent-ink)}
 .ballot-banner strong{font-weight:600}
+/* Whole-election figures inside the banner: the published context for the
+   election a voter's ballot belongs to, and the way back to its source. */
+.election-facts{margin:7px 0 0;padding:0 0 0 15px;list-style:disc}
+.election-facts li{margin:0;font-family:var(--sans);font-size:12.5px;line-height:1.45;color:var(--accent-ink)}
+.election-facts li+li{margin-top:3px}
+.election-facts strong{font-weight:600}
+.election-source{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:0.03em;color:var(--accent-ink);text-decoration:underline;text-underline-offset:2px}
+.election-source:hover{color:var(--ink)}
 .ballot-list{display:flex;flex-direction:column;gap:1px}
 .ballot-name{display:flex;align-items:center;gap:7px;width:100%;padding:6px 8px;border:0;border-radius:8px;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer}
 .ballot-name:hover{background:var(--paper-2)}

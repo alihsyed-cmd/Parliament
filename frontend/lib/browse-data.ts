@@ -1,109 +1,108 @@
-// lib/browse-data.ts — Browse tree + place search index.
+"use client";
+
+// lib/browse-data.ts — the browse tree and the place-search index.
 //
-// Place lists ONLY. Every person that used to live here was invented — fake
-// mayors, MPPs and MPs pinned to real ridings with real party labels. On a
-// live civic site that reads as fact, so it must never ship again.
-//
-// Populate from GET /search and GET /jurisdictions when they exist. Never
-// hand-write officials, and note the `covered` flags below are also unverified.
+// Everything here comes from GET /jurisdictions at runtime. It used to be a
+// hand-written list with a `covered` flag, which is why live jurisdictions read
+// "Coming soon": the flag was a guess frozen at authoring time. A jurisdiction
+// is in this index if and only if the API serves it, so there is nothing left
+// to guess and no place for invented officials to creep back in.
+
+import React from "react";
+import { api } from "./api";
+import type { JurisdictionIndexEntry, LevelSlot } from "./types";
 
 export interface Place {
-  kind: "municipal" | "provincial" | "federal";
+  kind: LevelSlot;
   name: string;
-  covered: boolean;
-  slug?: string;
+  slug: string;
+  entry: JurisdictionIndexEntry;
 }
 
-export interface BrowseItem {
-  name: string;
-  covered: boolean;
-  slug?: string;
-  mayor?: { full_name: string; initials: string; display_title: string };
-  mp?: string;
-  party_class?: string;
+/** Which browse section a level belongs in. Territories share the provincial
+ *  section; the row itself still carries its own level and label. */
+export function sectionOf(level: string): LevelSlot {
+  if (level === "municipal") return "municipal";
+  if (level === "federal") return "federal";
+  return "provincial";
 }
 
-export const PROVINCES: BrowseItem[] = [
-  { name: "Alberta", covered: false },
-  { name: "British Columbia", covered: false },
-  { name: "Manitoba", covered: false },
-  { name: "New Brunswick", covered: false },
-  { name: "Newfoundland and Labrador", covered: false },
-  { name: "Northwest Territories", covered: false },
-  { name: "Nova Scotia", covered: false },
-  { name: "Nunavut", covered: false },
-  { name: "Ontario", covered: true, slug: "ontario" },
-  { name: "Prince Edward Island", covered: false },
-  { name: "Quebec", covered: false },
-  { name: "Saskatchewan", covered: false },
-  { name: "Yukon", covered: false },
-];
+// ── the index ────────────────────────────────────────────────────────────────
 
-export const ON_MUNICIPALITIES: BrowseItem[] = [
-  { name: "Ajax", covered: false },
-  { name: "Barrie", covered: false },
-  { name: "Brampton", covered: false },
-  { name: "Burlington", covered: false },
-  { name: "Cambridge", covered: false },
-  { name: "Greater Sudbury", covered: false },
-  { name: "Guelph", covered: false },
-  { name: "Hamilton", covered: false },
-  { name: "Kingston", covered: false },
-  { name: "Kitchener", covered: false },
-  { name: "London", covered: false },
-  { name: "Markham", covered: false },
-  { name: "Mississauga", covered: true },
-  { name: "Oakville", covered: false },
-  { name: "Oshawa", covered: false },
-  { name: "Ottawa", covered: true },
-  { name: "Richmond Hill", covered: false },
-  { name: "St. Catharines", covered: false },
-  { name: "Thunder Bay", covered: false },
-  { name: "Toronto", covered: true },
-  { name: "Vaughan", covered: false },
-  { name: "Windsor", covered: false },
-];
+// One fetch per page load, shared by the browse tree and the entry-screen
+// search. A failure clears the cache so the next mount retries.
+let indexPromise: Promise<JurisdictionIndexEntry[]> | null = null;
 
-export const ON_MPPS: { uuid: string; full_name: string; district_name: string;
-  party_name: string; party_class: string; initials: string }[] = [
-  // Emptied: these were invented people. Load from the API, never by hand.
-];
+export function loadJurisdictions(): Promise<JurisdictionIndexEntry[]> {
+  if (!indexPromise) {
+    indexPromise = api.jurisdictions()
+      .then((r) => r.jurisdictions ?? [])
+      .catch((e) => { indexPromise = null; throw e; });
+  }
+  return indexPromise;
+}
 
-export const FEDERAL_RIDINGS: BrowseItem[] = [
-  { name: "Beaches–East York", covered: true },
-  { name: "Burnaby South", covered: true },
-  { name: "Calgary Centre", covered: true },
-  { name: "Edmonton Centre", covered: true },
-  { name: "Etobicoke North", covered: true },
-  { name: "Halifax", covered: true },
-  { name: "Hamilton Centre", covered: true },
-  { name: "Kitchener Centre", covered: true },
-  { name: "London West", covered: true },
-  { name: "Markham–Unionville", covered: true },
-  { name: "Mississauga–Erin Mills", covered: true },
-  { name: "Ottawa Centre", covered: true },
-  { name: "Papineau", covered: true },
-  { name: "Parkdale–High Park", covered: true },
-  { name: "Regina–Wascana", covered: true },
-  { name: "Saanich–Gulf Islands", covered: true },
-  { name: "Scarborough–Guildwood", covered: true },
-  { name: "Spadina–Fort York", covered: true },
-  { name: "St. John's East", covered: true },
-  { name: "Surrey Centre", covered: true },
-  { name: "Thornhill", covered: true },
-  { name: "Toronto–Danforth", covered: true },
-  { name: "Trois-Rivières", covered: true },
-  { name: "Vancouver Granville", covered: true },
-  { name: "Victoria", covered: true },
-  { name: "Waterloo", covered: true },
-  { name: "Whitby", covered: true },
-  { name: "Windsor West", covered: true },
-  { name: "Winnipeg South", covered: true },
-  { name: "York Centre", covered: true },
-];
+export interface BrowseGroups {
+  /** Municipalities grouped by province, provinces in alphabetical order. */
+  municipalByProvince: { code: string; name: string; items: JurisdictionIndexEntry[] }[];
+  municipalCount: number;
+  /** Provinces and territories, alphabetical. */
+  provincial: JurisdictionIndexEntry[];
+  /** Canada, or null if the federal jurisdiction is not loaded yet. */
+  federal: JurisdictionIndexEntry[];
+}
 
-export const PLACE_INDEX: Place[] = [
-  ...PROVINCES.map((p) => ({ kind: "provincial" as const, name: p.name, covered: p.covered, slug: p.slug })),
-  ...ON_MUNICIPALITIES.map((m) => ({ kind: "municipal" as const, name: m.name, covered: m.covered })),
-  ...FEDERAL_RIDINGS.map((r) => ({ kind: "federal" as const, name: r.name, covered: true })),
-];
+const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name);
+
+export function groupJurisdictions(entries: JurisdictionIndexEntry[]): BrowseGroups {
+  const provincial = entries.filter((j) => sectionOf(j.level) === "provincial").sort(byName);
+  const federal = entries.filter((j) => j.level === "federal").sort(byName);
+  const municipal = entries.filter((j) => j.level === "municipal");
+
+  // The province rows name themselves, so the group headings need no lookup
+  // table: "ON" becomes "Ontario" because Ontario is in the same index.
+  const provinceName = new Map(provincial.map((p) => [p.province_code, p.name]));
+  const groups = new Map<string, JurisdictionIndexEntry[]>();
+  for (const m of municipal) {
+    const code = m.province_code || "";
+    (groups.get(code) ?? groups.set(code, []).get(code)!).push(m);
+  }
+
+  const municipalByProvince = [...groups.entries()]
+    .map(([code, items]) => ({
+      code,
+      name: provinceName.get(code) ?? code,
+      items: items.sort(byName),
+    }))
+    .sort(byName);
+
+  return { municipalByProvince, municipalCount: municipal.length, provincial, federal };
+}
+
+// ── hooks ────────────────────────────────────────────────────────────────────
+
+export function useJurisdictions() {
+  const [data, setData] = React.useState<JurisdictionIndexEntry[] | null>(null);
+  const [error, setError] = React.useState<Error | null>(null);
+
+  React.useEffect(() => {
+    let live = true;
+    loadJurisdictions()
+      .then((j) => { if (live) setData(j); })
+      .catch((e: Error) => { if (live) setError(e); });
+    return () => { live = false; };
+  }, []);
+
+  return { data, error, loading: !data && !error };
+}
+
+/** The place-search index: every jurisdiction, searchable by name. */
+export function usePlaces(): Place[] {
+  const { data } = useJurisdictions();
+  return React.useMemo(
+    () => (data ?? []).map((entry) => ({
+      kind: sectionOf(entry.level), name: entry.name, slug: entry.slug, entry,
+    })).sort(byName),
+    [data],
+  );
+}

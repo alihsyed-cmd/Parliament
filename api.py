@@ -28,10 +28,9 @@ Response shape follows the frontend contract in types.ts.
 
 import logging
 import os
-import re
 
-import requests as req
 import db
+from geo import MATCHED_DISTRICTS_SQL, geocode, validate_postal_code
 from flask import Flask, jsonify, request
 from dotenv import load_dotenv
 from flask_cors import CORS
@@ -82,7 +81,6 @@ CORS(app, origins=allowed_origins, methods=["GET", "POST", "PATCH", "DELETE"],
 
 from claim import claim_bp
 app.register_blueprint(claim_bp)
-POSTAL_CODE_REGEX = re.compile(r"^[A-Z]\d[A-Z]\d[A-Z]\d$")
 
 from portal import portal_bp
 app.register_blueprint(portal_bp)
@@ -92,6 +90,12 @@ app.register_blueprint(portal_bp)
 # PATCH coexist on the path.
 from candidates_public import public_bp
 app.register_blueprint(public_bp)
+
+# Voter-facing election reminders: subscribe, confirm, manage, unsubscribe.
+# The advance and day-of sends are not here — they belong to the cron in
+# scripts/send_election_reminders.py.
+from reminders import reminders_bp
+app.register_blueprint(reminders_bp)
 
 # English-only for now. Sent on every response so the envelope is stable when
 # i18n returns; there is no ?lang= input param anymore.
@@ -134,12 +138,6 @@ POLITICIAN_SELECT = ", ".join(POLITICIAN_COLS)
 # Point-in-polygon. ST_MakePoint takes (x=lon, y=lat); SRID 4326 matches the
 # districts.boundary column. Returns one district per covering jurisdiction
 # (federal riding, provincial riding, municipal ward — overlapping geographies).
-MATCHED_DISTRICTS_SQL = """
-    SELECT jurisdiction_slug, external_id, name
-    FROM districts
-    WHERE ST_Contains(boundary, ST_SetSRID(ST_MakePoint(%s, %s), 4326));
-"""
-
 POLITICIANS_BY_SLUGS_SQL = f"""
     SELECT {POLITICIAN_SELECT}
     FROM politicians
@@ -283,48 +281,10 @@ def _split_leadership(role_politicians: list[dict]):
     )
 
 
-# ── Geocoding (preserved from v1; uses the existing geocode_cache table) ─────
-def validate_postal_code(postal_code: str) -> bool:
-    """Validate Canadian postal code format (A1A1A1, no spaces)."""
-    return bool(POSTAL_CODE_REGEX.match(postal_code))
-
-
-def geocode(postal_code: str):
-    """Convert a postal code to (lat, lon) via Google Maps, cache-first."""
-    cache_row = db.query_one(
-        "SELECT latitude, longitude FROM geocode_cache WHERE postal_code = %s;",
-        (postal_code,),
-    )
-    if cache_row:
-        logger.info("Geocode cache HIT for postal_code=%s", postal_code)
-        return cache_row[0], cache_row[1]
-
-    logger.info("Geocode cache MISS for postal_code=%s, calling Google", postal_code)
-    url = "https://maps.googleapis.com/maps/api/geocode/json"
-    params = {
-        "address": postal_code + ", Canada",
-        "components": "country:CA",
-        "key": GOOGLE_API_KEY,
-    }
-    try:
-        response = req.get(url, params=params, timeout=10)
-        data = response.json()
-        if data["status"] == "OK":
-            loc = data["results"][0]["geometry"]["location"]
-            lat, lon = loc["lat"], loc["lng"]
-            try:
-                db.execute(
-                    "INSERT INTO geocode_cache (postal_code, latitude, longitude) "
-                    "VALUES (%s, %s, %s) ON CONFLICT (postal_code) DO NOTHING;",
-                    (postal_code, lat, lon),
-                )
-            except Exception:
-                logger.exception("Failed to write geocode cache for postal_code=%s", postal_code)
-            return lat, lon
-        return None, None
-    except Exception:
-        logger.exception("Geocoding failed for postal_code=%s", postal_code)
-        return None, None
+# ── Geocoding ────────────────────────────────────────────────
+# validate_postal_code, geocode and MATCHED_DISTRICTS_SQL now live in geo.py so
+# the reminder cron can resolve a postal code to its jurisdictions without
+# importing this module. Imported above; re-exported here by name only.
 
 
 # ── /lookup ──────────────────────────────────────────────────────────────────

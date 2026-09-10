@@ -2,7 +2,7 @@
 
 import type {
   ApiPolitician, Politician, PartyClass,
-  Level, LevelName, LookupResponse, JurisdictionResponse,
+  Level, LevelSlot, LookupResponse, JurisdictionResponse,
 } from "./types";
 
 const HONORIFICS =
@@ -71,18 +71,31 @@ function enrichLevelArrays<T extends {
   };
 }
 
-const EXPECTED_LEVELS: LevelName[] = ["municipal", "provincial", "federal"];
+const EXPECTED_LEVELS: LevelSlot[] = ["municipal", "provincial", "federal"];
 
-const GAP_NAME: Record<LevelName, string> = {
+const GAP_NAME: Record<LevelSlot, string> = {
   municipal: "Your municipality",
   provincial: "Your province",
   federal: "Canada",
 };
 
+/** Which of the three display rows a level belongs in. The API has more levels
+ *  than the UI has rows: a territory is its own level but shares the provincial
+ *  row. Anything unrecognized falls through and is dropped, as before. */
+const LEVEL_SLOT: Record<string, LevelSlot> = {
+  municipal: "municipal",
+  provincial: "provincial",
+  territorial: "provincial",
+  state: "provincial",
+  federal: "federal",
+};
+
 export function normalizeLookup(resp: LookupResponse): LookupResponse {
-  const byLevel = new Map<string, Level>();
+  const byLevel = new Map<LevelSlot, Level>();
   for (const lvl of resp.levels ?? []) {
-    byLevel.set(lvl.level, { ...lvl, ...enrichLevelArrays(lvl) });
+    const slot = LEVEL_SLOT[lvl.level];
+    if (!slot) continue;
+    byLevel.set(slot, { ...lvl, ...enrichLevelArrays(lvl) });
   }
   const levels: Level[] = EXPECTED_LEVELS.map((level) =>
     byLevel.get(level) ?? {

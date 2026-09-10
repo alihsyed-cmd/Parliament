@@ -1,0 +1,121 @@
+id,jurisdiction_slug,election_date,election_type,name,district_id,is_confirmed,advance_voting_starts,info_url,source_url,last_verified
+b246fa32-252c-59af-a8b4-a892351d2db3,ca_qc,2026-10-05,general,2026 Quebec Provincial Election,,true,,,,2026-09-10
+6d220447-4b17-5edb-836b-f3b0de45e598,ca_bc_abbotsford,2026-10-17,general,2026 Abbotsford Municipal Election,,true,,,,2026-09-10
+3d87bfb6-d049-5f0d-b386-acbe0d357203,ca_bc_burnaby,2026-10-17,general,2026 Burnaby Municipal Election,,true,,,,2026-09-10
+a7c6f537-f2ef-55d6-97e9-c84c9e48ee49,ca_bc_coquitlam,2026-10-17,general,2026 Coquitlam Municipal Election,,true,,,,2026-09-10
+32472bb7-c4bf-5f77-8836-b37f5d08ac52,ca_bc_kelowna,2026-10-17,general,2026 Kelowna Municipal Election,,true,,,,2026-09-10
+980c957f-c4b3-53af-a24d-bece3dbf306c,ca_bc_langley_township,2026-10-17,general,2026 Township of Langley Municipal Election,,true,,,,2026-09-10
+1328ebd3-709c-5307-8222-420341379c30,ca_bc_richmond,2026-10-17,general,2026 Richmond Municipal Election,,true,,,,2026-09-10
+9e503568-9500-5b3b-8db0-7d9c3ced2ac8,ca_bc_saanich,2026-10-17,general,2026 Saanich Municipal Election,,true,,,,2026-09-10
+3ca2f12c-fd64-5fc0-8774-82c4c0da726b,ca_bc_surrey,2026-10-17,general,2026 Surrey Municipal Election,,true,,,,2026-09-10
+9a809fe0-5e0b-510b-a637-e543c910794a,ca_bc_vancouver,2026-10-17,general,2026 Vancouver Municipal Election,,true,,,,2026-09-10
+ccc223c2-bf4e-5e5e-acda-46f88d9eb6f6,ca_bc_victoria,2026-10-17,general,2026 Victoria Municipal Election,,true,,,,2026-09-10
+85315c21-5a47-52ed-a0dd-c0511341f232,ca_on_ajax,2026-10-26,general,2026 Ajax Municipal Election,,true,,,,2026-09-10
+c49e89a7-043b-5905-ba5f-2e6eb40d2a93,ca_on_barrie,2026-10-26,general,2026 Barrie Municipal Election,,true,,,,2026-09-10
+afad0124-b9be-5c07-b387-06d041c06198,ca_on_brampton,2026-10-26,general,2026 Brampton Municipal Election,,true,,,,2026-09-10
+8ba1d25a-bee4-5cae-ace3-c076da12ae7e,ca_on_brant,2026-10-26,general,2026 County of Brant Municipal Election,,true,,,,2026-09-10
+4b044d36-5ab2-5ffd-9433-c990521fe268,ca_on_brantford,2026-10-26,general,2026 Brantford Municipal Election,,true,,,,2026-09-10
+b280b09a-e417-525a-aa30-3e32857aed60,ca_on_burlington,2026-10-26,general,2026 Burlington Municipal Election,,true,,,,2026-09-10
+5b712dcc-378b-55f9-93e8-763ca4bd0b8e,ca_on_cambridge,2026-10-26,general,2026 Cambridge Municipal Election,,true,,,,2026-09-10
+81aebefd-5529-58ab-a8c3-6222e0caaf8c,ca_on_chatham_kent,2026-10-26,general,2026 Chatham-Kent Municipal Election,,true,,,,2026-09-10
+bfa743ee-5167-595a-a3aa-98d3c8e87302,ca_on_greater_sudbury,2026-10-26,general,2026 Greater Sudbury Municipal Election,,true,,,,2026-09-10
+fb9574a5-3484-557e-b9f2-51d8949d333c,ca_on_guelph,2026-10-26,general,2026 Guelph Municipal Election,,true,,,,2026-09-10
+87d35f06-679b-5a71-8268-0264b865db7a,ca_on_hamilton,2026-10-26,general,2026 Hamilton Municipal Election,,true,,,,2026-09-10
+875cc575-d235-526e-bcb0-c4f6ccc641cd,ca_on_kingston,2026-10-26,general,2026 Kingston Municipal Election,,true,,,,2026-09-10
+5bfc14ea-e792-5a31-ac0d-e07b5fdf60d8,ca_on_kitchener,2026-10-26,general,2026 Kitchener Municipal Election,,true,,,,2026-09-10
+bb506085-0801-5b77-b9da-f807487690ad,ca_on_london,2026-10-26,general,2026 London Municipal Election,,true,,,,2026-09-10
+78e085b4-cbf5-5edf-ad84-766edaf57b41,ca_on_markham,2026-10-26,general,2026 Markham Municipal Election,,true,,,,2026-09-10
+ecba9fef-d7cd-561a-8cbc-474faf1d433d,ca_on_milton,2026-10-26,general,2026 Milton Municipal Election,,true,,,,2026-09-10
+011b94e3-6ffc-5f71-8d26-f07ff7279fb0,ca_on_mississauga,2026-10-26,general,2026 Mississauga Municipal Election,,true,,,,2026-09-10
+00908d9f-fcde-5d36-803a-d7baff6e059d,ca_on_norfolk_county,2026-10-26,general,2026 Norfolk County Municipal Election,,true,,,,2026-09-10
+1189400a-7524-5ed2-829f-340effb7d291,ca_on_oakville,2026-10-26,general,2026 Oakville Municipal Election,,true,,,,2026-09-10
+4ca5e15e-5346-5ba0-b8ba-bdfb9f9d95e4,ca_on_oshawa,2026-10-26,general,2026 Oshawa Municipal Election,,true,,,,2026-09-10
+405533f6-6c55-5c27-8873-c3b1d6577795,ca_on_ottawa,2026-10-26,general,2026 Ottawa Municipal Election,,true,,,,2026-09-10
+cacc877d-9108-5652-abe0-8dad98b77662,ca_on_peterborough,2026-10-26,general,2026 Peterborough Municipal Election,,true,,,,2026-09-10
+63113a64-8a44-59b4-87a8-3d6e38d253c1,ca_on_richmond_hill,2026-10-26,general,2026 Richmond Hill Municipal Election,,true,,,,2026-09-10
+1f30ef8e-1a32-5588-a996-3b4290accc7d,ca_on_st_catharines,2026-10-26,general,2026 St. Catharines Municipal Election,,true,,,,2026-09-10
+9a38eb87-422c-5a98-b43f-2f2c89784344,ca_on_thunder_bay,2026-10-26,general,2026 Thunder Bay Municipal Election,,true,,,,2026-09-10
+d06ed7d4-7ba5-5719-8b39-3ed4b4fde5d1,ca_on_toronto,2026-10-26,general,2026 Toronto Municipal Election,,true,,,,2026-09-10
+bf24c376-8a12-587b-848e-50f494827596,ca_on_vaughan,2026-10-26,general,2026 Vaughan Municipal Election,,true,,,,2026-09-10
+ee28854d-fcd5-54fb-81e1-e1184ca979eb,ca_on_waterloo,2026-10-26,general,2026 Waterloo Municipal Election,,true,,,,2026-09-10
+0d9968cb-a9a2-5b7d-abbc-b32a20ff8820,ca_on_whitby,2026-10-26,general,2026 Whitby Municipal Election,,true,,,,2026-09-10
+908f1b38-dfa3-51b5-bc8f-c567029f42b0,ca_on_windsor,2026-10-26,general,2026 Windsor Municipal Election,,true,,,,2026-09-10
+83dd00e0-94b6-550b-9282-fba6c8870781,ca_mb_brandon,2026-10-28,general,2026 Brandon Municipal Election,,true,,,,2026-09-10
+08f4600a-c6c1-5284-b78d-45fbe13b8ff3,ca_mb_morden,2026-10-28,general,2026 Morden Municipal Election,,true,,,,2026-09-10
+0a4aed69-4183-5f9d-b11e-30c0ab5b961e,ca_mb_portage_la_prairie,2026-10-28,general,2026 Portage la Prairie Municipal Election,,true,,,,2026-09-10
+ed1ff451-81e4-594d-bd0d-01b7455479e6,ca_mb_selkirk,2026-10-28,general,2026 Selkirk Municipal Election,,true,,,,2026-09-10
+4f30c854-2596-566c-9030-cbb447ad2d7a,ca_mb_steinbach,2026-10-28,general,2026 Steinbach Municipal Election,,true,,,,2026-09-10
+9c7cdc09-bf65-50bc-ad43-9406f6c704f6,ca_mb_thompson,2026-10-28,general,2026 Thompson Municipal Election,,true,,,,2026-09-10
+26402d50-80ac-5958-b58b-a977a2fa3783,ca_mb_winkler,2026-10-28,general,2026 Winkler Municipal Election,,true,,,,2026-09-10
+5f2c3c27-f81a-5266-8d1e-ebf9db1ac80a,ca_mb_winnipeg,2026-10-28,general,2026 Winnipeg Municipal Election,,true,,,,2026-09-10
+858faa07-b836-5cde-aa71-da12fc0398a3,ca_pe_cornwall,2026-11-02,general,2026 Cornwall Municipal Election,,true,,,,2026-09-10
+5669a8c1-3cc8-53fc-927a-a4d8f336c099,ca_pe,2027-10-04,general,2027 Prince Edward Island Provincial Election,,true,,,,2026-09-10
+6710c4e8-bbd9-5eec-91cc-077417d2cf5a,ca_mb,2027-10-05,general,2027 Manitoba Provincial Election,,true,,,,2026-09-10
+8cf290d7-c566-57f6-8bf8-53fa6a2dab6c,ca_nt,2027-10-05,general,2027 Northwest Territories Territorial Election,,true,,,,2026-09-10
+ff4c4e89-ecfc-598c-89bc-2cda41ceb131,ca_ab,2027-10-18,general,2027 Alberta Provincial Election,,true,,,,2026-09-10
+c266111c-22d3-586b-9599-79bbc76d1f95,ca_nb,2028-10-16,general,2028 New Brunswick Provincial Election,,true,,,,2026-09-10
+dc907eaf-689c-5279-a4b5-d2b43535a4e8,ca_ns_annapolis,2028-10-19,general,2028 Municipality of the County of Annapolis Municipal Election,,false,,,,
+11202108-5985-505a-b9fa-23dccb05c6d3,ca_ns_cape_breton,2028-10-19,general,2028 Cape Breton Regional Municipality Municipal Election,,false,,,,
+4b4265a9-a059-5da5-838e-5ccf39077289,ca_ns_colchester,2028-10-19,general,2028 Municipality of the County of Colchester Municipal Election,,false,,,,
+db339f2d-c7ba-5332-887a-7e66ec3c1426,ca_ns_cumberland,2028-10-19,general,2028 Municipality of the County of Cumberland Municipal Election,,false,,,,
+79e47fe3-4598-5b58-9032-8a3de01118f3,ca_ns_east_hants,2028-10-19,general,2028 Municipality of East Hants Municipal Election,,false,,,,
+aa0961cc-ece7-5cfb-a50e-6cd0752e29ac,ca_ns_halifax,2028-10-19,general,2028 Halifax Municipal Election,,false,,,,
+60ecd890-5017-5505-9f6d-9786232ed6d2,ca_ns_kings,2028-10-19,general,2028 Municipality of the County of Kings Municipal Election,,false,,,,
+50ce41a9-e542-5a14-b32f-143be24aa7aa,ca_ns_pictou,2028-10-19,general,2028 Municipality of the County of Pictou Municipal Election,,false,,,,
+ecd87ee2-2399-5af8-ad8c-66e54d8ea3e8,ca_ns_west_hants,2028-10-19,general,2028 West Hants Regional Municipality Municipal Election,,false,,,,
+413cc3ae-fa3b-53d7-b4d4-8567ec9875e5,ca_bc,2028-10-21,general,2028 British Columbia Provincial Election,,true,,,,2026-09-10
+60e6e129-1669-59ff-bfa3-a62454134743,ca_sk,2028-10-30,general,2028 Saskatchewan Provincial Election,,true,,,,2026-09-10
+61fe7e16-5be8-5773-8fbe-2780550b7fe8,ca_sk_lloydminster,2028-11-08,general,2028 Lloydminster Municipal Election,,true,,,,2026-09-10
+e61cc390-6243-56e3-b6b7-906b542f6cd6,ca_sk_moose_jaw,2028-11-08,general,2028 Moose Jaw Municipal Election,,true,,,,2026-09-10
+7c7e927e-e27f-5df3-ac87-9e1959b9a543,ca_sk_north_battleford,2028-11-08,general,2028 North Battleford Municipal Election,,true,,,,2026-09-10
+c5bbee9a-d32a-54ab-97c8-102c869397a6,ca_sk_prince_albert,2028-11-08,general,2028 Prince Albert Municipal Election,,true,,,,2026-09-10
+9177bb42-abd0-522e-8d78-70b61c7ad2b5,ca_sk_saskatoon,2028-11-08,general,2028 Saskatoon Municipal Election,,true,,,,2026-09-10
+f2e8f8ee-1c44-5c87-a846-dad52f20f7b2,ca_sk_swift_current,2028-11-08,general,2028 Swift Current Municipal Election,,true,,,,2026-09-10
+37e4cd00-4fb4-554c-b44c-dbcec8f28ada,ca_sk_warman,2028-11-08,general,2028 Warman Municipal Election,,true,,,,2026-09-10
+28804ce0-1880-593a-9a86-41093c012a26,ca_sk_weyburn,2028-11-08,general,2028 Weyburn Municipal Election,,true,,,,2026-09-10
+340017cf-c409-5f3f-8715-9fc9c6c020a1,ca_sk_yorkton,2028-11-08,general,2028 Yorkton Municipal Election,,true,,,,2026-09-10
+8eead72b-e6f9-59b0-97ee-01d77b9568cf,ca_sk_regina,2028-11-13,general,2028 Regina Municipal Election,,false,,,,
+438e02fb-5d0a-5662-a9c6-8a68ef12100c,ca_ns,2028-11-26,general,2028 Nova Scotia Provincial Election,,false,,,,
+e540b60b-1cdb-575d-8da4-5f65d371e211,ca_federal,2029-04-28,general,2029 Canada Federal Election,,false,,,,
+cb17ce8a-be53-507e-9b19-271d9adfca3b,ca_nl_corner_brook,2029-09-25,general,2029 Corner Brook Municipal Election,,true,,,,2026-09-10
+1e903245-7d82-532c-af26-b62d9b81e093,ca_nl_mount_pearl,2029-09-25,general,2029 Mount Pearl Municipal Election,,true,,,,2026-09-10
+edc38fd5-6cfe-5e85-a64d-e96c68c0a592,ca_nl_conception_bay_south,2029-10-02,general,2029 Conception Bay South Municipal Election,,false,,,,
+aac780c5-bef0-5e68-bbf3-df7adb3bfcc6,ca_nl_gander,2029-10-02,general,2029 Gander Municipal Election,,false,,,,
+d24615b0-7163-51bc-b2db-963594c52da5,ca_nl_grand_falls_windsor,2029-10-02,general,2029 Grand Falls-Windsor Municipal Election,,false,,,,
+1fe72b4e-5e78-51f0-9cd2-2e40cf9708f1,ca_nl_happy_valley_goose_bay,2029-10-02,general,2029 Happy Valley-Goose Bay Municipal Election,,false,,,,
+a760ebdc-43ea-5653-a14e-15eab9ebd847,ca_nl_paradise,2029-10-02,general,2029 Paradise Municipal Election,,false,,,,
+225a694c-08d3-522f-81d1-624524723406,ca_nl_portugal_cove_st_philips,2029-10-02,general,2029 Portugal Cove-St. Philip's Municipal Election,,false,,,,
+83336cc1-09d9-5f5f-9936-8acd1e7afcf2,ca_nl_torbay,2029-10-02,general,2029 Torbay Municipal Election,,false,,,,
+89be2b78-c8b0-566e-8a58-7a1cfe4a51f9,ca_on,2029-10-04,general,2029 Ontario Provincial Election,,true,,,,2026-09-10
+2d5b51ba-7163-58df-a842-cc9386b6bdc0,ca_nl_st_johns,2029-10-08,general,2029 St. John's Municipal Election,,false,,,,
+77c483d3-003d-57c9-be3b-5b72d5a05efd,ca_nl,2029-10-14,general,2029 Newfoundland and Labrador Provincial Election,,false,,,,
+acd3fac1-f3c6-5b3e-92a2-70aa4eea1176,ca_ab_airdrie,2029-10-15,general,2029 Airdrie Municipal Election,,true,,,,2026-09-10
+250dea07-d962-5a2e-8006-7ec32d67cf54,ca_ab_edmonton,2029-10-15,general,2029 Edmonton Municipal Election,,true,,,,2026-09-10
+9a0f64f3-9a16-52fa-a297-3c58e7c61edf,ca_ab_grande_prairie,2029-10-15,general,2029 Grande Prairie Municipal Election,,true,,,,2026-09-10
+ea9ac28e-3402-5718-9985-189c426e59a2,ca_ab_lethbridge,2029-10-15,general,2029 Lethbridge Municipal Election,,true,,,,2026-09-10
+5c2547f1-2b18-5a4a-9f77-a51f7f60d664,ca_ab_medicine_hat,2029-10-15,general,2029 Medicine Hat Municipal Election,,true,,,,2026-09-10
+e1e3e3e0-543c-5cbc-b739-ac15888bbf31,ca_ab_red_deer,2029-10-15,general,2029 Red Deer Municipal Election,,true,,,,2026-09-10
+e9cbb5dd-cef4-5d27-9f74-0bfeb51d38bb,ca_ab_st_albert,2029-10-15,general,2029 St. Albert Municipal Election,,true,,,,2026-09-10
+15266acb-85c2-5813-ba31-81c82df95c69,ca_ab_strathcona_county,2029-10-15,general,2029 Strathcona County Municipal Election,,true,,,,2026-09-10
+d4f1ae75-b1ab-5fc0-b8c4-4e031631ea42,ca_ab_calgary,2029-10-20,general,2029 Calgary Municipal Election,,false,,,,
+8c25d741-2112-50aa-8f4f-965947773c53,ca_nu,2029-10-29,general,2029 Nunavut Territorial Election,,true,,,,2026-09-10
+afcc16d5-cf7e-5684-8391-5ec73e6dc842,ca_qc_quebec_city,2029-11-02,general,2029 Québec City Municipal Election,,false,,,,
+2ef18f9d-4355-5d27-9a35-2bbe3329be0e,ca_yt,2029-11-03,general,2029 Yukon Territorial Election,,false,,,,
+0539dffc-6b63-5cbf-ba98-ad89ba85946b,ca_qc_gatineau,2029-11-04,general,2029 Gatineau Municipal Election,,true,,,,2026-09-10
+ce9e72eb-8afa-5eb7-b911-c592c3596268,ca_qc_laval,2029-11-04,general,2029 Laval Municipal Election,,true,,,,2026-09-10
+e70a3071-ec15-582e-aa63-b2be06f202f0,ca_qc_longueuil,2029-11-04,general,2029 Longueuil Municipal Election,,true,,,,2026-09-10
+216c422b-cfaa-5291-8af3-c20bc6b0f399,ca_qc_montreal,2029-11-04,general,2029 Montréal Municipal Election,,true,,,,2026-09-10
+6ee20460-9583-5c61-8f3e-4a1fb4ef9c27,ca_qc_repentigny,2029-11-04,general,2029 Repentigny Municipal Election,,true,,,,2026-09-10
+a56bc563-0647-5bd5-80d3-7814a6a8b91c,ca_qc_saint_jean_sur_richelieu,2029-11-04,general,2029 Saint-Jean-sur-Richelieu Municipal Election,,true,,,,2026-09-10
+e623123d-f5aa-5f2e-baf9-4ea6a2813f99,ca_qc_sherbrooke,2029-11-04,general,2029 Sherbrooke Municipal Election,,true,,,,2026-09-10
+78c49dec-c015-5e98-808a-36e513963e16,ca_qc_trois_rivieres,2029-11-04,general,2029 Trois-Rivières Municipal Election,,true,,,,2026-09-10
+35f8bd00-584f-5fb6-9d98-3f5c58884014,ca_nb_bathurst,2030-05-11,general,2030 Bathurst Municipal Election,,false,,,,
+43276d98-be0b-559f-9662-d967dab0f1c8,ca_nb_dieppe,2030-05-11,general,2030 Dieppe Municipal Election,,false,,,,
+206e3e3c-5453-5cf2-ac4e-54203618c633,ca_nb_edmundston,2030-05-11,general,2030 Edmundston Municipal Election,,false,,,,
+d8dae248-6a1c-5989-ab87-1d65d2ebbe0b,ca_nb_fredericton,2030-05-11,general,2030 Fredericton Municipal Election,,false,,,,
+ef0c081f-3817-5ecb-9936-124529250892,ca_nb_miramichi,2030-05-11,general,2030 Miramichi Municipal Election,,false,,,,
+9c505de4-61bc-57da-9f79-e22eb220c3aa,ca_nb_moncton,2030-05-11,general,2030 Moncton Municipal Election,,false,,,,
+b950feee-0a25-5e95-b635-216ab6a56b5d,ca_nb_quispamsis,2030-05-11,general,2030 Quispamsis Municipal Election,,false,,,,
+3e445840-3d86-5052-b08d-cbb040d33f5f,ca_nb_riverview,2030-05-11,general,2030 Riverview Municipal Election,,false,,,,
+4c0555b3-94e5-5025-88bd-d04cae2d1caf,ca_nb_saint_john,2030-05-11,general,2030 Saint John Municipal Election,,false,,,,
+85a7654e-a7e7-5902-8428-b65fb1b1414a,ca_nb_tracadie,2030-05-11,general,2030 Regional Municipality of Tracadie Municipal Election,,false,,,,

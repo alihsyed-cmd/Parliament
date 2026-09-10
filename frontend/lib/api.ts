@@ -1,7 +1,8 @@
 // lib/api.ts — single surface for talking to the Parliament API.
 
 import type {
-  LookupResponse, JurisdictionResponse, RepresentativeResponse, ErrorKind,
+  LookupResponse, JurisdictionResponse, JurisdictionsResponse,
+  RepresentativeResponse, ErrorKind,
 } from "./types";
 import { normalizeLookup, normalizeJurisdiction, enrichPolitician } from "./derived";
 
@@ -79,6 +80,12 @@ export const api = {
       `/representative/${encodeURIComponent(jurSlug)}/${encodeURIComponent(slug)}`, signal,
     );
     return { ...resp, representative: enrichPolitician(resp.representative)! };
+  },
+
+  /** Every jurisdiction the API serves. The browse tree is built from this, so
+   *  a jurisdiction goes live on the site the moment it is exported. */
+  async jurisdictions(signal?: AbortSignal): Promise<JurisdictionsResponse> {
+    return getJson<JurisdictionsResponse>("/jurisdictions", signal);
   },
 
   async health(): Promise<{ status: string; database?: string; jurisdictions_loaded?: number }> {

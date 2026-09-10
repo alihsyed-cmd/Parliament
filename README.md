@@ -65,6 +65,8 @@ stages that write remotely; every other stage writes locally.
 
 ```
 scripts/candidate_tail.py           # runs candidate stages 5-8 deterministically
+scripts/export_elections.py         # loads data/elections.csv into the elections table
+scripts/send_election_reminders.py  # daily cron: the 7-day and day-of reminder waves
 build_jurisdictions_overview.py     # regenerates jurisdictions_overview.csv
 build_data_gaps_report.py           # regenerates DATA_GAPS.md
 demo/demo_candidates.py             # seeds the Pepperland demo jurisdiction
@@ -87,3 +89,17 @@ Requires a `.env` file (gitignored) with at least:
 
 - `SUPABASE_DB_URL` — session pooler connection string
 - `GOOGLE_MAPS_API_KEY` — postal code geocoding
+
+Election reminders need `POSTMARK_SERVER_TOKEN` and `POSTMARK_WEBHOOK_SECRET` as
+well. See `docs/election-reminders.md` for the full list and the deployment
+steps.
+
+## Election reminders
+
+Voters subscribe with an email address and a postal code, confirm by email, and
+get a reminder a week before every election they can vote in and again on voting
+day. Election dates live in `data/elections.csv`, so a newly announced election
+is a tracked CSV row rather than a code change.
+
+Full documentation, including the CASL and deliverability decisions and why the
+sender cannot double-send, is in `docs/election-reminders.md`.

@@ -32,13 +32,14 @@ export function EntryScreen({
     <div className="container fade-in">
       <div className="entry-grid">
         <div className="stack stack-4">
-          <div className="eyebrow accent">A parliament for the rest of us</div>
+          <div className="eyebrow accent">Civic information for Canadians</div>
           <h1 className="h-display">
-            Meet the people <span className="h-italic serif">who work for you.</span>
+            Know the people <span className="h-italic serif">who represent you.</span>
           </h1>
           <p className="t-lead">
-            Three levels of government. Six elected people, on average. Most Canadians can&apos;t name
-            them. We can fix that — together, in under a minute.
+            Every Canadian has representatives at three levels of government. Enter your postal code
+            to see all of them, with a direct way to reach each one. Where an election is coming,
+            you&apos;ll also see everyone running.
           </p>
 
           <form onSubmit={submit} className="stack stack-3" style={{ marginTop: 8, maxWidth: 460 }}>
@@ -55,16 +56,16 @@ export function EntryScreen({
               </div>
             </div>
             <button type="submit" className="btn primary block lg" disabled={!valid} style={{ opacity: valid ? 1 : 0.55 }}>
-              Find my reps <Icon name="arrow_right" size={18} />
+              Find my representatives <Icon name="arrow_right" size={18} />
             </button>
             <p className="t-xs" style={{ textAlign: "center" }}>
-              We don&apos;t store your postal code unless you ask us to.
+              Your postal code isn&apos;t stored unless you ask us to save it.
             </p>
           </form>
 
           {onSelectPlace ? (
             <div style={{ marginTop: 18, maxWidth: 460 }}>
-              <div className="t-xs" style={{ marginBottom: 8 }}>Not near you? Look someone up directly.</div>
+              <div className="t-xs" style={{ marginBottom: 8 }}>Looking somewhere else?</div>
               <SearchPlaces onSelect={onSelectPlace} />
             </div>
           ) : null}

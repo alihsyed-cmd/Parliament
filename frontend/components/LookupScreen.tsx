@@ -6,8 +6,10 @@ import type { Level, LookupResponse, Politician } from "@/lib/types";
 import { Icon } from "./Icon";
 import { RepContactCard, Countdown } from "./ui";
 import { ReminderToggle } from "./ReminderToggle";
-import { formatDate, formatDateLong, daysUntil, levelMeta } from "@/lib/format";
+import { formatDate, formatDateLong, daysUntil, metaFor } from "@/lib/format";
 import { fullName, sortAlphabetical, submissionFor, useRaces } from "@/lib/candidates";
+import { electionContextFor } from "@/lib/election-context";
+import type { ElectionContext } from "@/lib/election-context";
 import type { CandidateRow, Race } from "@/lib/candidate-types";
 
 /** How many names a race shows in place before it defers to its own screen.
@@ -30,6 +32,59 @@ function BallotName({ row, onOpen }: { row: CandidateRow; onOpen: (uuid: string)
   );
 }
 
+/** "that's in 46 days", or the day itself. Null when there is nothing to
+ *  count down to — a passed date, or no confirmed date at all. */
+function awayPhrase(daysAway?: number | null): string | null {
+  if (daysAway == null || daysAway < 0) return null;
+  if (daysAway === 0) return "that\u2019s today";
+  if (daysAway === 1) return "that\u2019s tomorrow";
+  return `that\u2019s in ${daysAway} days`;
+}
+
+/** The card a voter gets when an election is actually coming: the day, the
+ *  countdown, and — where the election has published figures — how big the
+ *  thing they are voting in is, sourced so they can read further.
+ *
+ *  The figures are the whole election's, not this jurisdiction's: a reader
+ *  looking at one city's ballot has no other way to see the province-wide
+ *  election it belongs to. They appear on their own, for every jurisdiction the
+ *  election covers, with no per-city curation — an election either has
+ *  published context or it does not.
+ *
+ *  `leadsIntoBallot` hands the sentence off to a list of candidates directly
+ *  below it. With figures in between, it cannot: the sentence closes instead
+ *  and the ballot gets its own heading back. */
+function ElectionBanner({
+  electionDate, away, context, leadsIntoBallot,
+}: {
+  electionDate: string;
+  away: string;
+  context: ElectionContext | null;
+  leadsIntoBallot?: boolean;
+}) {
+  return (
+    <div className="ballot-banner">
+      <p>
+        You have an election coming up on <strong>{formatDateLong(electionDate)}</strong>
+        {" \u2014 "}{away}{leadsIntoBallot && !context ? ", and the candidates are:" : "."}
+      </p>
+      {context ? (
+        <>
+          <p style={{ marginTop: 8 }}>{context.headline}</p>
+          <ul className="election-facts">
+            {context.facts.map((f) => (
+              <li key={f.stat}><strong>{f.stat}</strong> {f.detail}</li>
+            ))}
+          </ul>
+          <a className="election-source" href={context.source.url} target="_blank" rel="noreferrer">
+            {context.source.name}{" \u2014 "}full analysis &rarr;
+          </a>
+        </>
+      ) : null}
+    </div>
+  );
+}
+
 /** The certified candidates for the seats this level elects, shown inside the
  *  level's own panel alongside the people currently holding them. Which races
  *  belong here is decided by the jurisdiction slug, so a roster can only ever
@@ -45,7 +100,7 @@ function BallotName({ row, onOpen }: { row: CandidateRow; onOpen: (uuid: string)
  *  large, Brampton runs five ward-pair races — so they get a line each and
  *  open on their own screen rather than turning the panel into a ballot. */
 function LevelCandidates({
-  slug, races, districtId, electionDate, daysAway,
+  slug, races, districtId, electionDate, daysAway, electionContext,
   onSeeCandidates, onOpenRace, onOpenCandidate,
 }: {
   slug: string;
@@ -55,6 +110,8 @@ function LevelCandidates({
   /** Only ever a confirmed date. An estimated one names no day. */
   electionDate?: string;
   daysAway?: number | null;
+  /** Published figures for this election, or null when there are none. */
+  electionContext: ElectionContext | null;
   onSeeCandidates: (slug: string) => void;
   onOpenRace: (slug: string, raceKey: string) => void;
   onOpenCandidate: (uuid: string) => void;
@@ -68,22 +125,22 @@ function LevelCandidates({
   const named = [ward, head].filter(Boolean) as Race[];
   const mine = [...named, ...wide.filter((r) => r !== head)];
 
-  const away = daysAway == null || daysAway < 0 ? null
-    : daysAway === 0 ? "that\u2019s today"
-    : daysAway === 1 ? "that\u2019s tomorrow"
-    : `that\u2019s in ${daysAway} days`;
+  const away = awayPhrase(daysAway);
+  // The sentence only hands off to the names directly below it when nothing
+  // sits in between; with figures there, the ballot keeps its own heading.
+  const handsOff = !!electionDate && !!away && !electionContext;
 
   return (
     <div className="stack stack-2">
       {electionDate && away ? (
-        <div className="ballot-banner">
-          <p>
-            You have an election coming up on <strong>{formatDateLong(electionDate)}</strong>
-            {" \u2014 "}{away}, and the candidates are:
-          </p>
-        </div>
-      ) : (
-        // No confirmed date to count down to, so say only what is known.
+        <ElectionBanner
+          electionDate={electionDate} away={away}
+          context={electionContext} leadsIntoBallot
+        />
+      ) : null}
+      {handsOff ? null : (
+        // Either no confirmed date to count down to, or figures have come
+        // between the date and the names. Either way, label the ballot.
         <span className="section-label">On the ballot</span>
       )}
 
@@ -162,7 +219,7 @@ function LevelPanel({
   onOpenRace: (slug: string, raceKey: string) => void;
   onOpenCandidate: (uuid: string) => void;
 }) {
-  const meta = levelMeta[level.level];
+  const meta = metaFor(level.level);
   const gov = level.jurisdiction.governance;
   const isGap = !gov || level._gap;
   const others = level.cabinet.length + level.other_leadership.length;
@@ -182,6 +239,16 @@ function LevelPanel({
   // planning figure, not something to tell a voter to mark on a calendar.
   const electionDate = gov?.election_date_set ? gov.next_election : undefined;
   const showBallot = hasRaces && !!onSeeCandidates;
+  // An election is active once it has a confirmed date that has not passed.
+  // Whenever it is, any published figures for it are shown — the roster is a
+  // separate thing that may or may not have arrived yet.
+  const electionActive = !!electionDate && days != null && days >= 0;
+  const electionContext = electionActive
+    ? electionContextFor(slug, level.level, electionDate)
+    : null;
+  const away = awayPhrase(days);
+  // Whether the card above stands in for the quiet date line below it.
+  const bannerShown = electionActive && !!away && (showBallot || !!electionContext);
 
   return (
     <div className={`acc ${showBody ? "open" : ""}`}>
@@ -242,13 +309,23 @@ function LevelPanel({
                 <LevelCandidates
                   slug={slug!} races={races!} districtId={myWard}
                   electionDate={electionDate} daysAway={days}
+                  electionContext={electionContext}
                   onSeeCandidates={onSeeCandidates!}
                   onOpenRace={onOpenRace} onOpenCandidate={onOpenCandidate}
+                />
+              ) : electionActive && away && electionContext ? (
+                // No roster to lead into, but figures to show and an election
+                // to show them for: the same card, standing on its own. Without
+                // figures there is nothing here the quiet line below does not
+                // already say, so a far-off date stays a quiet line.
+                <ElectionBanner
+                  electionDate={electionDate!} away={away}
+                  context={electionContext}
                 />
               ) : null}
 
               {/* The banner already gives the date and the countdown in full. */}
-              {gov && !(showBallot && electionDate && days != null && days >= 0) ? (
+              {gov && !bannerShown ? (
                 <div className="row between" style={{ fontFamily: "var(--mono)", fontSize: 11, color: "var(--ink-3)", paddingTop: 2 }}>
                   <span>{gov.election_date_set ? `NEXT · ${formatDate(gov.next_election)}` : `LAST · ${formatDate(gov.last_election)}`}</span>
                   {days != null && days < 365 ? <Countdown days={days} /> : null}

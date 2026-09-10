@@ -33,8 +33,16 @@ export function daysUntil(iso?: string): number | null {
   return Math.round(t / 86_400_000);
 }
 
+// `brand` names the seat of government generically. It used to read "Queen's
+// Park" for every province, which is only true of Ontario.
 export const levelMeta: Record<string, { tag: string; badge: string; brand: string; execTitle: string }> = {
-  municipal:  { tag: "MUNICIPAL",  badge: "M", brand: "City Hall",    execTitle: "Mayor" },
-  provincial: { tag: "PROVINCIAL", badge: "P", brand: "Queen's Park", execTitle: "Premier" },
-  federal:    { tag: "FEDERAL",    badge: "F", brand: "Parliament",   execTitle: "Prime Minister" },
+  municipal:   { tag: "MUNICIPAL",   badge: "M", brand: "City Hall",           execTitle: "Mayor" },
+  provincial:  { tag: "PROVINCIAL",  badge: "P", brand: "Legislature",         execTitle: "Premier" },
+  territorial: { tag: "TERRITORIAL", badge: "T", brand: "Legislative Assembly", execTitle: "Premier" },
+  federal:     { tag: "FEDERAL",     badge: "F", brand: "Parliament",          execTitle: "Prime Minister" },
 };
+
+/** Fallback so an unmapped level never crashes a screen that reads `meta.tag`. */
+export function metaFor(level: string) {
+  return levelMeta[level] ?? levelMeta.municipal;
+}

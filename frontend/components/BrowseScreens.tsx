@@ -1,184 +1,227 @@
 "use client";
 
-// components/BrowseScreens.tsx — Browse tree (municipal / provincial / federal)
-// and the Ontario province roll-up. Mock data until /jurisdictions exists.
+// components/BrowseScreens.tsx — the browse tree, built from the live
+// jurisdiction index. Every row here is a jurisdiction the API serves, so
+// there is no "coming soon" state left to render: what isn't loaded isn't
+// listed. Expanding a row previews its head of government, fetched on demand.
 
 import React from "react";
 import {
-  FEDERAL_RIDINGS, ON_MPPS, ON_MUNICIPALITIES, PROVINCES, type BrowseItem,
+  groupJurisdictions, useJurisdictions, type BrowseGroups,
 } from "@/lib/browse-data";
+import type { JurisdictionIndexEntry, JurisdictionResponse } from "@/lib/types";
+import { api } from "@/lib/api";
+import { metaFor } from "@/lib/format";
+import { Avatar, Skeleton } from "./ui";
 import { Icon } from "./Icon";
 
-function StatusChip({ covered }: { covered: boolean }) {
-  return covered
-    ? <span className="chip accent">Live</span>
-    : <span className="chip outline" style={{ color: "var(--ink-3)" }}>Coming soon</span>;
+/** One preview fetch per jurisdiction per page load, shared across expansions. */
+const previews = new Map<string, Promise<JurisdictionResponse>>();
+
+function usePreview(slug: string, enabled: boolean) {
+  const [data, setData] = React.useState<JurisdictionResponse | null>(null);
+  const [failed, setFailed] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!enabled) return;
+    let live = true;
+    let p = previews.get(slug);
+    if (!p) {
+      p = api.jurisdiction(slug);
+      previews.set(slug, p);
+      p.catch(() => previews.delete(slug));
+    }
+    p.then((d) => { if (live) setData(d); }).catch(() => { if (live) setFailed(true); });
+    return () => { live = false; };
+  }, [slug, enabled]);
+
+  return { data, failed, loading: enabled && !data && !failed };
 }
 
-function ComingSoonNote({ noun }: { noun: string }) {
-  return (
-    <div className="card hatch ghost" style={{ padding: 14 }}>
-      <p className="t-sm" style={{ margin: 0 }}>
-        We haven&apos;t verified this {noun}&apos;s representatives yet. It&apos;s in our mapping queue.
-      </p>
-    </div>
-  );
-}
-
-function PersonRow({ name, sub, initials }: { name: string; sub: string; initials: string }) {
-  return (
-    <div className="rep" style={{ cursor: "default" }}>
-      <span className="avatar sm"><span>{initials}</span></span>
-      <span className="fill">
-        <span className="rep-name" style={{ fontSize: 17, display: "block" }}>{name}</span>
-        <span className="rep-sub"><span>{sub}</span></span>
-      </span>
-    </div>
-  );
-}
-
-function BrowseSection({
-  title, subtitle, count, items, expandedName, setExpandedName, renderExpanded,
+function PreviewBody({
+  entry, onOpen,
 }: {
-  title: string; subtitle: string; count: number; items: BrowseItem[];
-  expandedName: string | null;
-  setExpandedName: (n: string | null) => void;
-  renderExpanded: (item: BrowseItem) => React.ReactNode;
+  entry: JurisdictionIndexEntry;
+  onOpen: (j: JurisdictionIndexEntry) => void;
+}) {
+  const { data, failed, loading } = usePreview(entry.slug, true);
+  const meta = metaFor(entry.level);
+  const gov = data?.jurisdiction.governance;
+  const label = gov?.role_label_plural || "representatives";
+
+  if (loading) {
+    return (
+      <div className="card" style={{ padding: 14 }}>
+        <div className="row row-gap-3">
+          <Skeleton w={40} h={40} r={20} />
+          <div className="stack stack-2 fill"><Skeleton w="55%" h={12} /><Skeleton w="35%" h={16} /></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (failed || !data) {
+    return (
+      <div className="card hatch ghost" style={{ padding: 14 }}>
+        <p className="t-sm" style={{ margin: 0 }}>
+          We couldn&apos;t load {entry.name} just now. Try again in a moment.
+        </p>
+      </div>
+    );
+  }
+
+  const exec = data.executive;
+  return (
+    <div className="stack stack-3">
+      {exec ? (
+        <div className="card" style={{ padding: "10px 14px" }}>
+          <div className="eyebrow accent" style={{ marginBottom: 6 }}>{meta.execTitle}</div>
+          <div className="rep" style={{ cursor: "default", padding: 0 }}>
+            <Avatar pol={exec} size="sm" />
+            <span className="fill">
+              <span className="rep-name" style={{ fontSize: 17, display: "block" }}>{exec.full_name}</span>
+              <span className="rep-sub"><span>{exec.display_title}</span></span>
+            </span>
+          </div>
+        </div>
+      ) : null}
+      <button type="button" className="btn outline sm" onClick={() => onOpen(entry)}>
+        View all {data.representatives.length} {label.toLowerCase()} <Icon name="chevron_right" size={14} />
+      </button>
+    </div>
+  );
+}
+
+function JurisdictionRow({
+  entry, open, onToggle, onOpen, hint,
+}: {
+  entry: JurisdictionIndexEntry;
+  open: boolean;
+  onToggle: () => void;
+  onOpen: (j: JurisdictionIndexEntry) => void;
+  hint?: string;
 }) {
   return (
-    <section className="stack stack-3">
-      <div className="row between" style={{ alignItems: "baseline" }}>
-        <div>
-          <div className="eyebrow accent">{title}</div>
-          <div className="t-xs" style={{ marginTop: 2 }}>{subtitle}</div>
+    <div className={`acc ${open ? "open" : ""}`} style={{ borderRadius: "var(--r-md)" }}>
+      <button type="button" className="acc-head" style={{ padding: "14px 16px" }}
+        onClick={onToggle} aria-expanded={open}>
+        <span className="fill row between">
+          <span className="level-name" style={{ fontSize: 17 }}>{entry.name}</span>
+          <span className="row row-gap-3">
+            {hint ? <span className="t-xs mono" style={{ color: "var(--ink-3)" }}>{hint}</span> : null}
+            <Icon name="chevron_down" size={15} stroke={2}
+              style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform .2s", color: "var(--ink-3)" }} />
+          </span>
+        </span>
+      </button>
+      {open ? (
+        <div className="acc-body" style={{ padding: "0 16px 16px" }}>
+          <PreviewBody entry={entry} onOpen={onOpen} />
         </div>
-        <span className="t-xs mono">{count} listed</span>
+      ) : null}
+    </div>
+  );
+}
+
+function SectionHead({ title, subtitle, count }: { title: string; subtitle: string; count?: number }) {
+  return (
+    <div className="row between" style={{ alignItems: "baseline" }}>
+      <div>
+        <div className="eyebrow accent">{title}</div>
+        <div className="t-xs" style={{ marginTop: 2 }}>{subtitle}</div>
       </div>
-      <div className="stack stack-2">
-        {items.map((item) => {
-          const open = expandedName === item.name;
-          return (
-            <div key={item.name} className={`acc ${open ? "open" : ""}`} style={{ borderRadius: "var(--r-md)" }}>
-              <button type="button" className="acc-head" style={{ padding: "14px 16px" }}
-                onClick={() => setExpandedName(open ? null : item.name)} aria-expanded={open}>
-                <span className="fill row between">
-                  <span className="level-name" style={{ fontSize: 17 }}>{item.name}</span>
-                  <span className="row row-gap-3">
-                    <StatusChip covered={item.covered} />
-                    <Icon name="chevron_down" size={15} stroke={2}
-                      style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform .2s", color: "var(--ink-3)" }} />
-                  </span>
-                </span>
-              </button>
-              {open ? <div className="acc-body" style={{ padding: "0 16px 16px" }}>{renderExpanded(item)}</div> : null}
-            </div>
-          );
-        })}
-      </div>
-    </section>
+      {count === undefined ? null : <span className="t-xs mono">{count} listed</span>}
+    </div>
   );
 }
 
 export function BrowsePage({
-  focus, onOpenProvince,
+  focus, onOpenJurisdiction,
 }: {
   focus?: { section: string; name: string } | null;
-  onOpenProvince: (slug: string) => void;
+  onOpenJurisdiction: (j: JurisdictionIndexEntry) => void;
 }) {
-  const [expanded, setExpanded] = React.useState<Record<string, string | null>>({
-    municipal: focus?.section === "municipal" ? focus.name : null,
-    provincial: focus?.section === "provincial" ? focus.name : null,
-    federal: focus?.section === "federal" ? focus.name : null,
+  const { data, error, loading } = useJurisdictions();
+  const [expanded, setExpanded] = React.useState<string | null>(null);
+
+  const groups: BrowseGroups | null = React.useMemo(
+    () => (data ? groupJurisdictions(data) : null), [data],
+  );
+
+  // A place picked from search arrives as a name; open that row once the index
+  // that contains it has loaded.
+  React.useEffect(() => {
+    if (!focus || !data) return;
+    const hit = data.find((j) => j.name === focus.name);
+    if (hit) setExpanded(hit.slug);
+  }, [focus, data]);
+
+  const rowProps = (entry: JurisdictionIndexEntry) => ({
+    entry,
+    open: expanded === entry.slug,
+    onToggle: () => setExpanded(expanded === entry.slug ? null : entry.slug),
+    onOpen: onOpenJurisdiction,
   });
-  const setFor = (section: string) => (name: string | null) =>
-    setExpanded((e) => ({ ...e, [section]: name }));
 
   return (
     <div className="container fade-in">
       <div className="stack stack-3" style={{ marginBottom: 28, maxWidth: 640 }}>
         <div className="eyebrow accent">Browse</div>
         <h1 className="h-1">Every government, <span className="h-italic serif">one list at a time.</span></h1>
-        <p className="t-lead">Municipal, provincial, federal — alphabetical, and growing. Tap any name to preview who&apos;s there.</p>
+        <p className="t-lead">
+          Municipal, provincial, federal — every government we&apos;ve mapped, and growing.
+          Tap any name to see who&apos;s there.
+        </p>
       </div>
 
-      <div className="stack stack-6">
-        <BrowseSection
-          title="Municipal" subtitle="Cities &amp; towns, starting with Ontario"
-          count={ON_MUNICIPALITIES.length} items={ON_MUNICIPALITIES}
-          expandedName={expanded.municipal} setExpandedName={setFor("municipal")}
-          renderExpanded={(item) => item.covered && item.mayor
-            ? <div className="card" style={{ padding: "4px 14px" }}>
-                <PersonRow name={item.mayor.full_name} sub={item.mayor.display_title} initials={item.mayor.initials} />
+      {loading ? (
+        <div className="stack stack-2">
+          {[0, 1, 2, 3, 4].map((i) => <Skeleton key={i} h={52} r={12} />)}
+        </div>
+      ) : error || !groups ? (
+        <div className="card hatch ghost" style={{ padding: 16 }}>
+          <p className="t-sm" style={{ margin: 0 }}>
+            We couldn&apos;t load the list of governments just now. Please refresh in a moment.
+          </p>
+        </div>
+      ) : (
+        <div className="stack stack-6">
+          <section className="stack stack-3">
+            <SectionHead
+              title="Municipal"
+              subtitle={`Cities & towns across ${groups.municipalByProvince.length} provinces`}
+              count={groups.municipalCount}
+            />
+            {groups.municipalByProvince.map((prov) => (
+              <div key={prov.code} className="stack stack-2">
+                <div className="section-label">{prov.name} · {prov.items.length}</div>
+                {prov.items.map((m) => <JurisdictionRow key={m.slug} {...rowProps(m)} />)}
               </div>
-            : <ComingSoonNote noun="municipality" />}
-        />
-        <BrowseSection
-          title="Provincial" subtitle="All 13 provinces &amp; territories"
-          count={PROVINCES.length} items={PROVINCES}
-          expandedName={expanded.provincial} setExpandedName={setFor("provincial")}
-          renderExpanded={(item) => item.covered ? (
-            <div className="stack stack-3">
-              <button className="btn outline sm" onClick={() => onOpenProvince(item.slug!)}>
-                View all of Ontario <Icon name="chevron_right" size={14} />
-              </button>
-            </div>
-          ) : <ComingSoonNote noun="province" />}
-        />
-        <BrowseSection
-          title="Federal" subtitle={`Showing ${FEDERAL_RIDINGS.length} of 343 ridings`}
-          count={FEDERAL_RIDINGS.length} items={FEDERAL_RIDINGS}
-          expandedName={expanded.federal} setExpandedName={setFor("federal")}
-          renderExpanded={(item) => item.mp
-            ? <div className="card" style={{ padding: "4px 14px" }}>
-                <PersonRow name={item.mp} sub={`MP, ${item.name}`}
-                  initials={item.mp.split(" ").map((s) => s[0]).join("").slice(0, 2).toUpperCase()} />
-              </div>
-            : <ComingSoonNote noun="riding" />}
-        />
-      </div>
-    </div>
-  );
-}
+            ))}
+          </section>
 
-export function ProvincePage() {
-  return (
-    <div className="container wide fade-in">
-      <div className="stack stack-3" style={{ marginBottom: 28, maxWidth: 640 }}>
-        <div className="eyebrow accent">Provincial · Live</div>
-        <h1 className="h-1">Ontario</h1>
-        <p className="t-lead">Queen&apos;s Park, and every municipality we&apos;ve mapped so far.</p>
-      </div>
-      <div className="detail-grid">
-        <div className="stack stack-5">
-          <div>
-            <div className="section-label" style={{ marginBottom: 8 }}>MPPs · {ON_MPPS.length}</div>
-            <div className="card" style={{ padding: "4px 14px" }}>
-              {ON_MPPS.map((m, i) => (
-                <React.Fragment key={m.uuid}>
-                  {i > 0 ? <hr className="divider" /> : null}
-                  <PersonRow name={m.full_name} sub={`${m.district_name} · ${m.party_name}`} initials={m.initials} />
-                </React.Fragment>
+          <section className="stack stack-3">
+            <SectionHead
+              title="Provincial & territorial"
+              subtitle="Legislatures and legislative assemblies"
+              count={groups.provincial.length}
+            />
+            <div className="stack stack-2">
+              {groups.provincial.map((p) => (
+                <JurisdictionRow key={p.slug} {...rowProps(p)}
+                  hint={metaFor(p.level).tag === "TERRITORIAL" ? "Territory" : undefined} />
               ))}
             </div>
-          </div>
+          </section>
+
+          <section className="stack stack-3">
+            <SectionHead title="Federal" subtitle="The House of Commons" />
+            <div className="stack stack-2">
+              {groups.federal.map((f) => <JurisdictionRow key={f.slug} {...rowProps(f)} />)}
+            </div>
+          </section>
         </div>
-        <div>
-          <div className="section-label" style={{ marginBottom: 8 }}>Municipalities · {ON_MUNICIPALITIES.length}</div>
-          <div className="card" style={{ padding: "4px 14px" }}>
-            {ON_MUNICIPALITIES.map((m, i) => (
-              <React.Fragment key={m.name}>
-                {i > 0 ? <hr className="divider" /> : null}
-                <div className="row between" style={{ padding: "12px 0" }}>
-                  <span className="t-body" style={{ fontWeight: 500 }}>{m.name}</span>
-                  {m.covered && m.mayor
-                    ? <span className="t-sm accent" style={{ fontWeight: 500 }}>{m.mayor.full_name}</span>
-                    : <span className="t-xs">Coming soon</span>}
-                </div>
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
