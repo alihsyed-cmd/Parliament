@@ -69,19 +69,21 @@ export function AboutPage() {
           to a way to call, email, or write to that person.
         </p>
         <div className="card tint" style={{ padding: 18 }}>
-          <div className="h-3" style={{ fontSize: 18, marginBottom: 6 }}>Coming soon</div>
+          <div className="h-3" style={{ fontSize: 18, marginBottom: 6 }}>Now live: candidate profiles</div>
           <p className="t-sm" style={{ margin: 0 }}>
-            Candidate profiles. Ahead of upcoming elections, voters will be able to see everyone
-            running in their ward or riding — not just the incumbents — making it easier to decide who
-            to vote for.
+            Ahead of the Ontario municipal elections on 26 October 2026, a postal code lookup lists
+            everyone running in your ward — not just the incumbents — alongside the representatives
+            you have today, so it is easier to decide who to vote for. Candidates can claim their own
+            page to add a campaign link and a short pitch video.
           </p>
         </div>
         <div>
           <div className="section-label" style={{ marginBottom: 6 }}>Where the data comes from</div>
           <p className="t-body">
             Representative details are drawn from official government and legislature sources and
-            re-verified on a rolling basis. Coverage is expanding level by level — Ontario and the
-            federal Parliament are live today; more provinces and municipalities are being added.
+            re-verified on a rolling basis. Coverage now spans the federal Parliament, every province
+            and territory, and more than a hundred municipalities, and it keeps expanding. Candidate
+            rosters come from each municipal clerk&apos;s certified list.
           </p>
         </div>
       </div>

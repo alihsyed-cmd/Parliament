@@ -12,3 +12,17 @@ _archive_pre_pipeline/
 *.md
 cookies.txt
 parliamentapp.ca.txt
+
+# Nothing below is used by the build (Root Directory is `frontend`); these are
+# excluded so backend secrets and pipeline scratch never enter the upload.
+# `.env*` covers the root .env (SUPABASE_DB_URL, GOOGLE_MAPS_API_KEY) and any
+# local frontend env file — production values come from the Vercel dashboard.
+.env*
+yukon_emails.txt
+memory/
+tests/
+migrations/
+__pycache__/
+*.py
+*.sql
+*.pptx
