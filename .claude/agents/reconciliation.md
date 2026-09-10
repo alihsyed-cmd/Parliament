@@ -42,7 +42,11 @@ Read each of the four stream CSVs that exists. Skip missing ones silently. Colle
 
 For every row, compute a deterministic UUID with `uuid.uuid5`:
 
-- Namespace: a fixed project constant (define one UUID constant at the top of the script and reuse it on every run, e.g. `PARLIAMENT_NS = uuid.UUID("<a fixed uuid you hardcode once>")`).
+- Namespace: **`uuid.NAMESPACE_DNS`** — the pinned project constant. Write it literally as
+  `PARLIAMENT_NS = uuid.NAMESPACE_DNS` (equivalently `uuid.UUID("6ba7b810-9dad-11d1-80b4-00c04fd430c8")`).
+  Do **not** invent a new namespace per run. This value was pinned on 2026-09-10 after an audit found
+  that runs had each hardcoded their own, leaving `ca_mb` and `ca_ns` with UUIDs that no longer reproduce.
+  Every other jurisdiction already reproduces exactly under this namespace.
 - Name string: `f"{slug}|{first_name}|{last_name}"`, lowercased, Unicode NFC-normalized, and stripped of leading/trailing whitespace.
 - `person_uuid = uuid.uuid5(PARLIAMENT_NS, name_string)`.
 

@@ -1,5 +1,5 @@
-REGISTERED JURISDICTIONS — high-level overview (generated 2026-06-07)
-51 jurisdictions registered  |  Population figures: Statistics Canada 2021 Census
+REGISTERED JURISDICTIONS — high-level overview (generated 2026-09-10)
+120 jurisdictions registered  |  Population figures: Statistics Canada 2021 Census
 
 === FEDERAL ===
 Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
@@ -13,7 +13,7 @@ Manitoba,Provincial,57,MLAs,1342153,Ward / district-based,2023-10-03,2027-10-05
 New Brunswick,Provincial,49,MLAs,775610,Ward / district-based,2024-10-21,2028-10-16
 Newfoundland and Labrador,Provincial,40,MHAs,510550,Ward / district-based,2025-10-14,TBD
 Northwest Territories,Territorial,19,Members of the Legislative Assembly,41070,Consensus (non-partisan),2023-11-14,2027-10-05
-Nova Scotia,Provincial,55,MLAs,969383,Ward / district-based,2024-11-26,TBD
+Nova Scotia,Provincial,56,MLAs,969383,Ward / district-based,2024-11-26,TBD
 Nunavut,Territorial,22,MLAs,36858,Consensus (non-partisan),2025-10-27,2029-10-29
 Ontario,Provincial,124,MPPs,14223942,Ward / district-based,2025-02-27,2029-10-04
 Prince Edward Island,Provincial,27,MLAs,154331,Ward / district-based,2024-04-03,2027-10-04
@@ -23,19 +23,79 @@ Yukon,Territorial,21,Members of the Legislative Assembly,40232,Ward / district-b
 
 === MUNICIPALITIES (grouped by province/territory) ===
 
--- Alberta (2 municipalities) --
+-- Alberta (9 municipalities) --
 Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
+Airdrie,Municipal,1,Councillors,,At-large,2025-10-20,2029-10-15
 Calgary,Municipal,14,Councillors,1306784,Ward / district-based,2025-10-20,TBD
 Edmonton,Municipal,12,Councillors,1010899,Ward / district-based,2025-10-20,2029-10-15
+Grande Prairie,Municipal,1,Councillors,,At-large,2025-10-20,2029-10-15
+Lethbridge,Municipal,1,Councillors,,At-large,2025-10-20,2029-10-15
+Medicine Hat,Municipal,1,Councillors,,At-large,2025-10-20,2029-10-15
+Red Deer,Municipal,1,Councillors,,At-large,2025-10-20,2029-10-15
+St. Albert,Municipal,1,Councillors,,At-large,2025-10-20,2029-10-15
+Strathcona County,Municipal,8,Councillors,,Ward / district-based,2025-10-20,2029-10-15
 
--- British Columbia (2 municipalities) --
+-- British Columbia (10 municipalities) --
 Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
+Abbotsford,Municipal,1,Councillors,,At-large,2022-10-15,2026-10-17
+Burnaby,Municipal,1,Councillors,,At-large,2022-10-15,2026-10-17
+Coquitlam,Municipal,1,Councillors,,At-large,2022-10-15,2026-10-17
+Kelowna,Municipal,1,Councillors,,At-large,2022-10-15,2026-10-17
+Richmond,Municipal,1,Councillors,,At-large,2022-10-15,2026-10-17
+Saanich,Municipal,1,Councillors,,At-large,2022-10-15,2026-10-17
+Surrey,Municipal,1,Councillors,,At-large,2022-10-15,2026-10-17
+Township of Langley,Municipal,1,Councillors,,At-large,2022-10-15,2026-10-17
 Vancouver,Municipal,1,Councillors,662248,At-large,2022-10-15,2026-10-17
 Victoria,Municipal,1,Councillors,91867,At-large,2022-10-15,2026-10-17
 
--- Manitoba (1 municipalities) --
+-- Manitoba (8 municipalities) --
 Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
+Brandon,Municipal,10,Councillors,,Ward / district-based,2022-10-26,2026-10-28
+Morden,Municipal,1,Councillors,,At-large,2022-10-26,2026-10-28
+Portage la Prairie,Municipal,1,Councillors,,At-large,2022-10-26,2026-10-28
+Selkirk,Municipal,1,Councillors,,At-large,2022-10-26,2026-10-28
+Steinbach,Municipal,1,Councillors,,At-large,2022-10-26,2026-10-28
+Thompson,Municipal,1,Councillors,,At-large,2022-10-26,2026-10-28
+Winkler,Municipal,1,Councillors,,At-large,2022-10-26,2026-10-28
 Winnipeg,Municipal,15,Councillors,749607,Ward / district-based,2022-10-26,2026-10-28
+
+-- New Brunswick (10 municipalities) --
+Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
+Bathurst,Municipal,1,Councillors,,At-large,2026-05-11,TBD
+Dieppe,Municipal,5,Councillors,,Ward / district-based,2026-05-11,TBD
+Edmundston,Municipal,3,Councillors,,Ward / district-based,2026-05-11,TBD
+Fredericton,Municipal,12,Councillors,,Ward / district-based,2026-05-11,TBD
+Miramichi,Municipal,1,Councillors,,At-large,2026-05-11,TBD
+Moncton,Municipal,4,Councillors,,Ward / district-based,2026-05-11,TBD
+Quispamsis,Municipal,1,Councillors,,At-large,2026-05-11,TBD
+Regional Municipality of Tracadie,Municipal,8,Councillors,,Ward / district-based,2026-05-11,TBD
+Riverview,Municipal,4,Councillors,,Ward / district-based,2026-05-11,TBD
+Saint John,Municipal,4,Councillors,,Ward / district-based,2026-05-11,TBD
+
+-- Newfoundland and Labrador (10 municipalities) --
+Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
+Conception Bay South,Municipal,4,Councillors,,Ward / district-based,2025-10-02,TBD
+Corner Brook,Municipal,1,Councillors,,At-large,2025-10-02,2029-09-25
+Gander,Municipal,1,Councillors,,At-large,2025-10-02,TBD
+Grand Falls-Windsor,Municipal,1,Councillors,,At-large,2025-10-02,TBD
+Happy Valley-Goose Bay,Municipal,1,Councillors,,At-large,2025-10-02,TBD
+Mount Pearl,Municipal,1,Councillors,,At-large,2025-09-30,2029-09-25
+Paradise,Municipal,1,Councillors,,At-large,2025-10-02,TBD
+Portugal Cove-St. Philip's,Municipal,1,Councillors,,At-large,2025-10-02,TBD
+St. John's,Municipal,5,Councillors,,Ward / district-based,2025-10-08,TBD
+Torbay,Municipal,1,Councillors,,At-large,2025-10-02,TBD
+
+-- Nova Scotia (9 municipalities) --
+Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
+Cape Breton Regional Municipality,Municipal,12,Councillors,,Ward / district-based,2024-10-19,TBD
+Halifax,Municipal,16,Councillors,,Ward / district-based,2024-10-19,TBD
+Municipality of East Hants,Municipal,11,Councillors,,Ward / district-based,2024-10-19,TBD
+Municipality of the County of Annapolis,Municipal,11,Councillors,,Ward / district-based,2024-10-19,TBD
+Municipality of the County of Colchester,Municipal,11,Councillors,,Ward / district-based,2024-10-19,TBD
+Municipality of the County of Cumberland,Municipal,8,Councillors,,Ward / district-based,2024-10-19,TBD
+Municipality of the County of Kings,Municipal,9,Councillors,,Ward / district-based,2024-10-19,TBD
+Municipality of the County of Pictou,Municipal,12,Councillors,,Ward / district-based,2024-10-19,TBD
+West Hants Regional Municipality,Municipal,11,Councillors,,Ward / district-based,2024-10-19,TBD
 
 -- Ontario (30 municipalities) --
 Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
@@ -70,10 +130,31 @@ Waterloo,Municipal,7,Councillors,121436,Ward / district-based,2022-10-24,2026-10
 Whitby,Municipal,4,Councillors,138501,Ward / district-based,2022-10-24,2026-10-26
 Windsor,Municipal,10,Councillors,229660,Ward / district-based,2022-10-24,2026-10-26
 
--- Quebec (1 municipalities) --
+-- Prince Edward Island (1 municipalities) --
 Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
-Québec City,Municipal,21,Councillors,549459,Ward / district-based,2025-11-02,TBD
+Cornwall,Municipal,1,Councillors,,At-large,2022-11-07,2026-11-02
 
--- Saskatchewan (1 municipalities) --
+-- Quebec (9 municipalities) --
 Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
+Gatineau,Municipal,19,Conseillers,,Ward / district-based,2025-11-02,2029-11-04
+Laval,Municipal,22,Conseillers,,Ward / district-based,2025-11-02,2029-11-04
+Longueuil,Municipal,18,Conseillers,,Ward / district-based,2025-11-02,2029-11-04
+Montréal,Municipal,58,Conseillers,,Ward / district-based,2025-11-02,2029-11-04
+Québec City,Municipal,21,Councillors,549459,Ward / district-based,2025-11-02,TBD
+Repentigny,Municipal,12,Conseillers,,Ward / district-based,2025-11-02,2029-11-04
+Saint-Jean-sur-Richelieu,Municipal,12,Conseillers,,Ward / district-based,2025-11-02,2029-11-04
+Sherbrooke,Municipal,16,Conseillers,,Ward / district-based,2025-11-02,2029-11-04
+Trois-Rivières,Municipal,14,Conseillers,,Ward / district-based,2025-11-02,2029-11-04
+
+-- Saskatchewan (10 municipalities) --
+Jurisdiction,Level,Districts/Wards,District Type,Population (2021 Census),Governance,Last Election,Next Election
+Lloydminster,Municipal,1,Councillors,,At-large,2024-11-13,2028-11-08
+Moose Jaw,Municipal,1,Councillors,,At-large,2024-11-13,2028-11-08
+North Battleford,Municipal,1,Councillors,,At-large,2024-11-13,2028-11-08
+Prince Albert,Municipal,8,Councillors,,Ward / district-based,2024-11-13,2028-11-08
 Regina,Municipal,10,Councillors,226404,Ward / district-based,2024-11-13,TBD
+Saskatoon,Municipal,10,Councillors,,Ward / district-based,2024-11-13,2028-11-08
+Swift Current,Municipal,1,Councillors,,At-large,2024-11-13,2028-11-08
+Warman,Municipal,1,Councillors,,At-large,2024-11-13,2028-11-08
+Weyburn,Municipal,1,Councillors,,At-large,2024-11-13,2028-11-08
+Yorkton,Municipal,1,Councillors,,At-large,2024-11-13,2028-11-08
